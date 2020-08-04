@@ -40,6 +40,8 @@ ScrollTrigger.refresh();
 
 // 
 
+/*
+
 // 02 MARQUE GALLERY - CLEVER MARQUEE -- under construction
 $('.swiper-wrapper .swiper-slide').clone().appendTo(".swiper-wrapper");
 
@@ -54,6 +56,7 @@ gsap.to( $(".swiper-slide"),
     }
 );
 
+*/
 // YOUTUBE WRAPPER -------
 // --- 012 - OPEN FULLSCREEN VIDEO AND PLAY/PAUSE  --------------------------------------------------------------------------
 var trigger = document.querySelector('#play-button');
