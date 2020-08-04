@@ -205,7 +205,7 @@ disableOnInteraction: false,
 	 grabCursor: true,
         //loopFillGroupWithBlank: false,
        // paginationClickable: true,
-       // spaceBetween: 5,
+        spaceBetween: 5,
        // mousewheelControl: true,
        // parallax: true,
        // preloadImages: true,
@@ -213,7 +213,7 @@ disableOnInteraction: false,
        // centeredSlides: true,
        //slidesOffsetBefore: 100,
         //speed: 400,
-      /*  breakpoints: {
+       breakpoints: {
                         500: {
                             spaceBetween: 30,
                             loopedSlides: 3.2,
@@ -231,7 +231,7 @@ disableOnInteraction: false,
                     }
 
     });
-*/
+
 $('swiper-slide').on('mousedown touchstart', function(event) {
   gsap.to('.swiper-slide', {scale: 0.9, duration: 0.4});
   
