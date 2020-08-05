@@ -232,13 +232,13 @@ disableOnInteraction: false,
 
     });
 
-$('swiper-slide').on('mousedown touchstart', function(event) {
-  gsap.to('.swiper-slide', {scale: 0.9, duration: 0.4});
+$('swiper-container').on('mousedown touchstart', function(event) {
+  gsap.to('.swiper-slide', {scale: 0.6, duration: 0.2});
   
 });
 
-$('.swiper-slide').on('mouseup touchend', function(event) {
- gsap.to('.swiper-slide', {scale:1, duration: 0.4, delay:0.2});
+$('.swiper-container').on('mouseup touchend', function(event) {
+ gsap.to('.swiper-slide', {scale:1, duration: 0.4, delay:0.3});
 });
 
 
