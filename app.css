@@ -42,6 +42,12 @@ html {
   }
   }
   
+/* KILL WEBFLOW BADGE */
+.w-webflow-badge {
+    position: relative !important;
+    right: 1000px !important;
+}
+
 
 /*020 - YOUTUBE CROP + FULLSCREEN bez YT pizdarija*/
 #player-size {
