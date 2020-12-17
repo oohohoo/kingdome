@@ -52,10 +52,10 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #28282a;
-  opacity: 0.5;
+  background-color: #ff0000;
+  opacity: 1;
   width: 5px;
-  border-radius: 10px;
+  border-radius: 0px;
   margin: 2px;
   cursor: -webkit-grab;
   cursor: grab; }
