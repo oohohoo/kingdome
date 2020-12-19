@@ -1,8 +1,13 @@
 
+function init(){
+    
+  // start here
+
+
 
 
 // PLAY WHEN ALL CONTENT LOADED
-document.addEventListener ('DOMContentLoaded', ()=> {
+//document.addEventListener ('DOMContentLoaded', ()=> {
 
 // OPEN MENU FROM CLICK
 const openmenu = document.getElementById('openmenu');
@@ -180,9 +185,13 @@ menuhovertimeline
 openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
 closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
 
+//}) // DOM CONTENT LOADED - close
 
+}
 
-
+window.addEventListener('load', function(){
+  init();
+});
 
 
 
@@ -341,6 +350,6 @@ function onPlayerReady(event) {
 */
 
 
-}) // DOM CONTENT LOADED - close
+
 
 
