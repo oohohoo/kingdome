@@ -1,9 +1,8 @@
 
-function init(){
-    
+
 
 // PLAY WHEN ALL CONTENT LOADED
-//document.addEventListener ('DOMContentLoaded', ()=> {
+document.addEventListener ('DOMContentLoaded', ()=> {
 
 // OPEN MENU FROM CLICK
 const openmenu = document.getElementById('openmenu');
@@ -181,6 +180,7 @@ menuhovertimeline
 openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
 closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
 
+}) // DOM CONTENT LOADED - close
 
 
 
@@ -188,15 +188,10 @@ closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); 
 
 // --- 017 - LOCOMOTIVE SCROLL TO  --------------------------------------------------------------------------
 
+// ScrollTo - Menu funkcije
 $( "#totop" ).on( "click", function() {
-	locoScroll.scrollTo( '#start', {
-		'offset': 0,
-		'duration': 1000,
-		//'easing': [0.25, 0.00, 0.35, 1.00],
-		'disableLerp': true
-	});
-	});
-	
+locoScroll.scrollTo('#top')
+});
 
 
 /*
@@ -246,11 +241,11 @@ trigger.addEventListener('click', function () {
 function toggleState(tl) {
   tl.reversed() ? tl.play() : tl.reverse()
 }
-/*
+
 function toggleState(tl_2) {
   tl_2.reversed() ? tl_2.play() : tl_2.reverse()
 }
-*/
+
 // --- 020 - YOUTUBE CROP + FULLSCREEN bez YT pizdarija  --------------------------------------------------------------------------
 
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -339,11 +334,6 @@ function onPlayerReady(event) {
 */
 
 
-// --- 
-}
-window.addEventListener('load', function(){
-  init();
-});
 
 
 
