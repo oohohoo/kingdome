@@ -188,10 +188,17 @@ closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); 
 
 // --- 017 - LOCOMOTIVE SCROLL TO  --------------------------------------------------------------------------
 
-// ScrollTo - Menu funkcije
+
+// --- 017 - LOCOMOTIVE 4.0 SCROLL TO  --------------------------------------------------------------------------
 $( "#totop" ).on( "click", function() {
-locoScroll.scrollTo('#top')
-});
+	locoScroll.scrollTo( '#start', {
+		'offset': 0,
+		'duration': 1000,
+		//'easing': [0.25, 0.00, 0.35, 1.00],
+		'disableLerp': true
+	});
+	});
+	
 
 
 /*
