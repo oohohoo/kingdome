@@ -1,6 +1,9 @@
 
+function init(){
+    
+
 // PLAY WHEN ALL CONTENT LOADED
-document.addEventListener ('DOMContentLoaded', ()=> {
+//document.addEventListener ('DOMContentLoaded', ()=> {
 
 // OPEN MENU FROM CLICK
 const openmenu = document.getElementById('openmenu');
@@ -178,7 +181,6 @@ menuhovertimeline
 openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
 closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
 
-}) // DOM CONTENT LOADED - close
 
 
 
@@ -186,10 +188,15 @@ closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); 
 
 // --- 017 - LOCOMOTIVE SCROLL TO  --------------------------------------------------------------------------
 
-// ScrollTo - Menu funkcije
 $( "#totop" ).on( "click", function() {
-locoScroll.scrollTo('#top')
-});
+	locoScroll.scrollTo( '#start', {
+		'offset': 0,
+		'duration': 1000,
+		//'easing': [0.25, 0.00, 0.35, 1.00],
+		'disableLerp': true
+	});
+	});
+	
 
 
 /*
@@ -332,6 +339,11 @@ function onPlayerReady(event) {
 */
 
 
+// --- 
+}
+window.addEventListener('load', function(){
+  init();
+});
 
 
 
