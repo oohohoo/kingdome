@@ -226,6 +226,12 @@ gsap.to( $(".swiper-slide"),
 
 */
 
+}
+
+window.addEventListener('load', function(){
+  init();
+});
+
 
 
 
@@ -352,12 +358,6 @@ function onPlayerReady(event) {
 }
 */
 
-
-}
-
-window.addEventListener('load', function(){
-  init();
-});
 
 
 
