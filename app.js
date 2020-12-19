@@ -180,7 +180,7 @@ menuhovertimeline
 openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
 closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
 
-}) // DOM CONTENT LOADED - close
+
 
 
 
@@ -341,6 +341,6 @@ function onPlayerReady(event) {
 */
 
 
-
+}) // DOM CONTENT LOADED - close
 
 
