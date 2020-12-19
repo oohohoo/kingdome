@@ -246,11 +246,11 @@ trigger.addEventListener('click', function () {
 function toggleState(tl) {
   tl.reversed() ? tl.play() : tl.reverse()
 }
-
+/*
 function toggleState(tl_2) {
   tl_2.reversed() ? tl_2.play() : tl_2.reverse()
 }
-
+*/
 // --- 020 - YOUTUBE CROP + FULLSCREEN bez YT pizdarija  --------------------------------------------------------------------------
 
 // 2. This code loads the IFrame Player API code asynchronously.
