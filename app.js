@@ -187,11 +187,7 @@ closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); 
 
 //}) // DOM CONTENT LOADED - close
 
-}
 
-window.addEventListener('load', function(){
-  init();
-});
 
 
 
@@ -226,7 +222,19 @@ gsap.to( $(".swiper-slide"),
     }
 );
 
+
+
 */
+
+
+}
+
+window.addEventListener('load', function(){
+  init();
+});
+
+
+
 // YOUTUBE WRAPPER -------
 // --- 012 - OPEN FULLSCREEN VIDEO AND PLAY/PAUSE  --------------------------------------------------------------------------
 var trigger = document.querySelector('#play-button');
