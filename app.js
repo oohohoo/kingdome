@@ -94,10 +94,10 @@ $(".link-wrapper").each(function(i, el) {
 //-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
 // loop through each element
-$(".small-link-wrapper").each(function(i, el) {
+$(".nav-wrap").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
-         .to($(el).find('.small-link, .k-nav'), {color: "#E51E3D", duration: 0.15});
+         .to($(el).find('.k-nav'), {color: "#E51E3D", duration: 0.15});
 el.animation = t;
 $(el).on("mouseenter",function(){
     this.animation.play();
