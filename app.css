@@ -92,7 +92,7 @@ html {
 /* PROČISTI ode je svo smeće iz templejta) */
 
 /*  SIMPLE FADE IN / FADE OUT / AUTOALPHA 023 simple fadein fadeout */
-.fadein-slide{
+.hide{
   visibility:hidden;
 }
 
