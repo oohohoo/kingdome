@@ -1,9 +1,10 @@
 
+// provjeri, ali mislim da ode idu svi ovi scroll trigger init i smoothscroll
+
+
 function init(){
     
   // start here
-
-
 
 
 // PLAY WHEN ALL CONTENT LOADED
@@ -96,7 +97,7 @@ $(".link-wrapper").each(function(i, el) {
 $(".small-link-wrapper").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
-         .to($(el).find('.small-link'), {color: "#E51E3D", duration: 0.15});
+         .to($(el).find('.small-link, .k-nav'), {color: "#E51E3D", duration: 0.15});
 el.animation = t;
 $(el).on("mouseenter",function(){
     this.animation.play();
