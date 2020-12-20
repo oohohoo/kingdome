@@ -66,32 +66,6 @@ function hide() {
 
 
 //-------
-// SUPERSCRIPT MOUSEOVER // ISTA ANIMACIJA VIŠE ELEMENATA / LOOP
-// loop through each element
-$(".link-wrapper").each(function(i, el) {
-// set some individual properties
-//TweenMax.set($(el).find('.back'), {backgroundColor:'#' + Math.floor(Math.random() * 16777215).toString(16)});
-  
-// create a timeline for this element in paused state
-  var tl = gsap.timeline({paused: true});
-  // create your tween of the timeline in a variable
-  var t = tl
-         //.set(el,{willChange:"transform"})
-         //.set($(el).find('.wrap'), {zIndex: 2, overwrite:"all"})
-         .from($(el).find('.superscript'), {y:"20px", autoAlpha:0, duration: 0.3, overwrite:"all", ease: "power1.out"})
-         .to($(el).find('.main-link'), {duration: 0.3, overwrite:"all", ease: "power1.out"}, "<");
-  // store the tween timeline in the javascript DOM node
-  el.animation = t;
-  //create the event handler
-  $(el).on("mouseenter",function(){
-    this.animation.play();
-  }).on("mouseleave",function(){
-    this.animation.reverse();
-  });
-});
-//-------
-
-//-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
 // loop through each element
 $(".nav-wrap").each(function(i, el) {
@@ -122,47 +96,6 @@ $(el).on("mouseenter",function(){
 });
 //-------
 
-// UNDERLINE
-// Mouseenter function
-function enterAnimation(link, e, index) {
-  link.tl.tweenFromTo(0, "midway");
-}
-// Mouseleave function
-function leaveAnimation(link, e) {
-  link.tl.play();
-}
-// Animations variables
-let workLinkUnderlineAnimEnter;
-let workLinkUnderlineAnimLeave;
-
-// Get all links
-let workLinks = document.querySelectorAll(".link-wrapper");
-
-workLinks.forEach((link, index, value) => {
-  
-  let underline = link.querySelector(".underline");
-    link.tl = gsap.timeline({paused: true});
-  
-  link.tl.fromTo(underline, {width: "0%", left: "0%",}, 
-  {width: "100%", duration: 0.3, ease: "power1.out",});
-  		
-  link.tl.add("midway");
-  
-  link.tl.fromTo(underline, {width: "100%", left: "0%",}, 
-  {width: "0%", left: "100%", duration: 0.3, ease: "power1.in", immediateRender: false});
-
-  // Mouseenter
-  link.addEventListener("mouseenter", (e) => {
-    enterAnimation(link, e, index);
-  });
-
-  // Mouseleave
-  link.addEventListener("mouseleave", (e) => {
-    leaveAnimation(link, e);
-  });
-
-});
- 
 
 	// MENU ICON MOUSEOVER 
 menuhover.addEventListener('mouseover', ()=> {  
