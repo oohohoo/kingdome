@@ -33,7 +33,7 @@ btn.addEventListener("click", () => {
 function show() {
 	let tl = gsap.timeline();
 
-	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
+	//gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 	gsap.set(".fs-menu--column", {yPercent:-100})
   gsap.set(".close", {autoAlpha:0})
   
@@ -46,21 +46,21 @@ function show() {
 		.from(".small-link", {x:-40, stagger:0.1, opacity:0, duration:0.3, ease: "power1.out"}, "<")
 		.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.5")
     
-    .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
+   // .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
 
 }
 // --- SHOW
 function hide() {
 	let tl = gsap.timeline();
 
-	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
+	//gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
 		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "Expo.inOut"})
 		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		.to(".open", {autoAlpha:1}, "<")
 		.to(".close", {autoAlpha:0}, "<")
     
-		.set(" .nav-toggle", { pointerEvents: "all"});
+		//.set(" .nav-toggle", { pointerEvents: "all"});
 	
 }
 
