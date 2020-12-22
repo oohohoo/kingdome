@@ -38,7 +38,7 @@ function show() {
   gsap.set(".close", {autoAlpha:0})
   
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
-		.to(".fs-menu--column", {yPercent:0, duration:0.8, stagger:0.05, ease: "Expo.inOut"}, "<")
+		.to(".fs-menu--column", {yPercent:0, duration:0.4, stagger:0.1, ease: "Expo.inOut"}, "<")
 		.to(".open", {autoAlpha:0}, "<")
 		.to(".close", {autoAlpha:1}, "<")
     
