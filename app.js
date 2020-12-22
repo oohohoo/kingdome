@@ -36,14 +36,14 @@ function show() {
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 	gsap.set(".fs-menu--column", {yPercent:-100})
   gsap.set(".close", {autoAlpha:0})
-  //gsap.set(".line-wrapper", {yPercent:0})
+  gsap.set(".line-wrapper", {yPercent:100})
 
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
 		.to(".fs-menu--column", {yPercent:0, duration:0.5, stagger:0.1, ease: "Expo.inOut"}, "<")
 		.to(".open", {autoAlpha:0}, "<")
 		.to(".close", {autoAlpha:1}, "<")
     
-		.from(".line-wrapper", {yPercent:100, stagger:0.1, duration:0.4, ease: "power1.out"}, "<0.1")
+		.to(".line-wrapper", {yPercent:0, stagger:0.1, duration:0.4, ease: "power1.out"}, "<0.1")
 		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.out"}, "-=0.1")
 		.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "-=0.1")
     
