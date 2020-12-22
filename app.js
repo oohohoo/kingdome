@@ -39,12 +39,12 @@ function show() {
   //gsap.set(".line-wrapper", {yPercent:0})
 
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
-		.to(".fs-menu--column", {yPercent:0, duration:0.4, stagger:0.1, ease: "Expo.inOut"}, "<")
+		.to(".fs-menu--column", {yPercent:0, duration:0.5, stagger:0.1, ease: "Expo.inOut"}, "<")
 		.to(".open", {autoAlpha:0}, "<")
 		.to(".close", {autoAlpha:1}, "<")
     
 		.from(".line-wrapper", {yPercent:100, stagger:0.1, opacity:0, duration:0.4, ease: "power1.out"}, "<0.1")
-		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.out"}, "<0.2")
+		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.out"}, "-=0.1")
 		.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "-=0.1")
     
     .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
