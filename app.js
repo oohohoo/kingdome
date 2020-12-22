@@ -38,12 +38,12 @@ function show() {
   gsap.set(".close", {autoAlpha:0})
   
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
-		.to(".fs-menu--column", {yPercent:0, duration:0.4, stagger:0.05, ease: "Expo.inOut"}, "<")
+		.to(".fs-menu--column", {yPercent:0, duration:0.8, stagger:0.05, ease: "Expo.inOut"}, "<")
 		.to(".open", {autoAlpha:0}, "<")
 		.to(".close", {autoAlpha:1}, "<")
     
-		.from(".main-link", {x:-40, stagger:0.1, opacity:0, duration:0.3, ease: "power1.out"}, "<0.3")
-		.from(".small-link", {x:-40, stagger:0.1, opacity:0, duration:0.3, ease: "power1.out"}, "<")
+		.from(".line-wrapper", {yPercent:100, stagger:0.1, opacity:0, duration:0.3, ease: "power1.out"}, "<0.3")
+		.from(".small-link", {yPercent:0, stagger:0.1, opacity:0, duration:0.3, ease: "power1.out"}, "<")
 		.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.5")
     
     .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
@@ -122,6 +122,7 @@ $(el).on("mouseenter",function(){
 });
 //-------
 
+/*
 // UNDERLINE
 // Mouseenter function
 function enterAnimation(link, e, index) {
@@ -162,7 +163,8 @@ workLinks.forEach((link, index, value) => {
   });
 
 });
- 
+
+ */
 
 	// MENU ICON MOUSEOVER 
 menuhover.addEventListener('mouseover', ()=> {  
@@ -248,7 +250,7 @@ tl.to('.video-bg', {
  //color: '#ff0000',
  height: "100%", 
   duration:1,
-  ease: "power4.inOut" 
+  ease: "expo.inOut" 
 })
 
 /*tl_2.to(".turning", {
