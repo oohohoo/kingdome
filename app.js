@@ -2,10 +2,10 @@
 const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 
-const sections = selectAll('.rg__column');
+//const sections = selectAll('.rg__column');
 
 // create hover effect for each portfolio navigation item
-const allLinks = gsap.utils.toArray('.portfolio__categories a');
+/*const allLinks = gsap.utils.toArray('.portfolio__categories a');
 const pageBackground = select('.fill-background');
 const largeImage = select('.portfolio__image--l');
 const smallImage = select('.portfolio__image--s');
@@ -16,7 +16,7 @@ const loader = select('.loader');
 const loaderInner = select('.loader .inner');
 const progressBar = select('.loader .progress');
 const loaderMask = select('.loader__mask');
-
+*/
 // images loaded
 function init(){
 
@@ -200,6 +200,7 @@ function initContent() {
 
 }
 
+/*
 const updateBodyColor = (color) => {
     // gsap.to('.fill-background', { backgroundColor: color, ease: 'none'});
     document.documentElement.style.setProperty('--bcg-fill-color', color);
@@ -207,7 +208,7 @@ const updateBodyColor = (color) => {
 const getTextHeight = (textCopy) => {
     return textCopy.clientHeight;
 }
-
+*/
 
 
 // provjeri, ali mislim da ode idu svi ovi scroll trigger init i smoothscroll
