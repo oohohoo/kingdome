@@ -55,7 +55,7 @@ const sInside = select('.portfolio__image--s .image_inside');
 */
 const loader = select('.loader');
 const loaderInner = select('.loader .inner');
-const progressBar = select('.loader .progress');
+//const progressBar = select('.loader .progress');
 const loaderMask = select('.loader__mask');
 
 // images loaded
