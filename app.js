@@ -1,4 +1,6 @@
 
+gsap.registerPlugin(ScrollTrigger);
+
 const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 
@@ -11,12 +13,12 @@ const largeImage = select('.portfolio__image--l');
 const smallImage = select('.portfolio__image--s');
 const lInside = select('.portfolio__image--l .image_inside');
 const sInside = select('.portfolio__image--s .image_inside');
-
+*/
 const loader = select('.loader');
 const loaderInner = select('.loader .inner');
 const progressBar = select('.loader .progress');
 const loaderMask = select('.loader__mask');
-*/
+
 // images loaded
 function init(){
 
