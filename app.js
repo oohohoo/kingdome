@@ -1,7 +1,7 @@
 //gsap.registerPlugin(ScrollTrigger);
 
 // --- SMOOTH SCROLL -----------------------------------------
-/*
+
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector(".smooth-scroll"),
@@ -34,7 +34,7 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
-*/
+
 
 // -- ovo gore prebaci na page single custom code ako ne radi
 
