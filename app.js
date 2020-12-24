@@ -39,6 +39,59 @@ ScrollTrigger.refresh();
 // -- ovo gore prebaci na page single custom code ako ne radi
 
 
+//* ODAVDE IDE BLOK KODA IZ SOLO PAGEA */
+gsap.set(".rg__long", {autoAlpha:0, yPercent:8});
+
+
+gsap.utils.toArray(".rg__column").forEach(container => {
+  let wrap = container.querySelector(".rg__wrap"),
+      dome = container.querySelector(".rg__dome"),
+      name = container.querySelector(".rg__name"),
+      short = container.querySelector(".rg__short"),
+      long = container.querySelector(".rg__long"),
+
+      tl = gsap.timeline({ defaults: { duration: 0.3}, 
+      paused: true });
+  
+  
+  tl.to(dome, { yPercent: -8, autoAlpha:0 })
+  
+// .to(wrap, { backgroundColor:"#B6FA00" }, 0)
+    .to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
+    .to(name, { yPercent:-8, autoAlpha:0 }, 0)
+    .to(short, { yPercent:-8, autoAlpha:0 }, 0)
+    .to(long, {autoAlpha:1, yPercent:0}, 0);
+    
+     
+  container.addEventListener("mouseenter", () => tl.play() );
+  container.addEventListener("mouseleave", () => tl.reverse() );
+});
+
+
+
+// --- LOGO ANIMACIJA 
+
+gsap.timeline({
+  scrollTrigger: {
+     scroller: ".smooth-scroll",
+			trigger: "#logotrigger",
+      start: "top top", // when the top of the trigger hits the top of the viewport
+      end: "+=10000000", // end after scrolling 500px beyond the start
+			toggleActions: 'play reverse play reverse',
+      invalidateOnRefresh: true,
+
+  }
+})
+.to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
+.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
+
+
+
+
+// ------ dovde je meni i js iz solo pagea
+
+
+
 
 const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
