@@ -1,0 +1,1 @@
+export { default as fsmenu } from './fsmenu'
