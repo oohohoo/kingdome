@@ -1,10 +1,4 @@
 
-// provjeri, ali mislim da ode idu svi ovi scroll trigger init i smoothscroll
-
-
-function init(){
-    
-  // start here
 
 
 // PLAY WHEN ALL CONTENT LOADED
@@ -230,16 +224,6 @@ gsap.to( $(".swiper-slide"),
 
 */
 
-
-
-
-
-
-}
-
-window.addEventListener('load', function(){
-  init();
-});
 
 
 
