@@ -1,4 +1,3 @@
-
 gsap.registerPlugin(ScrollTrigger);
 
 let locoScroll;
@@ -121,6 +120,7 @@ function initContent() {
   select('body').classList.remove('is-loading');
   initLocomotiveScroll();
 console.log("CONTENT FUNCTIONS LOADED");
+
   //initNavigation();
   //initHeaderTilt();
 
@@ -175,11 +175,8 @@ function initLocomotiveScroll() {
         trigger: el,
         markers: true,
         scroller: '[data-scroll-container]',
-        //togglEvents: onEnter onLeave onEnterBack onLeaveBack
-        //toggleActions: "restart pause reverse pause",
         start: 'top bottom',
         end: "top top",
-        // scrub: i * 0.2 
       },
       y: 100,
       opacity: 0
@@ -187,10 +184,27 @@ function initLocomotiveScroll() {
   });
 }
 
+// HOME ANIMATIONS
+
+function homeanimations() {
+ 
+const mask = select('.b-img');
+const text = select('.b-header');
+
+const tl = gsap.timeline({
+defaults: {
+	duration: 0.9, ease: 'power4.out'
+}
+});
+
+tl
+   .from(mask, {rotate:45});
+   console.log("image mask shit");
+   return tl
+}        
+
 /*
-================================================================================
 BARBA
-================================================================================
 */
 
 // BARBA PAGE IN
@@ -247,15 +261,10 @@ function initPageTransitions() {
     transitions: [{once() {
         // do something once on the initial page load
         initLoader();
-        gsap.from('.b-img', {
-        duration: 0.6,
-        y:150,
-        autoAlpha:0,
-        ease: 'power1.out'
-        });
+     		homeanimations();
+       
         
-        
-         console.log("ONCE");
+         console.log("MAKNI FOTKU");
       },
       async leave({current}) {
         // animate loading screen in
@@ -274,6 +283,13 @@ function initPageTransitions() {
    // destroy all ScrollTriggers
       // ScrollTrigger.getAll().forEach(t => t.kill());
       //  console.log("scrolltrigger killed");
+      },
+      
+       afterEnter({next}) {
+        homeanimations();
+console.log("HOME ANIMATIONS LOADED");
+        console.log("AFTER ENTER");
+
       }
 
     }],
@@ -294,7 +310,7 @@ function initPageTransitions() {
           event.preventDefault();
           event.stopPropagation();
           // automatically scroll to the top of the page on same location
-          locoScroll.scrollTo('#top')
+       //   locoScroll.scrollTo('#top')
           return true;
         }
         if (barba.transitions.isRunning) {
@@ -339,5 +355,3 @@ UPDATE ACTIVE CLASS ON THE MENU - BASED ON THE GIVEN URL
     initLoader();
   }
 }
-
- 
