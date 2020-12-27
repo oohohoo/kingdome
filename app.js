@@ -1,9 +1,5 @@
 
 
-
-// PLAY WHEN ALL CONTENT LOADED
-//document.addEventListener ('DOMContentLoaded', ()=> {
-
 // OPEN MENU FROM CLICK
 const openmenu = document.getElementById('openmenu');
 const closemenu = document.getElementById('closemenu');
