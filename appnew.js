@@ -820,6 +820,7 @@ function hide() {
 //-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
 // loop through each element
+/*
 $(".nav-wrap").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
@@ -830,10 +831,10 @@ $(el).on("mouseenter",function(){
   }).on("mouseleave",function(){
     this.animation.reverse();
   });
-});
+}); */
 //-------
 
-
+/*
 	// MENU ICON MOUSEOVER 
 menuhover.addEventListener('mouseover', ()=> {  
 let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
@@ -851,13 +852,13 @@ menuhovertimeline
 .to(".mline3", {width: "55%"}, "<-0.05")
 })
 
-
+*/
 // EVENT LISTENERS
 openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
 closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
 
 
-
+/*
 // --- 017 - LOCOMOTIVE 4.0 SCROLL TO  --------------------------------------------------------------------------
 $( "#totop" ).on( "click", function() {
 	locoScroll.scrollTo( '#start', {
@@ -868,7 +869,7 @@ $( "#totop" ).on( "click", function() {
 	});
 	});
 }
-
+*/
 /*
 ================================================================================
 PRODUCTS - FULLSCREEN SWIPER
