@@ -409,7 +409,7 @@ BARBA TRANSITIONS
      afterEnter({next}) {
       //animationEnter();
       logoAnimacija();
-      fullscreenMenu();
+      //fullscreenMenu();
       homeProductHover();
            console.log("AFTER ENTER + logoanimacija2");
 
