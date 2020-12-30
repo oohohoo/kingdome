@@ -230,7 +230,7 @@ header a.nav-link .w-inline-block .w--current span {
 HEADLINE - VW SIZE
 ================================================================================
 */
-.main-head {
+/*.main-head {
   font-size: clamp(5rem, 11vw, 8rem);
   transition: font-size 0.3s, transform 0.3s;
 }
@@ -238,7 +238,7 @@ HEADLINE - VW SIZE
   font-size: clamp(2.5rem, 3vw, 3rem);
   transition: font-size 0.3s, transform 0.3s;
 } 
-
+*/
 /*
 ================================================================================
 PRODUCTS - SWIPER CSS
