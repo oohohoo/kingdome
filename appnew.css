@@ -1,0 +1,369 @@
+/*
+================================================================================
+PRELOADER
+================================================================================
+*/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/*
+================================================================================
+DEFINE ROOT VARIABLES / definiraj svoje
+================================================================================
+*/
+:root {
+  --text-color: white;
+  --text-dark-color: #202020;
+  --header-height: 100px;
+  --burger-width: 40px;
+  --font-headings: Georgia, serif;
+
+  --bcg-green: #ACB7AE;
+  --bcg-lightgreen: #a6b3b3;
+  --bcg-lightbrown: #b0a7a4;
+  --bcg-lightblue: #B6FA00;
+
+  --bcg-loaderblue: #394F42;
+  --bcg-loaderbluedark: #EDC4AC;
+
+  --loader-width: 27.36vw;
+  --loader-height: 50vh;
+
+  --v-spacing: 10vh;
+  --h-gutter: 6.6vw;
+
+  --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
+}
+
+/*
+================================================================================
+LOCOMOTIVE SCROLL 4.0.6
+================================================================================
+*/
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  white-space: nowrap;
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(24, 21, 21);
+  /*   opacity: 0.5; */
+  width: 6px;
+  /* border-radius: 10px; */
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
+
+/*
+================================================================================
+IS TRANSITIONING / BLUE PROGRESS CURSOR & POINTER EVENTS
+================================================================================
+*/
+.is-transitioning {
+  pointer-events: none;
+  cursor: progress;
+}
+
+/*
+================================================================================
+GSAP PERFORMANCE FIX
+================================================================================
+*/
+.smooth-scroll {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/*
+================================================================================
+HIDE PAGE CONTENT BY DEFAULT
+================================================================================
+*/
+.is-loading #main,
+/* .is-loading .logo,
+.is-loading .burger, */
+.is-loading .g-header,
+.is-loading .fill-background {
+  display: none;
+}
+
+/*
+================================================================================
+IS LOADING BACKGROUND COLOR
+================================================================================
+*/
+.is-loading {
+  background-color: var(--bcg-loaderblue);
+}
+/*
+================================================================================
+GSAP PERFORMANCE FIX
+================================================================================
+*/
+.loader__title--mask {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/*
+================================================================================
+MAIN Z-INDEX
+================================================================================
+*/ 
+main {
+  z-index: 1;
+  position: relative;
+}
+
+/*
+================================================================================
+ACTIVE LINK NE RADI!!!!
+================================================================================
+*/ 
+header {
+  text-align: center;
+ /*  margin: 50px 15vw; */
+  overflow: hidden;
+}
+header a {
+  color: #202020;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 5px 0 8px 0;
+  margin: 0 8px;
+  text-decoration: none;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+
+header a::after, header .nav-link.active span {
+  display: block;
+  content: ' ';
+  background-color: #1ab4d0;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+/*
+header a.nav-link .w-inline-block .w--current span {
+  background-color: #f70606;
+  z-index: 10;
+}
+
+*/
+
+/*
+================================================================================
+LOADER
+================================================================================
+*/
+.loaderx,
+.loader__content {
+  min-height: 100vh;
+  position: fixed;
+  flex-direction: column;
+   z-index: 4; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.loader__mask {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bcg-loaderblue);
+  overflow: hidden;
+}
+
+.inner-loader {
+  width: var(--loader-width);
+  height: var(--loader-height);
+}
+
+.inner-loader {
+  background-color: var(--bcg-loaderbluedark);
+}
+.loader__content {
+  visibility: hidden;
+   z-index: 5; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.loader__title {
+  font-size: 7vw;
+  line-height: 8vw;
+  margin: 0;
+  font-family: var(--font-headings);
+  color: var(--text-color);
+  font-weight: normal;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 5; */
+}
+
+.loader__image {
+  width: var(--loader-width);
+  padding-bottom: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader__image img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.loader__title--mask {
+  overflow: hidden;
+}
+
+.loader__title--mask span {
+  display: block;
+}
+
+.loader__image--mask {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.progress {
+  background-color: var(--bcg-lightblue);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--loader-width);
+  height: var(--loader-height);
+}
+
+.fill-background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  will-change: background-color;
+  background-color: var(--bcg-fill-color);
+  transition: background-color 0.3s linear;
+}
+
+/*
+================================================================================
+TRICK TO UNIT PORTS ON MOBILE - VH
+================================================================================
+*/
+/* https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+.vhfix {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100)
+}
+
+/*
+================================================================================
+IMAGE ASPECT RATIO CALC
+================================================================================
+*/
+.b-img {
+  width: calc(65vh*21/29.7);
+  height: 65vh;
+}
+
+/*
+================================================================================
+KILL WEBFLOW BADGE
+================================================================================
+*/
+.w-webflow-badge {
+  position: relative !important;
+  right: 1000px !important;
+}
