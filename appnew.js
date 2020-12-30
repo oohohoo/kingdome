@@ -413,7 +413,7 @@ BARBA VIEWS
     beforeEnter(data) {
     //  window.Webflow && window.Webflow.require('ix2').init();  
     Webflow.require('ix2').init();
-     
+    console.log("Webflow reinit ulalalalalala");
       contactForm();
       console.log("contact JS triggered!");
       
