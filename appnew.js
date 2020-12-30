@@ -347,7 +347,7 @@ function initPageTransitions() {
    
   });
    //kill scrolltrigger
-   barba.hooks.beforeLeave(() => {
+  barba.hooks.beforeLeave(() => {
     locoScroll.destroy();
     console.log("Locomotive scroll destroyed!");
     Webflow.destroy();
