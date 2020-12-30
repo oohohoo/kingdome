@@ -200,14 +200,14 @@ SCROLLTRIGGER TEST
 ================================================================================
 LOCOMOTIVE 4 SCROLL TO TOP
 ================================================================================
-*//*
-	locoScroll.scrollTo( '#top', {
+*/
+	locoScroll.scrollTo( '#main', {
 		'offset': 0,
 		'duration': 5000,
 		//'easing': [0.25, 0.00, 0.35, 1.00],
 		'disableLerp': true
 	});
-  */
+  
 }
 
 /*
