@@ -191,6 +191,16 @@ SCROLLTRIGGER TEST
   .to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
   .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
 
+  /*
+================================================================================
+CONTACT FORMA INIT - TEST
+================================================================================
+*/
+
+  var Webflow = Webflow || [];
+  Webflow.push(function () {
+    new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
+  });
 
 
   /*
@@ -435,10 +445,7 @@ BARBA TRANSITIONS
        // do something once on the initial page load
        initLoader();
         homeProductHover();
-        var Webflow = Webflow || [];
-        Webflow.push(function () {
-          new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
-        });
+     
         //homeYoutube();
        //logoAnimacija();
        //fullscreenMenu();
