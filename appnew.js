@@ -382,16 +382,15 @@ barba.init({
 BARBA VIEWS
 ================================================================================
 */  
- /* views: [{
-    namespace: 'about',
+  views: [{
+    namespace: 'products',
     beforeEnter(){
-        strigtest();
-        aboutanimations();
-        console.log("About anomations tregered!");
+      productsMainSwiper();
+        console.log("Products swiper triggered!");
     } 
 
 
-}],*/
+}],
 /*
 ================================================================================
 BARBA TRANSITIONS
@@ -408,7 +407,7 @@ BARBA TRANSITIONS
        //logoAnimacija();
        //fullscreenMenu();
        homeProductHover();
-       productsMainSwiper();
+      
       
         //homeanimations();
         console.log("ONCE + logoanimacija1");
@@ -431,7 +430,7 @@ BARBA TRANSITIONS
       //logoAnimacija();
       //fullscreenMenu();
       homeProductHover();
-      productsMainSwiper();
+     // productsMainSwiper();
            console.log("AFTER ENTER + logoanimacija2");
 
      },
