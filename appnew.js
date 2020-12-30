@@ -397,7 +397,7 @@ BARBA TRANSITIONS
      },
      
      afterEnter({next}) {
-      animationEnter();
+      //animationEnter();
       console.log("AFTER ENTER");
 
      },
