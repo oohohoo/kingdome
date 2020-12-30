@@ -350,10 +350,10 @@ function initPageTransitions() {
   barba.hooks.beforeLeave(() => {
     locoScroll.destroy();
     console.log("Locomotive scroll destroyed!");
-    window.Webflow && window.Webflow.destroy();
+    /*window.Webflow && window.Webflow.destroy();
     window.Webflow && window.Webflow.ready();
     window.Webflow && window.Webflow.require('ix2').init();          
-    console.log("webflow destroy ready init");
+    console.log("webflow destroy ready init");*/
   });
   //init scrolltrigger
    barba.hooks.afterEnter(() => {
