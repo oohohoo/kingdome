@@ -336,7 +336,7 @@ BARBA GLOBAL HOOKS + PREFETCH + INIT + VIEWS + TRANSITIONS
 function initPageTransitions() {
    // do something before the transition starts
    barba.hooks.once(() => {
-   // initLoader();
+     // initLoader();
     //logoAnimacija();
     //fullscreenMenu();
     //homeProductHover();
@@ -361,9 +361,9 @@ function initPageTransitions() {
   barba.hooks.beforeLeave(() => {
     locoScroll.destroy();
     console.log("Locomotive scroll destroyed!");
-    window.Webflow && window.Webflow.destroy();
-    window.Webflow && window.Webflow.ready();
-    window.Webflow && window.Webflow.require('ix2').init();          
+    //window.Webflow && window.Webflow.destroy();
+    //window.Webflow && window.Webflow.ready();
+    //window.Webflow && window.Webflow.require('ix2').init();          
     console.log("webflow destroy ready init");
   });
   //init scrolltrigger
@@ -446,6 +446,7 @@ BARBA TRANSITIONS
        // do something once on the initial page load
        initLoader();
         homeProductHover();
+        fullscreenMenu();
      
         //homeYoutube();
        //logoAnimacija();
@@ -1117,6 +1118,5 @@ function productsoloAccordion() {
     }
   }
   
-
-  
-  }
+}
+}
