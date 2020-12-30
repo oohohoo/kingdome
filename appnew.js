@@ -407,6 +407,10 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
+      Webflow.destroy();
+     Webflow.ready();
+     Webflow.require('ix2').init();
+     console.log("webflow destroy ready init");
       contactForm();
       console.log("contact JS triggered!");
       
@@ -467,10 +471,7 @@ BARBA TRANSITIONS
       window.Webflow && window.Webflow.require('ix2').init();   
       */
 
-     Webflow.destroy();
-     Webflow.ready();
-     Webflow.require('ix2').init();
-     console.log("webflow destroy ready init");
+     
      },
   
    
