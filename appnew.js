@@ -6,16 +6,6 @@ console.log("ScrollTrigger Loaded!");
 let locoScroll;
 console.log("Locomotive Loaded");
 
- /*
-================================================================================
-CONTACT FORMA INIT - TEST
-================================================================================
-*/
-
-  var Webflow = Webflow || [];
-  Webflow.push(function () {
-    new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
-  });
 /*
 ================================================================================
 PRELOADER
@@ -201,7 +191,6 @@ SCROLLTRIGGER TEST
   .to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
   .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
 
- 
 
 
   /*
@@ -424,7 +413,10 @@ BARBA VIEWS
     beforeEnter(data) {
     //  window.Webflow && window.Webflow.require('ix2').init();  
 
-  
+      var Webflow = Webflow || [];
+      Webflow.push(function () {
+        new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
+      });
 
       contactForm();
       console.log("contact JS triggered!");
@@ -446,7 +438,7 @@ BARBA TRANSITIONS
        // do something once on the initial page load
        initLoader();
         homeProductHover();
-     
+        
         //homeYoutube();
        //logoAnimacija();
        //fullscreenMenu();
@@ -820,7 +812,6 @@ function hide() {
 //-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
 // loop through each element
-/*
 $(".nav-wrap").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
@@ -831,10 +822,10 @@ $(el).on("mouseenter",function(){
   }).on("mouseleave",function(){
     this.animation.reverse();
   });
-}); */
+});
 //-------
 
-/*
+
 	// MENU ICON MOUSEOVER 
 menuhover.addEventListener('mouseover', ()=> {  
 let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
@@ -852,13 +843,13 @@ menuhovertimeline
 .to(".mline3", {width: "55%"}, "<-0.05")
 })
 
-*/
+
 // EVENT LISTENERS
 openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
 closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
 
 
-/*
+
 // --- 017 - LOCOMOTIVE 4.0 SCROLL TO  --------------------------------------------------------------------------
 $( "#totop" ).on( "click", function() {
 	locoScroll.scrollTo( '#start', {
@@ -869,7 +860,7 @@ $( "#totop" ).on( "click", function() {
 	});
 	});
 }
-*/
+
 /*
 ================================================================================
 PRODUCTS - FULLSCREEN SWIPER
@@ -1117,5 +1108,6 @@ function productsoloAccordion() {
     }
   }
   
-}
-}
+
+  
+  }
