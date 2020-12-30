@@ -6,8 +6,16 @@ console.log("ScrollTrigger Loaded!");
 let locoScroll;
 console.log("Locomotive Loaded");
 
+ /*
+================================================================================
+CONTACT FORMA INIT - TEST
+================================================================================
+*/
 
-
+  var Webflow = Webflow || [];
+  Webflow.push(function () {
+    new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
+  });
 /*
 ================================================================================
 PRELOADER
@@ -200,14 +208,14 @@ SCROLLTRIGGER TEST
 ================================================================================
 LOCOMOTIVE 4 SCROLL TO TOP
 ================================================================================
-*/
-	locoScroll.scrollTo( '#main', {
+*//*
+	locoScroll.scrollTo( '#top', {
 		'offset': 0,
-		'duration': 2000,
+		'duration': 5000,
 		//'easing': [0.25, 0.00, 0.35, 1.00],
 		'disableLerp': true
 	});
-  
+  */
 }
 
 /*
@@ -1008,16 +1016,7 @@ CONTACT - MULTILEVEL FORMA - NE RADI
 ================================================================================
 */
 function contactForm() {
- /*
-================================================================================
-CONTACT FORMA INIT - TEST
-================================================================================
-*/
 
-var Webflow = Webflow || [];
-Webflow.push(function () {
-  new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
-});
 
 
 // SWIPER
@@ -1070,6 +1069,14 @@ grabCursor: true,
 
 });
 
+$('swiper-slide').on('mousedown touchstart', function(event) {
+gsap.to('.swiper-slide', {scale: 0.9, duration: 0.4});
+
+});
+
+$('.swiper-slide').on('mouseup touchend', function(event) {
+gsap.to('.swiper-slide', {scale:1, duration: 0.4, delay:0.2});
+});
 
   
   }
