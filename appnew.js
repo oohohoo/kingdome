@@ -585,7 +585,7 @@ tl.to('.video-bg', {
   ease: "expo.inOut" 
 })
 
-f
+
 /*tl_2.to(".turning", {
   duration:.75,
   ease: "elastic.out(1, 0.3)", 
