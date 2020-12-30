@@ -398,6 +398,7 @@ BARBA VIEWS
       namespace: 'productlottie',
     beforeEnter(data) {
       soloProductsLottie();
+      productsoloAccordion();
       console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
@@ -406,6 +407,7 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
+      contactForm();
       console.log("contact JS triggered!");
       
     }
@@ -982,3 +984,116 @@ ScrollTrigger.create({
 
 }
 
+/*
+================================================================================
+CONTACT - MULTILEVEL FORMA - NE RADI
+================================================================================
+*/
+function contactForm() {
+
+  var Webflow = Webflow || [];
+Webflow.push(function () {
+  new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
+  
+});
+
+// SWIPER
+// HORIZONTAL SWIPER DRAGGABLE
+
+var swipera = new Swiper('.swiper-container', {
+  pagination: '.swiper-pagination',
+  direction: 'horizontal',
+/* autoplay: {
+delay: 1000,
+disableOnInteraction: false,
+},*/
+freeMode: true,
+  //resistanceRatio:0.2,
+  slidesPerView: 3.2,
+ // loopedSlides: 3,
+
+// centeredSlides: 0,
+//  longSwipes:true,
+//  longSwipesRatio:0.5,
+ // touchRatio:5,
+loop: true,
+grabCursor: true,
+  //loopFillGroupWithBlank: false,
+ // paginationClickable: true,
+  spaceBetween: 30,
+ // mousewheelControl: true,
+ // parallax: true,
+ // preloadImages: true,
+  //updateOnImagesReady: true,
+ // centeredSlides: true,
+ //slidesOffsetBefore: 100,
+  //speed: 400,
+  breakpoints: {
+                  500: {
+                      spaceBetween: 30,
+                      loopedSlides: 3.2,
+                      slidesPerView: 1
+                  },
+                  1e3: {
+                      loopedSlides: 3,
+                      spaceBetween: 20,
+                      slidesPerView: 3.2
+                  },
+                  1200: {
+                      spaceBetween: 20,
+                      slidesPerView: 2.2
+                  }
+              }
+
+});
+
+$('swiper-slide').on('mousedown touchstart', function(event) {
+gsap.to('.swiper-slide', {scale: 0.9, duration: 0.4});
+
+});
+
+$('.swiper-slide').on('mouseup touchend', function(event) {
+gsap.to('.swiper-slide', {scale:1, duration: 0.4, delay:0.2});
+});
+
+  
+  }
+
+  /*
+================================================================================
+PRODUCT SOLO - ACCORDION
+================================================================================
+*/
+function productsoloAccordion() {
+  
+  var animations = $(".accordion-group").map(createAnimation);
+
+  $(".accordion-menu").click(playAnimation);
+  
+  function playAnimation(event) {
+    
+    var selected = this;
+    
+    animations.each(function(i, animate) {
+      animate(selected);
+    });
+  }
+  
+  function createAnimation(i, element) {
+      
+    var menu = element.querySelector(".accordion-menu");
+    var box  = element.querySelector(".accordion-content");
+    
+    gsap.set(box, { height: "auto"})
+    var tween = gsap.from(box, { duration:0.5, height: 0, ease: Power1.easeInOut }).reverse();
+    
+    return function(selected) {
+      
+      var reversed = selected !== menu ? true : !tween.reversed();
+      tween.reversed(reversed);
+    }
+  }
+  
+
+  
+  }
