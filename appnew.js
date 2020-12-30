@@ -6,7 +6,16 @@ console.log("ScrollTrigger Loaded!");
 let locoScroll;
 console.log("Locomotive Loaded");
 
+ /*
+================================================================================
+CONTACT FORMA INIT - TEST
+================================================================================
+*/
 
+  var Webflow = Webflow || [];
+  Webflow.push(function () {
+    new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
+  });
 /*
 ================================================================================
 PRELOADER
@@ -327,7 +336,7 @@ BARBA GLOBAL HOOKS + PREFETCH + INIT + VIEWS + TRANSITIONS
 function initPageTransitions() {
    // do something before the transition starts
    barba.hooks.once(() => {
-     // initLoader();
+   // initLoader();
     //logoAnimacija();
     //fullscreenMenu();
     //homeProductHover();
@@ -352,9 +361,9 @@ function initPageTransitions() {
   barba.hooks.beforeLeave(() => {
     locoScroll.destroy();
     console.log("Locomotive scroll destroyed!");
-    //window.Webflow && window.Webflow.destroy();
-    //window.Webflow && window.Webflow.ready();
-    //window.Webflow && window.Webflow.require('ix2').init();          
+    window.Webflow && window.Webflow.destroy();
+    window.Webflow && window.Webflow.ready();
+    window.Webflow && window.Webflow.require('ix2').init();          
     console.log("webflow destroy ready init");
   });
   //init scrolltrigger
@@ -437,12 +446,10 @@ BARBA TRANSITIONS
        // do something once on the initial page load
        initLoader();
         homeProductHover();
-        //fullscreenMenu();
      
         //homeYoutube();
        //logoAnimacija();
-       fullscreenMenu();
-       contactForm();
+       //fullscreenMenu();
       
       
       
@@ -782,7 +789,7 @@ function show() {
   //gsap.set(".line-wrapper", {yPercent:100})
 
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
-		.to(".fs-menu--column", {yPercent:0, duration:0.8, stagger:0.1, ease: "Expo.inOut"}, "<")
+		.to(".fs-menu--column", {yPercent:0, duration:0.5, stagger:0.1, ease: "Expo.inOut"}, "<")
 		.to(".open", {autoAlpha:0}, "<")
 		.to(".close", {autoAlpha:1}, "<")
     
@@ -799,7 +806,7 @@ function hide() {
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
-		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "Expo.inOut"})
+		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "Expo.inOut"})
 		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		.to(".open", {autoAlpha:1}, "<")
 		.to(".close", {autoAlpha:0}, "<")
@@ -863,385 +870,6 @@ $( "#totop" ).on( "click", function() {
 	});
 }
 */
-
-/*
-================================================================================
-PRODUCTS - FULLSCREEN SWIPER
-================================================================================
-*/
-function productsMainSwiper() {
-
-  const slider = document.getElementById("js-cta-slider");
-  const sliderCounter = document.getElementById("js-cta-slider-counter");
-  const sliderNext = document.getElementById("js-cta-slider-next");
-  const sliderPrevious = document.getElementById("js-cta-slider-previous");
-  
-  const interleaveOffset = 0.75;
-  
-    
-  
-  // svaka fotka ima: data-swiper-parallax-y: "35%"
-  
-  const swiper = new Swiper(slider, {
-    autoplay: false,
-    parallax: true,
-    loop: true,
-    effect: "slide",
-    direction: "vertical", // put horizontal
-    speed: 1000,
-    grabCursor: true,
-    watchSlidesProgress: true, // turn off for horizontal
-    //mousewheelControl: true,
-    mousewheelControl: 1,
-    mousewheel: true,
-    pagination: {
-      el: sliderCounter,
-      type: "custom",
-      renderCustom: function(swiper, current, total) {
-        let i = current ? current : 0;
-        return `${("0" + i).slice(-2)} / ${("0" + total).slice(-2)}`;
-      }
-    },
-    navigation: {
-      nextEl: sliderNext,
-      prevEl: sliderPrevious
-    },
-  });
-}
-
-/*
-================================================================================
-PRODUCTS - SOLO PRODUCT LOTTIE - VIDEK
-================================================================================
-*/
-function soloProductsLottie() {
-
-class ScrubControlledAnimation {
-  constructor() {
-    this.DOM = {
-      animationWrapper: ".js-scrub-controlled-animation-wrapper",
-      animation: ".js-scrub-controlled-animation",
-      states: {}
-    };
-
-    this.animationWrapper = document.querySelector(this.DOM.animationWrapper);
-
-    this.animation = document.querySelector(this.DOM.animation);
-
-    this.init();
-  }
-
-  init() {
-    console.log("ScrubControlledAnimation init()");
-
-    if (this.animation) {
-      this.scrubAnimation();
-    }
-  }
-
-  scrubAnimation() {
-    const scrubAnimationOptions = {
-      container: this.animation,
-      renderer: "svg",
-      loop: true,
-      autoplay: false,
-      path: this.animation.getAttribute("data-animation-source")
-    };
-
-    /**
-     *
-     */
-    let scrubAnimation = lottie.loadAnimation(scrubAnimationOptions);
-
-    scrubAnimation.addEventListener("DOMLoaded", () => {
-      this.loadAnimation(scrubAnimation);
-    });
-  }
-
-  loadAnimation(animation) {
-    const scrubAnimationTimeline = gsap.timeline({}).to(
-      { frame: 0 },
-      {
-        duration: 1,
-        frame: animation.totalFrames - 1,
-        onUpdate: function () {
-          animation.goToAndStop(Math.round(this.targets()[0].frame), true);
-        }
-      },
-      "start"
-    );
-
-    ScrollTrigger.create({
-      trigger: this.animationWrapper,
-      animation: scrubAnimationTimeline,
-       scroller: ".smooth-scroll",
-      // markers: true,
-      pin:"#kingpin",
-      start: "top 20%",
-      end: "bottom top",
-      scrub: 0.4
-    });
-  }
-}
-
-new ScrubControlledAnimation();
-  
-/*
-================================================================================
-PRODUCTS - SOLO PRODUCT LOTTIE ELIPSE PIN
-================================================================================
-*/
-// -- ELIPSE PIN
-ScrollTrigger.create({
-  scroller: ".smooth-scroll",
-    trigger: "#elipsepin",
-    start: "top 30%", 
-  //  end: "bottom 30%",
-   end: "+=90%",
-    pin: ".elipse",
-     invalidateOnRefresh: true,
-  });
-
-
-}
-
-/*
-================================================================================
-CONTACT - MULTILEVEL FORMA - NE RADI
-================================================================================
-*/
-function contactForm() {
-
- /*
-================================================================================
-CONTACT FORMA INIT - TEST
-================================================================================
-*/
-
-var Webflow = Webflow || [];
-Webflow.push(function () {
-  new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
-});
-
-// SWIPER
-// HORIZONTAL SWIPER DRAGGABLE
-
-var swipera = new Swiper('.swiper-container', {
-  pagination: '.swiper-pagination',
-  direction: 'horizontal',
-/* autoplay: {
-delay: 1000,
-disableOnInteraction: false,
-},*/
-freeMode: true,
-  //resistanceRatio:0.2,
-  slidesPerView: 3.2,
- // loopedSlides: 3,
-
-// centeredSlides: 0,
-//  longSwipes:true,
-//  longSwipesRatio:0.5,
- // touchRatio:5,
-loop: true,
-grabCursor: true,
-  //loopFillGroupWithBlank: false,
- // paginationClickable: true,
-  spaceBetween: 30,
- // mousewheelControl: true,
- // parallax: true,
- // preloadImages: true,
-  //updateOnImagesReady: true,
- // centeredSlides: true,
- //slidesOffsetBefore: 100,
-  //speed: 400,
-  breakpoints: {
-                  500: {
-                      spaceBetween: 30,
-                      loopedSlides: 3.2,
-                      slidesPerView: 1
-                  },
-                  1e3: {
-                      loopedSlides: 3,
-                      spaceBetween: 20,
-                      slidesPerView: 3.2
-                  },
-                  1200: {
-                      spaceBetween: 20,
-                      slidesPerView: 2.2
-                  }
-              }
-
-});
-
-$('swiper-slide').on('mousedown touchstart', function(event) {
-gsap.to('.swiper-slide', {scale: 0.9, duration: 0.4});
-
-});
-
-$('.swiper-slide').on('mouseup touchend', function(event) {
-gsap.to('.swiper-slide', {scale:1, duration: 0.4, delay:0.2});
-});
-
-  
-  }
-
-  /*
-================================================================================
-PRODUCT SOLO - ACCORDION
-================================================================================
-*/
-function productsoloAccordion() {
-  
-  var animations = $(".accordion-group").map(createAnimation);
-
-  $(".accordion-menu").click(playAnimation);
-  
-  function playAnimation(event) {
-    
-    var selected = this;
-    
-    animations.each(function(i, animate) {
-      animate(selected);
-    });
-  }
-  
-  function createAnimation(i, element) {
-      
-    var menu = element.querySelector(".accordion-menu");
-    var box  = element.querySelector(".accordion-content");
-    
-    gsap.set(box, { height: "auto"})
-    var tween = gsap.from(box, { duration:0.5, height: 0, ease: Power1.easeInOut }).reverse();
-    
-    return function(selected) {
-      
-      var reversed = selected !== menu ? true : !tween.reversed();
-      tween.reversed(reversed);
-    }
-  }
-  
-}
-}
-
-
-
-/*
-================================================================================
-FULLSCREEN MENU
-================================================================================
-*/
-function fullscreenMenu() {
-  // OPEN MENU FROM CLICK
-const openmenu = document.getElementById('openmenu');
-const closemenu = document.getElementById('closemenu');
-//const menuhover = document.getElementById('menuhover');
-
-
-const { gsap } = window;
-
-const btn = document.querySelector(".nav-toggle");
-
-btn.addEventListener("click", () => {
-	if (btn.classList.contains("active")) {
-		btn.classList.remove("active");
-		hide();
-	} else {
-		btn.classList.add("active");
-		show();
-	}
-});
-// --- SHOW
-function show() {
-	let tl = gsap.timeline();
-
-	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
-	gsap.set(".fs-menu--column", {yPercent:-100})
-  gsap.set(".close", {autoAlpha:0})
-  //gsap.set(".line-wrapper", {yPercent:100})
-
-	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
-		.to(".fs-menu--column", {yPercent:0, duration:0.8, stagger:0.1, ease: "Expo.inOut"}, "<")
-		.to(".open", {autoAlpha:0}, "<")
-		.to(".close", {autoAlpha:1}, "<")
-    
-		.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.out"}, "<0.1")
-		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.out"}, "<0.1")
-		.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
-    
-    .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
-
-}
-// --- SHOW
-function hide() {
-	let tl = gsap.timeline();
-
-	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
-
-		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "Expo.inOut"})
-		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
-		.to(".open", {autoAlpha:1}, "<")
-		.to(".close", {autoAlpha:0}, "<")
-    
-		.set(" .nav-toggle", { pointerEvents: "all"});
-	
-}
-
-
-
-//-------
-// SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
-// loop through each element
-/*
-$(".nav-wrap").each(function(i, el) {
-  var tl = gsap.timeline({paused: true});
-  var t = tl
-         .to($(el).find('.k-nav'), {color: "#E51E3D", duration: 0.15});
-el.animation = t;
-$(el).on("mouseenter",function(){
-    this.animation.play();
-  }).on("mouseleave",function(){
-    this.animation.reverse();
-  });
-}); */
-//-------
-
-/*
-	// MENU ICON MOUSEOVER 
-menuhover.addEventListener('mouseover', ()=> {  
-let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
-//animation.paused( true ); 
-menuhovertimeline
-.to(".mline2", {width: "100%", duration: 0.1})
-.to(".mline3", {width: "100%"}, "<-0.05")
-})
-// MENU ICON MOUSEOUT 
-menuhover.addEventListener('mouseout', ()=> {  
-let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
-//animation.paused( true ); 
-menuhovertimeline
-.to(".mline2", {width: "80%", duration: 0.1})
-.to(".mline3", {width: "55%"}, "<-0.05")
-})
-
-*/
-// EVENT LISTENERS
-openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
-closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
-
-
-/*
-// --- 017 - LOCOMOTIVE 4.0 SCROLL TO  --------------------------------------------------------------------------
-$( "#totop" ).on( "click", function() {
-	locoScroll.scrollTo( '#start', {
-		'offset': 0,
-		'duration': 1000,
-		//'easing': [0.25, 0.00, 0.35, 1.00],
-		'disableLerp': true
-	});
-	});
-}
-*/
-
 /*
 ================================================================================
 PRODUCTS - FULLSCREEN SWIPER
