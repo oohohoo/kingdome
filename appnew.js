@@ -399,6 +399,7 @@ BARBA TRANSITIONS
      afterEnter({next}) {
       //animationEnter();
       logoAnimacija();
+      homeProductHover();
       console.log("AFTER ENTER + logoanimacija2");
 
      },
