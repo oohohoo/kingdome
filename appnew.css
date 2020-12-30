@@ -231,7 +231,7 @@ HEADLINE - VW SIZE
 ================================================================================
 */
 .main-head {
-  font-size: clamp(5rem, 14vw, 8rem);
+  font-size: clamp(5rem, 11vw, 8rem);
   transition: font-size 0.3s, transform 0.3s;
 }
 .hero-head {
