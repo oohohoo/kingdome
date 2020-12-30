@@ -405,7 +405,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       logoAnimacija();
+       //logoAnimacija();
        //fullscreenMenu();
        homeProductHover();
        productsMainSwiper();
@@ -428,7 +428,7 @@ BARBA TRANSITIONS
      
      afterEnter({next}) {
       //animationEnter();
-      logoAnimacija();
+      //logoAnimacija();
       //fullscreenMenu();
       homeProductHover();
       productsMainSwiper();
