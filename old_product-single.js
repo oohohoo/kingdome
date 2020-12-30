@@ -34,6 +34,10 @@ function createAnimation(i, element) {
 
 
 
+
+
+
+
 // -- VIDEK SCROLL LOTTIE
 
 class ScrubControlledAnimation {
@@ -105,6 +109,9 @@ class ScrubControlledAnimation {
 }
 
 new ScrubControlledAnimation();
+
+
+
 
 
 
