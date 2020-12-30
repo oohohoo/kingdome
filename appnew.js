@@ -174,6 +174,25 @@ SCROLLTRIGGER TEST
   });
   console.log("Scrolltrigger animacija loaded");
 
+
+  // SCROLLTRIGGER TEST 2 - LOGO ANIMACIJA TEST TEST
+
+  gsap.timeline({
+    scrollTrigger: {
+       scroller: ".smooth-scroll",
+        trigger: "#logotrigger",
+        start: "top top", // when the top of the trigger hits the top of the viewport
+        end: "+=10000000", // end after scrolling 500px beyond the start
+        toggleActions: 'play reverse play reverse',
+        invalidateOnRefresh: true,
+  
+    }
+  })
+  .to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
+  .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
+
+
+
   /*
 ================================================================================
 LOCOMOTIVE 4 SCROLL TO TOP
@@ -546,20 +565,7 @@ LOGO ANIMACIJA
 ================================================================================
 */
 function logoAnimacija(container) {
-  gsap.timeline({
-    scrollTrigger: {
-       scroller: ".smooth-scroll",
-        trigger: "#logotrigger",
-        start: "top top", // when the top of the trigger hits the top of the viewport
-        end: "+=10000000", // end after scrolling 500px beyond the start
-        toggleActions: 'play reverse play reverse',
-        invalidateOnRefresh: true,
-  
-    }
-  })
-  .to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
-  .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
-
+ 
 }
 
 /*
