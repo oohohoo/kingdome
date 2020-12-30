@@ -587,7 +587,7 @@ gsap.utils.toArray(".rg__column").forEach(container => {
   tl.to(dome, { yPercent: -8, autoAlpha:0 })
   
 // .to(wrap, { backgroundColor:"#B6FA00" }, 0)
-    .to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
+    .to(wrap, { backgroundColor:"rgba(40, 40, 42, 0)" }, 0)
     .to(name, { yPercent:-8, autoAlpha:0 }, 0)
     .to(short, { yPercent:-8, autoAlpha:0 }, 0)
     .to(long, {autoAlpha:1, yPercent:0}, 0);
