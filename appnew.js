@@ -234,7 +234,7 @@ function initLoader() {
     .set(".txt", {yPercent: 100})
     .set(mask, {yPercent: 0})
     .set(image, {yPercent: 100})
-    .set(".main", {y: 150})
+    //.set(".main", {y: 150})
 
     .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'})
 
@@ -251,7 +251,7 @@ function initLoader() {
 
     .to(lines, {yPercent: -500, stagger: 0.2}, 0)
     .to([loader, loaderContent], {yPercent: -100}, 0.2)
-    .to('.main', {y: 0}, 0);
+    //.to('.main', {y: 0}, 0);
 
   const tlLoader = gsap.timeline();
   tlLoader
