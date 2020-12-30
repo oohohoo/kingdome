@@ -307,7 +307,7 @@ function initPageTransitions() {
    // do something before the transition starts
    barba.hooks.once(() => {
    // initLoader();
-    logoAnimacija();
+    //logoAnimacija();
     //fullscreenMenu()
     //homeProductHover();
   });
@@ -386,7 +386,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       //logoAnimacija();
+       logoAnimacija();
        fullscreenMenu()
        homeProductHover();
       
