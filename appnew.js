@@ -412,7 +412,7 @@ BARBA VIEWS
     namespace: 'contact',
     beforeEnter(data) {
     //  window.Webflow && window.Webflow.require('ix2').init();  
-
+    Webflow.require('ix2').init();
      
       contactForm();
       console.log("contact JS triggered!");
