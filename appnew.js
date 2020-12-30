@@ -387,8 +387,12 @@ BARBA VIEWS
     beforeEnter(){
       productsMainSwiper();
         console.log("Products swiper triggered!");
+    } ,
+    namespace: 'home',
+    beforeEnter(){
+      homeProductHover();
+        console.log("Products swiper triggered!");
     } 
-
 
 }],
 /*
@@ -406,7 +410,7 @@ BARBA TRANSITIONS
        initLoader();
        //logoAnimacija();
        //fullscreenMenu();
-       homeProductHover();
+       
       
       
         //homeanimations();
@@ -429,7 +433,7 @@ BARBA TRANSITIONS
       //animationEnter();
       //logoAnimacija();
       //fullscreenMenu();
-      homeProductHover();
+      //homeProductHover();
      // productsMainSwiper();
            console.log("AFTER ENTER + logoanimacija2");
 
