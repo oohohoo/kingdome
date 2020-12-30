@@ -385,6 +385,9 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
+      homeYoutube();
+      homeProductHover();
+
       console.log("Home JS triggered!");
     }},{
     namespace: 'products',
@@ -394,6 +397,7 @@ BARBA VIEWS
     }},{
       namespace: 'productlottie',
     beforeEnter(data) {
+      soloProductsLottie();
       console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
@@ -420,10 +424,11 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       homeYoutube();
+        homeProductHover();
+        //homeYoutube();
        //logoAnimacija();
        //fullscreenMenu();
-       homeProductHover();
+      
       
       
         //homeanimations();
@@ -446,8 +451,8 @@ BARBA TRANSITIONS
       //animationEnter();
       //logoAnimacija();
       //fullscreenMenu();
-      homeProductHover();
-      homeYoutube();
+      //homeProductHover();
+      //homeYoutube();
      // productsMainSwiper();
            console.log("AFTER ENTER + logoanimacija2");
 
@@ -883,45 +888,79 @@ function productsMainSwiper() {
 
 /*
 ================================================================================
-PRODUCTS - SOLO PRODUCT LOTTIE
+PRODUCTS - SOLO PRODUCT LOTTIE - VIDEK
 ================================================================================
 */
-function productsMainSwiper() {
+function soloProductsLottie() {
 
-  const slider = document.getElementById("js-cta-slider");
-  const sliderCounter = document.getElementById("js-cta-slider-counter");
-  const sliderNext = document.getElementById("js-cta-slider-next");
-  const sliderPrevious = document.getElementById("js-cta-slider-previous");
+class ScrubControlledAnimation {
+  constructor() {
+    this.DOM = {
+      animationWrapper: ".js-scrub-controlled-animation-wrapper",
+      animation: ".js-scrub-controlled-animation",
+      states: {}
+    };
+
+    this.animationWrapper = document.querySelector(this.DOM.animationWrapper);
+
+    this.animation = document.querySelector(this.DOM.animation);
+
+    this.init();
+  }
+
+  init() {
+    console.log("ScrubControlledAnimation init()");
+
+    if (this.animation) {
+      this.scrubAnimation();
+    }
+  }
+
+  scrubAnimation() {
+    const scrubAnimationOptions = {
+      container: this.animation,
+      renderer: "svg",
+      loop: true,
+      autoplay: false,
+      path: this.animation.getAttribute("data-animation-source")
+    };
+
+    /**
+     *
+     */
+    let scrubAnimation = lottie.loadAnimation(scrubAnimationOptions);
+
+    scrubAnimation.addEventListener("DOMLoaded", () => {
+      this.loadAnimation(scrubAnimation);
+    });
+  }
+
+  loadAnimation(animation) {
+    const scrubAnimationTimeline = gsap.timeline({}).to(
+      { frame: 0 },
+      {
+        duration: 1,
+        frame: animation.totalFrames - 1,
+        onUpdate: function () {
+          animation.goToAndStop(Math.round(this.targets()[0].frame), true);
+        }
+      },
+      "start"
+    );
+
+    ScrollTrigger.create({
+      trigger: this.animationWrapper,
+      animation: scrubAnimationTimeline,
+       scroller: ".smooth-scroll",
+      // markers: true,
+      pin:"#kingpin",
+      start: "top 20%",
+      end: "bottom top",
+      scrub: 0.4
+    });
+  }
+}
+
+new ScrubControlledAnimation();
   
-  const interleaveOffset = 0.75;
-  
-    
-  
-  // svaka fotka ima: data-swiper-parallax-y: "35%"
-  
-  const swiper = new Swiper(slider, {
-    autoplay: false,
-    parallax: true,
-    loop: true,
-    effect: "slide",
-    direction: "vertical", // put horizontal
-    speed: 1000,
-    grabCursor: true,
-    watchSlidesProgress: true, // turn off for horizontal
-    //mousewheelControl: true,
-    mousewheelControl: 1,
-    mousewheel: true,
-    pagination: {
-      el: sliderCounter,
-      type: "custom",
-      renderCustom: function(swiper, current, total) {
-        let i = current ? current : 0;
-        return `${("0" + i).slice(-2)} / ${("0" + total).slice(-2)}`;
-      }
-    },
-    navigation: {
-      nextEl: sliderNext,
-      prevEl: sliderPrevious
-    },
-  });
 }

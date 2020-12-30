@@ -106,6 +106,10 @@ class ScrubControlledAnimation {
 
 new ScrubControlledAnimation();
 
+
+
+
+
 // --- LOGO ANIMACIJA 
 
 gsap.timeline({
