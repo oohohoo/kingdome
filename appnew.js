@@ -431,6 +431,7 @@ BARBA TRANSITIONS
       //logoAnimacija();
       //fullscreenMenu();
       homeProductHover();
+      homeYoutube();
      // productsMainSwiper();
            console.log("AFTER ENTER + logoanimacija2");
 
