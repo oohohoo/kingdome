@@ -1008,7 +1008,16 @@ CONTACT - MULTILEVEL FORMA - NE RADI
 ================================================================================
 */
 function contactForm() {
+ /*
+================================================================================
+CONTACT FORMA INIT - TEST
+================================================================================
+*/
 
+var Webflow = Webflow || [];
+Webflow.push(function () {
+  new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
+});
 
 
 // SWIPER
