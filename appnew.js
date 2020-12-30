@@ -381,7 +381,7 @@ BARBA TRANSITIONS
        homeProductHover();
        logoAnimacija();
         //homeanimations();
-        console.log("ONCE");
+        console.log("ONCE + logoanimacija1");
      },
 
      async leave({current}) {
@@ -398,7 +398,8 @@ BARBA TRANSITIONS
      
      afterEnter({next}) {
       //animationEnter();
-      console.log("AFTER ENTER");
+      logoAnimacija();
+      console.log("AFTER ENTER + logoanimacija2");
 
      },
      
