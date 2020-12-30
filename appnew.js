@@ -378,8 +378,8 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-        resetActiveLink();
-        animationEnter();
+       homeProductHover();
+       logoAnimacija();
         //homeanimations();
         console.log("ONCE");
      },
@@ -483,6 +483,12 @@ function init() {
 }
 
 }
+
+/*
+================================================================================
+FUNCTION MODULES 
+================================================================================
+*/
 
 /*
 ================================================================================
