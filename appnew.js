@@ -308,7 +308,7 @@ function initPageTransitions() {
    barba.hooks.once(() => {
    // initLoader();
     //logoAnimacija();
-    fullscreenMenu();
+    //fullscreenMenu();
     //homeProductHover();
   });
 
