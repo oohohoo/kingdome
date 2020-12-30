@@ -411,7 +411,7 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-      window.Webflow && window.Webflow.require('ix2').init();  
+    //  window.Webflow && window.Webflow.require('ix2').init();  
 
       var Webflow = Webflow || [];
       Webflow.push(function () {
