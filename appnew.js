@@ -6,16 +6,7 @@ console.log("ScrollTrigger Loaded!");
 let locoScroll;
 console.log("Locomotive Loaded");
 
- /*
-================================================================================
-CONTACT FORMA INIT - TEST
-================================================================================
-*/
 
-var Webflow = Webflow || [];
-Webflow.push(function () {
-  new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
-});
 
 /*
 ================================================================================
