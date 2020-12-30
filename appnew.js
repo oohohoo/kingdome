@@ -304,6 +304,14 @@ BARBA GLOBAL HOOKS + PREFETCH + INIT + VIEWS + TRANSITIONS
 ================================================================================
 */
 function initPageTransitions() {
+   // do something before the transition starts
+   barba.hooks.once(() => {
+   // initLoader();
+    logoAnimacija();
+    //fullscreenMenu()
+    //homeProductHover();
+  });
+
   // do something before the transition starts
   barba.hooks.before(() => {
     select('html').classList.add('is-transitioning');
@@ -378,7 +386,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       logoAnimacija();
+       //logoAnimacija();
        fullscreenMenu()
        homeProductHover();
       
