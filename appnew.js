@@ -545,7 +545,7 @@ gsap.utils.toArray(".rg__column").forEach(container => {
 LOGO ANIMACIJA
 ================================================================================
 */
-function logoAnimacija() {
+function logoAnimacija(container) {
   gsap.timeline({
     scrollTrigger: {
        scroller: ".smooth-scroll",
