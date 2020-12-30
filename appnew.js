@@ -963,8 +963,6 @@ class ScrubControlledAnimation {
 
 new ScrubControlledAnimation();
   
-}
-
 /*
 ================================================================================
 PRODUCTS - SOLO PRODUCT LOTTIE ELIPSE PIN
@@ -980,3 +978,7 @@ ScrollTrigger.create({
     pin: ".elipse",
      invalidateOnRefresh: true,
   });
+
+
+}
+
