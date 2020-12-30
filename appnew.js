@@ -595,17 +595,17 @@ tl.to('.video-bg', {
 */
 trigger.addEventListener('click', function () {
   toggleState(tl)
-  toggleState(tl_2)
+  //toggleState(tl_2)
 })
 
 function toggleState(tl) {
   tl.reversed() ? tl.play() : tl.reverse()
 }
 
-function toggleState(tl_2) {
+/*function toggleState(tl_2) {
   tl_2.reversed() ? tl_2.play() : tl_2.reverse()
 }
-
+*/
 /*
 ================================================================================
 HOME - YOUTUBE CROP + FULLSCREEN bez YT pizdarija
