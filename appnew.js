@@ -387,7 +387,7 @@ BARBA TRANSITIONS
        // do something once on the initial page load
        initLoader();
        logoAnimacija();
-       fullscreenMenu();
+       //fullscreenMenu();
        homeProductHover();
       
         //homeanimations();
