@@ -1070,14 +1070,6 @@ grabCursor: true,
 
 });
 
-$('swiper-slide').on('mousedown touchstart', function(event) {
-gsap.to('.swiper-slide', {scale: 0.9, duration: 0.4});
-
-});
-
-$('.swiper-slide').on('mouseup touchend', function(event) {
-gsap.to('.swiper-slide', {scale:1, duration: 0.4, delay:0.2});
-});
 
   
   }
