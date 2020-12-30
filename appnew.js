@@ -308,7 +308,7 @@ function initPageTransitions() {
    barba.hooks.once(() => {
    // initLoader();
     //logoAnimacija();
-    //fullscreenMenu()
+    fullscreenMenu();
     //homeProductHover();
   });
 
@@ -387,7 +387,7 @@ BARBA TRANSITIONS
        // do something once on the initial page load
        initLoader();
        logoAnimacija();
-       fullscreenMenu()
+       fullscreenMenu();
        homeProductHover();
       
         //homeanimations();
@@ -409,7 +409,7 @@ BARBA TRANSITIONS
      afterEnter({next}) {
       //animationEnter();
       logoAnimacija();
-      fullscreenMenu()
+      fullscreenMenu();
       homeProductHover();
            console.log("AFTER ENTER + logoanimacija2");
 
