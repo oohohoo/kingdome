@@ -413,10 +413,7 @@ BARBA VIEWS
     beforeEnter(data) {
     //  window.Webflow && window.Webflow.require('ix2').init();  
 
-      var Webflow = Webflow || [];
-      Webflow.push(function () {
-        new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
-      });
+  
 
       contactForm();
       console.log("contact JS triggered!");
@@ -438,7 +435,10 @@ BARBA TRANSITIONS
        // do something once on the initial page load
        initLoader();
         homeProductHover();
-        
+        var Webflow = Webflow || [];
+        Webflow.push(function () {
+          new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
+        });
         //homeYoutube();
        //logoAnimacija();
        //fullscreenMenu();
