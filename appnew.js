@@ -350,6 +350,10 @@ function initPageTransitions() {
    barba.hooks.beforeLeave(() => {
     locoScroll.destroy();
     console.log("Locomotive scroll destroyed!");
+    Webflow.destroy();
+    Webflow.ready();
+    Webflow.require('ix2').init();
+    console.log("webflow destroy ready init");
   });
   //init scrolltrigger
    barba.hooks.afterEnter(() => {
@@ -407,10 +411,7 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-      Webflow.destroy();
-     Webflow.ready();
-     Webflow.require('ix2').init();
-     console.log("webflow destroy ready init");
+    
       contactForm();
       console.log("contact JS triggered!");
       
@@ -431,6 +432,7 @@ BARBA TRANSITIONS
        // do something once on the initial page load
        initLoader();
         homeProductHover();
+        
         //homeYoutube();
        //logoAnimacija();
        //fullscreenMenu();
