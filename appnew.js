@@ -907,7 +907,7 @@ function productsMainSwiper() {
 PRODUCTS - SOLO PRODUCT LOTTIE - VIDEK
 ================================================================================
 */
-function soloProductsLottie(container) {
+function soloProductsLottie() {
 
 class ScrubControlledAnimation {
   constructor() {
@@ -1003,7 +1003,7 @@ ScrollTrigger.create({
 CONTACT - MULTILEVEL FORMA - NE RADI
 ================================================================================
 */
-function contactForm(container) {
+function contactForm() {
   var Webflow = Webflow || [];
   Webflow.push(function () {
     new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
