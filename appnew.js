@@ -1161,20 +1161,20 @@ function killandinitWebflow() {
 BARBA - REPLAY BACKGROUND VIDEOS
 ================================================================================
 */
-function videoReload() {
+/*function videoReload() {
 
 /*   // when entering..
   // get the video element */
-  let video = body.querySelector('.background-video');
+  /*let video = body.querySelector('.background-video');
   ​
  // const video = select('.background-video');
 
   ​
  /*  // play the video */
-video.setAttribute('autoplay', true);
+/*video.setAttribute('autoplay', true);
 video.load();
 
   console.log("BACKGROOUND VIDEOS RELOADED");
 
   
-}
+}*/
