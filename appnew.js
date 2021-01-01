@@ -1168,6 +1168,7 @@ function initVideo() {
 /*  // let video = body.querySelector('.background-video'); */
  let video = select('.background-video');
   
+ 
 video.setAttribute('autoplay', true);
 video.load();
 
