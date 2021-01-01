@@ -1162,7 +1162,7 @@ REINIT BACKGROUND VIDEOS
 function initVideo() {
  // const select = (e) => document.querySelector(e);
 /*  // let video = body.querySelector('.background-video'); */
- const video = select('.w-background-video');
+; let video = select('.w-background-video');
   
 video.setAttribute('autoplay', true);
 video.load();
