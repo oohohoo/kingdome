@@ -437,7 +437,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       killandinitWebflow ();
+    
         homeProductHover();
         
         //homeYoutube();
@@ -463,6 +463,7 @@ BARBA TRANSITIONS
      },
      
      afterEnter({next}) {
+      killandinitWebflow ();
       //animationEnter();
       //logoAnimacija();
       //fullscreenMenu();
