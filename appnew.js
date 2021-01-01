@@ -352,11 +352,6 @@ function initPageTransitions() {
     console.log("Locomotive scroll destroyed!");
     killScrollTriggers();
     console.log("All ScrollTriggers destroyed!");
-   
-    /*window.Webflow && window.Webflow.destroy();
-    window.Webflow && window.Webflow.ready();
-    window.Webflow && window.Webflow.require('ix2').init();          
-    console.log("webflow destroy ready init");*/
   });
   //init scrolltrigger
    barba.hooks.afterEnter(() => {
@@ -393,7 +388,7 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-     // homeYoutube();
+      homeYoutube();
       homeProductHover();
 
       console.log("Home JS triggered!");
