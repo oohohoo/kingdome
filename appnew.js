@@ -1160,13 +1160,13 @@ BARBA - REPLAY BACKGROUND VIDEOS
 */
 function backgroundVideoReload() {
 
-  // when entering..
-  // get the video element
+/*   // when entering..
+  // get the video element */
   let video = body.querySelector('.background-video');
   ​
 
   ​
-  // play the video
+ /*  // play the video */
   video.setAttribute('autoplay', true);
   video.load();
 
