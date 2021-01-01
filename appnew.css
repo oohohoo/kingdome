@@ -240,6 +240,7 @@ HOME - YOUTUBE CROP + FULLSCREEN bez YT pizdarija
 ================================================================================
 */ 
 
+
 #player-size {
   /* comment below line for responsive 16:9 ratio based on 
      user's window width */
@@ -272,6 +273,21 @@ HOME - YOUTUBE CROP + FULLSCREEN bez YT pizdarija
   
 }
 
+/*
+================================================================================
+OVO VJEROJATNO BRIŠI - YT DEFER AL IMAKNI I IZ VENDOR
+================================================================================
+*/
+/* YTDEFER - onaj prvi super embed - kasnije sam naša onaj kropani */
+.ytdefer-wrapper {
+  position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+  /*width: calc(65vh*1920/1800);
+  height: 65vh;
+  }
+  
 
 
 /*
