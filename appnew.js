@@ -388,7 +388,7 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-      //homeYoutube();
+      homeYoutube();
       homeProductHover();
 
       console.log("Home JS triggered!");
@@ -432,7 +432,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       initVideo();
+       
        // homeProductHover();
         
         //homeYoutube();
@@ -458,7 +458,7 @@ BARBA TRANSITIONS
      },
      
      afterEnter({next}) {
-      
+      initVideo();
       //killandinitWebflow ();
      
       //animationEnter();
@@ -1161,8 +1161,8 @@ REINIT BACKGROUND VIDEOS
 ================================================================================
 */
 function initVideo() {
-  $('#bgvideo')[0].load();
+  $('#video')[0].load();
 
-  console.log("BG VIDEJOS RELOADED");
+  console.log("BG RELOADED");
 
 }
