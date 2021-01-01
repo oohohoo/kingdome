@@ -1156,26 +1156,3 @@ function killandinitWebflow() {
 
   
 }
-
-/*
-================================================================================
-BARBA - REPLAY BACKGROUND VIDEOS
-================================================================================
-*/
-/*function videoReload() {
-
-/*   // when entering..
-  // get the video element */
-  /*let video = body.querySelector('.background-video');
-  ​
- // const video = select('.background-video');
-
-  ​
- /*  // play the video */
-/*video.setAttribute('autoplay', true);
-video.load();
-
-  console.log("BACKGROOUND VIDEOS RELOADED");
-
-  
-}*/
