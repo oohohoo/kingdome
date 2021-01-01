@@ -854,12 +854,12 @@ menuhovertimeline
 .to(".mline2", {width: "80%", duration: 0.1})
 .to(".mline3", {width: "55%"}, "<-0.05")
 })
-*/
+
 
 // EVENT LISTENERS
 openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
 closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
-
+*/
 
 
 // --- 017 - LOCOMOTIVE 4.0 SCROLL TO  --------------------------------------------------------------------------
