@@ -388,7 +388,7 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-      homeYoutube();
+      //homeYoutube();
       homeProductHover();
 
       console.log("Home JS triggered!");
