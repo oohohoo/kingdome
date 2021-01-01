@@ -350,6 +350,8 @@ function initPageTransitions() {
   barba.hooks.beforeLeave(() => {
     locoScroll.destroy();
     console.log("Locomotive scroll destroyed!");
+    killScrollTriggers();
+    console.log("All ScrollTriggers destroyed!");
     /*window.Webflow && window.Webflow.destroy();
     window.Webflow && window.Webflow.ready();
     window.Webflow && window.Webflow.require('ix2').init();          
@@ -1071,9 +1073,9 @@ gsap.to('.swiper-slide', {scale:1, duration: 0.4, delay:0.2});
 });
 
   
-  }
+}
 
-  /*
+/*
 ================================================================================
 PRODUCT SOLO - ACCORDION
 ================================================================================
@@ -1110,4 +1112,19 @@ function productsoloAccordion() {
   
 
   
-  }
+}
+
+/*
+================================================================================
+KILL OLD SCROLLTRIGGERS
+================================================================================
+*/
+function killScrollTriggers() {
+  
+  let triggers = ScrollTrigger.getAll();
+  triggers.forEach( trigger => {			
+    trigger.kill();
+  }); 
+
+  
+}
