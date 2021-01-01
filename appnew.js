@@ -432,7 +432,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       
+       initVideo();
        // homeProductHover();
         
         //homeYoutube();
@@ -458,7 +458,7 @@ BARBA TRANSITIONS
      },
      
      afterEnter({next}) {
-      initVideo();
+      
       //killandinitWebflow ();
      
       //animationEnter();
