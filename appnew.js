@@ -1185,8 +1185,9 @@ t.js SIMPLE TICKER
 function simpleTicker() {
   var tickr=[
     'Hello world.',
-    '<em>INNOVATIVE LUXURY CAMPING DOMES</em> is FTW!1',
-    'SOME, <strong><u><em><del style="color:red;">foo</del>OTHER</em></u></strong>, NEWS.'
+    'INNOVATIVE LUXURY CAMPING DOMES',
+    'SOME OTHER NEWS',
+    'HELLO WORLD',
     ];
     
     $('#demo_3').t(
