@@ -642,7 +642,7 @@ trigger.addEventListener('click', function () {
 function toggleState(tl) {
   tl.reversed() ? tl.play() : tl.reverse()
 }
-
+console.log("YT black background loaded!");
 /*function toggleState(tl_2) {
   tl_2.reversed() ? tl_2.play() : tl_2.reverse()
 }
@@ -662,7 +662,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
 var player;
-
+console.log("YT player loaded!");
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("player", {
     host: "https://www.youtube.com",
@@ -685,19 +685,20 @@ function onYouTubeIframeAPIReady() {
     }
   });
 }
-
+console.log("YT iFrame ready!");
 function onPlayerStateChange(event) {
   console.log("player state: " + player.getPlayerState());
 }
-
+console.log("YT player state changed!");
 function updateVideoId() {
   let videoId = document.getElementById("videoId").value;
   player.loadVideoById(videoId, -1);
 }
-
+console.log("YT update video ID!");
 function stopVideo() {
   player.stopVideo();
 }
+console.log("stop video!");
 /*
 ================================================================================
 HOME - YOUTUBE - PLAY/STOP BUTTONS
@@ -709,7 +710,7 @@ HOME - YOUTUBE - PLAY/STOP BUTTONS
             player.playVideo();
         });
     }
-
+    console.log("video player ready!");
     // 4. The API calls this function when the player's state changes.
     function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING) {
@@ -723,6 +724,7 @@ HOME - YOUTUBE - PLAY/STOP BUTTONS
             });
         } 
     }
+    console.log("video player state changed!");
 /*
 ================================================================================
 HOME - YOUTUBE - ODVOJENI PLAY STOP BOTUNI
