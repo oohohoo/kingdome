@@ -1156,3 +1156,21 @@ function killandinitWebflow() {
 
   
 }
+
+
+/*
+================================================================================
+REINIT BACKGROUND VIDEOS
+================================================================================
+*/
+function initVideo() {
+  
+  let video = body.querySelector('.background-video');
+// const video = select('.background-video');
+  
+video.setAttribute('autoplay', true);
+video.load();
+
+  console.log("BACKGROOUND VIDEOS RELOADED");
+
+}
