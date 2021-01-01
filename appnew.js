@@ -837,7 +837,7 @@ $(el).on("mouseenter",function(){
 });
 //-------
 
-
+/*
 	// MENU ICON MOUSEOVER 
 menuhover.addEventListener('mouseover', ()=> {  
 let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
@@ -854,7 +854,7 @@ menuhovertimeline
 .to(".mline2", {width: "80%", duration: 0.1})
 .to(".mline3", {width: "55%"}, "<-0.05")
 })
-
+*/
 
 // EVENT LISTENERS
 openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
