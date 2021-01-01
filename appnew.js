@@ -442,7 +442,7 @@ BARBA TRANSITIONS
         
         //homeYoutube();
        //logoAnimacija();
-       //fullscreenMenu();
+       fullscreenMenu();
       
       
       
