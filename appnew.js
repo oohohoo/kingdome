@@ -1138,7 +1138,6 @@ function killScrollTriggers() {
 
   
 }
-
 /*
 ================================================================================
 KILL OLD SCROLLTRIGGERS
