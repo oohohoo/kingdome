@@ -464,7 +464,7 @@ BARBA TRANSITIONS
      
      afterEnter({next}) {
       //killandinitWebflow ();
-      backgroundVideoReload();
+     
       //animationEnter();
       //logoAnimacija();
       //fullscreenMenu();
@@ -476,6 +476,7 @@ BARBA TRANSITIONS
      },
      
      beforeEnter({next}) {
+      backgroundVideoReload();
       //
        /*
       window.Webflow && window.Webflow.destroy();
