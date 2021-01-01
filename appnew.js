@@ -432,7 +432,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       initVideo();
+       
        // homeProductHover();
         
         //homeYoutube();
@@ -458,6 +458,7 @@ BARBA TRANSITIONS
      },
      
      afterEnter({next}) {
+      initVideo();
       //killandinitWebflow ();
      
       //animationEnter();
@@ -1160,13 +1161,7 @@ REINIT BACKGROUND VIDEOS
 ================================================================================
 */
 function initVideo() {
- // const select = (e) => document.querySelector(e);
-/*  // let video = body.querySelector('.background-video'); */
-const video = select('.w-background-video');
-  
-video.setAttribute('autoplay', true);
-video.play();
-
+  $('#bgvideo')[0].load();
 
   console.log("BACKGROOUND VIDEOS RELOADED");
 
