@@ -393,7 +393,7 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-      homeYoutube();
+     // homeYoutube();
       homeProductHover();
 
       console.log("Home JS triggered!");
@@ -405,8 +405,8 @@ BARBA VIEWS
     }},{
       namespace: 'productlottie',
     beforeEnter(data) {
-      soloProductsLottie(container);
-      //productsoloAccordion();
+      //soloProductsLottie(container);
+      productsoloAccordion();
       console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
@@ -438,7 +438,7 @@ BARBA TRANSITIONS
        // do something once on the initial page load
        initLoader();
     
-        homeProductHover();
+       // homeProductHover();
         
         //homeYoutube();
        //logoAnimacija();
@@ -476,7 +476,7 @@ BARBA TRANSITIONS
      },
      
      beforeEnter({next}) {
-      initVideo();
+      //initVideo();
       //
        /*
       window.Webflow && window.Webflow.destroy();
