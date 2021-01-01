@@ -514,7 +514,8 @@ BARBA TRANSITIONS
       $('html').attr('data-wf-page', pageID); 
       window.Webflow && window.Webflow.destroy();
       window.Webflow && window.Webflow.ready();
-      window.Webflow && window.Webflow.require('ix2').init();              	
+      window.Webflow && window.Webflow.require('ix2').init();  
+      console.log("PUŠI KURAC WEBFLOW");            	
   }
 
 
