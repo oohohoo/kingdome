@@ -463,7 +463,7 @@ BARBA TRANSITIONS
      },
      
      afterEnter({next}) {
-      killandinitWebflow ();
+      //killandinitWebflow ();
       backgroundVideoReload();
       //animationEnter();
       //logoAnimacija();
