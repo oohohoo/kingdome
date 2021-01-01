@@ -352,6 +352,11 @@ function initPageTransitions() {
     console.log("Locomotive scroll destroyed!");
     killScrollTriggers();
     console.log("All ScrollTriggers destroyed!");
+   
+    /*window.Webflow && window.Webflow.destroy();
+    window.Webflow && window.Webflow.ready();
+    window.Webflow && window.Webflow.require('ix2').init();          
+    console.log("webflow destroy ready init");*/
   });
   //init scrolltrigger
    barba.hooks.afterEnter(() => {
@@ -388,7 +393,7 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-      //homeYoutube();
+      homeYoutube();
       homeProductHover();
 
       console.log("Home JS triggered!");
@@ -400,8 +405,8 @@ BARBA VIEWS
     }},{
       namespace: 'productlottie',
     beforeEnter(data) {
-      //soloProductsLottie(container);
-      productsoloAccordion();
+      soloProductsLottie(container);
+      //productsoloAccordion();
       console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
@@ -432,8 +437,8 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       
-       // homeProductHover();
+    
+        homeProductHover();
         
         //homeYoutube();
        //logoAnimacija();
@@ -458,7 +463,6 @@ BARBA TRANSITIONS
      },
      
      afterEnter({next}) {
-      //initVideo();
       //killandinitWebflow ();
      
       //animationEnter();
@@ -472,8 +476,13 @@ BARBA TRANSITIONS
      },
      
      beforeEnter({next}) {
-      
-      
+    //  videoReload();
+      //
+       /*
+      window.Webflow && window.Webflow.destroy();
+      window.Webflow && window.Webflow.ready();
+      window.Webflow && window.Webflow.require('ix2').init();   
+      */
 
      
      },
@@ -606,7 +615,6 @@ gsap.utils.toArray(".rg__column").forEach(container => {
 HOME - YOUTUBE
 ================================================================================
 */
-
 function homeYoutube() {
 
 /*
@@ -675,8 +683,8 @@ function onYouTubeIframeAPIReady() {
     playerVars: {
       enablejsapi: 1,
       playsinline: 1,
-      autoplay:1,
-      /*mute:0,*/
+      /*autoplay:1,
+      mute:0,*/
 
       start: 0,
       disablekb: 0
@@ -1135,7 +1143,7 @@ function killScrollTriggers() {
 }
 /*
 ================================================================================
-KILL WEBFLOW
+KILL OLD SCROLLTRIGGERS
 ================================================================================
 */
 function killandinitWebflow() {
@@ -1152,12 +1160,17 @@ function killandinitWebflow() {
 
 /*
 ================================================================================
-REINIT BACKGROUND VIDEOS
+KILL OLD SCROLLTRIGGERS
 ================================================================================
 */
-/* function initVideo() {
-  $('#bgvideo')[0].load();
-  document.getElementById('video').play();
-  console.log("BG RELOADED");
+function initVideo() {
+  
+  let video = body.querySelector('.background-video');
+// const video = select('.background-video');
+  
+video.setAttribute('autoplay', true);
+video.load();
 
-} */
+  console.log("BACKGROOUND VIDEOS RELOADED");
+
+}
