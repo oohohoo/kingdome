@@ -408,6 +408,7 @@ BARBA VIEWS
       soloProductsLottie(container);
       //productsoloAccordion();
       console.log("Productlottie JS triggered!");
+      
     }},{
     namespace: 'about',
     beforeEnter(data) {
