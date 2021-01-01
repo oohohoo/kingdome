@@ -396,7 +396,7 @@ BARBA VIEWS
      
       homeProductHover();
 
-      console.log("Home JS triggered!");
+     // console.log("Home JS triggered!");
     }},{
     namespace: 'products',
     beforeEnter(){
