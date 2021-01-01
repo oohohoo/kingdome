@@ -1185,13 +1185,13 @@ t.js SIMPLE TICKER
 function simpleTicker() {
   var tickr=[
     'Hello world.',
-    '<em>Did you know?</em> <a target="_blank" href="https://mntn-dev.github.io/z.js/">z.js</a> is FTW!1',
-    'Foo, <strong><u><em><del style="color:yellow;">foo</del>moo</em></u></strong>, foo.'
+    '<em>INNOVATIVE LUXURY CAMPING DOMES</em> is FTW!1',
+    'SOME, <strong><u><em><del style="color:red;">foo</del>OTHER</em></u></strong>, NEWS.'
     ];
     
     $('#demo_3').t(
     tickr.join(x='<ins>2</ins><del>*</del>')+x,
-    {speed:20,repeat:true,pause_on_click:true}
+    {speed:5,repeat:true,pause_on_click:true}
     );
 
 
