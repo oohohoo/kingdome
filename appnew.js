@@ -397,7 +397,21 @@ BARBA VIEWS
       homeProductHover();
 
      // console.log("Home JS triggered!");
-    }},{
+    },
+    enter(data) {
+      // Update page ID to the next page
+      const pageId = ''; // may need to query data.next.html for data-wf-page attribute
+      document.documentElement.setAttribute('data-wf-page', pageId);
+      
+      // Reinitialize webflow modules
+      Webflow.destroy();
+      Webflow.ready();
+      Webflow.require('ix2').init();
+      console.log(" WEBFLOW KILLED & INIT AGAIN ");
+
+    },
+  
+  },{
     namespace: 'products',
     beforeEnter(){
       productsMainSwiper();
