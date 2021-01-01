@@ -352,7 +352,7 @@ function initPageTransitions() {
     console.log("Locomotive scroll destroyed!");
     killScrollTriggers();
     console.log("All ScrollTriggers destroyed!");
-    killandinitWebflow ();
+   
     /*window.Webflow && window.Webflow.destroy();
     window.Webflow && window.Webflow.ready();
     window.Webflow && window.Webflow.require('ix2').init();          
@@ -360,6 +360,7 @@ function initPageTransitions() {
   });
   //init scrolltrigger
    barba.hooks.afterEnter(() => {
+    killandinitWebflow ();
    // console.log("možda ode učitat locoscroll");
     
   });
