@@ -1158,7 +1158,7 @@ function killandinitWebflow () {
 BARBA - REPLAY BACKGROUND VIDEOS
 ================================================================================
 */
-function backgroundVideoReload() {
+function backgroundVideoReload () {
 
 /*   // when entering..
   // get the video element */
