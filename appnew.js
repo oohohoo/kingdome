@@ -391,7 +391,7 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-      homeYoutube();
+    //  homeYoutube();
       homeProductHover();
 
       console.log("Home JS triggered!");
@@ -403,8 +403,8 @@ BARBA VIEWS
     }},{
       namespace: 'productlottie',
     beforeEnter(data) {
-      soloProductsLottie();
-      productsoloAccordion();
+      soloProductsLottie(container);
+      //productsoloAccordion();
       console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
@@ -416,7 +416,7 @@ BARBA VIEWS
     //  window.Webflow && window.Webflow.require('ix2').init();  
     //Webflow.require('ix2').init();
     //console.log("Webflow reinit ulalalalalala");
-      contactForm();
+     // contactForm();
       console.log("contact JS triggered!");
       
     }
@@ -675,7 +675,7 @@ function onYouTubeIframeAPIReady() {
       playsinline: 1,
       /*autoplay:1,
       mute:0,*/
-      
+
       start: 0,
       disablekb: 0
     },
