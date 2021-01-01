@@ -1166,11 +1166,10 @@ REINIT BACKGROUND VIDEOS
 function initVideo() {
   const select = (e) => document.querySelector(e);
 /*  // let video = body.querySelector('.background-video'); */
- let video = select('.background-video');
+ const video = select('.background-video');
   
- 
 video.setAttribute('autoplay', true);
-video.load();
+//video.load();
 
   console.log("BACKGROOUND VIDEOS RELOADED");
 
