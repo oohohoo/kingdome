@@ -1163,7 +1163,7 @@ function backgroundVideoReload() {
 
 /*   // when entering..
   // get the video element */
-  let video = body.querySelector('.background-video');
+  var video = body.querySelector('.background-video');
   ​
 
   ​
