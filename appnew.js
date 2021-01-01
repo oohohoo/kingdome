@@ -392,11 +392,9 @@ BARBA VIEWS
     namespace: 'home',
     beforeEnter(data) {
       homeYoutube();
-      console.log(" HOME YOUTUBE LOADED VIA VIEWS ");
-     
       homeProductHover();
 
-     // console.log("Home JS triggered!");
+      console.log("Home JS triggered!");
     }},{
     namespace: 'products',
     beforeEnter(){
@@ -408,7 +406,6 @@ BARBA VIEWS
       soloProductsLottie(container);
       //productsoloAccordion();
       console.log("Productlottie JS triggered!");
-
     }},{
     namespace: 'about',
     beforeEnter(data) {
@@ -440,8 +437,7 @@ BARBA TRANSITIONS
        initLoader();
         homeProductHover();
         
-        homeYoutube();
-        console.log("youtube OPET");
+        //homeYoutube();
        //logoAnimacija();
        //fullscreenMenu();
       
@@ -466,7 +462,7 @@ BARBA TRANSITIONS
      afterEnter({next}) {
       //animationEnter();
       //logoAnimacija();
-      fullscreenMenu();
+      //fullscreenMenu();
       //homeProductHover();
       //homeYoutube();
      // productsMainSwiper();
