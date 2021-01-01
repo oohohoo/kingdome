@@ -683,8 +683,8 @@ function onYouTubeIframeAPIReady() {
     playerVars: {
       enablejsapi: 1,
       playsinline: 1,
-      /*autoplay:1,
-      mute:0,*/
+      autoplay:1,
+      /*mute:0,*/
 
       start: 0,
       disablekb: 0
@@ -1164,7 +1164,7 @@ REINIT BACKGROUND VIDEOS
 ================================================================================
 */
 function initVideo() {
-  const select = (e) => document.querySelector(e);
+ // const select = (e) => document.querySelector(e);
 /*  // let video = body.querySelector('.background-video'); */
  const video = select('.background-video');
   
