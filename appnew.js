@@ -1162,7 +1162,7 @@ REINIT BACKGROUND VIDEOS
 */
 function initVideo() {
   //$('#bgvideo')[0].load();
-
+  document.getElementById('video').play();
   console.log("BG RELOADED");
 
 }
