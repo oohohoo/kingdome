@@ -1,7 +1,5 @@
 // OVA VERZIJA RADI BARBA
 
-
-</video>
 gsap.registerPlugin(ScrollTrigger);
 console.log("ScrollTrigger Loaded!");
 
