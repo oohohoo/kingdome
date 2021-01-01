@@ -1169,7 +1169,7 @@ function initVideo() {
  const video = select('.background-video');
   
 video.setAttribute('autoplay', true);
-/* video.load(); */
+
 
   console.log("BACKGROOUND VIDEOS RELOADED");
 
