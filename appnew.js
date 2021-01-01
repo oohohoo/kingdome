@@ -1195,7 +1195,7 @@ function simpleTicker() {
     );
 
 
-  console.log("BACKGROOUND VIDEOS RELOADED");
+  console.log("simplde RELOADED");
 
 }
 
