@@ -464,6 +464,7 @@ BARBA TRANSITIONS
      
      afterEnter({next}) {
       killandinitWebflow ();
+      backgroundVideoReload();
       //animationEnter();
       //logoAnimacija();
       //fullscreenMenu();
@@ -1149,6 +1150,28 @@ function killandinitWebflow () {
   window.Webflow && window.Webflow.require( 'ix2' ).init();
   document.dispatchEvent( new Event( 'readystatechange' ) );
   console.log("webflow killed and init");
+
+  
+}
+/*
+================================================================================
+BARBA - REPLAY BACKGROUND VIDEOS
+================================================================================
+*/
+function backgroundVideoReload() {
+  
+  ​
+  // when entering..
+  // get the video element
+  let video = body.querySelector('.background-video');
+  ​
+
+  ​
+  // play the video
+  video.setAttribute('autoplay', true);
+  video.load();
+
+  console.log("BACKGROOUND VIDEOS RELOADED");
 
   
 }
