@@ -675,6 +675,7 @@ function onYouTubeIframeAPIReady() {
       playsinline: 1,
       /*autoplay:1,
       mute:0,*/
+      
       start: 0,
       disablekb: 0
     },
