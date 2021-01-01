@@ -1169,10 +1169,10 @@ function backgroundVideoReload() {
 
   ​
  /*  // play the video */
-  video.setAttribute('autoplay', true);
-  video.load();
+ // video.setAttribute('autoplay', true);
+ // video.load();
 
-  console.log("BACKGROOUND VIDEOS RELOADED");
+ // console.log("BACKGROOUND VIDEOS RELOADED");
 
   
 }
