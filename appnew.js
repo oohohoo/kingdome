@@ -1163,6 +1163,6 @@ REINIT BACKGROUND VIDEOS
 function initVideo() {
   $('#bgvideo')[0].load();
 
-  console.log("BACKGROOUND VIDEOS RELOADED");
+  console.log("BG VIDEJOS RELOADED");
 
 }
