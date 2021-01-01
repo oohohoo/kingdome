@@ -496,8 +496,26 @@ BARBA TRANSITIONS
 
      
      },
-  
-   
+  // ovo su ubačeni zbog webflowa
+     beforeLeave: function(data) {
+      let end = data.next.html.indexOf(' data-wf-site="');
+      let start = data.next.html.indexOf('data-wf-page="');
+      let string = data.next.html.slice(start, end);
+      let arr = string.split('"');
+      pageID = arr[1];
+      
+  },
+  leave: function(data) {
+        const done = this.async();
+        //do some crazy outro animations using GSAP or ANIMEJS (our fav), then place the following in the complete callback:
+        done();
+    },
+  beforeEnter: function(data) {
+      $('html').attr('data-wf-page', pageID); 
+      window.Webflow && window.Webflow.destroy();
+      window.Webflow && window.Webflow.ready();
+      window.Webflow && window.Webflow.require('ix2').init();              	
+  }
 
 
 
