@@ -1164,8 +1164,8 @@ REINIT BACKGROUND VIDEOS
 ================================================================================
 */
 function initVideo() {
-  
- // let video = body.querySelector('.background-video');
+  const select = (e) => document.querySelector(e);
+/*  // let video = body.querySelector('.background-video'); */
  const video = select('.background-video');
   
 video.setAttribute('autoplay', true);
