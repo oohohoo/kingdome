@@ -471,6 +471,7 @@ BARBA TRANSITIONS
      },
      
      beforeEnter({next}) {
+      killandinitWebflow ();
        /*
       window.Webflow && window.Webflow.destroy();
       window.Webflow && window.Webflow.ready();
@@ -1128,6 +1129,22 @@ function killScrollTriggers() {
   triggers.forEach( trigger => {			
     trigger.kill();
   }); 
+
+  
+}
+
+/*
+================================================================================
+KILL OLD SCROLLTRIGGERS
+================================================================================
+*/
+function killandinitWebflow () {
+  
+  window.Webflow && window.Webflow.destroy();
+  window.Webflow && window.Webflow.ready();
+  window.Webflow && window.Webflow.require( 'ix2' ).init();
+  document.dispatchEvent( new Event( 'readystatechange' ) );
+  console.log("webflow killed and init");
 
   
 }
