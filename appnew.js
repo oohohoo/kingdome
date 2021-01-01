@@ -1188,6 +1188,7 @@ function simpleTicker() {
     'INNOVATIVE LUXURY CAMPING DOMES',
     'SOME OTHER NEWS',
     'HELLO WORLD',
+    'FREE DELIVERY ON ORDERS OVER $100<del style="color:yellow;">FOO/del>',
     ];
     
     $('#demo_3').t(
