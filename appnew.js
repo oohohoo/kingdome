@@ -476,7 +476,7 @@ BARBA TRANSITIONS
      },
      
      beforeEnter({next}) {
-     //v backgroundVideoReload();
+      videoReload();
       //
        /*
       window.Webflow && window.Webflow.destroy();
@@ -564,6 +564,9 @@ function init() {
 }
 
 }
+
+
+
 
 /*
 ================================================================================
@@ -1143,7 +1146,7 @@ function killScrollTriggers() {
 KILL OLD SCROLLTRIGGERS
 ================================================================================
 */
-function killandinitWebflow () {
+function killandinitWebflow() {
   
   window.Webflow && window.Webflow.destroy();
   window.Webflow && window.Webflow.ready();
@@ -1158,7 +1161,7 @@ function killandinitWebflow () {
 BARBA - REPLAY BACKGROUND VIDEOS
 ================================================================================
 */
-function backgroundVideoReload () {
+function videoReload() {
 
 /*   // when entering..
   // get the video element */
@@ -1171,7 +1174,7 @@ function backgroundVideoReload () {
 video.setAttribute('autoplay', true);
 video.load();
 
- // console.log("BACKGROOUND VIDEOS RELOADED");
+  console.log("BACKGROOUND VIDEOS RELOADED");
 
   
 }
