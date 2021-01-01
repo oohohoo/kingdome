@@ -1159,8 +1159,7 @@ BARBA - REPLAY BACKGROUND VIDEOS
 ================================================================================
 */
 function backgroundVideoReload() {
-  
-  ​
+
   // when entering..
   // get the video element
   let video = body.querySelector('.background-video');
