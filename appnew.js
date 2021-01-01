@@ -476,7 +476,7 @@ BARBA TRANSITIONS
      },
      
      beforeEnter({next}) {
-      videoReload();
+    //  videoReload();
       //
        /*
       window.Webflow && window.Webflow.destroy();
