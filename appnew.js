@@ -464,10 +464,9 @@ BARBA TRANSITIONS
      },
      
      afterEnter({next}) {
-      initLoader();
       //animationEnter();
       //logoAnimacija();
-      //fullscreenMenu();
+      fullscreenMenu();
       //homeProductHover();
       //homeYoutube();
      // productsMainSwiper();
