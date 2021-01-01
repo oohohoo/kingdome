@@ -1165,7 +1165,7 @@ function backgroundVideoReload() {
   // get the video element */
   //let video = body.querySelector('.background-video');
   ​
-  const video = select('.background-video');
+ // const video = select('.background-video');
 
   ​
  /*  // play the video */
