@@ -439,7 +439,8 @@ BARBA TRANSITIONS
        initLoader();
         homeProductHover();
         
-        //homeYoutube();
+        homeYoutube();
+        console.log("youtube OPET");
        //logoAnimacija();
        //fullscreenMenu();
       
