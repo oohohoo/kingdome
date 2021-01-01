@@ -352,6 +352,7 @@ function initPageTransitions() {
     console.log("Locomotive scroll destroyed!");
     killScrollTriggers();
     console.log("All ScrollTriggers destroyed!");
+    killandinitWebflow ();
     /*window.Webflow && window.Webflow.destroy();
     window.Webflow && window.Webflow.ready();
     window.Webflow && window.Webflow.require('ix2').init();          
@@ -471,7 +472,7 @@ BARBA TRANSITIONS
      },
      
      beforeEnter({next}) {
-      killandinitWebflow ();
+      //
        /*
       window.Webflow && window.Webflow.destroy();
       window.Webflow && window.Webflow.ready();
