@@ -6,7 +6,6 @@ console.log("ScrollTrigger Loaded!");
 let locoScroll;
 console.log("Locomotive Loaded");
 
-
 /*
 ================================================================================
 PRELOADER
@@ -1162,7 +1161,7 @@ REINIT BACKGROUND VIDEOS
 ================================================================================
 */
 function initVideo() {
-  $('#video')[0].load();
+  //$('#bgvideo')[0].load();
 
   console.log("BG RELOADED");
 
