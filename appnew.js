@@ -360,7 +360,7 @@ function initPageTransitions() {
   });
   //init scrolltrigger
    barba.hooks.afterEnter(() => {
-    killandinitWebflow ();
+    
    // console.log("možda ode učitat locoscroll");
     
   });
@@ -437,6 +437,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
+       killandinitWebflow ();
         homeProductHover();
         
         //homeYoutube();
