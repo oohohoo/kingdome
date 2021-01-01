@@ -1192,7 +1192,7 @@ function simpleTicker() {
     
     $('#demo_3').t(
     tickr.join(x='<ins>2</ins><del>*</del>')+x,
-    {speed:5,repeat:true,pause_on_click:true}
+    {speed:40,repeat:true,pause_on_click:true}
     );
 
 
