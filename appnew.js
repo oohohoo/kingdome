@@ -1185,9 +1185,10 @@ t.js SIMPLE TICKER
 function simpleTicker() {
   var tickr=[
    
+    'HELLO',
+    'WE ARE KINGDOME',
     'INNOVATIVE LUXURY CAMPING DOMES',
-    'SOME OTHER NEWS',
-    'HELLO WORLD',
+    'PRODAJEM DOMAĆE MASLINOVO ULJE',  
     'FREE DELIVERY IN DECEMBER',
     ];
     
