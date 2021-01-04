@@ -601,12 +601,12 @@ gsap.utils.toArray(".rg__column").forEach(container => {
  
   let   dome = container.querySelector(".rg__dome"),
   // wrap = container.querySelector(".rg__wrap"),
-      //name = container.querySelector(".rg__name"),
+      name = container.querySelector(".rg__name"),
       //short = container.querySelector(".rg__short"),
       long = container.querySelector(".rg__long"),
       white = container.querySelector(".whiteback"),
 
-      tl = gsap.timeline({ defaults: { duration: 0.4}, 
+      tl = gsap.timeline({ defaults: { duration: 0.2}, 
       paused: true });
   
   
@@ -614,10 +614,10 @@ gsap.utils.toArray(".rg__column").forEach(container => {
   
 // .to(wrap, { backgroundColor:"#B6FA00" }, 0)
     //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
-   // .to(name, { yPercent:-8, autoAlpha:0 }, 0)
+    .to(name, { yPercent:-10, autoAlpha:0 }, 0)
    // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
-    .to(long, {autoAlpha:1, yPercent:0}, 0)
-    .to(white, {yPercent:-15}, 0);
+    .from(long, {autoAlpha:0, yPercent:10}, 0)
+    .to(white, {yPercent:-25}, 0);
     
      
   container.addEventListener("mouseenter", () => tl.play() );
