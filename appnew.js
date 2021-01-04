@@ -1217,7 +1217,7 @@ t.js SIMPLE TICKER - HIDE
 ================================================================================
 */
 function simpleTickerHide() {
-  gsap.to("#demo_3",  {autoALpha:0, duration: 0.5})
+  gsap.to("#demo_3",  {autoAlpha:1, duration: 0.5});
 
   console.log("ticker hiden");
 
