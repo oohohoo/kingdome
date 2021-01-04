@@ -143,16 +143,26 @@ IS TRANSITIONING / BLUE PROGRESS CURSOR & POINTER EVENTS
   cursor: progress;
 }
 
+
+/*
+================================================================================
+HIDE - VISIBILITY HIDDEN
+================================================================================
+*/
+.hide {
+  visibility:hidden;
+}
+
 /*
 ================================================================================
 GSAP PERFORMANCE FIX
 ================================================================================
 */
-.smooth-scroll {
+/*.smooth-scroll {
   will-change: transform;
   backface-visibility: hidden;
 }
-
+*/
 /*
 ================================================================================
 HIDE PAGE CONTENT BY DEFAULT
