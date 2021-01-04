@@ -396,6 +396,7 @@ BARBA VIEWS
       homeYoutube();
       homeProductHover();
       simpleTicker();
+      bigLogo();
 
       console.log("Home JS triggered!");
     }},{
@@ -1227,10 +1228,10 @@ LOGO RESET - to small
 ================================================================================
 */
 
-function resetLogo() {
+function bigLogo() {
   
-  gsap.to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
-  gsap.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
+  gsap.to(".red-flag",  {width:'8.5em', height:'10em', top: '0em', duration: 0.5, ease: "expo.inOut", })
+  gsap.to(".znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<")
 
 console.log("logoReseted");
 
