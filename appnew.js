@@ -403,6 +403,7 @@ BARBA VIEWS
     namespace: 'products',
     beforeEnter(){
       productsMainSwiper();
+      resetLogo();
         console.log("Products JS triggered!");
     }},{
       namespace: 'productlottie',
