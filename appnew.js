@@ -404,6 +404,7 @@ BARBA VIEWS
     beforeEnter(){
       productsMainSwiper();
       resetLogo();
+      simpleTickerHide();
         console.log("Products JS triggered!");
     }},{
       namespace: 'productlottie',
@@ -1208,6 +1209,20 @@ function simpleTicker() {
   console.log("simplde RELOADED");
 
 }
+
+
+/*
+================================================================================
+t.js SIMPLE TICKER - HIDE
+================================================================================
+*/
+function simpleTickerHide() {
+  gsap.to("#demo_3",  {autoALpha:0, duration: 0.5})
+
+  console.log("ticker hiden");
+
+}
+
 /*
 ================================================================================
 LOGO RESET - to small
@@ -1259,3 +1274,4 @@ function hideMenu() {
 console.log("menuHiddeeeeeeeee");
 
 }
+
