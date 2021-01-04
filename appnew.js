@@ -600,8 +600,8 @@ gsap.set(".rg__long", {autoAlpha:0, yPercent:8});
 gsap.utils.toArray(".rg__column").forEach(container => {
   let wrap = container.querySelector(".rg__wrap"),
       dome = container.querySelector(".rg__dome"),
-      name = container.querySelector(".rg__name"),
-      short = container.querySelector(".rg__short"),
+      //name = container.querySelector(".rg__name"),
+      //short = container.querySelector(".rg__short"),
       long = container.querySelector(".rg__long"),
       white = container.querySelector(".whiteback"),
 
@@ -613,8 +613,8 @@ gsap.utils.toArray(".rg__column").forEach(container => {
   
 // .to(wrap, { backgroundColor:"#B6FA00" }, 0)
     .to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
-    .to(name, { yPercent:-8, autoAlpha:0 }, 0)
-    .to(short, { yPercent:-8, autoAlpha:0 }, 0)
+   // .to(name, { yPercent:-8, autoAlpha:0 }, 0)
+   // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
     .to(long, {autoAlpha:1, yPercent:0}, 0)
     .to(white, {yPercent:-50}, 0);
     
