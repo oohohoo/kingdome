@@ -478,7 +478,7 @@ BARBA TRANSITIONS
      },
      
      beforeEnter({next}) {
-      hide();
+      hideMenu();
     //  videoReload();
       //
        /*
@@ -808,7 +808,7 @@ function show() {
     .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
 
 }
-// --- SHOW
+// --- HIDE
 function hide() {
 	let tl = gsap.timeline();
 
@@ -818,8 +818,7 @@ function hide() {
 		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		.to(".open", {autoAlpha:1}, "<")
 		.to(".close", {autoAlpha:0}, "<")
-    
-		.set(" .nav-toggle", { pointerEvents: "all"});
+    .set(" .nav-toggle", { pointerEvents: "all"});
 	
 }
 
@@ -1219,5 +1218,28 @@ function resetLogo() {
   gsap.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
 
 console.log("logoReseted");
+
+}
+
+/*
+================================================================================
+LOGO RESET
+================================================================================
+*/
+
+function hideMenu() {
+  
+  let tl = gsap.timeline();
+
+	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
+
+		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
+		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
+		.to(".open", {autoAlpha:1}, "<")
+		.to(".close", {autoAlpha:0}, "<")
+    .set(" .nav-toggle", { pointerEvents: "all"});
+	
+
+console.log("menuHiddeeeeeeeee");
 
 }
