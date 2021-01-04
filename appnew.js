@@ -1219,7 +1219,6 @@ function resetLogo() {
   gsap.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
 
 console.log("logoReseted");
-
 }
 
 /*
