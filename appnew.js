@@ -413,15 +413,18 @@ BARBA VIEWS
       namespace: 'productlottie',
     beforeEnter(data) {
       soloProductsLottie(container);
+      simpleTickerHide();
       //productsoloAccordion();
       console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
     beforeEnter(data) {
+      simpleTickerHide();
       console.log("about JS triggered!");
     }},{
     namespace: 'contact',
     beforeEnter(data) {
+      simpleTickerHide();
       resetLogo();
     //  window.Webflow && window.Webflow.require('ix2').init();  
     //Webflow.require('ix2').init();
