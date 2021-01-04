@@ -594,25 +594,26 @@ HOME - PRODUCT HOVER
 function homeProductHover() {
 
 
-gsap.set(".rg__long", {autoAlpha:0, yPercent:8});
+//gsap.set(".rg__long", {autoAlpha:0, yPercent:8});
 
 
 gsap.utils.toArray(".rg__column").forEach(container => {
-  let wrap = container.querySelector(".rg__wrap"),
-      dome = container.querySelector(".rg__dome"),
+ 
+  let   dome = container.querySelector(".rg__dome"),
+  // wrap = container.querySelector(".rg__wrap"),
       //name = container.querySelector(".rg__name"),
       //short = container.querySelector(".rg__short"),
       long = container.querySelector(".rg__long"),
       white = container.querySelector(".whiteback"),
 
-      tl = gsap.timeline({ defaults: { duration: 0.3}, 
+      tl = gsap.timeline({ defaults: { duration: 0.5}, 
       paused: true });
   
   
   tl.to(dome, { yPercent: -8, autoAlpha:0 })
   
 // .to(wrap, { backgroundColor:"#B6FA00" }, 0)
-    .to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
+    //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
    // .to(name, { yPercent:-8, autoAlpha:0 }, 0)
    // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
     .to(long, {autoAlpha:1, yPercent:0}, 0)
