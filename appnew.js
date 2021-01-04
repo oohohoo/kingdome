@@ -1219,7 +1219,7 @@ t.js SIMPLE TICKER - HIDE
 function simpleTickerHide() {
   gsap.to("#demo_3",  {autoAlpha:1, y:100, duration: 0.5});
 
-  console.log("ticker hiden");
+  console.log("+++++++++++++ticker hiden");
 
 }
 
