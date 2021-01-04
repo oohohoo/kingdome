@@ -616,7 +616,7 @@ gsap.utils.toArray(".rg__column").forEach(container => {
    // .to(name, { yPercent:-8, autoAlpha:0 }, 0)
    // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
     .to(long, {autoAlpha:1, yPercent:0}, 0)
-    .to(white, {yPercent:-50, rotate:45}, 0);
+    .to(white, {yPercent:-50}, 0);
     
      
   container.addEventListener("mouseenter", () => tl.play() );
