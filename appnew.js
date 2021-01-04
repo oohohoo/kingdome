@@ -416,12 +416,8 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-      resetLogo();
-    //  window.Webflow && window.Webflow.require('ix2').init();  
-    //Webflow.require('ix2').init();
-    //console.log("Webflow reinit ulalalalalala");
-     // contactForm();
-      console.log("contact JS triggered!");
+    //  resetLogo();
+          console.log("contact JS triggered!");
       
     }
 
@@ -1211,7 +1207,16 @@ LOGO RESET
 */
 
 function resetLogo() {
-gsap.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'})
+tl = gsap.timeline({delay: 0.5, paused: true, defaults: {duration: 1, ease: "none"},
+      tl.to(".selector", {duration: 1, x: 50, y: 0})
+ 	.to("#id", {autoAlpha: 0})
+  	.to(elem, {duration: 1, backgroundColor: "red"})
+  	.to([elem, elem2], {duration: 3, x: 100});
+});
+
+
+  .to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
+  .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
 
 console.log("logoReseted");
 
