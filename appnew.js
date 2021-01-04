@@ -416,6 +416,7 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
+      resetLogo();
     //  window.Webflow && window.Webflow.require('ix2').init();  
     //Webflow.require('ix2').init();
     //console.log("Webflow reinit ulalalalalala");
@@ -1203,6 +1204,15 @@ function simpleTicker() {
   console.log("simplde RELOADED");
 
 }
+/*
+================================================================================
+LOGO RESET
+================================================================================
+*/
 
+function resetLogo() {
+gsap.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'})
 
+console.log("logoReseted");
 
+}
