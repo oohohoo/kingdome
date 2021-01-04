@@ -796,7 +796,7 @@ function show() {
  
 
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
-		.to(".fs-menu--column", {yPercent:0, duration:1.2, stagger:0.1, ease: "power2.inOut"}, "<")
+		.to(".fs-menu--column", {yPercent:0, duration:0.8, stagger:0.1, ease: "power2.inOut"}, "<")
 		.to(".open", {autoAlpha:0}, "<")
 		.to(".close", {autoAlpha:1}, "<")
     
@@ -813,7 +813,7 @@ function hide() {
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
-		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:1, stagger:0.05, ease: "power2.inOut"})
+		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
 		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		.to(".open", {autoAlpha:1}, "<")
 		.to(".close", {autoAlpha:0}, "<")
