@@ -189,8 +189,12 @@ SCROLLTRIGGER TEST
     }
   })
   .to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
-  .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
+  v
 
+ vbnfxgjet
+ 12
+ 90,
+ ,,0
 
 
   /*
