@@ -800,7 +800,7 @@ function show() {
 		.to(".open", {autoAlpha:0}, "<")
 		.to(".close", {autoAlpha:1}, "<")
     
-		.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
+		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
