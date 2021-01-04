@@ -478,6 +478,7 @@ BARBA TRANSITIONS
      },
      
      beforeEnter({next}) {
+      hide();
     //  videoReload();
       //
        /*
