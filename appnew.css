@@ -319,11 +319,11 @@ PRODUCTS - SWIPER CSS
   left: 0;
   top: 0;
 }
-.cta__slider-item img {
+/* .cta__slider-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 
 /*
