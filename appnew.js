@@ -793,14 +793,16 @@ function show() {
   gsap.set(".close", {autoAlpha:0})
   //gsap.set(".line-wrapper", {yPercent:100})
 
+ 
+
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
-		.to(".fs-menu--column", {yPercent:0, duration:0.5, stagger:0.1, ease: "Expo.inOut"}, "<")
+		.to(".fs-menu--column", {yPercent:0, duration:1.2, stagger:0.1, ease: "power2.inOut"}, "<")
 		.to(".open", {autoAlpha:0}, "<")
 		.to(".close", {autoAlpha:1}, "<")
     
-		.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.out"}, "<0.1")
-		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.out"}, "<0.1")
-		.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
+		.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
+		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
+		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
     .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
 
@@ -811,7 +813,7 @@ function hide() {
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
-		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "Expo.inOut"})
+		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:1, stagger:0.05, ease: "power2.inOut"})
 		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		.to(".open", {autoAlpha:1}, "<")
 		.to(".close", {autoAlpha:0}, "<")
