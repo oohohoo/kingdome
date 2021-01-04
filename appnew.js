@@ -1189,6 +1189,8 @@ function simpleTicker() {
     'WE ARE KINGDOME',
     'INNOVATIVE LUXURY CAMPING DOMES',
     '...', 
+    '...', 
+    '...', 
     'PRODAJEM DOMAĆE MASLINOVO ULJE',  
      ];
     
