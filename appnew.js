@@ -603,6 +603,7 @@ gsap.utils.toArray(".rg__column").forEach(container => {
       name = container.querySelector(".rg__name"),
       short = container.querySelector(".rg__short"),
       long = container.querySelector(".rg__long"),
+      white = container.querySelector(".whiteback"),
 
       tl = gsap.timeline({ defaults: { duration: 0.3}, 
       paused: true });
@@ -614,7 +615,8 @@ gsap.utils.toArray(".rg__column").forEach(container => {
     .to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
     .to(name, { yPercent:-8, autoAlpha:0 }, 0)
     .to(short, { yPercent:-8, autoAlpha:0 }, 0)
-    .to(long, {autoAlpha:1, yPercent:0}, 0);
+    .to(long, {autoAlpha:1, yPercent:0}, 0)
+    .to(white, {yPercent:-50}, 0);
     
      
   container.addEventListener("mouseenter", () => tl.play() );
