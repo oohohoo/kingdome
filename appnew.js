@@ -605,7 +605,7 @@ gsap.utils.toArray(".rg__column").forEach(container => {
       long = container.querySelector(".rg__long"),
       white = container.querySelector(".whiteback"),
 
-      tl = gsap.timeline({ defaults: { ease:"Power1.out", duration: 0.3}, 
+      tl = gsap.timeline({ defaults: { duration: 0.3}, 
       paused: true });
   
   
