@@ -393,10 +393,13 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
+      bigLogo();
       homeYoutube();
       homeProductHover();
       simpleTicker();
-      bigLogo();
+      simpleTickerShow();
+      
+      
 
       console.log("Home JS triggered!");
     }},{
@@ -1217,9 +1220,21 @@ t.js SIMPLE TICKER - HIDE
 ================================================================================
 */
 function simpleTickerHide() {
-  gsap.to("#demo_3",  {autoAlpha:0, duration: 0.5});
+  gsap.to("#demo_3",  {autoAlpha:0, duration: 0.1});
 
   console.log("+++++++++++++ticker hiden");
+
+}
+
+/*
+================================================================================
+t.js SIMPLE TICKER - SHOW
+================================================================================
+*/
+function simpleTickerShow() {
+  gsap.to("#demo_3",  {autoAlpha:1, duration: 0.1});
+
+  console.log("+++++++++++++ticker show");
 
 }
 
