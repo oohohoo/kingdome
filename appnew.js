@@ -811,7 +811,7 @@ function show() {
   gsap.set(".fs-menu--column", {yPercent:100})
   gsap.set(".fs-menu-header", {yPercent:120})
  
-  gsap.set(".close, .link-wrapper, .big-body", {autoAlpha:0})
+  gsap.set(".close, .link-wrapper, .big-body, .fadein", {autoAlpha:0})
  
   //gsap.set(".line-wrapper", {yPercent:100})
 
@@ -822,7 +822,7 @@ function show() {
     .to(".fs-menu-header", {yPercent:0, duration:0.6, ease: "power2.inOut"}, "<0.1")
     .to(".big-body", {autoAlpha:1, duration:0.6,stagger:0.1,  ease: "power2.inOut"}, "<0.1")
     .to(".link-wrapper", {autoAlpha:1, duration:0.6,stagger:0.1,  ease: "power2.inOut"}, "<0.1")
-    
+    .to(".fadein", {autoAlpha:1, duration:0.6,stagger:0.1, ease: "power2.inOut"}, "<0.1")
 
 
 		.to(".open", {autoAlpha:0}, "<")
