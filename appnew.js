@@ -814,7 +814,7 @@ function show() {
   gsap.set(".fs-menu--column", {yPercent:-100})
   gsap.set(".fs-menu-header", {yPercent:-110})
  
-  gsap.set(".close, .link-wrapper, .big-body, .fadein", {autoAlpha:0})
+  gsap.set(".close, .link-wrapper, .big-body, .fadein, .fs-menu-header", {autoAlpha:0})
  
   //gsap.set(".line-wrapper", {yPercent:100})
 
@@ -822,7 +822,7 @@ function show() {
 
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "power2.inOut"}, "<")
-    .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "power2.out"}, "<0.2")
+    .to(".fs-menu-header", {autoAlpha:1, yPercent:0, duration:0.8, ease: "power2.out"}, "<0.2")
    
     .to(".link-wrapper", {autoAlpha:1, duration:0.5,stagger:0.1,  ease: "power2.inOut"}, "<0.1")
     .to(".fadein", {autoAlpha:1, duration:0.6, ease: "power2.inOut"}, "<0.1")
