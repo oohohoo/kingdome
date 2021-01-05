@@ -808,14 +808,17 @@ function show() {
 	let tl = gsap.timeline();
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
-	gsap.set(".fs-menu--column", {yPercent:-100})
+  gsap.set(".fs-menu--column", {yPercent:100})
   gsap.set(".close", {autoAlpha:0})
   //gsap.set(".line-wrapper", {yPercent:100})
 
  
 
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
-		.to(".fs-menu--column", {yPercent:0, duration:0.8, stagger:0.1, ease: "power2.inOut"}, "<")
+    .to(".fs-menu--column", {yPercent:0, duration:0.8, stagger:0.1, ease: "power2.inOut"}, "<")
+    
+
+
 		.to(".open", {autoAlpha:0}, "<")
 		.to(".close", {autoAlpha:1}, "<")
     
