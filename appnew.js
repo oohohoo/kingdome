@@ -794,6 +794,7 @@ const { gsap } = window;
 
 const btn = document.querySelector(".nav-toggle");
 
+/*
 btn.addEventListener("click", () => {
 	if (btn.classList.contains("active")) {
 		btn.classList.remove("active");
@@ -803,6 +804,8 @@ btn.addEventListener("click", () => {
 		show();
 	}
 });
+*/
+
 // --- SHOW
 function show() {
 	let tl = gsap.timeline();
