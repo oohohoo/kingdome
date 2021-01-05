@@ -32,7 +32,7 @@ function init() {
   gsap.set(loader, {autoAlpha: 1});
 
   // scale loader down
-  gsap.set(loaderInner, {scaleY: 0.025, transformOrigin: 'bottom'});
+  gsap.set(loaderInner, {scaleY: 0.015, transformOrigin: 'bottom'});
 
   // make a tween that scales the loader
   const progressTween = gsap.to(progressBar, {paused: true, scaleX: 0, ease: 'none', transformOrigin: 'right'});
