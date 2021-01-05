@@ -818,8 +818,8 @@ function show() {
  
 
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
-    .to(".fs-menu--column", {yPercent:0, duration:0.6, ease: "power2.inOut"}, "<")
-    .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "power2.out"}, "<0.1")
+    .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "power2.inOut"}, "<")
+    .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "power2.out"}, "<0.2")
    
     .to(".link-wrapper", {autoAlpha:1, duration:0.5,stagger:0.1,  ease: "power2.inOut"}, "<0.1")
     .to(".fadein", {autoAlpha:1, duration:0.6, ease: "power2.inOut"}, "<0.1")
