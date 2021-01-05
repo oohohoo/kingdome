@@ -191,7 +191,7 @@ SCROLLTRIGGER TEST
   .to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.out", }, 0)
   .fromTo(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, 
 {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 0)
-  .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.out'}, 0)
+  .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
 
 
 
