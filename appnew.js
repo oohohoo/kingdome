@@ -808,7 +808,7 @@ function show() {
 	let tl = gsap.timeline();
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
-  gsap.set(".fs-menu--column", {yPercent:100})
+  gsap.set(".fs-menu--column", {yPercent:-100})
   gsap.set(".fs-menu-header", {yPercent:110})
  
   gsap.set(".close, .link-wrapper, .big-body, .fadein", {autoAlpha:0})
