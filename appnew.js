@@ -408,7 +408,7 @@ BARBA VIEWS
     namespace: 'products',
     beforeEnter(){
       productsMainSwiper();
-    //  resetLogo();
+      resetLogo();
       simpleTickerHide();
     console.log("Products JS triggered!");
     }},{
