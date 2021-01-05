@@ -808,8 +808,8 @@ function show() {
 	let tl = gsap.timeline();
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
-  gsap.set(".fs-menu--column,  .fs-menu-header", {yPercent:100})
-  gsap.set(".close", {autoAlpha:0})
+  gsap.set(".fs-menu--column, .fs-menu-header", {yPercent:100})
+  gsap.set(".close, .link-wrapper, .big-body", {autoAlpha:0})
  
   //gsap.set(".line-wrapper", {yPercent:100})
 
@@ -817,8 +817,9 @@ function show() {
 
 	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
     .to(".fs-menu--column", {yPercent:0, duration:0.8, stagger:0.1, ease: "power2.inOut"}, "<")
-    .to(".fs-menu-header", {yPercent:0, duration:6, ease: "power2.inOut"})
-
+    .to(".fs-menu-header", {yPercent:0, duration:10, ease: "power2.inOut"})
+    .to(".link-wrapper", {autoAlpha:1, stagger:0.1,  ease: "power2.inOut"})
+    .to(".big-body", {autoAlpha:1, stagger:0.1,  ease: "power2.inOut"})
 
 
 		.to(".open", {autoAlpha:0}, "<")
