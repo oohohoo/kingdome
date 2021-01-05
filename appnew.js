@@ -1280,8 +1280,7 @@ function resetLogo() {
 
   //  tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 40%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
     tl.to(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
-    .set(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
-    //.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
+    .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
 
 
     console.log("logoReseted");
@@ -1328,7 +1327,7 @@ function hideMenu() {
   
   let tl = gsap.timeline();
 
-//	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
+	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
 		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.1, ease: "power2.inOut"})
 		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
