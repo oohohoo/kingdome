@@ -414,7 +414,7 @@ BARBA VIEWS
     beforeEnter(data) {
       //soloProductsLottie(container);
       simpleTickerHide();
-      //productsoloAccordion();
+      productsoloAccordion();
     console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
