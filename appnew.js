@@ -176,6 +176,7 @@ SCROLLTRIGGER TEST
 
 
   // SCROLLTRIGGER TEST 2 - LOGO ANIMACIJA TEST TEST
+  gsap.set(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
 
   gsap.timeline({
     scrollTrigger: {
