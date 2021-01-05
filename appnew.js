@@ -401,26 +401,26 @@ BARBA VIEWS
       
       
 
-      console.log("Home JS triggered!");
+    console.log("Home JS triggered!");
     }},{
     namespace: 'products',
     beforeEnter(){
       productsMainSwiper();
       resetLogo();
       simpleTickerHide();
-        console.log("Products JS triggered!");
+    console.log("Products JS triggered!");
     }},{
       namespace: 'productlottie',
     beforeEnter(data) {
-      soloProductsLottie(container);
+      //soloProductsLottie(container);
       simpleTickerHide();
       //productsoloAccordion();
-      console.log("Productlottie JS triggered!");
+    console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
     beforeEnter(data) {
       simpleTickerHide();
-      console.log("about JS triggered!");
+    console.log("about JS triggered!");
     }},{
     namespace: 'contact',
     beforeEnter(data) {
@@ -430,7 +430,7 @@ BARBA VIEWS
     //Webflow.require('ix2').init();
     //console.log("Webflow reinit ulalalalalala");
      // contactForm();
-      console.log("contact JS triggered!");
+    console.log("contact JS triggered!");
       
     }
 
@@ -594,7 +594,7 @@ HOME - PRODUCT HOVER
 function homeProductHover() {
 
 
-//gsap.set(".rg__long", {autoAlpha:0, yPercent:8});
+gsap.set(".rg__long", {autoAlpha:0, yPercent:-10});
 
 
 gsap.utils.toArray(".rg__column").forEach(container => {
@@ -616,7 +616,7 @@ gsap.utils.toArray(".rg__column").forEach(container => {
     //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
     .to(name, { yPercent:-10, autoAlpha:0 }, 0)
    // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
-    .from(long, {autoAlpha:0, yPercent:10}, 0)
+    .to(long, {autoAlpha:1, yPercent:10}, 0)
     .to(white, {yPercent:10}, 0);
     
      
