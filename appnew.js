@@ -408,7 +408,7 @@ BARBA VIEWS
     namespace: 'products',
     beforeEnter(){
       productsMainSwiper();
-      resetLogo();
+    //  resetLogo();
       simpleTickerHide();
     console.log("Products JS triggered!");
     }},{
@@ -426,14 +426,14 @@ BARBA VIEWS
     }},{
     namespace: 'conversation',
     beforeEnter(data) {
-      resetLogo();
+      //resetLogo();
     //simpleTickerHide();
     console.log("about JS triggered!");
     }},{
     namespace: 'contact',
     beforeEnter(data) {
       simpleTickerHide();
-      resetLogo();
+     // resetLogo();
     //  window.Webflow && window.Webflow.require('ix2').init();  
     //Webflow.require('ix2').init();
     //console.log("Webflow reinit ulalalalalala");
