@@ -422,6 +422,12 @@ BARBA VIEWS
       simpleTickerHide();
     console.log("about JS triggered!");
     }},{
+    namespace: 'conversation',
+    beforeEnter(data) {
+      resetLogo();
+    //simpleTickerHide();
+    console.log("about JS triggered!");
+    }},{
     namespace: 'contact',
     beforeEnter(data) {
       simpleTickerHide();
