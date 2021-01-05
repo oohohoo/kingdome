@@ -1271,7 +1271,7 @@ LOGO RESET - to small
 
 function resetLogo() {
 
-  let tl = gsap.timeline();
+  let tlfix = gsap.timeline();
 
     
 /*   tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
@@ -1280,7 +1280,7 @@ function resetLogo() {
    
 
   //  tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 40%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
-  tl.fromTo(".red-flag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
+  tlfix.fromTo(".red-flag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
   {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 80% 20%, 0% 100%)"}, "<")
 
  //.to(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
