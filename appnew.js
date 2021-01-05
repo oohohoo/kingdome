@@ -1274,8 +1274,8 @@ function resetLogo() {
   let tl = gsap.timeline();
 
     tl.to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
-    .fromTo(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
-    {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, "<")
+    .fromTo(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, 
+    {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, "<")
     .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
       
     console.log("logoReseted");
@@ -1298,7 +1298,7 @@ function bigLogo() {
 
   let tl = gsap.timeline();
 
-  tl.to(".red-flag",  {width:'8.5em', height:'13em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
+  tl.to(".red-flag",  {width:'8.5em', height:'12em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
   .fromTo(".red-flag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
   {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, "<")
   .to(".znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<")
