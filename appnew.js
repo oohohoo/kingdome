@@ -1222,11 +1222,7 @@ function simpleTicker() {
     'HELLO',
     'WE ARE KINGDOME',
     'INNOVATIVE LUXURY CAMPING DOMES',
-    '...', 
-    '...', 
-    '...', 
-    'PRODAJEM DOMAĆE MASLINOVO ULJE',  
-     ];
+    ];
     
     $('#demo_3').t(
     tickr.join(x='<ins>2</ins><del>*</del>')+x,
