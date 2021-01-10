@@ -150,7 +150,7 @@ console.log("Locomotive Updated once more");;
     locoScroll.update();
     ScrollTrigger.refresh();
     console.log("JEBOTE RESIZED JEBOTE LOCOSCROLL I SCROLLTRIGGER UPDATED!");
-} 
+});
 
 
 /* ===== */
