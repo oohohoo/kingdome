@@ -143,7 +143,7 @@ ScrollTrigger.refresh();
 
 /* ===== */
 locoScroll.update();
-console.log("Locomotive Updated once more");;
+console.log("Locomotive Updated once more");
 
 /*
   // When window reszie, need to update locomotive scroll.
