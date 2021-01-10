@@ -213,6 +213,9 @@ $( "#tostart" ).on( "click", function() {
   console.log("SCROLLTOTOP");
 });
 
+  
+}
+
 /*
 ================================================================================
 PRELOADER --> vodi na --> INIT CONTENT
@@ -1342,4 +1345,4 @@ function hideMenu() {
 console.log("menuHiddeeeeeeeee");
 
 }
-}
+
