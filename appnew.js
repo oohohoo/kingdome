@@ -202,8 +202,8 @@ SCROLLTRIGGER TEST
 LOCOMOTIVE 4 SCROLL TO TOP
 ================================================================================
 */
-$( "#tomain" ).on( "click", function() {
-  locoScroll.scrollTo( '#top', {
+$( "#tostart" ).on( "click", function() {
+  locoScroll.scrollTo( '#start', {
     'offset': 0,
     'duration': 1000,
     //'easing': [0.25, 0.00, 0.35, 1.00],
@@ -1342,4 +1342,4 @@ function hideMenu() {
 console.log("menuHiddeeeeeeeee");
 
 }
-
+}
