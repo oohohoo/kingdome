@@ -189,9 +189,9 @@ SCROLLTRIGGER TEST
      scrollTrigger: {
       scroller: ".smooth-scroll",
        scrub: true,
-       trigger: ".container",
-       //trigger: horizontalSection,
-      // pin: true,
+       //trigger: ".container",
+       trigger: horizontalSection,
+       pin: true,
        start: "top top",
        end: () => `+=${pinWrapWidth}`,
        //invalidateOnRefresh: true 
