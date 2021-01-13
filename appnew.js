@@ -104,7 +104,7 @@ function initScroll(container) {
       }
   });
 
-  // ubačeno naknadno - data-direction - see what is doing?
+  // ubačeno naknadno - data-direction - see what is doing
   locoScroll.on("scroll", function (t) {
     document.documentElement.setAttribute("data-direction", t.direction);
   });
@@ -128,7 +128,7 @@ function initScroll(container) {
     // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, 
     // we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
     // UKLJUČITI SAMO NA MOBILNOJ VERZIJI
-   //  pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+    // pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
   });
 
 /* ===== 
@@ -148,10 +148,9 @@ ScrollTrigger.refresh();
   console.log("Scrolltrigger refreshed!");
 
 /* ===== */
-/*
 locoScroll.update();
 console.log("Locomotive Updated once more");
-*/
+
 /*
   // When window reszie, need to update locomotive scroll.
   $( window ).on( 'resize', function() {
@@ -431,8 +430,7 @@ BARBA VIEWS
       //soloProductsLottie(container);
       simpleTickerHide();
       productsoloAccordion();
-     // projectHorizScrollGal();
-    console.log("<<<<<>>>>>>>ACOUUUUUUUURDOPN triggered!");
+    console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
     beforeEnter(data) {
@@ -1173,7 +1171,7 @@ function productsoloAccordion() {
     }
   }
   
-  console.log("UČITAN SAM MAJKO");
+
   
 }
 
@@ -1308,7 +1306,7 @@ function resetLogo() {
 
 /*
 ================================================================================
-LOGO RESET - to large
+LOGO RESET - to small
 ================================================================================
 */
 
@@ -1364,6 +1362,45 @@ HIDE MENU ON CLICK
 /*
 function projectHorizScrollGal() {
 
+
+window.addEventListener("load", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const pageContainer = document.querySelector(".container");
+  pageContainer.setAttribute("data-scroll-container", "");
+
+  const scroller = new LocomotiveScroll({
+    el: pageContainer,
+    smooth: true,
+    getDirection: true });
+
+
+  scroller.on("scroll", function (t) {
+    document.documentElement.setAttribute("data-direction", t.direction);
+  });
+
+
+
+  scroller.on("scroll", ScrollTrigger.update);
+
+  ScrollTrigger.scrollerProxy(pageContainer, {
+    scrollTop(value) {
+      return arguments.length ?
+      scroller.scrollTo(value, 0, 0) :
+      scroller.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        left: 0,
+        top: 0,
+        width: window.innerWidth,
+        height: window.innerHeight };
+
+    },
+    pinType: pageContainer.style.transform ? "transform" : "fixed" });
+
+
+
   // Pinning and horizontal scrolling
 
   let horizontalSections = document.querySelectorAll(".horizontal-scroll");
@@ -1374,10 +1411,9 @@ function projectHorizScrollGal() {
     let horizontalScrollLength = pinWrapWidth - window.innerWidth;
     gsap.to(pinWrap, {
       scrollTrigger: {
-        scroller: ".smooth-scroll",
+        scroller: "[data-scroll-container]",
         scrub: true,
-       // trigger: horizontalSection,
-       trigger: ".horizontal-scroll",
+        trigger: horizontalSection,
         pin: true,
         start: "top top",
         end: () => `+=${pinWrapWidth}`,
@@ -1387,6 +1423,40 @@ function projectHorizScrollGal() {
       ease: "none" });
 
   });
-  console.log("HORAJMOOOOOOOOGGGG");
+
+ 
+  /* COLOR CHANGER */
+ /*
+  const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+  scrollColorElems.forEach((colorSection, i) => {
+    const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
+    const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
+
+    ScrollTrigger.create({
+      trigger: colorSection,
+      scroller: "[data-scroll-container]",
+      start: "top 50%",
+      onEnter: () =>
+      gsap.to("body", {
+        backgroundColor: colorSection.dataset.bgcolor,
+        color: colorSection.dataset.textcolor,
+        overwrite: "auto" }),
+
+      onLeaveBack: () =>
+      gsap.to("body", {
+        backgroundColor: prevBg,
+        color: prevText,
+        overwrite: "auto" }) });
+
+
+  });
+
+*/
+/*
+  ScrollTrigger.addEventListener("refresh", () => scroller.update());
+
+  ScrollTrigger.refresh();
+});
+
 }
 */
