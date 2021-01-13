@@ -181,7 +181,7 @@ SCROLLTRIGGER TEST
 
  let horizontalSections = document.querySelectorAll(".horizontal-scroll");
 
- //horizontalSections.forEach(horizontalSection => {
+ horizontalSections.forEach(horizontalSection => {
    let pinWrap = horizontalSection.querySelector(".pin-wrap");
    let pinWrapWidth = pinWrap.offsetWidth;
    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
@@ -201,7 +201,7 @@ SCROLLTRIGGER TEST
      x: -horizontalScrollLength,
      ease: "none" });
 console.log("MRRRRRRRRRRŠ");
- //});
+});
 
 
 
