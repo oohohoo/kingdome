@@ -200,7 +200,7 @@ SCROLLTRIGGER TEST
 
      x: -horizontalScrollLength,
      ease: "none" });
-console.log("jernrnrnrrnrnrnoBI SE");
+console.log("MRRRRRRRRRRŠ");
  //});
 
 
