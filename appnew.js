@@ -431,7 +431,7 @@ BARBA VIEWS
       //soloProductsLottie(container);
       simpleTickerHide();
       productsoloAccordion();
-      projectHorizScrollGal();
+     // projectHorizScrollGal();
     console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
