@@ -189,8 +189,8 @@ SCROLLTRIGGER TEST
      scrollTrigger: {
       scroller: ".smooth-scroll",
        scrub: true,
-       //trigger: ".container",
-       trigger: horizontalSections,
+       trigger: "#treger",
+       //trigger: horizontalSections,
        pin: true,
        markers: true,
        start: "top top",
