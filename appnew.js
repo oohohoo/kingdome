@@ -140,6 +140,35 @@ if ( scrollbar.length > 1 ) {
 }
 /* ===== */
 
+ // Pinning and horizontal scrolling
+
+ let horizontalSections = document.querySelectorAll(".horizontal-scroll");
+
+ horizontalSections.forEach(horizontalSection => {
+   let pinWrap = horizontalSection.querySelector(".pin-wrap");
+   let pinWrapWidth = pinWrap.offsetWidth;
+   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+   gsap.to(pinWrap, {
+     scrollTrigger: {
+       scroller: ".smooth-scroll",
+       scrub: true,
+       trigger: horizontalSection,
+       pin: true,
+       start: "top top",
+       end: () => `+=${pinWrapWidth}`,
+       invalidateOnRefresh: true },
+
+     x: -horizontalScrollLength,
+     ease: "none" });
+console.log("PUCAM AL NE GAĐAM");
+ });
+
+
+
+
+
+
+
   // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
@@ -148,9 +177,10 @@ ScrollTrigger.refresh();
   console.log("Scrolltrigger refreshed!");
 
 /* ===== */
+/*
 locoScroll.update();
 console.log("Locomotive Updated once more");
-
+*/
 /*
   // When window reszie, need to update locomotive scroll.
   $( window ).on( 'resize', function() {
