@@ -172,9 +172,9 @@ SCROLLTRIGGER TEST
 */
  // Pinning and horizontal scrolling
 
-// let horizontalSections = document.querySelectorAll(".horizontal-scroll");
+ let horizontalSections = document.querySelectorAll(".horizontal-scroll");
 
- //horizontalSections.forEach(horizontalSection => {
+  horizontalSections.forEach(horizontalSection => {
    let pinWrap = document.querySelector(".pin-wrap");
    let pinWrapWidth = pinWrap.offsetWidth;
    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
@@ -182,8 +182,8 @@ SCROLLTRIGGER TEST
      scrollTrigger: {
       scroller: ".smooth-scroll",
        scrub: true,
-       trigger: "#sectionPin",
-       //trigger: horizontalSections,
+       //trigger: "#sectionPin",
+       trigger: horizontalSections,
        pin: true,
        markers: true,
        start: "top top",
@@ -194,7 +194,7 @@ SCROLLTRIGGER TEST
      x: -horizontalScrollLength,
      ease: "none" });
 console.log("AJDE RADI");
-//});
+});
 
 
 
