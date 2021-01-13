@@ -152,7 +152,8 @@ if ( scrollbar.length > 1 ) {
      scrollTrigger: {
        scroller: ".smooth-scroll",
        scrub: true,
-       trigger: horizontalSection,
+       trigger: ".container",
+       //trigger: horizontalSection,
        pin: true,
        start: "top top",
        end: () => `+=${pinWrapWidth}`,
