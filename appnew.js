@@ -1376,7 +1376,8 @@ function projectHorizScrollGal() {
       scrollTrigger: {
         scroller: ".smooth-scroll",
         scrub: true,
-        trigger: horizontalSection,
+       // trigger: horizontalSection,
+       trigger: ".horizontal-scroll",
         pin: true,
         start: "top top",
         end: () => `+=${pinWrapWidth}`,
@@ -1386,6 +1387,6 @@ function projectHorizScrollGal() {
       ease: "none" });
 
   });
-  console.log("HORIZZZZZZZO");
+  console.log("HORIZZZZZZZOž");
 }
 
