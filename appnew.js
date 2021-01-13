@@ -190,7 +190,7 @@ SCROLLTRIGGER TEST
       scroller: ".smooth-scroll",
        scrub: true,
        //trigger: ".container",
-       trigger: horizontalSection,
+       trigger: horizontalSections,
        pin: true,
        markers: true,
        start: "top top",
