@@ -192,6 +192,7 @@ SCROLLTRIGGER TEST
        //trigger: ".container",
        trigger: horizontalSection,
        pin: true,
+       markers: true,
        start: "top top",
        end: () => `+=${pinWrapWidth}`,
        //invalidateOnRefresh: true 
