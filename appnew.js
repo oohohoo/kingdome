@@ -1361,7 +1361,7 @@ console.log("menuHiddeeeeeeeee");
 HIDE MENU ON CLICK
 ================================================================================
 */
-
+/*
 function projectHorizScrollGal() {
 
   // Pinning and horizontal scrolling
@@ -1389,4 +1389,4 @@ function projectHorizScrollGal() {
   });
   console.log("HORAJMOOOOOOOOGGGG");
 }
-
+*/
