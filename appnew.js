@@ -432,7 +432,7 @@ BARBA VIEWS
       simpleTickerHide();
       productsoloAccordion();
      // projectHorizScrollGal();
-    console.log("Productlottie JS triggered!");
+    console.log("<<<<<>>>>>>>ACOUUUUUUUURDOPN triggered!");
     }},{
     namespace: 'about',
     beforeEnter(data) {
