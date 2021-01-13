@@ -104,6 +104,12 @@ function initScroll(container) {
       }
   });
 
+
+  locoScroll.on("scroll", function (t) {
+    document.documentElement.setAttribute("data-direction", t.direction);
+  });
+
+
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
   locoScroll.on("scroll", ScrollTrigger.update);
 
