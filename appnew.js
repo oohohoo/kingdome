@@ -160,7 +160,7 @@ if ( scrollbar.length > 1 ) {
 
      x: -horizontalScrollLength,
      ease: "none" });
-console.log("PUCAM AL NE GAĐAM");
+console.log("puši kurac");
  });
 
 
