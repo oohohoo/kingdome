@@ -150,7 +150,7 @@ if ( scrollbar.length > 1 ) {
    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
    gsap.to(pinWrap, {
      scrollTrigger: {
-       scroller: ".smooth-scroll",
+       //scroller: ".smooth-scroll",
        scrub: true,
        trigger: ".container",
        //trigger: horizontalSection,
