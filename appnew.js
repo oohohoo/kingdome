@@ -1173,7 +1173,7 @@ function productsoloAccordion() {
     }
   }
   
-
+  console.log("UČITAN SAM MAJKO");
   
 }
 
