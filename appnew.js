@@ -193,7 +193,7 @@ SCROLLTRIGGER TEST
 
      x: -horizontalScrollLength,
      ease: "none" });
-console.log("MRRRRRRRRRRŠ");
+console.log("AJDE RADI");
 //});
 
 
