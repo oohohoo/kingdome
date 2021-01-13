@@ -142,13 +142,6 @@ if ( scrollbar.length > 1 ) {
 /* ===== */
 
 
-
-
-
-
-
-
-
   // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
@@ -179,29 +172,29 @@ SCROLLTRIGGER TEST
 */
  // Pinning and horizontal scrolling
 
- let horizontalSections = document.querySelectorAll(".horizontal-scroll");
+// let horizontalSections = document.querySelectorAll(".horizontal-scroll");
 
- horizontalSections.forEach(horizontalSection => {
-   let pinWrap = horizontalSection.querySelector(".pin-wrap");
+ //horizontalSections.forEach(horizontalSection => {
+   let pinWrap = document.querySelector(".pin-wrap");
    let pinWrapWidth = pinWrap.offsetWidth;
    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-   gsap.to(pinWrap, {
+   gsap.to(".pinWrap", {
      scrollTrigger: {
       scroller: ".smooth-scroll",
        scrub: true,
-       trigger: "#treger",
+       trigger: "#sectionPin",
        //trigger: horizontalSections,
        pin: true,
        markers: true,
        start: "top top",
-       end: () => `+=${pinWrapWidth}`,
+       end: () => `+=${pinWrapWidth}`, /////
        invalidateOnRefresh: true 
       },
 
      x: -horizontalScrollLength,
      ease: "none" });
 console.log("MRRRRRRRRRRŠ");
-});
+//});
 
 
 
