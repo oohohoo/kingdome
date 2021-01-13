@@ -1387,6 +1387,6 @@ function projectHorizScrollGal() {
       ease: "none" });
 
   });
-  console.log("HORIZZZZZZZOž");
+  console.log("HORAJMOOOOOOOOGGGG");
 }
 
