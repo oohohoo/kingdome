@@ -105,7 +105,7 @@ function initScroll(container) {
       }
   });
 
-
+// ovo je ubačeno naknadno
   locoScroll.on("scroll", function (t) {
     document.documentElement.setAttribute("data-direction", t.direction);
   });
@@ -170,34 +170,6 @@ console.log("Locomotive Updated once more");
 SCROLLTRIGGER TEST
 ================================================================================
 */
- // Pinning and horizontal scrolling
-
- let horizontalSections = document.querySelectorAll(".horizontal-scroll");
-
-  horizontalSections.forEach(horizontalSection => {
-   let pinWrap = document.querySelector(".pin-wrap");
-   let pinWrapWidth = pinWrap.offsetWidth;
-   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-   gsap.to(".pinWrap", {
-     scrollTrigger: {
-      scroller: ".smooth-scroll",
-       scrub: true,
-       //trigger: "#sectionPin",
-       trigger: horizontalSections,
-       pin: true,
-       markers: true,
-       start: "top top",
-       end: () => `+=${pinWrapWidth}`, /////
-       invalidateOnRefresh: true 
-      },
-
-     x: -horizontalScrollLength,
-     ease: "none" });
-console.log("AJDE RADI");
-});
-
-
-
   gsap.utils.toArray('.block1').forEach((el, i) => {
     gsap.from(el, {
       scrollTrigger: {
