@@ -104,6 +104,12 @@ function initScroll(container) {
       }
   });
 
+  // ubačeno naknadno - data-direction - see what is doing?
+  locoScroll.on("scroll", function (t) {
+    document.documentElement.setAttribute("data-direction", t.direction);
+  });
+
+  
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
   locoScroll.on("scroll", ScrollTrigger.update);
 
@@ -122,7 +128,7 @@ function initScroll(container) {
     // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, 
     // we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
     // UKLJUČITI SAMO NA MOBILNOJ VERZIJI
-    // pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+     pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
   });
 
 /* ===== 
@@ -142,9 +148,10 @@ ScrollTrigger.refresh();
   console.log("Scrolltrigger refreshed!");
 
 /* ===== */
+/*
 locoScroll.update();
 console.log("Locomotive Updated once more");
-
+*/
 /*
   // When window reszie, need to update locomotive scroll.
   $( window ).on( 'resize', function() {
@@ -424,6 +431,7 @@ BARBA VIEWS
       //soloProductsLottie(container);
       simpleTickerHide();
       productsoloAccordion();
+      projectHorizScrollGal();
     console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
@@ -1300,7 +1308,7 @@ function resetLogo() {
 
 /*
 ================================================================================
-LOGO RESET - to small
+LOGO RESET - to large
 ================================================================================
 */
 
@@ -1346,4 +1354,38 @@ console.log("menuHiddeeeeeeeee");
 
 }
 
+
+
+/*
+================================================================================
+HIDE MENU ON CLICK
+================================================================================
+*/
+
+function projectHorizScrollGal() {
+
+  // Pinning and horizontal scrolling
+
+  let horizontalSections = document.querySelectorAll(".horizontal-scroll");
+
+  horizontalSections.forEach(horizontalSection => {
+    let pinWrap = horizontalSection.querySelector(".pin-wrap");
+    let pinWrapWidth = pinWrap.offsetWidth;
+    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+    gsap.to(pinWrap, {
+      scrollTrigger: {
+        scroller: ".smooth-scroll",
+        scrub: true,
+        trigger: horizontalSection,
+        pin: true,
+        start: "top top",
+        end: () => `+=${pinWrapWidth}`,
+        invalidateOnRefresh: true },
+
+      x: -horizontalScrollLength,
+      ease: "none" });
+
+  });
+
+}
 
