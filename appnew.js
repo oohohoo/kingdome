@@ -175,6 +175,7 @@ function playAnimation(event) {
   animations.each(function(i, animate) {
     animate(selected);
     locoScroll.update();
+    console.log("updated!");
   });
 }
 
@@ -186,11 +187,14 @@ function createAnimation(i, element) {
   gsap.set(box, { height: "auto"})
   var tween = gsap.from(box, { duration:0.5, height: 0, ease: Power1.easeInOut }).reverse();
   locoScroll.update();
+  console.log("updated!");
   
   return function(selected) {
     
     var reversed = selected !== menu ? true : !tween.reversed();
     tween.reversed(reversed);
+    locoScroll.update();
+    console.log("updated!");
   }
 }
 
