@@ -1156,6 +1156,7 @@ function productsoloAccordion() {
     
     animations.each(function(i, animate) {
       animate(selected);
+      locoScroll.update();
     });
   }
   
@@ -1166,6 +1167,7 @@ function productsoloAccordion() {
     
     gsap.set(box, { height: "auto"})
     var tween = gsap.from(box, { duration:0.5, height: 0, ease: Power1.easeInOut }).reverse();
+    locoScroll.update();
     
     return function(selected) {
       
