@@ -163,42 +163,6 @@ console.log("Locomotive Updated once more");
 });
 */
 
-
-var animations = $(".accordion-group").map(createAnimation);
-
-$(".accordion-menu").click(playAnimation);
-
-function playAnimation(event) {
-  
-  var selected = this;
-  
-  animations.each(function(i, animate) {
-    animate(selected);
-    locoScroll.update();
-    console.log("updated!");
-  });
-}
-
-function createAnimation(i, element) {
-    
-  var menu = element.querySelector(".accordion-menu");
-  var box  = element.querySelector(".accordion-content");
-  
-  gsap.set(box, { height: "auto"})
-  var tween = gsap.from(box, { duration:0.5, height: 0, ease: Power1.easeInOut }).reverse();
-  //locoScroll.update();
-  //console.log("updated!");
-  
-  return function(selected) {
-    
-    var reversed = selected !== menu ? true : !tween.reversed();
-    tween.reversed(reversed);
-    //locoScroll.update();
-    //console.log("updated!");
-  }
-}
-
-
 /* ===== */
 
 /*
@@ -1182,7 +1146,34 @@ PRODUCT SOLO - ACCORDION
 */
 function productsoloAccordion() {
   
- 
+  var animations = $(".accordion-group").map(createAnimation);
+
+  $(".accordion-menu").click(playAnimation);
+  
+  function playAnimation(event) {
+    
+    var selected = this;
+    
+    animations.each(function(i, animate) {
+      animate(selected);
+      
+    });
+  }
+  
+  function createAnimation(i, element) {
+      
+    var menu = element.querySelector(".accordion-menu");
+    var box  = element.querySelector(".accordion-content");
+    
+    gsap.set(box, { height: "auto"})
+    var tween = gsap.from(box, { duration:0.5, height: 0, ease: Power1.easeInOut }).reverse();
+    
+    return function(selected) {
+      
+      var reversed = selected !== menu ? true : !tween.reversed();
+      tween.reversed(reversed);
+    }
+  }
   
 
   
