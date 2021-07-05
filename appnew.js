@@ -416,7 +416,7 @@ BARBA VIEWS
       homeProductHover();
       simpleTicker();
       simpleTickerShow();
-      
+      document.getElementById('video').play();
       
 
     console.log("Home JS triggered!");
