@@ -410,7 +410,6 @@ BARBA VIEWS
     namespace: 'home',
     beforeEnter(data) {
       bigLogo();
-      homeYoutube();
       homeProductHover();
       simpleTicker();
       simpleTickerShow();
