@@ -16,7 +16,7 @@ PRELOADER
 const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 
-const loader = select('.loaderx');
+const loader = select('.loader');
 const loaderInner = select('.inner-loader');
 const progressBar = select('.progress');
 const loaderMask = select('.loader__mask');
@@ -243,7 +243,7 @@ function initLoader() {
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
 
-  const loader = select('.loaderx');
+  const loader = select('.loader');
   const loaderInner = select('.inner-loader');
 
   tlLoaderIn
