@@ -2,10 +2,8 @@
 
 
 gsap.registerPlugin(ScrollTrigger);
-console.log("ScrollTrigger Loaded!");
 
 let locoScroll;
-console.log("Locomotive Loaded");
 
 /*
 ================================================================================
@@ -649,152 +647,7 @@ gsap.utils.toArray(".rg__column").forEach(container => {
 });
 
 }
-/*
-================================================================================
-HOME - YOUTUBE
-================================================================================
-*/
-function homeYoutube() {
 
-/*
-================================================================================
-YOUTUBE WRAPPER
-================================================================================
-*/
-// --- 012 - OPEN FULLSCREEN VIDEO AND PLAY/PAUSE  --------------------------------------------------------------------------
-var trigger = document.querySelector('#play-button');
-var tl = gsap.timeline({ paused: true, reversed: true })
-//var tl_2 = gsap.timeline({ paused: true, reversed: true})
-
-tl.to('.video-bg', { 
- //yPercent:50,
- //color: '#ff0000',
- height: "100%", 
-  duration:1,
-  ease: "expo.inOut" 
-})
-
-
-/*tl_2.to(".turning", {
-  duration:.75,
-  ease: "elastic.out(1, 0.3)", 
-  rotation:180,
-  opacity:0, 
-  overwrite: true, 
-})
-*/
-trigger.addEventListener('click', function () {
-  toggleState(tl)
-  //toggleState(tl_2)
-})
-
-function toggleState(tl) {
-  tl.reversed() ? tl.play() : tl.reverse()
-}
-console.log("YT black background loaded!");
-/*function toggleState(tl_2) {
-  tl_2.reversed() ? tl_2.play() : tl_2.reverse()
-}
-*/
-/*
-================================================================================
-HOME - YOUTUBE CROP + FULLSCREEN bez YT pizdarija
-================================================================================
-*/
-// 2. This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement("script");
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var player;
-console.log("YT player loaded!");
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("player", {
-    host: "https://www.youtube.com",
-    /* no need to specify player 
-    size here since it is handled 
-    by the player-size div */
-    videoId: "3dz7mhndzoY",
-    playerVars: {
-      enablejsapi: 1,
-      playsinline: 1,
-      /*autoplay:1,
-      mute:0,*/
-
-      start: 0,
-      disablekb: 0
-    },
-    events: {
-      onStateChange: onPlayerStateChange,
-       // call this function when player is ready to use
-     'onReady': onPlayerReady
-    }
-  });
-}
-console.log("YT iFrame ready!");
-function onPlayerStateChange(event) {
-  console.log("player state: " + player.getPlayerState());
-}
-console.log("YT player state changed!");
-function updateVideoId() {
-  let videoId = document.getElementById("videoId").value;
-  player.loadVideoById(videoId, -1);
-}
-console.log("YT update video ID!");
-function stopVideo() {
-  player.stopVideo();
-}
-console.log("stop video!");
-/*
-================================================================================
-HOME - YOUTUBE - PLAY/STOP BUTTONS
-================================================================================
-*/
- // 3. The API calls this function when the video player is ready.
-    function onPlayerReady(event) {
-        $('#play-button').click(function(event){
-            player.playVideo();
-        });
-    }
-    console.log("video player ready!");
-    // 4. The API calls this function when the player's state changes.
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING) {
-            $('#play-button').click(function(event){
-            player.pauseVideo();
- 					   });
-        }
-        else {
-            $('#play-button').click(function(event){
-                player.playVideo();
-            });
-        } 
-    }
-    console.log("video player state changed!");
-/*
-================================================================================
-HOME - YOUTUBE - ODVOJENI PLAY STOP BOTUNI
-================================================================================
-*/
-/* 
-function onPlayerReady(event) {
-    // bind events
-    var playButton = document.getElementById("play-button");
-    playButton.addEventListener("click", function() {
-        player.playVideo();
-    });
-     var stopButton = document.getElementById("stop-button");
-    stopButton.addEventListener("click", function() {
-        player.stopVideo();
-    });
-}
-*/
- 
-}
 
 /*
 ================================================================================
@@ -1241,7 +1094,7 @@ function simpleTicker() {
     'INNOVATIVE LUXURY CAMPING DOMES',
     ];
     
-    $('#demo_3').t(
+    $('#ticker').t(
     tickr.join(x='<ins>2</ins><del>*</del>')+x,
     {speed:40,repeat:true,pause_on_click:true}
     );
