@@ -416,6 +416,7 @@ BARBA VIEWS
       homeProductHover();
       simpleTicker();
       simpleTickerShow();
+      homeAboutSlider();
      // document.getElementById('video').play();
       
 
@@ -1357,3 +1358,58 @@ console.log("menuHiddeeeeeeeee");
 }
 
 
+
+
+/*
+================================================================================
+HOME - ABOUT AKAPOWL SLIDER
+================================================================================
+*/
+function homeAboutSlider() {
+  gsap.set(".panel", { zIndex: (i, target, targets) => targets.length - i });
+
+  var images = gsap.utils.toArray('.panel:not(.purple)');
+  
+  images.forEach((image, i) => {
+     
+     var tl = gsap.timeline({
+       
+       scrollTrigger: {
+        trigger: ".black",
+        scroller: ".smooth-scroll",
+         
+         start: () => "top -" + (window.innerHeight * (i)),
+         
+         end: () => "+=" + window.innerHeight,
+         scrub: true,
+         toggleActions: "play none reverse none",
+         invalidateOnRefresh: true,     
+       }
+       
+     })
+     
+     tl
+     .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
+     ;
+     
+  });
+   
+   
+  
+  
+  ScrollTrigger.create({
+  
+        trigger: ".black",
+        scroller: ".smooth-scroll",
+      //markers: true,
+    
+      /*---*/
+      pin: '.p-wrap',
+    
+      start: () => "top top",
+      end: () => "+=" + ((images.length) * window.innerHeight),
+      invalidateOnRefresh: true,
+     
+  });
+
+}
