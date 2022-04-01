@@ -411,8 +411,8 @@ BARBA VIEWS
     /*   bigLogo();
       homeProductHover();
       simpleTicker();
-      simpleTickerShow();
-      homeAboutSlider(); */
+      simpleTickerShow(); */
+      homeAboutSlider();
      // document.getElementById('video').play();
       
 
