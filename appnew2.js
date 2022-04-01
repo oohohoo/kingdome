@@ -412,7 +412,7 @@ BARBA VIEWS
       homeProductHover();
       simpleTicker();
       simpleTickerShow(); */
-      homeAboutSlider();
+      /* homeAboutSlider(); */
      // document.getElementById('video').play();
       
 
