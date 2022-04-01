@@ -408,6 +408,7 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
+      homeFlickity();
     /*   bigLogo();
       homeProductHover();
       simpleTicker();
@@ -1262,5 +1263,64 @@ function homeAboutSlider() {
   });
 
   console.log("UČITAL SAM SEr");
+
+}
+
+
+/*
+================================================================================
+FLICKITY HOME PAGE
+================================================================================
+*/
+
+function homeFlickity() {
+  
+
+  let mainCarousel = ".tricks-slider";
+  let mainSlides = ".tricks-slider_slide";
+  let parallaxPercentage = 49;
+  
+  let flkty = new Flickity(mainCarousel, {
+    contain: true,
+    freeScroll: true,
+    percentPosition: true,
+    pageDots: false,
+    cellSelector: mainSlides,
+    cellAlign: "left",
+    resize: true,
+    selectedAttraction: 0.01,
+    dragThreshold: 1,
+    freeScrollFriction: 0.05
+  });
+  
+  flkty.on("scroll", function (progress) {
+    setImagePositions();
+    $(".progress_fill").css("width", `${progress * 100}%`);
+  });
+  
+  function setImagePositions() {
+    $(mainSlides).each(function (index) {
+      let targetElement = $(this);
+      let elementOffset =
+        targetElement.offset().left +
+        targetElement.width() -
+        $(mainCarousel).offset().left;
+      let parentWidth = $(mainCarousel).width() + targetElement.width();
+      let myProgress = elementOffset / parentWidth;
+      let slideProgress = parallaxPercentage * myProgress;
+      if (slideProgress > parallaxPercentage) {
+        slideProgress = parallaxPercentage;
+      } else if (slideProgress < 0) {
+        slideProgress = 0;
+      }
+      targetElement
+        .find(".image")
+        .css("transform", `translateX(-${slideProgress}%)`);
+    });
+  }
+  setImagePositions();
+
+  console.log("FLICKITY");
+  
 
 }
