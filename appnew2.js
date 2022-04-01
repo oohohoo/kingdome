@@ -408,11 +408,11 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-      bigLogo();
+    /*   bigLogo();
       homeProductHover();
       simpleTicker();
       simpleTickerShow();
-      homeAboutSlider();
+      homeAboutSlider(); */
      // document.getElementById('video').play();
       
 
@@ -420,21 +420,21 @@ BARBA VIEWS
     }},{
     namespace: 'products',
     beforeEnter(){
-      productsMainSwiper();
+     /*  productsMainSwiper();
       resetLogo();
-      simpleTickerHide();
+      simpleTickerHide(); */
     console.log("Products JS triggered!");
     }},{
       namespace: 'productlottie',
     beforeEnter(data) {
       //soloProductsLottie(container);
-      simpleTickerHide();
-      productsoloAccordion();
+      /* simpleTickerHide();
+      productsoloAccordion(); */
     console.log("Productlottie JS triggered!");
     }},{
     namespace: 'about',
     beforeEnter(data) {
-      simpleTickerHide();
+      /* simpleTickerHide(); */
     console.log("about JS triggered!");
     }},{
     namespace: 'conversation',
@@ -445,7 +445,7 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-      simpleTickerHide();
+      /* simpleTickerHide(); */
      // resetLogo();
     //  window.Webflow && window.Webflow.require('ix2').init();  
     //Webflow.require('ix2').init();
