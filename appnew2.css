@@ -518,7 +518,10 @@ FLICKITY
 ================================================================================
 */
 
-html { font-size: calc(0.625rem + 0.41666666666666663vw); }
-@media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
-@media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
-@media screen and (max-width:479px) { html { font-size: calc(-0.0020920502092050207rem + 3.3472803347280333vw); } }
+.flickity-viewport {
+	width: 100%;
+  overflow: visible !important;
+}
+.flickity-button {
+	display: none;
+}
