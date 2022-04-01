@@ -315,7 +315,7 @@ PRODUCTS - SWIPER CSS
 CONTACT - MULTILEVEL FORM
 ================================================================================
 */
-.w-input, .w-select {
+/* .w-input, .w-select {
   padding: 20px 0px;
   margin-bottom: 0px;
   font-size: 3.750em;
@@ -323,7 +323,7 @@ CONTACT - MULTILEVEL FORM
   border-left: #edeae4;
   border-right: #edeae4;
   border-top: #edeae4;
-  border-bottom: 1px solid #28282a!important;
+  border-bottom: 1px solid #28282a!important; */
 
 
 }
@@ -512,16 +512,3 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
 @media screen and (max-width:479px) { html { font-size: calc(-0.0020920502092050207rem + 3.3472803347280333vw); } }
 
 
-/*
-================================================================================
-FLICKITY
-================================================================================
-*/
-
-.flickity-viewport {
-	width: 100%;
-  overflow: visible !important;
-}
-.flickity-button {
-	display: none;
-}
