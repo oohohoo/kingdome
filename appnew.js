@@ -1366,9 +1366,9 @@ HOME - ABOUT AKAPOWL SLIDER
 ================================================================================
 */
 function homeAboutSlider() {
-  gsap.set(".panel", { zIndex: (i, target, targets) => targets.length - i });
+  gsap.set(".panel-two", { zIndex: (i, target, targets) => targets.length - i });
 
-  var images = gsap.utils.toArray('.panel:not(.purple)');
+  var images = gsap.utils.toArray('.panel-two:not(.purple)');
   
   images.forEach((image, i) => {
      
@@ -1412,6 +1412,6 @@ function homeAboutSlider() {
      
   });
 
-  console.log("UČITAL SAM SE");
+  console.log("UČITAL SAM SEr");
 
 }
