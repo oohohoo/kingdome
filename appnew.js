@@ -1412,4 +1412,6 @@ function homeAboutSlider() {
      
   });
 
+  console.log("UČITAL SAM SE");
+
 }
