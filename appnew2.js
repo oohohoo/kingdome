@@ -222,7 +222,7 @@ LOGO ANIMACIJA
 {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, "<") */
 .to("#di", {
   morphSVG: {shape: "#sq"},
-  duration: 0.8, repeat: -1, yoyo: true, repeatDelay: 1, ease: 'power3.inOut'});
+  duration: 0.8, repeat: -1, yoyo: true, repeatDelay: 1, ease: 'power3.inOut'})
 
   .to(".header-znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
   .to("#ticker",  {autoAlpha:0, duration: 0.1});
