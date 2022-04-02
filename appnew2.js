@@ -203,8 +203,7 @@ LOGO ANIMACIJA
 
 
 
-
-  gsap.timeline({defaults: {duration: 0.6,ease: 'power1.inOut'} },{
+  gsap.timeline({
     scrollTrigger: {
        scroller: ".smooth-scroll",
         trigger: "#start",
