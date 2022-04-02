@@ -14,7 +14,7 @@ html {
 /* RANDOM*/
 
 body {
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-out 1s;
 }
 
 /*KILL BLUE TAP ON MOBILE*/
