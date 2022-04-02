@@ -201,7 +201,7 @@ SCROLLTRIGGER TEST
     scrollTrigger: {
        scroller: ".smooth-scroll",
         trigger: "#start",
-        markers: true,
+        /* markers: true, */
         start: "top top", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
         toggleActions: 'play reverse play reverse',
@@ -653,6 +653,70 @@ FUNCTION MODULES
 ================================================================================
 */
 
+
+/*
+================================================================================
+LOGO RESET - to small
+================================================================================
+*/
+
+function resetLogo() {
+
+  let tlfix = gsap.timeline();
+
+    
+/*   tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
+    .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0) */
+      
+   
+
+  //  tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 40%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
+  tlfix.fromTo(".header_redflag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
+  {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 85% 100%, 0% 100%)"})
+
+ //.to(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
+    .to(".header-znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
+
+    console.log("logoReseted");
+
+  /*
+  gsap.to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
+  gsap.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
+*/
+
+}
+
+/*
+================================================================================
+LOGO RESET - to small
+================================================================================
+*/
+
+function bigLogo() {
+  
+
+  let tl = gsap.timeline();
+
+  tl.to(".header_redflag",  {width:'8.5em', height:'12em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
+  .fromTo(".header_redflag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
+  {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, "<")
+  .to(".header-znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<")
+
+/* 
+ 
+  gsap.to(".red-flag",  {width:'8.5em', height:'10em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
+  gsap.to(".znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<") */
+
+console.log("logoReseted");
+
+}
+
+
+
+
+
+
+/****************** OOOLLLLLDDDDD**********************************************************************/
 /*
 ================================================================================
 HOME - PRODUCT HOVER 
@@ -1110,7 +1174,7 @@ function killandinitWebflow() {
 
 /*
 ================================================================================
-KILL OLD SCROLLTRIGGERS
+INIT VIDEO
 ================================================================================
 */
 function initVideo() {
@@ -1174,62 +1238,7 @@ function simpleTickerShow() {
 
 }
 
-/*
-================================================================================
-LOGO RESET - to small
-================================================================================
-*/
 
-function resetLogo() {
-
-  let tlfix = gsap.timeline();
-
-    
-/*   tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
-    .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0) */
-      
-   
-
-  //  tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 40%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
-  tlfix.fromTo(".header_redflag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
-  {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 85% 100%, 0% 100%)"})
-
- //.to(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
-    .to(".header-znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
-
-    console.log("logoReseted");
-
-  /*
-  gsap.to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
-  gsap.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
-*/
-
-}
-
-/*
-================================================================================
-LOGO RESET - to small
-================================================================================
-*/
-
-function bigLogo() {
-  
-
-  let tl = gsap.timeline();
-
-  tl.to(".header_redflag",  {width:'8.5em', height:'12em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
-  .fromTo(".header_redflag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
-  {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, "<")
-  .to(".header-znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<")
-
-/* 
- 
-  gsap.to(".red-flag",  {width:'8.5em', height:'10em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
-  gsap.to(".znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<") */
-
-console.log("logoReseted");
-
-}
 
 /*
 ================================================================================
