@@ -218,7 +218,7 @@ LOGO ANIMACIJA
   })
 
   .to("#di",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
-  .to("#di", {morphSVG: {shape: "#sq"},duration: 0.8}, "<")
+  .to("#di", {morphSVG: {shape: "#sq"},duration: 0.5}, "<")
 
  /*  .to("#di", {morphSVG: {shape: "#sq"},duration: 0.8, repeat: -1, yoyo: true, repeatDelay: 1}, "<") */
   /*
