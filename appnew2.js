@@ -1,7 +1,7 @@
 // v.2022 
 
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
 let locoScroll;
 
@@ -201,15 +201,12 @@ LOGO ANIMACIJA
 ================================================================================
 */
 
-
-
-
   gsap.timeline({
     scrollTrigger: {
        scroller: ".smooth-scroll",
         trigger: "#start",
         /* markers: true, */
-        start: "top 100px", // when the top of the trigger hits the top of the viewport
+        start: "top top", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
         toggleActions: 'play reverse play reverse',
         invalidateOnRefresh: true,
@@ -219,15 +216,36 @@ LOGO ANIMACIJA
 
   .to(".header_redflag",  {width:'4rem', height:'4rem', top: '-1.25rem', duration: 0.7, ease: "expo.inOut", }, 0)
   .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.7, ease: "expo.inOut"}, 0)
-
- /*  .to("#di", {morphSVG: {shape: "#sq"},duration: 0.8, repeat: -1, yoyo: true, repeatDelay: 1}, "<") */
-  /*
-  .fromTo(".header_redflag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, 
-{duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, "<") */
-
-
   .to(".header-znak", { scale: 0.6, duration: 0.7, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
+
+
+
+
+/*
+================================================================================
+KUPOLA DRAWSVG
+================================================================================
+*/
+
+gsap.timeline({
+  scrollTrigger: {
+     scroller: ".smooth-scroll",
+      trigger: "#kingdomeare",
+      markers: true,
+      start: "-75% top", // when the top of the trigger hits the top of the viewport
+      end: "bottom 0%", // end after scrolling 500px beyond the start
+      scrub: true,
+      pin:true,
+      toggleActions: 'play reverse play reverse',
+      // invalidateOnRefresh: true,
+  }
+});
+
+tl.from("#plane path, #plane rect", {
+	drawSVG:0, delay:1, duration:1, ease:"power1.in", //stagger:0.1
+})
+
 
 
   /*
