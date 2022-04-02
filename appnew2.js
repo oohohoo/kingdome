@@ -226,7 +226,7 @@ LOGO ANIMACIJA
 {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, "<") */
 
 
-  .to(".header-znak", { scale: 0.6, duration: 0.7, transformOrigin: 'center center', yPercent: -55, ease:'expo.in'}, 0)
+  .to(".header-znak", { scale: 0.6, duration: 0.7, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
 
 
