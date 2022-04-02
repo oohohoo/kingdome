@@ -204,7 +204,7 @@ LOGO ANIMACIJA
 
 
 
-  gsap.timeline({defaults: {duration: 5, ease: 'power1.inOut'} }{
+  gsap.timeline({defaults: {duration: 0.6,ease: 'power1.inOut'} },{
     scrollTrigger: {
        scroller: ".smooth-scroll",
         trigger: "#start",
