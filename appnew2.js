@@ -231,7 +231,7 @@ KUPOLA DRAWSVG
 const tl = gsap.timeline({
   scrollTrigger: {
      scroller: ".smooth-scroll",
-      trigger: ".section-home-kingdome-are",
+      trigger: "#kingdomeare",
       markers: true,
       start: "top 50%", // when the top of the trigger hits the top of the viewport
       end: "bottom 0%", // end after scrolling 500px beyond the start
