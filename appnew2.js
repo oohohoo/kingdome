@@ -179,7 +179,7 @@ window.addEventListener('resize', function(){
 SCROLLTRIGGER TEST
 ================================================================================
 */
-  gsap.utils.toArray('*').forEach((el, i) => {
+  gsap.utils.toArray('.block1').forEach((el, i) => {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
