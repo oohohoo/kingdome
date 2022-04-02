@@ -306,13 +306,12 @@ console.log("Locoscroll+Scrolltrigger loaded after preloader done");
 /* 
   ScrollTrigger.refresh(true); // ScrollTrigger Refresh
   console.log("scrolltrigger refreshed AFTER all script load"); */
-  /* $(document).ready(function() { */
+   $(document).ready(function() { 
   setTimeout(() => {
-     locoScroll.update(); 
     ScrollTrigger.refresh(true);
-    console.log("Locoscrollupdated + SCROLLTRIGGER NAKON 5 SEKUNDI");
+    console.log("Locoscrollupdated + SCROLLTRIGGER NAKON 10000 SEKUNDI");
   }, 1000);
-
+}); 
 /*
 ================================================================================
 BARBA PAGE TRANSITION IN
