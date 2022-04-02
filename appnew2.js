@@ -311,7 +311,7 @@ console.log("Locoscroll+Scrolltrigger loaded after preloader done");
    /*  locoScroll.update(); */
     ScrollTrigger.refresh(true);
     console.log("Locoscrollupdated + SCROLLTRIGGER NAKON 5 SEKUNDI");
-  }, 200);
+  }, 1000);
 
 /*
 ================================================================================
