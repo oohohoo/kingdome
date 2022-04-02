@@ -240,7 +240,7 @@ gsap.timeline({
    /*    toggleActions: 'play reverse play reverse', */
       // invalidateOnRefresh: true,
   }
-});
+})
 
 .from("#plane path", {
 	drawSVG:0, delay:1, repeat: -1, yoyo: true, duration:1, ease:"power1.in", stagger:0.1
