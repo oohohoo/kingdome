@@ -1,9 +1,12 @@
-// OVA VERZIJA RADI BARBA
+// v.2022 
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 let locoScroll;
+
+/*TURN OFF GSAP MESSAGES*/
+gsap.config({ nullTargetWarn: false });
 
 /*
 ================================================================================
