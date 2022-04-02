@@ -93,17 +93,19 @@ function initScroll(container) {
    locoScroll = new LocomotiveScroll({
     el: document.querySelector(".smooth-scroll"),
     smooth: true,
-    getDirection: true,
+    offset: [0, 0],
+    /* getDirection: true, */
     scrollFromAnywhere: true,
-    touchMultiplier: 4,
+    touchMultiplier: 3.0,
+    useKeyboard: true,
    // scrollbarContainer: document.querySelector('#primary'),
-    smartphone: {
-          smooth: true,
-      },
-      tablet: {
-          smooth: true,
-      
-      }
+   inertia: .75,  
+   smartphone: {
+     smooth: false,
+   },
+   tablet: {
+     smooth: false,
+   } 
   });
 
 // ovo je ubačeno naknadno
