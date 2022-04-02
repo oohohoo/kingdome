@@ -69,6 +69,22 @@ DEFINE ROOT VARIABLES / definiraj svoje
 
 /*
 ================================================================================
+TXT SELECT
+================================================================================
+*/
+::selection {
+  background: var(--text-dark-color);
+  color: var(--bcg-lightblue);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--text-dark-color);
+  color: var(--bcg-lightblue);
+}
+
+/*
+================================================================================
 LOCOMOTIVE SCROLL 4.0.6
 ================================================================================
 */
@@ -344,10 +360,19 @@ CONTACT - MULTILEVEL FORM
 
 /* } */
 /* remember to define focus styles! */
-:focus {
+/* :focus {
 outline: 0!important;
-}
+} */
 
+/*
+================================================================================
+KILL OUTLINE ON ALL
+================================================================================
+*/
+
+*:focus {
+  outline: none;
+}
 
 
 .w-form-formradioinput--inputType-custom.w--redirected-checked {
@@ -483,6 +508,15 @@ LOADER
   will-change: background-color;
   background-color: var(--bcg-fill-color);
   transition: background-color 0.3s linear;
+}
+
+/*
+================================================================================
+LINK COLOR
+================================================================================
+*/
+a {
+	color: inherit;
 }
 
 /*
