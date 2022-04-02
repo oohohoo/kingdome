@@ -308,7 +308,7 @@ console.log("Locoscroll+Scrolltrigger loaded after preloader done");
   console.log("scrolltrigger refreshed AFTER all script load"); */
   /* $(document).ready(function() { */
   setTimeout(() => {
-   /*  locoScroll.update(); */
+     locoScroll.update(); 
     ScrollTrigger.refresh(true);
     console.log("Locoscrollupdated + SCROLLTRIGGER NAKON 5 SEKUNDI");
   }, 1000);
