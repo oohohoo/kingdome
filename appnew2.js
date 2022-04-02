@@ -235,14 +235,14 @@ const tl = gsap.timeline({
       markers: true,
       start: "top 50%", // when the top of the trigger hits the top of the viewport
       end: "bottom 0%", // end after scrolling 500px beyond the start
-      scrub: true,
+     /*  scrub: true, */
       /* pin:true, */
-      toggleActions: 'play reverse play reverse',
+   /*    toggleActions: 'play reverse play reverse', */
       // invalidateOnRefresh: true,
   }
 });
 
-tl.from("#plane path, #plane rect", {
+tl.from("#plane path, {
 	drawSVG:0, delay:1, duration:1, ease:"power1.in", stagger:0.1
 })
 
