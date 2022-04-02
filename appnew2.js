@@ -228,6 +228,7 @@ KUPOLA DRAWSVG
 ================================================================================
 */
 
+
 gsap.timeline({
   scrollTrigger: {
      scroller: ".smooth-scroll",
@@ -242,9 +243,12 @@ gsap.timeline({
   }
 })
 
+.set("#podloga", {autoAlpha:0});
+
 .from("#plane path", {
-	drawSVG:0, delay:1, repeat: -1, yoyo: true, duration:1, ease:"power1.in", stagger:0.1
-})
+	drawSVG:0, delay:1, repeat: -1, yoyo: true, duration:1, ease:"power1.in", stagger:0.1})
+.to("#podloga", {
+	autoAlpha:1})
 
 
 
