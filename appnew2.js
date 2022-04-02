@@ -306,12 +306,12 @@ console.log("Locoscroll+Scrolltrigger loaded after preloader done");
 /* 
   ScrollTrigger.refresh(true); // ScrollTrigger Refresh
   console.log("scrolltrigger refreshed AFTER all script load"); */
-   $(document).ready(function() { 
+   /* $(document).ready(function() {  */
   setTimeout(() => {
     ScrollTrigger.refresh(true);
     console.log("Locoscrollupdated + SCROLLTRIGGER NAKON 10000 SEKUNDI");
   }, 1000);
-}); 
+/* }); */ 
 /*
 ================================================================================
 BARBA PAGE TRANSITION IN
@@ -377,7 +377,32 @@ function initPageTransitions() {
     select('html').classList.remove('is-transitioning');
   });
 
-  // scroll to the top of the page
+  /* OVO JE UBAČENO*/
+  barba.hooks.after((data) => {
+    let js = data.next.container.querySelectorAll('main script');
+    if(js != null){
+            js.forEach((item) => {
+                console.log(js)
+                eval(item.innerHTML);
+            });
+    }
+   console.log("SCRIPTS EVALUATED NO PROBLEM");
+});
+
+
+barba.hooks.afterLeave((data) => {
+  // Set <body> classes for "next" page
+  var nextHtml = data.next.html;
+  var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
+  var bodyClasses = $(response).filter('notbody').attr('class')
+  $("body").attr("class", bodyClasses);
+  //  console.log("BODY CLASSES UPDATED");
+});
+
+
+
+
+ // scroll to the top of the page
   barba.hooks.enter(() => {
         window.scrollTo(0, 0);
         //strigtest();
@@ -387,13 +412,15 @@ function initPageTransitions() {
   barba.hooks.beforeLeave(() => {
     locoScroll.destroy();
     console.log("Locomotive scroll destroyed!");
-    killScrollTriggers();
+   /*  killScrollTriggers(); */
+   if (ScrollTrigger.getAll().length > 0) {
+    ScrollTrigger.getAll().forEach((trigger) => {
+        trigger.kill()
+       // console.log("scrolltrigger killed...");
+    });
+}
     console.log("All ScrollTriggers destroyed!");
-   
-    /*window.Webflow && window.Webflow.destroy();
-    window.Webflow && window.Webflow.ready();
-    window.Webflow && window.Webflow.require('ix2').init();          
-    console.log("webflow destroy ready init");*/
+ 
   });
   //init scrolltrigger
    barba.hooks.afterEnter(() => {
@@ -420,6 +447,7 @@ BARBA INIT
 */
 
 barba.init({
+  timeout: 7000,
   debug: true,
   prefetch: true,
 /*
@@ -492,16 +520,11 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-    
-        homeProductHover();
-        
-        //homeYoutube();
+       homeProductHover();
+       //homeYoutube();
        //logoAnimacija();
        fullscreenMenu();
-      
-      
-      
-        //homeanimations();
+       //homeanimations();
         console.log("ONCE + logoanimacija1");
      },
 
