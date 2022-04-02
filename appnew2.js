@@ -217,7 +217,7 @@ LOGO ANIMACIJA
     }
   })
 
-  .to(".header_redflag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
+  .to("#di",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
   .to("#di", {morphSVG: {shape: "#sq"},duration: 0.8, repeat: -1, yoyo: true, repeatDelay: 1, ease: 'power3.inOut'})
   /*
   .fromTo(".header_redflag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, 
