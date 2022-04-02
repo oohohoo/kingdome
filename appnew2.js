@@ -179,7 +179,7 @@ window.addEventListener('resize', function(){
 SCROLLTRIGGER TEST
 ================================================================================
 */
-  gsap.utils.toArray('.block1').forEach((el, i) => {
+  gsap.utils.toArray('*').forEach((el, i) => {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
@@ -195,9 +195,11 @@ SCROLLTRIGGER TEST
   });
   console.log("Scrolltrigger animacija loaded");
 
-
-  // SCROLLTRIGGER TEST 2 - LOGO ANIMACIJA TEST TEST
-
+/*
+================================================================================
+LOGO ANIMACIJA
+================================================================================
+*/
   gsap.timeline({
     scrollTrigger: {
        scroller: ".smooth-scroll",
