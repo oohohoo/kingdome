@@ -243,7 +243,7 @@ const tl = gsap.timeline({
 });
 
 tl.from("#plane path, #plane rect", {
-	drawSVG:0, delay:1, duration:1, ease:"power1.in", //stagger:0.1
+	drawSVG:0, delay:1, duration:1, ease:"power1.in", stagger:0.1
 })
 
 
