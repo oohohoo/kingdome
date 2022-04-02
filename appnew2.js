@@ -217,7 +217,7 @@ LOGO ANIMACIJA
     }
   })
 
-  .to("#di",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
+  .to(".header_redflag",  {width:'4rem', height:'4rem', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
   .to("#di", {morphSVG: {shape: "#sq"},duration: 0.8}, "<")
 
  /*  .to("#di", {morphSVG: {shape: "#sq"},duration: 0.8, repeat: -1, yoyo: true, repeatDelay: 1}, "<") */
@@ -227,7 +227,7 @@ LOGO ANIMACIJA
 
 
   .to(".header-znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
-  .to("#ticker",  {autoAlpha:0, duration: 0.1});
+/*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
 
 
   /*
