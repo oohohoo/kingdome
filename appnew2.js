@@ -186,6 +186,7 @@ SCROLLTRIGGER TEST
        // markers: true,
         scroller: ".smooth-scroll",
         start: 'top bottom',
+        toggleActions: 'play reverse play reverse',
         end: "top top",
       },
       y: 100,
