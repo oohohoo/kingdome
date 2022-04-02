@@ -8,9 +8,24 @@ body,
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+ /*  overflow: hidden; */
 }
 
+/* RANDOM*/
+
+body {
+  transition: 0.3s ease-out;
+}
+
+/*KILL BLUE TAP ON MOBILE*/
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.smooth-scroll {
+  overflow-y: hidden!important;
+}
 
 /*
 ================================================================================
@@ -327,7 +342,7 @@ CONTACT - MULTILEVEL FORM
   border-bottom: 1px solid #28282a!important; */
 
 
-}
+/* } */
 /* remember to define focus styles! */
 :focus {
 outline: 0!important;
