@@ -228,7 +228,7 @@ KUPOLA DRAWSVG
 ================================================================================
 */
 
-const tl = gsap.timeline({
+gsap.timeline({
   scrollTrigger: {
      scroller: ".smooth-scroll",
       trigger: "#kingdomeare",
@@ -242,7 +242,7 @@ const tl = gsap.timeline({
   }
 });
 
-tl.from("#plane path", {
+.from("#plane path", {
 	drawSVG:0, delay:1, repeat: -1, yoyo: true, duration:1, ease:"power1.in", stagger:0.1
 })
 
