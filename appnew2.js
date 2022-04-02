@@ -205,7 +205,7 @@ LOGO ANIMACIJA
     scrollTrigger: {
        scroller: ".smooth-scroll",
         trigger: "#start",
-        markers: true,
+        /* markers: true, */
         start: "top top", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
         toggleActions: 'play reverse play reverse',
@@ -231,7 +231,7 @@ KUPOLA DRAWSVG
 gsap.timeline({
   scrollTrigger: {
      scroller: ".smooth-scroll",
-      trigger: "#kingdomeare",
+     trigger: "#start",
       /* markers: true, */
       start: "top top", // when the top of the trigger hits the top of the viewport
       end: "bottom 0%", // end after scrolling 500px beyond the start
