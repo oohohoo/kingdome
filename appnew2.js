@@ -209,7 +209,7 @@ LOGO ANIMACIJA
        scroller: ".smooth-scroll",
         trigger: "#start",
         /* markers: true, */
-        start: "top 5%", // when the top of the trigger hits the top of the viewport
+        start: "top top", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
         toggleActions: 'play reverse play reverse',
         invalidateOnRefresh: true,
