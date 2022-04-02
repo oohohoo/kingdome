@@ -228,7 +228,7 @@ KUPOLA DRAWSVG
 ================================================================================
 */
 
-gsap.timeline({
+const tl = gsap.timeline({
   scrollTrigger: {
      scroller: ".smooth-scroll",
       trigger: "#kingdomeare",
