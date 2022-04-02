@@ -166,6 +166,14 @@ window.addEventListener('resize', function(){
  console.log("RESIZE ST+LS");
 });
 
+
+
+
+
+
+
+
+
 /*
 ================================================================================
 SCROLLTRIGGER TEST
@@ -294,6 +302,16 @@ console.log("Locoscroll+Scrolltrigger loaded after preloader done");
   //initHeaderTilt();
 
 }
+
+/* 
+  ScrollTrigger.refresh(true); // ScrollTrigger Refresh
+  console.log("scrolltrigger refreshed AFTER all script load"); */
+  /* $(document).ready(function() { */
+  setTimeout(() => {
+   /*  locoScroll.update(); */
+    ScrollTrigger.refresh(true);
+    console.log("Locoscrollupdated + SCROLLTRIGGER NAKON 5 SEKUNDI");
+  }, 200);
 
 /*
 ================================================================================
