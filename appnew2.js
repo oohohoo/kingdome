@@ -324,7 +324,6 @@ POPUP - WIZDOME
 ================================================================================
 */
 
- /* gsap.set(".zero", {autoAlpha:1}) // fouc */ 
 
 gsap.from(".actual-message", 0.4, {
   marginTop: "10%",
@@ -334,7 +333,7 @@ gsap.from(".actual-message", 0.4, {
 });
 gsap.to(".popup", 0.4, {
   autoAlpha: 1,
-  delay: 3
+  delay: 10
 });
 
 $(".popup-close, .popup").click(function() {
