@@ -328,7 +328,7 @@ function addTimeline(project, index) {
       trigger: ".img__wrapper",
       scroller: ".smooth-scroll",
       scrub: true,
-      pin: false,
+      pin: true,
     }
   })
   .from(image, {
