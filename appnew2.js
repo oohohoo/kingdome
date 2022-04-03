@@ -398,19 +398,19 @@ UNDERLINE GSAP
 ================================================================================
 */
 
-const containertab = document.querySelector(".containertab");
+const containertab = document.querySelector(".link-wr");
 let shouldPlay = true;
 
 const lineAnim = gsap.timeline({
   paused: true,
   defaults: {
     duration: 0.3,
-    ease: "power1.inOut"
+    ease: "expo.inOut"
   }
 })
-.from(".underlinetab", { xPercent: -100 })
+.from(".link-underline", { xPercent: -100 })
 .call(() => !shouldPlay && lineAnim.pause())
-.to(".underlinetab", { xPercent: 200 })
+.to(".link-underline", { xPercent: 200 })
 
 
 containertab.addEventListener("mouseenter", () => {
