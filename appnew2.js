@@ -304,6 +304,14 @@ ScrollTrigger.refresh();
   console.log("Scrolltrigger refreshed after all!");
 
 
+/*   document.addEventListener('load', function(){
+    locoScroll.update();
+}); */
+
+imagesLoaded("#main", { background: true }, function () {
+  locoScroll.update();
+  console.log("IMAGES LOADED - LOCOSCROLL UPDATED");
+  });
 
 
 
