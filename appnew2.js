@@ -298,10 +298,10 @@ btns.forEach((btn) =>{
   tl.to(bar, {xPercent:0})
     .addPause("exit")
   exitTime = tl.duration()
-  tl.to(bar, {x:'100%'})
-  tl.to(arrow, {x:'5%'})
+  tl.to(bar, {x:'100%'}, 0)
+  tl.to(arrow, {x:'1rem'}, 0)
     
- 
+ , 0
   
   btn.addEventListener("mouseenter", () => {
     if(tl.time() < exitTime){
@@ -322,59 +322,6 @@ btns.forEach((btn) =>{
 
 /**/ 
 
-
-gsap.set("span", {
-  visibility: "visible", 
-  xPercent: -100
-});
-
-let links = gsap.utils.toArray('.link_item'); 
-
-links.forEach(function(el) { 
-  
-  let span = el.querySelector("span"); 
-  let animation = null;
-  let isHovering = false;
-  
-  el.addEventListener("mouseenter", onEnter);  
-  el.addEventListener("mouseleave", onLeave);
-  
-  function onEnter() {
-    
-    isHovering = true;
-    
-    if (!animation) {      
-      animation = gsap.fromTo(span, { xPercent: -100 }, {
-        xPercent: 0,
-        ease: "power4.inOut",
-        onComplete: () => {
-          animation = null;
-          if (!isHovering) {            
-            onLeave();
-          }
-        }
-      });
-    }    
-  }
-  
-  function onLeave() {
-    
-    isHovering = false;
-    
-    if (!animation) {            
-      animation = gsap.to(span, {
-        xPercent: 100,
-        ease: "power4.inOut",
-         onComplete: () => {
-           animation = null;
-           if (isHovering) {
-             onEnter();
-           }
-         }
-      });
-    }    
-  }  
-});
 
 
 
