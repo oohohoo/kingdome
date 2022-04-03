@@ -265,7 +265,7 @@ ScrollTrigger.create({
   start: "top 75%",
   end: "bottom -100%",
   scroller: ".smooth-scroll",
-  scrub:true;
+  scrub: true,
   /* markers: true, */
   onEnter: () => action.duration(1).play(),
   onLeave: () => action.pause(0),
