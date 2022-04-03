@@ -91,7 +91,6 @@ MAIN JS + LOCOMOTIVE SCROLL + SCROLL TRIGGER PROXY
 */
 function initScroll(container) {
 
-  window.addEventListener("load", function(event) {
    locoScroll = new LocomotiveScroll({
     el: document.querySelector(".smooth-scroll"),
     smooth: true,
@@ -147,7 +146,7 @@ if ( scrollbar.length > 1 ) {
 }
 /* ===== */
 
-});
+
 
 /*
 ================================================================================
