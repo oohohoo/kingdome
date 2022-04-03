@@ -416,7 +416,7 @@ let workLinks = document.querySelectorAll(".link-inline");
 workLinks.forEach((link, index, value) => {
   
   let underline = link.querySelector(".underline");
-    link.tl = gsap.timeline({paused: true});
+  link.tl = gsap.timeline({paused: true});
   
   link.tl.fromTo(underline, {width: "0%", left: "0%",}, 
   {width: "100%", duration: 0.3, ease: "power1.out",});
