@@ -1,7 +1,8 @@
 // v.2022 
 
 
-gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+gsap.registerPlugin(SplitText);
 
 let locoScroll;
 
