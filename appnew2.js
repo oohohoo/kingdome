@@ -369,7 +369,7 @@ HOME - PRODUCT HOVER
         long = container.querySelector(".rg__long"),
         white = container.querySelector(".whiteback"),
   
-        tl = gsap.timeline({ defaults: { ease: "Power2.inOut", duration: 0.2}, 
+        tl = gsap.timeline({ defaults: { ease: "expo.inOut", duration: 0.5}, 
         paused: true });
     
     
@@ -380,7 +380,7 @@ HOME - PRODUCT HOVER
       .to(name, { yPercent:-10, autoAlpha:0 }, 0)
      // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
       .to(long, {autoAlpha:1, yPercent:10}, 0)
-      .to(white, {yPercent:-50}, 0);
+      .to(white, {yPercent:-60}, 0);
       
        
     container.addEventListener("mouseenter", () => tl.play() );
