@@ -94,7 +94,7 @@ function initScroll(container) {
    locoScroll = new LocomotiveScroll({
     el: document.querySelector(".smooth-scroll"),
     smooth: true,
-     offset: [100%, -100%], 
+     offset: [0, 0], 
     /* getDirection: true, */
     scrollFromAnywhere: true,
     touchMultiplier: 3.0,
