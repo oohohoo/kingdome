@@ -263,7 +263,7 @@ const title = document.querySelector(".splitone"),
 ScrollTrigger.create({
   trigger: title,
   start: "top 75%",
-  end: "bottom bottom",
+  end: "bottom 25%",
   scroller: ".smooth-scroll",
   markers: true,
   onEnter: () => action.duration(1).play(),
@@ -275,7 +275,7 @@ ScrollTrigger.create({
                         
   
 var action = gsap.timeline({paused:true})
-.from(splittitle.chars, {duration: 0.6, y: 100, stagger: {amount: 1}, ease: "expo.inOut"});
+.from(splittitle.chars, {duration: 1, y: 100, stagger: {amount: 1}, ease: "expo.inOut"});
 
 
 
