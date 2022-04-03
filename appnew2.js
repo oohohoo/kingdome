@@ -175,8 +175,7 @@ ScrollTrigger.defaults( {
 });
 
 
-gsap.to(".zero", {autoAlpha:1}) // fouc
-console.log("AUTOALPHA 1");
+
 
 /*
 ================================================================================
@@ -325,6 +324,7 @@ POPUP - WIZDOME
 ================================================================================
 */
 
+gsap.set(".zero", {autoAlpha:0}) // fouc
 
 gsap.from(".actual-message", 0.4, {
   marginTop: "10%",
@@ -332,8 +332,8 @@ gsap.from(".actual-message", 0.4, {
   ease: Back.easeOut,
   delay: 1.5
 });
-gsap.from(".popup", 0.4, {
-  autoAlpha: 0,
+gsap.to(".popup", 0.4, {
+  autoAlpha: 1,
   delay: 3
 });
 
@@ -353,7 +353,8 @@ $(".popup-close, .popup").click(function() {
 /**/ 
 
 
-
+gsap.to(".zero", {autoAlpha:1}) // fouc
+console.log("AUTOALPHA 1");
 
 
 
