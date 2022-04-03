@@ -263,7 +263,7 @@ const title = document.querySelector(".splitone"),
 ScrollTrigger.create({
   trigger: title,
   start: "top 75%",
-  end: "bottom bottom",
+  end: "bottom -30%",
   scroller: ".smooth-scroll",
   /* markers: true, */
   onEnter: () => action.duration(1).play(),
