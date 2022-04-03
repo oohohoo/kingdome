@@ -380,7 +380,7 @@ HOME - PRODUCT HOVER
       .to(name, { yPercent:-10, autoAlpha:0 }, 0)
      // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
       .to(long, {autoAlpha:1, yPercent:10}, 0)
-      .to(white, {yPercent:-30}, 0);
+      .to(white, {yPercent:-40}, 0);
       
        
     container.addEventListener("mouseenter", () => tl.play() );
