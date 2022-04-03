@@ -177,7 +177,7 @@ window.addEventListener('resize', function(){
 
 /*
 ================================================================================
-SCROLLTRIGGER TEST
+ALL - FADE IN ON ENTER
 ================================================================================
 */
   gsap.utils.toArray('.block1').forEach((el, i) => {
@@ -198,7 +198,7 @@ SCROLLTRIGGER TEST
 
 /*
 ================================================================================
-LOGO ANIMACIJA
+HOME - LOGO ANIMACIJA
 ================================================================================
 */
 
@@ -225,7 +225,7 @@ LOGO ANIMACIJA
 
 /*
 ================================================================================
-KUPOLA DRAWSVG
+HOME - KUPOLA DRAWSVG
 ================================================================================
 */
 
@@ -253,7 +253,7 @@ gsap.timeline({
 
 /*
 ================================================================================
-BIG KINGDOME SPLITTXT
+HOME - BIG KINGDOME SPLITTXT
 ================================================================================
 */
 
@@ -263,7 +263,7 @@ const title = document.querySelector(".splitone"),
 ScrollTrigger.create({
   trigger: title,
   start: "top 75%",
-  end: "bottom 60%",
+  end: "bottom -100%",
   scroller: ".smooth-scroll",
    /* markers: true, */
   onEnter: () => action.duration(1).play(),
