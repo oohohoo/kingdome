@@ -373,7 +373,7 @@ HOME - PRODUCT HOVER
         paused: true });
     
     
-    tl.to(dome, { yPercent: -8, autoAlpha:0 })
+    tl.to(dome, { yPercent: 100, autoAlpha:0 })
     
   // .to(wrap, { backgroundColor:"#B6FA00" }, 0)
       //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
