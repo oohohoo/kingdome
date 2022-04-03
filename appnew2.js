@@ -399,7 +399,7 @@ UNDERLINE GSAP
 */
 
 
-gsap.utils.toArray(".footer_nav-item").forEach(container => {
+gsap.utils.toArray(".link-wrapper").forEach(container => {
   let shouldPlay = true;
    
   const lineAnim = gsap.timeline({
@@ -425,9 +425,6 @@ container.addEventListener("mouseleave", () => {
   lineAnim.play();
 });
 
-
-  container.addEventListener("mouseenter", () => tl.play() );
-  container.addEventListener("mouseleave", () => tl.reverse() );
 });
 
 
