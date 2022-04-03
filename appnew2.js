@@ -284,11 +284,11 @@ HOME - PARALLAX PANEL
 ================================================================================
 */
 
-const title = document.querySelector(".splitone"),
+const parapanel = document.querySelector(".splitone"),
       splittitle = new SplitText(".splitone");
 
 ScrollTrigger.create({
-  trigger: title,
+  trigger: parapanel,
   start: "top 75%",
   end: "bottom top",
   /* scroller: ".smooth-scroll", */
