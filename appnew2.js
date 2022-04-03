@@ -257,19 +257,19 @@ BIG KINGDOME SPLITTXT
 ================================================================================
 */
 
-const title = document.querySelector("#splitone"),
-      splittitle = new SplitText("#splitone");
+const title = document.querySelector(".splitone"),
+      splittitle = new SplitText(".splitone");
 
 ScrollTrigger.create({
   trigger: title,
   start: "top 75%",
   end: "bottom 25%",
   markers: true,
-  onEnter: () => action.duration(1).play(),
+  onEnter: () => action.play(),
   onLeave: () => action.pause(0),
   onEnterBack: () => action.duration(0.5).play(0),
-  onLeaveBack: () => action.pause(0),
-  toggleActions: 'play reverse play reverse'
+  onLeaveBack: () => action.pause(0)
+ /*  toggleActions: 'play reverse play reverse' */
 });
                         
   
