@@ -270,12 +270,12 @@ ScrollTrigger.create({
   onLeave: () => action.pause(0),
   onEnterBack: () => action.duration(0.5).play(0),
   onLeaveBack: () => action.pause(0),
-  toggleActions: 'play reverse play reverse'
+  toggleActions: "restart pause reverse pause",
 });
                         
   
 var action = gsap.timeline({paused:true})
-.from(splittitle.chars, {duration: 2, y: 100, stagger:0.1, ease: "expo.inOut"});
+.from(splittitle.chars, {duration: 2, y: 150, stagger:0.1, ease: "expo.inOut"});
 
 
 
