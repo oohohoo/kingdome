@@ -283,9 +283,9 @@ HOME - SECTION PARALLAX
 ================================================================================
 */
 
-gsap.to("#fullimageone",{
+gsap.to("#fullimageonexxx",{
   scrollTrigger:{
-  trigger: "#fullimageone",
+  trigger: "#fullimageonexxx",
   scroller: ".smooth-scroll",
   pin: true,
   pinSpacing: false,
