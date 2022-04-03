@@ -283,9 +283,9 @@ HOME - SECTION PARALLAX
 ================================================================================
 */
 
-gsap.to("#kingdomeare",{
+gsap.to("#start",{
   scrollTrigger:{
-  trigger: "#kingdomeare",
+  trigger: "#start",
   scroller: ".smooth-scroll",
   pin: true,
   pinSpacing: false,
