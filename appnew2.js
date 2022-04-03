@@ -315,12 +315,12 @@ HOME - PARALLAX PANEL SOLO FOR EACH
 
 /* NEW*/
 
-const projectTriggers = document.querySelectorAll(".img__wrapperXXX");
+const projectTriggers = document.querySelectorAll(".img__wrapper");
 
 projectTriggers.forEach(addTimeline);
 
 function addTimeline(project, index) {
-  const image = project.querySelector(".img__backgroundxxx");
+  const image = project.querySelector(".img__background");
   /* const text = project.querySelector(".project-text"); */
   
   const timeline = gsap.timeline({
