@@ -262,20 +262,20 @@ const title = document.querySelector(".splitone"),
 
 ScrollTrigger.create({
   trigger: title,
-  scroller: ".smooth-scroll",
   start: "top 75%",
   end: "bottom 25%",
+  scroller: ".smooth-scroll",
   markers: true,
-  onEnter: () => action.play(),
+  onEnter: () => action.duration(1).play(),
   onLeave: () => action.pause(0),
   onEnterBack: () => action.duration(0.5).play(0),
-  onLeaveBack: () => action.pause(0)
- /*  toggleActions: 'play reverse play reverse' */
+  onLeaveBack: () => action.pause(0),
+  toggleActions: 'play reverse play reverse'
 });
                         
   
 var action = gsap.timeline({paused:true})
-.from(splittitle.chars, {duration: 1.5, autoAlpha:0,  y: 100, stagger: {amount: 1}, ease: "back.out(1)"});
+.from(splittitle.chars, {duration: 0.6, y: 100, stagger: {amount: 1}, ease: "expo.inOut"});
 
 
 
