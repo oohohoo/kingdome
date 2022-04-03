@@ -274,7 +274,7 @@ ScrollTrigger.create({
                         
   
 var action = gsap.timeline({paused:true})
-.from(splittitle.chars, {y: 200, stagger:0.01, ease: "expo.inOut"});
+.from(splittitle.chars, {y: 220, stagger:0.01, ease: "expo.inOut"});
 
 
 /*
