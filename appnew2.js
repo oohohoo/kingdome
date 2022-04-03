@@ -170,6 +170,14 @@ window.addEventListener('resize', function(){
 
 
 
+/*
+================================================================================
+SCROLLTRIGGER DEFAULTS
+================================================================================
+*/
+ScrollTrigger.defaults( {
+  scroller: ".smooth-scroll",
+} );
 
 
 
@@ -185,7 +193,7 @@ ALL - FADE IN ON ENTER
       scrollTrigger: {
         trigger: el,
        // markers: true,
-        scroller: ".smooth-scroll",
+        /* scroller: ".smooth-scroll", */
         start: 'top bottom',
         toggleActions: 'play reverse play reverse',
         end: "top top",
@@ -204,7 +212,7 @@ HOME - LOGO ANIMACIJA
 
   gsap.timeline({
     scrollTrigger: {
-       scroller: ".smooth-scroll",
+       /* scroller: ".smooth-scroll", */
         trigger: "#start",
         /* markers: true, */
         start: "top top", // when the top of the trigger hits the top of the viewport
@@ -232,7 +240,7 @@ HOME - KUPOLA DRAWSVG
 
 gsap.timeline({
   scrollTrigger: {
-     scroller: ".smooth-scroll",
+     /* scroller: ".smooth-scroll", */
      trigger: "#kingdomeare",
       /* markers: true, */
       start: "top top", // when the top of the trigger hits the top of the viewport
@@ -264,7 +272,7 @@ ScrollTrigger.create({
   trigger: title,
   start: "top 75%",
   end: "bottom bottom",
-  scroller: ".smooth-scroll",
+  /* scroller: ".smooth-scroll", */
    /* markers: true, */
   onEnter: () => action.duration(1).play(),
   onLeave: () => action.pause(0),
