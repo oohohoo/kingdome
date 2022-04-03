@@ -296,10 +296,11 @@ btns.forEach((btn) =>{
   let arrow = btn.querySelector(".button-arrow")
   let exitTime = 0
   tl.to(bar, {xPercent:0})
+  tl.to(arrow, {x:'0.5rem'},"<")
     .addPause("exit")
   exitTime = tl.duration()
   tl.to(bar, {xPercent:100})
-  tl.to(arrow, {x:'0,5rem'},"<")
+
     
  
   
