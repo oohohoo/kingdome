@@ -387,7 +387,7 @@ HOME - PRODUCT HOVER
     container.addEventListener("mouseleave", () => tl.reverse() );
   });
 
-  console.log("ITEM HOVERRRRRRR!");
+ 
   
 /*   } */
 
@@ -398,29 +398,39 @@ UNDERLINE GSAP
 ================================================================================
 */
 
-const containertab = document.querySelector(".link-wrapper");
-let shouldPlay = true;
 
-const lineAnim = gsap.timeline({
-  paused: true,
-  defaults: {
-    duration: 0.3,
-    ease: "expo.inOut"
-  }
-})
-.from(".link-underline", { xPercent: -100 })
-.call(() => !shouldPlay && lineAnim.pause())
-.to(".link-underline", { xPercent: 200 })
+gsap.utils.toArray(".footer_nav-item").forEach(container => {
+  let shouldPlay = true;
+   
+  const lineAnim = gsap.timeline({
+    paused: true,
+    defaults: {
+      duration: 0.3,
+      ease: "expo.inOut"
+    }
+  })
+  .from(".link-underline", { xPercent: -100 })
+  .call(() => !shouldPlay && lineAnim.pause())
+  .to(".link-underline", { xPercent: 200 })
+  
+    
+     
 
-
-containertab.addEventListener("mouseenter", () => {
+container.addEventListener("mouseenter", () => {
   shouldPlay = false;
   lineAnim.restart();
 }); 
-containertab.addEventListener("mouseleave", () => {
+container.addEventListener("mouseleave", () => {
   shouldPlay = true;
   lineAnim.play();
 });
+
+
+  container.addEventListener("mouseenter", () => tl.play() );
+  container.addEventListener("mouseleave", () => tl.reverse() );
+});
+
+
 
 /**/ 
 
