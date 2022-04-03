@@ -100,11 +100,11 @@ ASPECT RATIOS WITH FALLBACK
 
 
 /* FULL IMAGE*/
-.aspect-full-image {
-  aspect-ratio: 4 / 3;
+.aspect-home-products {
+  aspect-ratio: 384 / 488;
 }
 
-@supports not (aspect-ratio: 4 / 3) {
+@supports not (aspect-ratio: 384 / 488) {
   .aspect-video::before {
     float: left;
     padding-top: 75%;

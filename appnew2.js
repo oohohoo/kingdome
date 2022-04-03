@@ -284,26 +284,21 @@ HOME - PARALLAX PANEL
 ================================================================================
 */
 
-const parapanel = document.querySelector(".splitone"),
-      splittitlexx = new SplitText(".splitone");
-
-ScrollTrigger.create({
-  trigger: parapanel,
-  start: "top 75%",
-  end: "bottom top",
-  /* scroller: ".smooth-scroll", */
-   /* markers: true, */
-  onEnter: () => action.duration(1).play(),
-  onLeave: () => action.pause(0),
-  onEnterBack: () => action.duration(0.5).play(0),
-  onLeaveBack: () => action.pause(0), 
-  toggleActions: "restart pause restart none",
-});
-                        
-  
-var action = gsap.timeline({paused:true})
-.from(splittitlexx.chars, {duration: 3, y: 200, stagger:0.2, ease: "expo.inOut"});
-
+var inparallax = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".img__wrapper",
+    scroller: ".smooth-scroll",
+    scrub: true,
+    pin: false,
+  },
+}); 
+inparallax.from(".img__background", {
+  yPercent: -80,
+  ease: "none",
+}).to(".img__background", {
+  yPercent: 80,
+  ease: "none",
+}); 
 
 
 
