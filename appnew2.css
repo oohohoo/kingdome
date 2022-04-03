@@ -579,10 +579,13 @@ BUTTON TXT HOVER
 
 .button-txt-new {
   color: var(--text-dark-color);
+  transition: color 0.5s ease;
 }
   
 .button-txt-new:hover {
   color: var(--text-color);
+  transition: color 0.5s ease;
+
 }
 
 /*
