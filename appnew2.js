@@ -280,8 +280,40 @@ var action = gsap.timeline({paused:true})
 
 
 
+/*
+================================================================================
+ALL - BOTTON HOVER
+================================================================================
+*/
 
+gsap.set(".bar", {scaleX:0, transformOrigin:"left center"})
+const btns = gsap.utils.toArray(".btn")
 
+btns.forEach((btn) =>{
+  let tl = gsap.timeline({paused:true, defaults:{duration:0.4, ease:"power1.in"}})
+  let bar = btn.querySelector(".bar")
+  let exitTime = 0
+  tl.to(bar, {scaleX:1})
+    .addPause("exit")
+  exitTime = tl.duration()
+  tl.to(bar, {x:'20vw'})
+  
+  btn.addEventListener("mouseenter", () => {
+    if(tl.time() < exitTime){
+      tl.play()
+    } else {
+      tl.restart()
+    }
+  })
+
+  btn.addEventListener("mouseleave", () => {
+    if(tl.time() < exitTime){
+      tl.reverse()
+    } else {
+      tl.play()
+    }
+  })
+})
 
 
 
