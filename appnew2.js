@@ -177,7 +177,7 @@ window.addEventListener('resize', function(){
 
 /*
 ================================================================================
-SCROLLTRIGGER TEST
+ALL - FADE IN ON ENTER
 ================================================================================
 */
   gsap.utils.toArray('.block1').forEach((el, i) => {
@@ -198,7 +198,7 @@ SCROLLTRIGGER TEST
 
 /*
 ================================================================================
-LOGO ANIMACIJA
+ALL - LOGO ANIMACIJA
 ================================================================================
 */
 
@@ -225,7 +225,7 @@ LOGO ANIMACIJA
 
 /*
 ================================================================================
-KUPOLA DRAWSVG
+HOME - KUPOLA DRAWSVG
 ================================================================================
 */
 
@@ -253,7 +253,7 @@ gsap.timeline({
 
 /*
 ================================================================================
-BIG KINGDOME SPLITTXT
+HOME - BIG KINGDOME SPLITTXT
 ================================================================================
 */
 
@@ -277,6 +277,21 @@ ScrollTrigger.create({
 var action = gsap.timeline({paused:true})
 .from(splittitle.chars, {duration: 3, y: 200, stagger:0.2, ease: "expo.inOut"});
 
+/*
+================================================================================
+HOME - SECTION PARALLAX
+================================================================================
+*/
+
+gsap.to("#kingdomeare",{
+  scrollTrigger:{
+  trigger: "#kingdomeare",
+  pin: true,
+  pinSpacing: false,
+  start: "top top",
+  end: "bottom top",
+  markers: true,    
+}});
 
 
 
