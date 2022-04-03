@@ -298,8 +298,10 @@ btns.forEach((btn) =>{
   tl.to(bar, {xPercent:0})
     .addPause("exit")
   exitTime = tl.duration()
-  tl.to(bar, {x:'100%'}, 0)
-  tl.to(arrow, {xPercent:10}, 0)
+  tl.to(bar, {x:'100%'})
+  tl.to(arrow, {x:'1rem'})
+    
+ 
   
   btn.addEventListener("mouseenter", () => {
     if(tl.time() < exitTime){
