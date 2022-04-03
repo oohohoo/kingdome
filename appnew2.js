@@ -333,7 +333,7 @@ gsap.from(".actual-message", 0.4, {
   delay: 1.5
 });
 gsap.to(".popup", 0.4, {
-  autoAlpha: 1,
+  opacity: 1,
   delay: 3
 });
 
