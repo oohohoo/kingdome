@@ -265,7 +265,7 @@ ScrollTrigger.create({
   start: "top 75%",
   end: "bottom 25%",
   scroller: ".smooth-scroll",
-  markers: true,
+  /* markers: true, */
   onEnter: () => action.duration(1).play(),
   onLeave: () => action.pause(0),
   onEnterBack: () => action.duration(0.5).play(0),
@@ -275,7 +275,7 @@ ScrollTrigger.create({
                         
   
 var action = gsap.timeline({paused:true})
-.from(splittitle.chars, {duration: 1, y: 100, stagger: {amount: 1}, ease: "expo.inOut"});
+.from(splittitle.chars, {duration: 2, y: 100, stagger:0.1, ease: "expo.inOut"});
 
 
 
