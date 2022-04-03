@@ -319,6 +319,38 @@ btns.forEach((btn) =>{
   })
 })
 
+/*
+================================================================================
+POPUP - WIZDOME
+================================================================================
+*/
+
+
+gsap.from(".actual-message", 0.4, {
+  marginTop: "10%",
+  opacity: 0,
+  ease: Back.easeOut,
+  delay: 1.5
+});
+
+gsap.from(".popup", 0.4, {
+  opacity: 0,
+  delay: 3
+});
+
+$(".popup-close, .popup").click(function() {
+  gsap.to(".actual-message", 0.2, {
+    marginTop: "10%",
+    opacity: 0,
+    ease: "ease-in"
+  });
+
+  gsap.to(".popup", 0.2, { 
+    opacity: 0
+  });
+}); 
+
+
 /**/ 
 
 
