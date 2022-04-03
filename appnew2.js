@@ -290,7 +290,7 @@ gsap.set(".bar", {scaleX:0, transformOrigin:"left center"})
 const btns = gsap.utils.toArray(".btn")
 
 btns.forEach((btn) =>{
-  let tl = gsap.timeline({paused:true, defaults:{duration:0.5, ease:"expo.inOut"}})
+  let tl = gsap.timeline({paused:true, defaults:{duration:0.3, ease:"expo.out"}})
   let bar = btn.querySelector(".bar")
   let exitTime = 0
   tl.to(bar, {scaleX:1})
