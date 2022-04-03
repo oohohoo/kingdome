@@ -279,7 +279,7 @@ var action = gsap.timeline({paused:true})
 
 /*
 ================================================================================
-HOME - PARALLAX PANEL
+HOME - PARALLAX PANEL - BIG FONT KINGDOME
 ================================================================================
 */
 
@@ -292,6 +292,29 @@ var inparallax = gsap.timeline({
   },
 }); 
 inparallax.from(".img__background", {
+  yPercent: -80,
+  ease: "none",
+}).to(".img__background", {
+  yPercent: 80,
+  ease: "none",
+}); 
+
+
+/*
+================================================================================
+HOME - PARALLAX PANEL SOLO FULL IMAGE
+================================================================================
+*/
+
+var inparallaxfull = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#fullimagetrigger",
+    scroller: ".smooth-scroll",
+    scrub: true,
+    pin: false,
+  },
+}); 
+inparallaxfull.from(".img__background", {
   yPercent: -80,
   ease: "none",
 }).to(".img__background", {
