@@ -229,14 +229,11 @@ HOME - LOGO ANIMACIJA
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
 
 
-
-
 /*
 ================================================================================
 HOME - KUPOLA DRAWSVG
 ================================================================================
 */
-
 
 gsap.timeline({
   scrollTrigger: {
@@ -271,7 +268,7 @@ const title = document.querySelector(".splitone"),
 ScrollTrigger.create({
   trigger: title,
   start: "top 75%",
-  end: "bottom bottom",
+  end: "bottom top",
   /* scroller: ".smooth-scroll", */
    /* markers: true, */
   onEnter: () => action.duration(1).play(),
