@@ -270,7 +270,7 @@ ScrollTrigger.create({
   onLeave: () => action.pause(0),
   onEnterBack: () => action.duration(0.5).play(0),
   onLeaveBack: () => action.pause(0), 
-  toggleActions: "restart pause reverse pause",
+  toggleActions: "restart pause restart none",
 });
                         
   
