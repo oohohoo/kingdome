@@ -356,10 +356,10 @@ HOME - PRODUCT HOVER
 /* function homeProductHover() { */
 
 
-  gsap.set(".rg__long", {autoAlpha:0, yPercent:-10});
+/*   gsap.set(".rg__long", {autoAlpha:0, yPercent:-10}); */
   
   
-  gsap.utils.toArray(".products-item").forEach(container => {
+  gsap.utils.toArray(".product-item").forEach(container => {
    
     let   dome = container.querySelector(".fake-king"),
     // wrap = container.querySelector(".rg__wrap"),
