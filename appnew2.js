@@ -287,6 +287,7 @@ ALL - BOTTON HOVER
 */
 
 gsap.set(".bar", {scaleX:0, transformOrigin:"left center"})
+gsap.set(".button-arrow", {x:'-5%'})
 const btns = gsap.utils.toArray(".btn")
 
 btns.forEach((btn) =>{
