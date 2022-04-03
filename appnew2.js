@@ -398,8 +398,6 @@ UNDERLINE GSAP
 ================================================================================
 */
 
-
-
 // Mouseenter function
 function enterAnimation(link, e, index) {
   link.tl.tweenFromTo(0, "midway");
@@ -786,7 +784,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-       homeProductHover();
+      /*  homeProductHover(); */
        //homeYoutube();
        //logoAnimacija();
        fullscreenMenu();
