@@ -263,15 +263,14 @@ const title = document.querySelector(".splitone"),
 ScrollTrigger.create({
   trigger: title,
   start: "top 75%",
-  end: "bottom -100%",
+  end: "bottom 60%",
   scroller: ".smooth-scroll",
-  scrub: true,
-  /* markers: true, */
+   /* markers: true, */
   onEnter: () => action.duration(1).play(),
   onLeave: () => action.pause(0),
   onEnterBack: () => action.duration(0.5).play(0),
   onLeaveBack: () => action.pause(0), 
-  toggleActions: "restart pause restart none",
+  toggleActions: "play pause none reset",
 });
                         
   
