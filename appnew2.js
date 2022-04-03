@@ -411,7 +411,7 @@ let workLinkUnderlineAnimEnter;
 let workLinkUnderlineAnimLeave;
 
 // Get all links
-let workLinks = document.querySelectorAll(".link-wrapper");
+let workLinks = document.querySelectorAll(".link-inline");
 
 workLinks.forEach((link, index, value) => {
   
