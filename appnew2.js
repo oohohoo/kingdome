@@ -315,7 +315,7 @@ HOME - PARALLAX PANEL SOLO FOR EACH
 
 /* NEW*/
 
-const projectTriggers = document.querySelectorAll(".img__wrapper");
+const projectTriggers = document.querySelectorAll(".section-full-image");
 
 projectTriggers.forEach(addTimeline);
 
