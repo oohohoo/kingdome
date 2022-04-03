@@ -285,7 +285,7 @@ HOME - PARALLAX PANEL
 */
 
 const parapanel = document.querySelector(".splitone"),
-      splittitle = new SplitText(".splitone");
+      splittitlexx = new SplitText(".splitone");
 
 ScrollTrigger.create({
   trigger: parapanel,
@@ -302,7 +302,7 @@ ScrollTrigger.create({
                         
   
 var action = gsap.timeline({paused:true})
-.from(splittitle.chars, {duration: 3, y: 200, stagger:0.2, ease: "expo.inOut"});
+.from(splittitlexx.chars, {duration: 3, y: 200, stagger:0.2, ease: "expo.inOut"});
 
 
 
