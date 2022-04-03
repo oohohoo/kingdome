@@ -187,7 +187,7 @@ IS TRANSITIONING / BLUE PROGRESS CURSOR & POINTER EVENTS
 HIDE - VISIBILITY HIDDEN
 ================================================================================
 */
-.zero {
+.zero .hide {
   visibility:hidden;
 }
 

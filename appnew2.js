@@ -175,7 +175,7 @@ ScrollTrigger.defaults( {
 });
 
 
-gsap.to(".hide", {autoAlpha:1}) // fouc
+gsap.to(".hide, .zero", {autoAlpha:1}) // fouc
 console.log("AUTOALPHA 1");
 
 /*
