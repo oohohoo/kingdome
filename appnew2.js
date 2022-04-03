@@ -324,28 +324,28 @@ POPUP - WIZDOME
 ================================================================================
 */
 
-/* gsap.set(".zero", {autoAlpha:0}) // fouc */
+ gsap.set(".zero", {autoAlpha:1}) // fouc */
 
 gsap.from(".actual-message", 0.4, {
   marginTop: "10%",
-  opacity: 0,
+  autoAlpha: 0,
   ease: Back.easeOut,
   delay: 1.5
 });
 gsap.to(".popup", 0.4, {
-  opacity: 1,
+  autoAlpha: 1,
   delay: 3
 });
 
 $(".popup-close, .popup").click(function() {
   gsap.to(".actual-message", 0.2, {
     marginTop: "10%",
-    opacity: 0,
+    autoAlpha: 0,
     ease: "ease-in"
   });
 
   gsap.to(".popup", 0.2, { 
-    opacity: 0
+    autoAlpha: 0
   });
 }); 
 
