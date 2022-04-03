@@ -398,7 +398,7 @@ UNDERLINE GSAP
 ================================================================================
 */
 
-const containertab = document.querySelector(".link-wr");
+const containertab = document.querySelector(".link-wrapper");
 let shouldPlay = true;
 
 const lineAnim = gsap.timeline({
