@@ -291,7 +291,7 @@ gsap.set(".button-arrow", {x:'-5%'})
 const btns = gsap.utils.toArray(".btn")
 
 btns.forEach((btn) =>{
-  let tl = gsap.timeline({paused:true, defaults:{duration:0.3, ease:"expo.out"}})
+  let tl = gsap.timeline({paused:true, defaults:{duration:0.5, ease:"expo.out"}})
   let bar = btn.querySelector(".bar")
   let arrow = btn.querySelector(".button-arrow")
   let exitTime = 0
@@ -302,10 +302,7 @@ btns.forEach((btn) =>{
   tl.to(bar, {xPercent:100})
   tl.to(arrow, {x:'0rem'},"<")
 
-    
- 
-  
-  btn.addEventListener("mouseenter", () => {
+   btn.addEventListener("mouseenter", () => {
     if(tl.time() < exitTime){
       tl.play()
     } else {
