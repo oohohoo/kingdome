@@ -399,31 +399,44 @@ UNDERLINE GSAP
 */
 
 
-gsap.utils.toArray(".link-wrapper").forEach(container => {
-  let shouldPlay = true;
-   
-  const lineAnim = gsap.timeline({
-    paused: true,
-    defaults: {
-      duration: 0.3,
-      ease: "expo.inOut"
-    }
-  })
-  .from(".link-underline", { xPercent: -100 })
-  .call(() => !shouldPlay && lineAnim.pause())
-  .to(".link-underline", { xPercent: 200 })
-  
-    
-     
 
-container.addEventListener("mouseenter", () => {
-  shouldPlay = false;
-  lineAnim.restart();
-}); 
-container.addEventListener("mouseleave", () => {
-  shouldPlay = true;
-  lineAnim.play();
-});
+// Mouseenter function
+function enterAnimation(link, e, index) {
+  link.tl.tweenFromTo(0, "midway");
+}
+// Mouseleave function
+function leaveAnimation(link, e) {
+  link.tl.play();
+}
+// Animations variables
+let workLinkUnderlineAnimEnter;
+let workLinkUnderlineAnimLeave;
+
+// Get all links
+let workLinks = document.querySelectorAll(".link-wrapper");
+
+workLinks.forEach((link, index, value) => {
+  
+  let underline = link.querySelector(".underline");
+    link.tl = gsap.timeline({paused: true});
+  
+  link.tl.fromTo(underline, {width: "0%", left: "0%",}, 
+  {width: "100%", duration: 0.3, ease: "power1.out",});
+  		
+  link.tl.add("midway");
+  
+  link.tl.fromTo(underline, {width: "100%", left: "0%",}, 
+  {width: "0%", left: "100%", duration: 0.3, ease: "power1.in", immediateRender: false});
+
+  // Mouseenter
+  link.addEventListener("mouseenter", (e) => {
+    enterAnimation(link, e, index);
+  });
+
+  // Mouseleave
+  link.addEventListener("mouseleave", (e) => {
+    leaveAnimation(link, e);
+  });
 
 });
 
