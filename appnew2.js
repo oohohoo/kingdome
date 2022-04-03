@@ -257,8 +257,8 @@ BIG KINGDOME SPLITTXT
 ================================================================================
 */
 
-const title = document.querySelector(".splitone"),
-      splittitle = new SplitText(".splitone");
+const title = document.querySelector("#splitone"),
+      splittitle = new SplitText("#splitone");
 
 ScrollTrigger.create({
   trigger: title,
