@@ -11,6 +11,10 @@ html {
  /*  overflow: hidden; */
 }
 
+body {
+  height: 100vh;
+}
+
 /* RANDOM*/
 
 /*KILL BLUE TAP ON MOBILE*/
