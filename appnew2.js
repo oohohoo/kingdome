@@ -156,9 +156,9 @@ ON WINDOW RESIZE
 window.addEventListener('resize', function(){
   setTimeout(()=>{
   locoScroll.update();
-  ScrollTrigger.refresh(true);
+  ScrollTrigger.refresh();
 },200) 
- console.log("RESIZE ST+LS");
+ console.log("RESIZE & REFRESH LOCO&SCROLLTRIGGER");
 });
 
 
