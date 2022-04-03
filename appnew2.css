@@ -21,7 +21,7 @@ html {
 
 .smooth-scroll {
   overflow-y: hidden!important;
-  perspective: 1px;
+  /* perspective: 1px; */
 }
 
 /*
