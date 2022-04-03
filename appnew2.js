@@ -283,7 +283,7 @@ HOME - PARALLAX PANEL - BIG FONT KINGDOME
 ================================================================================
 */
 
-var inparallax = gsap.timeline({
+/* var inparallax = gsap.timeline({
   scrollTrigger: {
     trigger: ".img__wrapper",
     scroller: ".smooth-scroll",
@@ -298,29 +298,55 @@ inparallax.from(".img__background", {
   yPercent: 80,
   ease: "none",
 }); 
-
+ */
 
 /*
 ================================================================================
-HOME - PARALLAX PANEL SOLO FULL IMAGE
+HOME - PARALLAX PANEL SOLO FOR EACH
 ================================================================================
 */
 
-var inparallaxfull = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#fullimagetrigger",
-    scroller: ".smooth-scroll",
-    scrub: true,
-    pin: false,
-  },
-}); 
-inparallaxfull.from(".img__background", {
-  yPercent: -80,
+
+
+
+
+
+
+
+/* NEW*/
+
+const projectTriggers = document.querySelectorAll(".project-trigger");
+
+projectTriggers.forEach(addTimeline);
+
+function addTimeline(project, index) {
+  const image = project.querySelector(".img__background");
+  /* const text = project.querySelector(".project-text"); */
+  
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".img__wrapper",
+      scroller: ".smooth-scroll",
+      scrub: true,
+      pin: false,
+    }
+  })
+  .from(image, {
+    yPercent: -80,
   ease: "none",
-}).to(".img__background", {
-  yPercent: 80,
+  })
+  .from(image, {
+    yPercent: 80,
   ease: "none",
-}); 
+  })
+  
+}
+
+
+
+
+
+
 
 
 
