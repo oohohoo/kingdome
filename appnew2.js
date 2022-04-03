@@ -177,7 +177,7 @@ window.addEventListener('resize', function(){
 
 /*
 ================================================================================
-ALL - FADE IN ON ENTER
+SCROLLTRIGGER TEST
 ================================================================================
 */
   gsap.utils.toArray('.block1').forEach((el, i) => {
@@ -198,7 +198,7 @@ ALL - FADE IN ON ENTER
 
 /*
 ================================================================================
-ALL - LOGO ANIMACIJA
+LOGO ANIMACIJA
 ================================================================================
 */
 
@@ -225,7 +225,7 @@ ALL - LOGO ANIMACIJA
 
 /*
 ================================================================================
-HOME - KUPOLA DRAWSVG
+KUPOLA DRAWSVG
 ================================================================================
 */
 
@@ -253,7 +253,7 @@ gsap.timeline({
 
 /*
 ================================================================================
-HOME - BIG KINGDOME SPLITTXT
+BIG KINGDOME SPLITTXT
 ================================================================================
 */
 
@@ -263,36 +263,20 @@ const title = document.querySelector(".splitone"),
 ScrollTrigger.create({
   trigger: title,
   start: "top 75%",
-  end: "bottom bottom",
+  end: "bottom 60%",
   scroller: ".smooth-scroll",
    /* markers: true, */
   onEnter: () => action.duration(1).play(),
   onLeave: () => action.pause(0),
   onEnterBack: () => action.duration(0.5).play(0),
   onLeaveBack: () => action.pause(0), 
-  toggleActions: "play pause none reset",
+  toggleActions: "restart pause restart none",
 });
                         
   
 var action = gsap.timeline({paused:true})
 .from(splittitle.chars, {duration: 3, y: 200, stagger:0.2, ease: "expo.inOut"});
 
-/*
-================================================================================
-HOME - SECTION PARALLAX
-================================================================================
-*/
-
-gsap.to("#fullimageonexxx",{
-  scrollTrigger:{
-  trigger: "#fullimageonexxx",
-  scroller: ".smooth-scroll",
-  pin: true,
-  pinSpacing: false,
-  start: "top top",
-  end: "bottom top",
-  markers: true,    
-}});
 
 
 
