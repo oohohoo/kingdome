@@ -332,9 +332,8 @@ gsap.from(".actual-message", 0.4, {
   ease: Back.easeOut,
   delay: 1.5
 });
-
 gsap.from(".popup", 0.4, {
-  opacity: 0,
+  autoAlpha: 0,
   delay: 3
 });
 
