@@ -99,6 +99,26 @@ ASPECT RATIOS WITH FALLBACK
 }
 
 
+/* FULL IMAGE*/
+.aspect-full-image {
+  aspect-ratio: 4 / 3;
+}
+
+@supports not (aspect-ratio: 4 / 3) {
+  .aspect-video::before {
+    float: left;
+    padding-top: 75%;
+    content: "";
+  }
+
+  .aspect-video::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+
 /*
 ================================================================================
 TXT SELECT
