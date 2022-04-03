@@ -286,7 +286,7 @@ ALL - BOTTON HOVER
 ================================================================================
 */
 
-gsap.set(".bar", {scaleX:0, transformOrigin:"left center"})
+gsap.set(".bar", {xPercent: -100, transformOrigin:"left center"})
 gsap.set(".button-arrow", {x:'-5%'})
 const btns = gsap.utils.toArray(".btn")
 
@@ -295,7 +295,7 @@ btns.forEach((btn) =>{
   let bar = btn.querySelector(".bar")
   let arrow = btn.querySelector(".button-arrow")
   let exitTime = 0
-  tl.to(bar, {scaleX:1})
+  tl.to(bar, {xPercent:0})
     .addPause("exit")
   exitTime = tl.duration()
   tl.to(bar, {x:'100%'})
@@ -320,6 +320,61 @@ btns.forEach((btn) =>{
   })
 })
 
+/**/ 
+
+
+gsap.set("span", {
+  visibility: "visible", 
+  xPercent: -100
+});
+
+let links = gsap.utils.toArray('.link_item'); 
+
+links.forEach(function(el) { 
+  
+  let span = el.querySelector("span"); 
+  let animation = null;
+  let isHovering = false;
+  
+  el.addEventListener("mouseenter", onEnter);  
+  el.addEventListener("mouseleave", onLeave);
+  
+  function onEnter() {
+    
+    isHovering = true;
+    
+    if (!animation) {      
+      animation = gsap.fromTo(span, { xPercent: -100 }, {
+        xPercent: 0,
+        ease: "power4.inOut",
+        onComplete: () => {
+          animation = null;
+          if (!isHovering) {            
+            onLeave();
+          }
+        }
+      });
+    }    
+  }
+  
+  function onLeave() {
+    
+    isHovering = false;
+    
+    if (!animation) {            
+      animation = gsap.to(span, {
+        xPercent: 100,
+        ease: "power4.inOut",
+         onComplete: () => {
+           animation = null;
+           if (isHovering) {
+             onEnter();
+           }
+         }
+      });
+    }    
+  }  
+});
 
 
 
