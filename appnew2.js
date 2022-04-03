@@ -348,6 +348,7 @@ $(".popup-close, .popup").click(function() {
 }); 
 
 
+
 /*
 ================================================================================
 HOME - PRODUCT HOVER 
@@ -359,7 +360,7 @@ HOME - PRODUCT HOVER
 /*   gsap.set(".rg__long", {autoAlpha:0, yPercent:-10}); */
   
   
-  gsap.utils.toArray(".product-item").forEach(container => {
+  gsap.utils.toArray(".products-item").forEach(container => {
    
     let   dome = container.querySelector(".fake-king"),
     // wrap = container.querySelector(".rg__wrap"),
@@ -385,6 +386,8 @@ HOME - PRODUCT HOVER
     container.addEventListener("mouseenter", () => tl.play() );
     container.addEventListener("mouseleave", () => tl.reverse() );
   });
+
+  console.log("ITEM HOVERRRRRRR!");
   
 /*   } */
 
