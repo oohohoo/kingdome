@@ -338,7 +338,7 @@ function addTimeline(project, index) {
   .to(image, {
     yPercent: 80,
   ease: "none",
-  })
+  });
   
 }
 
