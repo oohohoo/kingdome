@@ -292,13 +292,12 @@ const btns = gsap.utils.toArray(".btn")
 btns.forEach((btn) =>{
   let tl = gsap.timeline({paused:true, defaults:{duration:0.5, ease:"expo.inOut"}})
   let bar = btn.querySelector(".bar")
-  let txt = btn.querySelector(".button-txt-new")
   let exitTime = 0
   tl.to(bar, {scaleX:1})
     .addPause("exit")
   exitTime = tl.duration()
   tl.to(bar, {x:'100%'})
-    .to(txt, {rotate:30})
+    
  
   
   btn.addEventListener("mouseenter", () => {
