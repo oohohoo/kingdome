@@ -265,16 +265,16 @@ ScrollTrigger.create({
   end: "bottom top",
   /* scroller: ".smooth-scroll", */
    /* markers: true, */
-  onEnter: () => action.duration(1).play(),
+  onEnter: () => action.duration(2).play(),
   onLeave: () => action.pause(0),
-  onEnterBack: () => action.duration(0.5).play(0),
+  onEnterBack: () => action.duration(2).play(0),
   onLeaveBack: () => action.pause(0), 
   toggleActions: "restart pause restart none",
 });
                         
   
 var action = gsap.timeline({paused:true})
-.from(splittitle.chars, {duration: 3, y: 200, stagger:0.2, ease: "expo.inOut"});
+.from(splittitle.chars, {y: 200, stagger:0.2, ease: "expo.inOut"});
 
 
 
