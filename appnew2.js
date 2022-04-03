@@ -300,6 +300,7 @@ btns.forEach((btn) =>{
     .addPause("exit")
   exitTime = tl.duration()
   tl.to(bar, {xPercent:100})
+  tl.to(arrow, {x:'0rem'},"<")
 
     
  
