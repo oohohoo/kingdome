@@ -1576,7 +1576,7 @@ function homeAboutSlider() {
      var tl = gsap.timeline({
        
        scrollTrigger: {
-        trigger: ".blacktrigger",
+        trigger: ".akatriger",
         scroller: ".smooth-scroll",
          
          start: () => "top -" + (window.innerHeight * (i)),
@@ -1600,7 +1600,7 @@ function homeAboutSlider() {
   
   ScrollTrigger.create({
   
-        trigger: ".blacktrigger",
+        trigger: ".akatriger",
         scroller: ".smooth-scroll",
       //markers: true,
     
@@ -1613,7 +1613,7 @@ function homeAboutSlider() {
      
   });
 
-  console.log("UČITAL SAM SEr");
+  console.log("to sam ja");
 
 }
 
