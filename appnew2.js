@@ -1614,7 +1614,7 @@ ScrollTrigger.create({
   markers: false,
   
     /*---*/
-    pin: ".paneltrig",
+    pin: true,
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
