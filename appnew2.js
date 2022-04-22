@@ -1573,11 +1573,9 @@ HOME - ABOUT AKAPOWL SLIDER
 function homeAboutSlider() {
 /* AKAPOWL GALLERY*/
 
+gsap.set(".panelxxx", { zIndex: (i, target, targets) => targets.length - i });
 
-  
-gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
-
-var images = gsap.utils.toArray(".panel3");
+var images = gsap.utils.toArray('.panelxxx:not(.purple)');
 
 images.forEach((image, i) => {
    
@@ -1599,7 +1597,6 @@ images.forEach((image, i) => {
    
    tl
    .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
-
    ;
    
 });
@@ -1611,16 +1608,18 @@ ScrollTrigger.create({
 
 			trigger: ".black",
       scroller: ".smooth-scroll",
-  markers: false,
+    //markers: true,
   
     /*---*/
-    pin: ".picturewrap",
+    pin: '.p-wrap',
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
-    invalidateOnRefresh: true
-      
+    invalidateOnRefresh: true,
+   
 });
+
+
 console.log("JEBENI AKAPOWL LOADED");
 
 }
