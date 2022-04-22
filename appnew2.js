@@ -509,7 +509,7 @@ workLinks.forEach((link, index, value) => {
 
 });
 
-
+/* AKAPOWL PINNED HOME*/
 
 gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
@@ -539,8 +539,6 @@ images.forEach((image, i) => {
    
 });
  
- 
-
 
 ScrollTrigger.create({
 
@@ -558,7 +556,22 @@ ScrollTrigger.create({
 });
 
 
-console.log("JEBENI AKAPOWL LOADED 2");
+/* HEADER HIDE*/
+
+const showAnim = gsap.from('.header', { 
+  yPercent: -100,
+  paused: true,
+  duration: 0.2
+}).progress(1);
+
+ScrollTrigger.create({
+  start: "top top",
+  end: 99999,
+  onUpdate: (self) => {
+    self.direction === -1 ? showAnim.play() : showAnim.reverse()
+  }
+});
+
 
 
 
