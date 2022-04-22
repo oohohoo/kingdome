@@ -558,12 +558,13 @@ ScrollTrigger.create({
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
-    invalidateOnRefresh: true,
+    invalidateOnRefresh: true
+    console.log("RADI RADI OOO");
    
 });
 
 
-console.log("RADI RADI OOO");
+
 
 /**/ 
 
