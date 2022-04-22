@@ -444,10 +444,10 @@ images.forEach((image, i) => {
    })
    
    tl
-   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
+   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })  ;
   .to('.heading-large', {rotate: 45, scale: 0.9, duration: 0.4});
 
-   ;
+ 
 
 
 
