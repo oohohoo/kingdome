@@ -1622,7 +1622,7 @@ ScrollTrigger.create({
       
 });
 
-
+console.log("UČITANO ETO");
 }
 
 
