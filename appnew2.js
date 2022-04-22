@@ -1620,7 +1620,7 @@ ScrollTrigger.create({
 });
 
 
-console.log("JEBENI AKAPOWL LOADED");
+console.log("JEBENI AKAPOWL LOADED 2");
 
 }
 
