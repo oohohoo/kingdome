@@ -581,7 +581,8 @@ let homepage = gsap.timeline();
 
 gsap.set(".homeani1", {yPercent:100})
 
-homepage.from(".homeani1",  {yPercent:100, duration: 0.5, stagger: 0.12, ease: "expo.inOut", })
+homepage
+.from(".homeani1", {yPercent:100, duration: 0.5, stagger: 0.12, ease: "expo.inOut", })
 .from(".header_redflag", { yPercent:-100, ease:'expo.inOut'}, "<")
 
 /* 
