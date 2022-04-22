@@ -1608,7 +1608,7 @@ ScrollTrigger.create({
 
 			trigger: ".black",
       scroller: ".smooth-scroll",
-    //markers: true,
+    markers: true,
   
     /*---*/
     pin: '.picturewrap',
