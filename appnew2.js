@@ -1571,7 +1571,7 @@ function homeAboutSlider() {
   
   gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
-var images = gsap.utils.toArray('.panel3:not(.purple)');
+var images = gsap.utils.toArray(".panel3");
 
 images.forEach((image, i) => {
    
