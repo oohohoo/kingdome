@@ -134,7 +134,7 @@ function initScroll(container) {
     // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, 
     // we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
     // UKLJUČITI SAMO NA MOBILNOJ VERZIJI
-     pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+     /* pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed" */
   });
 
 /* ===== 
@@ -1573,9 +1573,9 @@ HOME - ABOUT AKAPOWL SLIDER
 function homeAboutSlider() {
 /* AKAPOWL GALLERY*/
 
-gsap.set(".panelxxx", { zIndex: (i, target, targets) => targets.length - i });
+gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
-var images = gsap.utils.toArray('.panelxxx:not(.purple)');
+var images = gsap.utils.toArray('.panel3:not(.purple)');
 
 images.forEach((image, i) => {
    
@@ -1611,7 +1611,7 @@ ScrollTrigger.create({
     //markers: true,
   
     /*---*/
-    pin: '.p-wrap',
+    pin: '.picturewrap',
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
