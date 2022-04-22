@@ -678,13 +678,13 @@ function initLoader() {
     .set(".txt", {yPercent: 100})
     .set(mask, {yPercent: 0})
     .set(image, {yPercent: 100})
-    .set(fadeintxt, {autoAlpha: 0})
+    /* .set(fadeintxt, {autoAlpha: 0}) */
     
     //.set(".main", {y: 150})
 
     /* .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) */
     /* .to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'}) */
-   .from(targets, {autoAlpha: 1, y: 60, duration: 0.7, stagger: 0.12})
+   .from(targets, {opacity:0, y: 60, duration: 0.7, stagger: 0.12})
 
 
 
