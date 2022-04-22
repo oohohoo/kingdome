@@ -515,16 +515,16 @@ workLinks.forEach((link, index, value) => {
 
 
   
-gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
+gsap.set(".panelxxx", { zIndex: (i, target, targets) => targets.length - i });
 
-var images = gsap.utils.toArray(".panel3");
+var images = gsap.utils.toArray(".panelxxx");
 
 images.forEach((image, i) => {
    
    var tl = gsap.timeline({
      
      scrollTrigger: {
-			trigger: ".black",
+			trigger: ".paneltrig",
       scroller: ".smooth-scroll",
        
        start: () => "top -" + (window.innerHeight * (i)),
@@ -549,12 +549,12 @@ images.forEach((image, i) => {
 
 ScrollTrigger.create({
 
-			trigger: ".black",
+			trigger: ".paneltrig",
       scroller: ".smooth-scroll",
   markers: true,
   
     /*---*/
-    pin: ".picturewrap",
+    pin: ".picwrap",
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
@@ -562,6 +562,8 @@ ScrollTrigger.create({
    
 });
 
+
+console.log("RADI RADI OOO");
 
 /**/ 
 
