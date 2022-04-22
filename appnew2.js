@@ -659,7 +659,7 @@ function initLoader() {
  
 
 
-  const loader = select('.loader');
+ /*  const loader = select('.loader'); */
   const loaderInner = select('.inner-loader');
 
   const titles = document.querySelectorAll('[data-split-this-container] > div');
@@ -708,7 +708,7 @@ function initLoader() {
 
   tlLoaderOut
 
-    .to(lines, {yPercent: -500, stagger: 0.2}, 0)
+   /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0.2)
     .to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'})
     //.to('.main', {y: 0}, 0);
