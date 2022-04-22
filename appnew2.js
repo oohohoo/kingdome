@@ -795,7 +795,7 @@ BARBA VIEWS
 ================================================================================
 */  
   views: [{
-    namespace: 'home',
+    namespace: 'test',
     beforeEnter(data) {
    
     /*   bigLogo();
