@@ -511,57 +511,6 @@ workLinks.forEach((link, index, value) => {
 
 
 
-/* AKAPOWL GALLERY*/
-
-
-  
-gsap.set(".panelxxx", { zIndex: (i, target, targets) => targets.length - i });
-
-var images = gsap.utils.toArray(".panelxxx");
-
-images.forEach((image, i) => {
-   
-   var tl = gsap.timeline({
-     
-     scrollTrigger: {
-			trigger: ".paneltrig",
-      scroller: ".smooth-scroll",
-       
-       start: () => "top -" + (window.innerHeight * (i)),
-       
-       end: () => "+=" + window.innerHeight,
-       scrub: true,
-       toggleActions: "play none reverse none",
-       invalidateOnRefresh: true,     
-     }
-     
-   })
-   
-   tl
-   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
-
-   ;
-   
-});
- 
- 
-
-
-ScrollTrigger.create({
-
-			trigger: ".paneltrig",
-      scroller: ".smooth-scroll",
-  markers: true,
-  
-    /*---*/
-    pin: ".picwrap",
-  
-    start: () => "top top",
-    end: () => "+=" + ((images.length) * window.innerHeight),
-    invalidateOnRefresh: true
-    console.log("RADI RADI OOO");
-   
-});
 
 
 
@@ -857,7 +806,7 @@ BARBA VIEWS
      // document.getElementById('video').play();
       
 
-    console.log("Home JS triggered!");
+    console.log("Home ABOUT SLIDER!");
     }},{
     namespace: 'products',
     beforeEnter(){
@@ -1622,6 +1571,56 @@ HOME - ABOUT AKAPOWL SLIDER
 ================================================================================
 */
 function homeAboutSlider() {
+/* AKAPOWL GALLERY*/
+
+
+  
+gsap.set(".panelxxx", { zIndex: (i, target, targets) => targets.length - i });
+
+var images = gsap.utils.toArray(".panelxxx");
+
+images.forEach((image, i) => {
+   
+   var tl = gsap.timeline({
+     
+     scrollTrigger: {
+			trigger: ".paneltrig",
+      scroller: ".smooth-scroll",
+       
+       start: () => "top -" + (window.innerHeight * (i)),
+       
+       end: () => "+=" + window.innerHeight,
+       scrub: true,
+       toggleActions: "play none reverse none",
+       invalidateOnRefresh: true,     
+     }
+     
+   })
+   
+   tl
+   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
+
+   ;
+   
+});
+ 
+ 
+
+
+ScrollTrigger.create({
+
+			trigger: ".paneltrig",
+      scroller: ".smooth-scroll",
+  markers: true,
+  
+    /*---*/
+    pin: ".picwrap",
+  
+    start: () => "top top",
+    end: () => "+=" + ((images.length) * window.innerHeight),
+    invalidateOnRefresh: true
+      
+});
 
 
 }
