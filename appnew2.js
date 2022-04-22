@@ -704,7 +704,7 @@ function initLoader() {
   // LOADER OUT
   const tlLoaderOut = gsap.timeline({
     id: 'tlLoaderOut',
-    defaults: {duration: 1.2, ease: 'power2.inOut'}, delay: 1});
+    defaults: {duration: 1.2, ease: 'power2.inOut'}, delay: 0});
 
   tlLoaderOut
 
