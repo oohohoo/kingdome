@@ -714,8 +714,8 @@ function initLoader() {
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
     .to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'})
-    .to(".homeani1", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, 0.1)
-    .from(".header_redflag", { yPercent:-100, ease:'expo.inOut'}, 0.1)
+    .to(".homeani1", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, 0.2)
+    .from(".header_redflag", { yPercent:-100, ease:'expo.inOut'}, 0.2)
     //.to('.main', {y: 0}, 0);
 
   const tlLoader = gsap.timeline();
