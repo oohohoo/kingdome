@@ -657,7 +657,7 @@ function initLoader() {
 
   const fadeintxt = select('.home-hero-heading-wrapper');
   const txtdonji = select('.txtdonji');
-  const video = select('.home-hero-video');
+  const video = select('.aspect-video');
 
  
 
