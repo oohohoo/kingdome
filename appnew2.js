@@ -1578,7 +1578,7 @@ images.forEach((image, i) => {
    var tl = gsap.timeline({
      
      scrollTrigger: {
-			trigger: ".black",
+			trigger: ".section-home-about-slider-real",
       scroller: ".smooth-scroll",
        
        start: () => "top -" + (window.innerHeight * (i)),
@@ -1602,7 +1602,7 @@ images.forEach((image, i) => {
 
 ScrollTrigger.create({
 
-			trigger: ".black",
+			trigger: ".section-home-about-slider-real",
       scroller: ".smooth-scroll",
   markers: true,
   
