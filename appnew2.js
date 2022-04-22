@@ -256,15 +256,15 @@ HOME - BIG KINGDOME SPLITTXT
 ================================================================================
 */
 
-const title = document.querySelector(".splitone"),
+/* const title = document.querySelector(".splitone"),
       splittitle = new SplitText(".splitone");
 
 ScrollTrigger.create({
   trigger: title,
   start: "top 75%",
   end: "bottom top",
-  /* scroller: ".smooth-scroll", */
-   /* markers: true, */
+  // scroller: ".smooth-scroll", 
+  // markers: true, 
   onEnter: () => action.duration(2).play(),
   onLeave: () => action.pause(0),
   onEnterBack: () => action.duration(2).play(0),
@@ -276,7 +276,7 @@ ScrollTrigger.create({
 var action = gsap.timeline({paused:true})
 .from(splittitle.chars, {y: 220, stagger:0.01, ease: "expo.inOut"});
 
-
+ */
 /*
 ================================================================================
 HOME - PARALLAX PANEL - BIG FONT KINGDOME
