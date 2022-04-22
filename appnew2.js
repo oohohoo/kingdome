@@ -661,6 +661,10 @@ function initLoader() {
   const loader = select('.loader');
   const loaderInner = select('.inner-loader');
 
+  const titles = document.querySelectorAll('[data-split-this-container] > div');
+  let targets = [];
+
+
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
@@ -673,9 +677,38 @@ function initLoader() {
 
     /* .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) */
     .to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'})
+
+
+
+    
+    
+    titles.forEach(title => {
+      if (title.classList.contains("txtgornji")) {
+        targets.push(title);
+      } else {
+        targets.push(new SplitText(title, {type: "words"}).words);
+      }
+    });
+    
+ .from(targets, {
+      opacity: 0,
+      y: 60,
+      duration: 0.7,
+      stagger: 0.12
+    });
+
+
+
     .addLabel('revealImage')
     /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
     /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
+
+
+
+  
+
+
+
 
   // LOADER OUT
   const tlLoaderOut = gsap.timeline({
