@@ -665,11 +665,11 @@ function initLoader() {
     .set(image, {yPercent: 100})
     //.set(".main", {y: 150})
 
-    .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'})
+    /* .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) */
 
     .addLabel('revealImage')
-    .to(image, {yPercent: 0}, 'revealImage-=0.5')
-    .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4');
+    /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
+    /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
 
   // LOADER OUT
   const tlLoaderOut = gsap.timeline({
