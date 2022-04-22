@@ -1575,16 +1575,16 @@ function homeAboutSlider() {
 
 
   
-gsap.set(".panelxxx", { zIndex: (i, target, targets) => targets.length - i });
+gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
-var images = gsap.utils.toArray(".panelxxx");
+var images = gsap.utils.toArray(".panel3");
 
 images.forEach((image, i) => {
    
    var tl = gsap.timeline({
      
      scrollTrigger: {
-			trigger: ".paneltrig",
+			trigger: ".black",
       scroller: ".smooth-scroll",
        
        start: () => "top -" + (window.innerHeight * (i)),
@@ -1609,12 +1609,12 @@ images.forEach((image, i) => {
 
 ScrollTrigger.create({
 
-			trigger: ".paneltrig",
+			trigger: ".black",
       scroller: ".smooth-scroll",
   markers: false,
   
     /*---*/
-    pin: ".picwrap",
+    pin: "#imgpin",
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
