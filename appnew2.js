@@ -575,6 +575,24 @@ ScrollTrigger.create({
 });
 
 
+/* HOME ANIMATION*/
+
+let homepage = gsap.timeline();
+
+gsap.set(".button-arrow", {x:'-5%'})
+
+homepage.from(".homeani1",  {yPercent:100, duration: 0.5, ease: "expo.inOut", })
+.from(".header_redflag", { yPercent:-100, ease:'expo.inOut'}, "<")
+
+/* 
+
+gsap.to(".red-flag",  {width:'8.5em', height:'10em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
+gsap.to(".znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<") */
+
+console.log("logoReseted");
+
+
+
 
 
 /**/ 
