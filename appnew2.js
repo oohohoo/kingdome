@@ -664,6 +664,13 @@ function initLoader() {
   const titles = document.querySelectorAll('[data-split-this-container] > div');
   let targets = [];
 
+  titles.forEach(title => {
+    if (title.classList.contains("txtgornji")) {
+      targets.push(title);
+    } else {
+      targets.push(new SplitText(title, {type: "words"}).words);
+    }
+  });
 
   tlLoaderIn
 
@@ -677,19 +684,7 @@ function initLoader() {
 
     /* .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) */
     .to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'})
-
-
-
-    
-    
-    titles.forEach(title => {
-      if (title.classList.contains("txtgornji")) {
-        targets.push(title);
-      } else {
-        targets.push(new SplitText(title, {type: "words"}).words);
-      }
-    });
-    
+  
  .from(targets, {
   autoAlpha: 1,
       y: 60,
