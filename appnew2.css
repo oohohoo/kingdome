@@ -257,7 +257,7 @@ GSAP PERFORMANCE FIX
 */
 
 
- .smooth-scroller {
+ .smooth-scroll {
   will-change: transform;
   backface-visibility: hidden;
 }
