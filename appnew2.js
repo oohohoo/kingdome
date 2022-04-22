@@ -95,7 +95,7 @@ function initScroll(container) {
     el: document.querySelector(".smooth-scroll"),
     smooth: true,
      offset: [0, 0], 
-    getDirection: true, 
+    /* getDirection: true, */
     scrollFromAnywhere: true,
     touchMultiplier: 3.0,
     useKeyboard: true,
@@ -1614,7 +1614,7 @@ ScrollTrigger.create({
   markers: false,
   
     /*---*/
-    pin: ".paneltrig",
+    pin: ".picwrap",
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
@@ -1622,7 +1622,7 @@ ScrollTrigger.create({
       
 });
 
-console.log("UČITANO ETO");
+
 }
 
 
