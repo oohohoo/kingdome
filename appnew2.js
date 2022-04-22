@@ -511,6 +511,58 @@ workLinks.forEach((link, index, value) => {
 
 
 
+/* AKAPOWL GALLERY*/
+
+
+  
+gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
+
+var images = gsap.utils.toArray(".panel3");
+
+images.forEach((image, i) => {
+   
+   var tl = gsap.timeline({
+     
+     scrollTrigger: {
+			trigger: ".black",
+      scroller: ".smooth-scroll",
+       
+       start: () => "top -" + (window.innerHeight * (i)),
+       
+       end: () => "+=" + window.innerHeight,
+       scrub: true,
+       toggleActions: "play none reverse none",
+       invalidateOnRefresh: true,     
+     }
+     
+   })
+   
+   tl
+   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
+
+   ;
+   
+});
+ 
+ 
+
+
+ScrollTrigger.create({
+
+			trigger: ".black",
+      scroller: ".smooth-scroll",
+  markers: true,
+  
+    /*---*/
+    pin: ".picturewrap",
+  
+    start: () => "top top",
+    end: () => "+=" + ((images.length) * window.innerHeight),
+    invalidateOnRefresh: true,
+   
+});
+
+
 /**/ 
 
 
@@ -1568,53 +1620,6 @@ HOME - ABOUT AKAPOWL SLIDER
 */
 function homeAboutSlider() {
 
-  
-  gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
-
-var images = gsap.utils.toArray(".panel3");
-
-images.forEach((image, i) => {
-   
-   var tl = gsap.timeline({
-     
-     scrollTrigger: {
-			trigger: ".black",
-      scroller: ".smooth-scroll",
-       
-       start: () => "top -" + (window.innerHeight * (i)),
-       
-       end: () => "+=" + window.innerHeight,
-       scrub: true,
-       toggleActions: "play none reverse none",
-       invalidateOnRefresh: true,     
-     }
-     
-   })
-   
-   tl
-   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
-
-   ;
-   
-});
- 
- 
-
-
-ScrollTrigger.create({
-
-			trigger: ".black",
-      scroller: ".smooth-scroll",
-  markers: true,
-  
-    /*---*/
-    pin: ".picturewrap",
-  
-    start: () => "top top",
-    end: () => "+=" + ((images.length) * window.innerHeight),
-    invalidateOnRefresh: true,
-   
-});
 
 }
 
