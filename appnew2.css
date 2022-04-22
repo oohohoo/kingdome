@@ -257,11 +257,11 @@ GSAP PERFORMANCE FIX
 */
 
 
-/* .fs-menu-header {
+ .smooth-scroller {
   will-change: transform;
   backface-visibility: hidden;
 }
- */
+
 /*
 ================================================================================
 HIDE PAGE CONTENT BY DEFAULT
