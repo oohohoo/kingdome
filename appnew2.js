@@ -672,7 +672,8 @@ function initLoader() {
     //.set(".main", {y: 150})
 
     /* .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) */
-    .to(loaderInner, {autoAlpha: 1, ease: 'power1.inOut'})
+    .to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'})
+    
     .addLabel('revealImage')
     /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
     /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
