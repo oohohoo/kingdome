@@ -582,7 +582,7 @@ let homepage = gsap.timeline();
 gsap.set(".homeani1", {autoAlpha:0})
 
 homepage
-.to(".homeani1", {autoAlpha:1, duration: 0.5, stagger: 0.12, ease: "expo.inOut", })
+.to(".homeani1", {delay:3, autoAlpha:1, duration: 0.5, stagger: 0.12, ease: "expo.inOut", })
 .from(".header_redflag", { yPercent:-100, ease:'expo.inOut'}, "<")
 
 /* 
