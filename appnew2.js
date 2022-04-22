@@ -1611,10 +1611,10 @@ ScrollTrigger.create({
 
 			trigger: ".paneltrig",
       scroller: ".smooth-scroll",
-  markers: true,
+  markers: false,
   
     /*---*/
-    pin: true,
+    pin: ".picwrap",
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
