@@ -95,7 +95,7 @@ function initScroll(container) {
     el: document.querySelector(".smooth-scroll"),
     smooth: true,
      offset: [0, 0], 
-    /* getDirection: true, */
+    getDirection: true, 
     scrollFromAnywhere: true,
     touchMultiplier: 3.0,
     useKeyboard: true,
@@ -1614,7 +1614,7 @@ ScrollTrigger.create({
   markers: false,
   
     /*---*/
-    pin: true,
+    pin: ".paneltrig",
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
