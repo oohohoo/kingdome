@@ -575,24 +575,6 @@ ScrollTrigger.create({
 });
 
 
-/* HOME ANIMATION*/
-
-let homepage = gsap.timeline();
-
-gsap.set(".homeani1", {autoAlpha:0})
-
-homepage
-.to(".homeani1", {delay:3, autoAlpha:1, duration: 0.5, stagger: 0.12, ease: "expo.inOut", })
-.from(".header_redflag", { yPercent:-100, ease:'expo.inOut'}, "<")
-
-/* 
-
-gsap.to(".red-flag",  {width:'8.5em', height:'10em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
-gsap.to(".znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<") */
-
-console.log("homepage intro aniamtion");
-
-
 
 
 
@@ -698,6 +680,7 @@ function initLoader() {
     .set(".txt", {yPercent: 100})
     .set(mask, {yPercent: 0})
     .set(image, {yPercent: 100})
+    .set(".homeani1", {autoAlpha:0})
     /* .set(fadeintxt, {autoAlpha: 0}) */
     
     //.set(".main", {y: 150})
@@ -706,8 +689,10 @@ function initLoader() {
     /* .to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'}) */
    .from(targets, {opacity:0, yPercent: 100, ease: "expo.inOut", stagger: 0.15})
    .from(txtdonji, {opacity:0, yPercent: 100, ease: "expo.inOut"}, "+=0.2")
+   .to(".homeani1", {delay:3, autoAlpha:1, stagger: 0.12, ease: "expo.inOut", })
+   .from(".header_redflag", { yPercent:-100, ease:'expo.inOut'}, "<")
 
-
+  
 
     .addLabel('revealImage')
     /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
