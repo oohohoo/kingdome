@@ -795,7 +795,7 @@ BARBA VIEWS
 ================================================================================
 */  
   views: [{
-    namespace: 'test',
+    namespace: 'home',
     beforeEnter(data) {
    
     /*   bigLogo();
@@ -1614,7 +1614,7 @@ ScrollTrigger.create({
   markers: true,
   
     /*---*/
-    pin: ".picwrap",
+    pin: true,
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
