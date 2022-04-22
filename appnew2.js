@@ -654,6 +654,10 @@ function initLoader() {
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
 
+  const fadeintxt = select('.home-hero-heading-wrapper');
+ 
+
+
   const loader = select('.loader');
   const loaderInner = select('.inner-loader');
 
@@ -663,10 +667,12 @@ function initLoader() {
     .set(".txt", {yPercent: 100})
     .set(mask, {yPercent: 0})
     .set(image, {yPercent: 100})
+    .set(fadeintxt, {autoAlpha: 0})
+    
     //.set(".main", {y: 150})
 
     /* .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) */
-
+    .to(loaderInner, {autoAlpha: 1, ease: 'power1.inOut'})
     .addLabel('revealImage')
     /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
     /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
