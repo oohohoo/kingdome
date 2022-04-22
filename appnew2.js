@@ -111,9 +111,9 @@ function initScroll(container) {
 
 
 // ovo je ubačeno naknadno
-  locoScroll.on("scroll", function (t) {
+/*   locoScroll.on("scroll", function (t) {
     document.documentElement.setAttribute("data-direction", t.direction);
-  });
+  }); */
 
 
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
@@ -511,7 +511,54 @@ workLinks.forEach((link, index, value) => {
 
 
 
+gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
+var images = gsap.utils.toArray('.panel3:not(.purple)');
+
+images.forEach((image, i) => {
+   
+   var tl = gsap.timeline({
+     
+     scrollTrigger: {
+			trigger: ".black",
+      scroller: ".smooth-scroll",
+       
+       start: () => "top -" + (window.innerHeight * (i)),
+       
+       end: () => "+=" + window.innerHeight,
+       scrub: true,
+       toggleActions: "play none reverse none",
+       invalidateOnRefresh: true,     
+     }
+     
+   })
+   
+   tl
+   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
+   ;
+   
+});
+ 
+ 
+
+
+ScrollTrigger.create({
+
+			trigger: ".black",
+      scroller: ".smooth-scroll",
+    markers: true,
+  
+    /*---*/
+    pin: ".p-wrap",
+  
+    start: () => "top top",
+    end: () => "+=" + ((images.length) * window.innerHeight),
+    invalidateOnRefresh: true,
+   
+});
+
+
+console.log("JEBENI AKAPOWL LOADED 2");
 
 
 
@@ -1573,54 +1620,7 @@ HOME - ABOUT AKAPOWL SLIDER
 function homeAboutSlider() {
 /* AKAPOWL GALLERY*/
 
-gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
-var images = gsap.utils.toArray('.panel3:not(.purple)');
-
-images.forEach((image, i) => {
-   
-   var tl = gsap.timeline({
-     
-     scrollTrigger: {
-			trigger: ".black",
-      scroller: ".smooth-scroll",
-       
-       start: () => "top -" + (window.innerHeight * (i)),
-       
-       end: () => "+=" + window.innerHeight,
-       scrub: true,
-       toggleActions: "play none reverse none",
-       invalidateOnRefresh: true,     
-     }
-     
-   })
-   
-   tl
-   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
-   ;
-   
-});
- 
- 
-
-
-ScrollTrigger.create({
-
-			trigger: ".black",
-      scroller: ".smooth-scroll",
-    markers: true,
-  
-    /*---*/
-    pin: '.picturewrap',
-  
-    start: () => "top top",
-    end: () => "+=" + ((images.length) * window.innerHeight),
-    invalidateOnRefresh: true,
-   
-});
-
-
-console.log("JEBENI AKAPOWL LOADED 2");
 
 }
 
