@@ -1605,7 +1605,7 @@ function homeAboutSlider() {
       //markers: true,
     
       /*---*/
-      pin: '.p-wrap',
+      pin: "#imgpin",
     
       start: () => "top top",
       end: () => "+=" + ((images.length) * window.innerHeight),
