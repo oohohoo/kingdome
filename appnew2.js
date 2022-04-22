@@ -419,6 +419,38 @@ $(".popup-close, .popup").click(function() {
 }); 
 
 
+// AKAPOWL SCROLL SECTIONS
+
+
+gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
+
+var images = gsap.utils.toArray(".panel3");
+
+images.forEach((image, i) => {
+   
+   var tl = gsap.timeline({
+     
+     scrollTrigger: {
+			trigger: ".section-home-about-slider-real",
+      scroller: ".smooth-scroll",
+       
+       start: () => "top -" + (window.innerHeight * (i)),
+       
+       end: () => "+=" + window.innerHeight,
+       scrub: true,
+       toggleActions: "play none reverse none",
+       invalidateOnRefresh: true,     
+     }
+     
+   })
+   
+   tl
+   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
+  .to('.heading-large', {rotate: 45, scale: 0.9, duration: 0.4});
+
+   ;
+
+
 
 /*
 ================================================================================
@@ -1569,33 +1601,7 @@ HOME - ABOUT AKAPOWL SLIDER
 function homeAboutSlider() {
 
   
-  gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
-var images = gsap.utils.toArray(".panel3");
-
-images.forEach((image, i) => {
-   
-   var tl = gsap.timeline({
-     
-     scrollTrigger: {
-			trigger: ".section-home-about-slider-real",
-      scroller: ".smooth-scroll",
-       
-       start: () => "top -" + (window.innerHeight * (i)),
-       
-       end: () => "+=" + window.innerHeight,
-       scrub: true,
-       toggleActions: "play none reverse none",
-       invalidateOnRefresh: true,     
-     }
-     
-   })
-   
-   tl
-   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
-  .to('.heading-large', {rotate: 45, scale: 0.9, duration: 0.4});
-
-   ;
    
 });
  
