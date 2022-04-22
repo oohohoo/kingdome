@@ -549,7 +549,7 @@ ScrollTrigger.create({
     markers: true,
   
     /*---*/
-    pin: ".p-wrap",
+    pin: ".black",
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
