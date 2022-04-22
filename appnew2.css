@@ -490,9 +490,9 @@ LOADER
   height: var(--loader-height);
 }
 
-.inner-loader {
+/* .inner-loader {
   background-color: var(--bcg-loaderbluedark);
-}
+} */
 .loader__content {
   visibility: hidden;
    z-index: 5; 
