@@ -720,6 +720,7 @@ function initLoader() {
     .to(".aspect-video", { scale:1, duration: 1.5, ease:'expo.inOut'}, "+=0.2")
     .to(".homeani1", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
     .from(".header_redflag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
+    .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
     
     //.to('.main', {y: 0}, 0);
 
