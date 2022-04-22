@@ -559,7 +559,7 @@ ScrollTrigger.create({
 /* HEADER HIDE*/
 
 const showAnim = gsap.from('.header', { 
-  yPercent: -100,
+  yPercent: -200,
   paused: true,
   duration: 0.6
 }).progress(1);
