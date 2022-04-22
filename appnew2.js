@@ -1621,7 +1621,7 @@ ScrollTrigger.create({
     invalidateOnRefresh: true
       
 });
-
+console.log("JEBENI AKAPOWL LOADED");
 
 }
 
