@@ -421,7 +421,6 @@ $(".popup-close, .popup").click(function() {
 
 // AKAPOWL SCROLL SECTIONS
 
-
 gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
 var images = gsap.utils.toArray(".panel3");
