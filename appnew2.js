@@ -683,7 +683,7 @@ function initLoader() {
     //.set(".main", {y: 150})
 
     /* .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) */
-    .to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'})
+    /* .to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'}) */
    .from(targets, {autoAlpha: 1, y: 60, duration: 0.7, stagger: 0.12})
 
 
