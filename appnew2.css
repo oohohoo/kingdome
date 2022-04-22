@@ -451,7 +451,7 @@ box-shadow: 0px 0px 0px 0px
 }
 
 .w-input {
-  font-size: 0.75rem;
+  font-size: 0.75rem!important;
 }
 
 
