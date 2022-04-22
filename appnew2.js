@@ -1576,7 +1576,7 @@ function homeAboutSlider() {
      var tl = gsap.timeline({
        
        scrollTrigger: {
-        trigger: ".akatriger",
+        trigger: ".blacktrigger",
         scroller: ".smooth-scroll",
          
          start: () => "top -" + (window.innerHeight * (i)),
@@ -1600,7 +1600,7 @@ function homeAboutSlider() {
   
   ScrollTrigger.create({
   
-        trigger: ".akatriger",
+        trigger: ".blacktrigger",
         scroller: ".smooth-scroll",
       //markers: true,
     
