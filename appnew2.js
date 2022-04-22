@@ -657,6 +657,8 @@ function initLoader() {
 
   const fadeintxt = select('.home-hero-heading-wrapper');
   const txtdonji = select('.txtdonji');
+  const video = select('.home-hero-video');
+
  
 
 
@@ -681,6 +683,7 @@ function initLoader() {
     .set(mask, {yPercent: 0})
     .set(image, {yPercent: 100})
     .set(".homeani1", {autoAlpha:0})
+    .set(video, {scale:1.3})
     /* .set(fadeintxt, {autoAlpha: 0}) */
     
     //.set(".main", {y: 150})
@@ -716,6 +719,7 @@ function initLoader() {
     .to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'})
     .to(".homeani1", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<0.1")
     .from(".header_redflag", { yPercent:-100, ease:'expo.inOut'},  "<0.2")
+    .from(video, { scale:1, ease:'expo.inOut'},  0)
     //.to('.main', {y: 0}, 0);
 
   const tlLoader = gsap.timeline();
