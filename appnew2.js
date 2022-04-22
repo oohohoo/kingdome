@@ -1611,7 +1611,7 @@ ScrollTrigger.create({
   
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
-    invalidateOnRefresh: true,
+    /* invalidateOnRefresh: true, */
    
 });
 
