@@ -691,7 +691,7 @@ function initLoader() {
     });
     
  .from(targets, {
-      opacity: 0,
+  autoAlpha: 1,
       y: 60,
       duration: 0.7,
       stagger: 0.12
