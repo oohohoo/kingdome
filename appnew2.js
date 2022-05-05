@@ -383,7 +383,7 @@ sections.forEach((section) => {
       start: 'top 90%',
       end: "top top",
       scroller: ".smooth-scroll",
-      markers: true,
+    //  markers: true,
       scrub: 1,
       pin: false
     }
