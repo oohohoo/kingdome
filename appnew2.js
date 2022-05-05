@@ -970,34 +970,34 @@ BARBA VIEWS
      // document.getElementById('video').play();
       
 
-    console.log("Home ABOUT SLIDER!");
+    console.log("home JS triggered!");
     }},{
     namespace: 'products',
     beforeEnter(){
      /*  productsMainSwiper();
       resetLogo();
       simpleTickerHide(); */
-    console.log("Products JS triggered!");
+    console.log("products JS triggered!");
     }},{
-      namespace: 'productlottie',
+      namespace: 'productsingle',
     beforeEnter(data) {
       //soloProductsLottie(container);
       /* simpleTickerHide();
       productsoloAccordion(); */
-    console.log("Productlottie JS triggered!");
+    console.log("productsingle JS triggered!");
     }},{
-    namespace: 'about',
+    namespace: 'howwework',
     beforeEnter(data) {
       /* simpleTickerHide(); */
-    console.log("about JS triggered!");
+    console.log("howwework JS triggered!");
     }},{
-    namespace: 'conversation',
+    namespace: 'contact',
     beforeEnter(data) {
       //resetLogo();
     //simpleTickerHide();
-    console.log("about JS triggered!");
+    console.log("contact JS triggered!");
     }},{
-    namespace: 'contact',
+    namespace: 'privacy',
     beforeEnter(data) {
       /* simpleTickerHide(); */
      // resetLogo();
@@ -1005,9 +1005,20 @@ BARBA VIEWS
     //Webflow.require('ix2').init();
     //console.log("Webflow reinit ulalalalalala");
      // contactForm();
-    console.log("contact JS triggered!");
+    console.log("privacy JS triggered!");
       
-    }
+    }},{
+      namespace: 'faq',
+      beforeEnter(data) {
+        /* simpleTickerHide(); */
+       // resetLogo();
+      //  window.Webflow && window.Webflow.require('ix2').init();  
+      //Webflow.require('ix2').init();
+      //console.log("Webflow reinit ulalalalalala");
+       // contactForm();
+      console.log("faq JS triggered!");
+        
+      }
 
 }],
 /*
