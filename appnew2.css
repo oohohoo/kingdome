@@ -289,7 +289,7 @@ IS LOADING BACKGROUND COLOR
 GSAP PERFORMANCE FIX
 ================================================================================
 */
-.loader__title--mask, .nav-wrapper {
+.loader__title--mask, .nav-wrapper, .snake-scroll-panel {
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -348,7 +348,9 @@ header a.nav-link .w-inline-block .w--current span {
 */
 
 
-
+snake-scroll-panel {
+  will-change: transform;
+}
 /*
 ================================================================================
 HEADLINE - VW SIZE
