@@ -343,14 +343,13 @@ HOME - PARALLAX PANEL SOLO FOR EACH
 
 
 /* NEW*/
-
+/*
 const projectTriggers = document.querySelectorAll(".section-full-image");
 
 projectTriggers.forEach(addTimeline);
 
 function addTimeline(project, index) {
   const image = project.querySelector(".img__background");
-  /* const text = project.querySelector(".project-text"); */
   
   const timeline = gsap.timeline({
     scrollTrigger: {
@@ -370,8 +369,36 @@ function addTimeline(project, index) {
   });
   
 }
+*/
+const sections = gsap.utils.toArray(".section-full-image");
 
+sections.forEach((section) => {
+  
+  let image = section.querySelector(".img__background");
 
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".img__wrapper",
+     // start: 'top 90%',
+    //  end: "top top",
+      scroller: ".smooth-scroll",
+      markers: true,
+      scrub: 1,
+      pin: false
+    }
+  });
+
+  tl.from(image, {
+    yPercent: -80,
+    ease: "none",
+  });
+  tl.to(image, {
+    yPercent: 80,
+  ease: "none",
+  });
+ 
+  
+});
 
 
 
