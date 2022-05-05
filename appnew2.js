@@ -974,9 +974,9 @@ BARBA VIEWS
     }},{
     namespace: 'products',
     beforeEnter(){
-     /*  productsMainSwiper();
-      resetLogo();
-      simpleTickerHide(); */
+       productsMainSwiper();
+    //  resetLogo();
+    //  simpleTickerHide(); 
     console.log("products JS triggered!");
     }},{
       namespace: 'productsingle',
