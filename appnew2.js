@@ -376,7 +376,7 @@ const sections = gsap.utils.toArray(".section-full-image");
 sections.forEach((section) => {
   
   let image = section.querySelector(".img__background");
-gsap.set(image, {yPercent: -80, transformOrigin:"left center"})
+gsap.set(image, {yPercent: -80})
 
 
   let tl = gsap.timeline({
