@@ -384,7 +384,7 @@ sections.forEach((section) => {
     //  end: "top top",
       scroller: ".smooth-scroll",
     //  markers: true,
-      scrub: 1,
+      scrub: true,
       pin: false
     }
   });
