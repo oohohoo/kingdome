@@ -371,7 +371,7 @@ function addTimeline(project, index) {
 }
 */
 
-const sections = gsap.utils.toArray(".img__wrapper");
+const sections = gsap.utils.toArray(".section-full-image");
 
 sections.forEach((section) => {
   
@@ -379,11 +379,11 @@ sections.forEach((section) => {
 
   let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".img__wrapper",
+      trigger: ".img__background",
     //  start: 'top 90%',
     //  end: "top top",
       scroller: ".smooth-scroll",
-     markers: true,
+    // markers: true,
       scrub: true,
       pin: false
     }
