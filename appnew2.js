@@ -370,6 +370,7 @@ function addTimeline(project, index) {
   
 }
 */
+/*
 const sections = gsap.utils.toArray(".section-full-image");
 
 sections.forEach((section) => {
