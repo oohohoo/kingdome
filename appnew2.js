@@ -391,6 +391,7 @@ sections.forEach((section) => {
 
   tl.from(image, {
     yPercent: -80,
+    rotate:34,
     ease: "none",
   });
   tl.to(image, {
