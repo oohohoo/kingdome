@@ -982,8 +982,8 @@ BARBA VIEWS
       namespace: 'productsingle',
     beforeEnter(data) {
       //soloProductsLottie(container);
-      /* simpleTickerHide();
-      productsoloAccordion(); */
+      /* simpleTickerHide();*/
+      productsoloAccordion(); 
     console.log("productsingle JS triggered!");
     }},{
     namespace: 'howwework',
