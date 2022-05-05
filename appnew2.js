@@ -263,7 +263,7 @@ HOME - ROTATE WIREFRAME
       trigger: "#kupolewrap",
       pin: true,
       scrub:0.2,
-      start: 'top 50%',
+      start: 'top 80%',
       end:'+=10000',
      // transformOrigin:'center'
      // invalidateOnRefresh:true
