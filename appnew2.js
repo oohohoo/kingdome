@@ -1062,7 +1062,7 @@ BARBA TRANSITIONS
       //fullscreenMenu();
       //homeProductHover();
       //homeYoutube();
-     // productsMainSwiper();
+      productsMainSwiper();
            console.log("AFTER ENTER + logoanimacija2");
 
      },
