@@ -250,6 +250,32 @@ gsap.timeline({
 .to("#podloga", {
 	opacity:1, delay:6})
 
+
+  /*
+================================================================================
+HOME - ROTATE WIREFRAME
+================================================================================
+*/
+
+gsap.timeline({
+  scrollTrigger: {
+      scroller: ".smooth-scroll", 
+     trigger: ".kupola-wireframe",
+      /* markers: true, */
+      start: "top top", // when the top of the trigger hits the top of the viewport
+      end: "bottom 999999", // end after scrolling 500px beyond the start
+       scrub: true, 
+      /* pin:true, */
+      toggleActions: 'play reverse play reverse',
+      // invalidateOnRefresh: true,
+  }
+})
+
+.from(".kupola-wireframe", {
+	rotate:360})
+
+
+
 /*
 ================================================================================
 HOME - BIG KINGDOME SPLITTXT
