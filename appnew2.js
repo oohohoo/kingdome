@@ -265,7 +265,7 @@ HOME - ROTATE WIREFRAME
       scrub:0.2,
       start: 'top 80%',
       end:'+=10000',
-      transformOrigin:"center center"
+      transformOrigin:"center center",
       invalidateOnRefresh:true
     }
   })
