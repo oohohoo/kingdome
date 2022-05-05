@@ -257,23 +257,23 @@ HOME - ROTATE WIREFRAME
 ================================================================================
 */
 
-gsap.timeline({
-  scrollTrigger: {
-      scroller: ".smooth-scroll", 
-     trigger: ".kupola-wireframe",
-       markers: true, 
-      start: "top 50%", // when the top of the trigger hits the top of the viewport
-      end: "bottom 999999", // end after scrolling 500px beyond the start
-       scrub: true, 
-      /* pin:true, */
-      toggleActions: 'play reverse play reverse',
-      // invalidateOnRefresh: true,
-  }
-})
 
-.from(".kupola-wireframe", {
-	rotate:360})
+  var rotate = gsap.timeline({
+    scrollTrigger:{
+      trigger: "#kupolewrap",
+      pin: true,
+      scrub:0.2,
+      start: 'top top',
+      end:'+=10000',
+    }
+  })
+  .to('#wireframe', {
+    rotation:360*5,
+    duration:1, ease:'none',
+  })
+  
 
+  
 
 
 /*
