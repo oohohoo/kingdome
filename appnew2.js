@@ -265,13 +265,14 @@ HOME - ROTATE WIREFRAME
       scrub:0.2,
       start: 'top 99%',
       end:'+=10000',
-      invalidateOnRefresh:true
+      transformOrigin:'center'
+     // invalidateOnRefresh:true
     }
   })
   .to('#wireframe', {
     rotation:360*5,
     duration:1, ease:'none',
-    transformOrigin:'center'
+    
   })
   
 
