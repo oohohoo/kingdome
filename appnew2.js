@@ -158,7 +158,7 @@ window.addEventListener('resize', function(){
   setTimeout(()=>{
   locoScroll.update();
   ScrollTrigger.refresh();
-},200) 
+},100) 
  console.log("RESIZE & REFRESH LOCO&SCROLLTRIGGER");
 });
 
@@ -608,7 +608,7 @@ ScrollTrigger.create({
   
     /*---*/
     pin: ".picturewrap",
-  
+  r
     start: () => "top top",
     end: () => "+=" + ((images.length) * window.innerHeight),
     invalidateOnRefresh: true,
