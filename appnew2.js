@@ -257,13 +257,13 @@ HOME - ROTATE WIREFRAME
 ================================================================================
 */
 
-/*
+
   var rotate = gsap.timeline({
     scrollTrigger:{
       trigger: "#kupolewrap",
       pin: true,
       scrub:0.2,
-      start: 'top 99%',
+      start: 'top 50%',
       end:'+=10000',
      // transformOrigin:'center'
      // invalidateOnRefresh:true
