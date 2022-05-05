@@ -1584,35 +1584,46 @@ PRODUCT SOLO - ACCORDION
 */
 function productsoloAccordion() {
   
-  var animations = $(".accordion-group").map(createAnimation);
-
-  $(".accordion-menu").click(playAnimation);
-  
-  function playAnimation(event) {
-    
-    var selected = this;
-    
-    animations.each(function(i, animate) {
-      animate(selected);
-      
-    });
-  }
-  
-  function createAnimation(i, element) {
-      
-    var menu = element.querySelector(".accordion-menu");
-    var box  = element.querySelector(".accordion-content");
-    
-    gsap.set(box, { height: "auto"})
-    var tween = gsap.from(box, { duration:0.5, height: 0, ease: Power1.easeInOut }).reverse();
-    
-    return function(selected) {
-      
-      var reversed = selected !== menu ? true : !tween.reversed();
-      tween.reversed(reversed);
+  class Accordion {
+    constructor(accordion) {
+        this.button = accordion.querySelector(".accordion__button");
+        this.content = accordion.querySelector(".accordion__content");
+        this.icon = accordion.querySelector(".accordion__icon");
+        this.line = this.icon.querySelector(".line--scale");
+        this.setInitialState();
+        this.animation();
+        this.eventListener();
     }
-  }
-  
+
+    setInitialState() {
+        gsap.set(this.content, { height: "auto" });
+    }
+
+    animation() {
+        this.animation = gsap
+            .timeline()
+            .to(this.icon, { rotate: "90deg", ease: "power3.inOut" })
+            .to(this.line, { scaleY: 0, ease: "power3.inOut" }, 0)
+            .from(
+                this.content,
+                { height: 0, duration: 0.5, ease: "power3.inOut" },
+                0
+            )
+            .reverse();
+    }
+
+    eventListener() {
+        this.button.addEventListener("click", () => {
+            this.animation.reversed
+                ? this.animation.reversed(!this.animation.reversed())
+                : this.animation.reverse();
+        });
+    }
+}
+
+const accordions = [...document.querySelectorAll(".accordion")];
+
+accordions.forEach((accordion) => new Accordion(accordion));
 
   
 }
