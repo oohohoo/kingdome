@@ -265,8 +265,8 @@ HOME - ROTATE WIREFRAME
       scrub:0.2,
       start: 'top 80%',
       end:'+=10000',
-      transformOrigin:"center"
-     // invalidateOnRefresh:true
+      transformOrigin:"center center"
+      invalidateOnRefresh:true
     }
   })
   .to('#wireframe', {
@@ -376,6 +376,8 @@ const sections = gsap.utils.toArray(".section-full-image");
 sections.forEach((section) => {
   
   let image = section.querySelector(".img__background");
+.set(image, {yPercent: -80, transformOrigin:"left center"})
+
 
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -383,7 +385,7 @@ sections.forEach((section) => {
     //  start: 'top 90%',
     //  end: "top top",
       scroller: ".smooth-scroll",
-     markers: true,
+   //  markers: true,
       scrub: true,
       pin: false
     }
@@ -391,7 +393,7 @@ sections.forEach((section) => {
 
   tl.from(image, {
     yPercent: -80,
-    rotate:34,
+  //  rotate:34,
     ease: "none",
   });
   tl.to(image, {
