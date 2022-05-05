@@ -257,7 +257,7 @@ HOME - ROTATE WIREFRAME
 ================================================================================
 */
 
-
+/*
   var rotate = gsap.timeline({
     scrollTrigger:{
       trigger: "#kupolewrap",
