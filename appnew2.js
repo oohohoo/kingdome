@@ -371,7 +371,7 @@ function addTimeline(project, index) {
 }
 */
 
-const sections = gsap.utils.toArray(".section-full-image");
+const sections = gsap.utils.toArray(".img__background");
 
 sections.forEach((section) => {
   
