@@ -291,8 +291,8 @@ const swiper = new Swiper(slider, {
   spaceBetween: 16,
   slidesPerView: "2.3",
   centeredSlides: true,
- // loopedSlides: slides.length,
- // loop: true,
+  loopedSlides: slides.length,
+  loop: true,
   allowTouchMove: true,
   grabCursor: true
 });
@@ -321,7 +321,10 @@ slider.addEventListener("click", () => {
     sliderContainer.appendChild(sliderInner);
     lightbox.classList.remove("active");
     gsap.to(slider, {
-      scale: 1
+      scale: 1, onComplete:function() {
+        swiper.update();
+        console.log("SWIPER REFRESHHHH AFTER FLIP");
+                 }
     });
   }
 
