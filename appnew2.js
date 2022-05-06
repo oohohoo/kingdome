@@ -307,7 +307,7 @@ slider.addEventListener("click", () => {
     lightbox.classList.add("active");
 
     gsap.to(slider, {
-      scale: 1.2
+      scale: 1.4
     });
   } else {
     sliderContainer.appendChild(sliderInner);
