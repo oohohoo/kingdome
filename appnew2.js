@@ -290,7 +290,7 @@ const lightbox = document.querySelector(".lightbox");
 const swiper = new Swiper(slider, {
   spaceBetween: 16,
   slidesPerView: "2.3",
-  //centeredSlides: true,
+  centeredSlides: true,
   loopedSlides: slides.length,
   loop: true,
   allowTouchMove: true,
@@ -307,7 +307,7 @@ slider.addEventListener("click", () => {
     lightbox.classList.add("active");
 
     gsap.to(slider, {
-      scale: 1.4
+      scale: 1.6
     });
   } else {
     sliderContainer.appendChild(sliderInner);
