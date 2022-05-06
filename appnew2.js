@@ -311,7 +311,7 @@ slider.addEventListener("click", () => {
         swiper.update();
         console.log("SWIPER REFRESHHHH AFTER FLIP");
                  }
-g
+
      
 
 
