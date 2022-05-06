@@ -698,11 +698,11 @@ figure:not(:last-child) {
   overflow: visible;
   max-width: 1240px;
 }
-/*
+
 .swiper-slide {
   width: auto;
 }
-*/
+
 .swiper-button-prev,
 .swiper-button-next {
   background: #fff;
