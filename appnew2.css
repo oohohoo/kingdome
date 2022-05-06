@@ -688,14 +688,9 @@ PHOTOSWIPE CSS
 figure {
   margin: 0;
 }
+
 figure:not(:last-child) {
   margin-right: 20px;
-}
-
-figcaption {
-  margin-top: 5px;
-  opacity: 0.5;
-  font-size: 13px;
 }
 
 .swiper-container {
@@ -703,11 +698,11 @@ figcaption {
   overflow: visible;
   max-width: 1240px;
 }
-
+/*
 .swiper-slide {
   width: auto;
 }
-
+*/
 .swiper-button-prev,
 .swiper-button-next {
   background: #fff;
