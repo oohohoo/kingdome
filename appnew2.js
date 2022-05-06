@@ -1613,7 +1613,10 @@ function productsoloAccordion() {
                          } },
               0
           )
-          .reverse();
+          .reverse(onComplete:function() {
+            locoScroll.update();
+            console.log("locoscroll updated after accordio REVERSE...");
+                     });
           
   }
 
