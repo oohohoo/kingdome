@@ -1010,6 +1010,7 @@ BARBA VIEWS
     }},{
       namespace: 'faq',
       beforeEnter(data) {
+        productsoloAccordion(); 
         /* simpleTickerHide(); */
        // resetLogo();
       //  window.Webflow && window.Webflow.require('ix2').init();  
