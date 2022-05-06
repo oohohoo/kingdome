@@ -718,9 +718,9 @@ if (swiperFreemode.length) {
 
     // Swiper instance
     const swiperFreeModeInstance = new Swiper(swiper, {
-      slidesPerView: 'auto',
+      slidesPerView: '1.2',
       grabCursor: true,
-      freeMode: true,
+     // freeMode: true,
       spaceBetween: 20,
       speed: 700,
        navigation: {
