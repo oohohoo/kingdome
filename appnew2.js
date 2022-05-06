@@ -1602,7 +1602,10 @@ function productsoloAccordion() {
 
     animation() {
       this.animation = gsap
-          .timeline()
+          .timeline({onReverseComplete:function() {
+            locoScroll.update();
+            console.log("locoscroll updated after REVERSE...");
+                     } })
           .to(this.icon, { rotate: "90deg", ease: "power3.inOut" })
           .to(this.line, { scaleY: 0, ease: "power3.inOut" }, 0)
           .from(
@@ -1613,10 +1616,7 @@ function productsoloAccordion() {
                          } },
               0
           )
-          .reverse(onComplete:function() {
-            locoScroll.update();
-            console.log("locoscroll updated after accordio REVERSE...");
-                     });
+          .reverse();
           
   }
 
