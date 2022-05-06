@@ -275,8 +275,60 @@ HOME - ROTATE WIREFRAME
     
   })
   
-
+  /*
+================================================================================
+PRODUCTS SOLO - SWIPER + FLIP ZOOM
+================================================================================
+*/
   
+const slider = document.querySelector(".swiper");
+const slides = slider.querySelectorAll(".swiper-slide");
+const sliderInner = document.querySelector(".slider-inner");
+const sliderContainer = document.querySelector(".slider-container");
+const lightbox = document.querySelector(".lightbox");
+
+const swiper = new Swiper(slider, {
+  spaceBetween: 65,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  loopedSlides: slides.length,
+  loop: true,
+  allowTouchMove: true,
+  grabCursor: true
+});
+
+slider.addEventListener("click", () => {
+  // Flip.fit(sliderInner, sliderContainer, { scale: true });
+
+  const state = Flip.getState(sliderInner);
+
+  if (sliderInner.parentNode === sliderContainer) {
+    lightbox.appendChild(sliderInner);
+    lightbox.classList.add("active");
+
+    gsap.to(slider, {
+      scale: 1.4
+    });
+  } else {
+    sliderContainer.appendChild(sliderInner);
+    lightbox.classList.remove("active");
+    gsap.to(slider, {
+      scale: 1
+    });
+  }
+
+  // Flip.from(state, {
+  //   duration: 1,
+  //   ease: "power1.inOut",
+  //   // scale: true,
+  //   // absolute: true,
+  //   onComplete() {
+  //     // swiper.update();
+  //   }
+  // });
+});
+
+
 
 
 /*
