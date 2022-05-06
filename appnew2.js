@@ -460,14 +460,7 @@ sections.forEach((section) => {
     yPercent: 80,
   ease: "none",
   });
- 
-  
 });
-
-
-
-
-
 
 
 /*
