@@ -532,7 +532,6 @@ $(".popup-close, .popup").click(function() {
 }); 
 
 
-
 /*
 ================================================================================
 HOME - PRODUCT HOVER 
@@ -1052,6 +1051,7 @@ BARBA VIEWS
     }},{
     namespace: 'privacy',
     beforeEnter(data) {
+      productsoloAccordion(); 
       /* simpleTickerHide(); */
      // resetLogo();
     //  window.Webflow && window.Webflow.require('ix2').init();  
