@@ -289,9 +289,9 @@ const lightbox = document.querySelector(".lightbox");
 
 const swiper = new Swiper(slider, {
   spaceBetween: 16,
-  slidesPerView: "1",
+  slidesPerView: "auto",
   centeredSlides: true,
-  loopedSlides: slides.length,
+ // loopedSlides: slides.length,
   loop: true,
   allowTouchMove: true,
   grabCursor: true
