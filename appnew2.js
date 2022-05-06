@@ -292,7 +292,7 @@ const swiper = new Swiper(slider, {
   slidesPerView: "2.3",
   centeredSlides: true,
  // loopedSlides: slides.length,
-  loop: true,
+ // loop: true,
   allowTouchMove: true,
   grabCursor: true
 });
