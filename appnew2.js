@@ -307,7 +307,7 @@ slider.addEventListener("click", () => {
     lightbox.classList.add("active");
 
     gsap.to(slider, {
-      scale: 1.6, onComplete:function() {
+      scale: 1.4, onComplete:function() {
         swiper.update();
         console.log("SWIPER REFRESHHHH AFTER FLIP");
                  }
