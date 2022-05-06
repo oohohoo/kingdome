@@ -1601,17 +1601,20 @@ function productsoloAccordion() {
     }
 
     animation() {
-        this.animation = gsap
-            .timeline()
-            .to(this.icon, { rotate: "90deg", ease: "power3.inOut" })
-            .to(this.line, { scaleY: 0, ease: "power3.inOut" }, 0)
-            .from(
-                this.content,
-                { height: 0, duration: 0.5, ease: "power3.inOut" },
-                0
-            )
-            .reverse();
-    }
+      this.animation = gsap
+          .timeline()
+          .to(this.icon, { rotate: "90deg", ease: "power3.inOut" })
+          .to(this.line, { scaleY: 0, ease: "power3.inOut" }, 0)
+          .from(
+              this.content,
+              { height: 0, duration: 0.5, ease: "power3.inOut", onComplete:function() {
+                locoScroll.update();
+                console.log("locoscroll updated after accordion...");
+                         } },
+              0
+          )
+          .reverse();
+  }
 
     eventListener() {
         this.button.addEventListener("click", () => {
@@ -1628,6 +1631,8 @@ accordions.forEach((accordion) => new Accordion(accordion));
 
   
 }
+
+
 
 /*
 ================================================================================
