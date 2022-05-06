@@ -1614,7 +1614,7 @@ function productsoloAccordion() {
               0
           )
           .reverse();
-          locoScroll.update();
+          
   }
 
     eventListener() {
