@@ -675,6 +675,16 @@ PHOTOSWIPE CSS
 
 
 /* PROJECTS SWIPER */
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+/* Swiper slides */
+.swiper-slide {
+	position: relative;
+}
 
 .slide-1 {
   background-color: #e67204;

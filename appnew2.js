@@ -786,7 +786,7 @@ const cursor = new MouseFollower({
 
 /* PROJECTS VERTICAL SCROLL SWIPER */
 
-var mySwiper = new Swiper ('.swiper-containerx', {
+var mySwiper = new Swiper ('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
