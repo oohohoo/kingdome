@@ -566,9 +566,9 @@ workLinks.forEach((link, index, value) => {
 
 gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
-var images = gsap.utils.toArray('.panel3:not(.purple)');
+var imagesxx = gsap.utils.toArray('.panel3:not(.purple)');
 
-images.forEach((image, i) => {
+imagesxx.forEach((image, i) => {
    
    var tl = gsap.timeline({
      
@@ -603,7 +603,7 @@ ScrollTrigger.create({
     pin: ".picturewrap",
   
     start: () => "top top",
-    end: () => "+=" + ((images.length) * window.innerHeight),
+    end: () => "+=" + ((imagesxx.length) * window.innerHeight),
     invalidateOnRefresh: true,
    
 });
