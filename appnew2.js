@@ -1159,7 +1159,7 @@ BARBA TRANSITIONS
      
       //animationEnter();
       //logoAnimacija();
-      fullscreenMenu();
+     // fullscreenMenu();
       //homeProductHover();
       //homeYoutube();
       //productsMainSwiper();
