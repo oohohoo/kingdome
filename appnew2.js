@@ -1360,16 +1360,19 @@ const closemenu = document.getElementById('close3d');
 
 const { gsap } = window;
 
-const btn2 = document.querySelector(".open3d");
 
-btn2.addEventListener("click", () => {
-	if (btn2.classList.contains("active")) {
-		btn2.classList.remove("active");
-		hide();
-	} else {
-		btn2.classList.add("active");
+const openbutt = document.querySelector(".open3d");
+openbutt.addEventListener("click", () => {
+	//	openbutt.classList.add("active");
 		show();
-	}
+
+});
+
+const closebutt = document.querySelector(".3dclose-button");
+closebutt.addEventListener("click", () => {
+//	openbutt.classList.remove("active");
+		hide();
+
 });
 
 
