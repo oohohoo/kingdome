@@ -786,7 +786,7 @@ const cursor = new MouseFollower({
 /* PROJEC TS - MAIN SLIDER - OBSERVER */
 
 let sectionsx = document.querySelectorAll(".project-section"),
-    images = document.querySelectorAll(".bg"),
+    imagesx = document.querySelectorAll(".bg"),
     headings = gsap.utils.toArray(".section-heading"),
     outerWrappers = gsap.utils.toArray(".outer"),
     innerWrappers = gsap.utils.toArray(".inner"),
@@ -809,12 +809,12 @@ function gotoSection(index, direction) {
       });
   if (currentIndex >= 0) { // The first time this function runs, current is -1
     gsap.set(sectionsx[currentIndex], { zIndex: 0 });
-    tl.to(images[currentIndex], { yPercent: -15 * dFactor })
+    tl.to(imagesx[currentIndex], { yPercent: -15 * dFactor })
       .set(sections[currentIndex], { autoAlpha: 0 });
   }
   gsap.set(sectionsx[index], { autoAlpha: 1, zIndex: 1 });
   tl.fromTo([outerWrappers[index], innerWrappers[index]], {yPercent: i => i ? -100 * dFactor : 100 * dFactor}, { yPercent: 0 }, 0)
-    .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
+    .fromTo(imagesx[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
     .fromTo(splitHeadings[index].chars, {autoAlpha: 0, yPercent: 150 * dFactor}, {
         autoAlpha: 1,
         yPercent: 0,
