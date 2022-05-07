@@ -956,6 +956,7 @@ BARBA VIEWS
       namespace: 'productsingle',
     beforeEnter(data) {
       fullscreenMenu();
+      fullscreen3D();
       //soloProductsLottie(container);
       /* simpleTickerHide();*/
       productsoloAccordion(); 
@@ -990,6 +991,7 @@ BARBA VIEWS
       namespace: 'faq',
       beforeEnter(data) {
         fullscreenMenu();
+       
         productsoloAccordion(); 
         /* simpleTickerHide(); */
        // resetLogo();
@@ -1341,6 +1343,85 @@ $( "#totop" ).on( "click", function() {
 	});
 	});
 }
+
+
+/*
+================================================================================
+FULLSCREEN 3D
+================================================================================
+*/
+function fullscreen3D() {
+  // OPEN MENU FROM CLICK
+const openmenu = document.getElementById('open3d');
+const closemenu = document.getElementById('closemenu');
+//const menuhover = document.getElementById('menuhover');
+
+
+const { gsap } = window;
+
+const btn2 = document.querySelector(".open3d");
+
+btn2.addEventListener("click", () => {
+	if (btn2.classList.contains("active")) {
+		btn2.classList.remove("active");
+		hide();
+	} else {
+		btn2.classList.add("active");
+		show();
+	}
+});
+
+
+// --- SHOW
+function show() {
+	let tl = gsap.timeline();
+
+	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
+  gsap.set(".fs-menu--column", {yPercent:-100})
+  gsap.set(".fs-menu-header", {yPercent:-110})
+ 
+  gsap.set(".close, .link-wrapper, .big-body, .fadein", {autoAlpha:0})
+ 
+  //gsap.set(".line-wrapper", {yPercent:100})
+
+ 
+
+	tl.fromTo(".nav-wrapper2", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
+    .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "power2.inOut"}, "<")
+    .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "power2.out"}, "<0.2")
+   
+    .to(".link-wrapper", {autoAlpha:1, duration:0.5,stagger:0.1,  ease: "power2.inOut"}, "<0.1")
+    .to(".fadein", {autoAlpha:1, duration:0.6, ease: "power2.inOut"}, "<0.1")
+
+
+		.to(".open", {autoAlpha:0}, "<")
+		.to(".close", {autoAlpha:1}, "<")
+    
+		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
+		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
+		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
+    
+    .set(".nav-wrapper2, .open3d", {pointerEvents: "all"}, "<")
+
+}
+// --- HIDE
+function hide() {
+	let tl = gsap.timeline();
+
+	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
+
+		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
+		.to(".nav-wrapper2", { duration: 0.1, transformOrigin: "top center", height: "0%"})
+		.to(".open", {autoAlpha:1}, "<")
+		.to(".close", {autoAlpha:0}, "<")
+    .set(" .open3d", { pointerEvents: "all"});
+	
+}
+
+
+}
+
+
 
 
 
