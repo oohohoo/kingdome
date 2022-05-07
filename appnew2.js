@@ -785,14 +785,14 @@ const cursor = new MouseFollower({
 
 /* PROJEC TS - MAIN SLIDER - OBSERVER */
 
-let sections = document.querySelectorAll(".project-section"),
+let sectionsx = document.querySelectorAll(".project-section"),
     images = document.querySelectorAll(".bg"),
     headings = gsap.utils.toArray(".section-heading"),
     outerWrappers = gsap.utils.toArray(".outer"),
     innerWrappers = gsap.utils.toArray(".inner"),
     splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
     currentIndex = -1,
-    wrap = gsap.utils.wrap(0, sections.length - 1),
+    wrap = gsap.utils.wrap(0, sectionsx.length - 1),
     animating;
 
 gsap.set(outerWrappers, { yPercent: 100 });
@@ -808,11 +808,11 @@ function gotoSection(index, direction) {
         onComplete: () => animating = false,
       });
   if (currentIndex >= 0) { // The first time this function runs, current is -1
-    gsap.set(sections[currentIndex], { zIndex: 0 });
+    gsap.set(sectionsx[currentIndex], { zIndex: 0 });
     tl.to(images[currentIndex], { yPercent: -15 * dFactor })
       .set(sections[currentIndex], { autoAlpha: 0 });
   }
-  gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+  gsap.set(sectionsx[index], { autoAlpha: 1, zIndex: 1 });
   tl.fromTo([outerWrappers[index], innerWrappers[index]], {yPercent: i => i ? -100 * dFactor : 100 * dFactor}, { yPercent: 0 }, 0)
     .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
     .fromTo(splitHeadings[index].chars, {autoAlpha: 0, yPercent: 150 * dFactor}, {
