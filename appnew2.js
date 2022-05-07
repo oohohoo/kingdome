@@ -258,7 +258,7 @@ FULLSCREEN MENU
 
   // OPEN MENU FROM CLICK
 const openmenu = document.getElementById('openmenux');
-const closemenu = document.getElementById('closemenux');
+const closemenu = document.getElementById('closemenu');
 //const menuhover = document.getElementById('menuhover');
 
 
@@ -275,6 +275,7 @@ btn.addEventListener("click", () => {
 		show();
 	}
 });
+
 
 // --- SHOW
 function show() {
