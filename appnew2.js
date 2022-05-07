@@ -1051,7 +1051,7 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-      fullscreenMenu();
+     // fullscreenMenu();
    
     /*   bigLogo();
       homeProductHover();
@@ -1065,7 +1065,7 @@ BARBA VIEWS
     }},{
     namespace: 'products',
     beforeEnter(){
-      fullscreenMenu();
+     // fullscreenMenu();
       // productsMainSwiper();
        projectMainSwiper();
     //  resetLogo();
@@ -1074,7 +1074,7 @@ BARBA VIEWS
     }},{
       namespace: 'productsingle',
     beforeEnter(data) {
-      fullscreenMenu();
+     // fullscreenMenu();
       //soloProductsLottie(container);
       /* simpleTickerHide();*/
       productsoloAccordion(); 
@@ -1082,20 +1082,20 @@ BARBA VIEWS
     }},{
     namespace: 'howwework',
     beforeEnter(data) {
-      fullscreenMenu();
+     // fullscreenMenu();
       /* simpleTickerHide(); */
    
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-      fullscreenMenu();
+     // fullscreenMenu();
       //resetLogo();
     //simpleTickerHide();
     
     }},{
     namespace: 'privacy',
     beforeEnter(data) {
-      fullscreenMenu();
+     // fullscreenMenu();
       productsoloAccordion(); 
       /* simpleTickerHide(); */
      // resetLogo();
@@ -1108,7 +1108,7 @@ BARBA VIEWS
     }},{
       namespace: 'faq',
       beforeEnter(data) {
-        fullscreenMenu();
+      //  fullscreenMenu();
         productsoloAccordion(); 
         /* simpleTickerHide(); */
        // resetLogo();
