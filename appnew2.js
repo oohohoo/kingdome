@@ -183,12 +183,12 @@ ScrollTrigger.defaults( {
 ALL - FADE IN ON ENTER
 ================================================================================
 */
-  gsap.utils.toArray('.block1').forEach((el, i) => {
+ /* gsap.utils.toArray('.block1').forEach((el, i) => {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
        // markers: true,
-        /* scroller: ".smooth-scroll", */
+        // scroller: ".smooth-scroll", 
         start: 'top bottom',
         toggleActions: 'play reverse play reverse',
         end: "top top",
