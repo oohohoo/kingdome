@@ -617,7 +617,7 @@ window.addEventListener('resize', function(){
 });
 
 
-
+fullscreenMenu();
 
 
 
