@@ -3,6 +3,7 @@
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(Observer);
 
 let locoScroll;
 
@@ -829,7 +830,7 @@ function gotoSection(index, direction) {
   currentIndex = index;
 }
 
-ScrollTrigger.observe({
+Observer.create({
   type: "wheel,touch,pointer",
   wheelSpeed: -1,
   onDown: () => {
