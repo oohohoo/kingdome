@@ -738,14 +738,14 @@ BARBA PAGE TRANSITION IN
 function pageTransitionIn({
   container
 }) {
- // console.log('pageTransitionIn');
+  console.log('pageTransitionIn');
   // timeline to stretch the loader over the whole screen
   const tl = gsap.timeline({defaults: {duration: 0.6,ease: 'power1.inOut'} });
   tl
     .set(loaderInner, {autoAlpha: 0})
     .fromTo(loader, {yPercent: -100}, {yPercent: 0})
     .fromTo(loaderMask, {yPercent: 80}, {yPercent: 0}, 0)
-    //.to(container, {y: 150}, 0);
+    .to(container, {y: 150}, 0);
 
   return tl;
 }
@@ -758,7 +758,7 @@ BARBA PAGE TRANSITION OUT
 function pageTransitionOut({
   container
 }) {
-  //console.log('pageTransitionOut');
+  console.log('pageTransitionOut');
   // timeline to move loader away down
   const tl = gsap.timeline({defaults: {duration: 0.6,ease: 'power1.inOut'},
   // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
@@ -767,7 +767,7 @@ function pageTransitionOut({
   tl
     .to(loader, {yPercent: 100})
     .to(loaderMask, {yPercent: -80}, 0)
-    //.from(container, {y: -150}, 0);
+    .from(container, {y: -150}, 0);
   return tl;
 }
 
