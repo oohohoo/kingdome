@@ -276,7 +276,6 @@ btn.addEventListener("click", () => {
 	}
 });
 
-
 // --- SHOW
 function show() {
 	let tl = gsap.timeline();
