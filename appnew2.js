@@ -786,10 +786,9 @@ const cursor = new MouseFollower({
 
 /* PROJECTS VERTICAL SCROLL SWIPER */
 
-
 var mySwiper = new Swiper ('.swiper-containerx', {
   // Optional parameters
-  direction: 'vertical',
+  direction: 'horizontal',
   loop: true,
   speed: 1200,
   grabCursor: true,
@@ -839,6 +838,8 @@ var currentSubtitle = $(mySwiper.slides[mySwiper.activeIndex]).attr("data-subtit
 $(".slide-captions").html(function() {
 return "<h2 class='current-title'>" + currentTitle + "</h2>" + "<h3 class='current-subtitle'>" + currentSubtitle + "</h3>";
 });
+
+
 
 
 /*
