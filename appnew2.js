@@ -811,7 +811,7 @@ function gotoSection(index, direction) {
   if (currentIndex >= 0) { // The first time this function runs, current is -1
     gsap.set(sectionsx[currentIndex], { zIndex: 0 });
     tl.to(imagesx[currentIndex], { yPercent: -15 * dFactor })
-      .set(sections[currentIndex], { autoAlpha: 0 });
+      .set(sectionsx[currentIndex], { autoAlpha: 0 });
   }
   gsap.set(sectionsx[index], { autoAlpha: 1, zIndex: 1 });
   tl.fromTo([outerWrappers[index], innerWrappers[index]], {yPercent: i => i ? -100 * dFactor : 100 * dFactor}, { yPercent: 0 }, 0)
