@@ -1367,8 +1367,8 @@ openbutt.addEventListener("click", () => {
 		show();
 
 });
-
-const closeclose = document.querySelector(".3dclose-button");
+const closeclose = document.getElementById('closeclose');
+//const closeclose = document.querySelector(".3dclose-button");
 closeclose.addEventListener("click", () => {
 //	openbutt.classList.remove("active");
 		hide();
