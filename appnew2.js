@@ -1,14 +1,14 @@
 // v.2022 
 
 
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(Observer);
 
 let locoScroll;
 
 /*TURN OFF GSAP MESSAGES*/
-//gsap.config({ nullTargetWarn: false });
+gsap.config({ nullTargetWarn: false });
 
 /*
 ================================================================================
@@ -223,35 +223,6 @@ HOME - LOGO ANIMACIJA
   .to(".header-znak", { scale: 0.6, duration: 0.7, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
 
-
-/*
-================================================================================
-HOME - KUPOLA DRAWSVG
-================================================================================
-*/
-
-gsap.timeline({
-  scrollTrigger: {
-     /* scroller: ".smooth-scroll", */
-     trigger: "#kingdomeare",
-      /* markers: true, */
-      start: "top top", // when the top of the trigger hits the top of the viewport
-      end: "bottom 0%", // end after scrolling 500px beyond the start
-     /*  scrub: true, */
-      /* pin:true, */
-      toggleActions: 'play reverse play reverse',
-      // invalidateOnRefresh: true,
-  }
-})
-
-.set("#podloga", {opacity:0})
-
-.from("#plane path", {
-	drawSVG:0, delay:1, repeat: -1, yoyo: true, duration:1, ease:"power1.in", stagger:0.1})
-.to("#podloga", {
-	opacity:1, delay:6})
-
-
   /*
 ================================================================================
 HOME - ROTATE WIREFRAME
@@ -275,11 +246,7 @@ HOME - ROTATE WIREFRAME
     duration:1, ease:'none',
     
   })
-  
  
-
-
-
 /*
 ================================================================================
 HOME - BIG KINGDOME SPLITTXT
@@ -336,45 +303,9 @@ HOME - PARALLAX PANEL SOLO FOR EACH
 ================================================================================
 */
 
+const sections = gsap.utils.toArray(".section-full-image");
 
-
-
-
-
-
-
-/* NEW*/
-/*
-const projectTriggers = document.querySelectorAll(".section-full-image");
-
-projectTriggers.forEach(addTimeline);
-
-function addTimeline(project, index) {
-  const image = project.querySelector(".img__background");
-  
-  const timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".img__wrapper",
-      scroller: ".smooth-scroll",
-      scrub: true,
-      pin: false,
-    }
-  })
-  .from(image, {
-    yPercent: -80,
-  ease: "none",
-  })
-  .to(image, {
-    yPercent: 80,
-  ease: "none",
-  });
-  
-}
-*/
-
-const sectionsold = gsap.utils.toArray(".section-full-image");
-
-sectionsold.forEach((section) => {
+sections.forEach((section) => {
   
   let image = section.querySelector(".img__background");
 //gsap.set(image, {yPercent: -80})
