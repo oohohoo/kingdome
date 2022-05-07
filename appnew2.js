@@ -1355,6 +1355,7 @@ function fullscreen3D() {
 const openmenu = document.getElementById('open3d');
 const closemenu = document.getElementById('close3d');
 
+
 //const menuhover = document.getElementById('menuhover');
 
 
@@ -1362,6 +1363,8 @@ const { gsap } = window;
 
 
 const openbutt = document.querySelector(".open3d");
+const api = document.querySelector(".sketchfab-embed-wrapper");
+
 openbutt.addEventListener("click", () => {
 	//	openbutt.classList.add("active");
 		show();
