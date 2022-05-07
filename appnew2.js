@@ -787,14 +787,15 @@ const cursor = new MouseFollower({
 /* PROJEC TS - MAIN SLIDER - OBSERVER */
 
 
-    let sectionsx = document.querySelectorAll(".project-section"),
-    imagesx = document.querySelectorAll(".bg"),
+
+let sections = document.querySelectorAll(".sectionx"),
+    images = document.querySelectorAll(".bg"),
     headings = gsap.utils.toArray(".section-heading"),
     outerWrappers = gsap.utils.toArray(".outer"),
     innerWrappers = gsap.utils.toArray(".inner"),
     splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
     currentIndex = -1,
-    wrap = gsap.utils.wrap(0, sectionsx.length - 1),
+    wrap = gsap.utils.wrap(0, sections.length - 1),
     animating;
 
 gsap.set(outerWrappers, { yPercent: 100 });
@@ -810,13 +811,13 @@ function gotoSection(index, direction) {
         onComplete: () => animating = false,
       });
   if (currentIndex >= 0) { // The first time this function runs, current is -1
-    gsap.set(sectionsx[currentIndex], { zIndex: 0 });
-    tl.to(imagesx[currentIndex], { yPercent: -15 * dFactor })
-      .set(sectionsx[currentIndex], { autoAlpha: 0 });
+    gsap.set(sections[currentIndex], { zIndex: 0 });
+    tl.to(images[currentIndex], { yPercent: -15 * dFactor })
+      .set(sections[currentIndex], { autoAlpha: 0 });
   }
-  gsap.set(sectionsx[index], { autoAlpha: 1, zIndex: 1 });
+  gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
   tl.fromTo([outerWrappers[index], innerWrappers[index]], {yPercent: i => i ? -100 * dFactor : 100 * dFactor}, { yPercent: 0 }, 0)
-    .fromTo(imagesx[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
+    .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
     .fromTo(splitHeadings[index].chars, {autoAlpha: 0, yPercent: 150 * dFactor}, {
         autoAlpha: 1,
         yPercent: 0,
@@ -835,16 +836,16 @@ Observer.create({
   type: "wheel,touch,pointer",
   wheelSpeed: -1,
   onDown: () => {
-    !animating && gotoSectionx(currentIndex - 1, -1)
+    !animating && gotoSection(currentIndex - 1, -1)
   },
   onUp: () => {
-    !animating && gotoSectionx(currentIndex + 1, 1)
+    !animating && gotoSection(currentIndex + 1, 1)
   },
   tolerance: 10,
   preventDefault: true,
 });
 
-gotoSectionx(0, 1);
+gotoSection(0, 1);
 
 
 /*

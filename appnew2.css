@@ -727,6 +727,7 @@ figure:not(:last-child) {
 
 /******* PROJECT MAIN SLIDER - OBSERVER*/
 
+
 * {
   box-sizing: border-box;
   user-select: none;
@@ -743,24 +744,49 @@ body {
   height: 100vh;
   color: white;
   background: black;
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
 }
 
+h2 {
+  font-size: clamp(1rem, 5vw, 5rem);
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  color: #cccccc;
+  width: 90vw;
+  max-width: 1200px;
+}
 
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 3;
+  height: 7em;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(0.66rem, 2vw, 1rem);
+  letter-spacing: 0.5em;
+}
 
-.project-section {
+.sectionx {
   height: 100%;
   width: 100%;
   top: 0;
   position: fixed;
   visibility: hidden;
 }
-.project-section .outer,
-.project-section .inner {
+.sectionx .outer,
+.sectionx .inner {
   width: 100%;
   height: 100%;
   overflow-y: hidden;
 }
-.project-section .bg {
+.sectionx .bg {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -771,10 +797,10 @@ body {
   background-size: cover;
   background-position: center;
 }
-.project-section .bg h1 {
+.sectionx .bg h2 {
   z-index: 2;
 }
-.project-section .bg .clip-text {
+.sectionx .bg .clip-text {
   overflow: hidden;
 }
 
@@ -789,7 +815,6 @@ body {
 .third .bg {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(https://images.unsplash.com/photo-1617438817509-70e91ad264a5?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU2MDk4Mg&ixlib=rb-1.2.1&q=75&w=1920);
 }
-
 
 /*
 ================================================================================
