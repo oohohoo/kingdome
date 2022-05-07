@@ -1372,6 +1372,7 @@ const closeclose = document.getElementById('closeclose');
 closeclose.addEventListener("click", () => {
 //	openbutt.classList.remove("active");
 		hide();
+    api.stop();
 
 });
 
@@ -1421,6 +1422,7 @@ function hide() {
     .set(" .open3d", { pointerEvents: "all"});
 	
 }
+
 
 
 }
