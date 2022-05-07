@@ -786,7 +786,8 @@ const cursor = new MouseFollower({
 
 /* PROJEC TS - MAIN SLIDER - OBSERVER */
 
-let sectionsx = document.querySelectorAll(".project-section"),
+
+    let sectionsx = document.querySelectorAll(".project-section"),
     imagesx = document.querySelectorAll(".bg"),
     headings = gsap.utils.toArray(".section-heading"),
     outerWrappers = gsap.utils.toArray(".outer"),
@@ -844,7 +845,6 @@ Observer.create({
 });
 
 gotoSection(0, 1);
-
 
 
 /*
