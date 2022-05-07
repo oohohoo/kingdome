@@ -1892,7 +1892,7 @@ var mySwiper = new Swiper ('.swiper-container', {
   mousewheel: true,
 
   effect: "slide",
-  autoplay: false,
+  autoplay: true,
   parallax: true,
   watchSlidesProgress: true, // turn off for horizontal
   mousewheelControl: 1,
