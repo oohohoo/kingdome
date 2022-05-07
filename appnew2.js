@@ -1353,7 +1353,7 @@ FULLSCREEN 3D
 function fullscreen3D() {
   // OPEN MENU FROM CLICK
 const openmenu = document.getElementById('open3d');
-const closemenu = document.getElementById('closemenu');
+const closemenu = document.getElementById('close3d');
 //const menuhover = document.getElementById('menuhover');
 
 
