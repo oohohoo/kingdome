@@ -751,6 +751,19 @@ figure:not(:last-child) {
 
 
 
+.slide-1 {
+  background-color: #e67204;
+}
+.slide-2 {
+  background-color: #3bab24;
+}
+.slide-3 {
+  background-color: #922b1d;
+}
+
+
+
+
 /*
 ================================================================================
 MEDIA QUERY
