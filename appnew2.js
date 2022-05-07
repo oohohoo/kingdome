@@ -744,7 +744,7 @@ if (swiperFreemode.length) {
 /* CUBERTO MOUSE FOLLOWER */
 
 const cursor = new MouseFollower({
-  el: null,
+  el: ".cursor",
   container: document.body,
   className: "mf-cursor",
   innerClassName: "mf-cursor-inner",
