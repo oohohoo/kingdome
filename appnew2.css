@@ -725,6 +725,31 @@ figure:not(:last-child) {
   color: #ccc;
 }
 
+/* PROJECTS SWIPER */
+.slide-captions .current-title {
+  margin: 0;
+	font-size: 48px;
+}
+.slide-captions .current-subtitle {
+  margin: 10px 0 0 0;
+	font-size: 28px;
+}
+
+/* Swiper arrows */
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+/* Swiper pagination */
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 50px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+
+
 
 /*
 ================================================================================
