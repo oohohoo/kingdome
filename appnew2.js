@@ -955,7 +955,7 @@ BARBA TRANSITIONS
       /*  homeProductHover(); */
        //homeYoutube();
        //logoAnimacija();
-       fullscreenMenu();
+     //  fullscreenMenu();
        //homeanimations();
         console.log("ONCE + logoanimacija1");
      },
@@ -980,13 +980,13 @@ BARBA TRANSITIONS
       //fullscreenMenu();
       //homeProductHover();
       //homeYoutube();
-      productsMainSwiper();
+      //productsMainSwiper();
            console.log("AFTER ENTER + logoanimacija2");
 
      },
      
      beforeEnter({next}) {
-      hideMenu();
+    //  hideMenu();
     //  videoReload();
       //
        /*
