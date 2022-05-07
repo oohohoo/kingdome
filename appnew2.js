@@ -714,7 +714,7 @@ function initContent() {
 
   select('body').classList.remove('is-loading');
   initScroll();
-console.log("Locoscroll+Scrolltrigger loaded after preloader done");
+
 
   //initNavigation();
   //initHeaderTilt();
@@ -727,7 +727,6 @@ console.log("Locoscroll+Scrolltrigger loaded after preloader done");
    /* $(document).ready(function() {  */
   setTimeout(() => {
     ScrollTrigger.refresh(true);
-    console.log("Locoscrollupdated + SCROLLTRIGGER NAKON 10000 SEKUNDI");
   }, 1000);
 /* }); */ 
 /*
@@ -796,6 +795,7 @@ function initPageTransitions() {
   });
 
   /* OVO JE UBAČENO*/
+  /*
   barba.hooks.after((data) => {
     let js = data.next.container.querySelectorAll('main script');
     if(js != null){
@@ -806,7 +806,7 @@ function initPageTransitions() {
     }
    console.log("SCRIPTS EVALUATED NO PROBLEM");
 });
-
+*/
 
 barba.hooks.afterLeave((data) => {
   // Set <body> classes for "next" page
@@ -829,7 +829,6 @@ barba.hooks.afterLeave((data) => {
    //kill scrolltrigger
   barba.hooks.beforeLeave(() => {
     locoScroll.destroy();
-    console.log("Locomotive scroll destroyed!");
    /*  killScrollTriggers(); */
    if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
@@ -837,7 +836,6 @@ barba.hooks.afterLeave((data) => {
        // console.log("scrolltrigger killed...");
     });
 }
-    console.log("All ScrollTriggers destroyed!");
  
   });
   //init scrolltrigger
@@ -855,7 +853,7 @@ BARBA PREFETCH
 */
 
 barba.use(barbaPrefetch);
-console.log("Prefetch loaded");
+
 /*
 
 
@@ -885,7 +883,7 @@ BARBA VIEWS
      // document.getElementById('video').play();
       
 
-    console.log("home JS triggered!");
+  
     }},{
     namespace: 'products',
     beforeEnter(){
@@ -893,25 +891,25 @@ BARBA VIEWS
        projectMainSwiper();
     //  resetLogo();
     //  simpleTickerHide(); 
-    console.log("products JS triggered!");
+
     }},{
       namespace: 'productsingle',
     beforeEnter(data) {
       //soloProductsLottie(container);
       /* simpleTickerHide();*/
       productsoloAccordion(); 
-    console.log("productsingle JS triggered!");
+   
     }},{
     namespace: 'howwework',
     beforeEnter(data) {
       /* simpleTickerHide(); */
-    console.log("howwework JS triggered!");
+   
     }},{
     namespace: 'contact',
     beforeEnter(data) {
       //resetLogo();
     //simpleTickerHide();
-    console.log("contact JS triggered!");
+    
     }},{
     namespace: 'privacy',
     beforeEnter(data) {
@@ -922,7 +920,7 @@ BARBA VIEWS
     //Webflow.require('ix2').init();
     //console.log("Webflow reinit ulalalalalala");
      // contactForm();
-    console.log("privacy JS triggered!");
+   
       
     }},{
       namespace: 'faq',
@@ -934,7 +932,7 @@ BARBA VIEWS
       //Webflow.require('ix2').init();
       //console.log("Webflow reinit ulalalalalala");
        // contactForm();
-      console.log("faq JS triggered!");
+    
         
       }
 
@@ -957,7 +955,7 @@ BARBA TRANSITIONS
        //logoAnimacija();
      //  fullscreenMenu();
        //homeanimations();
-        console.log("ONCE + logoanimacija1");
+      
      },
 
      async leave({current}) {
@@ -981,7 +979,7 @@ BARBA TRANSITIONS
       //homeProductHover();
       //homeYoutube();
       //productsMainSwiper();
-           console.log("AFTER ENTER + logoanimacija2");
+        
 
      },
      
@@ -1109,7 +1107,7 @@ function resetLogo() {
  //.to(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
     .to(".header-znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
 
-    console.log("logoReseted");
+  
 
   /*
   gsap.to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
@@ -1139,7 +1137,7 @@ function bigLogo() {
   gsap.to(".red-flag",  {width:'8.5em', height:'10em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
   gsap.to(".znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<") */
 
-console.log("logoReseted");
+
 
 }
 
@@ -1280,100 +1278,6 @@ $( "#totop" ).on( "click", function() {
 }
 
 
-/*
-================================================================================
-PRODUCTS - SOLO PRODUCT LOTTIE - VIDEK
-================================================================================
-*/
-function soloProductsLottie() {
-
-class ScrubControlledAnimation {
-  constructor() {
-    this.DOM = {
-      animationWrapper: ".js-scrub-controlled-animation-wrapper",
-      animation: ".js-scrub-controlled-animation",
-      states: {}
-    };
-
-    this.animationWrapper = document.querySelector(this.DOM.animationWrapper);
-
-    this.animation = document.querySelector(this.DOM.animation);
-
-    this.init();
-  }
-
-  init() {
-    console.log("ScrubControlledAnimation init()");
-
-    if (this.animation) {
-      this.scrubAnimation();
-    }
-  }
-
-  scrubAnimation() {
-    const scrubAnimationOptions = {
-      container: this.animation,
-      renderer: "svg",
-      loop: true,
-      autoplay: false,
-      path: this.animation.getAttribute("data-animation-source")
-    };
-
-    /**
-     *
-     */
-    let scrubAnimation = lottie.loadAnimation(scrubAnimationOptions);
-
-    scrubAnimation.addEventListener("DOMLoaded", () => {
-      this.loadAnimation(scrubAnimation);
-    });
-  }
-
-  loadAnimation(animation) {
-    const scrubAnimationTimeline = gsap.timeline({}).to(
-      { frame: 0 },
-      {
-        duration: 1,
-        frame: animation.totalFrames - 1,
-        onUpdate: function () {
-          animation.goToAndStop(Math.round(this.targets()[0].frame), true);
-        }
-      },
-      "start"
-    );
-
-    ScrollTrigger.create({
-      trigger: this.animationWrapper,
-      animation: scrubAnimationTimeline,
-       scroller: ".smooth-scroll",
-      // markers: true,
-      pin:"#kingpin",
-      start: "top 20%",
-      end: "bottom top",
-      scrub: 0.4
-    });
-  }
-}
-
-new ScrubControlledAnimation();
-  
-/*
-================================================================================
-PRODUCTS - SOLO PRODUCT LOTTIE ELIPSE PIN
-================================================================================
-*/
-// -- ELIPSE PIN
-ScrollTrigger.create({
-  scroller: ".smooth-scroll",
-    trigger: "#elipsepin",
-    start: "top 30%", 
-  //  end: "bottom 30%",
-   end: "+=90%",
-    pin: ".elipse",
-     invalidateOnRefresh: true,
-  });
-
-
 }
 
 /*
@@ -1477,7 +1381,7 @@ function productsoloAccordion() {
       this.animation = gsap
           .timeline({onReverseComplete:function() {
             locoScroll.update();
-            console.log("locoscroll updated after REVERSE...");
+          
                      } })
           .to(this.icon, { rotate: "90deg", ease: "power3.inOut" })
           .to(this.line, { scaleY: 0, ease: "power3.inOut" }, 0)
@@ -1485,7 +1389,7 @@ function productsoloAccordion() {
               this.content,
               { height: 0, duration: 0.5, ease: "power3.inOut", onComplete:function() {
                 locoScroll.update();
-                console.log("locoscroll updated after accordion...");
+                
                          } },
               0
           )
@@ -1536,7 +1440,7 @@ function killandinitWebflow() {
   window.Webflow && window.Webflow.ready();
   window.Webflow && window.Webflow.require( 'ix2' ).init();
   document.dispatchEvent( new Event( 'readystatechange' ) );
-  console.log("webflow killed and init");
+
 
   
 }
@@ -1555,7 +1459,7 @@ function initVideo() {
 video.setAttribute('autoplay', true);
 video.load();
 
-  console.log("BACKGROOUND VIDEOS RELOADED");
+
 
 }
 
@@ -1579,7 +1483,6 @@ function simpleTicker() {
     );
 
 
-  console.log("simplde RELOADED");
 
 }
 
@@ -1592,7 +1495,7 @@ t.js SIMPLE TICKER - HIDE
 function simpleTickerHide() {
   gsap.to("#demo_3",  {autoAlpha:0, duration: 0.1});
 
-  console.log("+++++++++++++ticker hiden");
+ 
 
 }
 
@@ -1604,7 +1507,7 @@ t.js SIMPLE TICKER - SHOW
 function simpleTickerShow() {
   gsap.to("#demo_3",  {autoAlpha:1, duration: 0.1});
 
-  console.log("+++++++++++++ticker show");
+ 
 
 }
 
@@ -1629,7 +1532,7 @@ function hideMenu() {
     .set(" .nav-toggle", { pointerEvents: "all"});
 	
 
-console.log("menuHiddeeeeeeeee");
+
 
 }
 
