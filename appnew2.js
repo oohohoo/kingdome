@@ -592,6 +592,7 @@ imagesxx.forEach((image, i) => {
    
 });
  
+
 ScrollTrigger.create({
 
 			trigger: ".black",
