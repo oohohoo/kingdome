@@ -835,16 +835,16 @@ Observer.create({
   type: "wheel,touch,pointer",
   wheelSpeed: -1,
   onDown: () => {
-    !animating && gotoSection(currentIndex - 1, -1)
+    !animating && gotoSectionx(currentIndex - 1, -1)
   },
   onUp: () => {
-    !animating && gotoSection(currentIndex + 1, 1)
+    !animating && gotoSectionx(currentIndex + 1, 1)
   },
   tolerance: 10,
   preventDefault: true,
 });
 
-gotoSection(0, 1);
+gotoSectionx(0, 1);
 
 
 /*
