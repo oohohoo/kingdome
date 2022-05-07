@@ -606,7 +606,7 @@ function doCoolStuff() {
     // resize article block to accommodate new content
     animation.to(".article-block", {height:heights[activeTab]});
     // slide in new article
-    animation.to(articles[activeTab], {duration: 1, y:0, ease: "power1.Out"}, "-=0.25");
+    animation.to(articles[activeTab], {duration: 0.4, y:0, ease: "power1.Out"}, "-=0.25");
   }
 }
 
