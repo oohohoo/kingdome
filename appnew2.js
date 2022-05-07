@@ -281,7 +281,7 @@ btn.addEventListener("click", () => {
 function show() {
 	let tl = gsap.timeline();
 
-	gsap.set(".fullscreen-nav, .nav-toggle", {pointerEvents: "none"});
+	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
   gsap.set(".fs-menu--column", {yPercent:-100})
   gsap.set(".fs-menu-header", {yPercent:-110})
  
@@ -291,7 +291,7 @@ function show() {
 
  
 
-	tl.fromTo(".fullscreen-nav", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
+	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "power2.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "power2.out"}, "<0.2")
    
@@ -306,17 +306,17 @@ function show() {
 		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
-    .set(".fullscreen-nav, .nav-toggle", {pointerEvents: "all"}, "<")
+    .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
 
 }
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
 
-	gsap.set(".fullscreen-nav, .nav-toggle", {pointerEvents: "none"});
+	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
 		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
-		.to(".fullscreen-nav", { duration: 0.1, transformOrigin: "top center", height: "0%"})
+		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		.to(".open", {autoAlpha:1}, "<")
 		.to(".close", {autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
@@ -1592,10 +1592,10 @@ function hideMenu() {
   
   let tl = gsap.timeline();
 
-	gsap.set(".fullscreen-nav, .nav-toggle", {pointerEvents: "none"});
+	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
 		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.1, ease: "power2.inOut"})
-		.to(".fullscreen-nav", { duration: 0.1, transformOrigin: "top center", height: "0%"})
+		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		.to(".open", {duration:0.1, autoAlpha:1}, "<")
 		.to(".close", {duration:0.1, autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
