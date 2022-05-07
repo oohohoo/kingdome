@@ -601,8 +601,8 @@ function doCoolStuff() {
     animation.to(targets[old], {color:"#edeae4", ease:"none"}, 0);
     animation.to(targets[activeTab], {color:"#28282a", ease:"none"}, 0);
     // slide current article down out of view and then set it to starting position at top
-    animation.to(articles[old], {y:-heights[old], ease:"power1.Out" }, 0);
-    animation.set(articles[old], {y:-heights[old]});
+    animation.to(articles[old], {y:heights[old], ease:"power1.Out" }, 0);
+    animation.set(articles[old], {y:heights[old]});
     // resize article block to accommodate new content
     animation.to(".article-block", {height:heights[activeTab]});
     // slide in new article
