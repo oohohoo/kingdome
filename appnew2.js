@@ -612,7 +612,7 @@ function doCoolStuff() {
 
 
 window.addEventListener('resize', function(){
-  animation.to(".slider-tab", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
+  gsap.to(".slider-tab", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
  console.log("SLIDE TABS ON PLACE TRAVEL");
 });
 
