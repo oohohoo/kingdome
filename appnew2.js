@@ -772,7 +772,7 @@ function initContent() {
 
   select('body').classList.remove('is-loading');
   initScroll();
-  fullscreenMenu();
+ 
 
   //initNavigation();
   //initHeaderTilt();
@@ -932,6 +932,7 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
+      fullscreenMenu();
    
     /*   bigLogo();
       homeProductHover();
@@ -945,6 +946,7 @@ BARBA VIEWS
     }},{
     namespace: 'products',
     beforeEnter(){
+      fullscreenMenu();
       // productsMainSwiper();
        projectMainSwiper();
     //  resetLogo();
@@ -953,6 +955,7 @@ BARBA VIEWS
     }},{
       namespace: 'productsingle',
     beforeEnter(data) {
+      fullscreenMenu();
       //soloProductsLottie(container);
       /* simpleTickerHide();*/
       productsoloAccordion(); 
@@ -960,17 +963,20 @@ BARBA VIEWS
     }},{
     namespace: 'howwework',
     beforeEnter(data) {
+      fullscreenMenu();
       /* simpleTickerHide(); */
    
     }},{
     namespace: 'contact',
     beforeEnter(data) {
+      fullscreenMenu();
       //resetLogo();
     //simpleTickerHide();
     
     }},{
     namespace: 'privacy',
     beforeEnter(data) {
+      fullscreenMenu();
       productsoloAccordion(); 
       /* simpleTickerHide(); */
      // resetLogo();
@@ -983,6 +989,7 @@ BARBA VIEWS
     }},{
       namespace: 'faq',
       beforeEnter(data) {
+        fullscreenMenu();
         productsoloAccordion(); 
         /* simpleTickerHide(); */
        // resetLogo();
