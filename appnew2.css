@@ -675,6 +675,26 @@ PHOTOSWIPE CSS
 
 
 /* PROJECTS SWIPER */
+
+.slide-1 {
+  background-color: #e67204;
+}
+.slide-2 {
+  background-color: #3bab24;
+}
+.slide-3 {
+  background-color: #922b1d;
+}
+
+.slide-captions {
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	color: #FFF;
+	z-index: 999;
+	transform: translateY(-50%);
+}
+
 .slide-captions .current-title {
   margin: 0;
 	font-size: 48px;
@@ -700,15 +720,6 @@ PHOTOSWIPE CSS
 
 
 
-.slide-1 {
-  background-color: #e67204;
-}
-.slide-2 {
-  background-color: #3bab24;
-}
-.slide-3 {
-  background-color: #922b1d;
-}
 
 
 
