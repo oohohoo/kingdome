@@ -583,7 +583,7 @@ for (let i = 0; i < targets.length; i++) {
 gsap.set(articles[0], {y:0});
 gsap.set(".slider-tab", {x:targets[0].offsetLeft, width:targets[0].offsetWidth});
 gsap.set(targets[0], {color:"#28282a"});
-gsap.set(".article-block", {height:heights[0]});
+gsap.set(".article-block", {-height:heights[0]});
 
 function doCoolStuff() {
   // check if clicked target is new and if the timeline is currently active
