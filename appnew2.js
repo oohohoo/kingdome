@@ -7,7 +7,7 @@ gsap.registerPlugin(SplitText);
 let locoScroll;
 
 /*TURN OFF GSAP MESSAGES*/
-gsap.config({ nullTargetWarn: false });
+//gsap.config({ nullTargetWarn: false });
 
 /*
 ================================================================================
