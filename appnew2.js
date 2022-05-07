@@ -617,7 +617,7 @@ window.addEventListener('resize', function(){
 });
 
 
-fullscreenMenu();
+
 
 
 
@@ -772,7 +772,7 @@ function initContent() {
 
   select('body').classList.remove('is-loading');
   initScroll();
-
+  fullscreenMenu();
 
   //initNavigation();
   //initHeaderTilt();
