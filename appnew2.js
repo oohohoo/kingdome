@@ -1370,7 +1370,7 @@ openmenu.addEventListener('mouseover', ()=> {
   let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline
-    .to(".half", {width: "80%", duration: 0.1})
+    .to(".half", {width: "50%", duration: 0.1})
   //  .to(".mline3", {width: "55%"}, "<-0.05")
   })
 
