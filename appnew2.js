@@ -175,10 +175,6 @@ ScrollTrigger.defaults( {
 });
 
 
-
-
-
-
 /*
 ================================================================================
 LOCOMOTIVE SCROLL REFRESH AFTER ALL / ne briši
@@ -207,25 +203,7 @@ imagesLoaded("#main", { background: true }, function () {
   console.log("IMAGES LOADED - LOCOSCROLL UPDATED");
   });
 
-
-
-  /*
-================================================================================
-LOCOMOTIVE 4 SCROLL TO TOP
-================================================================================
-*/
-$( "#tostart" ).on( "click", function() {
-  locoScroll.scrollTo( '#start', {
-    'offset': 0,
-    'duration': 1500,
-    'easing': [0.25, 0.00, 0.35, 1.00],
-    'disableLerp': true
-  });
-  
-  console.log("SCROLLTOTOP");
-});
-
-  
+ 
 }
 
 /*
@@ -330,8 +308,13 @@ function initContent() {
 
   select('body').classList.remove('is-loading');
   initScroll();
- 
-
+  fullscreenMenu();
+  scrollToTop();
+  headerHide();
+  underline();
+  popupWizdome();
+  buttonHover();
+  logoTransformOnScroll();
   //initNavigation();
   //initHeaderTilt();
 
@@ -490,73 +473,49 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-      fullscreenMenu();
-   
-    /*   bigLogo();
+      rotateWireframe();
+      parallaxPanel();
       homeProductHover();
-      simpleTicker();
-      simpleTickerShow(); */
-     // homeAboutSlider(); 
-     // document.getElementById('video').play();
+      akapowPinned();
+      initVideo();
       
-
+  
   
     }},{
     namespace: 'products',
     beforeEnter(){
-      fullscreenMenu();
-      // productsMainSwiper();
        projectMainSwiper();
-    //  resetLogo();
-    //  simpleTickerHide(); 
 
     }},{
       namespace: 'productsingle',
     beforeEnter(data) {
-      fullscreenMenu();
+      productsTabs(); 
       fullscreen3D();
-      //soloProductsLottie(container);
-      /* simpleTickerHide();*/
       productsoloAccordion(); 
    
     }},{
     namespace: 'howwework',
     beforeEnter(data) {
-      fullscreenMenu();
-      /* simpleTickerHide(); */
+      akapowPinned();
+
+     
    
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-      fullscreenMenu();
-      //resetLogo();
-    //simpleTickerHide();
+      
     
     }},{
     namespace: 'privacy',
     beforeEnter(data) {
-      fullscreenMenu();
+      
       productsoloAccordion(); 
-      /* simpleTickerHide(); */
-     // resetLogo();
-    //  window.Webflow && window.Webflow.require('ix2').init();  
-    //Webflow.require('ix2').init();
-    //console.log("Webflow reinit ulalalalalala");
-     // contactForm();
-   
       
     }},{
       namespace: 'faq',
       beforeEnter(data) {
-        fullscreenMenu();
        
         productsoloAccordion(); 
-        /* simpleTickerHide(); */
-       // resetLogo();
-      //  window.Webflow && window.Webflow.require('ix2').init();  
-      //Webflow.require('ix2').init();
-      //console.log("Webflow reinit ulalalalalala");
-       // contactForm();
     
         
       }
@@ -596,15 +555,8 @@ BARBA TRANSITIONS
      },
      
      afterEnter({next}) {
-      //killandinitWebflow ();
-     
-      //animationEnter();
-      //logoAnimacija();
-      fullscreenMenu();
-      //homeProductHover();
-      //homeYoutube();
-      //productsMainSwiper();
-        
+      
+  
 
      },
      
@@ -612,14 +564,7 @@ BARBA TRANSITIONS
     //  hideMenu();
     initVideo();
     console.log("video initializzzzzzz");
-      //
-       /*
-      window.Webflow && window.Webflow.destroy();
-      window.Webflow && window.Webflow.ready();
-      window.Webflow && window.Webflow.require('ix2').init();   
-      */
-
-     
+    
      },
   
    
@@ -769,13 +714,6 @@ function bigLogo() {
 
 
 
-
-
-
-/****************** OOOLLLLLDDDDD**********************************************************************/
-
-
-
 /*
 ================================================================================
 FULLSCREEN MENU
@@ -858,7 +796,11 @@ function hide() {
 }
 
 
-
+/*
+================================================================================
+SUBMENU HOVER
+================================================================================
+*/
 //-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
 // loop through each element
@@ -876,33 +818,23 @@ $(el).on("mouseenter",function(){
 //-------
 
 /*
-	// MENU ICON MOUSEOVER 
-menuhover.addEventListener('mouseover', ()=> {  
-let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
-//animation.paused( true ); 
-menuhovertimeline
-.to(".mline2", {width: "100%", duration: 0.1})
-.to(".mline3", {width: "100%"}, "<-0.05")
-})
-// MENU ICON MOUSEOUT 
-menuhover.addEventListener('mouseout', ()=> {  
-let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
-//animation.paused( true ); 
-menuhovertimeline
-.to(".mline2", {width: "80%", duration: 0.1})
-.to(".mline3", {width: "55%"}, "<-0.05")
-})
-
-
+================================================================================
+OVO JE MOŽDA NEPOTREBNO
+================================================================================
+*/
 // EVENT LISTENERS
 openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
 closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
+
+
+
+
+
+/*
+================================================================================
+MENU ICON HOVER
+================================================================================
 */
-
-
-
-
-  	// MENU ICON MOUSEOVER 
 
 //const menuhover = document.getElementById('menuhover');
 
@@ -912,7 +844,7 @@ openmenu.addEventListener('mouseover', ()=> {
   let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline
-    .to(".half", {width: "100%", duration: 0.2, transformOrigin: "center center"})
+  .to(".half", {width: "100%", duration: 0.2, transformOrigin: "center center"})
   //  .to(".mline3", {width: "100%"}, "<-0.05")
   })
   // MENU ICON MOUSEOUT 
@@ -920,7 +852,7 @@ openmenu.addEventListener('mouseover', ()=> {
   let menuhovertimeline2 = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline2
-    .to(".half", {width: "50%", duration: 0.2, transformOrigin: "center center"})
+  .to(".half", {width: "50%", duration: 0.2, transformOrigin: "center center"})
   //  .to(".mline3", {width: "55%"}, "<-0.05")
   })
 
@@ -929,7 +861,7 @@ openmenu.addEventListener('mouseover', ()=> {
     let menuhovertimeline3 = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
     menuhovertimeline3
-      .to(".closex", {scale:0.8, duration: 0.2, transformOrigin:"50% 50%"})
+    .to(".closex", {scale:0.8, duration: 0.2, transformOrigin:"50% 50%"})
     //  .to(".mline3", {width: "100%"}, "<-0.05")
     })
     // MENU ICON MOUSEOUT 
@@ -937,7 +869,7 @@ openmenu.addEventListener('mouseover', ()=> {
     let menuhovertimeline4 = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
     menuhovertimeline4
-      .to(".closex", {scale:1, duration: 0.2, transformOrigin:"50% 50%"})
+    .to(".closex", {scale:1, duration: 0.2, transformOrigin:"50% 50%"})
     //  .to(".mline3", {width: "55%"}, "<-0.05")
     })
   
@@ -1032,85 +964,6 @@ function hide() {
 }
 
 
-
-
-
-
-/*
-================================================================================
-CONTACT - MULTILEVEL FORMA - NE RADI
-================================================================================
-*/
-function contactForm() {
-  var Webflow = Webflow || [];
-  Webflow.push(function () {
-    new AWF.MSF({hiddeButtonsOnSubmit: true, scrollTopOnStepChange: false, formSelector: '#msf', nextSelector: '#msf-next'});
-    
-  });
-
-
-// SWIPER
-// HORIZONTAL SWIPER DRAGGABLE
-
-var swipera = new Swiper('.swiper-container', {
-  pagination: '.swiper-pagination',
-  direction: 'horizontal',
-/* autoplay: {
-delay: 1000,
-disableOnInteraction: false,
-},*/
-freeMode: true,
-  //resistanceRatio:0.2,
-  slidesPerView: 3.2,
- // loopedSlides: 3,
-
-// centeredSlides: 0,
-//  longSwipes:true,
-//  longSwipesRatio:0.5,
- // touchRatio:5,
-loop: true,
-grabCursor: true,
-  //loopFillGroupWithBlank: false,
- // paginationClickable: true,
-  spaceBetween: 30,
- // mousewheelControl: true,
- // parallax: true,
- // preloadImages: true,
-  //updateOnImagesReady: true,
- // centeredSlides: true,
- //slidesOffsetBefore: 100,
-  //speed: 400,
-  breakpoints: {
-                  500: {
-                      spaceBetween: 30,
-                      loopedSlides: 3.2,
-                      slidesPerView: 1
-                  },
-                  1e3: {
-                      loopedSlides: 3,
-                      spaceBetween: 20,
-                      slidesPerView: 3.2
-                  },
-                  1200: {
-                      spaceBetween: 20,
-                      slidesPerView: 2.2
-                  }
-              }
-
-});
-
-$('swiper-slide').on('mousedown touchstart', function(event) {
-gsap.to('.swiper-slide', {scale: 0.9, duration: 0.4});
-
-});
-
-$('.swiper-slide').on('mouseup touchend', function(event) {
-gsap.to('.swiper-slide', {scale:1, duration: 0.4, delay:0.2});
-});
-
-  
-}
-
 /*
 ================================================================================
 PRODUCT SOLO - ACCORDION
@@ -1186,21 +1039,6 @@ function killScrollTriggers() {
   
 }
 /*
-================================================================================
-KILL OLD SCROLLTRIGGERS
-================================================================================
-*/
-function killandinitWebflow() {
-  
-  window.Webflow && window.Webflow.destroy();
-  window.Webflow && window.Webflow.ready();
-  window.Webflow && window.Webflow.require( 'ix2' ).init();
-  document.dispatchEvent( new Event( 'readystatechange' ) );
-
-
-  
-}
-
 
 /*
 ================================================================================
@@ -1220,52 +1058,6 @@ console.log("video initialised x");
 }
 
 
-/*
-================================================================================
-t.js SIMPLE TICKER
-================================================================================
-*/
-function simpleTicker() {
-  var tickr=[
-   
-    'HELLO',
-    'WE ARE KINGDOME',
-    'INNOVATIVE LUXURY CAMPING DOMES',
-    ];
-    
-    $('#ticker').t(
-    tickr.join(x='<ins>2</ins><del>*</del>')+x,
-    {speed:40,repeat:true,pause_on_click:true}
-    );
-
-
-
-}
-
-
-/*
-================================================================================
-t.js SIMPLE TICKER - HIDE
-================================================================================
-*/
-function simpleTickerHide() {
-  gsap.to("#demo_3",  {autoAlpha:0, duration: 0.1});
-
- 
-
-}
-
-/*
-================================================================================
-t.js SIMPLE TICKER - SHOW
-================================================================================
-*/
-function simpleTickerShow() {
-  gsap.to("#demo_3",  {autoAlpha:1, duration: 0.1});
-
- 
-
-}
 
 
 
@@ -1287,25 +1079,7 @@ function hideMenu() {
 		.to(".close", {duration:0.1, autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
 	
-
-
-
 }
-
-
-/*
-================================================================================
-HOME - ABOUT AKAPOWL SLIDER
-================================================================================
-*/
-function homeAboutSlider() {
-/* AKAPOWL GALLERY*/
-
-
-
-}
-
-
 
 
 /*
@@ -1354,19 +1128,447 @@ function projectMainSwiper() {
 }
 
 
+/*
+================================================================================
+FADE IN ON ENTER
+================================================================================
+*/
+function fadeInOnEnter() {
+  gsap.utils.toArray('.block1').forEach((el, i) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+       // markers: true,
+        /* scroller: ".smooth-scroll", */
+        start: 'top bottom',
+        toggleActions: 'play reverse play reverse',
+        end: "top top",
+      },
+      y: 100,
+      opacity: 0
+    })
+  });
+  console.log("FADE IN ON ENTER");
+}
+  
 
 /*
 ================================================================================
-SCROLL TO TOP
+HOME - LOGO TRANSFORM ON SCROLL
 ================================================================================
 */
+function logoTransformOnScroll() {
+  gsap.timeline({
+    scrollTrigger: {
+       /* scroller: ".smooth-scroll", */
+        trigger: "#start",
+        /* markers: true, */
+        start: "top top", // when the top of the trigger hits the top of the viewport
+        end: "+=10000000", // end after scrolling 500px beyond the start
+        toggleActions: 'play reverse play reverse',
+        invalidateOnRefresh: true,
+  
+    }
+  })
+
+  .to(".header_redflag",  {width:'4rem', height:'4rem', top: '-1.25rem', duration: 0.7, ease: "expo.inOut", }, 0)
+  .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.7, ease: "expo.inOut"}, 0)
+  .to(".header-znak", { scale: 0.6, duration: 0.7, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
+/*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
+
+  console.log("LOGO TRANSFORM ON SCROLL");
+}
+
 /*
-$( "#totop" ).on( "click", function() {
-	locoScroll.scrollTo( '#start', {
-		'offset': 0,
-		'duration': 1000,
-		//'easing': [0.25, 0.00, 0.35, 1.00],
-		'disableLerp': true
-	});
-	});
+================================================================================
+HOME - ROTATE WIREFRAME
+================================================================================
 */
+function rotateWireframe() {
+  var rotate = gsap.timeline({
+    scrollTrigger:{
+      trigger: "#wireframe-trigger",
+      //pin: true,
+      scrub:true,
+      start: 'top 80%',
+      end:'+=10000',
+     // transformOrigin:"center center",
+      invalidateOnRefresh:true
+    }
+  })
+  .to('#wireframe', {
+    rotation:360*3,
+    duration:3, transformOrigin:"50% 50%", ease:'none',
+    
+  })
+
+  console.log("ROTATE WIREFRAME");
+}
+
+/*
+================================================================================
+PARALLAX PANEL SOLO FOR EACH
+================================================================================
+*/
+function parallaxPanel() {
+  const sections = gsap.utils.toArray(".section-full-image");
+
+  sections.forEach((section) => {
+    
+    let image = section.querySelector(".img__background");
+  //gsap.set(image, {yPercent: -80})
+  
+  
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".img__wrapper",
+      //  start: 'top 90%',
+      //  end: "top top",
+       // scroller: ".smooth-scroll",
+     //  markers: true,
+        scrub: true,
+        pin: false
+      }
+    });
+  
+    tl.from(image, {
+      yPercent: -80,
+    //  rotate:34,
+      ease: "none",
+    });
+    tl.to(image, {
+      yPercent: 80,
+    ease: "none",
+    });
+  });
+  
+
+  console.log("PARALLAX PANEL SOLO FOR EACH");
+}
+
+
+/*
+================================================================================
+ALL - BOTTON HOVER
+================================================================================
+*/
+function buttonHover() {
+  gsap.set(".bar", {xPercent: -100, transformOrigin:"left center"})
+  gsap.set(".button-arrow", {x:'-5%'})
+  const btns = gsap.utils.toArray(".btn")
+  
+  btns.forEach((btn) =>{
+    let tl = gsap.timeline({paused:true, defaults:{duration:0.5, ease:"expo.out"}})
+    let bar = btn.querySelector(".bar")
+    let arrow = btn.querySelector(".button-arrow")
+    let exitTime = 0
+    tl.to(bar, {xPercent:0})
+    tl.to(arrow, {x:'0.5rem'},"<")
+      .addPause("exit")
+    exitTime = tl.duration()
+    tl.to(bar, {xPercent:100})
+    tl.to(arrow, {x:'0rem'},"<")
+  
+     btn.addEventListener("mouseenter", () => {
+      if(tl.time() < exitTime){
+        tl.play()
+      } else {
+        tl.restart()
+      }
+    })
+  
+    btn.addEventListener("mouseleave", () => {
+      if(tl.time() < exitTime){
+        tl.reverse()
+      } else {
+        tl.play()
+      }
+    })
+  })
+  console.log("BOTTON HOVER");
+}
+
+
+/*
+================================================================================
+ALL - POPUP - WIZDOME
+================================================================================
+*/
+function popupWizdome() {
+  gsap.from(".actual-message", 0.4, {
+    marginTop: "10%",
+    autoAlpha: 0,
+    ease: Back.easeOut,
+    delay: 1.5
+  });
+  gsap.to(".popup", 0.4, {
+    autoAlpha: 1,
+    delay: 10
+  });
+  
+  $(".popup-close, .popup").click(function() {
+    gsap.to(".actual-message", 0.2, {
+      marginTop: "10%",
+      autoAlpha: 0,
+      ease: "ease-in"
+    });
+  
+    gsap.to(".popup", 0.2, { 
+      autoAlpha: 0
+    });
+  }); 
+  console.log("POPUP - WIZDOME");
+}
+
+/*
+================================================================================
+HOME - PRODUCT HOVER 
+================================================================================
+*/
+function homeProductHover() {
+  
+/*   gsap.set(".rg__long", {autoAlpha:0, yPercent:-10}); */
+  
+  
+gsap.utils.toArray(".products-item").forEach(container => {
+   
+  let   dome = container.querySelector(".fake-king"),
+  // wrap = container.querySelector(".rg__wrap"),
+      name = container.querySelector(".product-title"),
+      //short = container.querySelector(".rg__short"),
+      long = container.querySelector(".rg__long"),
+      white = container.querySelector(".whiteback"),
+
+      tl = gsap.timeline({ defaults: { ease: "expo.inOut", duration: 0.5}, 
+      paused: true });
+  
+  
+  tl.to(dome, { yPercent: 100, autoAlpha:0 })
+  
+// .to(wrap, { backgroundColor:"#B6FA00" }, 0)
+    //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
+    .to(name, { yPercent:-10, autoAlpha:0 }, 0)
+   // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
+    .to(long, {autoAlpha:1, yPercent:10}, 0)
+    .to(white, {yPercent:-45}, 0);
+    
+     
+  container.addEventListener("mouseenter", () => tl.play() );
+  container.addEventListener("mouseleave", () => tl.reverse() );
+});
+  console.log("HOME - PRODUCT HOVER ");
+}
+
+/*
+================================================================================
+ALL - UNDERLINE GSAP
+================================================================================
+*/
+function underline() {
+  
+// Mouseenter function
+function enterAnimation(link, e, index) {
+  link.tl.tweenFromTo(0, "midway");
+}
+// Mouseleave function
+function leaveAnimation(link, e) {
+  link.tl.play();
+}
+// Animations variables
+let workLinkUnderlineAnimEnter;
+let workLinkUnderlineAnimLeave;
+
+// Get all links
+let workLinks = document.querySelectorAll(".link-inline");
+
+workLinks.forEach((link, index, value) => {
+  
+  let underline = link.querySelector(".underline");
+  link.tl = gsap.timeline({paused: true});
+  
+  link.tl.fromTo(underline, {width: "0%", left: "0%",}, 
+  {width: "100%", duration: 0.3, ease: "power1.out",});
+  		
+  link.tl.add("midway");
+  
+  link.tl.fromTo(underline, {width: "100%", left: "0%",}, 
+  {width: "0%", left: "100%", duration: 0.3, ease: "power1.in", immediateRender: false});
+
+  // Mouseenter
+  link.addEventListener("mouseenter", (e) => {
+    enterAnimation(link, e, index);
+  });
+
+  // Mouseleave
+  link.addEventListener("mouseleave", (e) => {
+    leaveAnimation(link, e);
+  });
+
+});
+  console.log("UNDERLINE GSAP");
+}
+
+
+/*
+================================================================================
+HOME + HOW WE WORK AKAPOWL PINNED
+================================================================================
+*/
+function akapowPinned() {
+
+  gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
+
+  var imagesxx = gsap.utils.toArray('.panel3:not(.purple)');
+  
+  imagesxx.forEach((image, i) => {
+     
+     var tl = gsap.timeline({
+       
+       scrollTrigger: {
+        trigger: ".black",
+        scroller: ".smooth-scroll",
+         
+         start: () => "top -" + (window.innerHeight * (i)),
+         
+         end: () => "+=" + window.innerHeight,
+         scrub: true,
+         toggleActions: "play none reverse none",
+         invalidateOnRefresh: true,     
+       }
+       
+     })
+     
+     tl
+     .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
+     ;
+     
+  });
+   
+  
+  ScrollTrigger.create({
+  
+        trigger: ".black",
+        scroller: ".smooth-scroll",
+      markers: false,
+    
+      /*---*/
+      pin: ".picturewrap",
+    
+      start: () => "top top",
+      end: () => "+=" + ((imagesxx.length) * window.innerHeight),
+      invalidateOnRefresh: true,
+     
+  });
+    console.log("UHOME + HOW WE WORK AKAPOWL PINNED");
+  }
+
+/*
+================================================================================
+HEADER HIDE
+================================================================================
+*/
+function headerHide() {
+  const showAnim = gsap.from('.header', { 
+    yPercent: -300,
+    paused: true,
+    duration: 0.2
+  }).progress(1);
+  
+  ScrollTrigger.create({
+    trigger: ".section-home-kingdome-are",
+    scroller: ".smooth-scroll",
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+      self.direction === -1 ? showAnim.play() : showAnim.reverse()
+    }
+  });
+  
+
+    console.log("HEADER HIDE");
+  }
+
+
+  /*
+================================================================================
+PRODUCT TABS
+================================================================================
+*/
+function productsTabs() {
+
+  let targets = document.querySelectorAll(".tab-item");
+  let articles = document.querySelectorAll(".article");
+  let activeTab = 0;
+  let old = 0;
+  let heights = [];
+  let dur = 0.4;
+  let animation;
+  
+  for (let i = 0; i < targets.length; i++) {
+    targets[i].index = i;
+    heights.push(articles[i].offsetHeight); // get height of each article
+    gsap.set(articles[i], {top: 0, y:-heights[i]}); // push all articles up out of view
+    targets[i].addEventListener("click", doCoolStuff);
+  }
+  // set initial article and position bubble slider on first tab 
+  gsap.set(articles[0], {y:0});
+  gsap.set(".slider-tab", {x:targets[0].offsetLeft, width:targets[0].offsetWidth});
+  gsap.set(targets[0], {color:"#28282a"});
+  gsap.set(".article-block", {height:heights[0]});
+  
+  function doCoolStuff() {
+    // check if clicked target is new and if the timeline is currently active
+    if(this.index != activeTab) {
+      //if there's an animation in-progress, jump to the end immediately so there aren't weird overlaps. 
+      if (animation && animation.isActive()) {
+        animation.progress(1);
+      }
+      animation = gsap.timeline({defaults:{duration:0.4}});
+      old = activeTab;
+      activeTab = this.index;
+      // animate bubble slider to clicked target
+      animation.to(".slider-tab", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
+      // change text color on old and new tab targets
+      animation.to(targets[old], {color:"#edeae4", ease:"none"}, 0);
+      animation.to(targets[activeTab], {color:"#28282a", ease:"none"}, 0);
+      // slide current article down out of view and then set it to starting position at top
+      animation.to(articles[old], {y:heights[old], ease:"power1.Out" }, 0);
+      animation.set(articles[old], {y:-heights[old]});
+      // resize article block to accommodate new content
+      animation.to(".article-block", {height:heights[activeTab]});
+      // slide in new article
+      animation.to(articles[activeTab], {duration: 0.4, y:0, ease: "power1.Out"}, "-=0.25");
+    }
+  }
+  
+  
+  window.addEventListener('resize', function(){
+    gsap.to(".slider-tab", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
+   console.log("SLIDE TABS ON PLACE TRAVEL");
+  });
+  
+  
+
+  console.log("PRODUCT TABS");
+}
+
+
+
+/*
+================================================================================
+LOCOMOTIVE 4 SCROLL TO TOP
+================================================================================
+*/
+
+function scrollToTop() {
+$( "#tostart" ).on( "click", function() {
+  locoScroll.scrollTo( '#start', {
+    'offset': 0,
+    'duration': 1500,
+    'easing': [0.25, 0.00, 0.35, 1.00],
+    'disableLerp': true
+  });
+  
+  console.log("SCROLL TO TOP");
+});
+}
