@@ -1188,6 +1188,7 @@ function rotateWireframe() {
   var rotate = gsap.timeline({
     scrollTrigger:{
       trigger: "#wireframe-trigger",
+      scroller: ".smooth-scroll",
       //pin: true,
       scrub:true,
       start: 'top 80%',
