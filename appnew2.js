@@ -1217,35 +1217,7 @@ PARALLAX PANEL SOLO FOR EACH
 function parallaxPanel() {
 
 
-  let targets = gsap.utils.toArray(".section-full-image");
-  let imagex = document.querySelectorAll(".img__background");
 
-targets.forEach((target) => {
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: target,
-      scrub: true,
-      start: 'top 90%',
-      end: "top top",
-      scroller: ".smooth-scroll",
-     scrub: true,
-     pin: false
-    },
-    defaults: { ease: "none" }
-  });
-
-  tl.from(imagex, {
-    yPercent: -80,
-  //  rotate:34,
-    ease: "none",
-  });
-  tl.to(imagex, {
-    yPercent: 80,
-  ease: "none",
-  });
-});
-
-/*
   const sections = gsap.utils.toArray(".section-full-image");
 
   sections.forEach((section) => {
@@ -1275,7 +1247,7 @@ targets.forEach((target) => {
     ease: "none",
     });
   });
-  */
+
   console.log("PARALLAX PANEL SOLO FOR EACH -- novi");
 }
 
