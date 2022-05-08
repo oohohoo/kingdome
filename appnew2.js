@@ -1570,7 +1570,7 @@ function productsTabs() {
 LOCOMOTIVE 4 SCROLL TO TOP
 ================================================================================
 */
-
+/*
 function scrollToTop() {
 $( "#tostart" ).on( "click", function() {
   locoScroll.scrollTo( '#start', {
@@ -1582,4 +1582,4 @@ $( "#tostart" ).on( "click", function() {
   
   console.log("SCROLL TO TOP");
 });
-}
+}*/
