@@ -176,6 +176,15 @@ ScrollTrigger.defaults( {
 });
 
 
+// --- 017 - LOCOMOTIVE 4.0 SCROLL TO  --------------------------------------------------------------------------
+$( "#totop" ).on( "click", function() {
+	locoScroll.scrollTo( '#start', {
+		'offset': 0,
+		'duration': 1000,
+		//'easing': [0.25, 0.00, 0.35, 1.00],
+		'disableLerp': true
+	});
+	});
 
 
 /*
@@ -1341,15 +1350,31 @@ closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); 
 */
 
 
-// --- 017 - LOCOMOTIVE 4.0 SCROLL TO  --------------------------------------------------------------------------
-$( "#totop" ).on( "click", function() {
-	locoScroll.scrollTo( '#start', {
-		'offset': 0,
-		'duration': 1000,
-		//'easing': [0.25, 0.00, 0.35, 1.00],
-		'disableLerp': true
-	});
-	});
+
+
+  	// MENU ICON MOUSEOVER 
+
+const menuhover = document.getElementById('menuhover');
+
+
+menuhover.addEventListener('mouseover', ()=> {  
+  let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
+  //animation.paused( true ); 
+  menuhovertimeline
+    .to(".mline2", {width: "100%", duration: 0.1})
+    .to(".mline3", {width: "100%"}, "<-0.05")
+  })
+  // MENU ICON MOUSEOUT 
+  menuhover.addEventListener('mouseout', ()=> {  
+  let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
+  //animation.paused( true ); 
+  menuhovertimeline
+    .to(".mline2", {width: "80%", duration: 0.1})
+    .to(".mline3", {width: "55%"}, "<-0.05")
+  })
+
+  
+
 }
 
 
