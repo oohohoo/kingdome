@@ -281,12 +281,7 @@ GSAP PERFORMANCE FIX
 HIDE PAGE CONTENT BY DEFAULT
 ================================================================================
 */
-.is-loading #main,
- .is-loading .logo,
-.is-loading .burger, 
-.is-loading .menu-btn,
-.is-loading .header-big,
-.is-loading .fill-background {
+.is-loading #main {
   display: none;
 }
 
