@@ -1,5 +1,5 @@
 // v.2022 
-ODAVDE
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 //gsap.registerPlugin(Observer);
@@ -197,7 +197,7 @@ ScrollTrigger.refresh();
 LOCOMOTIVE SCROLL UPDATED AFTER IMAGESLOADED
 ================================================================================
 */
-
+/*
 imagesLoaded("#main", { background: true }, function () {
   locoScroll.update();
   console.log("IMAGES LOADED - LOCOSCROLL UPDATED ČEK DIS");
@@ -205,7 +205,7 @@ imagesLoaded("#main", { background: true }, function () {
 
  
 }
-
+*/
 /*
 ================================================================================
 PRELOADER --> vodi na --> INIT CONTENT
