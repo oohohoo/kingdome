@@ -445,7 +445,7 @@ barba.hooks.afterLeave((data) => {
   //  ScrollTrigger.getAll().forEach((trigger) => {
       //  trigger.kill()
        // console.log("scrolltrigger killed...");
-    });
+   // });
 }
  
   });
