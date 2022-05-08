@@ -1660,13 +1660,13 @@ INIT VIDEO
 */
 function initVideo() {
   
-  let video = body.querySelector('.home-hero-video');
+ // let video = body.querySelector('.home-hero-video');
 // const video = select('.background-video');
-  
+const video = document.getElementById('video');
 video.setAttribute('autoplay', true);
 video.load();
 
-
+console.log("video initialised x");
 
 }
 
