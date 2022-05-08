@@ -315,6 +315,7 @@ function initContent() {
   popupWizdome();
   buttonHover();
   logoTransformOnScroll();
+  akapowPinned();
   //initNavigation();
   //initHeaderTilt();
 
