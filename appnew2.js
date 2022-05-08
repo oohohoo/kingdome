@@ -1244,6 +1244,21 @@ btn.addEventListener("click", () => {
 });
 
 
+openmenu.addEventListener("click", () => {
+	//	openbutt.classList.add("active");
+		show();
+
+});
+//const closeclose = document.querySelector(".3dclose-button");
+closemenu.addEventListener("click", () => {
+//	openbutt.classList.remove("active");
+		hide();
+  //  api.stop();
+
+});
+
+
+
 // --- SHOW
 function show() {
 	let tl = gsap.timeline();
@@ -1375,7 +1390,7 @@ const closeclose = document.getElementById('closeclose');
 closeclose.addEventListener("click", () => {
 //	openbutt.classList.remove("active");
 		hide();
-    api.stop();
+  //  api.stop();
 
 });
 
