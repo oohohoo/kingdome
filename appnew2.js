@@ -1362,32 +1362,32 @@ openmenu.addEventListener('mouseover', ()=> {
   let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline
-    .to(".half", {width: "100%", duration: 0.2})
+    .to(".half", {width: "100%", duration: 0.2, transformOrigin: "center center"})
   //  .to(".mline3", {width: "100%"}, "<-0.05")
   })
   // MENU ICON MOUSEOUT 
   openmenu.addEventListener('mouseout', ()=> {  
-  let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
+  let menuhovertimeline2 = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
-  menuhovertimeline
-    .to(".half", {width: "50%", duration: 0.2})
+  menuhovertimeline2
+    .to(".half", {width: "50%", duration: 0.2, transformOrigin: "center center"})
   //  .to(".mline3", {width: "55%"}, "<-0.05")
   })
 
 /* CLOSEMENU HOVER ICON */
   closemenu.addEventListener('mouseover', ()=> {  
-    let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
+    let menuhovertimeline3 = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
-    menuhovertimeline
-      .to(".fs-menu-close", {rotate:90, duration: 0.2})
+    menuhovertimeline3
+      .to(".fs-menu-close", {rotate:90, duration: 0.2, transformOrigin: "center center"})
     //  .to(".mline3", {width: "100%"}, "<-0.05")
     })
     // MENU ICON MOUSEOUT 
     closemenu.addEventListener('mouseout', ()=> {  
-    let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
+    let menuhovertimeline4 = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
-    menuhovertimeline
-      .to(".fs-menu-close", {rotate:-90, duration: 0.2})
+    menuhovertimeline4
+      .to(".fs-menu-close", {rotate:-90, duration: 0.2, transformOrigin: "center center"})
     //  .to(".mline3", {width: "55%"}, "<-0.05")
     })
   
