@@ -1215,22 +1215,20 @@ PARALLAX PANEL SOLO FOR EACH
 ================================================================================
 */
 function parallaxPanel() {
-
-
-
   const sections = gsap.utils.toArray(".section-full-image");
 
   sections.forEach((section) => {
-  
+    
     let image = section.querySelector(".img__background");
   //gsap.set(image, {yPercent: -80})
-   
+  
+  
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".img__wrapper",
-        start: 'top 90%',
-        end: "top top",
-        scroller: ".smooth-scroll",
+      //  start: 'top 90%',
+      //  end: "top top",
+       // scroller: ".smooth-scroll",
      //  markers: true,
         scrub: true,
         pin: false
@@ -1247,8 +1245,9 @@ function parallaxPanel() {
     ease: "none",
     });
   });
+  
 
-  console.log("PARALLAX PANEL SOLO FOR EACH -- novi");
+  console.log("PARALLAX PANEL SOLO FOR EACH");
 }
 
 
