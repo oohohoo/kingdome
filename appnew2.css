@@ -282,14 +282,14 @@ HIDE PAGE CONTENT BY DEFAULT
 ================================================================================
 */
 /*.is-loading #main,
-/* .is-loading .logo,
-.is-loading .burger, */
+ .is-loading .logo,
+.is-loading .burger, 
 .is-loading .menu-btn,
 .is-loading .header-big,
 .is-loading .fill-background {
   display: none;
 }
-
+*/
 /*
 ================================================================================
 IS LOADING BACKGROUND COLOR
