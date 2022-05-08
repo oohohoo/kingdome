@@ -507,6 +507,7 @@ BARBA VIEWS
       productsoloAccordion(); 
    
     }},{
+      
     namespace: 'howwework',
     beforeEnter(data) {
       akapowPinned();
