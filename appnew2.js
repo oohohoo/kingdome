@@ -1245,19 +1245,12 @@ btn.addEventListener("click", () => {
 */
 
 openmenu.addEventListener("click", () => {
-	//	openbutt.classList.add("active");
 		show();
-
 });
-//const closeclose = document.querySelector(".3dclose-button");
+
 closemenu.addEventListener("click", () => {
-//	openbutt.classList.remove("active");
 		hide();
-  //  api.stop();
-
 });
-
-
 
 // --- SHOW
 function show() {
@@ -1378,7 +1371,6 @@ const { gsap } = window;
 
 
 const openbutt = document.querySelector(".open3d");
-const api = document.querySelector(".sketchfab-embed-wrapper");
 
 openbutt.addEventListener("click", () => {
 	//	openbutt.classList.add("active");
@@ -1401,9 +1393,9 @@ function show() {
 
 	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
   gsap.set(".fs-menu--column", {yPercent:-100})
-  gsap.set(".fs-menu-header", {yPercent:-110})
+  //gsap.set(".fs-menu-header", {yPercent:-110})
  
-  gsap.set(".close, .fs-nav-item, .sublink-wrapper, .fadein", {autoAlpha:0})
+  //gsap.set(".close, .fs-nav-item, .sublink-wrapper, .fadein", {autoAlpha:0})
  
   //gsap.set(".line-wrapper", {yPercent:100})
 
@@ -1413,12 +1405,12 @@ function show() {
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "power2.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "power2.out"}, "<0.2")
    
-    .to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.1,  ease: "power2.inOut"}, "<0.1")
-    .to(".fadein", {autoAlpha:1, duration:0.6, ease: "power2.inOut"}, "<0.1")
+   // .to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.1,  ease: "power2.inOut"}, "<0.1")
+   // .to(".fadein", {autoAlpha:1, duration:0.6, ease: "power2.inOut"}, "<0.1")
 
 
-		.to(".open", {autoAlpha:0}, "<")
-		.to(".close", {autoAlpha:1}, "<")
+	//	.to(".open", {autoAlpha:0}, "<")
+	//	.to(".close", {autoAlpha:1}, "<")
     
 		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
