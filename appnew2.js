@@ -354,7 +354,7 @@ function pageTransitionIn({
     .set(loaderInner, {autoAlpha: 0})
     .fromTo(loader, {yPercent: -100}, {yPercent: 0})
     .fromTo(loaderMask, {yPercent: 80}, {yPercent: 0}, 0)
-    .to(container, {y: 150}, 0);
+    //.to(container, {y: 150}, 0);
 
   return tl;
 }
@@ -369,15 +369,15 @@ function pageTransitionOut({
 }) {
   console.log('pageTransitionOut');
   // timeline to move loader away down
-  const tl = gsap.timeline({defaults: {duration: 0.6,ease: 'power1.inOut'},
+  const tl2 = gsap.timeline({defaults: {duration: 0.6, ease: 'power1.inOut'},
   // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
     onComplete: () => initContent()
   });
-  tl
+  tl2
     .to(loader, {yPercent: 100})
     .to(loaderMask, {yPercent: -80}, 0)
-    .from(container, {y: -150}, 0);
-  return tl;
+   // .from(container, {y: -150}, 0);
+  return tl2;
 }
 
 
