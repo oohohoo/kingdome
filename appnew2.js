@@ -1215,7 +1215,7 @@ PARALLAX PANEL SOLO FOR EACH
 ================================================================================
 */
 function parallaxPanel() {
-  const sections = gsap.utils.toArray(".section-full-image");
+  const sections = gsap.utils.toArray(".img__wrapper");
 
   sections.forEach((section) => {
     
