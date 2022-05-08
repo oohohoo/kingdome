@@ -244,15 +244,15 @@ HOME - ROTATE WIREFRAME
       trigger: "#kupolewrap",
       pin: true,
       scrub:0.2,
-      start: 'top 80%',
+      start: 'top 90%',
       end:'+=10000',
-      transformOrigin:"center center",
+     // transformOrigin:"center center",
       invalidateOnRefresh:true
     }
   })
   .to('#wireframe', {
     rotation:360*5,
-    duration:1, ease:'none',
+    duration:1, transformOrigin:"50% 50%", ease:'none',
     
   })
  
