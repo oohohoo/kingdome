@@ -1380,7 +1380,7 @@ openmenu.addEventListener('mouseover', ()=> {
     let menuhovertimeline3 = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
     menuhovertimeline3
-      .to(".closex", {rotate:90, duration: 0.2, transformOrigin:"50% 50%"})
+      .to(".closex", {scale:0.7, duration: 0.2, transformOrigin:"50% 50%"})
     //  .to(".mline3", {width: "100%"}, "<-0.05")
     })
     // MENU ICON MOUSEOUT 
@@ -1388,7 +1388,7 @@ openmenu.addEventListener('mouseover', ()=> {
     let menuhovertimeline4 = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
     menuhovertimeline4
-      .to(".closex", {rotate:-90, duration: 0.2, transformOrigin:"50% 50%"})
+      .to(".closex", {scale:1, duration: 0.2, transformOrigin:"50% 50%"})
     //  .to(".mline3", {width: "55%"}, "<-0.05")
     })
   
