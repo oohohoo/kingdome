@@ -242,7 +242,7 @@ HOME - ROTATE WIREFRAME
   var rotate = gsap.timeline({
     scrollTrigger:{
       trigger: "#wireframe-trigger",
-      pin: true,
+      //pin: true,
       scrub:0.2,
       start: 'top 80%',
       end:'+=10000',
