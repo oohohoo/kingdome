@@ -1217,8 +1217,9 @@ PARALLAX PANEL SOLO FOR EACH
 function parallaxPanel() {
 
 
-  let targets = gsap.utils.toArray(".img__background");
-
+  let targets = gsap.utils.toArray(".section-full-image");
+  let imagex = section.querySelector(".img__background");
+  
 targets.forEach((target) => {
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -1233,12 +1234,12 @@ targets.forEach((target) => {
     defaults: { ease: "none" }
   });
 
-  tl.from(target, {
+  tl.from(imagex, {
     yPercent: -80,
   //  rotate:34,
     ease: "none",
   });
-  tl.to(target, {
+  tl.to(imagex, {
     yPercent: 80,
   ease: "none",
   });
