@@ -1,7 +1,7 @@
 // v.2022 
 
 gsap.registerPlugin(ScrollTrigger);
-//gsap.registerPlugin(SplitText);
+gsap.registerPlugin(SplitText);
 //gsap.registerPlugin(Observer);
 
 let locoScroll;
@@ -153,7 +153,7 @@ if ( scrollbar.length > 1 ) {
 ON WINDOW RESIZE
 ================================================================================
 */
-/*
+
 window.addEventListener('resize', function(){
   setTimeout(()=>{
   locoScroll.update();
@@ -170,7 +170,6 @@ window.addEventListener('resize', function(){
 SCROLLTRIGGER DEFAULTS
 ================================================================================
 */
-/*
 ScrollTrigger.defaults( {
   scroller: ".smooth-scroll",
 });
@@ -317,7 +316,7 @@ function initContent() {
 
   select('body').classList.remove('is-loading');
   initScroll();
-  /*fullscreenMenu();
+  fullscreenMenu();
   scrollToTop();
   headerHide();
   underline();
@@ -336,7 +335,7 @@ function initContent() {
   ScrollTrigger.refresh(true); // ScrollTrigger Refresh
   console.log("scrolltrigger refreshed AFTER all script load"); */
    /* $(document).ready(function() {  */
-  /*setTimeout(() => {
+  setTimeout(() => {
     ScrollTrigger.refresh(true);
   }, 1000);
 /* }); */ 
@@ -348,7 +347,7 @@ BARBA PAGE TRANSITION IN
 function pageTransitionIn({
   container
 }) {
- // console.log('pageTransitionIn');
+  console.log('pageTransitionIn');
   // timeline to stretch the loader over the whole screen
   const tl = gsap.timeline({defaults: {duration: 0.6, ease: 'power1.inOut'} });
   tl
@@ -368,9 +367,9 @@ BARBA PAGE TRANSITION OUT
 function pageTransitionOut({
   container
 }) {
- // console.log('pageTransitionOut');
+  console.log('pageTransitionOut');
   // timeline to move loader away down
-  const tl = gsap.timeline({defaults: {duration: 0.6, ease: 'power1.inOut'},
+  const tl = gsap.timeline({defaults: {duration: 0.6,ease: 'power1.inOut'},
   // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
     onComplete: () => initContent()
   });
@@ -398,11 +397,11 @@ function initPageTransitions() {
 
   // do something before the transition starts
   barba.hooks.before(() => {
-   // select('html').classList.add('is-transitioning');
+    select('html').classList.add('is-transitioning');
   });
   // do something after the transition finishes
   barba.hooks.after(() => {
-   // select('html').classList.remove('is-transitioning');
+    select('html').classList.remove('is-transitioning');
   });
 
   /* OVO JE UBAČENO*/
@@ -421,10 +420,10 @@ function initPageTransitions() {
 
 barba.hooks.afterLeave((data) => {
   // Set <body> classes for "next" page
-//  var nextHtml = data.next.html;
- // var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
- // var bodyClasses = $(response).filter('notbody').attr('class')
- // $("body").attr("class", bodyClasses);
+  var nextHtml = data.next.html;
+  var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
+  var bodyClasses = $(response).filter('notbody').attr('class')
+  $("body").attr("class", bodyClasses);
   //  console.log("BODY CLASSES UPDATED");
 });
 
@@ -433,20 +432,20 @@ barba.hooks.afterLeave((data) => {
 
  // scroll to the top of the page
   barba.hooks.enter(() => {
-      //  window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         //strigtest();
    
   });
    //kill scrolltrigger
   barba.hooks.beforeLeave(() => {
-   // locoScroll.destroy();
+    locoScroll.destroy();
    /*  killScrollTriggers(); */
-  // if (ScrollTrigger.getAll().length > 0) {
-  //  ScrollTrigger.getAll().forEach((trigger) => {
-      //  trigger.kill()
+   if (ScrollTrigger.getAll().length > 0) {
+    ScrollTrigger.getAll().forEach((trigger) => {
+        trigger.kill()
        // console.log("scrolltrigger killed...");
-   // });
-//}
+    });
+}
  
   });
   //init scrolltrigger
@@ -485,31 +484,31 @@ BARBA VIEWS
   views: [{
     namespace: 'home',
     beforeEnter(data) {
-    //  rotateWireframe();
-     // parallaxPanel();
-    //  homeProductHover();
-    //  akapowPinned();
-    //  initVideo();
-    //  document.getElementById('video').play();
+      rotateWireframe();
+      parallaxPanel();
+      homeProductHover();
+      akapowPinned();
+      initVideo();
+      document.getElementById('video').play();
       
   
   
     }},{
     namespace: 'products',
     beforeEnter(){
-      // projectMainSwiper();
+       projectMainSwiper();
 
     }},{
       namespace: 'productsingle',
     beforeEnter(data) {
-    //  productsTabs(); 
-    //  fullscreen3D();
-    //  productsoloAccordion(); 
+      productsTabs(); 
+      fullscreen3D();
+      productsoloAccordion(); 
    
     }},{
     namespace: 'howwework',
     beforeEnter(data) {
-    //  akapowPinned();
+      akapowPinned();
 
      
    
@@ -522,13 +521,13 @@ BARBA VIEWS
     namespace: 'privacy',
     beforeEnter(data) {
       
-    //  productsoloAccordion(); 
+      productsoloAccordion(); 
       
     }},{
       namespace: 'faq',
       beforeEnter(data) {
        
-      //  productsoloAccordion(); 
+        productsoloAccordion(); 
     
         
       }
