@@ -1247,7 +1247,6 @@ function parallaxPanel() {
 
   
 
-
   const sections2 = gsap.utils.toArray(".img__wrapper2");
 
   sections2.forEach((section2) => {
