@@ -2,7 +2,7 @@
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
-gsap.registerPlugin(Observer);
+//gsap.registerPlugin(Observer);
 
 let locoScroll;
 
@@ -1245,40 +1245,7 @@ function parallaxPanel() {
     });
   });
 
-  
-
-  const sections2 = gsap.utils.toArray(".img__wrapper2");
-
-  sections2.forEach((section2) => {
-    
-    let image2 = section2.querySelector(".img__background2");
-  //gsap.set(image, {yPercent: -80})
-    
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".img__wrapper2",
-      //  start: 'top 90%',
-      //  end: "top top",
-        scroller: ".smooth-scroll",
-     //  markers: true,
-        scrub: true,
-        pin: false
-      }
-    });
-  
-    tl.from(image2, {
-      yPercent: -100,
-    //  rotate:34,
-      ease: "none",
-    });
-    tl.to(image2, {
-      yPercent: 100,
-    ease: "none",
-    });
-  });
-
-
-  console.log("PARALLAX PANEL SOLO FOR EACH");
+    console.log("PARALLAX PANEL SOLO FOR EACH");
 }
 
 
