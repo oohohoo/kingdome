@@ -316,7 +316,7 @@ function initContent() {
 
   select('body').classList.remove('is-loading');
   initScroll();
-  fullscreenMenu();
+  /*fullscreenMenu();
   scrollToTop();
   headerHide();
   underline();
@@ -325,7 +325,7 @@ function initContent() {
   logoTransformOnScroll();
   akapowPinned();
   rotateWireframe();
-  parallaxPanel();
+  parallaxPanel();*/
   //initNavigation();
   //initHeaderTilt();
 
