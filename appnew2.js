@@ -441,7 +441,7 @@ barba.hooks.afterLeave((data) => {
   barba.hooks.beforeLeave(() => {
    // locoScroll.destroy();
    /*  killScrollTriggers(); */
-   if (ScrollTrigger.getAll().length > 0) {
+  // if (ScrollTrigger.getAll().length > 0) {
   //  ScrollTrigger.getAll().forEach((trigger) => {
       //  trigger.kill()
        // console.log("scrolltrigger killed...");
