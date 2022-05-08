@@ -317,6 +317,7 @@ function initContent() {
   logoTransformOnScroll();
   akapowPinned();
   rotateWireframe();
+  parallaxPanel();
   //initNavigation();
   //initHeaderTilt();
 
