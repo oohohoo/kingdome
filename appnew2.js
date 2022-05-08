@@ -290,7 +290,7 @@ const progress = select('.progress');
     defaults: {duration: 1.2, ease: 'power2.inOut'}, delay: 0});
 
   tlLoaderOut
-  .to(".imgg", {autoAlpha:0})
+  .to(".imgg", {autoAlpha:0, rotate: 360})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
@@ -316,7 +316,7 @@ function initContent() {
 
   select('body').classList.remove('is-loading');
   initScroll();
-  fullscreenMenu();
+  /*fullscreenMenu();
   scrollToTop();
   headerHide();
   underline();
@@ -397,11 +397,11 @@ function initPageTransitions() {
 
   // do something before the transition starts
   barba.hooks.before(() => {
-    select('html').classList.add('is-transitioning');
+   // select('html').classList.add('is-transitioning');
   });
   // do something after the transition finishes
   barba.hooks.after(() => {
-    select('html').classList.remove('is-transitioning');
+  //  select('html').classList.remove('is-transitioning');
   });
 
   /* OVO JE UBAČENO*/
