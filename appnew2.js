@@ -232,7 +232,7 @@ HOME - LOGO ANIMACIJA
 
   .to(".header_redflag",  {width:'4rem', height:'4rem', top: '-1.25rem', duration: 0.7, ease: "expo.inOut", }, 0)
   .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.7, ease: "expo.inOut"}, 0)
-  .to(".header-znak", { scale: 0.6, rotate:350, duration: 0.7, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
+  .to(".header-znak", { scale: 0.6, duration: 0.7, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
 
   /*
@@ -259,33 +259,6 @@ HOME - ROTATE WIREFRAME
     
   })
  
-/*
-================================================================================
-HOME - BIG KINGDOME SPLITTXT
-================================================================================
-*/
-
-/* const title = document.querySelector(".splitone"),
-      splittitle = new SplitText(".splitone");
-
-ScrollTrigger.create({
-  trigger: title,
-  start: "top 75%",
-  end: "bottom top",
-  // scroller: ".smooth-scroll", 
-  // markers: true, 
-  onEnter: () => action.duration(2).play(),
-  onLeave: () => action.pause(0),
-  onEnterBack: () => action.duration(2).play(0),
-  onLeaveBack: () => action.pause(0), 
-  toggleActions: "restart pause restart none",
-});
-                        
-  
-var action = gsap.timeline({paused:true})
-.from(splittitle.chars, {y: 220, stagger:0.01, ease: "expo.inOut"});
-
- */
 /*
 ================================================================================
 HOME - PARALLAX PANEL - BIG FONT KINGDOME
@@ -328,7 +301,7 @@ sections.forEach((section) => {
       trigger: ".img__wrapper",
     //  start: 'top 90%',
     //  end: "top top",
-      scroller: ".smooth-scroll",
+     // scroller: ".smooth-scroll",
    //  markers: true,
       scrub: true,
       pin: false
