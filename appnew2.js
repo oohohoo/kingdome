@@ -1234,6 +1234,7 @@ function parallaxPanel() {
         pin: false
       }
     });
+    
   
     tl.from(image, {
       yPercent: -80,
