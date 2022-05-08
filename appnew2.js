@@ -1246,13 +1246,13 @@ function parallaxPanel() {
   });
 
   
-/*
+
 
   const sections2 = gsap.utils.toArray(".img__wrapper2");
 
-  sections2.forEach((section) => {
+  sections2.forEach((section2) => {
     
-    let image2 = section.querySelector(".img__background2");
+    let image2 = section2.querySelector(".img__background2");
   //gsap.set(image, {yPercent: -80})
     
     let tl = gsap.timeline({
@@ -1277,7 +1277,7 @@ function parallaxPanel() {
     ease: "none",
     });
   });
-*/
+
 
   console.log("PARALLAX PANEL SOLO FOR EACH");
 }
