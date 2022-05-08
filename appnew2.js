@@ -243,7 +243,7 @@ HOME - ROTATE WIREFRAME
     scrollTrigger:{
       trigger: "#wireframe-trigger",
       //pin: true,
-      scrub:0.2,
+      scrub:true,
       start: 'top 80%',
       end:'+=10000',
      // transformOrigin:"center center",
@@ -252,7 +252,7 @@ HOME - ROTATE WIREFRAME
   })
   .to('#wireframe', {
     rotation:360*5,
-    duration:1, transformOrigin:"50% 50%", ease:'none',
+    duration:3, transformOrigin:"50% 50%", ease:'none',
     
   })
  
