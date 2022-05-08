@@ -1354,23 +1354,24 @@ closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); 
 
   	// MENU ICON MOUSEOVER 
 
-const menuhover = document.getElementById('menuhover');
+//const menuhover = document.getElementById('menuhover');
 
 
-menuhover.addEventListener('mouseover', ()=> {  
+
+openmenu.addEventListener('mouseover', ()=> {  
   let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline
-    .to(".mline2", {width: "100%", duration: 0.1})
-    .to(".mline3", {width: "100%"}, "<-0.05")
+    .to(".half", {width: "100%", duration: 0.1})
+  //  .to(".mline3", {width: "100%"}, "<-0.05")
   })
   // MENU ICON MOUSEOUT 
-  menuhover.addEventListener('mouseout', ()=> {  
+  openmenu.addEventListener('mouseout', ()=> {  
   let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline
-    .to(".mline2", {width: "80%", duration: 0.1})
-    .to(".mline3", {width: "55%"}, "<-0.05")
+    .to(".half", {width: "80%", duration: 0.1})
+  //  .to(".mline3", {width: "55%"}, "<-0.05")
   })
 
   
