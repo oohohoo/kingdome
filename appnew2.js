@@ -1217,8 +1217,7 @@ PARALLAX PANEL SOLO FOR EACH
 function parallaxPanel() {
   const sections = gsap.utils.toArray(".img__wrapper");
 
-  sections.forEach((section) => {
-    
+   
     let image = section.querySelector(".img__background");
   //gsap.set(image, {yPercent: -80})
     
@@ -1243,7 +1242,9 @@ function parallaxPanel() {
       yPercent: 80,
     ease: "none",
     });
-  });
+
+
+
 /*
 
   const sections2 = gsap.utils.toArray(".img__wrapper2");
