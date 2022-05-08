@@ -1,5 +1,5 @@
 // v.2022 
-
+ODAVDE
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
