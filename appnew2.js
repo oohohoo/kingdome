@@ -1268,12 +1268,12 @@ function parallaxPanel() {
     });
   
     tl.from(image2, {
-      yPercent: -80,
+      yPercent: -100,
     //  rotate:34,
       ease: "none",
     });
     tl.to(image2, {
-      yPercent: 80,
+      yPercent: 100,
     ease: "none",
     });
   });
