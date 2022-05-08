@@ -948,7 +948,7 @@ BARBA VIEWS
       simpleTicker();
       simpleTickerShow(); */
      // homeAboutSlider(); 
-     // document.getElementById('video').play();
+      document.getElementById('video').play();
       
 
   
@@ -1061,7 +1061,7 @@ BARBA TRANSITIONS
      
      beforeEnter({next}) {
     //  hideMenu();
-    //  videoReload();
+      videoReload();
       //
        /*
       window.Webflow && window.Webflow.destroy();
@@ -1659,7 +1659,7 @@ INIT VIDEO
 */
 function initVideo() {
   
-  let video = body.querySelector('.background-video');
+  let video = body.querySelector('.home-hero-video');
 // const video = select('.background-video');
   
 video.setAttribute('autoplay', true);
