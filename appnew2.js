@@ -197,7 +197,7 @@ ScrollTrigger.refresh();
 LOCOMOTIVE SCROLL UPDATED AFTER IMAGESLOADED
 ================================================================================
 */
-/*
+
 imagesLoaded("#main", { background: true }, function () {
   locoScroll.update();
   console.log("IMAGES LOADED - LOCOSCROLL UPDATED ČEK DIS");
@@ -205,7 +205,7 @@ imagesLoaded("#main", { background: true }, function () {
 
  
 }
-*/
+
 /*
 ================================================================================
 PRELOADER --> vodi na --> INIT CONTENT
