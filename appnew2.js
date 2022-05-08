@@ -316,7 +316,7 @@ function initContent() {
 
   select('body').classList.remove('is-loading');
   initScroll();
-  /*fullscreenMenu();
+  fullscreenMenu();
   scrollToTop();
   headerHide();
   underline();
@@ -397,11 +397,11 @@ function initPageTransitions() {
 
   // do something before the transition starts
   barba.hooks.before(() => {
-   // select('html').classList.add('is-transitioning');
+    select('html').classList.add('is-transitioning');
   });
   // do something after the transition finishes
   barba.hooks.after(() => {
-  //  select('html').classList.remove('is-transitioning');
+    select('html').classList.remove('is-transitioning');
   });
 
   /* OVO JE UBAČENO*/
@@ -1570,7 +1570,7 @@ function productsTabs() {
 LOCOMOTIVE 4 SCROLL TO TOP
 ================================================================================
 */
-/*
+
 function scrollToTop() {
 $( "#tostart" ).on( "click", function() {
   locoScroll.scrollTo( '#start', {
@@ -1582,4 +1582,4 @@ $( "#tostart" ).on( "click", function() {
   
   console.log("SCROLL TO TOP");
 });
-}*/
+}
