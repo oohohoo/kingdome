@@ -1244,7 +1244,7 @@ function parallaxPanel() {
     ease: "none",
     });
   });
-
+/*
 
   const sections2 = gsap.utils.toArray(".img__wrapper2");
 
@@ -1275,7 +1275,7 @@ function parallaxPanel() {
     ease: "none",
     });
   });
-
+*/
 
   console.log("PARALLAX PANEL SOLO FOR EACH");
 }
