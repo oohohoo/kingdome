@@ -1221,8 +1221,7 @@ function parallaxPanel() {
     
     let image = section.querySelector(".img__background");
   //gsap.set(image, {yPercent: -80})
-  
-  
+    
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".img__wrapper",
