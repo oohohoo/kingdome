@@ -281,7 +281,7 @@ GSAP PERFORMANCE FIX
 HIDE PAGE CONTENT BY DEFAULT
 ================================================================================
 */
-/*.is-loading #main,
+.is-loading #main,
  .is-loading .logo,
 .is-loading .burger, 
 .is-loading .menu-btn,
@@ -289,7 +289,7 @@ HIDE PAGE CONTENT BY DEFAULT
 .is-loading .fill-background {
   display: none;
 }
-*/
+
 /*
 ================================================================================
 IS LOADING BACKGROUND COLOR
