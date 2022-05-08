@@ -224,14 +224,18 @@ function initLoader() {
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
 
+  /*
   const fadeintxt = select('.home-hero-heading-wrapper');
   const txtdonji = select('.txtdonji');
   const video = select('.aspect-video');
+*/
+const loader = select('.loader');
+const loaderInner = select('.inner-loader');
+const progress = select('.progress');
 
- 
 
-
- /*  const loader = select('.loader'); */
+/* 
+//  const loader = select('.loader'); 
   const loaderInner = select('.inner-loader');
 
   const titles = document.querySelectorAll('[data-split-this-container] > div');
@@ -244,7 +248,7 @@ function initLoader() {
       targets.push(new SplitText(title, {type: "words"}).words);
     }
   });
-
+*/
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
@@ -286,10 +290,10 @@ function initLoader() {
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
     .to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
-    .to(".aspect-video", { scale:1, duration: 1.5, ease:'expo.inOut'}, "+=0.2")
-    .to(".homeani1", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
-    .from(".header_redflag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
-    .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
+    //.to(".aspect-video", { scale:1, duration: 1.5, ease:'expo.inOut'}, "+=0.2")
+    //.to(".homeani1", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
+    //.from(".header_redflag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
+   // .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
     
     //.to('.main', {y: 0}, 0);
 
@@ -341,7 +345,7 @@ function pageTransitionIn({
 }) {
   console.log('pageTransitionIn');
   // timeline to stretch the loader over the whole screen
-  const tl = gsap.timeline({defaults: {duration: 0.6,ease: 'power1.inOut'} });
+  const tl = gsap.timeline({defaults: {duration: 0.6, ease: 'power1.inOut'} });
   tl
     .set(loaderInner, {autoAlpha: 0})
     .fromTo(loader, {yPercent: -100}, {yPercent: 0})
@@ -454,7 +458,7 @@ BARBA PREFETCH
 ================================================================================
 */
 
-barba.use(barbaPrefetch);
+//barba.use(barbaPrefetch);
 
 /*
 
@@ -481,6 +485,7 @@ BARBA VIEWS
       homeProductHover();
       akapowPinned();
       initVideo();
+      document.getElementById('video').play();
       
   
   
@@ -565,8 +570,8 @@ BARBA TRANSITIONS
      
      beforeEnter({next}) {
     //  hideMenu();
-    initVideo();
-    console.log("video initializzzzzzz");
+    //initVideo();
+    //console.log("video initializzzzzzz");
     
      },
   
