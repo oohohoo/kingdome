@@ -219,7 +219,7 @@ function initLoader() {
     onComplete: () => initContent()
   });
 
-  const image = select('.loader-img-img');
+  //const image = select('.loader-img-img');
   const mask = select('.loader__image--mask');
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
@@ -254,17 +254,17 @@ const progress = select('.progress');
     .set(loaderContent, {autoAlpha: 1})
     .set(".txt", {yPercent: 100})
     .set(mask, {yPercent: 0})
-    .set(image, {yPercent: 100})
-    .set(".homeani1", {autoAlpha:0})
-    .set(".aspect-video", {scale:2})
+    .set(".imgg", {yPercent: 100})
+   // .set(".homeani1", {autoAlpha:0})
+   // .set(".aspect-video", {scale:2})
     /* .set(fadeintxt, {autoAlpha: 0}) */
     
     //.set(".main", {y: 150})
 
-    /* .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) */
+     .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) 
     /* .to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'}) */
-   .from(targets, {opacity:0, yPercent: 100, ease: "expo.inOut", stagger: 0.15})
-   .from(txtdonji, {opacity:0, yPercent: 100, ease: "expo.inOut"}, "+=0.2")
+   //.from(targets, {opacity:0, yPercent: 100, ease: "expo.inOut", stagger: 0.15})
+   //.from(txtdonji, {opacity:0, yPercent: 100, ease: "expo.inOut"}, "+=0.2")
   
 
   
@@ -272,7 +272,11 @@ const progress = select('.progress');
     .addLabel('revealImage')
     /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
     /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
-
+  //.to(image, {yPercent: 0}, 'revealImage-=0.5') 
+  .to(".imgg", {yPercent: 0})
+  /* .to(".txt", {yPercent: 0}) */
+  //.to(".txt", {yPercent: 0, stagger: 0.3}, 'revealImage-=0.4')
+  //.to(".smallprint", {yPercent: 0})
 
 
   
@@ -286,10 +290,10 @@ const progress = select('.progress');
     defaults: {duration: 1.2, ease: 'power2.inOut'}, delay: 0});
 
   tlLoaderOut
-
+  .to(".imgg", {autoAlpha:0})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
-    .to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
+    //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
     //.to(".aspect-video", { scale:1, duration: 1.5, ease:'expo.inOut'}, "+=0.2")
     //.to(".homeani1", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
     //.from(".header_redflag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
