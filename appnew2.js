@@ -1224,13 +1224,13 @@ FULLSCREEN MENU
 */
 function fullscreenMenu() {
   // OPEN MENU FROM CLICK
-const openmenu = document.getElementById('openmenu');
-const closemenu = document.getElementById('closemenu');
+const openmenu = document.getElementById('openmenux');
+const closemenu = document.getElementById('closemenux');
 //const menuhover = document.getElementById('menuhover');
 
 
 const { gsap } = window;
-
+/*
 const btn = document.querySelector(".nav-toggle");
 
 btn.addEventListener("click", () => {
@@ -1242,7 +1242,7 @@ btn.addEventListener("click", () => {
 		show();
 	}
 });
-
+*/
 
 openmenu.addEventListener("click", () => {
 	//	openbutt.classList.add("active");
