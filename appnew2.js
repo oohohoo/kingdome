@@ -1387,7 +1387,7 @@ openmenu.addEventListener('mouseover', ()=> {
     let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
     menuhovertimeline
-      .to(".fs-menu-close", {rotate-90, duration: 0.2})
+      .to(".fs-menu-close", {rotate:-90, duration: 0.2})
     //  .to(".mline3", {width: "55%"}, "<-0.05")
     })
   
