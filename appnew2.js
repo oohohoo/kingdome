@@ -1228,8 +1228,8 @@ function parallaxPanel() {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".img__wrapper",
-      //  start: 'top 90%',
-      //  end: "top top",
+        start: 'top 90%',
+        end: "top top",
        // scroller: ".smooth-scroll",
      //  markers: true,
         scrub: true,
