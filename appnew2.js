@@ -326,6 +326,7 @@ function initContent() {
   akapowPinned();
   rotateWireframe();
   parallaxPanel();
+  productsTabs();
   //initNavigation();
   //initHeaderTilt();
 
@@ -1543,12 +1544,12 @@ function productsTabs() {
       animation.to(targets[old], {color:"#edeae4", ease:"none"}, 0);
       animation.to(targets[activeTab], {color:"#28282a", ease:"none"}, 0);
       // slide current article down out of view and then set it to starting position at top
-      animation.to(articles[old], {y:heights[old], ease:"power1.Out" }, 0);
+      animation.to(articles[old], {y:heights[old], ease:"back.in" }, 0);
       animation.set(articles[old], {y:-heights[old]});
       // resize article block to accommodate new content
       animation.to(".article-block", {height:heights[activeTab]});
       // slide in new article
-      animation.to(articles[activeTab], {duration: 0.4, y:0, ease: "power1.Out"}, "-=0.25");
+      animation.to(articles[activeTab], {duration: 0.4, y:0, ease: "elastic"}, "-=0.25");
     }
   }
   
