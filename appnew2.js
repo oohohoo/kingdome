@@ -252,7 +252,7 @@ HOME - ROTATE WIREFRAME
   })
   .to('#wireframe', {
     rotation:360*5,
-    duration:1, ease:'none',
+    duration:1, transformOrigin:"50% 50%", ease:'none',
     
   })
  
