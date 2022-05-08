@@ -446,7 +446,7 @@ barba.hooks.afterLeave((data) => {
       //  trigger.kill()
        // console.log("scrolltrigger killed...");
    // });
-}
+//}
  
   });
   //init scrolltrigger
