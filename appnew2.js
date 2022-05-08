@@ -1388,7 +1388,7 @@ function show() {
   gsap.set(".fs-menu--column", {yPercent:-100})
   gsap.set(".fs-menu-header", {yPercent:-110})
  
-  gsap.set(".close, .fs-nav-item, .big-body, .fadein", {autoAlpha:0})
+  gsap.set(".close, .fs-nav-item, .sublink-wrapper, .fadein", {autoAlpha:0})
  
   //gsap.set(".line-wrapper", {yPercent:100})
 
