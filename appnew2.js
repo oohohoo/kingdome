@@ -374,7 +374,7 @@ function pageTransitionOut({
     onComplete: () => initContent()
   });
   tl2
-    .to(loader, {yPercent: 100})
+    .to(loader, {yPercent: 100, rotate:40})
     .to(loaderMask, {yPercent: -80}, 0)
    // .from(container, {y: -150}, 0);
   return tl2;
