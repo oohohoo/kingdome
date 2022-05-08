@@ -199,7 +199,7 @@ LOCOMOTIVE SCROLL UPDATED AFTER IMAGESLOADED
 */
 
 imagesLoaded("#main", { background: true }, function () {
- // locoScroll.update();
+  locoScroll.update();
   console.log("IMAGES LOADED - LOCOSCROLL UPDATED ČEK DIS");
   });
 
@@ -290,7 +290,7 @@ const progress = select('.progress');
     defaults: {duration: 1.2, ease: 'power2.inOut'}, delay: 0});
 
   tlLoaderOut
-  .to(".imgg", {autoAlpha:0, rotate: 360})
+  .to(".imgg", {autoAlpha:0})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
@@ -316,7 +316,7 @@ function initContent() {
 
   select('body').classList.remove('is-loading');
   initScroll();
-  /*fullscreenMenu();
+  fullscreenMenu();
   scrollToTop();
   headerHide();
   underline();
@@ -325,7 +325,7 @@ function initContent() {
   logoTransformOnScroll();
   akapowPinned();
   rotateWireframe();
-  parallaxPanel();*/
+  parallaxPanel();
   //initNavigation();
   //initHeaderTilt();
 
@@ -335,9 +335,9 @@ function initContent() {
   ScrollTrigger.refresh(true); // ScrollTrigger Refresh
   console.log("scrolltrigger refreshed AFTER all script load"); */
    /* $(document).ready(function() {  */
- /* setTimeout(() => {
+  setTimeout(() => {
     ScrollTrigger.refresh(true);
-  }, 1000);*/
+  }, 1000);
 /* }); */ 
 /*
 ================================================================================
@@ -349,12 +349,12 @@ function pageTransitionIn({
 }) {
   console.log('pageTransitionIn');
   // timeline to stretch the loader over the whole screen
-  const tl = gsap.timeline({defaults: {duration: 0.6, ease: 'none'} });
+  const tl = gsap.timeline({defaults: {duration: 0.6, ease: 'power1.inOut'} });
   tl
     .set(loaderInner, {autoAlpha: 0})
     .fromTo(loader, {yPercent: -100}, {yPercent: 0})
     .fromTo(loaderMask, {yPercent: 80}, {yPercent: 0}, 0)
-    //.to(container, {y: 150}, 0);
+    .to(container, {y: 150}, 0);
 
   return tl;
 }
@@ -369,15 +369,15 @@ function pageTransitionOut({
 }) {
   console.log('pageTransitionOut');
   // timeline to move loader away down
-  const tl2 = gsap.timeline({defaults: {duration: 0.6, ease: 'none'},
+  const tl = gsap.timeline({defaults: {duration: 0.6,ease: 'power1.inOut'},
   // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
     onComplete: () => initContent()
   });
-  tl2
-    .to(loader, {yPercent: 100, rotate:40})
+  tl
+    .to(loader, {yPercent: 100})
     .to(loaderMask, {yPercent: -80}, 0)
-   // .from(container, {y: -150}, 0);
-  return tl2;
+    .from(container, {y: -150}, 0);
+  return tl;
 }
 
 
