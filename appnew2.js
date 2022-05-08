@@ -335,9 +335,9 @@ function initContent() {
   ScrollTrigger.refresh(true); // ScrollTrigger Refresh
   console.log("scrolltrigger refreshed AFTER all script load"); */
    /* $(document).ready(function() {  */
-  setTimeout(() => {
+ /* setTimeout(() => {
     ScrollTrigger.refresh(true);
-  }, 1000);
+  }, 1000);*/
 /* }); */ 
 /*
 ================================================================================
