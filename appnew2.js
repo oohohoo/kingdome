@@ -1662,10 +1662,10 @@ function initVideo() {
   
  // let video = body.querySelector('.home-hero-video');
 // const video = select('.background-video');
-const video = document.getElementById('video');
-video.setAttribute('autoplay', true);
-video.load();
-
+//const video = document.getElementById('video');
+////video.setAttribute('autoplay', true);
+//video.load();
+$('#video').trigger('play');
 console.log("video initialised x");
 
 }
