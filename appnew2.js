@@ -1,5 +1,4 @@
 // v.2022 
-ODAVDE
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
@@ -176,7 +175,11 @@ ScrollTrigger.defaults( {
 });
 
 
-// --- 017 - LOCOMOTIVE 4.0 SCROLL TO  --------------------------------------------------------------------------
+/*
+================================================================================
+SCROLL TO TOP
+================================================================================
+*/
 $( "#totop" ).on( "click", function() {
 	locoScroll.scrollTo( '#start', {
 		'offset': 0,
@@ -229,7 +232,7 @@ HOME - LOGO ANIMACIJA
 
   .to(".header_redflag",  {width:'4rem', height:'4rem', top: '-1.25rem', duration: 0.7, ease: "expo.inOut", }, 0)
   .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.7, ease: "expo.inOut"}, 0)
-  .to(".header-znak", { scale: 0.6, duration: 0.7, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
+  .to(".header-znak", { scale: 0.6, rotate:350, duration: 0.7, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
 
   /*
