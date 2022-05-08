@@ -199,7 +199,7 @@ LOCOMOTIVE SCROLL UPDATED AFTER IMAGESLOADED
 */
 
 imagesLoaded("#main", { background: true }, function () {
-  locoScroll.update();
+ // locoScroll.update();
   console.log("IMAGES LOADED - LOCOSCROLL UPDATED ČEK DIS");
   });
 
