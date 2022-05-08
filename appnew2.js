@@ -1218,8 +1218,8 @@ function parallaxPanel() {
 
 
   let targets = gsap.utils.toArray(".section-full-image");
-  let imagex = section.querySelector(".img__background");
-  
+  let imagex = document.querySelectorAll(".img__background");
+
 targets.forEach((target) => {
   let tl = gsap.timeline({
     scrollTrigger: {
