@@ -1357,12 +1357,12 @@ closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); 
 //const menuhover = document.getElementById('menuhover');
 
 
-
+/* OPENMENU HOVER ICON*/
 openmenu.addEventListener('mouseover', ()=> {  
   let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline
-    .to(".half", {width: "100%", duration: 0.1})
+    .to(".half", {width: "100%", duration: 0.2})
   //  .to(".mline3", {width: "100%"}, "<-0.05")
   })
   // MENU ICON MOUSEOUT 
@@ -1370,9 +1370,27 @@ openmenu.addEventListener('mouseover', ()=> {
   let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline
-    .to(".half", {width: "50%", duration: 0.1})
+    .to(".half", {width: "50%", duration: 0.2})
   //  .to(".mline3", {width: "55%"}, "<-0.05")
   })
+
+/* CLOSEMENU HOVER ICON */
+  closemenu.addEventListener('mouseover', ()=> {  
+    let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
+    //animation.paused( true ); 
+    menuhovertimeline
+      .to(".fs-menu-close", {scale:1.2, duration: 0.2})
+    //  .to(".mline3", {width: "100%"}, "<-0.05")
+    })
+    // MENU ICON MOUSEOUT 
+    openmenu.addEventListener('mouseout', ()=> {  
+    let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
+    //animation.paused( true ); 
+    menuhovertimeline
+      .to(".fs-menu-close", {scale:1, duration: 0.2})
+    //  .to(".mline3", {width: "55%"}, "<-0.05")
+    })
+  
 
   
 
