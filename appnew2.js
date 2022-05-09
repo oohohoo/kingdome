@@ -181,9 +181,8 @@ var swiper = new Swiper(".swiper-container", {
   loop: true,
   slidesPerView: "auto",
   freeMode: true,
-  mousewheel: {
-    releaseOnEdges: true,
-  },
+  grabCursor: true,
+  mousewheel: false,
 });
 
 
