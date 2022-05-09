@@ -176,6 +176,15 @@ ScrollTrigger.defaults( {
 
 
 
+var swiper = new Swiper(".swiper-container", {
+  loopedSlides: 6,
+  loop: true,
+  slidesPerView: "auto",
+  freeMode: true,
+  mousewheel: {
+    releaseOnEdges: true,
+  },
+});
 
 
 
