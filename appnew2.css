@@ -648,7 +648,16 @@ BUTTON TXT HOVER
 .button-txt-new:hover {
   color: var(--text-color);
   transition: color 0.2s ease;
+}
 
+.button-txt-new-flip {
+  color: var(--text-color);
+  transition: color 0.2s ease;
+}
+  
+.button-txt-new-flip:hover {
+  color: var(--text-dark-color);
+  transition: color 0.2s ease;
 }
 
 /*
