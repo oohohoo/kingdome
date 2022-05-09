@@ -669,7 +669,7 @@ CURRENT LINK COLOR
 
 .w--current {
   pointer-events: none;
-  color: "#E51E3D";
+  color: "#E51E3D"!important;
 }
 
 
