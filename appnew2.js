@@ -819,7 +819,7 @@ SUBMENU HOVER
 $(".fs-nav-item").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
-         .to($(el).find('.heading-small'), {color: "#E51E3D", duration: 0.15});
+         .to($(el).find('a'), {color: "#E51E3D", duration: 0.15});
 el.animation = t;
 $(el).on("mouseenter",function(){
     this.animation.play();
