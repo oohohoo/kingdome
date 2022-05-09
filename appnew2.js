@@ -174,6 +174,26 @@ ScrollTrigger.defaults( {
   scroller: ".smooth-scroll",
 });
 
+/*
+================================================================================
+PIN FAQ HEADER
+================================================================================
+*/
+const faq = document.querySelector('.faq-header')
+
+ScrollTrigger.create({
+  
+  id: 'test',
+  pin: faq,
+  start: 'top top',
+  end: '+=50%',
+  endTrigger: faq.parentElement,
+  end: 'bottom 50%'
+  
+})
+
+
+
 
 /*
 ================================================================================
