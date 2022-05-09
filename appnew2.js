@@ -190,7 +190,7 @@ var swiper = new Swiper(".swiper-container", {
 disableOnInteraction: false,
   },
 
-        resistanceRatio:0.2,
+     //   resistanceRatio:0.2,
       longSwipes:true,
       longSwipesRatio:0.5,
       touchRatio:5,
