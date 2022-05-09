@@ -216,8 +216,8 @@ disableOnInteraction: false,
                             slidesPerView: 1.1
                         },
                         1200: {
-                            spaceBetween: 100,
-                            slidesPerView: 1.2
+                           // spaceBetween: 100,
+                          //  slidesPerView: 1.2
                         }
                     }
 });
