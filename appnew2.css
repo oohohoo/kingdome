@@ -273,11 +273,11 @@ GSAP PERFORMANCE FIX
 */
 
 
-/*  .smooth-scroll {
+ .swiper-slide {
   will-change: transform;
   backface-visibility: hidden;
 }
- */
+ 
 /*
 ================================================================================
 HIDE PAGE CONTENT BY DEFAULT
