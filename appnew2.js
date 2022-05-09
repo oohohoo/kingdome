@@ -174,23 +174,7 @@ ScrollTrigger.defaults( {
   scroller: ".smooth-scroll",
 });
 
-/*
-================================================================================
-PIN FAQ HEADER
-================================================================================
-*/
-const faq = document.querySelector('.faq-header')
 
-ScrollTrigger.create({
-  
-  id: 'test',
-  pin: faq,
-  start: 'top 20%',
-  end: '+=100%',
-  endTrigger: faq.parentElement,
-  end: 'bottom 30%'
-  
-})
 
 
 
@@ -537,18 +521,12 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-      
-    
-    }},{
-    namespace: 'privacy',
-    beforeEnter(data) {
-      
-      productsoloAccordion(); 
+     
       
     }},{
       namespace: 'faq',
       beforeEnter(data) {
-       
+        faqPrivacyPin();
         productsoloAccordion(); 
     
         
@@ -1604,4 +1582,25 @@ $( "#tostart" ).on( "click", function() {
   
   console.log("SCROLL TO TOP");
 });
+}
+
+
+/*
+================================================================================
+PIN FAQ/PRIVACY HEADER
+================================================================================
+*/
+function faqPrivacyPin() {
+const faq = document.querySelector('.faq-header')
+
+ScrollTrigger.create({
+  
+  id: 'test',
+  pin: faq,
+  start: 'top 20%',
+  end: '+=100%',
+  endTrigger: faq.parentElement,
+  end: 'bottom 30%'
+  
+})
 }
