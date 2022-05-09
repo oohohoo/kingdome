@@ -180,10 +180,47 @@ var swiper = new Swiper(".swiper-container", {
  // loopedSlides: 6,
   loop: true,
   spaceBetween: 24,
-  slidesPerView: "2",
+  slidesPerView: 3,
   freeMode: true,
   grabCursor: true,
   mousewheel: false,
+
+  autoplay: {
+    delay: 3000,
+disableOnInteraction: false,
+  },
+
+        resistanceRatio:0.2,
+      longSwipes:true,
+      longSwipesRatio:0.5,
+      touchRatio:5,
+	 loop: true,
+	 grabCursor: false,
+        //loopFillGroupWithBlank: false,
+       // paginationClickable: true,
+       // mousewheelControl: true,
+        parallax: true,
+       // preloadImages: true,
+        //updateOnImagesReady: true,
+       centeredSlides: true,
+       slidesOffsetBefore: 100,
+        speed: 1000,
+        breakpoints: {
+                        500: {
+                            spaceBetween: 30,
+                            loopedSlides: 3,
+                            slidesPerView: 1
+                        },
+                        1e3: {
+                            loopedSlides: 3,
+                            spaceBetween: 85,
+                            slidesPerView: 1.1
+                        },
+                        1200: {
+                            spaceBetween: 100,
+                            slidesPerView: 1.2
+                        }
+                    }
 });
 
 
