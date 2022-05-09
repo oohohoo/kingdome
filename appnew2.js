@@ -185,7 +185,7 @@ ScrollTrigger.create({
   
   id: 'test',
   pin: faq,
-  start: 'top top',
+  start: 'top 20%',
   //end: '+=100%',
   endTrigger: faq.parentElement,
   //end: 'bottom 50%'
