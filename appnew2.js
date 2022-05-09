@@ -177,8 +177,9 @@ ScrollTrigger.defaults( {
 
 
 var swiper = new Swiper(".swiper-container", {
-  loopedSlides: 6,
+ // loopedSlides: 6,
   loop: true,
+  spaceBetween: 24,
   slidesPerView: "auto",
   freeMode: true,
   grabCursor: true,
