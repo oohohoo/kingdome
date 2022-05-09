@@ -138,6 +138,7 @@ ASPECT RATIOS WITH FALLBACK
 TXT SELECT
 ================================================================================
 */
+/*
 ::selection {
   background: var(--text-dark-color);
   color: var(--bcg-lightblue);
@@ -148,7 +149,7 @@ TXT SELECT
   background: var(--text-dark-color);
   color: var(--bcg-lightblue);
 }
-
+*/
 /*
 ================================================================================
 LOCOMOTIVE SCROLL 4.0.6
@@ -312,7 +313,7 @@ MAIN Z-INDEX
 ================================================================================
 */ 
 main {
- /*  z-index: 1; */
+   z-index: 1; 
   position: relative;
 }
 
@@ -659,6 +660,11 @@ BUTTON TXT HOVER
   color: var(--text-dark-color);
   transition: color 0.2s ease;
 }
+
+.w--current {
+  color: "#E51E3D"
+}
+
 
 /*
 ================================================================================
