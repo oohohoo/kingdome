@@ -200,9 +200,9 @@ disableOnInteraction: false,
         parallax: true,
        // preloadImages: true,
         //updateOnImagesReady: true,
-       centeredSlides: true,
+      // centeredSlides: true,
       // slidesOffsetBefore: 100,
-        speed: 400,
+        speed: 1000,
         breakpoints: {
                         500: {
                             spaceBetween: 30,
