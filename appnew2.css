@@ -667,7 +667,7 @@ CURRENT LINK COLOR
 ================================================================================
 */
 
-.navlink .w--current {
+.navlink>.w--current {
   pointer-events: none;
   color: "#E51E3D"!important;
 }
