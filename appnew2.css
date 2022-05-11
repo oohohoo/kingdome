@@ -288,6 +288,36 @@ HIDE PAGE CONTENT BY DEFAULT
   display: none;
 }
 */
+
+/*
+================================================================================
+LINK UNDERLINE
+================================================================================
+*/
+
+.underlinew {
+  text-decoration: none;
+  position: relative;
+}
+.underlinew:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #a29f9c;
+  transition: 0.3s;
+}
+/* optional hover classes used with anmiation */
+.underlinew:hover:after {
+  width: 0%;
+}
+
+
+
 /*
 ================================================================================
 IS LOADING BACKGROUND COLOR
