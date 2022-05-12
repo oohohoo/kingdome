@@ -1661,63 +1661,20 @@ PIN FAQ/PRIVACY HEADER
 */
 
 function logoMarquee() {
-/* =============================================
-MARQUEE + SCROLLTRIGGER change direction
-================================================ */
-
-let direction = 1; // 1 = forward, -1 = backward scroll
-
-const roll1 = roll(".rollingtext", {duration: 40}), // ugasi true i mijenja smjer
-     roll2 = roll(".rollingtext02", {duration: 60})
-    //  roll3 = roll(".rollingtext03", {duration: 80}, true);
-ScrollTrigger.create({
-       trigger: ".cd-wrap",
-      /*
-       toggleClass: {
-        targets: '.logofrka, .navstyle, .kontakt',
-        className: 'orange'
-      }, */
-
-      markers: true,
-        start: "top 5%",
-        end: "bottom bottom",
-        scroller: ".smooth-scroll",
-            /*  invalidateOnRefresh: true, */
-         onUpdate(self) {
-          if (self.direction !== direction) {
-            direction *= -1;
-           
-            gsap.to([roll1, roll2], {
-                timeScale: direction, 
-                overwrite: true            
-            });
-
-            
-          }
-        }
-      });
-
-// helper function that clones the targets, places them next to the original, then animates the xPercent in a loop to make it appear to roll across the screen in a seamless loop.
-function roll(targets, vars, reverse) {
-  const tl = gsap.timeline({
-    repeat: -1,
-    onReverseComplete() { 
-      this.totalTime(this.rawTime() + this.duration() * 5); // otherwise when the playhead gets back to the beginning, it'd stop. So push the playhead forward 10 iterations (it could be any number)
-    }
+  gsap.to(".first ul", 10, {
+    xPercent: -100,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero",
+      scrub: 3,
+      pin:true,
+     end: "+=1000"
+  
+    }, 
   });
-  vars = vars || {};
-  vars.ease || (vars.ease = "none");
-  gsap.utils.toArray(targets).forEach(el => {
-    let clone = el.cloneNode(true);
-    el.parentNode.appendChild(clone);
-    gsap.set(clone, {position: "absolute", top: el.offsetTop, left: el.offsetLeft + (reverse ? -el.offsetWidth : el.offsetWidth)});
-    tl.to([el, clone], {xPercent: reverse ? 100 : -100, ...vars}, 0);
-  });
-  return tl;
-}
   
 
-console.log("LOGO MARQUEE");
+console.log("LOGO MARQUEE NLOVIII");
   }
   
 
