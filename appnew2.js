@@ -557,7 +557,7 @@ BARBA VIEWS
     }},{
       
     namespace: 'howwework',
-    beforeEnter(data) {
+    beforeEnter(data) {r
       akapowPinned();
       logoMarquee();
 

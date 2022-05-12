@@ -732,6 +732,36 @@ INPUT FIELD TEXT SIZE
 .w-input {
 font-size: 0.875rem!important;
 }
+
+/*
+================================================================================
+LOGO MARQUEE
+================================================================================
+*/
+
+.marquee__part, .marquee__part-two {
+  flex-shrink: 0;
+  padding: 0 4px;
+  font-smooth: always;
+}
+
+.marquee {
+text-transform: uppercase;
+  font-size: 5vw;
+  padding: 32px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee__inner, .marquee__inner-two {
+  -webkit-font-smoothing: antialiased;
+  width: fit-content;
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+}
+
+
 /*
 ================================================================================
 MEDIA QUERY
