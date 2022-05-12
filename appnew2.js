@@ -497,8 +497,8 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
-//Webflow.destroy();
-// console.log("webflow interactions killed...");
+Webflow.destroy();
+console.log("webflow interactions killed...");
  
   });
   //init scrolltrigger
