@@ -495,7 +495,7 @@ barba.hooks.afterLeave((data) => {
         trigger.kill()
        // console.log("scrolltrigger killed...");
     });
-}
+};
 
 Webflow.destroy();
  console.log("webflow interactions killed...");
