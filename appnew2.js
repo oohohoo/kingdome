@@ -375,6 +375,7 @@ function initContent() {
   rotateWireframe();
   parallaxPanel();
   productsTabs();
+  logoMarquee();
   //initNavigation();
   //initHeaderTilt();
 
