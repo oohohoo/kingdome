@@ -496,6 +496,9 @@ barba.hooks.afterLeave((data) => {
        // console.log("scrolltrigger killed...");
     });
 }
+
+Webflow.destroy();
+ console.log("webflow interactions killed...");
  
   });
   //init scrolltrigger
@@ -567,6 +570,8 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
+      webflowInteractions();
+      console.log("webflow interaccccc");
      
       
     }},{
@@ -1681,3 +1686,15 @@ console.log("LOGO MARQUEE NLOVIII");
 
 
 
+/*
+================================================================================
+WEBFLOW INTERACTIONS REINIT
+================================================================================
+*/
+
+function webflowInteractions() {
+  Webflow.ready();
+  Webflow.require('ix2').init();
+  //console.log("WEBFLOW RELOAD");
+
+}
