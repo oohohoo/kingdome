@@ -1671,12 +1671,12 @@ const roll1 = roll(".rollingtext", {duration: 40}), // ugasi true i mijenja smje
       roll2 = roll(".rollingtext02", {duration: 60}),
       roll3 = roll(".rollingtext03", {duration: 80}, true);
 ScrollTrigger.create({
-       trigger: ".cd-wrap",
-      
+       trigger: "#logomarquee",
+      /*
        toggleClass: {
         targets: '.logofrka, .navstyle, .kontakt',
         className: 'orange'
-      }, 
+      }, */
         start: "top 5%",
         end: "bottom top",
         scroller: ".smooth-scroll",
