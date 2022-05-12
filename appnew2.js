@@ -1680,7 +1680,7 @@ ScrollTrigger.create({
 
       markers: true,
         start: "top 5%",
-        end: "bottom top",
+        end: "bottom bottom",
         scroller: ".smooth-scroll",
             /*  invalidateOnRefresh: true, */
          onUpdate(self) {
