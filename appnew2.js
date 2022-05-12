@@ -1665,7 +1665,8 @@ function logoMarquee() {
     xPercent: -100,
     ease: "none",
     scrollTrigger: {
-      trigger: ".hero",
+     // scroller: ".smooth-scroll",
+      trigger: ".section-partners",
       scrub: 3,
       pin:true,
      end: "+=1000"
