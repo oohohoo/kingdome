@@ -570,7 +570,7 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-   //*   webflowInteractions();
+    webflowInteractions();
       console.log("webflow interaccccc");
      
       
