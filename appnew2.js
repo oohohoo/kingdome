@@ -1635,8 +1635,8 @@ PIN FAQ/PRIVACY HEADER
 ================================================================================
 */
 
-/*
 function faqPrivacyPin() {
+/* 
 const faq = document.querySelector('.faq-header')
 
 ScrollTrigger.create({
@@ -1648,7 +1648,6 @@ ScrollTrigger.create({
   endTrigger: faq.parentElement,
   end: 'bottom 30%'
   
-})
-}
+}) */
 
-*/
+}
