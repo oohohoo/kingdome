@@ -1714,6 +1714,8 @@ function roll(targets, vars, reverse) {
   return tl;
 }
   
+
+console.log("LOGO MARQUEE");
   }
   
 
