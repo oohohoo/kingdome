@@ -1634,6 +1634,8 @@ $( "#tostart" ).on( "click", function() {
 PIN FAQ/PRIVACY HEADER
 ================================================================================
 */
+
+/*
 function faqPrivacyPin() {
 const faq = document.querySelector('.faq-header')
 
@@ -1648,3 +1650,5 @@ ScrollTrigger.create({
   
 })
 }
+
+*/
