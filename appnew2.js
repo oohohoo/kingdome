@@ -95,7 +95,7 @@ function initScroll(container) {
     el: document.querySelector(".smooth-scroll"),
     smooth: true,
      offset: [0, 0], 
-    /* getDirection: true, */
+     getDirection: true, 
     scrollFromAnywhere: true,
     touchMultiplier: 3.0,
     useKeyboard: true,
