@@ -1671,7 +1671,7 @@ const roll1 = roll(".rollingtext", {duration: 40}), // ugasi true i mijenja smje
       roll2 = roll(".rollingtext02", {duration: 60}),
       roll3 = roll(".rollingtext03", {duration: 80}, true);
 ScrollTrigger.create({
-       trigger: "#logomarquee",
+       trigger: ".wrapperrollingtext",
       /*
        toggleClass: {
         targets: '.logofrka, .navstyle, .kontakt',
