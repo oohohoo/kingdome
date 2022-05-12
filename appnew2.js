@@ -558,7 +558,7 @@ BARBA VIEWS
     }},{
       
     namespace: 'howwework',
-    beforeEnter(data) {r
+    beforeEnter(data) {
       akapowPinned();
       logoMarquee();
 
@@ -1677,7 +1677,7 @@ ScrollTrigger.create({
         targets: '.logofrka, .navstyle, .kontakt',
         className: 'orange'
       }, */
-      
+
       markers: true,
         start: "top 5%",
         end: "bottom top",
