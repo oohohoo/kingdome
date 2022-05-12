@@ -1677,6 +1677,7 @@ ScrollTrigger.create({
         targets: '.logofrka, .navstyle, .kontakt',
         className: 'orange'
       }, */
+      
       markers: true,
         start: "top 5%",
         end: "bottom top",
