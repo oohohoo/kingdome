@@ -1361,11 +1361,17 @@ function popupWizdome() {
 
 setTimeout(showModal,2000);
 function showModal(){
-  $(".popup").show()
+
+  //$(".popup").show()
+
+  gsap.to(".popup", 0.4, {
+    autoAlpha: 1,
+    delay: 2
+  });
 };
 
 
-
+/*
 
 $(".popup-close, .popup").click(function() {
   gsap.to(".actual-message", 0.2, {
@@ -1378,6 +1384,9 @@ $(".popup-close, .popup").click(function() {
     autoAlpha: 0
   });
 }); 
+*/
+
+
 
 /*
 var is_modal_show = sessionStorage.getItem('alreadyShow');
