@@ -1366,7 +1366,12 @@ function showModal(){
 */
 var is_modal_show = sessionStorage.getItem('alreadyShow');
 if(is_modal_show != 'alredy shown'){
+ // $(".popup").show()
+  setTimeout(showModal,2000);
+function showModal(){
   $(".popup").show()
+}
+
   sessionStorage.setItem('alreadyShow','alredy shown');
 }
 
