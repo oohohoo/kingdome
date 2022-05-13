@@ -352,9 +352,10 @@ main {
 ACTIVE LINK NE RADI!!!!
 ================================================================================
 */ 
+
+/*
 header {
   text-align: center;
- /*  margin: 50px 15vw; */
   overflow: hidden;
 }
 header a {
@@ -381,6 +382,7 @@ header a::after, header .nav-link.active span {
   width: 100%;
   height: 4px;
 }
+*/
 /*
 header a.nav-link .w-inline-block .w--current span {
   background-color: #f70606;
