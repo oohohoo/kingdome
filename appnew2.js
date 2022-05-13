@@ -1407,7 +1407,7 @@ gsap.to(".actual-message", 0.2, {
   autoAlpha: 0,
   ease: "ease-in"
 });
-
+}
 gsap.to(".popup", 0.2, { 
   autoAlpha: 0
 });
@@ -1440,8 +1440,8 @@ gsap.to(".popup", 0.2, {
       autoAlpha: 0
     });
   }); */
-  console.log("POPUP - WIZDOME");
-}
+ // console.log("POPUP - WIZDOME");
+
 
 /*
 ================================================================================
