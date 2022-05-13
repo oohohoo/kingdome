@@ -180,7 +180,7 @@ var swiper = new Swiper(".swiper-container", {
  // loopedSlides: 6,
   loop: true,
   spaceBetween: 24,
-  slidesPerView: "auto",
+ // slidesPerView: "auto",
   freeMode: false,
   grabCursor: true,
   mousewheel: false,
