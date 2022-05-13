@@ -1226,7 +1226,7 @@ function logoTransformOnScroll() {
        /* scroller: ".smooth-scroll", */
         trigger: "#start",
         /* markers: true, */
-        start: "top -10%", // when the top of the trigger hits the top of the viewport
+        start: "top top", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
         toggleActions: 'play reverse play reverse',
         invalidateOnRefresh: true,
@@ -1234,7 +1234,7 @@ function logoTransformOnScroll() {
     }
   })
 
-  .to(".header_redflag",  {width:'3rem', height:'3rem', top: '1rem', duration: 0.7, ease: "expo.inOut", }, 0)
+  .to(".header_redflag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.7, ease: "expo.inOut", }, 0)
   .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.7, ease: "expo.inOut"}, 0)
   .to(".header-znak", { scale: 0.4, duration: 0.7, transformOrigin: 'center center', yPercent: -45, ease:'expo.inOut'}, 0)
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
