@@ -1569,7 +1569,7 @@ function productsTabs() {
   for (let i = 0; i < targets.length; i++) {
     targets[i].index = i;
     heights.push(articles[i].offsetHeight); // get height of each article
-    gsap.set(articles[i], {top: 0, y:0}); // push all articles up out of view
+    gsap.set(articles[i], {top: 0, y:0, opacity:0}); // push all articles up out of view
     targets[i].addEventListener("click", doCoolStuff);
   }
   // set initial article and position bubble slider on first tab 
