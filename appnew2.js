@@ -1361,7 +1361,7 @@ function popupWizdome() {
 
 setTimeout(showModal,1000);
 function showModal(){
-  $(".popup").hide()
+  $(".popup").show()
 }
 /*
 
