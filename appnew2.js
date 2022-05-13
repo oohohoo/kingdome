@@ -1563,7 +1563,7 @@ function productsTabs() {
   let activeTab = 0;
   let old = 0;
   let heights = [];
-  let dur = 0.4;
+  let dur = 0.3;
   let animation;
   
   for (let i = 0; i < targets.length; i++) {
