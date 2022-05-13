@@ -1530,7 +1530,7 @@ HEADER HIDE
 ================================================================================
 */
 function headerHide() {
-  const showAnim = gsap.from('.header', { 
+  const showAnim = gsap.from('.headerx', { 
     yPercent: -300,
     paused: true,
     duration: 0.2
