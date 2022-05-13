@@ -1358,7 +1358,7 @@ ALL - POPUP - WIZDOME
 */
 function popupWizdome() {
 
-
+/*
 setTimeout(showModal,2000);
 function showModal(){
 
@@ -1371,8 +1371,6 @@ function showModal(){
 };
 
 
-/*
-
 $(".popup-close, .popup").click(function() {
   gsap.to(".actual-message", 0.2, {
     marginTop: "10%",
@@ -1384,23 +1382,40 @@ $(".popup-close, .popup").click(function() {
     autoAlpha: 0
   });
 }); 
+
 */
 
 
-
-/*
 var is_modal_show = sessionStorage.getItem('alreadyShow');
 if(is_modal_show != 'alredy shown'){
  // $(".popup").show()
-  setTimeout(showModal,2000);
-function showModal(){
-  $(".popup").show()
-}
+  //setTimeout(showModal,2000);
+//function showModal(){
+ // $(".popup").show()
+//}
+
+gsap.to(".popup", 0.4, {
+  autoAlpha: 1,
+  delay: 2
+});
+};
+
+
+$(".popup-close, .popup").click(function() {
+gsap.to(".actual-message", 0.2, {
+  marginTop: "10%",
+  autoAlpha: 0,
+  ease: "ease-in"
+});
+
+gsap.to(".popup", 0.2, { 
+  autoAlpha: 0
+});
 
   sessionStorage.setItem('alreadyShow','alredy shown');
 }
 
-*/
+
 /*
 
   gsap.from(".actual-message", 0.4, {
