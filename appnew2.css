@@ -709,12 +709,12 @@ CURRENT LINK COLOR
   position: absolute;
   content: '';
   height: 2px;
-  bottom: -4px;
+  bottom: 2px;
   margin: 0 auto;
   left: 0;
   right: 0;
   width: 100%;
-  background: #a29f9c;
+  background: #1a1815;
   transition: 0.3s;
 }
 
