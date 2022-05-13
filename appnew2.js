@@ -1378,8 +1378,7 @@ $(".popup-close, .popup").click(function() {
     autoAlpha: 0
   });
 }); 
-console.log("POPUP - WIZDOME");
-}
+
 /*
 var is_modal_show = sessionStorage.getItem('alreadyShow');
 if(is_modal_show != 'alredy shown'){
