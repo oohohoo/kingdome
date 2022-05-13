@@ -702,7 +702,24 @@ CURRENT LINK COLOR
 .w--current {
   pointer-events: none;
   color: #E51E3D;
+
 }
+
+.w--current::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #a29f9c;
+  transition: 0.3s;
+}
+
+
+
 
 
 /*
