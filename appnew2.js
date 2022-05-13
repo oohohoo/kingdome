@@ -1357,6 +1357,14 @@ ALL - POPUP - WIZDOME
 ================================================================================
 */
 function popupWizdome() {
+
+
+setTimeout(showModal,1000);
+function showModal(){
+  $(".popup").show()
+}
+/*
+
   gsap.from(".actual-message", 0.4, {
     marginTop: "10%",
     autoAlpha: 0,
@@ -1378,7 +1386,7 @@ function popupWizdome() {
     gsap.to(".popup", 0.2, { 
       autoAlpha: 0
     });
-  }); 
+  }); */
   console.log("POPUP - WIZDOME");
 }
 
