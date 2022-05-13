@@ -1391,8 +1391,21 @@ gsap.from(".actual-message", 0.4, {
 });
 gsap.to(".popup", 0.4, {
   autoAlpha: 1,
-  delay: 10
+  delay: 1
 });
+
+
+
+  sessionStorage.setItem('alreadyShow','alredy shown');
+}
+
+
+
+
+
+}
+
+
 
 $(".popup-close, .popup").click(function() {
   gsap.to(".actual-message", 0.2, {
@@ -1405,17 +1418,6 @@ $(".popup-close, .popup").click(function() {
     autoAlpha: 0
   });
 }); 
-
-
-
-  sessionStorage.setItem('alreadyShow','alredy shown');
-}
-
-
-
-
-
-}
 
 /*
 ================================================================================
