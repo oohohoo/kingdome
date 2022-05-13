@@ -1236,7 +1236,7 @@ function logoTransformOnScroll() {
 
   .to(".header_redflag",  {width:'3rem', height:'3rem', top: '1rem', duration: 0.7, ease: "expo.inOut", }, 0)
   .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.7, ease: "expo.inOut"}, 0)
-  .to(".header-znak", { scale: 0.4, duration: 0.7, transformOrigin: 'center center', yPercent: -65, ease:'expo.inOut'}, 0)
+  .to(".header-znak", { scale: 0.4, duration: 0.7, transformOrigin: 'center center', yPercent: -45, ease:'expo.inOut'}, 0)
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
 
   console.log("LOGO TRANSFORM ON SCROLL");
