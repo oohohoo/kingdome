@@ -1359,7 +1359,7 @@ ALL - POPUP - WIZDOME
 function popupWizdome() {
 
 
-setTimeout(showModal,1000);
+setTimeout(showModal,2000);
 function showModal(){
   $(".popup").show()
 }
