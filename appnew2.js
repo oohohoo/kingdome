@@ -1362,16 +1362,24 @@ function popupWizdome() {
 setTimeout(showModal,2000);
 function showModal(){
   $(".popup").show()
-}
+};
+
+
+
 
 $(".popup-close, .popup").click(function() {
   gsap.to(".actual-message", 0.2, {
-  //  marginTop: "10%",
-  yPercent: 10,
+    marginTop: "10%",
     autoAlpha: 0,
     ease: "ease-in"
   });
 
+  gsap.to(".popup", 0.2, { 
+    autoAlpha: 0
+  });
+}); 
+console.log("POPUP - WIZDOME");
+}
 /*
 var is_modal_show = sessionStorage.getItem('alreadyShow');
 if(is_modal_show != 'alredy shown'){
