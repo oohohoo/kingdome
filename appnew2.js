@@ -1592,7 +1592,7 @@ function productsTabs() {
       animation.to(".slider-tab", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
       // change text color on old and new tab targets
       animation.to(targets[old], {color:"#a29f9c", ease:"none"}, 0);
-      animation.to(targets[activeTab], {color:"#ff0000", ease:"none"}, 0);
+      animation.to(targets[activeTab], {color:"#1a1815", ease:"none"}, 0);
       // slide current article down out of view and then set it to starting position at top
       animation.to(articles[old], {y:0, opacity:0, ease:"power2.in" }, 0);
       animation.set(articles[old], {y:0[old]});
