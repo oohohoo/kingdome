@@ -504,6 +504,8 @@ console.log("webflow interactions killed...");
   //init scrolltrigger
    barba.hooks.afterEnter(() => {
     
+/* AUTOPLAY VIDEOS*/
+    var vids = document.querySelectorAll("video"); vids.forEach(vid => { var playPromise = vid.play(); if (playPromise !== undefined) { playPromise.then(_ => {}).catch(error => {}); }; });
    // console.log("možda ode učitat locoscroll");
     
   });
@@ -1373,7 +1375,7 @@ function showModal(){
 
 
 
-
+/* SHOW ONCE PER COOKIE*/
 
 var is_modal_show = sessionStorage.getItem('alreadyShow');
 if(is_modal_show != 'alredy shown'){
