@@ -1745,6 +1745,6 @@ AUTO YEAR UPDATE
 */
 
 function yearUpdate() {
-  cont year = new Date().getFullYear();
+  const year = new Date().getFullYear();
   $('.year').text(year);
 }
