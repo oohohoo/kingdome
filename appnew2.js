@@ -376,6 +376,7 @@ function initContent() {
   parallaxPanel();
   productsTabs();
   logoMarquee();
+  yearUpdate();
   //initNavigation();
   //initHeaderTilt();
 
@@ -1735,5 +1736,15 @@ function webflowInteractions() {
   Webflow.ready();
   Webflow.require('ix2').init();
   //console.log("WEBFLOW RELOAD");
+}
 
+/*
+================================================================================
+AUTO YEAR UPDATE
+================================================================================
+*/
+
+function yearUpdate() {
+  cont year = new Date().getFullYear();
+  $('.year').text(year);
 }
