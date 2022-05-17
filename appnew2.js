@@ -583,7 +583,7 @@ BARBA INIT
 barba.init({
   timeout: 7000,
   debug: true,
-  prefetch: true,
+ //g prefetch: true,
 /*
 ================================================================================
 BARBA VIEWS
