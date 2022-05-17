@@ -545,7 +545,6 @@ BARBA VIEWS
       homeProductHover();
       akapowPinned();
       initVideo();
-      document.getElementById('video').play();
       
   
   
