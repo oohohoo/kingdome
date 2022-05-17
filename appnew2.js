@@ -1768,14 +1768,14 @@ var swiper = new Swiper(".swiper-container", {
          speed: 1000,
          breakpoints: {
                          500: {
-                             spaceBetween: 30,
-                             loopedSlides: 3,
-                             slidesPerView: 1
+                          //   spaceBetween: 30,
+                            // loopedSlides: 3,
+                            // slidesPerView: 1
                          },
                          1e3: {
-                             loopedSlides: 3,
-                             spaceBetween: 85,
-                             slidesPerView: 1.1
+                          //   loopedSlides: 3,
+                            // spaceBetween: 85,
+                           //  slidesPerView: 1.1
                          },
                          1200: {
                             // spaceBetween: 100,
