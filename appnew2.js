@@ -1371,7 +1371,7 @@ function showModal(){
   
 let tl = gsap.timeline();
   tl.to(".popup", { autoAlpha: 1, ease:'none'}, 0)
-  to(".barba-container", 0.2, {opacity: 0.2}, 0);
+  .to(".barba-container", 0.2, {opacity: 0.2}, 0);
 
   console.log("MODAL TIMEOUT");
  // sessionStorage.setItem('alreadyShow','alredy shown');
