@@ -92,13 +92,13 @@ MAIN JS + LOCOMOTIVE SCROLL + SCROLL TRIGGER PROXY
 function initScroll(container) {
 
    locoScroll = new LocomotiveScroll({
-    el: document.querySelector(".smooth-scroll"),
-    smooth: true,
-     offset: [0, 0], 
-     getDirection: true, 
-    scrollFromAnywhere: true,
-    touchMultiplier: 3.0,
-    useKeyboard: true,
+   el: document.querySelector(".smooth-scroll"),
+   smooth: true,
+   offset: [0, 0], 
+   getDirection: true, 
+   scrollFromAnywhere: true,
+   touchMultiplier: 3.0,
+   useKeyboard: true,
    // scrollbarContainer: document.querySelector('#primary'),
    inertia: .75,  
    smartphone: {
@@ -175,51 +175,6 @@ ScrollTrigger.defaults( {
 });
 
 
-
-var swiper = new Swiper(".swiper-container", {
- // loopedSlides: 6,
-  loop: true,
-  spaceBetween: 24,
- slidesPerView: 5,
-  freeMode: false,
-  grabCursor: true,
-  mousewheel: false,
-
-  autoplay: {
-    delay: 3000,
-disableOnInteraction: false,
-  },
-
-     //   resistanceRatio:0.2,
-     // longSwipes:true,
-   //   longSwipesRatio:0.5,
-    //  touchRatio:5,
-        //loopFillGroupWithBlank: false,
-       // paginationClickable: true,
-       // mousewheelControl: true,
-        parallax: true,
-       // preloadImages: true,
-        //updateOnImagesReady: true,
-      // centeredSlides: true,
-      // slidesOffsetBefore: 100,
-        speed: 1000,
-        breakpoints: {
-                        500: {
-                            spaceBetween: 30,
-                            loopedSlides: 3,
-                            slidesPerView: 1
-                        },
-                        1e3: {
-                            loopedSlides: 3,
-                            spaceBetween: 85,
-                            slidesPerView: 1.1
-                        },
-                        1200: {
-                           // spaceBetween: 100,
-                          //  slidesPerView: 1.2
-                        }
-                    }
-});
 
 
 
@@ -403,6 +358,7 @@ function initContent() {
       headerHide();
       logoTransformOnScroll();
       productsTabs();
+      swiperSolo();
     },
    contact: function () {
     //  openMobileMenu();
@@ -583,7 +539,7 @@ BARBA INIT
 barba.init({
   timeout: 7000,
   debug: true,
- //g prefetch: true,
+  prefetch: true,
 /*
 ================================================================================
 BARBA VIEWS
@@ -611,6 +567,7 @@ BARBA VIEWS
       productsTabs(); 
       fullscreen3D();
       productsoloAccordion(); 
+      swiperSolo();
    
     }},{
       
@@ -1769,4 +1726,60 @@ AUTO YEAR UPDATE
 function yearUpdate() {
   const year = new Date().getFullYear();
   $('.year').text(year);
+}
+
+
+
+/*
+================================================================================
+SWIPER PROJECT SOLO
+================================================================================
+*/
+
+function swiperSolo() {
+var swiper = new Swiper(".swiper-container", {
+  // loopedSlides: 6,
+   loop: true,
+   spaceBetween: 24,
+  slidesPerView: 5,
+   freeMode: false,
+   grabCursor: true,
+   mousewheel: false,
+ 
+   autoplay: {
+     delay: 3000,
+ disableOnInteraction: false,
+   },
+ 
+      //   resistanceRatio:0.2,
+      // longSwipes:true,
+    //   longSwipesRatio:0.5,
+     //  touchRatio:5,
+         //loopFillGroupWithBlank: false,
+        // paginationClickable: true,
+        // mousewheelControl: true,
+         parallax: true,
+        // preloadImages: true,
+         //updateOnImagesReady: true,
+       // centeredSlides: true,
+       // slidesOffsetBefore: 100,
+         speed: 1000,
+         breakpoints: {
+                         500: {
+                             spaceBetween: 30,
+                             loopedSlides: 3,
+                             slidesPerView: 1
+                         },
+                         1e3: {
+                             loopedSlides: 3,
+                             spaceBetween: 85,
+                             slidesPerView: 1.1
+                         },
+                         1200: {
+                            // spaceBetween: 100,
+                           //  slidesPerView: 1.2
+                         }
+                     }
+ });
+
 }
