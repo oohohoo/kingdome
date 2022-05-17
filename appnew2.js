@@ -1384,14 +1384,19 @@ function showModal(){
  */
 
  
-  var tl = gsap.timeline({defaults: {duration: 0.4, ease: "none"},
+/*   var tl = gsap.timeline({defaults: {duration: 0.4, ease: "none"},
   tl.to('#popup', {autoAlpha:1, rotate:360})
   .to(".barba-container",  {opacity: 0.2}"<");
 
 });
+ */
+
+let modal = gsap.timeline();
 
 
+  modal.to("#popup'", { autoAlpha: 1, rotate 360, ease:'none'}, 0)
 
+  
 
   sessionStorage.setItem('alreadyShow','alredy shown');
 }
