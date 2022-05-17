@@ -1362,35 +1362,26 @@ function popupWizdome() {
 
 /* SHOW ONCE PER COOKIE*/
 
-//var is_modal_show = sessionStorage.getItem('alreadyShow');
-//if(is_modal_show != 'alredy shown'){
- // $(".popup").show()
- setTimeout(showModal,2000);
-function showModal(){
-
-  
-let tl = gsap.timeline();
-  tl.to(".popup", { autoAlpha: 1, ease:'none'}, 0)
-  .to(".barba-container", 0.2, {opacity: 0.2}, 0);
+var is_modal_show = sessionStorage.getItem('alreadyShow');
+  if(is_modal_show != 'alredy shown'){
+    setTimeout(showModal,2000);
+      function showModal(){
+        let tl = gsap.timeline();
+          tl.to(".popup", { autoAlpha: 1, ease:'none'}, 0)
+            .to(".barba-container", 0.2, {opacity: 0.2}, 0);
 
   console.log("MODAL TIMEOUT");
- // sessionStorage.setItem('alreadyShow','alredy shown');
+ sessionStorage.setItem('alreadyShow','alredy shown');
+}
 }
 
 
-
-
-
-//}
-
-
-
 $(".popup-close, .popup").click(function() {
-  gsap.to(".actual-message", 0.2, {
+ /*  gsap.to(".actual-message", 0.2, {
     marginTop: "10%",
     autoAlpha: 0,
     ease: "ease-in"
-  });
+  }); */
 
   gsap.to(".popup", 0.2, { 
     autoAlpha: 0
