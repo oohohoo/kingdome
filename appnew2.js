@@ -397,10 +397,10 @@ function initContent() {
       productsTabs();
     },
    contact: function () {
-      openMobileMenu();
+    //  openMobileMenu();
     },
     faq: function () {
-       openMobileMenu();
+      // openMobileMenu();
      }
 
   };
