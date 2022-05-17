@@ -386,8 +386,7 @@ function initContent() {
       parallaxPanel();
     },
     products: function () {
-      outlinehero();
-      numberoll();
+    
     },
     howwework: function () {
       akapowPinned();
