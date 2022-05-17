@@ -1250,7 +1250,7 @@ function logoTransformOnScroll() {
   .to(".header_redflag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
   .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
 
-  .to(".header_znak", { scale: 0.7, duration: 0.7, transformOrigin: 'center center', yPercent: -53, ease:'expo.inOut'}, 0)
+  .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -53, ease:'expo.inOut'}, 0)
   //.to(".header_kingdome", { yPercent: 20, ease:'expo.inOut'}, 0)
 
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
