@@ -372,8 +372,8 @@ function initContent() {
         this.products();
       } else if ($('body').hasClass('page-howwework')) {
         this.howwework();
-      } else if ($('body').hasClass('page-projekt-single')) {
-        this.pageprojektsingle();
+      } else if ($('body').hasClass('page-product-single')) {
+        this.pageproductsingle();
       } else if ($('body').hasClass('page-contact')) {
         this.contact();
       } else if ($('body').hasClass('page-faq')) {
@@ -381,6 +381,7 @@ function initContent() {
       }
     },
     home: function () {
+      initScroll();
       akapowPinned();
       rotateWireframe();
       parallaxPanel();
@@ -389,24 +390,30 @@ function initContent() {
     
     },
     howwework: function () {
+      initScroll();
       akapowPinned();
       logoMarquee();
     },
-    pageprojektsingle: function () {
+    pageproductsingle: function () {
+      initScroll();
       productsTabs();
     },
    contact: function () {
     //  openMobileMenu();
     },
     faq: function () {
+      initScroll();
       // openMobileMenu();
      }
 
   };
 
 
-  initScroll();
-// LOAD THIS SCRIPTS ON EVERY PAGE
+
+ 
+
+
+  // LOAD THIS SCRIPTS ON EVERY PAGE
   fullscreenMenu();
   scrollToTop();
   headerHide();
