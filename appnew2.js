@@ -1369,34 +1369,10 @@ if(is_modal_show != 'alredy shown'){
  setTimeout(showModal,2000);
 function showModal(){
 
-  /* gsap.from(".actual-message", 0.4, {
-    marginTop: "10%",
-    autoAlpha: 0,
-    ease: Back.easeOut,
-    });
-  gsap.to(".popup", 0.4, {
-    autoAlpha: 1,
-    delay: 1
-  });
-  gsap.to(".barba-container",g 0.2, { 
-    opacity: 0.2
-  });
- */
-
- 
-/*   var tl = gsap.timeline({defaults: {duration: 0.4, ease: "none"},
-  tl.to('#popup', {autoAlpha:1, rotate:360})
-  .to(".barba-container",  {opacity: 0.2}"<");
-
-});
- */
-
+  
 let modal = gsap.timeline();
-
-
   modal.to("#popup'", { autoAlpha: 1, rotate: 360, ease:'none'}, 0)
 
-  
 
   sessionStorage.setItem('alreadyShow','alredy shown');
 }
@@ -1424,6 +1400,7 @@ $(".popup-close, .popup").click(function() {
   });
 }); 
 
+}
 /*
 ================================================================================
 HOME - PRODUCT HOVER 
