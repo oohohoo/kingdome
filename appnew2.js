@@ -1400,7 +1400,7 @@ function showModal(){
 
   tl = gsap.timeline({defaults: {duration: 0.4, ease: "none"},
   tl.to(".popup", {autoAlpha:1, rotate:360})
-    .to(".barba-container",  {opacity: 0.2},"<");
+    .to(".barba-container",  {opacity: 0.2}"<");
   });
   
  // $(".popup").show()
