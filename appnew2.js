@@ -1396,6 +1396,9 @@ gsap.to(".popup", 0.4, {
   autoAlpha: 1,
   delay: 1
 });
+gsap.to(".background-black", 0.2, { 
+  autoAlpha: 1
+});
 
 
 
@@ -1418,6 +1421,9 @@ $(".popup-close, .popup").click(function() {
   });
 
   gsap.to(".popup", 0.2, { 
+    autoAlpha: 0
+  });
+  gsap.to(".background-black", 0.2, { 
     autoAlpha: 0
   });
 }); 
