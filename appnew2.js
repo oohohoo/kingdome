@@ -383,6 +383,7 @@ function initContent() {
     home: function () {
       initScroll();
       headerHide();
+      logoTransformOnScroll();
       akapowPinned();
       rotateWireframe();
       parallaxPanel();
@@ -393,12 +394,14 @@ function initContent() {
     howwework: function () {
       initScroll();
       headerHide();
+      logoTransformOnScroll();
       akapowPinned();
       logoMarquee();
     },
     pageproductsingle: function () {
       initScroll();
       headerHide();
+      logoTransformOnScroll();
       productsTabs();
     },
    contact: function () {
@@ -407,6 +410,7 @@ function initContent() {
     faq: function () {
       initScroll();
       headerHide();
+      logoTransformOnScroll();
       // openMobileMenu();
      }
 
@@ -423,7 +427,6 @@ function initContent() {
   underline();
   popupWizdome();
   buttonHover();
-  logoTransformOnScroll();
   yearUpdate();
   //initNavigation();
   //initHeaderTilt();
