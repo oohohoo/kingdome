@@ -940,8 +940,8 @@ OVO JE MOŽDA NEPOTREBNO
 ================================================================================
 */
 // EVENT LISTENERS
-openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
-closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
+//openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
+//closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
 
 
 
