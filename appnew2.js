@@ -1384,7 +1384,7 @@ if(is_modal_show != 'alredy shown'){
  setTimeout(showModal,2000);
 function showModal(){
 
-  gsap.from(".actual-message", 0.4, {
+  /* gsap.from(".actual-message", 0.4, {
     marginTop: "10%",
     autoAlpha: 0,
     ease: Back.easeOut,
@@ -1396,7 +1396,12 @@ function showModal(){
   gsap.to(".barba-container", 0.2, { 
     opacity: 0.2
   });
+ */
 
+  tl = gsap.timeline({defaults: {duration: 0.4, ease: "none"},
+  tl.to(".popup", {autoAlpha: , rotate:360})
+    .to(".barba-container",  {opacity: 0.2},"<");
+  });
   
  // $(".popup").show()
 }
