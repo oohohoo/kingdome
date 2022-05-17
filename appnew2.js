@@ -1393,13 +1393,13 @@ function showModal(){
     autoAlpha: 1,
     delay: 1
   });
-  gsap.to(".barba-container", 0.2, { 
+  gsap.to(".barba-container",g 0.2, { 
     opacity: 0.2
   });
  */
 
   tl = gsap.timeline({defaults: {duration: 0.4, ease: "none"},
-  tl.to(".popup", {autoAlpha: , rotate:360})
+  tl.to(".popup", {autoAlpha:1, rotate:360})
     .to(".barba-container",  {opacity: 0.2},"<");
   });
   
