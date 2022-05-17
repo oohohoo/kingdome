@@ -497,7 +497,10 @@ barba.hooks.afterLeave((data) => {
   });
    //kill scrolltrigger
   barba.hooks.beforeLeave(() => {
-    locoScroll.destroy();
+    if($('.smooth-scroll').length >0 ){
+      locoScroll.destroy();
+   }
+  
    /*  killScrollTriggers(); */
    if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
