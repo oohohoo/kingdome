@@ -1362,8 +1362,8 @@ function popupWizdome() {
 
 /* SHOW ONCE PER COOKIE*/
 
-var is_modal_show = sessionStorage.getItem('alreadyShow');
-if(is_modal_show != 'alredy shown'){
+//var is_modal_show = sessionStorage.getItem('alreadyShow');
+//if(is_modal_show != 'alredy shown'){
  // $(".popup").show()
  setTimeout(showModal,2000);
 function showModal(){
@@ -1373,14 +1373,14 @@ let modal = gsap.timeline();
   modal.to("#popup", { autoAlpha: 1, rotate: 360, ease:'none'}, 0)
 
 
-  sessionStorage.setItem('alreadyShow','alredy shown');
+ // sessionStorage.setItem('alreadyShow','alredy shown');
 }
 
 
 
 
 
-}
+//}
 
 
 
