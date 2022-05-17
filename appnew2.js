@@ -1372,7 +1372,7 @@ function showModal(){
 let modal = gsap.timeline();
   modal.to("#popup", { autoAlpha: 1, rotate: 360, ease:'none'}, 0)
 
-
+  console.log("MODAL TIMEOUT");
  // sessionStorage.setItem('alreadyShow','alredy shown');
 }
 
