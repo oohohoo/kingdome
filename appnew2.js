@@ -1361,21 +1361,6 @@ ALL - POPUP - WIZDOME
 */
 function popupWizdome() {
 
-
-/* setTimeout(showModal,2000);
-function showModal(){
-
-  //$(".popup").show()
-
-  gsap.to(".popup", 0.4, {
-    autoAlpha: 1,
-    delay: 2
-  });
-};
- */
-
-
-
 /* SHOW ONCE PER COOKIE*/
 
 var is_modal_show = sessionStorage.getItem('alreadyShow');
@@ -1398,13 +1383,12 @@ function showModal(){
   });
  */
 
-  tl = gsap.timeline({defaults: {duration: 0.4, ease: "none"},
-  tl.to(".popup", {autoAlpha:1, rotate:360})
-    .to(".barba-container",  {opacity: 0.2}"<");
-  });
-  
- // $(".popup").show()
-}
+ 
+  var tl = gsap.timeline({defaults: {duration: 0.4, ease: "none"},
+  tl.to('#popup', {autoAlpha:1, rotate:360})
+  .to(".barba-container",  {opacity: 0.2}"<");
+
+});
 
 
 
