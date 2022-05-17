@@ -1381,24 +1381,26 @@ function showModal(){
 var is_modal_show = sessionStorage.getItem('alreadyShow');
 if(is_modal_show != 'alredy shown'){
  // $(".popup").show()
-  //setTimeout(showModal,2000);
-//function showModal(){
- // $(".popup").show()
-//}
+ setTimeout(showModal,2000);
+function showModal(){
 
-gsap.from(".actual-message", 0.4, {
-  marginTop: "10%",
-  autoAlpha: 0,
-  ease: Back.easeOut,
-  delay: 15
-});
-gsap.to(".popup", 0.4, {
-  autoAlpha: 1,
-  delay: 1
-});
-gsap.to(".barba-container", 0.2, { 
-  opacity: 0.2
-});
+  gsap.from(".actual-message", 0.4, {
+    marginTop: "10%",
+    autoAlpha: 0,
+    ease: Back.easeOut,
+    });
+  gsap.to(".popup", 0.4, {
+    autoAlpha: 1,
+    delay: 1
+  });
+  gsap.to(".barba-container", 0.2, { 
+    opacity: 0.2
+  });
+
+  
+ // $(".popup").show()
+}
+
 
 
 
