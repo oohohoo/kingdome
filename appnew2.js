@@ -1394,7 +1394,7 @@ function showModal(){
 let modal = gsap.timeline();
 
 
-  modal.to("#popup'", { autoAlpha: 1, rotate 360, ease:'none'}, 0)
+  modal.to("#popup'", { autoAlpha: 1, rotate: 360, ease:'none'}, 0)
 
   
 
