@@ -1390,14 +1390,14 @@ gsap.from(".actual-message", 0.4, {
   marginTop: "10%",
   autoAlpha: 0,
   ease: Back.easeOut,
-  delay: 1.5
+  delay: 15
 });
 gsap.to(".popup", 0.4, {
   autoAlpha: 1,
   delay: 1
 });
 gsap.to(".barba-container", 0.2, { 
-  opacity: 0.4
+  opacity: 0.2
 });
 
 
