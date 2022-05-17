@@ -424,7 +424,8 @@ function initContent() {
 
   setTimeout(() => {
     ScrollTrigger.refresh(true);
-  }, 400);
+  }, 200);
+  console.log("Scrolltrigger refreshed");
 
 
 }
