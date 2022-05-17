@@ -361,9 +361,53 @@ INIT CONTENT --> vodi na --> INIT SCROLL
 ================================================================================
 */
 function initContent() {
-
   select('body').classList.remove('is-loading');
+
+  // your custom script
+  var myscripts = {
+    init: function () {
+      if ($('body').hasClass('page-home')) {
+        this.home();
+      } else if ($('body').hasClass('page-products')) {
+        this.products();
+      } else if ($('body').hasClass('page-howwework')) {
+        this.howwework();
+      } else if ($('body').hasClass('page-projekt-single')) {
+        this.pageprojektsingle();
+      } else if ($('body').hasClass('page-contact')) {
+        this.contact();
+      } else if ($('body').hasClass('page-faq')) {
+        this.faq();
+      }
+    },
+    home: function () {
+      akapowPinned();
+      rotateWireframe();
+      parallaxPanel();
+    },
+    products: function () {
+      outlinehero();
+      numberoll();
+    },
+    howwework: function () {
+      akapowPinned();
+      logoMarquee();
+    },
+    pageprojektsingle: function () {
+      productsTabs();
+    },
+   contact: function () {
+      openMobileMenu();
+    },
+    faq: function () {
+       openMobileMenu();
+     }
+
+  };
+
+
   initScroll();
+// LOAD THIS SCRIPTS ON EVERY PAGE
   fullscreenMenu();
   scrollToTop();
   headerHide();
@@ -371,25 +415,20 @@ function initContent() {
   popupWizdome();
   buttonHover();
   logoTransformOnScroll();
-  akapowPinned();
-  rotateWireframe();
-  parallaxPanel();
-  productsTabs();
-  logoMarquee();
   yearUpdate();
   //initNavigation();
   //initHeaderTilt();
 
-}
 
-/* 
-  ScrollTrigger.refresh(true); // ScrollTrigger Refresh
-  console.log("scrolltrigger refreshed AFTER all script load"); */
-   /* $(document).ready(function() {  */
+  myscripts.init();
+
   setTimeout(() => {
     ScrollTrigger.refresh(true);
-  }, 1000);
-/* }); */ 
+  }, 400);
+
+
+}
+
 /*
 ================================================================================
 BARBA PAGE TRANSITION IN
