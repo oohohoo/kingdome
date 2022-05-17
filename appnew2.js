@@ -382,6 +382,7 @@ function initContent() {
     },
     home: function () {
       initScroll();
+      headerHide();
       akapowPinned();
       rotateWireframe();
       parallaxPanel();
@@ -391,11 +392,13 @@ function initContent() {
     },
     howwework: function () {
       initScroll();
+      headerHide();
       akapowPinned();
       logoMarquee();
     },
     pageproductsingle: function () {
       initScroll();
+      headerHide();
       productsTabs();
     },
    contact: function () {
@@ -403,6 +406,7 @@ function initContent() {
     },
     faq: function () {
       initScroll();
+      headerHide();
       // openMobileMenu();
      }
 
@@ -416,7 +420,6 @@ function initContent() {
   // LOAD THIS SCRIPTS ON EVERY PAGE
   fullscreenMenu();
   scrollToTop();
-  headerHide();
   underline();
   popupWizdome();
   buttonHover();
