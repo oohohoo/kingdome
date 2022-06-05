@@ -1501,54 +1501,6 @@ HOME + HOW WE WORK AKAPOWL PINNED
 */
 function akapowPinned() {
 
-  gsap.set(".panelxxx", { zIndex: (i, target, targets) => targets.length - i });
-
-var images = gsap.utils.toArray('.panelxxx:not(.purple)');
-
-images.forEach((image, i) => {
-   
-   var tl = gsap.timeline({
-     
-     scrollTrigger: {
-			trigger: ".blackio",
-      scroller: ".smooth-scroll",
-       
-       start: () => "top -" + (window.innerHeight * (i)),
-       
-       end: () => "+=" + window.innerHeight,
-       scrub: true,
-       toggleActions: "play none reverse none",
-       invalidateOnRefresh: true,     
-     }
-     
-   })
-   
-   tl
-   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
-   ;
-   
-});
- 
- 
-
-
-ScrollTrigger.create({
-
-			trigger: ".blackio",
-      scroller: ".smooth-scroll",
-    //markers: true,
-  
-    /*---*/
-    pin: '.p-wrap',
-  
-    start: () => "top top",
-    end: () => "+=" + ((images.length) * window.innerHeight),
-    invalidateOnRefresh: true,
-   
-});
-
-
-/*
   gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
   gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
