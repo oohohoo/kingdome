@@ -1517,9 +1517,10 @@ function akapowPinned() {
        scroller: ".smooth-scroll",
       start: () => "top top",
       //end: () => "+=" + ((images.length + 1) * window.innerHeight),
-     // end: () => "+=" + ((images.length) * window.innerHeight),
+      
+      end: () => "+=" + ((images.length) * window.innerHeight),
      // end: () => "+=" + window.innerHeight,
-     end: () => "+=" + window.innerHeight,
+    // end: () => "+=" + window.innerHeight,
       pin: true,
       scrub: true,
       invalidateOnRefresh: true
