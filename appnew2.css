@@ -705,7 +705,7 @@ CURRENT LINK COLOR
 
 }
 
-.w--current::after {
+.w--current:not(.header_redflag-link):after {
   position: absolute;
   content: '';
   height: 2px;
