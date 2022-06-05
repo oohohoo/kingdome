@@ -1537,7 +1537,7 @@ function akapowPinned() {
     y: "100%",
     opacity: 0 
   }, { 
-    y: "0%", 
+    y: "30%", 
     opacity: 1,
     duration: stagger/2,
     stagger: stagger
