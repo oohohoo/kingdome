@@ -1518,7 +1518,7 @@ function akapowPinned() {
       start: () => "top top",
       end: () => "+=" + ((images.length + 1) * window.innerHeight),
       pin: true,
-      scrub: true,
+     // scrub: true,
       invalidateOnRefresh: true
     }  
   })
@@ -1539,7 +1539,7 @@ function akapowPinned() {
   }, { 
     y: "30%", 
     opacity: 1,
-    duration: stagger/6,
+    duration: stagger/2,
     stagger: stagger
   }, 0)
   
