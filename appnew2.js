@@ -1503,8 +1503,55 @@ function akapowPinned() {
 
   gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
-  var imagesxx = gsap.utils.toArray('.panel3:not(.purple)');
+  gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
+
+  let texts = gsap.utils.toArray('.panel-text');  
+
+  var images = gsap.utils.toArray('.panel3:not(.purple)');
+
+  let stagger = 1 / (images.length + 1);
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".black",
+      scroller: ".smooth-scroll",
+      start: () => "top top",
+      end: () => "+=" + ((images.length + 1) * window.innerHeight),
+      pin: true,
+      scrub: true,
+      invalidateOnRefresh: true
+    }  
+  })
   
+  tl
+  .fromTo(images, {
+    height: "100%"
+  }, {
+    height: "0%",
+    ease: "none",
+    duration: stagger,
+    stagger: stagger
+  }, stagger)
+  
+  .fromTo(texts, { 
+    y: "100%",
+    opacity: 0 
+  }, { 
+    y: "50%", 
+    opacity: 1,
+    duration: stagger/2,
+    stagger: stagger
+  }, 0)
+  
+  .to(texts, { 
+    y: "0%", 
+    opacity: 0,
+    duration: stagger/2,
+    stagger: stagger,
+  }, stagger)
+
+
+  /*
   imagesxx.forEach((image, i) => {
      
      var tl = gsap.timeline({
@@ -1536,7 +1583,7 @@ function akapowPinned() {
         scroller: ".smooth-scroll",
       markers: false,
     
-      /*---*/
+     
       pin: ".picturewrap",
     
       start: () => "top top",
@@ -1544,6 +1591,8 @@ function akapowPinned() {
       invalidateOnRefresh: true,
      
   });
+
+*/
     console.log("UHOME + HOW WE WORK AKAPOWL PINNED");
   }
 
