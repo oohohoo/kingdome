@@ -1539,7 +1539,7 @@ function akapowPinned() {
   }, { 
     y: "30%", 
     opacity: 1,
-    duration: stagger/3,
+    duration: stagger/6,
     stagger: stagger
   }, 0)
   
