@@ -1534,7 +1534,7 @@ function akapowPinned() {
   }, stagger)
   
   .fromTo(texts, { 
-    y: "100%",
+    y: "50%",
     opacity: 0 
   }, { 
     y: "50%", 
