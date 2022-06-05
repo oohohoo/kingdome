@@ -1509,7 +1509,7 @@ function akapowPinned() {
 
   var images = gsap.utils.toArray('.panel3:not(.purple)');
 
-  let stagger = 1 / (images.length + 1);
+  let stagger = 1 / (images.length);
 
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -1518,7 +1518,7 @@ function akapowPinned() {
       start: () => "top top",
       //end: () => "+=" + ((images.length + 1) * window.innerHeight),
       
-      end: () => "+=" + ((images.length + 30) * window.innerHeight),
+      end: () => "+=" + ((images.length) * window.innerHeight),
      // end: () => "+=" + window.innerHeight,
     // end: () => "+=" + window.innerHeight,
       pin: true,
