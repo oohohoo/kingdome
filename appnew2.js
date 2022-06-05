@@ -1513,8 +1513,8 @@ function akapowPinned() {
 
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".black",
-      scroller: ".smooth-scroll",
+      trigger: ".akatrigger",
+       scroller: ".smooth-scroll",
       start: () => "top top",
       end: () => "+=" + ((images.length + 1) * window.innerHeight),
       pin: true,
