@@ -1518,7 +1518,7 @@ function akapowPinned() {
       start: () => "top top",
       //end: () => "+=" + ((images.length + 1) * window.innerHeight),
      // end: () => "+=" + ((images.length) * window.innerHeight),
-     end: () => "+=" + (images.length),
+     end: () => "+=" + images.length,
      // end: () => "+=" + window.innerHeight,
       pin: true,
       scrub: true,
