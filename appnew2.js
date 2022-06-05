@@ -1534,10 +1534,10 @@ function akapowPinned() {
   }, stagger)
   
   .fromTo(texts, { 
-    y: "50%",
+    y: "100%",
     opacity: 0 
   }, { 
-    y: "50%", 
+    y: "30%", 
     opacity: 1,
     duration: stagger/2,
     stagger: stagger
