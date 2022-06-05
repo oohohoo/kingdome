@@ -1503,13 +1503,61 @@ function akapowPinned() {
 
   gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
+var images = gsap.utils.toArray('.panel3:not(.purple)');
+
+images.forEach((image, i) => {
+   
+   var tl = gsap.timeline({
+     
+     scrollTrigger: {
+			trigger: ".akatrigger",
+      scroller: ".smooth-scroll",
+       
+       start: () => "top -" + (window.innerHeight * (i)),
+       
+       end: () => "+=" + window.innerHeight,
+       scrub: true,
+       toggleActions: "play none reverse none",
+       invalidateOnRefresh: true,     
+     }
+     
+   })
+   
+   tl
+   .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
+   ;
+   
+});
+ 
+ 
+
+
+ScrollTrigger.create({
+
+			trigger: ".black",
+      scroller: ".smooth-scroll",
+    //markers: true,
+  
+    /*---*/
+    pin: '.p-wrap',
+  
+    start: () => "top top",
+    end: () => "+=" + ((images.length) * window.innerHeight),
+    invalidateOnRefresh: true,
+   
+});
+
+
+/*
+  gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
+
   gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
 
   let texts = gsap.utils.toArray('.panel-text');  
 
   var images = gsap.utils.toArray('.panel3:not(.purple)');
 
-  let stagger = 1 / (images.length);
+  let stagger = 1 / (images.length + 1);
 
   const tl = gsap.timeline({
     scrollTrigger: {
