@@ -341,6 +341,7 @@ function initContent() {
       akapowPinned();
       rotateWireframe();
       parallaxPanel();
+      swiperCustomPaginationHome();
     },
     products: function () {
     
@@ -1841,3 +1842,70 @@ var swiper = new Swiper(".swiper-container", {
  });
 
 }
+
+/*
+================================================================================
+SWIPER PRODUCT HOMEPAGE
+================================================================================
+*/
+
+function swiperCustomPaginationHome() {
+  var menu = ['01', '02', '03']
+  var swiper = new Swiper('.swiper-container', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (menu[index]) + '</span>';
+          },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
+    loop: true,
+    watchSlidesProgress: true
+  });
+  
+  // var swiperEl = document.querySelector('.swiper-container');
+  
+  // swiperEl.addEventListener('mouseenter', function(event) {
+  document.addEventListener('mouseenter', event => {
+    const el = event.target;
+    if (el && el.matches && el.matches('.swiper-container')) {
+      // console.log('mouseenter');
+      // console.log('autoplay running', swiper.autoplay.running);
+      el.swiper.autoplay.stop();
+      el.classList.add('swiper-paused');
+      
+      const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
+      activeNavItem.style.animationPlayState="paused";
+    }
+  }, true);
+  
+  document.addEventListener('mouseleave', event => {
+    // console.log('mouseleave', swiper.activeIndex, swiper.slides[swiper.activeIndex].progress);
+    // console.log('autoplay running', swiper.autoplay.running);
+    const el = event.target;
+    if (el && el.matches && el.matches('.swiper-container')) {
+      el.swiper.autoplay.start();
+      el.classList.remove('swiper-paused');
+  
+      const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
+      
+      activeNavItem.classList.remove('swiper-pagination-bullet-active');
+      // activeNavItem.style.animation = 'none';
+  
+      setTimeout(() => {
+        activeNavItem.classList.add('swiper-pagination-bullet-active');
+        // activeNavItem.style.animation = '';
+      }, 10);
+    }
+  }, true);
+  console.log("SWIPER CUSTOM PAGINATION");
+}
+

@@ -719,6 +719,74 @@ CURRENT LINK COLOR
 }
 
 
+/*
+================================================================================
+SWIPER CUSTOM PAGINATION
+================================================================================
+*/
+
+
+.swiper-pagination-bullet {
+	border-top: 5px solid gray;
+  width: 30%;
+  height: 30px;
+	padding-top: 0.5rem;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+	text-align: left;
+	background: transparent;
+}
+
+
+
+.swiper-pagination-bullet::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.swiper-pagination-bullet-active {
+	border-top: 5px solid blue;
+ z-index:-1;
+}
+.swiper-pagination-bullet-active::before {
+ /* background-color: red;*/
+	border-top: 5px solid red;
+	 position: absolute;
+  top: -2px;
+  left: 0;
+	z-index:99999;
+  -webkit-animation: slide-progress 2s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+          animation: slide-progress 2s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+}
+.swiper-paused .swiper-pagination-bullet-active::before {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes slide-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 
 
