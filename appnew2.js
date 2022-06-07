@@ -367,7 +367,7 @@ function initContent() {
       initScroll();
       headerHide();
       logoTransformOnScroll();
-      faqPin();
+      //faqPin();
       // openMobileMenu();
      }
 
@@ -1721,7 +1721,7 @@ PIN FAQ/PRIVACY HEADER
 */
 
 function faqPin() {
-
+9/*
 const faq = document.querySelector('.faqfix');
 const button = document.querySelector(".accordion__button");
 
@@ -1743,7 +1743,7 @@ function resizeFaq() {
 }
 button.addEventListener('click', resizeFaq);
 
-
+*/
 
 }
 
@@ -1835,18 +1835,18 @@ var swiper = new Swiper(".swiper-container", {
          speed: 1000,
          breakpoints: {
                          500: {
-                          //   spaceBetween: 30,
-                            // loopedSlides: 3,
-                            // slidesPerView: 1
+                            spaceBetween: 30,
+                             loopedSlides: 3,
+                             slidesPerView: 1
                          },
                          1e3: {
-                          //   loopedSlides: 3,
-                            // spaceBetween: 85,
-                           //  slidesPerView: 1.1
+                            loopedSlides: 3,
+                             spaceBetween: 85,
+                             slidesPerView: 1.1
                          },
                          1200: {
-                            // spaceBetween: 100,
-                           //  slidesPerView: 1.2
+                             spaceBetween: 100,
+                             slidesPerView: 1.2
                          }
                      }
  });
