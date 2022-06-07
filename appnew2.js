@@ -364,6 +364,7 @@ function initContent() {
       swiperSolo();
     },
    contact: function () {
+    webflowInteractions();
     //  openMobileMenu();
     },
     faq: function () {
@@ -1797,7 +1798,7 @@ WEBFLOW INTERACTIONS REINIT
 function webflowInteractions() {
   Webflow.ready();
   Webflow.require('ix2').init();
-  //console.log("WEBFLOW RELOAD");
+  console.log("WEBFLOW RELOAD");
 }
 
 /*
