@@ -1740,6 +1740,7 @@ function resizeFaq() {
   ScrollTrigger.refresh();
 }
 document.querySelector('.accordion__button').addEventListener('click', resizeFaq);
+console.log("Button clicked");
 
 
 }
