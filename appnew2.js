@@ -1218,10 +1218,10 @@ function projectMainSwiper() {
     },
   });
 
-  function swipermainUpdate() {
+
   swipermain.update();
   console.log("SWIPER UPDATED");
-  }
+ 
 }
 
 
@@ -1827,7 +1827,7 @@ SWIPER PROJECT SOLO
 */
 
 function swiperSolo() {
-var swiper = new Swiper(".swiper-container", {
+var swiper = new Swiper(".swiper-container-solo", {
   // loopedSlides: 6,
    loop: true,
    spaceBetween: 24,
