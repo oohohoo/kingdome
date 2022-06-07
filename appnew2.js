@@ -1731,7 +1731,7 @@ ScrollTrigger.create({
   start: 'top 20%',
   //end: '+=100%',
   endTrigger: faq.parentElement,
-  end: 'bottom bottom'
+  end: '+=1000000'
   
 }) 
 
