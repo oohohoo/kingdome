@@ -1740,7 +1740,7 @@ ScrollTrigger.create({
 function resizeFaq() {
   ScrollTrigger.refresh();
 }
-document.querySelector(button).addEventListener('click', resizeFaq);
+button.addEventListener('click', resizeFaq);
 console.log("Button clicked");
 
 
