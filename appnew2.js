@@ -571,8 +571,7 @@ BARBA VIEWS
     },
      afterEnter() {
       
-      swiper.update();
-      console.log("SWIPER UPDATED");
+     
 
   
 
@@ -1216,7 +1215,13 @@ function projectMainSwiper() {
       prevEl: sliderPrevious
     },
   });
+
+  swipermain.update();
+  console.log("SWIPER UPDATED");
+
 }
+
+
 
 
 /*
