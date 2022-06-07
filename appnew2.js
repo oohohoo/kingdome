@@ -566,7 +566,7 @@ BARBA VIEWS
     }},{
     namespace: 'products',
     beforeEnter(){
-       projectMainSwiper();
+     //  projectMainSwiper();
 
     }},{
       namespace: 'productsingle',
