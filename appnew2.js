@@ -348,7 +348,7 @@ function initContent() {
       akapowPinned();
       rotateWireframe();
       parallaxPanel();
-      swiperCustomPaginationHome();
+      //swiperCustomPaginationHome();
     },
     products: function () {
     
