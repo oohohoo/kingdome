@@ -565,7 +565,7 @@ BARBA VIEWS
     namespace: 'products',
     beforeEnter(){
      projectMainSwiper();
-     
+     swipermainUpdate();
     },
      afterEnter() {
       
@@ -1218,9 +1218,10 @@ function projectMainSwiper() {
     },
   });
 
+  function swipermainUpdate() {
   swipermain.update();
   console.log("SWIPER UPDATED");
-
+  }
 }
 
 
