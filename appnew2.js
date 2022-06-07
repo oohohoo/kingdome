@@ -158,7 +158,9 @@ ON WINDOW RESIZE
 
 window.addEventListener('resize', function(){
   setTimeout(()=>{
+    if (document.querySelector('.smooth-scroll')) {
   locoScroll.update();
+    };
   ScrollTrigger.refresh();
 },200) 
  console.log("RESIZE & REFRESH LOCO&SCROLLTRIGGER");
