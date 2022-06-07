@@ -1199,6 +1199,8 @@ function projectMainSwiper() {
     grabCursor: true,
     watchSlidesProgress: true, // turn off for horizontal
     //mousewheelControl: true,
+    updateOnImagesReady: true,
+    preloadImages: true,
     mousewheelControl: 1,
     mousewheel: true,
     pagination: {
