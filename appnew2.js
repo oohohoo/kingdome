@@ -522,10 +522,7 @@ console.log("webflow interactions killed...");
 /* AUTOPLAY VIDEOS*/
     var vids = document.querySelectorAll("video"); vids.forEach(vid => { var playPromise = vid.play(); if (playPromise !== undefined) { playPromise.then(_ => {}).catch(error => {}); }; });
    // console.log("možda ode učitat locoscroll");
-   Webflow.ready();
-   Webflow.require('ix2').init();
-   console.log("EVO EMEEEEEEEEE");
-  });
+   });
  
 
 /*
