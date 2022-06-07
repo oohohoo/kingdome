@@ -592,9 +592,12 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-    //webflowInteractions();
-      console.log("webflow interaccccc");
-     
+    
+    },
+    afterEnter() {
+
+      webflowInteractions();
+      console.log("webflow after enter interactions");
       
     }},{
       namespace: 'faq',
@@ -1798,7 +1801,7 @@ WEBFLOW INTERACTIONS REINIT
 function webflowInteractions() {
   Webflow.ready();
   Webflow.require('ix2').init();
-  console.log("WEBFLOW RELOAD");
+  //console.log("WEBFLOW RELOAD");
 }
 
 /*
