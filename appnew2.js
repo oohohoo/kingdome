@@ -566,7 +566,7 @@ BARBA VIEWS
     }},{
     namespace: 'products',
     beforeEnter(){
-     //  projectMainSwiper();
+     projectMainSwiper();
      swiper.update();
 
     }},{
@@ -1182,7 +1182,7 @@ function projectMainSwiper() {
   
   // svaka fotka ima: data-swiper-parallax-y: "35%"
   
-  const swiper = new Swiper(slider, {
+  const swiper3 = new Swiper(slider, {
     autoplay: false,
     parallax: true,
     loop: true,
