@@ -522,6 +522,7 @@ console.log("webflow interactions killed...");
    // console.log("možda ode učitat locoscroll");
    Webflow.ready();
    Webflow.require('ix2').init();
+   console.log("EVO EMEEEEEEEEE");
   });
  
 
