@@ -91,7 +91,8 @@ MAIN JS + LOCOMOTIVE SCROLL + SCROLL TRIGGER PROXY
 */
 function initScroll(container) {
 
-  if($('.smooth-scroll').length >0 ){
+  if (document.querySelector('.smooth-scroll')) {
+  
    locoScroll = new LocomotiveScroll({
    el: document.querySelector(".smooth-scroll"),
    smooth: true,
@@ -110,13 +111,10 @@ function initScroll(container) {
    } 
   });
 
-
-
 // ovo je ubačeno naknadno
 /*   locoScroll.on("scroll", function (t) {
     document.documentElement.setAttribute("data-direction", t.direction);
   }); */
-
 
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
   locoScroll.on("scroll", ScrollTrigger.update);
@@ -185,7 +183,7 @@ ScrollTrigger.defaults( {
 LOCOMOTIVE SCROLL REFRESH AFTER ALL / ne briši
 ================================================================================
 */
-//if($('.smooth-scroll').length >0 ){
+if($('.smooth-scroll').length >0 ){
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
@@ -195,8 +193,7 @@ LOCOMOTIVE SCROLL REFRESH AFTER ALL / ne briši
 /*   document.addEventListener('load', function(){
     locoScroll.update();
 }); */
-
-
+}
 /*
 ================================================================================
 LOCOMOTIVE SCROLL UPDATED AFTER IMAGESLOADED
@@ -208,12 +205,8 @@ imagesLoaded("#main", { background: true }, function () {
   console.log("IMAGES LOADED - LOCOSCROLL UPDATED ČEK DIS");
   });
 
-
 }
-
-  console.log("LOCO JE OHOHOHOHO!");
 }
-//}
 
 /*
 ================================================================================
@@ -348,7 +341,7 @@ function initContent() {
       akapowPinned();
       rotateWireframe();
       parallaxPanel();
-      //swiperCustomPaginationHome();
+      swiperCustomPaginationHome();
     },
     products: function () {
     
