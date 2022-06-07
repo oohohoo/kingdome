@@ -110,7 +110,7 @@ function initScroll(container) {
    } 
   });
 
-});
+
 
 // ovo je ubačeno naknadno
 /*   locoScroll.on("scroll", function (t) {
@@ -208,6 +208,8 @@ imagesLoaded("#main", { background: true }, function () {
   });
 
  
+}
+
 }
 
 /*
