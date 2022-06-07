@@ -1189,7 +1189,7 @@ function projectMainSwiper() {
   
   // svaka fotka ima: data-swiper-parallax-y: "35%"
   
-  const swiper = new Swiper(slider, {
+  const swipermain = new Swiper(slider, {
     autoplay: false,
     parallax: true,
     loop: true,
@@ -1199,8 +1199,8 @@ function projectMainSwiper() {
     grabCursor: true,
     watchSlidesProgress: true, // turn off for horizontal
     //mousewheelControl: true,
-    updateOnImagesReady: true,
-    preloadImages: true,
+    //updateOnImagesReady: true,
+   // preloadImages: true,
     mousewheelControl: 1,
     mousewheel: true,
     pagination: {
