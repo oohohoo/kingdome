@@ -367,6 +367,7 @@ function initContent() {
       initScroll();
       headerHide();
       logoTransformOnScroll();
+      faqPin();
       // openMobileMenu();
      }
 
@@ -591,7 +592,6 @@ BARBA VIEWS
     }},{
       namespace: 'faq',
       beforeEnter(data) {
-        faqPrivacyPin();
         productsoloAccordion(); 
     
         
@@ -1720,9 +1720,9 @@ PIN FAQ/PRIVACY HEADER
 ================================================================================
 */
 
-function faqPrivacyPin() {
-/* 
-const faq = document.querySelector('.faq-header')
+function faqPin() {
+
+const faq = document.querySelector('.faqfix')
 
 ScrollTrigger.create({
   
@@ -1733,13 +1733,13 @@ ScrollTrigger.create({
   endTrigger: faq.parentElement,
   end: 'bottom 30%'
   
-}) */
+}) 
 
 }
 
 /*
 ================================================================================
-PIN FAQ/PRIVACY HEADER
+LOGO MARQUEE
 ================================================================================
 */
 
