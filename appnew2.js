@@ -363,7 +363,7 @@ function initContent() {
       headerHide();
       logoTransformOnScroll();
       productsTabs();
-      swiperSolo();
+     // swiperSolo();
     },
    contact: function () {
     webflowInteractions();
