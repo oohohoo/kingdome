@@ -195,9 +195,8 @@ LOCOMOTIVE SCROLL REFRESH AFTER ALL / ne briši
 /*   document.addEventListener('load', function(){
     locoScroll.update();
 }); */
-}
-console.log("LOCO JE OHOHOHOHO!");
-}
+
+
 /*
 ================================================================================
 LOCOMOTIVE SCROLL UPDATED AFTER IMAGESLOADED
@@ -209,7 +208,11 @@ imagesLoaded("#main", { background: true }, function () {
   console.log("IMAGES LOADED - LOCOSCROLL UPDATED ČEK DIS");
   });
 
- 
+
+}
+
+  console.log("LOCO JE OHOHOHOHO!");
+}
 //}
 
 /*
