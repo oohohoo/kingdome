@@ -1722,7 +1722,8 @@ PIN FAQ/PRIVACY HEADER
 
 function faqPin() {
 
-const faq = document.querySelector('.faqfix')
+const faq = document.querySelector('.faqfix');
+const button = document.querySelector(".accordion__button");
 
 ScrollTrigger.create({
   
@@ -1739,7 +1740,7 @@ ScrollTrigger.create({
 function resizeFaq() {
   ScrollTrigger.refresh();
 }
-document.querySelector('.accordion__button').addEventListener('click', resizeFaq);
+document.querySelector(button).addEventListener('click', resizeFaq);
 console.log("Button clicked");
 
 
