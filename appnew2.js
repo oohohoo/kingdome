@@ -91,6 +91,7 @@ MAIN JS + LOCOMOTIVE SCROLL + SCROLL TRIGGER PROXY
 */
 function initScroll(container) {
 
+  if($('.smooth-scroll').length >0 ){
    locoScroll = new LocomotiveScroll({
    el: document.querySelector(".smooth-scroll"),
    smooth: true,
@@ -109,6 +110,7 @@ function initScroll(container) {
    } 
   });
 
+});
 
 // ovo je ubačeno naknadno
 /*   locoScroll.on("scroll", function (t) {
