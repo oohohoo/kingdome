@@ -366,7 +366,7 @@ function initContent() {
       swiperSolo();
     },
    contact: function () {
-   // webflowInteractions();
+    webflowInteractions();
     //  openMobileMenu();
     },
     faq: function () {
@@ -596,6 +596,7 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
+      webflowInteractions();
     
     },
     afterEnter() {
