@@ -111,6 +111,8 @@ function initScroll(container) {
    } 
   });
 
+  console.log("LOCOMOTIV INIT");
+
 // ovo je ubačeno naknadno
 /*   locoScroll.on("scroll", function (t) {
     document.documentElement.setAttribute("data-direction", t.direction);
@@ -206,6 +208,7 @@ imagesLoaded("#main", { background: true }, function () {
   });
 
 }
+
 }
 
 /*
