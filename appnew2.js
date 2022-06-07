@@ -344,7 +344,7 @@ function initContent() {
       akapowPinned();
       rotateWireframe();
       parallaxPanel();
-      swiperCustomPaginationHome();
+     // swiperCustomPaginationHome();
     },
     products: function () {
     
@@ -567,6 +567,7 @@ BARBA VIEWS
     namespace: 'products',
     beforeEnter(){
      //  projectMainSwiper();
+     swiper.update();
 
     }},{
       namespace: 'productsingle',
