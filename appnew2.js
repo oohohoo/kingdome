@@ -377,10 +377,6 @@ function initContent() {
   };
 
 
-
- 
-
-
   // LOAD THIS SCRIPTS ON EVERY PAGE
   fullscreenMenu();
   scrollToTop();
@@ -595,7 +591,7 @@ BARBA VIEWS
     }},{
     namespace: 'contact',
     beforeEnter(data) {
-    webflowInteractions();
+    //webflowInteractions();
       console.log("webflow interaccccc");
      
       
