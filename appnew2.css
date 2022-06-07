@@ -469,6 +469,14 @@ KILL OUTLINE ON ALL
   outline: none;
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
 
 .w-form-formradioinput--inputType-custom.w--redirected-checked {
   width: 1.5em;
