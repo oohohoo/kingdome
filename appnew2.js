@@ -1949,13 +1949,9 @@ videos.forEach(function(video, i) {
     end: 'center top',
     markers: true,
     onEnter: () => video.play(),
-    console.log("PLAY!");
     onEnterBack: () => video.play(),
-    console.log("PLAY!");
     onLeave: () => video.pause(),
-    console.log("PAUSE!");
     onLeaveBack: () => video.pause(),
-    console.log("PAUSE!");
   });
   
 })
