@@ -346,6 +346,7 @@ function initContent() {
       akapowPinned();
       rotateWireframe();
       parallaxPanel();
+      startStopVideo();
      // swiperCustomPaginationHome();
     },
     products: function () {
@@ -357,6 +358,7 @@ function initContent() {
       logoTransformOnScroll();
       akapowPinned();
       logoMarquee();
+      startStopVideo();
     },
     pageproductsingle: function () {
       initScroll();
@@ -1934,3 +1936,31 @@ function swiperCustomPaginationHome() {
   console.log("SWIPER CUSTOM PAGINATION");
 }
 
+
+/*
+================================================================================
+START/STOP VIDEO INOUT OF VIEWPORT
+================================================================================
+*/
+
+function startStopVideo() {
+
+
+const videos = gsap.utils.toArray('video')
+
+videos.forEach(function(video, i) {
+    
+  ScrollTrigger.create({
+    trigger: video,
+    scroller: '.appVideos',
+    start: 'top center',
+    end: 'bottom center',
+    markers: true,
+    onEnter: () => video.play(),
+    onEnterBack: () => video.play(),
+    onLeave: () => video.pause(),
+    onLeaveBack: () => video.pause(),
+  });
+  
+})
+}
