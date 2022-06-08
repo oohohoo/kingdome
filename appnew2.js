@@ -1965,13 +1965,21 @@ START/STOP VIDEO INOUT OF VIEWPORT
 
 function changeMenuTextColor() {
 
-  ScrollTrigger.create({
-    trigger: ".nav-change-color",
-    start: "top top",
-    end: "bottom top",
-    toggleActions: "play none none reverse",
-    toggleClass: { targets: ".headerx", className: "text-color-white" },
-    markers: true,
+  const sections = gsap.utils.toArray('.data-dark-header');
+
+  sections.forEach(section => {
+    
+    ScrollTrigger.create({
+      trigger: section,
+      start: 'top top-=-80',
+      end: 'bottom top-=-80',
+      toggleClass: {
+        targets: '.header',
+        className: 'has-scrolled'
+      },
+      markers: true
+    })
+    
   });
 
 
