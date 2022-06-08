@@ -1234,7 +1234,6 @@ function fadeInOnEnter() {
       scrollTrigger: {
         trigger: el,
        // markers: true,
-        /* scroller: ".smooth-scroll", */
         start: 'top bottom',
         toggleActions: 'play reverse play reverse',
         end: "top top",
@@ -1255,7 +1254,6 @@ HOME - LOGO TRANSFORM ON SCROLL
 function logoTransformOnScroll() {
   gsap.timeline({
     scrollTrigger: {
-       /* scroller: ".smooth-scroll", */
         trigger: "#start",
         /* markers: true, */
         start: "top top", // when the top of the trigger hits the top of the viewport
@@ -1285,7 +1283,6 @@ function rotateWireframe() {
   var rotate = gsap.timeline({
     scrollTrigger:{
       trigger: "#wireframe-trigger",
-      scroller: ".smooth-scroll",
       //pin: true,
       scrub:true,
       start: 'top 80%',
@@ -1321,7 +1318,6 @@ function parallaxPanel() {
         trigger: ".img__wrapper",
       //  start: 'top 90%',
       //  end: "top top",
-        scroller: ".smooth-scroll",
      //  markers: true,
         scrub: true,
         pin: false
@@ -1533,7 +1529,6 @@ function akapowPinned() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".akatrigger",
-       scroller: ".smooth-scroll",
       start: () => "top top",
       //end: () => "+=" + ((images.length + 1) * window.innerHeight),
       
@@ -1633,7 +1628,6 @@ function headerHide() {
   
   ScrollTrigger.create({
     trigger: ".section-home-kingdome-are",
-    scroller: ".smooth-scroll",
     start: "top top",
     end: 99999,
     onUpdate: (self) => {
@@ -1775,7 +1769,6 @@ function logoMarquee() {
     xPercent: -100,
     ease: "none",
     scrollTrigger: {
-      scroller: ".smooth-scroll",
       trigger: ".section-partners",
       scrub: 3,
       pin:true,
@@ -1952,14 +1945,17 @@ videos.forEach(function(video, i) {
     
   ScrollTrigger.create({
     trigger: video,
-    //scroller: '.appVideos',
     start: 'top 20%',
-    end: 'bottom top',
+    end: 'center top',
     markers: true,
     onEnter: () => video.play(),
+    console.log("PLAY!");
     onEnterBack: () => video.play(),
+    console.log("PLAY!");
     onLeave: () => video.pause(),
+    console.log("PAUSE!");
     onLeaveBack: () => video.pause(),
+    console.log("PAUSE!");
   });
   
 })
