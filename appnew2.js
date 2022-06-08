@@ -1965,7 +1965,7 @@ START/STOP VIDEO INOUT OF VIEWPORT
 
 function changeMenuTextColor() {
 
-  const sections = gsap.utils.toArray('.data-dark-header');
+  const sections = gsap.utils.toArray('.nav-change-color');
 
   sections.forEach(section => {
     
@@ -1974,8 +1974,8 @@ function changeMenuTextColor() {
       start: 'top top-=-80',
       end: 'bottom top-=-80',
       toggleClass: {
-        targets: '.header',
-        className: 'has-scrolled'
+        targets: '.headerx',
+        className: 'text-color-white'
       },
       markers: true
     })
