@@ -1945,8 +1945,8 @@ videos.forEach(function(video, i) {
     
   ScrollTrigger.create({
     trigger: video,
-    start: 'top 20%',
-    end: 'center top',
+    start: 'top top',
+    end: 'bottom top',
     markers: true,
     onEnter: () => video.play(),
     onEnterBack: () => video.play(),
