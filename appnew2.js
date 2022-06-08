@@ -384,7 +384,7 @@ function initContent() {
   fullscreenMenu();
   scrollToTop();
   underline();
-  popupWizdome();
+  //popupWizdome();
   buttonHover();
   yearUpdate();
   //initNavigation();
