@@ -1954,7 +1954,7 @@ videos.forEach(function(video, i) {
     trigger: video,
     //scroller: '.appVideos',
     start: 'top 20%',
-    end: 'bottom 30%',
+    end: 'bottom top',
     markers: true,
     onEnter: () => video.play(),
     onEnterBack: () => video.play(),
