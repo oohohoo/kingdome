@@ -1947,7 +1947,6 @@ videos.forEach(function(video, i) {
     trigger: video,
     start: 'top bottom',
     end: 'bottom top',
-    markers: true,
     onEnter: () => video.play(),
     onEnterBack: () => video.play(),
     onLeave: () => video.pause(),
@@ -1955,4 +1954,24 @@ videos.forEach(function(video, i) {
   });
   
 })
+}
+
+/*
+================================================================================
+START/STOP VIDEO INOUT OF VIEWPORT
+================================================================================
+*/
+
+function changeMenuTextColor() {
+
+  ScrollTrigger.create({
+    trigger: ".nav-change-color",
+    start: "top top",
+    end: "bottom top",
+    toggleActions: "play none none reverse",
+    toggleClass: { targets: ".headerx", className: "text-color-white" },
+    markers: true,
+  });
+
+
 }
