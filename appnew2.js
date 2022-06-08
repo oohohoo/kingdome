@@ -386,6 +386,7 @@ function initContent() {
   fullscreenMenu();
   scrollToTop();
   underline();
+  changeMenuTextColor();
   //popupWizdome();
   buttonHover();
   yearUpdate();
