@@ -1965,22 +1965,21 @@ START/STOP VIDEO INOUT OF VIEWPORT
 
 function changeMenuTextColor() {
 
-  const sections = gsap.utils.toArray('.section-full-image');
+  const blocks = gsap.utils.toArray('.data-dark-header');
 
-  sections.forEach(section => {
+  blocks.forEach(block => {
     
     ScrollTrigger.create({
-      trigger: section,
-      start: 'top 30%',
-      end: 'bottom 50%',
+      trigger: block,
+      start: 'top top-=-80',
+      end: 'bottom top-=-80',
       toggleClass: {
-        targets: '.header_znak',
-        className: 'test'
+        targets: '.header',
+        className: 'has-scrolled'
       },
       markers: true
     })
     
   });
-
 
 }
