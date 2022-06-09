@@ -348,6 +348,7 @@ function initContent() {
       parallaxPanel();
       startStopVideo();
       swiperSolo();
+      homePinSections();
      // swiperCustomPaginationHome();
     },
     products: function () {
@@ -1955,4 +1956,25 @@ videos.forEach(function(video, i) {
   });
   
 })
+}
+
+
+/*
+================================================================================
+HOME PIN SECTIONS
+================================================================================
+*/
+
+function homePinSections() {
+
+
+gsap.utils.toArray(".project-block-right").forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    scroller: ".smooth-scroll",
+    start: "top top", 
+    pin: true, 
+  });
+});
+
 }
