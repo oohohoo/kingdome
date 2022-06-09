@@ -1971,8 +1971,8 @@ function changeMenuTextColor() {
     
     ScrollTrigger.create({
       trigger: section,
-      start: 'top top',
-      end: 'bottom top',
+      start: 'top 30%',
+      end: 'bottom 50%',
       toggleClass: {
         targets: '.header_znak',
         className: 'test'
