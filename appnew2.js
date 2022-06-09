@@ -386,7 +386,6 @@ function initContent() {
   fullscreenMenu();
   scrollToTop();
   underline();
-  changeMenuTextColor();
   //popupWizdome();
   buttonHover();
   yearUpdate();
@@ -1955,31 +1954,4 @@ videos.forEach(function(video, i) {
   });
   
 })
-}
-
-/*
-================================================================================
-START/STOP VIDEO INOUT OF VIEWPORT
-================================================================================
-*/
-
-function changeMenuTextColor() {
-
-  const blocks = gsap.utils.toArray('.data-dark-header');
-
-  blocks.forEach(block => {
-    
-    ScrollTrigger.create({
-      trigger: block,
-      start: 'top top-=-80',
-      end: 'bottom top-=-80',
-      toggleClass: {
-        targets: '.headerx',
-        className: 'has-scrolled'
-      },
-      markers: true
-    })
-    
-  });
-
 }
