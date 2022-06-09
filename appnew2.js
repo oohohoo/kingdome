@@ -1971,8 +1971,8 @@ function changeMenuTextColor() {
     
     ScrollTrigger.create({
       trigger: section,
-      start: 'top top-=-80',
-      end: 'bottom top-=-80',
+      start: 'top top',
+      end: 'bottom top',
       toggleClass: {
         targets: '.headerx',
         className: 'text-color-white'
