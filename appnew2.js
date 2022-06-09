@@ -347,6 +347,7 @@ function initContent() {
       rotateWireframe();
       parallaxPanel();
       startStopVideo();
+      swiperSolo();
      // swiperCustomPaginationHome();
     },
     products: function () {
