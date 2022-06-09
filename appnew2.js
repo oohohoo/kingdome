@@ -1974,8 +1974,8 @@ function changeMenuTextColor() {
       start: 'top top',
       end: 'bottom top',
       toggleClass: {
-        targets: '.headerx',
-        className: 'text-color-white'
+        targets: '.header_znak',
+        className: 'test'
       },
       markers: true
     })
