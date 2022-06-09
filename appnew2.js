@@ -1974,7 +1974,7 @@ function changeMenuTextColor() {
       start: 'top top-=-80',
       end: 'bottom top-=-80',
       toggleClass: {
-        targets: '.header',
+        targets: '.headerx',
         className: 'has-scrolled'
       },
       markers: true
