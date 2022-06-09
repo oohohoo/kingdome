@@ -1965,7 +1965,7 @@ START/STOP VIDEO INOUT OF VIEWPORT
 
 function changeMenuTextColor() {
 
-  const blocks = gsap.utils.toArray('section');
+  const blocks = gsap.utils.toArray('.data-dark-header');
 
   blocks.forEach(block => {
     
