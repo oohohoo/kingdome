@@ -1990,26 +1990,23 @@ HOME PIN SECTIONS
 function fadeInElements() {
 
 
-gsap.set(".fie", {
-  opacity: 0
-});
-
-ScrollTrigger.batch(".fie", {
-  onEnter: (targets, triggers) => {
-    console.log(targets);
-    console.log(triggers);
-
-    gsap.to(targets, {
-      opacity: 1,
-      y: 0,
-      stagger: { each: 0.15},
-      overwrite: true
-    });
-  },
-  start: "top center",
-  markers: true,
-});
-
+  gsap.defaults({ease: "power3"});
+  gsap.set(".fie", {y: 100});
+  
+  let tl;
+  
+  ScrollTrigger.batch(".fie", {
+    start: "top bottom-=100px",
+    // interval: 0.25,
+    stagger: 3,
+    onEnter: batch => {
+      if(tl && tl.isActive()) {
+        tl.to(batch, {opacity: 1, y: 0, backgroundSize: "100%", stagger: 0.5})
+      } else {
+        tl = gsap.timeline().to(batch, {opacity: 1, y: 0, backgroundSize: "100%", stagger: 0.5})
+      }
+    },
+  });
 /*
 gsap.set(".fie", {opacity: 0});
 
