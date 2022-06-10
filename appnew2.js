@@ -1989,15 +1989,36 @@ HOME PIN SECTIONS
 
 function fadeInElements() {
 
+
+gsap.set(".fie, {
+  opacity: 0
+});
+
+ScrollTrigger.batch(".fie", {
+  onEnter: (targets, triggers) => {
+    console.log(targets);
+    console.log(triggers);
+
+    gsap.to(targets, {
+      opacity: 1,
+      y: 0,
+      stagger: { each: 0.15, grid: [1, 3] },
+      overwrite: true
+    });
+  },
+  start: "top center"
+});
+
+/*
 gsap.set(".fie", {opacity: 0});
 
 ScrollTrigger.batch(".fie", {
   onEnter: batch => gsap.to(batch, {duration:1, opacity: 1, stagger: 0.15, overwrite: true}),
-  //onLeave: batch => gsap.set(batch, {duration:1, opacity: 0, overwrite: true}),
+  onLeave: batch => gsap.set(batch, {duration:1, rotate:360, opacity: 0, overwrite: true}),
   onEnterBack: batch => gsap.to(batch, {duration:1,  opacity: 1, stagger: 0.15, overwrite: true}),
   //onLeaveBack: batch => gsap.set(batch, {duration:1,  opacity: 0, overwrite: true})
 });
 
 ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0}));
-
+*/
 }
