@@ -1992,7 +1992,6 @@ function fadeInElements() {
 gsap.set(".fie", {opacity: 0});
 
 ScrollTrigger.batch(".fie", {
-  markers: true,
   onEnter: batch => gsap.to(batch, {duration:1, opacity: 1, stagger: 0.15, overwrite: true}),
   onLeave: batch => gsap.set(batch, {duration:1, opacity: 0, overwrite: true}),
   onEnterBack: batch => gsap.to(batch, {duration:1,  opacity: 1, stagger: 0.15, overwrite: true}),
