@@ -1308,6 +1308,7 @@ PARALLAX PANEL SOLO FOR EACH
 ================================================================================
 */
 function parallaxPanel() {
+  /*
   const sections = gsap.utils.toArray(".img__wrapper");
 
   sections.forEach((section) => {
@@ -1336,7 +1337,7 @@ function parallaxPanel() {
     ease: "none",
     });
   });
-
+*/
     console.log("PARALLAX PANEL SOLO FOR EACH");
 }
 
@@ -1517,7 +1518,7 @@ HOME + HOW WE WORK AKAPOWL PINNED
 ================================================================================
 */
 function akapowPinned() {
-
+/*
   gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
   gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
@@ -1966,7 +1967,8 @@ HOME PIN SECTIONS
 */
 
 function homePinSections() {
-/*
+
+
 gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
@@ -1974,5 +1976,5 @@ gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
     pin: true, 
   });
 });
-*/
+
 }
