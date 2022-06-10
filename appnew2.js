@@ -343,7 +343,7 @@ function initContent() {
       initScroll();
       headerHide();
       logoTransformOnScroll();
-      akapowPinned();
+     // akapowPinned();
       rotateWireframe();
       parallaxPanel();
       startStopVideo();
@@ -358,7 +358,7 @@ function initContent() {
       initScroll();
       headerHide();
       logoTransformOnScroll();
-      akapowPinned();
+    //  akapowPinned();
       logoMarquee();
       startStopVideo();
     },
