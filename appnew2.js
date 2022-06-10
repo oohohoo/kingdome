@@ -1966,8 +1966,7 @@ HOME PIN SECTIONS
 */
 
 function homePinSections() {
-
-
+/*
 gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
@@ -1975,5 +1974,5 @@ gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
     pin: true, 
   });
 });
-
+*/
 }
