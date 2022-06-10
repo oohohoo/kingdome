@@ -1998,6 +1998,6 @@ ScrollTrigger.batch(".fie", {
   //onLeaveBack: batch => gsap.set(batch, {duration:1,  opacity: 0, overwrite: true})
 });
 
-ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0, scale:.8}));
+ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0}));
 
 }
