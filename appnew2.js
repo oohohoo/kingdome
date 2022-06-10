@@ -1968,10 +1968,9 @@ HOME PIN SECTIONS
 function homePinSections() {
 
 
-gsap.utils.toArray(".project-block-right").forEach((panel, i) => {
+gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
-    scroller: ".smooth-scroll",
     start: "top top", 
     pin: true, 
   });
