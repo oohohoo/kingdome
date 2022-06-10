@@ -2002,11 +2002,12 @@ ScrollTrigger.batch(".fie", {
     gsap.to(targets, {
       opacity: 1,
       y: 0,
-      stagger: { each: 0.15, grid: [1, 3] },
+      stagger: { each: 0.15},
       overwrite: true
     });
   },
-  start: "top center"
+  start: "top center",
+  markers: true,
 });
 
 /*
