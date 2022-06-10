@@ -1999,7 +1999,7 @@ function fadeInElements() {
         start: "top 85%",
         end: "top 5%",
         //scrub: 2,
-        markers: true,
+     //   markers: true,
       }
     });
     exptl.from(item, {
