@@ -1989,6 +1989,30 @@ HOME PIN SECTIONS
 
 function fadeInElements() {
 
+  let fadein = gsap.utils.toArray('.fie')
+
+  fadein.forEach((item, index) => {
+  
+    let exptl = gsap.timeline({
+      scrollTrigger:{
+        trigger: item,
+        start: "top 85%",
+        end: "top 5%",
+        scrub: 2,
+        markers: true,
+      }
+    });
+    exptl.from(item, {
+  //    y: 40,
+      scale: .9,
+      opacity: 0,
+      duration: 1, 
+      ease: Expo.easeOut
+    });
+    
+  });
+
+  /*
 
   gsap.defaults({ease: "power3"});
   gsap.set(".fie", {y: 100});
