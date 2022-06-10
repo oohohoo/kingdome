@@ -1968,7 +1968,7 @@ HOME PIN SECTIONS
 function homePinSections() {
 
 
-gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
+gsap.utils.toArray(".panel3").forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
     start: "top top", 
