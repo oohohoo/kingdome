@@ -1993,9 +1993,9 @@ gsap.set(".fie", {opacity: 0});
 
 ScrollTrigger.batch(".fie", {
   onEnter: batch => gsap.to(batch, {duration:1, opacity: 1, stagger: 0.15, overwrite: true}),
-  onLeave: batch => gsap.set(batch, {duration:1, opacity: 0, overwrite: true}),
+  //onLeave: batch => gsap.set(batch, {duration:1, opacity: 0, overwrite: true}),
   onEnterBack: batch => gsap.to(batch, {duration:1,  opacity: 1, stagger: 0.15, overwrite: true}),
-  onLeaveBack: batch => gsap.set(batch, {duration:1,  opacity: 0, overwrite: true})
+  //onLeaveBack: batch => gsap.set(batch, {duration:1,  opacity: 0, overwrite: true})
 });
 
 ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0, scale:.8}));
