@@ -2007,7 +2007,7 @@ function fadeInElements() {
       scale: .9,
       opacity: 0,
       duration: 1, 
-      ease: Expo.easeOut
+      ease: "expo.out"
     });
     
   });
