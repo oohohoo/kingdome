@@ -1990,7 +1990,7 @@ HOME PIN SECTIONS
 function fadeInElements() {
 
 
-gsap.set(".fie, {
+gsap.set(".fie", {
   opacity: 0
 });
 
