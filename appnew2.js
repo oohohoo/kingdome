@@ -392,6 +392,7 @@ function initContent() {
   buttonHover();
   yearUpdate();
   fadeInElements();
+  toggleNavClass();
   //initNavigation();
   //initHeaderTilt();
 
