@@ -843,7 +843,9 @@ TEXTSPLIT HEADERS SCROLLTRIGGER
 */
 
 .blanding-nav.is-active {
-  color: green;
+  color: white;
+  mix-blend-mode: normal;
+
   }
 
 
