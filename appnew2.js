@@ -341,8 +341,7 @@ function initContent() {
       }
     },
     home: function () {
-      initScroll();
-      headerHide();
+      
       logoTransformOnScroll();
      // akapowPinned();
       rotateWireframe();
@@ -356,16 +355,12 @@ function initContent() {
     
     },
     howwework: function () {
-      initScroll();
-      headerHide();
       logoTransformOnScroll();
     //  akapowPinned();
       logoMarquee();
       startStopVideo();
     },
     pageproductsingle: function () {
-      initScroll();
-      headerHide();
       logoTransformOnScroll();
       productsTabs();
       swiperSolo();
@@ -375,8 +370,7 @@ function initContent() {
     //  openMobileMenu();
     },
     faq: function () {
-      initScroll();
-      headerHide();
+      
       logoTransformOnScroll();
       //faqPin();
       // openMobileMenu();
@@ -386,9 +380,11 @@ function initContent() {
 
 
   // LOAD THIS SCRIPTS ON EVERY PAGE
+  initScroll();
   fullscreenMenu();
   scrollToTop();
   underline();
+  headerHide();
   //popupWizdome();
   buttonHover();
   yearUpdate();
