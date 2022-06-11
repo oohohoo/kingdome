@@ -1867,7 +1867,7 @@ var swiper = new Swiper(".swiper-container-solo", {
                          },
                          1200: {
                              spaceBetween: 24,
-                             slidesPerView: 5
+                             slidesPerView: 1.2
                          }
                      }
  });
