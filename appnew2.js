@@ -2140,7 +2140,7 @@ function slideInHeaders() {
   });
 
 tl.from(mySplitText.chars, {
-  duration: 2,
+  duration: 5,
   //skewY: 20,
   rotationX: "+=90",
   opacity: 0,
