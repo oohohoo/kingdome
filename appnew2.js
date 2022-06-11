@@ -402,7 +402,7 @@ function initContent() {
 
   setTimeout(() => {
     ScrollTrigger.refresh(true);
-  }, 200);
+  }, 2000);
   console.log("Scrolltrigger refreshed");
 
 
