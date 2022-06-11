@@ -2063,6 +2063,7 @@ function toggleNavClass() {
     markers: true,
     start: "top top",
     end: "top top",
+    scroller: ".smooth-scroll",
     // once: "true",
     // toggleClass: {targets: ".box1, .box2", className: "active, leave, hide"},
     // toggleActions: "play resume resume reset",
