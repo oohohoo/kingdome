@@ -2053,7 +2053,7 @@ HOME PIN SECTIONS
 
 function toggleNavClass() {
 
-  const sections = document.querySelectorAll('.navchange');
+  const sections = document.querySelectorAll('sections');
 
 sections.forEach((section, index) => {
   gsap.to(section, {autoAlpha: 1,
