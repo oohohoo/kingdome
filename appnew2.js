@@ -2058,7 +2058,7 @@ function toggleNavClass() {
     start: "top bottom",
     end: "bottom bottom",
     id: 'one',
-    toggleClass: { targets: ".nav", className: "is-active" }
+    toggleClass: { targets: ".list", className: "is-active" }
   });
 
   /*
