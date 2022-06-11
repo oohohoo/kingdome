@@ -841,7 +841,7 @@ TEXTSPLIT HEADERS SCROLLTRIGGER
 TEXT ON DARK BACK
 ================================================================================
 */
-.blanding-nav.is-active {
+.headerx.is-active {
   color: white!important;
   mix-blend-mode: normal!important;
  }
