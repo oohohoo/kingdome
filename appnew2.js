@@ -155,7 +155,7 @@ if ( scrollbar.length > 1 ) {
 ON WINDOW RESIZE
 ================================================================================
 */
-
+/*
 window.addEventListener('resize', function(){
   setTimeout(()=>{
     if (document.querySelector('.smooth-scroll')) {
@@ -166,7 +166,7 @@ window.addEventListener('resize', function(){
  console.log("RESIZE & REFRESH LOCO&SCROLLTRIGGER");
 });
 
-
+*/
 
 
 /*
