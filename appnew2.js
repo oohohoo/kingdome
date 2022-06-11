@@ -1856,18 +1856,18 @@ var swiper = new Swiper(".swiper-container-solo", {
          speed: 1000,
          breakpoints: {
                          500: {
-                            spaceBetween: 30,
-                             loopedSlides: 3,
+                            spaceBetween: 24,
+                           //  loopedSlides: 3,
                              slidesPerView: 1
                          },
                          1e3: {
                             loopedSlides: 3,
-                             spaceBetween: 85,
+                             spaceBetween: 24,
                              slidesPerView: 1.1
                          },
                          1200: {
-                             spaceBetween: 20,
-                             slidesPerView: 3
+                             spaceBetween: 24,
+                             slidesPerView: 5
                          }
                      }
  });
