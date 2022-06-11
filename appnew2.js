@@ -1830,8 +1830,8 @@ function swiperSolo() {
 var swiper = new Swiper(".swiper-container-solo", {
   // loopedSlides: 6,
    loop: false,
-   spaceBetween: 20,
- // slidesPerView: 5,
+   spaceBetween: 24,
+  slidesPerView: 1,
    freeMode: false,
    grabCursor: true,
    mousewheel: false,
@@ -1867,7 +1867,7 @@ var swiper = new Swiper(".swiper-container-solo", {
                          },
                          1200: {
                              spaceBetween: 20,
-                             slidesPerView: 1.2
+                             slidesPerView: 3.2
                          }
                      }
  });
