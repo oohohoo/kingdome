@@ -2068,8 +2068,8 @@ sections.forEach((section, index) => {
   ScrollTrigger.create({
     trigger: section,
     id: index+1,
-    start: 'top center',
-    end: () => `+=${section.clientHeight + 30}`,
+    start: "top top",
+    end: "top top",
     toggleActions: 'play reverse none reverse',
     //toggleClass: {targets: section, className: "is-active"},
     toggleClass: {targets: ".nav", className: "is-active"},
