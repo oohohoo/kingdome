@@ -2143,7 +2143,7 @@ function slideInHeaders() {
   var tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".splitty",
-      scroller: ".smooth-scroll",
+    //  scroller: ".smooth-scroll",
       markers: true,
       toggleActions: "restart reverse play reverse"
     }
