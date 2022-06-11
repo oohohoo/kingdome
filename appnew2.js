@@ -2128,7 +2128,7 @@ HOME PIN SECTIONS
 
 function slideInHeaders() {
 
-  gsap.utils.toArray('h1, h2, h3, h4').forEach(title => {
+  gsap.utils.toArray('.splitty').forEach(title => {
     const childSplit = new SplitText(title, {
       type: "lines",
       linesClass: "split-child"
