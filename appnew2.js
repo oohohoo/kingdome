@@ -2052,6 +2052,7 @@ HOME PIN SECTIONS
 */
 
 function toggleNavClass() {
+  /*
   ScrollTrigger.create({
     trigger: "#sectionOne",
     markers: true,
@@ -2060,8 +2061,10 @@ function toggleNavClass() {
    // id: 'one',
     toggleClass: { targets: ".list", className: "is-active" }
   });
+*/
 
-  /*
+/*
+
   const sections = document.querySelectorAll('sections');
 
 sections.forEach((section, index) => {
@@ -2081,13 +2084,13 @@ sections.forEach((section, index) => {
     end: "bottom bottom",
     toggleActions: 'play reverse none reverse',
     //toggleClass: {targets: section, className: "is-active"},
-    toggleClass: {targets: ".nav", className: "is-active"},
+    toggleClass: {targets: ".list", className: "is-active"},
     // markers: true
   })
   
 })
 
-  /*
+*/
 
   var elementFirst = document.querySelector('.nav');
   //var elementSecond = document.querySelector('.box2');
