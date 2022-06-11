@@ -2131,6 +2131,7 @@ function slideInHeaders() {
   var tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".splitty",
+      markers: true,
       toggleActions: "restart none none none"
     }
   }),
