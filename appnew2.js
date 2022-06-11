@@ -2141,7 +2141,7 @@ function slideInHeaders() {
       scrollTrigger: title,
       scroller: ".smooth-scroll",
       start: 'top 10%',
-     // markers: true,
+      markers: true,
       duration: 0.8,
       yPercent: 100,
       ease: "power4",
