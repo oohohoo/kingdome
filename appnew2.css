@@ -842,7 +842,7 @@ TEXTSPLIT HEADERS SCROLLTRIGGER
 ================================================================================
 */
 
-.nav .is-active {
+.nav.is-active {
   color: green;
 }
 
