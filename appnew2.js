@@ -2141,9 +2141,9 @@ function slideInHeaders() {
       scrollTrigger: title,
       scroller: ".smooth-scroll",
       start: 'top 10%',
-      markers: true,
+      //markers: true,
       duration: 0.8,
-      yPercent: 100,
+      yPercent: 105,
       ease: "power4",
       skewY: 10,
       stagger: 0.1
