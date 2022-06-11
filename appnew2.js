@@ -2182,5 +2182,5 @@ HOME PIN SECTIONS
 
 function navOnDark() {
 
-$( ".blanding-nav" ).addClass( "is-active" );
+$( ".headerx" ).addClass( "is-active" );
 }
