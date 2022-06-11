@@ -2052,7 +2052,16 @@ HOME PIN SECTIONS
 */
 
 function toggleNavClass() {
+  ScrollTrigger.create({
+    trigger: "#sectionOne",
+    markers: true,
+    start: "top bottom",
+    end: "bottom bottom",
+    id: 'one',
+    toggleClass: { targets: ".nav", className: "is-active" }
+  });
 
+  /*
   const sections = document.querySelectorAll('sections');
 
 sections.forEach((section, index) => {
