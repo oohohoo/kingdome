@@ -2071,9 +2071,9 @@ function toggleNavClass() {
   });
 */
 
+/*
 
-
-  const sections = document.querySelectorAll('.navchange');
+const sections = document.querySelectorAll('.navchange');
 
 sections.forEach((section, index) => {
   gsap.to(section, {autoAlpha: 1,
@@ -2100,7 +2100,7 @@ sections.forEach((section, index) => {
   
 })
 
-
+*/
 
 /*
   var elementFirst = document.querySelector('.list');
