@@ -2057,7 +2057,7 @@ function toggleNavClass() {
     markers: true,
     start: "top bottom",
     end: "bottom bottom",
-    id: 'one',
+   // id: 'one',
     toggleClass: { targets: ".list", className: "is-active" }
   });
 
