@@ -2145,7 +2145,7 @@ function slideInHeaders() {
       trigger: ".splitty",
       scroller: ".smooth-scroll",
       markers: true,
-      toggleActions: "play reverse play reverse"
+      toggleActions: "restart reverse play reverse"
     }
   }),
   mySplitText = new SplitText(".splitty", {
