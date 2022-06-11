@@ -2116,6 +2116,6 @@ sections.forEach((section, index) => {
    // elementSecond.classList.toggle('leave');
   //  elementThird.classList.toggle('hide');
   };
-  */
+
   }
   
