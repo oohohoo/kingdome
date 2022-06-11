@@ -2092,7 +2092,7 @@ sections.forEach((section, index) => {
 
 */
 
-  var elementFirst = document.querySelector('.nav');
+  var elementFirst = document.querySelector('.list');
   //var elementSecond = document.querySelector('.box2');
  // var elementThird = document.querySelector('.box3');
   
@@ -2112,7 +2112,7 @@ sections.forEach((section, index) => {
   });
   
   function myfunction() {
-    elementFirst.classList.toggle('active')
+    elementFirst.classList.toggle('is-active')
    // elementSecond.classList.toggle('leave');
   //  elementThird.classList.toggle('hide');
   };
