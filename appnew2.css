@@ -836,17 +836,8 @@ TEXTSPLIT HEADERS SCROLLTRIGGER
   overflow: hidden;
 }
 
-/*
-================================================================================
-TEXTSPLIT HEADERS SCROLLTRIGGER
-================================================================================
-*/
 
-.blanding-nav.is-active {
-  color: white;
-  mix-blend-mode: normal;
 
-  }
 
 
 

@@ -569,6 +569,7 @@ BARBA VIEWS
     namespace: 'products',
     beforeEnter(){
      projectMainSwiper();
+     navOnDark();
      
 
     }},{
@@ -2171,4 +2172,15 @@ tl.from(mySplitText.chars, {
   stagger: 0.025
 });
 
+}
+
+  /*
+================================================================================
+HOME PIN SECTIONS
+================================================================================
+*/
+
+function navOnDark() {
+
+$( ".blanding-nav" ).addClass( "is-active" );
 }
