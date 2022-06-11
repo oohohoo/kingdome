@@ -1963,7 +1963,7 @@ videos.forEach(function(video, i) {
 
 /*
 ================================================================================
-HOME PIN SECTIONS
+HOME PIN SECTIONS / nema na home
 ================================================================================
 */
 
@@ -1983,7 +1983,7 @@ gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
 
 /*
 ================================================================================
-HOME PIN SECTIONS
+FADE IN ELEMENTS // NE RADI
 ================================================================================
 */
 
@@ -2043,3 +2043,39 @@ ScrollTrigger.batch(".fie", {
 ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0}));
 */
 }
+
+/*
+================================================================================
+HOME PIN SECTIONS
+================================================================================
+*/
+
+function toggleNavClass() {
+
+
+  var elementFirst = document.querySelector('.nav');
+  //var elementSecond = document.querySelector('.box2');
+ // var elementThird = document.querySelector('.box3');
+  
+  ScrollTrigger.create({
+    trigger: ".nav",
+    markers: true,
+    start: "top 30%",
+    end: "top 60%",
+    // once: "true",
+    // toggleClass: {targets: ".box1, .box2", className: "active, leave, hide"},
+    // toggleActions: "play resume resume reset",
+  
+    onEnter: () => myfunction(),
+    onLeaveBack: () => myfunction(),
+  
+  });
+  
+  function myfunction() {
+    elementFirst.classList.toggle('active')
+   // elementSecond.classList.toggle('leave');
+  //  elementThird.classList.toggle('hide');
+  };
+  
+  }
+  
