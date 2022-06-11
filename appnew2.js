@@ -2144,7 +2144,7 @@ function slideInHeaders() {
     scrollTrigger: {
       trigger: ".splitty",
       scroller: ".smooth-scroll",
-      markers: true,
+     // markers: true,
       toggleActions: "restart reverse play reverse"
     }
   }),
