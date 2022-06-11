@@ -2148,6 +2148,7 @@ function slideInHeaders() {
     
     gsap.from(childSplit.lines, {
       scrollTrigger: title,
+      scroller: ".smooth-scroll",
       duration: 2.5,
       yPercent: 100,
       ease: "power4",
