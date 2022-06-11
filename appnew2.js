@@ -2059,10 +2059,10 @@ function toggleNavClass() {
  // var elementThird = document.querySelector('.box3');
   
   ScrollTrigger.create({
-    trigger: ".nav",
+    trigger: ".navchange",
     markers: true,
-    start: "top 30%",
-    end: "top 60%",
+    start: "top top",
+    end: "top top",
     // once: "true",
     // toggleClass: {targets: ".box1, .box2", className: "active, leave, hide"},
     // toggleActions: "play resume resume reset",
