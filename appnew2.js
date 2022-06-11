@@ -1,7 +1,6 @@
 // v.2022 
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(SplitText, ScrollTrigger);
 //gsap.registerPlugin(Observer);
 
 let locoScroll;
@@ -393,6 +392,7 @@ function initContent() {
   yearUpdate();
   fadeInElements();
   toggleNavClass();
+  slideInHeaders();
   //initNavigation();
   //initHeaderTilt();
 
@@ -2047,7 +2047,7 @@ ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0
 
 /*
 ================================================================================
-HOME PIN SECTIONS
+TOGGLE NAV CLASS
 ================================================================================
 */
 
@@ -2119,3 +2119,33 @@ sections.forEach((section, index) => {
 
   }
   
+  /*
+================================================================================
+HOME PIN SECTIONS
+================================================================================
+*/
+
+function slideInHeaders() {
+
+  gsap.utils.toArray('h1, h2, h3, h4').forEach(title => {
+    const childSplit = new SplitText(title, {
+      type: "lines",
+      linesClass: "split-child"
+    });
+    const parentSplit = new SplitText(title, {
+      linesClass: "split-parent"
+    });
+    
+    gsap.from(childSplit.lines, {
+      scrollTrigger: title,
+      start: 'top center',
+      duration: 3,
+      yPercent: 100,
+      ease: "power4",
+      skewY: 10,
+      stagger: 0.1
+    });
+    
+  })
+
+}
