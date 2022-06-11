@@ -1830,17 +1830,17 @@ function swiperSolo() {
 var swiper = new Swiper(".swiper-container-solo", {
   // loopedSlides: 6,
    loop: false,
-   spaceBetween: 24,
+   spaceBetween: 20,
   slidesPerView: 5,
    freeMode: false,
    grabCursor: true,
    mousewheel: false,
- 
+ /*
    autoplay: {
      delay: 3000,
  disableOnInteraction: false,
    },
- 
+ */
       //   resistanceRatio:0.2,
       // longSwipes:true,
     //   longSwipesRatio:0.5,
