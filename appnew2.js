@@ -2128,27 +2128,24 @@ HOME PIN SECTIONS
 
 function slideInHeaders() {
 
-  gsap.utils.toArray('h1, h2, h3, h4').forEach(title => {
-    const childSplit = new SplitText(title, {
-      type: "lines",
-      linesClass: "split-child"
-    });
-    const parentSplit = new SplitText(title, {
-      linesClass: "split-parent"
-    });
-    
-    gsap.from(childSplit.lines, {
-      scrollTrigger: title,
-      scroller: ".smooth-scroll",
-      start: 'top 10%',
-      //markers: true,
-      duration: 0.8,
-      yPercent: 105,
-      ease: "power4",
-      skewY: 10,
-      stagger: 0.1
-    });
-    
-  })
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".splitty",
+      toggleActions: "restart none none none"
+    }
+  }),
+  mySplitText = new SplitText(".splitty", {
+    type: "words, lines, chars"
+  });
+
+tl.from(mySplitText.chars, {
+  duration: 2,
+  //skewY: 20,
+  rotationX: "+=90",
+  opacity: 0,
+  y: -100,
+  ease: "elastic(1.8, 1.5)",
+  stagger: 0.025
+});
 
 }
