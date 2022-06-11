@@ -174,10 +174,11 @@ window.addEventListener('resize', function(){
 SCROLLTRIGGER DEFAULTS
 ================================================================================
 */
+/*
 ScrollTrigger.defaults( {
   scroller: ".smooth-scroll",
 });
-
+*/
 
 
 
@@ -402,7 +403,7 @@ function initContent() {
 
   setTimeout(() => {
     ScrollTrigger.refresh(true);
-  }, 2000);
+  }, 1000);
   console.log("Scrolltrigger refreshed");
 
 
@@ -1238,6 +1239,7 @@ function fadeInOnEnter() {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
+        scroller: ".smooth-scroll",
        // markers: true,
         start: 'top bottom',
         toggleActions: 'play reverse play reverse',
@@ -1259,6 +1261,7 @@ HOME - LOGO TRANSFORM ON SCROLL
 function logoTransformOnScroll() {
   gsap.timeline({
     scrollTrigger: {
+      scroller: ".smooth-scroll",
         trigger: "#start",
         /* markers: true, */
         start: "top top", // when the top of the trigger hits the top of the viewport
@@ -1287,6 +1290,7 @@ HOME - ROTATE WIREFRAME
 function rotateWireframe() {
   var rotate = gsap.timeline({
     scrollTrigger:{
+      scroller: ".smooth-scroll",
       trigger: "#wireframe-trigger",
       //pin: true,
       scrub:true,
@@ -1321,6 +1325,7 @@ function parallaxPanel() {
     
     let tl = gsap.timeline({
       scrollTrigger: {
+        scroller: ".smooth-scroll",
         trigger: ".img__wrapper",
       //  start: 'top 90%',
       //  end: "top top",
@@ -1534,6 +1539,7 @@ function akapowPinned() {
 
   const tl = gsap.timeline({
     scrollTrigger: {
+      scroller: ".smooth-scroll",
       trigger: ".akatrigger",
       start: () => "top top",
       //end: () => "+=" + ((images.length + 1) * window.innerHeight),
@@ -1634,6 +1640,7 @@ function headerHide() {
   
   ScrollTrigger.create({
     trigger: ".section-home-kingdome-are",
+    scroller: ".smooth-scroll",
     start: "top top",
     end: 99999,
     onUpdate: (self) => {
@@ -1775,6 +1782,7 @@ function logoMarquee() {
     xPercent: -100,
     ease: "none",
     scrollTrigger: {
+      scroller: ".smooth-scroll",
       trigger: ".section-partners",
       scrub: 3,
       pin:true,
@@ -1951,6 +1959,7 @@ videos.forEach(function(video, i) {
     
   ScrollTrigger.create({
     trigger: video,
+    scroller: ".smooth-scroll",
     start: 'top bottom',
     end: 'bottom top',
     onEnter: () => video.play(),
@@ -1974,6 +1983,7 @@ function homePinSections() {
 
 gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
   ScrollTrigger.create({
+    scroller: ".smooth-scroll",
     trigger: panel,
     start: "top top", 
     pin: true, 
@@ -1997,6 +2007,7 @@ function fadeInElements() {
   
     let exptl = gsap.timeline({
       scrollTrigger:{
+        scroller: ".smooth-scroll",
         trigger: item,
         start: "top 85%",
         end: "top 5%",
@@ -2071,6 +2082,7 @@ function toggleNavClass() {
 sections.forEach((section, index) => {
   gsap.to(section, {autoAlpha: 1,
     scrollTrigger: {
+      scroller: ".smooth-scroll",
       trigger: section,
       start: 'top bottom-=100',
       toggleActions: 'play none none reverse',
