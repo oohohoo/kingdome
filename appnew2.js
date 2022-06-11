@@ -2071,9 +2071,9 @@ function toggleNavClass() {
   });
 */
 
-/*
 
-  const sections = document.querySelectorAll('sections');
+
+  const sections = document.querySelectorAll('.navchange');
 
 sections.forEach((section, index) => {
   gsap.to(section, {autoAlpha: 1,
@@ -2088,9 +2088,10 @@ sections.forEach((section, index) => {
   
   ScrollTrigger.create({
     trigger: section,
+    scroller: ".smooth-scroll",
     id: index+1,
     start: "top top",
-    end: "bottom bottom",
+    //end: "bottom bottom",
     toggleActions: 'play reverse none reverse',
     //toggleClass: {targets: section, className: "is-active"},
     toggleClass: {targets: ".list", className: "is-active"},
@@ -2099,8 +2100,9 @@ sections.forEach((section, index) => {
   
 })
 
-*/
 
+
+/*
   var elementFirst = document.querySelector('.list');
   //var elementSecond = document.querySelector('.box2');
  // var elementThird = document.querySelector('.box3');
@@ -2125,7 +2127,7 @@ sections.forEach((section, index) => {
    // elementSecond.classList.toggle('leave');
   //  elementThird.classList.toggle('hide');
   };
-
+*/
   }
   
   /*
