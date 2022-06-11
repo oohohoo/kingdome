@@ -2053,6 +2053,32 @@ HOME PIN SECTIONS
 
 function toggleNavClass() {
 
+  const sections = document.querySelectorAll('.navchange');
+
+sections.forEach((section, index) => {
+  gsap.to(section, {autoAlpha: 1,
+    scrollTrigger: {
+      trigger: section,
+      start: 'top bottom-=100',
+      toggleActions: 'play none none reverse',
+       markers: true
+    }
+  });
+  
+  ScrollTrigger.create({
+    trigger: section,
+    id: index+1,
+    start: 'top center',
+    end: () => `+=${section.clientHeight + 30}`,
+    toggleActions: 'play reverse none reverse',
+    //toggleClass: {targets: section, className: "is-active"},
+    toggleClass: {targets: ".nav", className: "is-active"},
+    // markers: true
+  })
+  
+})
+
+  /*
 
   var elementFirst = document.querySelector('.nav');
   //var elementSecond = document.querySelector('.box2');
@@ -2078,6 +2104,6 @@ function toggleNavClass() {
    // elementSecond.classList.toggle('leave');
   //  elementThird.classList.toggle('hide');
   };
-  
+  */
   }
   
