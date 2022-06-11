@@ -836,6 +836,16 @@ TEXTSPLIT HEADERS SCROLLTRIGGER
   overflow: hidden;
 }
 
+/*
+================================================================================
+TEXTSPLIT HEADERS SCROLLTRIGGER
+================================================================================
+*/
+
+.nav .is-active {
+  color: green;
+}
+
 
 
 /*

@@ -2094,7 +2094,7 @@ sections.forEach((section, index) => {
     //end: "bottom bottom",
     toggleActions: 'play reverse none reverse',
     //toggleClass: {targets: section, className: "is-active"},
-    toggleClass: {targets: ".list", className: "is-active"},
+    toggleClass: {targets: ".nav", className: "is-active"},
     // markers: true
   })
   
