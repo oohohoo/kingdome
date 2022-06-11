@@ -2154,10 +2154,10 @@ function slideInHeaders() {
 
 tl.from(mySplitText.chars, {
   duration: 1.2,
-  //skewY: 20,
- // rotationX: "+=90",
- // opacity: 0,
-  y: 100,
+  skewY: 20,
+  rotationX: "+=90",
+  opacity: 0,
+  y: -100,
   ease: "quart.inOut",
   stagger: 0.025
 });
