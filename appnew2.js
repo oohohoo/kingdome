@@ -2069,7 +2069,7 @@ sections.forEach((section, index) => {
     trigger: section,
     id: index+1,
     start: "top top",
-    end: "top top",
+    end: "bottom top",
     toggleActions: 'play reverse none reverse',
     //toggleClass: {targets: section, className: "is-active"},
     toggleClass: {targets: ".nav", className: "is-active"},
