@@ -1296,7 +1296,7 @@ function fadeInOnEnter() {
 
 gsap.set(".foe", {opacity: 0});
 
-ScrollTrigger.batch(".fie", {
+ScrollTrigger.batch(".foe", {
   scroller: ".smooth-scroll",
   onEnter: batch => gsap.to(batch, {duration:1, opacity: 1, stagger: 0.15, overwrite: true}),
   onLeave: batch => gsap.set(batch, {duration:1, rotate:360, opacity: 0, overwrite: true}),
