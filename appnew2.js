@@ -2199,7 +2199,7 @@ function homeVideoClip() {
   gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
-        trigger: ".home-hero-video-wrapper",
+        trigger: "#clipvideo",
         /* markers: true, */
         start: "top 10%", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
@@ -2209,9 +2209,8 @@ function homeVideoClip() {
     }
   })
 
- // .to(".home-hero-video-wrapper", { scale: 0.7, clipPath: "polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)", duration: 0.5, ease:'expo.inOut'}, 0)
-.fromTo(".home-hero-video-wrapper", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
-  {duration:0.5, ease:'expo.inOut', clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 85% 100%, 0% 100%)"})
+ .to(".home-hero-video-wrapper", { clipPath: "polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)", duration: 0.5, ease:'expo.inOut'}, 0)
+
 
   //.to(".header_kingdome", { yPercent: 20, ease:'expo.inOut'}, 0)
 
