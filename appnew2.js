@@ -1247,9 +1247,9 @@ function fadeInOnEnter() {
       },
       y: 100,
       opacity: 0,
-      stagger: 0.25,
+      stagger: 2,
       duration: 1, 
-      scrub:2,
+     // scrub:2,
       ease: "expo.out",
     })
   });
