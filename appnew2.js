@@ -1252,6 +1252,27 @@ function fadeInOnEnter() {
       ease: "expo.out",
     })
   });
+
+  gsap.utils.toArray('.foeleft').forEach((el, i) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        scroller: ".smooth-scroll",
+       // markers: true,
+       start: "top 85%",
+       end: "top 5%",
+        toggleActions: 'play reverse play reverse',
+        end: "top top",
+      },
+      x: 100,
+      opacity: 0,
+      stagger: 0.25,
+      duration: 1, 
+      ease: "expo.out",
+    })
+  });
+
+
   console.log("FADE IN ON ENTER");
 }
 
