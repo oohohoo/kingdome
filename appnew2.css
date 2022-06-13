@@ -886,6 +886,9 @@ CUBERTO CURSOR
 .mf-cursor.-inverse {
   color: #fff
 }
+.mf-cursor-text.-inverse {
+color:#1a1815
+}
 
 .mf-cursor.-red {
   color: #e51e3d
