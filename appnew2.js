@@ -515,10 +515,7 @@ barba.hooks.afterLeave((data) => {
       locoScroll.destroy();
    }
 
-   /* DESTROY CURSOR*/
-   const cursor = new MouseFollower();
-cursor.destroy();
-console.log("Cursor destroyed");
+
    /*  killScrollTriggers(); */
    if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
@@ -526,6 +523,11 @@ console.log("Cursor destroyed");
        // console.log("scrolltrigger killed...");
     });
 };
+
+   /* DESTROY CURSOR*/
+  // const cursor = new MouseFollower();
+cursor.destroy();
+console.log("Cursor destroyed");
 
 Webflow.destroy();
 console.log("webflow interactions killed...");
