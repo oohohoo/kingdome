@@ -895,15 +895,7 @@ color:#1a1815
   color: #e51e3d
 }
 
-.mf-cursor.-blackonwhite {
-  color: #1a1815;
- 
-}
 
-.mf-cursor.-whiteonblack {
-  color: #1a1815;
-  background-color: #fff;
-}
 
 /* slightly transparent fallback */
 /*  .mf-cursor.-backblur {
@@ -977,7 +969,7 @@ color:#1a1815
   justify-content: center;
   transform: scale(0) rotate(10deg);
   opacity: 0;
-  color: #fff;
+  color: #1a1815;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
