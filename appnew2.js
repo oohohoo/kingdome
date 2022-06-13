@@ -353,7 +353,7 @@ function initContent() {
      // swiperCustomPaginationHome();
     },
     products: function () {
-    
+      projectMainSwiper();
     },
     howwework: function () {
       logoTransformOnScroll();
