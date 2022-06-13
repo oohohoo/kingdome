@@ -1249,6 +1249,7 @@ function fadeInOnEnter() {
       opacity: 0,
       stagger: 0.25,
       duration: 1, 
+      scrub:2,
       ease: "expo.out",
     })
   });
