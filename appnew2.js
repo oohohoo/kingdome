@@ -1294,17 +1294,19 @@ function fadeInOnEnter() {
     },
   }); */
 
-gsap.set(".foe", {opacity: 0});
+gsap.set(".foe", {opacity: 0, y:100});
 
 ScrollTrigger.batch(".foe", {
   scroller: ".smooth-scroll",
-  onEnter: batch => gsap.to(batch, {duration:1, opacity: 1, stagger: 0.15, overwrite: true}),
+  start: "top 85%",
+  end: "top 5%",
+  onEnter: batch => gsap.to(batch, {duration:1, opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
   onLeave: batch => gsap.set(batch, {duration:1, rotate:360, opacity: 0, overwrite: true}),
   onEnterBack: batch => gsap.to(batch, {duration:1,  opacity: 1, stagger: 0.15, overwrite: true}),
   onLeaveBack: batch => gsap.set(batch, {duration:1,  opacity: 0, overwrite: true})
 });
 
-ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0}));
+ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0, y:100}));
 
 
 
