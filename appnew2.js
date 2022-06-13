@@ -2209,7 +2209,7 @@ function homeVideoClip() {
     }
   })
 
- .to(".home-hero-video-wrapper", { clipPath: "polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)", duration: 0.5, ease:'expo.inOut'}, 0)
+ .to(".home-hero-video-wrapper", { scale:0.7, clipPath: "polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)", duration: 0.5, ease:'expo.inOut'}, 0)
 
 
   //.to(".header_kingdome", { yPercent: 20, ease:'expo.inOut'}, 0)
