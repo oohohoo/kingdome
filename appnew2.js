@@ -2012,8 +2012,8 @@ function fadeInElements() {
         trigger: item,
         start: "top 85%",
         end: "top 5%",
-        //scrub: 2,
-     //   markers: true,
+        scrub: 2,
+        markers: true,
       }
     });
     exptl.from(item, {
