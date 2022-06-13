@@ -1283,7 +1283,7 @@ function fadeInOnEnter() {
   ScrollTrigger.batch(".foe", {
     scroller: ".smooth-scroll",
     start: "top bottom-=100px",
-    // interval: 0.25,
+    interval: 0.25,
     stagger: 0.25,
     onEnter: batch => {
       if(tl && tl.isActive()) {
