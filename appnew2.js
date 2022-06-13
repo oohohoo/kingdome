@@ -861,7 +861,10 @@ function show() {
   //gsap.set(".line-wrapper", {yPercent:100})
 
  
-
+  tl.fromTo(
+		".nav--transition-slide", {scaleY: 0, transformOrigin: "top center"},
+		{duration: 0.5, scaleY: 1, ease: "Expo.inOut",})
+    /*
 	tl.to(".nav-wrapper", {scaleY: 0.5, transformOrigin: "top center", duration: 0.4})
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
@@ -878,7 +881,7 @@ function show() {
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
     .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
-
+*/
 }
 // --- HIDE
 function hide() {
@@ -886,13 +889,19 @@ function hide() {
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
+  tl.to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
+
+  
+/*
+
+
 		tl.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
 		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", scaleY: 0})
 		.to(".open", {autoAlpha:1}, "<")
 		.to(".close", {autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
-	
+	*/
 }
 
 
