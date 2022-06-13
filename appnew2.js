@@ -1280,6 +1280,14 @@ function fadeInOnEnter() {
   }); */
 
 
+  ScrollTrigger.batch('.card', {
+    onEnter: batch => {
+      batch.forEach((card, index) => gsap.to(card.children, {autoAlpha:1, stagger: 0.125, delay: index * 0.3}))
+    },
+    once: true
+  });
+  
+/*
   gsap.defaults({ease: "power3"});
   gsap.set(".foe", {opacity: 0, y: 70});
   
@@ -1301,7 +1309,7 @@ function fadeInOnEnter() {
   }); 
 
   ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".foe", {opacity: 0, y:70}));
-
+*/
 /*
 
 gsap.set(".foe", {opacity: 0, y:100});
