@@ -853,25 +853,25 @@ function show() {
 	let tl = gsap.timeline();
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
-  //gsap.set(".fs-menu--column", {yPercent:-100})
- // gsap.set(".fs-menu-header", {yPercent:-110})
+  gsap.set(".fs-menu--column", {yPercent:-100})
+  gsap.set(".fs-menu-header", {yPercent:-110})
  
-  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:1})
+  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
  
   //gsap.set(".line-wrapper", {yPercent:100})
 
  
 
-	tl.to(".nav-wrapper", {transformOrigin: "bottom center", duration: 1, height: "100%"})
-    //.to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.1")
-    //.to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
+	tl.fromTo(".nav-wrapper", {height: "0%", transformOrigin: "top center"}, {duration: 0.4, height: "100%"})
+    .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
+    .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
-    //.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
-   // .to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
+    .to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
+    .to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
 
 
-	//	.to(".open", {autoAlpha:0}, "<")
-	//	.to(".close", {autoAlpha:1}, "<")
+		.to(".open", {autoAlpha:0}, "<")
+		.to(".close", {autoAlpha:1}, "<")
     
 		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "quart.inOut"}, "<0.1")
@@ -886,12 +886,11 @@ function hide() {
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
-	
-    //.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.out"}, "<0.1")
-   // .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.out"})
-   tl.to(".nav-wrapper", { duration: 0.1, transformOrigin: "bottom center", height: "0%"})
-	//	.to(".open", {autoAlpha:1}, "<")
-	//	.to(".close", {autoAlpha:0}, "<")
+		tl.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
+    .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
+		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
+		.to(".open", {autoAlpha:1}, "<")
+		.to(".close", {autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
 	
 }
@@ -905,7 +904,7 @@ SUBMENU HOVER
 //-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
 // loop through each element
-$(".fs-nav-item, .kupole-info").each(function(i, el) {
+$(".fs-nav-item, .hover-opacity, .kupole-info").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
          .to($(el).find('a'), {opacity:0.6,  duration: 0.15});
