@@ -711,7 +711,7 @@ CURRENT LINK COLOR
 
 }
 
-.w--current:not(.header_redflag-link):after {
+.w--current:not(.header_redflag-link, .cta__slider-item ):after {
   position: absolute;
   content: '';
   height: 2px;
