@@ -1234,7 +1234,8 @@ FADE IN ON ENTER
 ================================================================================
 */
 function fadeInOnEnter() {
-  gsap.utils.toArray('.foe').forEach((el, i) => {
+  
+/*   gsap.utils.toArray('.foe').forEach((el, i) => {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
@@ -1271,7 +1272,39 @@ function fadeInOnEnter() {
       duration: 1, 
       ease: "expo.out",
     })
+  }); */
+
+
+  gsap.defaults({ease: "power3"});
+  gsap.set(".foe", {y: 100});
+  
+  let tl;
+  
+  ScrollTrigger.batch(".foe", {
+    start: "top bottom-=100px",
+    // interval: 0.25,
+    stagger: 3,
+    onEnter: batch => {
+      if(tl && tl.isActive()) {
+        tl.to(batch, {opacity: 1, y: 0, backgroundSize: "100%", stagger: 0.5})
+      } else {
+        tl = gsap.timeline().to(batch, {opacity: 1, y: 0, backgroundSize: "100%", stagger: 0.5})
+      }
+    },
   });
+/*
+gsap.set(".fie", {opacity: 0});
+
+ScrollTrigger.batch(".fie", {
+  onEnter: batch => gsap.to(batch, {duration:1, opacity: 1, stagger: 0.15, overwrite: true}),
+  onLeave: batch => gsap.set(batch, {duration:1, rotate:360, opacity: 0, overwrite: true}),
+  onEnterBack: batch => gsap.to(batch, {duration:1,  opacity: 1, stagger: 0.15, overwrite: true}),
+  //onLeaveBack: batch => gsap.set(batch, {duration:1,  opacity: 0, overwrite: true})
+});
+
+ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0}));
+*/
+
 
 
   console.log("FADE IN ON ENTER");
