@@ -385,7 +385,7 @@ function initContent() {
 
   // LOAD THIS SCRIPTS ON EVERY PAGE
   initScroll();
-  cubertoCursor();
+ 
   fullscreenMenu();
   scrollToTop();
   underline();
@@ -397,6 +397,7 @@ function initContent() {
   toggleNavClass();
   slideInHeaders();
   fadeInOnEnter();
+  cubertoCursor();
   //initNavigation();
   //initHeaderTilt();
 
