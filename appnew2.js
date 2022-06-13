@@ -857,7 +857,7 @@ function show() {
   gsap.set(".fs-menu-header", {yPercent:-110})
  
   gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
-  gsap.set(".nav-wrapper", {scaleY: 0})
+  gsap.set(".nav-wrapper", {scaleY: 0, rotate:350})
   //gsap.set(".line-wrapper", {yPercent:100})
 
  
