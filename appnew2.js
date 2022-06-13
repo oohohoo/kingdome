@@ -904,7 +904,7 @@ SUBMENU HOVER
 //-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
 // loop through each element
-$(".fs-nav-item, .hover-opacity, .kupole-info").each(function(i, el) {
+$(".fs-nav-item, .kupole-info").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
          .to($(el).find('a'), {opacity:0.6,  duration: 0.15});
