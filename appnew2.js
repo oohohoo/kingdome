@@ -1254,7 +1254,7 @@ function fadeInOnEnter() {
     })
   });
 
-  gsap.utils.toArray('.foeleft').forEach((el, i) => {
+/*   gsap.utils.toArray('.foeleft').forEach((el, i) => {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
@@ -1271,7 +1271,7 @@ function fadeInOnEnter() {
       duration: 1, 
       ease: "expo.out",
     })
-  });
+  }); */
 
 
   console.log("FADE IN ON ENTER");
