@@ -2258,7 +2258,7 @@ VIDEO SCALE ON SCROLL
 function homeVideoClip() {
 
 
-  ScrollTrigger.addEventListener("scrollStart", () => {
+/*   ScrollTrigger.addEventListener("scrollStart", () => {
 
     gsap.timeline({
       scrollTrigger: {
@@ -2277,7 +2277,7 @@ function homeVideoClip() {
        .to(".home-hero-video", { clipPath: 'polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%)', duration: 0.5, ease:'expo.inOut'}, 0)
        
   })
-
+ */
 
 
  //clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
