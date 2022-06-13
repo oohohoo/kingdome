@@ -2382,7 +2382,7 @@ box.addEventListener('mouseleave', () => {
 */
 
   
-  const txel = document.querySelector('section-products-gallery');
+  const txel = document.querySelector('.section-products-gallery');
   
   const textcolor = document.querySelector('.mf-cursor-text');
 
