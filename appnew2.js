@@ -2163,7 +2163,7 @@ sections.forEach((section, index) => {
       trigger: section,
       start: 'top bottom-=100',
       toggleActions: 'play none none reverse',
-       markers: true
+       //markers: true
     }
   });
   
