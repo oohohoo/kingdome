@@ -2301,3 +2301,79 @@ function homeVideoClip() {
 
 }
 
+
+
+/*
+================================================================================
+CUBERTO CURSOR
+================================================================================
+*/
+function homeVideoClip() {
+
+
+
+const xhide = document.querySelector('.my-image');
+const cursor = new MouseFollower({
+     	el: null,
+    	container: document.body,
+    	className: 'mf-cursor',
+    	innerClassName: 'mf-cursor-inner',
+    	textClassName: 'mf-cursor-text',
+   		mediaClassName: 'mf-cursor-media',
+    	mediaBoxClassName: 'mf-cursor-media-box',
+    	iconSvgClassName: 'mf-svgsprite',
+    	iconSvgNamePrefix: '-',
+    	iconSvgSrc: '',
+    dataAttr: 'cursor',
+    hiddenState: '-hidden',
+    textState: '-text',
+    iconState: '-icon',
+    activeState: '-active',
+    mediaState: '-media',
+    stateDetection: {
+        '-pointer': 'a,button',
+        '-hidden': 'my-image'
+    },
+    visible: true,
+    visibleOnState: false,
+    speed: 0.55,
+    ease: 'expo.out',
+    overwrite: true,
+    skewing: 2,
+    skewingText: 2,
+    skewingIcon: 2,
+    skewingMedia: 2,
+    skewingDelta: 0.001,
+    skewingDeltaMax: 0.15,
+    stickDelta: 0.15,
+    showTimeout: 20,
+    hideOnLeave: true,
+    hideTimeout: 300,
+    hideMediaTimeout: 300
+   
+});
+/*
+xhide.addEventListener('mouseenter', () => {
+   // cursor.hide();
+    // cursor.addState('-inverse'); // you can pass multiple states separated by whitespace
+});
+
+xhide.addEventListener('mouseleave', () => {
+  //  cursor.show();
+    // cursor.removeState('-inverse');
+});
+
+
+// FIXED MAGNETIC ELEMENT
+const box = document.querySelector('.menuu');
+const el = document.querySelector('.myfixedelement');
+
+box.addEventListener('mouseenter', () => {
+    cursor.setStick(el);
+});
+
+box.addEventListener('mouseleave', () => {
+    cursor.removeStick();
+});
+*/
+}
