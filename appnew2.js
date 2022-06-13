@@ -1276,7 +1276,7 @@ function fadeInOnEnter() {
 
 
   gsap.defaults({ease: "power3"});
-  gsap.set(".foe", {opacity: 0, y: 40});
+  gsap.set(".foe", {opacity: 0, y: 70});
   
   let tl;
   
@@ -1295,7 +1295,7 @@ function fadeInOnEnter() {
     },
   }); 
 
-  ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".foe", {opacity: 0, y:40}));
+  ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".foe", {opacity: 0, y:70}));
 
 /*
 
