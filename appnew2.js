@@ -1581,7 +1581,7 @@ gsap.utils.toArray(".product-hover").forEach(container => {
       paused: true });
   
   
-  tl.to(imagezoom, { scale:1.3})
+  tl.to(imagezoom, { scale:1.1})
   
 // .to(wrap, { backgroundColor:"#B6FA00" }, 0)
     //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
