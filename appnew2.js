@@ -385,6 +385,7 @@ function initContent() {
 
   // LOAD THIS SCRIPTS ON EVERY PAGE
   initScroll();
+  cubertoCursor();
   fullscreenMenu();
   scrollToTop();
   underline();
@@ -2308,7 +2309,7 @@ function homeVideoClip() {
 CUBERTO CURSOR
 ================================================================================
 */
-function homeVideoClip() {
+function cubertoCursor() {
 
 
 
