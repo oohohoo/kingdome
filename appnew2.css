@@ -941,7 +941,7 @@ CUBERTO CURSOR
 }
 
 .mf-cursor.-pointer:before {
-  transform: scale(0.15);
+  transform: scale(3);
   opacity: .60
 }
 
