@@ -2200,8 +2200,8 @@ function homeVideoClip() {
     scrollTrigger: {
       scroller: ".smooth-scroll",
         trigger: "#clipvideo",
-        /* markers: true, */
-        start: "top 10%", // when the top of the trigger hits the top of the viewport
+         markers: true, 
+        start: "top 20%", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
         toggleActions: 'play reverse play reverse',
         invalidateOnRefresh: true,
