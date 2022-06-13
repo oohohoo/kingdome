@@ -525,9 +525,8 @@ barba.hooks.afterLeave((data) => {
 };
 
    /* DESTROY CURSOR*/
-   const cursor = new MouseFollower();
-cursor.destroy();
-console.log("Cursor destroyed");
+  // const cursor = new MouseFollower();
+
 
 Webflow.destroy();
 console.log("webflow interactions killed...");
@@ -2383,6 +2382,9 @@ const cursor = new MouseFollower({
     hideMediaTimeout: 300
    
 });
+
+cursor.destroy();
+console.log("Cursor destroyed");
 /*
 xhide.addEventListener('mouseenter', () => {
    // cursor.hide();
