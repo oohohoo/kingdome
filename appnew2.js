@@ -1284,6 +1284,7 @@ function fadeInOnEnter() {
 
   ScrollTrigger.batch('.card', {
     scroller: ".smooth-scroll",
+    start: "top bottom-=100px",
     onEnter: batch => {
       batch.forEach((card, index ) => gsap.to(card.children, {y:0, autoAlpha:1, stagger: 0.125, delay: index * 0.3}))
     },
