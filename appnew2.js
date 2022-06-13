@@ -1278,7 +1278,7 @@ function fadeInOnEnter() {
       ease: "expo.out",
     })
   }); */
-  gsap.set('.batchzero', {
+ /*  gsap.set('.batchzero', {
     opacity: 0,
   });
 
@@ -1287,7 +1287,7 @@ function fadeInOnEnter() {
       batch.forEach((card, index ) => gsap.to(card.children, {opacity:1, stagger: 0.125, delay: index * 0.3}))
     },
     once: true
-  });
+  }); */
   
 /*
   gsap.defaults({ease: "power3"});
