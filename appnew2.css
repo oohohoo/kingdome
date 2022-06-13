@@ -941,10 +941,10 @@ CUBERTO CURSOR
 }
 
 .mf-cursor.-pointer:before {
-  transform: scale(0.5);
+  transform: scale(0.2);
   opacity: .85;
   color: transparent;
-  border: 2px solid #1a1815
+  border: 4px solid #1a1815
 }
 
 .mf-cursor.-text:before {
