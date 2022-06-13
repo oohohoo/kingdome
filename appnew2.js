@@ -2205,7 +2205,7 @@ function homeVideoClip() {
         scroller: ".smooth-scroll",
           trigger: "#clipvideo",
            markers: true, 
-          start: "top 10%", // when the top of the trigger hits the top of the viewport
+        //  start: "top 10%", // when the top of the trigger hits the top of the viewport
           end: "bottom center",
           toggleActions: "play none none reverse",
           invalidateOnRefresh: true,
