@@ -941,15 +941,12 @@ CUBERTO CURSOR
 }
 
 .mf-cursor.-pointer:before {
-  transform: scale(1.2);
-  opacity: .25;
-  /* color: transparent;
-  border: 4px solid #1a1815 */
+  transform: scale(0.15)
 }
 
 .mf-cursor.-text:before {
   opacity: .85;
-  transform: scale(1.7);
+  transform: scale(1.7)
 }
 
 .mf-cursor.-text.-active:before {
