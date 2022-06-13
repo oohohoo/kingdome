@@ -862,8 +862,8 @@ function show() {
 
  
 
-	tl.to(".nav-wrapper", {transformOrigin: "top center", duration: 1, yPercent:100})
-    .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
+	tl.to(".nav-wrapper", {transformOrigin: "top center", duration: 1, height: "100%"})
+    .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.1")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
     .to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
@@ -886,9 +886,9 @@ function hide() {
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
-		tl.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
-    .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
-		.to(".nav-wrapper", { duration: 1, transformOrigin: "top center", yPercent:0})
+		tl.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.out"}, "<0.1")
+    .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.out"})
+		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		.to(".open", {autoAlpha:1}, "<")
 		.to(".close", {autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
