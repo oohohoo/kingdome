@@ -1711,6 +1711,7 @@ function headerHide() {
     trigger: ".section-home-kingdome-are",
     scroller: ".smooth-scroll",
     start: "top top",
+    toggleClass: { targets: ".headerx", className: "background-color-white" }
     end: 99999,
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
