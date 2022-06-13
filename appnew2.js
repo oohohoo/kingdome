@@ -2344,7 +2344,7 @@ function cubertoCursor() {
 const xhide = document.querySelector('.my-image');
 const cursor = new MouseFollower({
      	el: null,
-    	container: document.body,
+    	container: 'barba-container',
     	className: 'mf-cursor',
     	innerClassName: 'mf-cursor-inner',
     	textClassName: 'mf-cursor-text',
