@@ -853,10 +853,10 @@ function show() {
 	let tl = gsap.timeline();
 
 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
-  gsap.set(".fs-menu--column", {yPercent:-100})
-  gsap.set(".fs-menu-header", {yPercent:-110})
+  //gsap.set(".fs-menu--column", {yPercent:-100})
+ // gsap.set(".fs-menu-header", {yPercent:-110})
  
-  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
+  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:1})
  
   //gsap.set(".line-wrapper", {yPercent:100})
 
