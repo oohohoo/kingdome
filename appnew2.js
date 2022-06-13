@@ -1567,27 +1567,28 @@ function homeProductHover() {
 /*   gsap.set(".rg__long", {autoAlpha:0, yPercent:-10}); */
   
   
-gsap.utils.toArray(".products-item").forEach(container => {
+gsap.utils.toArray(".product-hover").forEach(container => {
    
-  let   dome = container.querySelector(".fake-king"),
+  let imagezoom = container.querySelector(".full-image"), 
+   //dome = container.querySelector(".fake-king"),
   // wrap = container.querySelector(".rg__wrap"),
-      name = container.querySelector(".product-title"),
+     // name = container.querySelector(".product-title"),
       //short = container.querySelector(".rg__short"),
-      long = container.querySelector(".rg__long"),
-      white = container.querySelector(".whiteback"),
+     // long = container.querySelector(".rg__long"),
+     // full-image
 
       tl = gsap.timeline({ defaults: { ease: "expo.inOut", duration: 0.5}, 
       paused: true });
   
   
-  tl.to(dome, { yPercent: 100, autoAlpha:0 })
+  tl.to(imagezoom, { scale:1.3})
   
 // .to(wrap, { backgroundColor:"#B6FA00" }, 0)
     //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
-    .to(name, { yPercent:-10, autoAlpha:0 }, 0)
+   //.to(name, { yPercent:-10, autoAlpha:0 }, 0)
    // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
-    .to(long, {autoAlpha:1, yPercent:10}, 0)
-    .to(white, {yPercent:-45}, 0);
+   // .to(long, {autoAlpha:1, yPercent:10}, 0)
+   // .to(white, {yPercent:-45}, 0);
     
      
   container.addEventListener("mouseenter", () => tl.play() );
