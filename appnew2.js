@@ -1284,13 +1284,13 @@ function fadeInOnEnter() {
     scroller: ".smooth-scroll",
     start: "top bottom-=100px",
      stagger: 0.25,
-    interval: 1,
-    batchMax: 3,
+   // interval: 1,
+   // batchMax: 3,
     onEnter: batch => {
       if(tl && tl.isActive()) {
-        tl.to(batch, {opacity: 1, y: 0, backgroundSize: "100%", stagger: 0.125})
+        tl.to(batch, {opacity: 1, y: 0stagger: 0.125})
       } else {
-        tl = gsap.timeline().to(batch, {opacity: 1, y: 0, backgroundSize: "100%", stagger: 0.125})
+        tl = gsap.timeline().to(batch, {opacity: 1, y: 0, stagger: 0.125})
       }
     },
   }); 
