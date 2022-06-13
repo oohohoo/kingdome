@@ -350,6 +350,7 @@ function initContent() {
       swiperSolo();
       homePinSections();
       homeVideoClip();
+      headerHide();
      // swiperCustomPaginationHome();
     },
     products: function () {
@@ -357,11 +358,13 @@ function initContent() {
     },
     howwework: function () {
       logoTransformOnScroll();
+      headerHide();
     //  akapowPinned();
       logoMarquee();
       startStopVideo();
     },
     pageproductsingle: function () {
+      headerHide();
       logoTransformOnScroll();
       productsTabs();
       swiperSolo();
@@ -371,7 +374,7 @@ function initContent() {
     //  openMobileMenu();
     },
     faq: function () {
-      
+      headerHide();
       logoTransformOnScroll();
       //faqPin();
       // openMobileMenu();
@@ -385,7 +388,7 @@ function initContent() {
   fullscreenMenu();
   scrollToTop();
   underline();
-  headerHide();
+ 
   //popupWizdome();
   buttonHover();
   yearUpdate();
