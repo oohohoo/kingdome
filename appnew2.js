@@ -389,7 +389,7 @@ function initContent() {
   //popupWizdome();
   buttonHover();
   yearUpdate();
-  fadeInElements();
+  //fadeInElements();
   toggleNavClass();
   slideInHeaders();
   fadeInOnEnter();
@@ -1234,24 +1234,27 @@ FADE IN ON ENTER
 ================================================================================
 */
 function fadeInOnEnter() {
-  gsap.utils.toArray('.block1').forEach((el, i) => {
+  gsap.utils.toArray('.foe').forEach((el, i) => {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
         scroller: ".smooth-scroll",
        // markers: true,
-        start: 'top bottom',
+       start: "top 85%",
+       end: "top 5%",
         toggleActions: 'play reverse play reverse',
         end: "top top",
       },
       y: 100,
       opacity: 0,
-      stagger: 0.25
+      stagger: 0.25,
+      duration: 1, 
+      ease: "expo.out",
     })
   });
   console.log("FADE IN ON ENTER");
 }
-  
+
 
 /*
 ================================================================================
@@ -2004,7 +2007,7 @@ FADE IN ELEMENTS // NE RADI
 
 function fadeInElements() {
 
-  let fadein = gsap.utils.toArray('.fie')
+/*   let fadein = gsap.utils.toArray('.fie')
 
   fadein.forEach((item, index) => {
   
@@ -2026,7 +2029,7 @@ function fadeInElements() {
     });
     
   });
-
+ */
   /*
 
   gsap.defaults({ease: "power3"});
