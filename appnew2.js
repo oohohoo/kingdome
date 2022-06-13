@@ -524,7 +524,7 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
-destroyCursor();
+/* destroyCursor(); */
 
 
 Webflow.destroy();
@@ -2383,10 +2383,10 @@ const cursor = new MouseFollower({
 });
 
 
-function destroyCursor() {
+/* function destroyCursor() {
 cursor.destroy();
 console.log("Cursor destroyed EEEEEEEEEEEE");
-}
+} */
 
 /*
 xhide.addEventListener('mouseenter', () => {
