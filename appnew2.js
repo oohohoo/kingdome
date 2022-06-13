@@ -1577,7 +1577,7 @@ gsap.utils.toArray(".product-hover").forEach(container => {
      // long = container.querySelector(".rg__long"),
      // full-image
 
-      tl = gsap.timeline({ defaults: { ease: "ease.in", duration: 0.6}, 
+      tl = gsap.timeline({ defaults: { ease: "ease.in", duration: 0.3}, 
       paused: true });
   
   
