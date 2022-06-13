@@ -514,7 +514,11 @@ barba.hooks.afterLeave((data) => {
     if($('.smooth-scroll').length >0 ){
       locoScroll.destroy();
    }
-  
+
+   /* DESTROY CURSOR*/
+   const cursor = new MouseFollower();
+cursor.destroy();
+
    /*  killScrollTriggers(); */
    if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
@@ -1286,23 +1290,42 @@ function fadeInOnEnter() {
     scroller: ".smooth-scroll",
     start: "top bottom-=100px",
     onEnter: batch => {
-      batch.forEach((card, index ) => gsap.to(card.children, {y:0, autoAlpha:1, stagger: 0.05, delay: index * 0.2}))
+      batch.forEach((card, index ) => gsap.to(card.children, {y:0, autoAlpha:1, stagger: 0.125, delay: index * 0.3}))
     },
     once: true
   });
   
-  ScrollTrigger.batch('.card', {
-    scroller: ".smooth-scroll",
-    start: "top bottom-=80px",
-    onEnter: batch => {
-      batch.forEach((card, index ) => gsap.to(card.children, {y:0, autoAlpha:1, stagger: 0.05, delay: index * 0.2}))
-    },
-    once: true
+/****************** SPLIT HEADER */
+
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".splitty",
+      scroller: ".smooth-scroll",
+     // markers: true,
+      toggleActions: "restart reverse play reverse"
+    }
+  }),
+  mySplitText = new SplitText(".splitty", {
+    type: "words, lines, chars"
   });
 
 
+  outerSplit = SplitText.create("h1", {
+    type: "lines",
+    linesClass: "split-outer"
+  });
 
+tl.from(mySplitText.chars, {
+  duration: 1.2,
+  //skewY: 20,
+  //rotationX: "+=90",
+  opacity: 0,
+  y: 100,
+  ease: "quart.inOut",
+  stagger: 0.025
+});
 
+/******************* */
 
 
 
@@ -2250,6 +2273,7 @@ function slideInHeaders() {
 
 
   
+
 
 
 
