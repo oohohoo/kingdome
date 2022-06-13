@@ -1245,7 +1245,8 @@ function fadeInOnEnter() {
         end: "top top",
       },
       y: 100,
-      opacity: 0
+      opacity: 0,
+      stagger: 0.25
     })
   });
   console.log("FADE IN ON ENTER");
