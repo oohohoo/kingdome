@@ -1577,12 +1577,12 @@ gsap.utils.toArray(".product-hover").forEach(container => {
      // long = container.querySelector(".rg__long"),
      // full-image
 
-      tl = gsap.timeline({ defaults: { ease: "expo.out", duration: 1.2}, 
+      tl = gsap.timeline({ defaults: { ease: "ease.in", duration: 0.6}, 
       paused: true });
   
   
   tl.to(imagezoom, { scale:1.1})
-  .to(linkhover, { opacity: 0.6 }, 0)
+  .to(linkhover, { opacity: 0.4 }, 0)
     //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
    //.to(name, { yPercent:-10, autoAlpha:0 }, 0)
    // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
