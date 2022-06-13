@@ -1281,6 +1281,7 @@ function fadeInOnEnter() {
   let tl;
   
   ScrollTrigger.batch(".foe", {
+    scroller: ".smooth-scroll",
     start: "top bottom-=100px",
     // interval: 0.25,
     stagger: 3,
