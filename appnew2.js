@@ -2381,19 +2381,6 @@ box.addEventListener('mouseleave', () => {
 });
 */
 
-  
-  const txel = document.querySelector('.section-products-gallery');
-  
-  const textcolor = document.querySelector('.mf-cursor-text');
-
-
-  txel.addEventListener('mouseenter', () => {
-    textcolor.addState('-inverse'); // you can pass multiple states separated by whitespace
-  });
-  
-  txel.addEventListener('mouseleave', () => {
-    textcolor.removeState('-inverse');
-  });
 
   
 
