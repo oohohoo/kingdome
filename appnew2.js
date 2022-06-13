@@ -1288,7 +1288,7 @@ function fadeInOnEnter() {
    // batchMax: 3,
     onEnter: batch => {
       if(tl && tl.isActive()) {
-        tl.to(batch, {opacity: 1, y: 0stagger: 0.125})
+        tl.to(batch, {opacity: 1, y:0, stagger: 0.125})
       } else {
         tl = gsap.timeline().to(batch, {opacity: 1, y: 0, stagger: 0.125})
       }
