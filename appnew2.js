@@ -862,7 +862,7 @@ function show() {
 
  
 
-	tl.fromTo(".nav-wrapper", {scaleY: 0, transformOrigin: "top center"}, {duration: 0.4, scaleY: 1})
+	tl.to(".nav-wrapper", {scaleY: 0.5, transformOrigin: "top center", duration: 0.4})
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
