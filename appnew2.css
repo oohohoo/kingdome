@@ -932,6 +932,14 @@ CUBERTO CURSOR
   }
 }
 
+
+.link-inline {
+  mix-blend-mode: exclusion
+}
+.link-inline:before {
+  background: #fff
+}
+
 .mf-cursor.-pointer:before {
   transform: scale(0.15)
 }
