@@ -2209,7 +2209,12 @@ function homeVideoClip() {
     }
   })
 
- .to(".home-hero-video", { clipPath: 'polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%)', duration: 0.5, ease:'expo.inOut'}, 0)
+  ScrollTrigger.addEventListener("scrollStart", () => {
+       .to(".home-hero-video", { clipPath: 'polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%)', duration: 0.5, ease:'expo.inOut'}, 0)
+       console.log("start")
+  })
+
+
 
  //clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
   //.to(".header_kingdome", { yPercent: 20, ease:'expo.inOut'}, 0)
