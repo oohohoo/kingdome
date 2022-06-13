@@ -518,7 +518,7 @@ barba.hooks.afterLeave((data) => {
    /* DESTROY CURSOR*/
    const cursor = new MouseFollower();
 cursor.destroy();
-
+console.log("Cursor destroyed");
    /*  killScrollTriggers(); */
    if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
