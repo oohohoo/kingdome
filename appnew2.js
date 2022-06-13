@@ -2209,9 +2209,9 @@ function homeVideoClip() {
     }
   })
 
- .to(".home-hero-video", { scale:0.7, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', duration: 0.5, delay:2, ease:'expo.inOut'}, 0)
+ .to(".home-hero-video", { scale:0.7, clipPath: 'polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%)', duration: 0.5, delay:2, ease:'expo.inOut'}, 0)
 
-
+ //clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
   //.to(".header_kingdome", { yPercent: 20, ease:'expo.inOut'}, 0)
 
 /*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
