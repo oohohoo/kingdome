@@ -1284,7 +1284,7 @@ function fadeInOnEnter() {
     scroller: ".smooth-scroll",
     start: "top bottom-=100px",
      stagger: 0.25,
-    interval: 0.1,
+    interval: 1,
     batchMax: 3,
     onEnter: batch => {
       if(tl && tl.isActive()) {
