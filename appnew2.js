@@ -904,7 +904,7 @@ SUBMENU HOVER
 //-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
 // loop through each element
-$(".fs-nav-item, .hover-opacity, .kupole-info, .linkhover").each(function(i, el) {
+$(".fs-nav-item, .hover-opacity, .kupole-info").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
          .to($(el).find('a'), {opacity:0.6,  duration: 0.15});
@@ -1570,7 +1570,7 @@ function homeProductHover() {
 gsap.utils.toArray(".product-hover").forEach(container => {
    
   let imagezoom = container.querySelector(".full-image"), 
-   //dome = container.querySelector(".fake-king"),
+  linkhover = container.querySelector(".linkhover"),
   // wrap = container.querySelector(".rg__wrap"),
      // name = container.querySelector(".product-title"),
       //short = container.querySelector(".rg__short"),
@@ -1582,8 +1582,7 @@ gsap.utils.toArray(".product-hover").forEach(container => {
   
   
   tl.to(imagezoom, { scale:1.1})
-  
-// .to(wrap, { backgroundColor:"#B6FA00" }, 0)
+  .to(linkhover, { opacity: 0.6 }, 0)
     //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
    //.to(name, { yPercent:-10, autoAlpha:0 }, 0)
    // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
