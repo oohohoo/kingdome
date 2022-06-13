@@ -1314,7 +1314,7 @@ ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0
 
 
 
-
+*/
   console.log("FADE IN ON ENTER");
 }
 
