@@ -2312,7 +2312,9 @@ CUBERTO CURSOR
 */
 function cubertoCursor() {
 
-
+  setTimeout(() => {
+  
+ 
 
 const xhide = document.querySelector('.my-image');
 const cursor = new MouseFollower({
@@ -2378,4 +2380,8 @@ box.addEventListener('mouseleave', () => {
     cursor.removeStick();
 });
 */
+
+}, 1000);
+
+
 }
