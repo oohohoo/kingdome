@@ -525,7 +525,7 @@ barba.hooks.afterLeave((data) => {
 };
 
    /* DESTROY CURSOR*/
-  // const cursor = new MouseFollower();
+   const cursor = new MouseFollower();
 cursor.destroy();
 console.log("Cursor destroyed");
 
