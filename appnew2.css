@@ -848,8 +848,8 @@ TEXT ON DARK BACK
 
 
 
- .home-hero-video-wrapper {
-  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+ .home-hero-video {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
  }
 
 
