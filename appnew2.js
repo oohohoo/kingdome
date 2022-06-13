@@ -1291,6 +1291,22 @@ function fadeInOnEnter() {
     once: true
   });
   
+  ScrollTrigger.batch('.card', {
+    scroller: ".smooth-scroll",
+    start: "top bottom-=80px",
+    onEnter: batch => {
+      batch.forEach((card, index ) => gsap.to(card.children, {y:0, autoAlpha:1, stagger: 0.125, delay: index * 0.3}))
+    },
+    once: true
+  });
+
+
+
+
+
+
+
+
 /*
   gsap.defaults({ease: "power3"});
   gsap.set(".foe", {opacity: 0, y: 70});
@@ -2236,33 +2252,6 @@ function slideInHeaders() {
   
 
 
-  var tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".splitty",
-      scroller: ".smooth-scroll",
-     // markers: true,
-      toggleActions: "restart reverse play reverse"
-    }
-  }),
-  mySplitText = new SplitText(".splitty", {
-    type: "words, lines, chars"
-  });
-
-
-  outerSplit = SplitText.create("h1", {
-    type: "lines",
-    linesClass: "split-outer"
-  });
-
-tl.from(mySplitText.chars, {
-  duration: 1.2,
-  //skewY: 20,
-  //rotationX: "+=90",
-  opacity: 0,
-  y: 100,
-  ease: "quart.inOut",
-  stagger: 0.025
-});
 
 }
 
