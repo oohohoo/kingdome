@@ -892,19 +892,21 @@ CUBERTO CURSOR
 }
 
 /* slightly transparent fallback */
-/* .mf-cursor.-backblur {
-  background-color: rgba(255, 255, 255, .9);
+ .mf-cursor.-backblur {
+  background-color: rgba(255, 255, 255, .6);
+    -webkit-backdrop-filter: blur(2em);
+    backdrop-filter: blur(2em);
 }
- */
+ 
 
 /* if backdrop support: very transparent and blurred */
-@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+/* @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
   .mf-cursor.-backblur {
     background-color: rgba(255, 255, 255, .5);
     -webkit-backdrop-filter: blur(2em);
     backdrop-filter: blur(2em);
   }
-}
+} */
 
 
 
