@@ -1713,7 +1713,7 @@ function headerHide() {
     start: "top top",
     end: 99999,
     toggleClass: { targets: ".headerx", className: "background-color-white" },
-    toggleClass: { targets: ".headerx", className: "blend" },
+   // toggleClass: { targets: ".headerx", className: "blend" },
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
