@@ -1278,7 +1278,7 @@ function fadeInOnEnter() {
       ease: "expo.out",
     })
   }); */
-  gsap.set('.zero', {
+  gsap.set('.zerobatch', {
     y: 40,
   }); 
 
