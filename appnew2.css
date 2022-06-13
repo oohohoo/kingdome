@@ -947,7 +947,8 @@ CUBERTO CURSOR
 
 .mf-cursor.-text:before {
   opacity: .85;
-  transform: scale(1.7)
+  transform: scale(1.7);
+  border: 1px solid #ff0000
 }
 
 .mf-cursor.-text.-active:before {
