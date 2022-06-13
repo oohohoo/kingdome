@@ -825,7 +825,7 @@ const closemenu = document.getElementById('closemenux');
 //const menuhover = document.getElementById('menuhover');
 
 
-const { gsap } = window;
+//const { gsap } = window;
 /*
 const btn = document.querySelector(".nav-toggle");
 
