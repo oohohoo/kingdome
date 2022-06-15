@@ -873,8 +873,8 @@ function show() {
     .to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
 
 
-		.to(".open", {autoAlpha:0}, "<")
-		.to(".close", {autoAlpha:1}, "<")
+		.to(openmenu, {autoAlpha:0}, "<")
+		.to(closemenu, {autoAlpha:1}, "<")
     /*
 		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "quart.inOut"}, "<0.1")
@@ -892,16 +892,16 @@ function hide() {
   tl.to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
 
   
-/*
+
 
 
 		tl.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
 		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", scaleY: 0})
-		.to(".open", {autoAlpha:1}, "<")
-		.to(".close", {autoAlpha:0}, "<")
+		.to(openmenu, {autoAlpha:1}, "<")
+		.to(closemenu, {autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
-	*/
+
 }
 
 
