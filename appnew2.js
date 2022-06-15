@@ -894,7 +894,7 @@ function hide() {
 
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
 
-  tl.to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
+  tl
 
   
 
@@ -903,9 +903,12 @@ function hide() {
 		.to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     .to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01})
    .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
+   // UNUTARNJI  
+   .to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
+
 	 // VANJSKI GHOST 	
    .to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) 
-   // VANJSKI GHOST 
+   // MENU 
 		.to(openmenu, {autoAlpha:1}, "<")
 		.to(closemenu, {autoAlpha:0}, "<")
    // .set(" .nav-toggle", { pointerEvents: "all"});
