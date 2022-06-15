@@ -866,12 +866,12 @@ function show() {
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut",})
     
 
-   .to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.6, ease: "quart.inOut"}) 
-    //.to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
-    //.to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
+   .to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1, ease: "quart.inOut"}) 
+    .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
+    .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
-   // .to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
-   // .to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
+    .to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
+    .to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
 
 
 		.to(openmenu, {autoAlpha:0}, "<")
