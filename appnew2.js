@@ -1822,7 +1822,7 @@ function headerHide() {
   ScrollTrigger.create({
     trigger: ".section-home-kingdome-are",
     scroller: ".smooth-scroll",
-    start: "top top",
+    start: "top 5%",
     end: 99999,
     toggleClass: { targets: ".headerx", className: "background-color-white" },
     //toggleClass: { targets: ".hamburger-lajna", className: "background-color-white" },
