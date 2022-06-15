@@ -898,7 +898,7 @@ function hide() {
     // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01})
 
-   .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
+   .to(".fs-menu--column", {autoAlpha:0, duration:0.1})
    // UNUTARNJI  
    .to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
 
