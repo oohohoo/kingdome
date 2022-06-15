@@ -853,7 +853,7 @@ closemenu.addEventListener("click", () => {
 
 
 // VANJSKI GHOST 
-gsap.set(".xnav", {scaleY: 0.5})
+gsap.set(".xnav", {scaleY: 0})
 // MENU LINKS 
 gsap.set(".lineChild", {yPercent:100})
 
