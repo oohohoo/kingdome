@@ -856,28 +856,28 @@ function show() {
 	let tl = gsap.timeline();
 
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
- // gsap.set(".fs-menu--column", {yPercent:-100})
-//  gsap.set(".fs-menu-header", {yPercent:-110})
- 
+gsap.set(".fs-menu--column", {yPercent:-100})
 //  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
+
 // VANJSKI GHOST 
 gsap.set(".xnav", {scaleY: 0})
+// MENU LINKS 
 gsap.set(".lineChild", {yPercent:100})
 
 // VANJSKI GHOST 
 tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1}) 
 // UNUTARNJI  
-  .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "top center"},
+    .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "top center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"})
 // UNUTARNJI 
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.6")
-
+// MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.01})
 
     //.to(".fs-nav-item", {autoAlpha:1, duration:0.5, stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     //.to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
 
-// MENU
+// MENU OPENCLOSE
 		.to(openmenu, {autoAlpha:0}, "<")
 		.to(closemenu, {autoAlpha:1}, "<")
    
@@ -894,21 +894,17 @@ function hide() {
 
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
 
-  tl
-
-  
-
-
-
-		.to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
+  tl.to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
+    // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01})
+
    .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
    // UNUTARNJI  
    .to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
 
 	 // VANJSKI GHOST 	
    .to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) 
-   // MENU 
+   // MENU OPENCLOSE
 		.to(openmenu, {autoAlpha:1}, "<")
 		.to(closemenu, {autoAlpha:0}, "<")
    // .set(" .nav-toggle", { pointerEvents: "all"});
