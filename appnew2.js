@@ -865,9 +865,9 @@ function show() {
 		".nav--transition-slide", {scaleY: 0, transformOrigin: "top center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut",})
     
-	tl.
+
  /*  to(".xnav", {scaleY: 0.5, transformOrigin: "top center", duration: 0.4}) */
-    .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
+ tl.to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
     .to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
