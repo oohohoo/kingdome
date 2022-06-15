@@ -820,8 +820,8 @@ FULLSCREEN MENU
 */
 function fullscreenMenu() {
   // OPEN MENU FROM CLICK
-const openmenuy = document.getElementById('openmenuy');
-const closemenuy = document.getElementById('closemenuy');
+const openmenu = document.getElementById('openmenux');
+const closemenu = document.getElementById('closemenux');
 //const menuhover = document.getElementById('menuhover');
 
 
@@ -840,11 +840,11 @@ btn.addEventListener("click", () => {
 });
 */
 
-openmenuy.addEventListener("click", () => {
+openmenu.addEventListener("click", () => {
 		show();
 });
 
-closemenuy.addEventListener("click", () => {
+closemenu.addEventListener("click", () => {
 		hide();
 });
 
@@ -856,7 +856,7 @@ function show() {
   gsap.set(".fs-menu--column", {yPercent:-100})
   gsap.set(".fs-menu-header", {yPercent:-110})
  
-  //gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
+  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
   gsap.set(".xnav", {scaleY: 0})
   //gsap.set(".line-wrapper", {yPercent:100})
 
@@ -874,8 +874,8 @@ function show() {
    // .to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
 
 
-		.to(openmenuy, {autoAlpha:0}, "<")
-		.to(closemenuy, {autoAlpha:1}, "<")
+		.to(openmenu, {autoAlpha:0}, "<")
+		.to(closemenu, {autoAlpha:1}, "<")
    
 		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
 	//	.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "quart.inOut"}, "<0.1")
@@ -891,12 +891,17 @@ function hide() {
 	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
 
   tl.to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
+
+  
+
+
+
 		tl.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
 	/* 	.to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) */
-		.to(openmenuy, {autoAlpha:1}, "<")
-		.to(closemenuy, {autoAlpha:0}, "<")
-    .set(".xnav, .hamburger-menu, .fs-menu-close", { pointerEvents: "all"});
+		.to(openmenu, {autoAlpha:1}, "<")
+		.to(closemenu, {autoAlpha:0}, "<")
+    .set(" .nav-toggle", { pointerEvents: "all"});
 
 }
 
@@ -945,7 +950,7 @@ MENU ICON HOVER
 
 
 /* OPENMENU HOVER ICON*/
-openmenuy.addEventListener('mouseover', ()=> {  
+openmenu.addEventListener('mouseover', ()=> {  
   let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline
@@ -953,7 +958,7 @@ openmenuy.addEventListener('mouseover', ()=> {
   //  .to(".mline3", {width: "100%"}, "<-0.05")
   })
   // MENU ICON MOUSEOUT 
-  openmenuy.addEventListener('mouseout', ()=> {  
+  openmenu.addEventListener('mouseout', ()=> {  
   let menuhovertimeline2 = gsap.timeline({defaults:{autoAlpha:1}})
   //animation.paused( true ); 
   menuhovertimeline2
@@ -962,7 +967,7 @@ openmenuy.addEventListener('mouseover', ()=> {
   })
 
 /* CLOSEMENU HOVER ICON */
-  closemenuy.addEventListener('mouseover', ()=> {  
+  closemenu.addEventListener('mouseover', ()=> {  
     let menuhovertimeline3 = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
     menuhovertimeline3
@@ -970,7 +975,7 @@ openmenuy.addEventListener('mouseover', ()=> {
     //  .to(".mline3", {width: "100%"}, "<-0.05")
     })
     // MENU ICON MOUSEOUT 
-    closemenuy.addEventListener('mouseout', ()=> {  
+    closemenu.addEventListener('mouseout', ()=> {  
     let menuhovertimeline4 = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
     menuhovertimeline4
@@ -991,8 +996,8 @@ FULLSCREEN 3D
 */
 function fullscreen3D() {
   // OPEN MENU FROM CLICK
-/* const openmenu = document.getElementById('open3d');
-const closemenu = document.getElementById('close3d'); */
+const openmenu = document.getElementById('open3d');
+const closemenu = document.getElementById('close3d');
 
 
 //const menuhover = document.getElementById('menuhover');
