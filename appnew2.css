@@ -845,11 +845,10 @@ TEXTSPLIT HEADERS SCROLLTRIGGER
 TEXT ON DARK BACK
 ================================================================================
 */
-.headerx.is-active {
-  color: white!important;
-  mix-blend-mode: normal!important;
- }
 
+ .headerx {
+  transition: background-color 0.3s ease;
+ }
 /*
 ================================================================================
 NAV IMAGE CLIP PATH
