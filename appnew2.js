@@ -863,7 +863,7 @@ function show() {
 	let tl = gsap.timeline();
 
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
-gsap.set(".fs-menu--column", {autoAlpha:0})
+gsap.set(".fs-menu--column", {autoAlpha:1})
 //  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
 
 
