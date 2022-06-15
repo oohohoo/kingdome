@@ -863,6 +863,21 @@ NAV IMAGE CLIP PATH
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
  }
  */
+
+/*
+================================================================================
+EXCLUSION BLEND MODE
+================================================================================
+*/
+/*  .link-inline, .hamburger-menu {
+  mix-blend-mode: exclusion
+}
+.link-inline:before {
+  background: #fff
+} */
+
+
+
 /*
 ================================================================================
 CUBERTO CURSOR
@@ -944,12 +959,6 @@ CUBERTO CURSOR
 }
 
 
-.link-inline, .hamburger-menu {
-  mix-blend-mode: exclusion
-}
-.link-inline:before {
-  background: #fff
-}
 
 .mf-cursor.-pointer:before {
   transform: scale(0.15)
