@@ -857,7 +857,7 @@ function show() {
   gsap.set(".fs-menu-header", {yPercent:-110})
  
   gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
-  /* gsap.set(".xnav", {scaleY: 0}) */
+  gsap.set(".xnav", {scaleY: 0})
   //gsap.set(".line-wrapper", {yPercent:100})
 
  
@@ -866,8 +866,8 @@ function show() {
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut",})
     
 
- /*  to(".xnav", {scaleY: 0.5, transformOrigin: "top center", duration: 0.4}) */
- tl.to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
+    tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration: 0.01}) 
+ .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
     .to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
