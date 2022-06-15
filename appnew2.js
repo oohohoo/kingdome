@@ -901,6 +901,7 @@ function hide() {
 
 
 		.to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
+    .to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01})
    .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
 	 // VANJSKI GHOST 	
    .to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) 
