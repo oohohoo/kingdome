@@ -872,9 +872,9 @@ gsap.set(".fs-menu--column", {autoAlpha:0})
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1}) 
 // UNUTARNJI  
     .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "bottom center"},
-		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"})
+		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"}, 0)
 // UNUTARNJI 
-    .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.6")
+    .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.01})
 
