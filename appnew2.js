@@ -852,12 +852,12 @@ closemenu.addEventListener("click", () => {
 function show() {
 	let tl = gsap.timeline();
 
-	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
+	gsap.set(".xnav, .nav-toggle", {pointerEvents: "none"});
   gsap.set(".fs-menu--column", {yPercent:-100})
   gsap.set(".fs-menu-header", {yPercent:-110})
  
   gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
-  gsap.set(".nav-wrapper", {scaleY: 0, rotate:350})
+  gsap.set(".xnav", {scaleY: 0, rotate:350})
   //gsap.set(".line-wrapper", {yPercent:100})
 
  
@@ -865,7 +865,7 @@ function show() {
 		".nav--transition-slide", {scaleY: 0, transformOrigin: "top center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut",})
     
-	tl.to(".nav-wrapper", {scaleY: 0.5, transformOrigin: "top center", duration: 0.4})
+	tl.to(".xnav", {scaleY: 0.5, transformOrigin: "top center", duration: 0.4})
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
@@ -875,19 +875,19 @@ function show() {
 
 		.to(openmenu, {autoAlpha:0}, "<")
 		.to(closemenu, {autoAlpha:1}, "<")
-    /*
+   
 		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "quart.inOut"}, "<0.1")
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
-    .set(".nav-wrapper, .nav-toggle", {pointerEvents: "all"}, "<")
-*/
+    .set(".xnav, .nav-toggle", {pointerEvents: "all"}, "<")
+
 }
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
 
-	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
+	gsap.set(".xnav, .nav-toggle", {pointerEvents: "none"});
 
   tl.to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
 
@@ -897,7 +897,7 @@ function hide() {
 
 		tl.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
-		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", scaleY: 0})
+		.to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0})
 		.to(openmenu, {autoAlpha:1}, "<")
 		.to(closemenu, {autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
