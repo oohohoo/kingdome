@@ -932,7 +932,7 @@ function hide() {
   
     
 
-   .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "+=0.1")
+   .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
    .to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", }, "+=0.1")
 
