@@ -1822,7 +1822,7 @@ function headerHide() {
   ScrollTrigger.create({
     trigger: ".navchange",
     scroller: ".smooth-scroll",
-    start: "5% top",
+    start: "top top",
     markers: true,
     end: 99999,
     toggleClass: { targets: ".headerx", className: "navcolor" },
