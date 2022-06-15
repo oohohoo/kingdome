@@ -836,7 +836,7 @@ TEXTSPLIT HEADERS SCROLLTRIGGER
 ================================================================================
 */
 
-.split-parent {
+.split-parent, .lineParent {
   overflow: hidden;
 }
 
