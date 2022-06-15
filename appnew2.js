@@ -856,7 +856,7 @@ function show() {
   gsap.set(".fs-menu--column", {yPercent:-100})
   gsap.set(".fs-menu-header", {yPercent:-110})
  
-  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
+  //gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
   gsap.set(".xnav", {scaleY: 0})
   //gsap.set(".line-wrapper", {yPercent:100})
 
@@ -991,8 +991,8 @@ FULLSCREEN 3D
 */
 function fullscreen3D() {
   // OPEN MENU FROM CLICK
-const openmenu = document.getElementById('open3d');
-const closemenu = document.getElementById('close3d');
+/* const openmenu = document.getElementById('open3d');
+const closemenu = document.getElementById('close3d'); */
 
 
 //const menuhover = document.getElementById('menuhover');
