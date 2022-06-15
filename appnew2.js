@@ -860,11 +860,12 @@ function show() {
 //  gsap.set(".fs-menu-header", {yPercent:-110})
  
 //  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
+// VANJSKI GHOST 
 gsap.set(".xnav", {scaleY: 0})
 gsap.set(".lineChild", {yPercent:100})
 
 // VANJSKI GHOST 
-tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1, ease: "quart.inOut"}) 
+tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1}) 
 // UNUTARNJI  
   .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "top center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"})
@@ -876,7 +877,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1, ease: "q
     //.to(".fs-nav-item", {autoAlpha:1, duration:0.5, stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     //.to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
 
-
+// MENU
 		.to(openmenu, {autoAlpha:0}, "<")
 		.to(closemenu, {autoAlpha:1}, "<")
    
@@ -900,8 +901,10 @@ function hide() {
 
 
 		.to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
-  //  .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
-	/* 	.to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) */
+   .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
+	 // VANJSKI GHOST 	
+   .to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) 
+   // VANJSKI GHOST 
 		.to(openmenu, {autoAlpha:1}, "<")
 		.to(closemenu, {autoAlpha:0}, "<")
    // .set(" .nav-toggle", { pointerEvents: "all"});
