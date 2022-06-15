@@ -820,8 +820,8 @@ FULLSCREEN MENU
 */
 function fullscreenMenu() {
   // OPEN MENU FROM CLICK
-const openmenu = document.getElementById('openmenux');
-const closemenu = document.getElementById('closemenux');
+const openmenu = document.getElementById('openmenu');
+const closemenu = document.getElementById('closemenu');
 //const menuhover = document.getElementById('menuhover');
 
 
