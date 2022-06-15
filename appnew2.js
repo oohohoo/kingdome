@@ -903,7 +903,7 @@ function hide() {
    .to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
 
 	 // VANJSKI GHOST 	
-   .to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) 
+   .to(".xnav", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0}) 
    // MENU OPENCLOSE
 		.to(openmenu, {autoAlpha:1}, "<")
 		.to(closemenu, {autoAlpha:0}, "<")
