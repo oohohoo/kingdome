@@ -883,7 +883,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",          
-ease: "power3.inOut",
+      ease: "Expo.inOut",
     })
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.05})
@@ -910,7 +910,17 @@ function hide() {
 
   // MENU LINKS 
   tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01})
-  
+  .fromTo(".nav-image-wrap", {
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+    webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",  
+    duration: 2.5,
+  },
+  {
+    clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+    webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+           
+    ease: "Expo.inOut",
+  })
   /* .to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1") */
   
     
