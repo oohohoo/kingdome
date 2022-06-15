@@ -878,7 +878,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.01})
 
-    .to(".fs-nav-item", {autoAlpha:1, duration:0.5, stagger:0.05,  ease: "quart.inOut"}, "<0.1")
+  //  .to(".fs-nav-item", {autoAlpha:1, duration:0.5, stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     //.to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
 
 // MENU OPENCLOSE
@@ -898,9 +898,12 @@ function hide() {
 
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
 
-  tl.to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
-    // MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01})
+  // MENU LINKS 
+  tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01})
+  
+  /* .to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1") */
+  
+    
 
    .to(".fs-menu--column", {autoAlpha:0, duration:0.1})
    // UNUTARNJI  
