@@ -855,9 +855,9 @@ TEXT ON DARK BACK
 NAV IMAGE CLIP PATH
 ================================================================================
 */
- .nav-image-wrap {
+/*  .nav-image-wrap {
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
- }
+ } */
 
 
 /*  .home-hero-video {
