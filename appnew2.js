@@ -855,12 +855,12 @@ closemenu.addEventListener("click", () => {
 function show() {
 	let tl = gsap.timeline();
 
-	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
-  gsap.set(".fs-menu--column", {yPercent:-100})
-  gsap.set(".fs-menu-header", {yPercent:-110})
+//	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
+ // gsap.set(".fs-menu--column", {yPercent:-100})
+//  gsap.set(".fs-menu-header", {yPercent:-110})
  
-  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
-  gsap.set(".xnav", {scaleY: 0})
+//  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
+ // gsap.set(".xnav", {scaleY: 0})
  gsap.set(".lineChild", {yPercent:100})
 
  
@@ -869,7 +869,7 @@ function show() {
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut",})
     
 
-   .to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1, ease: "quart.inOut"}) 
+   //.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1, ease: "quart.inOut"}) 
   
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
@@ -886,14 +886,14 @@ function show() {
 	//	.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "quart.inOut"}, "<0.1")
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
-    .set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "all"}, "<")
+   // .set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "all"}, "<")
 
 }
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
 
-	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
+//	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
 
   tl.to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", })
 
@@ -901,12 +901,12 @@ function hide() {
 
 
 
-		.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
-    .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
+	//	.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
+  //  .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
 	/* 	.to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) */
 		.to(openmenu, {autoAlpha:1}, "<")
 		.to(closemenu, {autoAlpha:0}, "<")
-    .set(" .nav-toggle", { pointerEvents: "all"});
+   // .set(" .nav-toggle", { pointerEvents: "all"});
 
 }
 
@@ -1000,6 +1000,7 @@ FULLSCREEN 3D
 ================================================================================
 */
 function fullscreen3D() {
+  /*
   // OPEN MENU FROM CLICK
 const openmenu = document.getElementById('open3d');
 const closemenu = document.getElementById('close3d');
@@ -1074,7 +1075,7 @@ function hide() {
 	
 }
 
-
+*/
 
 }
 
