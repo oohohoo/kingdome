@@ -886,6 +886,8 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",       
       ease: "Expo.inOut",
     })
+    .from(".nav-image", {autoAlpha:0, scale:1.1})
+    
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.05})
     .to(".navnum", {autoAlpha:1, stagger:0.01})
