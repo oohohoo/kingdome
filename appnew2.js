@@ -877,8 +877,8 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
     
     
 // MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.025})
-    .to(".navnum", {autoAlpha:1, stagger:0.025})
+    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.05})
+    .to(".navnum", {autoAlpha:1, stagger:0.01})
    
     
 
