@@ -822,27 +822,11 @@ function fullscreenMenu() {
   // OPEN MENU FROM CLICK
 const openmenu = document.getElementById('openmenu');
 const closemenu = document.getElementById('closemenux');
-//const menuhover = document.getElementById('menuhover');
 
 new SplitText(".doublesplit", { type: "lines", linesClass: "lineChild" });
 new SplitText(".doublesplit", { type: "lines", linesClass: "lineParent" });
 
-
-//const { gsap } = window;
-/*
-const btn = document.querySelector(".nav-toggle");
-
-btn.addEventListener("click", () => {
-	if (btn.classList.contains("active")) {
-		btn.classList.remove("active");
-		hide();
-	} else {
-		btn.classList.add("active");
-		show();
-	}
-});
-*/
-
+// OPEN CLOSE FUNCTION
 openmenu.addEventListener("click", () => {
 		show();
 });
@@ -863,7 +847,7 @@ function show() {
 	let tl = gsap.timeline();
 
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
-gsap.set(".fs-menu--column", {autoAlpha:1})
+//gsap.set(".fs-menu--column", {autoAlpha:1})
 //  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
 
 
@@ -874,7 +858,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
     .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"}, 0)
 // UNUTARNJI 
-    .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
+   // .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
    .fromTo(".nav-image-wrap", {
     clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -932,7 +916,7 @@ function hide() {
   
     
 
-   .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
+  // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
    .to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", }, "+=0.1")
 
@@ -1222,14 +1206,14 @@ function hideMenu() {
   
   let tl = gsap.timeline();
 
-	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
+/* 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
 
 		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.1, ease: "power2.inOut"})
 		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		.to(".open", {duration:0.1, autoAlpha:1}, "<")
 		.to(".close", {duration:0.1, autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
-	
+	 */
 }
 
 
