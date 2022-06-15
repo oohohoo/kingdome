@@ -1823,7 +1823,7 @@ function headerHide() {
     trigger: ".navchange",
     scroller: ".smooth-scroll",
     start: "top top",
-    markers: true,
+   // markers: true,
     end: 99999,
     toggleClass: { targets: ".headerx", className: "navcolor" },
     //toggleClass: { targets: ".hamburger-lajna", className: "background-color-white" },
