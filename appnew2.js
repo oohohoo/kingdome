@@ -871,7 +871,7 @@ function show() {
 
    .to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1, ease: "quart.inOut"}) 
   
-    .from(".lineChild", {yPercent:50, stagger:0.05}, 0.25);
+    .from(".lineChild", {yPercent:100, stagger:0.05})
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
