@@ -875,6 +875,16 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"}, 0)
 // UNUTARNJI 
     .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
+   .fromTo(".nav-image-wrap", {
+      clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+      webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+      duration: 2.5,
+    },
+    {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",          
+ease: "power3.inOut",
+    })
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.05})
 
