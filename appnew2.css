@@ -847,7 +847,7 @@ TEXT ON DARK BACK
 */
 
  .headerx {
-  transition: background-color 0.2s ease;
+  
  }
 /*
 ================================================================================
@@ -864,7 +864,12 @@ NAV IMAGE CLIP PATH
  }
  */
 
-
+.navcolor {
+color: #1a1815;
+background-color: #fdfcfc;
+transition: background-color 0.2s ease;
+transition: color 0.2s ease;
+ }
 
 
 
