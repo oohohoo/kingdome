@@ -938,7 +938,7 @@ function hide() {
     // LOGO RESET BACK
 
     .to(".header_redflag",  {width:'6.1875rem', height:'8.4375rem', top: '0rem', duration: 0.5, ease: "expo.inOut", }, 0) 
-    .to("#sq", {morphSVG: {shape: "#di"}, duration: 0.5, ease: "expo.inOut"}, 0)
+    .from("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
     .to(".header_znak", { scale: 1, duration: 0.5, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, 0)
 
 
