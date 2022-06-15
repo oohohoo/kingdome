@@ -856,7 +856,7 @@ function show() {
 	let tl = gsap.timeline();
 
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
-gsap.set(".fs-menu--column", {yPercent:-100})
+gsap.set(".fs-menu--column", {autoAlpha:0})
 //  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
 
 // VANJSKI GHOST 
@@ -870,7 +870,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1})
     .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "top center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"})
 // UNUTARNJI 
-    .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.6")
+    .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.6")
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.01})
 
