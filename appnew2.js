@@ -866,7 +866,7 @@ function show() {
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut",})
     
 
-    tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration: 0.01}) 
+    tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.8, ease: "quart.inOut"}) 
  .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
