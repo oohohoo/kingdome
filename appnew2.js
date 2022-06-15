@@ -912,13 +912,13 @@ function hide() {
   // MENU LINKS 
   tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01})
   .fromTo(".nav-image-wrap", {
-    clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",  
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
     duration: 2.5,
   },
   {
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+    clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
            
     ease: "Expo.inOut",
   })
