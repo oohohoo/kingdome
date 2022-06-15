@@ -876,7 +876,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
 // UNUTARNJI 
     .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
 // MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.25})
+    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.05})
 
   //  .to(".fs-nav-item", {autoAlpha:1, duration:0.5, stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     //.to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
