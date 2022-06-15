@@ -865,7 +865,8 @@ function show() {
 		".nav--transition-slide", {scaleY: 0, transformOrigin: "top center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut",})
     
-	tl.to(".xnav", {scaleY: 0.5, transformOrigin: "top center", duration: 0.4})
+	tl.
+ /*  to(".xnav", {scaleY: 0.5, transformOrigin: "top center", duration: 0.4}) */
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
@@ -897,7 +898,7 @@ function hide() {
 
 		tl.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
-		.to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0})
+	/* 	.to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) */
 		.to(openmenu, {autoAlpha:1}, "<")
 		.to(closemenu, {autoAlpha:0}, "<")
     .set(" .nav-toggle", { pointerEvents: "all"});
