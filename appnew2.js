@@ -857,6 +857,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
 // UNUTARNJI  
     .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"}, 0)
+    .to(".fs-menu-close", {autoAlpha:1, stagger:0.01}, "<")
 // UNUTARNJI 
    // .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
    .fromTo(".nav-image-wrap", {
@@ -873,7 +874,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
     ease: "Expo.inOut",
     })
     .from(".nav-image", {autoAlpha:0, scale:1.1})
-    .to(".fs-menu-close", {autoAlpha:1, stagger:0.01})
+    
     
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.05})
