@@ -869,9 +869,9 @@ gsap.set(".fs-menu--column", {autoAlpha:0})
 
 
 // VANJSKI GHOST 
-tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1}) 
+tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1}) 
 // UNUTARNJI  
-    .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "top center"},
+    .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"})
 // UNUTARNJI 
     .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.6")
