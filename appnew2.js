@@ -885,9 +885,8 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
 
     .to(".header_redflag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
     .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
-  
     .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -53, ease:'expo.inOut'}, 0)
-    
+
 
   //  .to(".fs-nav-item", {autoAlpha:1, duration:0.5, stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     //.to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
@@ -935,6 +934,14 @@ function hide() {
 
 	 // VANJSKI GHOST 	
    .to(".xnav", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0}) 
+
+    // LOGO RESET BACK
+
+    .to(".header_redflag",  {width:'6.1875rem', height:'8.4375rem', top: '0rem', duration: 0.5, ease: "expo.inOut", }, 0) 
+    .to("#sq", {morphSVG: {shape: "#di"}, duration: 0.5, ease: "expo.inOut"}, 0)
+    .to(".header_znak", { scale: 1, duration: 0.5, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, 0)
+
+
    // MENU OPENCLOSE
 		.to(openmenu, {autoAlpha:1}, "<")
 		.to(closemenu, {autoAlpha:0}, "<")
