@@ -860,7 +860,7 @@ gsap.set(".fs-menu--column", {autoAlpha:0})
 //  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
 
 // VANJSKI GHOST 
-gsap.set(".xnav", {scaleY: 0})
+gsap.set(".xnav", {scaleY: 0.5})
 // MENU LINKS 
 gsap.set(".lineChild", {yPercent:100})
 
