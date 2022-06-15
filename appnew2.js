@@ -851,6 +851,13 @@ closemenu.addEventListener("click", () => {
 		hide();
 });
 
+
+// VANJSKI GHOST 
+gsap.set(".xnav", {scaleY: 0.5})
+// MENU LINKS 
+gsap.set(".lineChild", {yPercent:100})
+
+
 // --- SHOW
 function show() {
 	let tl = gsap.timeline();
@@ -859,10 +866,7 @@ function show() {
 gsap.set(".fs-menu--column", {autoAlpha:0})
 //  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
 
-// VANJSKI GHOST 
-gsap.set(".xnav", {scaleY: 0.5})
-// MENU LINKS 
-gsap.set(".lineChild", {yPercent:100})
+
 
 // VANJSKI GHOST 
 tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.1}) 
