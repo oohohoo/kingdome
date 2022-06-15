@@ -866,7 +866,7 @@ function show() {
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut",})
     
 
-    tl.to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.6, ease: "quart.inOut"}) 
+   .to(".xnav", {scaleY: 1, transformOrigin: "top center", duration:0.6, ease: "quart.inOut"}) 
     //.to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<")
     //.to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "quart.inOut"}, "<0.2")
    
@@ -896,7 +896,7 @@ function hide() {
 
 
 
-		tl.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
+		.to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1")
     .fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.4, stagger:0.05, ease: "quart.inOut"})
 	/* 	.to(".xnav", { duration: 0.1, transformOrigin: "top center", scaleY: 0}) */
 		.to(openmenu, {autoAlpha:1}, "<")
