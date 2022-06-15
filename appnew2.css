@@ -945,7 +945,7 @@ CUBERTO CURSOR
 }
 
 
-.link-inline {
+.link-inline, .hamburger-menu {
   mix-blend-mode: exclusion
 }
 .link-inline:before {
