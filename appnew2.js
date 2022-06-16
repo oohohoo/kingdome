@@ -1963,44 +1963,48 @@ LOGO MARQUEE
 
 function logoMarquee() {
 
+  jQuery(function($){ /* GREENSOCK */
+  /* TICKER <----------- Right */
+  $(".tickerwrapper").each(function(ix, ex){
+          var $tickerWrapper = $(ex);
+    var $list = $tickerWrapper.find("ul.list");
+    var $clonedList = $list.clone();
+    var listWidth = 10;
 
-  let cardsContainer = document.querySelector(".featured-logos-anim");
-
-  // Duplicate the cards (for wrapping purposes)
-  cardsContainer.innerHTML += cardsContainer.innerHTML;
-  
-  // Get the DOM references
-  let cards = gsap.utils.toArray(".featured-logo");
-  
-  function setAnimValues() {
-    // Get the correct width
-    let cardWidth = innerWidth / (cards.length / 2);
-    
-    // Set the default position
-    cards.forEach((card, i) => 
-      gsap.set(card, {
-        x: () => i * cardWidth,
-        overwrite: "auto"
-      })
-    );
-    
-    // Animate the cards
-    gsap.to(cards, {
-      duration: 18,
-      ease: "none",
-      x: `+=${innerWidth}`,
-      repeat: -1,
-      // Wrap the cards when appropriate
-      modifiers: {
-        x: gsap.utils.unitize(gsap.utils.wrap(-cardWidth, innerWidth * 2 - cardWidth), "px")
-      },
+    $list.find("li").each(function (i) {
+          listWidth += $(this, i).outerWidth(true);
     });
-  }
-  
-  // Make sure it works on resize
-  window.addEventListener("resize", setAnimValues);
-  setAnimValues();
-  
+
+    var endPos = $tickerWrapper.width() - listWidth;
+
+    $list.add($clonedList).css({
+      "width" : listWidth + "px"
+    });
+
+    $clonedList.addClass("cloned").appendTo($tickerWrapper);
+
+    //TimelineMax
+    var infinite = new gsap.timeline({repeat: -1, paused: true});
+    var time = 30;
+
+    infinite
+      .fromTo($list, time, {rotation:0.01,x:0}, {force3D:true, x: -listWidth, ease: Linear.easeNone}, 0)
+      .fromTo($clonedList, time, {rotation:0.01, x:listWidth}, {force3D:true, x:0, ease: Linear.easeNone}, 0)
+      .set($list, {force3D:true, rotation:0.01, x: listWidth})
+      .to($clonedList, time, {force3D:true, rotation:0.01, x: -listWidth, ease: Linear.easeNone}, time)
+      .to($list, time, {force3D:true, rotation:0.01, x: 0, ease: Linear.easeNone}, time)
+      .progress(1).progress(0)
+      .play();
+
+    //Pause/Play        
+    $tickerWrapper.on("mouseenter", function(){
+      infinite.pause();
+    }).on("mouseleave", function(){
+      infinite.play();
+    });
+  });    			
+});		
+  // End Ticker
 
 console.log("LOGO MARQUEE NOVI");
   }
