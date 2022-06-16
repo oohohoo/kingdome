@@ -1962,21 +1962,47 @@ LOGO MARQUEE
 */
 
 function logoMarquee() {
-  gsap.to(".first ul", 10, {
-    xPercent: -100,
-    ease: "none",
-    scrollTrigger: {
-      scroller: ".smooth-scroll",
-      trigger: ".section-partners",
-      scrub: 3,
-      pin:true,
-     end: "+=1000"
+
+
+  let cardsContainer = document.querySelector(".featured-logos-anim");
+
+  // Duplicate the cards (for wrapping purposes)
+  cardsContainer.innerHTML += cardsContainer.innerHTML;
   
-    }, 
-  });
+  // Get the DOM references
+  let cards = gsap.utils.toArray(".featured-logo");
+  
+  function setAnimValues() {
+    // Get the correct width
+    let cardWidth = innerWidth / (cards.length / 2);
+    
+    // Set the default position
+    cards.forEach((card, i) => 
+      gsap.set(card, {
+        x: () => i * cardWidth,
+        overwrite: "auto"
+      })
+    );
+    
+    // Animate the cards
+    gsap.to(cards, {
+      duration: 18,
+      ease: "none",
+      x: `+=${innerWidth}`,
+      repeat: -1,
+      // Wrap the cards when appropriate
+      modifiers: {
+        x: gsap.utils.unitize(gsap.utils.wrap(-cardWidth, innerWidth * 2 - cardWidth), "px")
+      },
+    });
+  }
+  
+  // Make sure it works on resize
+  window.addEventListener("resize", setAnimValues);
+  setAnimValues();
   
 
-console.log("LOGO MARQUEE NLOVIII");
+console.log("LOGO MARQUEE NOVI");
   }
   
 
