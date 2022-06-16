@@ -571,7 +571,7 @@ BARBA VIEWS
       rotateWireframe();
       parallaxPanel();
       homeProductHover();
-      akapowPinned();
+      //akapowPinned();
       initVideo();
       
   
