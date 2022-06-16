@@ -1721,7 +1721,7 @@ function akapowPinned() {
   const tl = gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
-      trigger: ".akatrigger",
+      trigger: ".section-home-about-pin",
       start: () => "top top",
       //end: () => "+=" + ((images.length + 1) * window.innerHeight),
       
