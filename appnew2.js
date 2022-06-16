@@ -359,7 +359,7 @@ function initContent() {
     howwework: function () {
       logoTransformOnScroll();
       headerHide();
-    //  akapowPinned();
+      akapowPinned();
       logoMarquee();
       startStopVideo();
     },
