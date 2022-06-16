@@ -1748,7 +1748,7 @@ function akapowPinned() {
   
   ScrollTrigger.create({
     
-        trigger: "section.showcase",
+        trigger: ".showcase",
         scroller: ".smooth-scroll",
   
         start: () => "top top",
