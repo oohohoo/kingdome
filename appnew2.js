@@ -1859,7 +1859,7 @@ function productsTabs() {
     targets[i].addEventListener("click", doCoolStuff);
   }
   // set initial article and position bubble slider on first tab 
-  gsap.set(articles[0], {y:0, opacity:1});
+  gsap.set(articles[0], {y:0, opacity:1, zIndex:2});
   gsap.set(".slider-tab", {x:targets[0].offsetLeft, width:targets[0].offsetWidth});
   gsap.set(targets[0], {color:"#1a1815"});
   gsap.set(".article-block", {height:heights[0]});
@@ -1880,7 +1880,7 @@ function productsTabs() {
       animation.to(targets[old], {color:"#a29f9c", ease:"none"}, 0);
       animation.to(targets[activeTab], {color:"#1a1815", ease:"none"}, 0);
       // slide current article down out of view and then set it to starting position at top
-      animation.to(articles[old], {y:0, opacity:0, ease:"power2.in" }, 0);
+      animation.to(articles[old], {y:0, zIndex:1, opacity:0, ease:"power2.in" }, 0);
       animation.set(articles[old], {y:0[old]});
       // resize article block to accommodate new content
       animation.to(".article-block", {height:heights[activeTab]});
