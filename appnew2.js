@@ -1967,7 +1967,7 @@ function logoMarquee() {
   /* TICKER <----------- Right */
   $(".tickerwrapper").each(function(ix, ex){
           var $tickerWrapper = $(ex);
-    var $list = $tickerWrapper.find("ul.list");
+    var $list = $tickerWrapper.find("ul.listo");
     var $clonedList = $list.clone();
     var listWidth = 10;
 
