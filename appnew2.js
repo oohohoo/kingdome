@@ -1345,7 +1345,7 @@ function fadeInOnEnter() {
     scroller: ".smooth-scroll",
     start: "top bottom-=100px",
     onEnter: batch => {
-      batch.forEach((card, index ) => gsap.to(card.children, {y:0, autoAlpha:1, stagger: 0.04, delay: index * 0.3}))
+      batch.forEach((card, index ) => gsap.to(card.children, {y:0, autoAlpha:1, stagger: 0.041}))
     },
     once: true
   });
