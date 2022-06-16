@@ -1971,7 +1971,7 @@ function logoMarquee() {
     var $clonedList = $list.clone();
     var listWidth = 10;
 
-    $list.find(".listo").each(function (i) {
+    $list.find(".li").each(function (i) {
           listWidth += $(this, i).outerWidth(true);
     });
 
