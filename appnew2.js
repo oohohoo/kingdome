@@ -1885,7 +1885,7 @@ function productsTabs() {
       // resize article block to accommodate new content
       animation.to(".article-block", {height:heights[activeTab]});
       // slide in new article
-      animation.to(articles[activeTab], {duration: 0.3, opacity:1, y:0, ease: "power2.out"}, "-=0.25");
+      animation.to(articles[activeTab], {duration: 0.3, zIndex:2, opacity:1, y:0, ease: "power2.out"}, "-=0.25");
     }
   }
   
