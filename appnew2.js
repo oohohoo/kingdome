@@ -1708,103 +1708,62 @@ HOME + HOW WE WORK AKAPOWL PINNED
 */
 function akapowPinned() {
 
-  gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
-  gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
+  gsap.set(".image-container", { zIndex: (i, target, targets) => targets.length - i });
 
-  let texts = gsap.utils.toArray('.panel-text');  
-
-  var images = gsap.utils.toArray('.panel3:not(.purple)');
-
-  let stagger = 1 / (images.length + 1);
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      scroller: ".smooth-scroll",
-      trigger: ".section-home-about-pin",
-      start: () => "top top",
-      //end: () => "+=" + ((images.length + 1) * window.innerHeight),
-      
-      end: () => "+=" + ((images.length) * window.innerHeight),
-     // end: () => "+=" + window.innerHeight,
-    // end: () => "+=" + window.innerHeight,
-      pin: true,
-      scrub: true,
-      invalidateOnRefresh: true
-    }  
-  })
+  var images = gsap.utils.toArray('.image-container:not(.purple)');
   
-  tl
-  .fromTo(images, {
-    height: "100%"
-  }, {
-    height: "0%",
-    ease: "none",
-    duration: stagger,
-    stagger: stagger
-  }, stagger)
-  
-  .fromTo(texts, { 
-    y: "100%",
-    opacity: 0 
-  }, { 
-    y: "30%", 
-    opacity: 1,
-    duration: stagger,
-    stagger: stagger
-  }, 0)
-  
-  .to(texts, { 
-    y: "0%", 
-    opacity: 0,
-    duration: stagger,
-    stagger: stagger,
-  }, stagger)
-
-
-  /*
-  imagesxx.forEach((image, i) => {
+  images.forEach((image, i) => {
      
-     var tl = gsap.timeline({
+     var nextImage = image.nextElementSibling;
+    
+     var imageTimeline = gsap.timeline({
        
        scrollTrigger: {
-        trigger: ".black",
-        scroller: ".smooth-scroll",
          
-         start: () => "top -" + (window.innerHeight * (i)),
+         trigger: ".showcase",
+         scroller: ".smooth-scroll",
          
+         start: () => "top -" + (window.innerHeight * i),       
          end: () => "+=" + window.innerHeight,
+         
+         // toggleActions: "play none reverse none",
+         
          scrub: true,
-         toggleActions: "play none reverse none",
-         invalidateOnRefresh: true,     
+         invalidateOnRefresh: true, 
+         
        }
        
      })
      
-     tl
-     .fromTo(image, { height: () => { return "100%" } }, { height: () => { return "0%" }, ease: "none" })
+        
+     imageTimeline
+      .fromTo(image, { height: () => { return "100%" }  }, { height: () => { return "0%" }, ease: "none" }, 0)
      ;
-     
+    
+    
   });
-   
+  
+  
   
   ScrollTrigger.create({
-  
-        trigger: ".black",
+    
+        trigger: "section.showcase",
         scroller: ".smooth-scroll",
-      markers: false,
+  
+        start: () => "top top",
+        end: () => "+=" + ((images.length) * window.innerHeight),
+  
+        pin: '.image-wrapx', 
+        anticipatePin: 1,
+        
+        invalidateOnRefresh: true,
     
-     
-      pin: ".picturewrap",
-    
-      start: () => "top top",
-      end: () => "+=" + ((imagesxx.length) * window.innerHeight),
-      invalidateOnRefresh: true,
-     
   });
 
-*/
-    console.log("UHOME + HOW WE WORK AKAPOWL PINNED");
+
+
+    console.log("NOVI AKAPOWL!!!!");
   }
 
 /*
