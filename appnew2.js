@@ -1707,7 +1707,7 @@ HOME + HOW WE WORK AKAPOWL PINNED
 ================================================================================
 */
 function akapowPinned() {
-/*
+
   gsap.set(".panel3", { zIndex: (i, target, targets) => targets.length - i });
 
   gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
