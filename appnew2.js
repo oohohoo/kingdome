@@ -1963,48 +1963,38 @@ LOGO MARQUEE
 
 function logoMarquee() {
 
-  jQuery(function($){ /* GREENSOCK */
-  /* TICKER <----------- Right */
-  $(".tickerwrapper").each(function(ix, ex){
-          var $tickerWrapper = $(ex);
-    var $list = $tickerWrapper.find("ul.listo");
-    var $clonedList = $list.clone();
-    var listWidth = 10;
+  //Change width and time on your desire
 
-    $list.find(".listitem").each(function (i) {
-          listWidth += $(this, i).outerWidth(true);
+initMarquee(190, 27)
+
+function initMarquee(boxWidth, time) {
+    const boxElement = $('.logo-box');
+    const boxLength = boxElement.length;
+    const wrapperWidth = boxWidth * boxLength;
+    const windowWidth = $(window).width();
+
+    boxElement.parent().css('left', '-' + boxWidth + 'px');
+    boxElement.css('width', boxWidth + 'px');
+
+    gsap.set(".logo-box", {
+        x: (i) => i * boxWidth
     });
 
-    var endPos = $tickerWrapper.width() - listWidth;
-
-    $list.add($clonedList).css({
-      "width" : listWidth + "px"
+    gsap.to(".logo-box", {
+        duration: time,
+        ease: "none",
+        x: "-=" + wrapperWidth,
+        modifiers: {
+            x: gsap.utils.unitize(
+                function (x) {
+                    return parseFloat(x + windowWidth + boxWidth) % wrapperWidth
+                }
+            )
+        },
+        repeat: -1
     });
 
-    $clonedList.addClass("cloned").appendTo($tickerWrapper);
-
-    //TimelineMax
-    var infinite = new gsap.timeline({repeat: -1, paused: true});
-    var time = 30;
-
-    infinite
-      .fromTo($list, time, {rotation:0.01,x:0}, {force3D:true, x: -listWidth, ease: Linear.easeNone}, 0)
-      .fromTo($clonedList, time, {rotation:0.01, x:listWidth}, {force3D:true, x:0, ease: Linear.easeNone}, 0)
-      .set($list, {force3D:true, rotation:0.01, x: listWidth})
-      .to($clonedList, time, {force3D:true, rotation:0.01, x: -listWidth, ease: Linear.easeNone}, time)
-      .to($list, time, {force3D:true, rotation:0.01, x: 0, ease: Linear.easeNone}, time)
-      .progress(1).progress(0)
-      .play();
-
-    //Pause/Play        
-    $tickerWrapper.on("mouseenter", function(){
-      infinite.pause();
-    }).on("mouseleave", function(){
-      infinite.play();
-    });
-  });    			
-});		
-  // End Ticker
+}
 
 console.log("LOGO MARQUEE NOVI");
   }
