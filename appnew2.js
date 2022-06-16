@@ -1965,7 +1965,7 @@ function logoMarquee() {
 
   //Change width and time on your desire
 
-initMarquee(190, 27)
+initMarquee(250, 27)
 
 function initMarquee(boxWidth, time) {
     const boxElement = $('.logo-box');
