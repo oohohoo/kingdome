@@ -883,6 +883,14 @@ EXCLUSION BLEND MODE
   background: #fff
 } */
 
+/*
+================================================================================
+FAQ ACCORDION
+================================================================================
+*/
+.accordion__icon .linex:last-child {
+  transform: rotate(90deg) translateY(2px);
+}
 
 
 /*
