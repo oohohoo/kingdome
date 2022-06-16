@@ -1711,7 +1711,7 @@ function akapowPinned() {
 
   gsap.set(".imagex", { zIndex: (i, target, targets) => targets.length - i });
 
-  var images = gsap.utils.toArray('.imagex:not(.purple)');
+  var images = gsap.utils.toArray('.imagex:not(.four)');
   
   images.forEach((image, i) => {
      
