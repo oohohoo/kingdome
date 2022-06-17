@@ -709,19 +709,19 @@ BARBA TRANSITIONS
      from: {
       namespace: ['products'],
 
-     leave(data) {
+     leave(current) {
       // create your stunning leave animation here
-        return gsap.to(data.current.container, {
+        return gsap.to(current.container, {
         opacity: 0
       });
      }
     },
     to: {
       namespace: ['productsingle'],
-     enter(data) {
+     enter(next) {
       
        // create your amazing enter animation here
-       return gsap.from(data.next.container, {
+       return gsap.from(next.container, {
         opacity: 0
       });
      }
