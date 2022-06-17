@@ -727,7 +727,7 @@ BARBA TRANSITIONS
    
      },
    
-    }
+  
  
 
 
