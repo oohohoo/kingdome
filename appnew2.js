@@ -704,7 +704,14 @@ BARBA TRANSITIONS
      from: {namespace: ['products'] },
      to: {namespace: ['productsingle'] },
 
+     once(current) {
+      pageTransitionIn(current);
+      console.log("NOVI LEAVE");
+    },
+
+
      leave(current) {
+      
       // create your stunning leave animation here
       pageTransitionIn(current);
       console.log("NOVI LEAVE");
