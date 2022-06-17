@@ -704,6 +704,32 @@ BARBA TRANSITIONS
     //console.log("video initializzzzzzz");
     
      },
+
+
+     name: 'fade',
+     from: {  
+      namespace: [
+       'products'
+     ],
+
+     leave(current) {
+      pageFadeIn(current);
+          console.log("FADEIN");
+    },
+
+     },
+     to: {
+
+         namespace: [
+           'productsingle'
+         ],
+         enter(current) {
+          pageFadeOut(current);
+          console.log("FADEOUT");
+        }
+        
+
+     }
   
 
 
