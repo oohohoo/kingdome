@@ -616,7 +616,7 @@ BARBA VIEWS
   
     }},{
     namespace: 'products',
-    beforeEnter(){
+    beforeEnter(data){
      projectMainSwiper();
      navOnDark();
      
