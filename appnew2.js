@@ -705,7 +705,7 @@ BARBA TRANSITIONS
     
      },
 
-     name: 'fade',
+     name: 'fadex',
      from: {
       namespace: ['products'],
 
