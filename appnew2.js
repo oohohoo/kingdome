@@ -2500,7 +2500,7 @@ tl.to(".hero-header_animation", {
 .to(".heading-small", {
   scale:0.5,
   opacity:.3
-}, "<")
+}, "<0.1")
 
 /* tl.to(".wiper", {
   yPercent: -100,
