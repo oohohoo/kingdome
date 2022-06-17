@@ -706,9 +706,10 @@ BARBA TRANSITIONS
      },
   
      name: 'fade',
-     from: {  namespace: [
+     from: {  
+      namespace: [
        'products'
-     ]
+     ],
 
      leave() {
       await pageFadeIn(current);
@@ -720,7 +721,7 @@ BARBA TRANSITIONS
 
          namespace: [
            'productsingle'
-         ]
+         ],
          enter() {
           await pageFadeOut(current);
           console.log("FADEOUT");
