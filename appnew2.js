@@ -664,25 +664,6 @@ BARBA TRANSITIONS
 ================================================================================
 */  
 
-transitions: [{
-  name: 'fade',
-  from: {  namespace: [
-    'products'
-  ]
-    // set of conditions to be fulfilled
-    // to play the transition
-  },
-  to: {
-    // set of conditions to be fulfilled
-    // to play the transition
-      // define rule based on multiple namespaces
-      namespace: [
-        'productsingle'
-      ]
-  }
-}]
-
-
    transitions: [
          {
     // ROUTE AKO IDE NA ABOUT IDE DRUGA ANIMACIJA
