@@ -701,26 +701,25 @@ BARBA TRANSITIONS
      },
 
      name: 'fadex',
-     from: {
-      namespace: ['products']
+     from: {namespace: ['products'] },
+     to: {namespace: ['productsingle'] },
 
      leave(current) {
       // create your stunning leave animation here
-        return gsap.to(current.container, {
-        opacity: 0
-      });
-     }
+      await pageTransitionIn(current);
+      console.log("NOVI LEAVE");
+    
+   
     },
-    to: {
-      namespace: ['productsingle']
+  
      enter(next) {
       
        // create your amazing enter animation here
-       return gsap.from(next.container, {
-        opacity: 0
-      });
+       pageTransitionOut(next);
+       console.log("NOVI ENTER");
+   
      }
-    }
+   
 
  
 
