@@ -682,13 +682,13 @@ BARBA TRANSITIONS
 
      async leave({current}) {
        // animate loading screen in
-       await pageFadeIn(current);
+       await pageTransitionIn(current);
        console.log("LEAVE");
        
      },
      enter({next}) {
        // animate loading screen away
-       pageFadeOut(next);
+       pageTransitionOut(next);
          console.log("NEXT");
      },
      
@@ -705,6 +705,27 @@ BARBA TRANSITIONS
     
      },
 
+     name: 'fade',
+     from: {
+      namespace: ['products'],
+
+     leave(data) {
+      // create your stunning leave animation here
+        return gsap.to(data.current.container, {
+        opacity: 0
+      });
+     }
+    },
+    to: {
+      namespace: ['productsingle'],
+     enter(data) {
+      
+       // create your amazing enter animation here
+       return gsap.from(data.next.container, {
+        opacity: 0
+      });
+     }
+    }
 
  
 
