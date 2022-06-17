@@ -2550,7 +2550,7 @@ tl.to(".hero-header_animation", {
 
 .to(".section-home-hero", {
   opacity:0
-}, 0.3)
+}, 0.6)
 
 
 
