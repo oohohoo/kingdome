@@ -2474,7 +2474,7 @@ function heroPanelAnimation() {
     pinSpacing: false,
     start: "top top",
     end: "bottom top",
-    markers: true,
+    //markers: true,
     id: "hero"
 }});
 
