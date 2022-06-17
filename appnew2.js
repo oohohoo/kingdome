@@ -667,8 +667,7 @@ BARBA TRANSITIONS
    transitions: [
          {
     // ROUTE AKO IDE NA ABOUT IDE DRUGA ANIMACIJA
-    name: 'default',
-
+   
     once({next}) {
        // do something once on the initial page load
        initLoader();
@@ -698,39 +697,11 @@ BARBA TRANSITIONS
     //initVideo();
     //console.log("video initializzzzzzz");
     
-     },
+     }
     
 
 
-     name: 'fadex',
-
-     once({next}) {
-      // do something once on the initial page load
-      initLoader();
-      
-    },     
-     from: {namespace: ['products'] },
-     to: {namespace: ['productsingle'] },
-
     
-
-     leave(current) {
-      
-      // create your stunning leave animation here
-      pageTransitionIn(current);
-      console.log("NOVI LEAVE");
-    
-   
-    },
-  
-     enter(next) {
-      
-       // create your amazing enter animation here
-       pageTransitionOut(next);
-       console.log("NOVI ENTER");
-   
-     },
-   
   
  
 
