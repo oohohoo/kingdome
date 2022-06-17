@@ -706,31 +706,7 @@ BARBA TRANSITIONS
      },
 
 
-     name: 'fade',
-     from: {  
-      namespace: [
-       'products'
-     ],
-
-     leave(current) {
-      pageFadeIn(current);
-          console.log("FADEIN");
-    },
-
-     },
-     to: {
-
-         namespace: [
-           'productsingle'
-         ],
-         enter(next) {
-          pageFadeOut(next);
-          console.log("FADEOUT");
-        }
-        
-
-     },
-  
+ 
 
 
 
