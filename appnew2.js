@@ -2470,7 +2470,7 @@ function heroPanelAnimation() {
 
 let tl = gsap.timeline({
   scrollTrigger: {
-    pin: ".section-home-hero",
+    pin: ".start",
     scrub: true
   }
 })
