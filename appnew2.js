@@ -2547,6 +2547,13 @@ tl.to(".hero-header_animation", {
 .to(".home-hero-video", {
   opacity:0
 }, 0)
+
+.to(".section-home-hero", {
+  opacity:0
+}, 0.3)
+
+
+
 /* tl.to(".wiper", {
   yPercent: -100,
   ease: "none"
