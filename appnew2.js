@@ -698,7 +698,7 @@ BARBA TRANSITIONS
     //initVideo();
     //console.log("video initializzzzzzz");
     
-     }
+     },
     
 
 
