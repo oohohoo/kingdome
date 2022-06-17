@@ -699,7 +699,7 @@ BARBA TRANSITIONS
     //console.log("video initializzzzzzz");
     
      }
-     }, {
+    
 
 
      name: 'fadex',
