@@ -2544,7 +2544,7 @@ tl.to(".hero-header_animation", {
 
 .to(".home-hero-video", {
   opacity:0
-}, "<0.1")
+}, 0)
 /* tl.to(".wiper", {
   yPercent: -100,
   ease: "none"
