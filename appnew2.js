@@ -2470,6 +2470,7 @@ function heroPanelAnimation() {
 
 let tl = gsap.timeline({
   scrollTrigger: {
+    scroller: ".smooth-scroll",
     pin: ".start",
     scrub: true
   }
