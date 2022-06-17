@@ -2544,13 +2544,9 @@ tl.to(".hero-header_animation", {
   opacity:.3
 }, "<0.1")
 
-.to(".home-hero-video", {
+.to(".home-hero-video, .cta__slider", {
   opacity:0
 }, 0)
-
-.to(".section-home-hero", {
-  opacity:0
-}, 0.6)
 
 
 
