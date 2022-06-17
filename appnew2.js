@@ -672,12 +672,7 @@ BARBA TRANSITIONS
     once({next}) {
        // do something once on the initial page load
        initLoader();
-      /*  homeProductHover(); */
-       //homeYoutube();
-       //logoAnimacija();
-     //  fullscreenMenu();
-       //homeanimations();
-      
+       
      },
 
      async leave({current}) {
@@ -707,7 +702,7 @@ BARBA TRANSITIONS
 
      name: 'fadex',
      from: {
-      namespace: ['products'],
+      namespace: ['products']
 
      leave(current) {
       // create your stunning leave animation here
@@ -717,7 +712,7 @@ BARBA TRANSITIONS
      }
     },
     to: {
-      namespace: ['productsingle'],
+      namespace: ['productsingle']
      enter(next) {
       
        // create your amazing enter animation here
