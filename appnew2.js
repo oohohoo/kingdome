@@ -712,7 +712,7 @@ BARBA TRANSITIONS
      ],
 
      leave(current) {
-      await pageFadeIn(current);
+      pageFadeIn(current);
           console.log("FADEIN");
     },
 
@@ -723,7 +723,7 @@ BARBA TRANSITIONS
            'productsingle'
          ],
          enter(current) {
-          await pageFadeOut(current);
+          pageFadeOut(current);
           console.log("FADEOUT");
         }
         
