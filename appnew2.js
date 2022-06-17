@@ -2494,14 +2494,14 @@ let tl = gsap.timeline({
 })
 
 tl.to(".hero-header_animation", {
-  scale:0.7,
+  scale:0.8,
   opacity:.3
 })
 
-.to(".heading-small", {
-  scale:0.7,
+.to(".hero-lead_animation", {
+  scale:0.8,
   opacity:.3
-}, "<0.2")
+}, "<0.1")
 
 /* tl.to(".wiper", {
   yPercent: -100,
