@@ -675,7 +675,7 @@ BARBA TRANSITIONS
        
      },
 
-     async leave({current}) {
+     async leave({current}) { 
        // animate loading screen in
        await pageTransitionIn(current);
        console.log("LEAVE");
@@ -725,7 +725,7 @@ BARBA TRANSITIONS
        pageTransitionOut(next);
        console.log("NOVI ENTER");
    
-     }
+     },
    
     }
  
