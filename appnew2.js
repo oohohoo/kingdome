@@ -2493,12 +2493,13 @@ let tl = gsap.timeline({
   }
 })
 
-tl.to(".heading-large", {
-  rotate:360,
+tl.to(".hero-header_animation", {
+ rotateZ:40,
 })
 
 .to(".heading-small", {
   scale:0.5,
+  opacity:.3
 }, "<")
 
 /* tl.to(".wiper", {
