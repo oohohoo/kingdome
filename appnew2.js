@@ -2467,7 +2467,7 @@ CUBERTO CURSOR
 function heroPanelAnimation() {
 
 
-  gsap.to(".section-home-hero",{scrollTrigger:{
+/*   gsap.to(".section-home-hero",{scrollTrigger:{
     scroller: ".smooth-scroll",
     trigger: ".section-home-hero",
     pin: true,
@@ -2476,7 +2476,39 @@ function heroPanelAnimation() {
     end: "bottom top",
     //markers: true,
     id: "hero"
-}});
+}}); */
+
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    scroller: ".smooth-scroll",
+    trigger: ".section-home-hero",
+    pin: ".section-home-hero",
+    scrub: true,
+    pinSpacing: false,
+    start: "top top",
+    end: "bottom top",
+    //markers: true,
+    id: "hero"
+  }
+})
+
+tl.to(".heading-large", {
+  rotate:360,
+})
+
+.to(".heading-small", {
+  scale:0.5,
+}, "<")
+
+/* tl.to(".wiper", {
+  yPercent: -100,
+  ease: "none"
+})
+ */
+
+
+
 
 }
 
