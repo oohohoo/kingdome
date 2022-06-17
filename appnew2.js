@@ -2516,7 +2516,7 @@ function heroPanelAnimation() {
 }}); */
 
 
-gsap.set(".ferlauf", {opacity:0.4})
+gsap.set(".home-hero-video", {opacity:1})
 
 let tl = gsap.timeline({
   scrollTrigger: {
@@ -2542,8 +2542,8 @@ tl.to(".hero-header_animation", {
   opacity:.3
 }, "<0.1")
 
-.to(".ferlauf", {
-  opacity:1
+.to(".home-hero-video", {
+  opacity:0
 }, "<0.1")
 /* tl.to(".wiper", {
   yPercent: -100,
