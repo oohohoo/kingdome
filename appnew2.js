@@ -456,6 +456,42 @@ function pageTransitionOut({
 
 /*
 ================================================================================
+BARBA PAGE TRANSITION IN 2
+================================================================================
+*/
+function pageFadeIn({
+  container
+}) {
+  // timeline to stretch the loader over the whole screen
+  const tl = gsap.timeline({defaults: {duration: 0.6,ease: 'power3.out'}});
+  tl
+    .to(container, {autoAlpha:0}, 0);
+  return tl;
+}
+
+/*
+================================================================================
+BARBA PAGE TRANSITION OUT 2
+================================================================================
+*/
+function pageFadeOut({
+  container
+}) {
+  // timeline to move loader away down
+  const tl = gsap.timeline({defaults: {duration: 0.6, ease: 'power3.inOut'},
+    // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
+    onComplete: () => initContent()
+  });
+  tl
+    .from(container, {autoAlpha:0}, 0);
+  return tl;
+}
+
+
+
+
+/*
+================================================================================
 BARBA GLOBAL HOOKS + PREFETCH + INIT + VIEWS + TRANSITIONS
 ================================================================================
 */
@@ -560,6 +596,8 @@ barba.init({
   timeout: 7000,
   debug: true,
   prefetch: true,
+
+
 /*
 ================================================================================
 BARBA VIEWS
@@ -625,6 +663,26 @@ BARBA VIEWS
 BARBA TRANSITIONS
 ================================================================================
 */  
+
+transitions: [{
+  name: 'fade',
+  from: {  namespace: [
+    'products'
+  ]
+    // set of conditions to be fulfilled
+    // to play the transition
+  },
+  to: {
+    // set of conditions to be fulfilled
+    // to play the transition
+      // define rule based on multiple namespaces
+      namespace: [
+        'productsingle'
+      ]
+  }
+}]
+
+
    transitions: [
          {
     // ROUTE AKO IDE NA ABOUT IDE DRUGA ANIMACIJA
@@ -666,7 +724,29 @@ BARBA TRANSITIONS
     
      },
   
-   
+     name: 'fade',
+     from: {  namespace: [
+       'products'
+     ]
+
+     leave() {
+      await pageFadeIn(current);
+          console.log("FADEIN");
+    },
+
+     },
+     to: {
+
+         namespace: [
+           'productsingle'
+         ]
+         enter() {
+          await pageFadeOut(current);
+          console.log("FADEOUT");
+        }
+        
+
+     }
 
 
 
