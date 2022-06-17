@@ -2470,22 +2470,22 @@ function heroPanelAnimation() {
 
 let tl = gsap.timeline({
   scrollTrigger: {
-    pin: ".container",
+    pin: ".section-home-hero",
     scrub: true
   }
 })
 
-tl.to(".wiper-container", {
+tl.to(".section-home-kingdome-are", {
   yPercent: -100,
   ease: "none"
 })
 
-.to(".ugu", {
+.to(".heading-large", {
   scale:0.5,
   ease: "none"
 }, "<")
 
-tl.to(".wiper", {
+tl.to(".section-products-gallery", {
   yPercent: -100,
   ease: "none"
 })
