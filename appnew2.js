@@ -698,17 +698,16 @@ BARBA TRANSITIONS
     //initVideo();
     //console.log("video initializzzzzzz");
     
-     },
+     }, {
+
 
      name: 'fadex',
+
+     
      from: {namespace: ['products'] },
      to: {namespace: ['productsingle'] },
 
-     once(current) {
-      pageTransitionIn(current);
-      console.log("NOVI LEAVE");
-    },
-
+    
 
      leave(current) {
       
