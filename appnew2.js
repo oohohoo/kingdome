@@ -2494,7 +2494,7 @@ let tl = gsap.timeline({
 })
 
 tl.to(".hero-header_animation", {
- rotateZ:40,
+ rotateX:40,
 })
 
 .to(".heading-small", {
