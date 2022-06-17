@@ -723,8 +723,8 @@ BARBA TRANSITIONS
          namespace: [
            'productsingle'
          ],
-         enter(current) {
-          pageFadeOut(current);
+         enter(next) {
+          pageFadeOut(next);
           console.log("FADEOUT");
         }
         
