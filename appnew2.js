@@ -1784,8 +1784,8 @@ function headerHide() {
     start: "top top",
    // markers: true,
     end: 99999,
-    toggleClass: { targets: ".headerx", className: "navcolor" },
-    toggleClass: { targets: ".hamburger-lajna", className: "background-color-black" },
+    toggleClass: { targets: ".headerx, .hamburger-lajna", className: "navcolor" },
+    //toggleClass: { targets: ".hamburger-lajna", className: "background-color-black" },
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
