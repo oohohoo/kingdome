@@ -357,6 +357,7 @@ function initContent() {
       projectMainSwiper();
     },
     howwework: function () {
+      heroPanelAnimation();
       logoTransformOnScroll();
       headerHide();
       akapowPinned();
@@ -364,6 +365,7 @@ function initContent() {
       startStopVideo();
     },
     pageproductsingle: function () {
+      heroPanelAnimation();
       headerHide();
       logoTransformOnScroll();
       productsTabs();
