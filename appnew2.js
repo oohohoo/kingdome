@@ -706,7 +706,7 @@ BARBA TRANSITIONS
 
      leave(current) {
       // create your stunning leave animation here
-      await pageTransitionIn(current);
+      pageTransitionIn(current);
       console.log("NOVI LEAVE");
     
    
