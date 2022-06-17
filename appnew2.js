@@ -343,7 +343,7 @@ function initContent() {
     home: function () {
       
       logoTransformOnScroll();
-     // akapowPinned();
+      heroPanelAnimation();
       rotateWireframe();
       parallaxPanel();
       startStopVideo();
@@ -2453,5 +2453,41 @@ box.addEventListener('mouseleave', () => {
 
 }, 1000);
 
+
+}
+
+
+
+
+/*
+================================================================================
+CUBERTO CURSOR
+================================================================================
+*/
+function heroPanelAnimation() {
+
+
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    pin: ".container",
+    scrub: true
+  }
+})
+
+tl.to(".wiper-container", {
+  yPercent: -100,
+  ease: "none"
+})
+
+.to(".ugu", {
+  scale:0.5,
+  ease: "none"
+}, "<")
+
+tl.to(".wiper", {
+  yPercent: -100,
+  ease: "none"
+})
 
 }
