@@ -667,7 +667,7 @@ BARBA TRANSITIONS
    transitions: [
          {
     // ROUTE AKO IDE NA ABOUT IDE DRUGA ANIMACIJA
-    
+    name: 'default',
 
     once({next}) {
        // do something once on the initial page load
