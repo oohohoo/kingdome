@@ -704,7 +704,11 @@ BARBA TRANSITIONS
 
      name: 'fadex',
 
-     
+     once({next}) {
+      // do something once on the initial page load
+      initLoader();
+      
+    },     
      from: {namespace: ['products'] },
      to: {namespace: ['productsingle'] },
 
