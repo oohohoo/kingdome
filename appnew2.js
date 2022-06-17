@@ -2467,28 +2467,16 @@ CUBERTO CURSOR
 function heroPanelAnimation() {
 
 
-
-let tl = gsap.timeline({
-  scrollTrigger: {
+  gsap.to(".section-home-hero",{scrollTrigger:{
     scroller: ".smooth-scroll",
-    pin: ".start",
-    scrub: true
-  }
-})
-
-tl.to(".section-home-kingdome-are", {
-  yPercent: -100,
-  ease: "none"
-})
-
-.to(".heading-large", {
-  scale:0.5,
-  ease: "none"
-}, "<")
-
-tl.to(".section-products-gallery", {
-  yPercent: -100,
-  ease: "none"
-})
+    trigger: ".section-home-hero",
+    pin: true,
+    pinSpacing: false,
+    start: "top top",
+    end: "bottom top",
+    markers: true,
+    id: "hero"
+}});
 
 }
+
