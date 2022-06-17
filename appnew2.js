@@ -711,8 +711,8 @@ BARBA TRANSITIONS
        'products'
      ],
 
-     leave() {
-      pageFadeIn();
+     leave(current) {
+      await pageFadeIn(current);
           console.log("FADEIN");
     },
 
@@ -722,8 +722,8 @@ BARBA TRANSITIONS
          namespace: [
            'productsingle'
          ],
-         enter() {
-          pageFadeOut();
+         enter(current) {
+          await pageFadeOut(current);
           console.log("FADEOUT");
         }
         
