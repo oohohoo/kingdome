@@ -110,6 +110,7 @@ function initScroll(container) {
    },
    tablet: {
     breakpoint: 0,
+    touchMultiplier: 2,
     smooth: true,
     getDirection: true,
    } 
