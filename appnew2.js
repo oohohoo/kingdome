@@ -914,7 +914,7 @@ function show() {
 // VANJSKI GHOST 
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1}) 
 // UNUTARNJI  
-    .fromTo(".nav--transition-slide", {scaleY: 0, transformOrigin: "bottom center"},
+    .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"}, 0)
   
 // UNUTARNJI 
@@ -989,7 +989,7 @@ function hide() {
 
   // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
-   .to(".nav--transition-slide", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", }, "+=0.1")
+   .to(".nav--trans", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", }, "+=0.1")
 
 	 // VANJSKI GHOST 	
    .to(".xnav", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0}) 
