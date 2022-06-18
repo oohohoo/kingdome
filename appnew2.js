@@ -104,10 +104,10 @@ function initScroll(container) {
    // scrollbarContainer: document.querySelector('#primary'),
    inertia: .75,  
    mobile: {
-     smooth: false,
+     smooth: true,
    },
    tablet: {
-     smooth: false,
+     smooth: true,
    } 
   });
 
