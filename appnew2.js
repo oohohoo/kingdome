@@ -95,11 +95,11 @@ function initScroll(container) {
   
    locoScroll = new LocomotiveScroll({
    el: document.querySelector(".smooth-scroll"),
-   smooth: true,
+   smooth: false,
    offset: [0, 0], 
    getDirection: true, 
    scrollFromAnywhere: true,
-   touchMultiplier: 3.0,
+   touchMultiplier: 10.0,
    useKeyboard: true,
    // scrollbarContainer: document.querySelector('#primary'),
    inertia: .8,  
