@@ -104,12 +104,12 @@ function initScroll(container) {
    // scrollbarContainer: document.querySelector('#primary'),
    inertia: .8,  
    mobile: {
-    breakpoint: 0,
+    //breakpoint: 0,
     smooth: false,
     getDirection: true,
    },
    tablet: {
-    breakpoint: 0,
+  //  breakpoint: 0,
     touchMultiplier: 2,
     smooth: true,
     getDirection: true,
