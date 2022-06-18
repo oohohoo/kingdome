@@ -1017,7 +1017,7 @@ SUBMENU HOVER
 //-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
 // loop through each element
-$(".nav-hover, .hover-opacity, .kupole-info").each(function(i, el) {
+$(".fade-hover, .hover-opacity, .kupole-info").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
          .to($(el).find('a'), {opacity:0.6,  duration: 0.15});
