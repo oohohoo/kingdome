@@ -366,6 +366,7 @@ function initContent() {
       homePinSections();
       homeVideoClip();
       headerHide();
+      toggleNavClass();
      // swiperCustomPaginationHome();
     },
     products: function () {
@@ -378,6 +379,7 @@ function initContent() {
       akapowPinned();
       logoMarquee();
       startStopVideo();
+      toggleNavClass();
     },
     pageproductsingle: function () {
       heroPanelAnimation();
@@ -385,6 +387,7 @@ function initContent() {
       logoTransformOnScroll();
       productsTabs();
       swiperSolo();
+      toggleNavClass();
     },
    contact: function () {
     webflowInteractions();
@@ -393,6 +396,7 @@ function initContent() {
     faq: function () {
       headerHide();
       logoTransformOnScroll();
+      toggleNavClass();
       //faqPin();
       // openMobileMenu();
      }
@@ -411,8 +415,7 @@ function initContent() {
   buttonHover();
   yearUpdate();
   //fadeInElements();
-  toggleNavClass();
-  slideInHeaders();
+   slideInHeaders();
   fadeInOnEnter();
   cubertoCursor();
   //initNavigation();
