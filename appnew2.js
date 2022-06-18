@@ -2562,12 +2562,12 @@ let tl = gsap.timeline({
   }
 })
 
-tl.to(".hero-header_animation", {
+tl.to(".anima-one, {
   scale:0.8,
   opacity:.3
 })
 
-.to(".hero-lead_animation", {
+.to(".anima-two", {
   scale:0.8,
   opacity:.3
 }, "<0.1")
