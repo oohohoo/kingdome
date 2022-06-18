@@ -2562,7 +2562,7 @@ let tl = gsap.timeline({
   }
 })
 
-tl.to(".anima-one, {
+tl.to(".anima-one", {
   scale:0.8,
   opacity:.3
 })
