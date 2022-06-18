@@ -103,7 +103,7 @@ function initScroll(container) {
    useKeyboard: true,
    // scrollbarContainer: document.querySelector('#primary'),
    inertia: .75,  
-   smartphone: {
+   mobile: {
      smooth: false,
    },
    tablet: {
