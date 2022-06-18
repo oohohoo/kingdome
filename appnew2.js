@@ -99,13 +99,13 @@ function initScroll(container) {
    offset: [0, 0], 
    getDirection: true, 
    scrollFromAnywhere: true,
-   touchMultiplier: 3.0,
+   //touchMultiplier: 3.0,
    useKeyboard: true,
    // scrollbarContainer: document.querySelector('#primary'),
    inertia: .8,  
    mobile: {
     //breakpoint: 0,
-    smooth: false,
+    smooth: true,
     getDirection: true,
    },
    tablet: {
