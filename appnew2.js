@@ -1396,8 +1396,8 @@ function fadeInOnEnter() {
       ease: "expo.out",
     })
   }); */
-  gsap.set('.zerobatch', {
-        y: 40,
+  gsap.set('.batch', {
+        y: 50,
   }); 
 
   ScrollTrigger.batch('.card', {
