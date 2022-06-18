@@ -102,12 +102,16 @@ function initScroll(container) {
    touchMultiplier: 3.0,
    useKeyboard: true,
    // scrollbarContainer: document.querySelector('#primary'),
-   inertia: .75,  
+   inertia: .8,  
    mobile: {
-     smooth: true,
+    breakpoint: 0,
+    smooth: false,
+    getDirection: true,
    },
    tablet: {
-     smooth: true,
+    breakpoint: 0,
+    smooth: false,
+    getDirection: true,
    } 
   });
 
