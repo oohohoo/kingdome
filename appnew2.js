@@ -2454,7 +2454,7 @@ const cursor = new MouseFollower({
     skewingDelta: 0.001,
     skewingDeltaMax: 0.15,
     stickDelta: 0.15,
-    showTimeout: 20,
+    //showTimeout: 20,
     hideOnLeave: true,
     hideTimeout: 300,
     hideMediaTimeout: 300
