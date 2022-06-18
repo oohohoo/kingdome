@@ -105,12 +105,12 @@ function initScroll(container) {
    inertia: .8,  
    mobile: {
     breakpoint: 0,
-    smooth: false,
+    smooth: true,
     getDirection: true,
    },
    tablet: {
     breakpoint: 0,
-    smooth: false,
+    smooth: true,
     getDirection: true,
    } 
   });
