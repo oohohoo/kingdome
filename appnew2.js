@@ -2495,7 +2495,7 @@ box.addEventListener('mouseleave', () => {
 
   
 
-}, 1000);
+}, 100);
 
 
 }
