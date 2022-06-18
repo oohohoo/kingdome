@@ -2427,7 +2427,7 @@ CUBERTO CURSOR
 function cubertoCursor() {
 
 
-var mq = window.matchMedia( "(max-width: 1025px)" );
+var mq = window.matchMedia( "(min-width: 1025px)" );
 if (mq.matches) {
 
 
