@@ -558,7 +558,7 @@ LOADER
   min-height: 100vh;
   position: fixed;
   flex-direction: column;
-   z-index: 4; 
+   z-index: 6; 
   top: 0;
   left: 0;
   width: 100%;
@@ -588,7 +588,7 @@ LOADER
 
 .loader__content {
   visibility: hidden;
-   z-index: 5; 
+   z-index: 7; 
   display: flex;
   justify-content: center;
   align-items: center;
