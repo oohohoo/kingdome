@@ -1397,7 +1397,7 @@ function fadeInOnEnter() {
     })
   }); */
   gsap.set('.batch', {
-        yPercent: 10,
+        yPercent: 20,
   }); 
 
   ScrollTrigger.batch('.card', {
