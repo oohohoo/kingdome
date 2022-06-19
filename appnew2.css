@@ -747,7 +747,7 @@ CURRENT LINK COLOR
 
 }
 
-.w--current:not(.header-red-flag-link, .relative.wh100, .cta__slider-item, .nav-font-resize ):after {
+.w--current:not(.header-red-flag-link, .header, .relative.wh100, .cta__slider-item, .nav-font-resize ):after {
   position: absolute;
   content: '';
   height: 2px;
