@@ -37,9 +37,9 @@ GLOBAL CLASSES & FIXES
 }
 
 /*Hide focus outline for main content element*/
-main:focus-visible {
+/* main:focus-visible {
 	outline: -webkit-focus-ring-color auto 0px;
-}
+} */
 
 /* Make sure containers never lose their center alignment*/
 .container-medium, .container-small, .container-large {
