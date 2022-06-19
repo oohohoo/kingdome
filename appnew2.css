@@ -901,7 +901,7 @@ transition: background-color 0.2s ease;
 transition: color 0.8s ease;
  }
 
- .hamby.navcolor {
+ .hamby-line.navcolor {
   background-color: #1a1815;
   transition: background-color 0.2s ease;
   transition: color 0.8s ease;
