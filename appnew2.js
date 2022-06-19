@@ -372,7 +372,8 @@ function initContent() {
      // swiperCustomPaginationHome();
     },
     products: function () {
-      projectMainSwiper();
+      //projectMainSwiper();
+      projectObserver();
     },
     howwework: function () {
       heroPanelAnimation();
