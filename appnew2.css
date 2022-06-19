@@ -950,8 +950,9 @@ TEXT ON DARK BACK
 .navcolor {
 color: #1a1815;
 background-color: #fdfcfc;
-transition: background-color 0.2s ease;
+transition: background-color 0.8s ease;
 transition: color 0.8s ease;
+
  }
 
  .hamby-line.navcolor {
