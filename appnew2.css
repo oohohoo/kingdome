@@ -350,7 +350,7 @@ LINK UNDERLINE
   bottom: -4px;
   margin: 0 auto;
   left: 0;
-  right: 0;
+  bottom: 0;
   width: 100%;
   background: #a29f9c;
   transition: 0.3s;
