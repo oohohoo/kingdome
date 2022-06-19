@@ -321,7 +321,7 @@ const progress = select('.progress');
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
     //.to(".aspect-video", { scale:1, duration: 1.5, ease:'expo.inOut'}, "+=0.2")
     //.to(".homeani1", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
-    //.from(".header_redflag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
+    //.from(".header-red-flag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
    // .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
     
     //.to('.main', {y: 0}, 0);
@@ -830,7 +830,7 @@ function resetLogo() {
    
 
   //  tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 40%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
-  tlfix.fromTo(".header_redflag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
+  tlfix.fromTo(".header-red-flag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
   {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 85% 100%, 0% 100%)"})
 
  //.to(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
@@ -856,8 +856,8 @@ function bigLogo() {
 
   let tl = gsap.timeline();
 
-  tl.to(".header_redflag",  {width:'8.5em', height:'12em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
-  .fromTo(".header_redflag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
+  tl.to(".header-red-flag",  {width:'8.5em', height:'12em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
+  .fromTo(".header-red-flag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
   {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, "<")
   .to(".header-znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<")
 
@@ -942,7 +942,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
    
     // LOGO RESET
 
-    .to(".header_redflag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
+    .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
     .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
     .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -53, ease:'expo.inOut'}, 0)
 
@@ -996,7 +996,7 @@ function hide() {
 
     // LOGO RESET BACK
 
-    .to(".header_redflag",  {width:'6.1875rem', height:'8.4375rem', top: '0rem', duration: 0.5, ease: "expo.inOut", }, 0) 
+    .to(".header-red-flag",  {width:'6.1875rem', height:'8.4375rem', top: '0rem', duration: 0.5, ease: "expo.inOut", }, 0) 
     .from("#sq", {morphSVG: {shape: "#di"}, duration: 0.5, ease: "expo.inOut"}, 0)
     .to(".header_znak", { scale: 1, duration: 0.5, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, 0)
 
@@ -1509,7 +1509,7 @@ function logoTransformOnScroll() {
     }
   })
 
-  .to(".header_redflag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
+  .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
   .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
 
   .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -53, ease:'expo.inOut'}, 0)
@@ -1831,7 +1831,7 @@ HEADER HIDE
 ================================================================================
 */
 function headerHide() {
-  const showAnim = gsap.from('.headerx', { 
+  const showAnim = gsap.from('.header', { 
     yPercent: -300,
     paused: true,
     duration: 0.2
@@ -1843,7 +1843,7 @@ function headerHide() {
     start: "top top",
    // markers: true,
     end: 99999,
-    toggleClass: { targets: ".headerx, .hamburger-lajna", className: "navcolor" },
+    toggleClass: { targets: ".header, .hamburger-lajna", className: "navcolor" },
     //toggleClass: { targets: ".hamburger-lajna", className: "background-color-black" },
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
@@ -2381,7 +2381,7 @@ HOME PIN SECTIONS
 
 function navOnDark() {
 
-$( ".headerx" ).addClass( "is-active" );
+$( ".header" ).addClass( "is-active" );
 }
 
 
