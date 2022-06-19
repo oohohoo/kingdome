@@ -938,7 +938,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
     
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.05})
-    .to(".navnum", {autoAlpha:1, stagger:0.01})
+    .to(".nav-super", {autoAlpha:1, stagger:0.01})
    
     // LOGO RESET
 
@@ -969,7 +969,7 @@ function hide() {
 
   // MENU LINKS 
   tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01}, 0)
-  .to(".navnum", {autoAlpha:0,  stagger:0.01}, "<")
+  .to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
   .fromTo(".clip", {
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
