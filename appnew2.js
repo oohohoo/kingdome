@@ -1768,9 +1768,9 @@ HOME + HOW WE WORK AKAPOWL PINNED
 function akapowPinned() {
 
 
-  gsap.set(".imagex", { zIndex: (i, target, targets) => targets.length - i });
+  gsap.set(".pinned-image", { zIndex: (i, target, targets) => targets.length - i });
 
-  var images = gsap.utils.toArray('.imagex:not(.four)');
+  var images = gsap.utils.toArray('.pinned-image:not(.four)');
   
   images.forEach((image, i) => {
      
