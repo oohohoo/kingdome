@@ -2286,17 +2286,6 @@ TOGGLE NAV CLASS
 */
 
 function toggleNavClass() {
-  /*
-  ScrollTrigger.create({
-    trigger: "#sectionOne",
-    markers: true,
-    start: "top bottom",
-    end: "bottom bottom",
-   // id: 'one',
-    toggleClass: { targets: ".list", className: "is-active" }
-  });
-*/
-
 
 
 const sections = document.querySelectorAll('.navchange');

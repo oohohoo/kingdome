@@ -387,6 +387,10 @@ GSAP PERFORMANCE FIX
   backface-visibility: hidden;
 }
 
+.splitty {
+  will-change: transform;
+}
+
 /*
 ================================================================================
 MAIN Z-INDEX
