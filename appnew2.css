@@ -809,7 +809,8 @@ CURRENT LINK COLOR
 }
 
 .w--current.navcolor:not(.header-red-flag-link, .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
-  background: #fdfcfc;
+/*   background: #fdfcfc;
+ */  background: #ff0000;
 }
 
 
