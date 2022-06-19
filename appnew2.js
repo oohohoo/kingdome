@@ -834,7 +834,7 @@ function resetLogo() {
   {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 85% 100%, 0% 100%)"})
 
  //.to(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
-    .to(".header-znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
+    .to(".header-znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -35, ease:'expo.inOut'}, 0)
 
   
 
