@@ -373,7 +373,7 @@ function initContent() {
     },
     products: function () {
       //projectMainSwiper();
-      projectObserver();
+      productObserver();
     },
     howwework: function () {
       heroPanelAnimation();
@@ -2582,11 +2582,11 @@ tl.to(".anima-one", {
 
 /*
 ================================================================================
-CUBERTO CURSOR
+PROJEXT OBSERVER
 ================================================================================
 */
 
-function projectObserver() {
+function productObserver() {
 
 
 
