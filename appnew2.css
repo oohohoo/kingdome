@@ -304,6 +304,26 @@ HIDE - VISIBILITY HIDDEN
 
 /*
 ================================================================================
+PRODUCT OBSERVATE
+================================================================================
+*/
+.product-section .outer,
+.product-section .inner {
+  overflow-y: hidden;
+}
+
+.product-section .bg {
+  background-size: cover;
+  background-position: center;
+}
+
+.product-section .bg .clip-text {
+  overflow: hidden;
+}
+
+
+/*
+================================================================================
 DISABLE TEXT SELECTKON
 ================================================================================
 */
