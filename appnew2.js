@@ -919,7 +919,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
   
 // UNUTARNJI 
    // .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
-   .fromTo(".nav-image-wrap", {
+   .fromTo(".clip", {
     clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
     duration: 2.5,
@@ -970,7 +970,7 @@ function hide() {
   // MENU LINKS 
   tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01}, 0)
   .to(".navnum", {autoAlpha:0,  stagger:0.01}, "<")
-  .fromTo(".nav-image-wrap", {
+  .fromTo(".clip", {
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
     duration: 2.5,
