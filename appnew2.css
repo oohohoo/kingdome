@@ -381,7 +381,7 @@ IS LOADING BACKGROUND COLOR
 GSAP PERFORMANCE FIX
 ================================================================================
 */
-.loader__title--mask, .nav-wrapper, .snake-scroll-panel {
+.loader__title--mask, .nav-wrapper {
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -395,6 +395,24 @@ MAIN Z-INDEX
 main {
    z-index: 1; 
   position: relative;
+}
+
+/*
+================================================================================
+TAB HIDE GAP 
+================================================================================
+*/ 
+
+.tab-item::after {
+	background-color: #fdfcfc;
+	display: block;
+	width: 1.25rem;
+	height: 1.25rem;
+	position: absolute;
+	content: close-quote;
+	top: -0.7rem;
+	right: -1.25rem;
+  z-index:2
 }
 
 /*
