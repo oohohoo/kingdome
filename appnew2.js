@@ -1397,14 +1397,14 @@ function fadeInOnEnter() {
     })
   }); */
   gsap.set('.batch', {
-        yPercent: 20,
+        y: 50,
   }); 
 
   ScrollTrigger.batch('.card', {
     scroller: ".smooth-scroll",
     start: "top bottom-=100px",
     onEnter: batch => {
-      batch.forEach((card, index ) => gsap.to(card.children, {yPercent:0, autoAlpha:1, stagger: 0.05}))
+      batch.forEach((card, index ) => gsap.to(card.children, {y:0, autoAlpha:1, stagger: 0.05}))
     },
     once: true
   });
