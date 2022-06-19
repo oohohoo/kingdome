@@ -1813,7 +1813,7 @@ function akapowPinned() {
         start: () => "top top",
         end: () => "+=" + ((images.length) * window.innerHeight),
   
-        pin: '.image-wrapx', 
+        pin: '.image-wrap', 
         anticipatePin: 1,
         
         invalidateOnRefresh: true,
