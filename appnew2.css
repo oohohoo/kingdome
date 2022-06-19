@@ -969,7 +969,10 @@ CUBERTO CURSOR
 }
 
 .mf-cursor.-red {
-  color: #e51e3d
+  color: #e51e3d;
+  width: 24px;
+  height:24px;
+  opacity:.6;
 }
 
 .mf-cursor.-black{
