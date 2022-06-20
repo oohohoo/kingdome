@@ -642,6 +642,7 @@ BARBA VIEWS
     beforeEnter(data){
      projectMainSwiper();
      navOnDark();
+     productObserver();
      
 
     }},{
