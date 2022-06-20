@@ -169,6 +169,25 @@ ASPECT RATIOS WITH FALLBACK
   }
 }
 
+/*
+================================================================================
+PRODUCTS OBSERVE SLIDER
+================================================================================
+*/
+
+.outer,
+.inner {
+  overflow-y: hidden;
+}
+
+.clip-text {
+  overflow: hidden;
+}
+
+h1 * {
+  will-change: transform;
+}
+
 
 
 /*
@@ -336,18 +355,7 @@ DISABLE TEXT SELECTKON
 
 
 
-/*
-================================================================================
-GSAP PERFORMANCE FIX
-================================================================================
-*/
 
-
- .swiper-slide {
-  will-change: transform;
-  backface-visibility: hidden;
-}
- 
 /*
 ================================================================================
 HIDE PAGE CONTENT BY DEFAULT
@@ -410,6 +418,13 @@ GSAP PERFORMANCE FIX
 .splitty, .batch {
   will-change: transform;
 }
+
+.swiper-slide {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+ 
+
 
 /*
 ================================================================================
@@ -953,28 +968,14 @@ background-color: #fdfcfc;
 transition: background-color 0.8s ease;
 transition: color 0.8s ease;
 
- }
+}
 
- .hamby-line.navcolor {
+.hamby-line.navcolor {
   background-color: #1a1815;
   transition: background-color 0.2s ease;
   transition: color 0.8s ease;
-   }
-
-
-
-
-/*
-================================================================================
-EXCLUSION BLEND MODE
-================================================================================
-*/
-/*  .link-inline, .hamburger-menu {
-  mix-blend-mode: exclusion
 }
-.link-inline:before {
-  background: #fff
-} */
+
 
 /*
 ================================================================================
