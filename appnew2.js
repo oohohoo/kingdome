@@ -2592,7 +2592,7 @@ function productObserver() {
 
   let sections = document.querySelectorAll(".project-slide"),
   images = document.querySelectorAll(".back"),
-  headings = gsap.utils.toArray(".section-heading"),
+  headings = gsap.utils.toArray(".head-split"),
   outerWrappers = gsap.utils.toArray(".outer"),
   innerWrappers = gsap.utils.toArray(".inner"),
   splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
