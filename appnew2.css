@@ -409,7 +409,7 @@ IS LOADING BACKGROUND COLOR
 GSAP PERFORMANCE FIX
 ================================================================================
 */
-.loader__title--mask, .nav-wrapper {
+.loader__title--mask, .nav-wrapper, .back {
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
