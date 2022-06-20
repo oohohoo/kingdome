@@ -2645,7 +2645,7 @@ onUp: () => {
 },
 tolerance: 5,
 dragMinimum:10,
-//wheelSpeed: 0.5,
+wheelSpeed: 0.5,
 preventDefault: true,
 });
 
