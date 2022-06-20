@@ -2590,7 +2590,7 @@ function productObserver() {
 
 
   let sections = document.querySelectorAll(".project-slide"),
-  images = document.querySelectorAll(".bg"),
+  images = document.querySelectorAll(".back"),
   headings = gsap.utils.toArray(".section-heading"),
   outerWrappers = gsap.utils.toArray(".outer"),
   innerWrappers = gsap.utils.toArray(".inner"),
