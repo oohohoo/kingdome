@@ -205,7 +205,7 @@ function initLoader() {
 
   const tlLoaderIn = gsap.timeline({
     id: 'tlLoaderIn',
-    defaults: {duration: 1.1, ease: 'power2.out'},
+    defaults: {duration: 0.5, ease: 'power2.out'},
     onComplete: () => initContent()
   });
 
@@ -257,7 +257,7 @@ const progress = select('.progress');
   // LOADER OUT
   const tlLoaderOut = gsap.timeline({
     id: 'tlLoaderOut',
-    defaults: {duration: 1.2, ease: 'power2.inOut'}, delay: 0});
+    defaults: {duration: 0.5, ease: 'power2.inOut'}, delay: 0});
 
   tlLoaderOut
   .to(".imgg", {yPercent:100})
