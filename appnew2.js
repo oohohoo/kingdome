@@ -1524,7 +1524,7 @@ gsap.from(mySplitText.chars, {
 
 
 
- tl = gsap.timeline({
+var tl = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".section-home-hero",
