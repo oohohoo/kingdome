@@ -2564,7 +2564,7 @@ gsap.to(mySplitText.chars, {
   scrollTrigger: {
     trigger: ".home-hero_head-wrap",
     scrub: false,
-  }
+  },
   stagger: {
     each: 0.025,
     from: "random"
