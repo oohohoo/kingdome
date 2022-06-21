@@ -1519,7 +1519,7 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
  // duration: 0.8,
   ease: "power2",
   stagger: {
-    each: 0.015,
+    each: 0.01,
     from: "random"
   }
 }, 0.6)
