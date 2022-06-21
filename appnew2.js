@@ -329,11 +329,10 @@ function initContent() {
 			parallaxPanel();
 			startStopVideo();
 			swiperSolo();
-			homePinSections();
+		//	homePinSections();
 			homeVideoClip();
 			headerHide();
 			toggleNavClass();
-			// swiperCustomPaginationHome();
 		},
 		products: function () {
 			//projectMainSwiper();
@@ -374,7 +373,7 @@ function initContent() {
 	scrollToTop();
 	// underline();
 	//popupWizdome();
-	buttonHover();
+//	buttonHover();
 	yearUpdate();
 	slideInHeaders();
 	fadeInOnEnter();
@@ -563,7 +562,6 @@ BARBA VIEWS
 				rotateWireframe();
 				parallaxPanel();
 				homeProductHover();
-			//	initVideo();
 			},
 		},
 		{
@@ -1015,242 +1013,26 @@ function productsoloAccordion() {
 }
 
 
-
-/*
-================================================================================
-INIT VIDEO
-================================================================================
-*/
-function initVideo() {
-  
- // let video = body.querySelector('.home-hero-video');
-// const video = select('.background-video');
-//const video = document.getElementById('video');
-////video.setAttribute('autoplay', true);
-//video.load();
-$('#video').trigger('play');
-console.log("video initialised x");
-
-}
-
-
-
-
-
-/*
-================================================================================
-HIDE MENU ON CLICK
-================================================================================
-*/
-
-function hideMenu() {
-  
-  let tl = gsap.timeline();
-
-/* 	gsap.set(".nav-wrapper, .nav-toggle", {pointerEvents: "none"});
-
-		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.1, ease: "power2.inOut"})
-		.to(".nav-wrapper", { duration: 0.1, transformOrigin: "top center", height: "0%"})
-		.to(".open", {duration:0.1, autoAlpha:1}, "<")
-		.to(".close", {duration:0.1, autoAlpha:0}, "<")
-    .set(" .nav-toggle", { pointerEvents: "all"});
-	 */
-}
-
-
-/*
-================================================================================
-PRODUCTS - FULLSCREEN SWIPER
-================================================================================
-*/
-function projectMainSwiper() {
-/*
-  const slider = document.getElementById("js-cta-slider");
-  const sliderCounter = document.getElementById("js-cta-slider-counter");
-  const sliderNext = document.getElementById("js-cta-slider-next");
-  const sliderPrevious = document.getElementById("js-cta-slider-previous");
-  
-  const interleaveOffset = 0.75;
-  
-    
-  
-  // svaka fotka ima: data-swiper-parallax-y: "35%"
-  
-  const swipermain = new Swiper(slider, {
-    autoplay: false,
-    parallax: true,
-    loop: true,
-    effect: "slide",
-    direction: "vertical", // put horizontal
-    speed: 1000,
-    grabCursor: true,
-    watchSlidesProgress: true, // turn off for horizontal
-    //mousewheelControl: true,
-    //updateOnImagesReady: true,
-   // preloadImages: true,
-    mousewheelControl: 1,
-    mousewheel: true,
-    pagination: {
-      el: sliderCounter,
-      type: "custom",
-      renderCustom: function(swiper, current, total) {
-        let i = current ? current : 0;
-        return `${("0" + i).slice(-2)} / ${("0" + total).slice(-2)}`;
-      }
-    },
-    navigation: {
-      nextEl: sliderNext,
-      prevEl: sliderPrevious
-    },
-  });
-
-
-  swipermain.update();
-  console.log("SWIPER UPDATED");
- */
-}
-
-
-
-
 /*
 ================================================================================
 FADE IN ON ENTER
 ================================================================================
 */
 function fadeInOnEnter() {
-  
-/*   gsap.utils.toArray('.foe').forEach((el, i) => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: el,
-        scroller: ".smooth-scroll",
-       // markers: true,
-       start: "top 85%",
-       end: "top 5%",
-        toggleActions: 'play reverse play reverse',
-        end: "top top",
-      },
-      y: 100,
-      opacity: 0,
-      stagger: 2,
-      duration: 1, 
-     // scrub:2,
-      ease: "expo.out",
-    })
-  });
-
-  gsap.utils.toArray('.foeleft').forEach((el, i) => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: el,
-        scroller: ".smooth-scroll",
-       // markers: true,
-       start: "top 85%",
-       end: "top 5%",
-        toggleActions: 'play reverse play reverse',
-        end: "top top",
-      },
-      x: 100,
-      opacity: 0,
-      stagger: 0.25,
-      duration: 1, 
-      ease: "expo.out",
-    })
-  }); */
-  gsap.set('.batch', {
-        y: 50,
-  }); 
-
-  ScrollTrigger.batch('.card', {
-    scroller: ".smooth-scroll",
-    start: "top bottom-=100px",
-    onEnter: batch => {
-      batch.forEach((card, index ) => gsap.to(card.children, {y:0, autoAlpha:1, stagger: 0.05}))
-    },
-    once: true
-  });
-  
-/****************** SPLIT HEADER */
-
-  var tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".splitty",
-      scroller: ".smooth-scroll",
-     // markers: true,
-      toggleActions: "restart reverse play reverse"
-    }
-  }),
-  mySplitText = new SplitText(".splitty", {
-    type: "words, lines, chars"
-  });
-
-
-  outerSplit = SplitText.create("h1", {
-    type: "lines",
-    linesClass: "split-outer"
-  });
-
-tl.from(mySplitText.chars, {
-  duration: 1.2,
-  //skewY: 20,
-  rotationX: "+=90",
- // opacity: 0,
-  yPercent: 100,
-  ease: "quart.inOut",
-  stagger: 0.025
-});
-
-/******************* */
-
-
-
-
-/*
-  gsap.defaults({ease: "power3"});
-  gsap.set(".foe", {opacity: 0, y: 70});
-  
-  let tl;
-  
-  ScrollTrigger.batch(".foe", {
-    scroller: ".smooth-scroll",
-    start: "top bottom-=100px",
-     stagger: 0.125,
-  // interval: 0.125,
-   // batchMax: 3,
-    onEnter: batch => {
-      if(tl && tl.isActive()) {
-        tl.to(batch, {opacity: 1, y:0, duration:0.8, ease: "expo.out"})
-      } else {
-        tl = gsap.timeline().to(batch, {opacity: 1, y: 0, duration:0.8, ease: "expo.out"})
-      }
-    },
-  }); 
-
-  ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".foe", {opacity: 0, y:70}));
-*/
-/*
-
-gsap.set(".foe", {opacity: 0, y:100});
-
-ScrollTrigger.batch(".foe", {
-  scroller: ".smooth-scroll",
-  start: "top 85%",
-  end: "bottom top,
-  onEnter: batch => gsap.to(batch, {duration:1, opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
-  onLeave: batch => gsap.set(batch, {duration:1, rotate:360, opacity: 0, overwrite: true}),
-  onEnterBack: batch => gsap.to(batch, {duration:1,  opacity: 1, stagger: 0.15, overwrite: true}),
-  onLeaveBack: batch => gsap.set(batch, {duration:1,  opacity: 0, overwrite: true})
-});
-
-ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0, y:100}));
-
-
-
-*/
-  console.log("FADE IN ON ENTER");
+	gsap.set(".batch", {
+		y: 50,
+	});
+	ScrollTrigger.batch(".card", {
+		scroller: ".smooth-scroll",
+		start: "top bottom-=100px",
+		onEnter: (batch) => {
+			batch.forEach((card, index) =>
+				gsap.to(card.children, { y: 0, autoAlpha: 1, stagger: 0.05 })
+			);
+		},
+		once: true,
+	});
 }
-
 
 /*
 ================================================================================
@@ -1262,136 +1044,17 @@ function logoTransformOnScroll() {
     scrollTrigger: {
       scroller: ".smooth-scroll",
         trigger: "#start",
-        /* markers: true, */
         start: "top top", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
         toggleActions: 'play reverse play reverse',
         invalidateOnRefresh: true,
-  
     }
   })
-
   .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
   .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
-
   .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -53, ease:'expo.inOut'}, 0)
- 
-  
-
-  //.to(".header_kingdome", { yPercent: 20, ease:'expo.inOut'}, 0)
-
-/*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
-
 }
 
-/*
-================================================================================
-HOME - ROTATE WIREFRAME
-================================================================================
-*/
-function rotateWireframe() {
-  var rotate = gsap.timeline({
-    scrollTrigger:{
-      scroller: ".smooth-scroll",
-      trigger: "#wireframe-trigger",
-      //pin: true,
-      scrub:true,
-      start: 'top 80%',
-      end:'+=10000',
-     // transformOrigin:"center center",
-      invalidateOnRefresh:true
-    }
-  })
-  .to('#wireframe', {
-    rotation:360*3,
-    duration:3, transformOrigin:"50% 50%", ease:'none',
-    
-  })
-
-  console.log("ROTATE WIREFRAME");
-}
-
-/*
-================================================================================
-PARALLAX PANEL SOLO FOR EACH
-================================================================================
-*/
-function parallaxPanel() {
-  /*
-  const sections = gsap.utils.toArray(".img__wrapper");
-
-  sections.forEach((section) => {
-    
-    let image = section.querySelector(".img__background");
-  //gsap.set(image, {yPercent: -80})
-    
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        scroller: ".smooth-scroll",
-        trigger: ".img__wrapper",
-      //  start: 'top 90%',
-      //  end: "top top",
-     //  markers: true,
-        scrub: true,
-        pin: false
-      }
-    });
-  
-    tl.from(image, {
-      yPercent: -100,
-    //  rotate:34,
-      ease: "none",
-    });
-    tl.to(image, {
-      yPercent: 100,
-    ease: "none",
-    });
-  });
-*/
-    console.log("PARALLAX PANEL SOLO FOR EACH");
-}
-
-
-/*
-================================================================================
-ALL - BOTTON HOVER
-================================================================================
-*/
-function buttonHover() {
-  gsap.set(".bar", {xPercent: -100, transformOrigin:"left center"})
-  gsap.set(".button-arrow", {x:'-5%'})
-  const btns = gsap.utils.toArray(".btn")
-  
-  btns.forEach((btn) =>{
-    let tl = gsap.timeline({paused:true, defaults:{duration:0.5, ease:"expo.out"}})
-    let bar = btn.querySelector(".bar")
-    let arrow = btn.querySelector(".button-arrow")
-    let exitTime = 0
-    tl.to(bar, {xPercent:0})
-    tl.to(arrow, {x:'0.5rem'},"<")
-      .addPause("exit")
-    exitTime = tl.duration()
-    tl.to(bar, {xPercent:100})
-    tl.to(arrow, {x:'0rem'},"<")
-  
-     btn.addEventListener("mouseenter", () => {
-      if(tl.time() < exitTime){
-        tl.play()
-      } else {
-        tl.restart()
-      }
-    })
-  
-    btn.addEventListener("mouseleave", () => {
-      if(tl.time() < exitTime){
-        tl.reverse()
-      } else {
-        tl.play()
-      }
-    })
-  })
-  console.log("BOTTON HOVER");
-}
 
 
 /*
@@ -1400,9 +1063,7 @@ ALL - POPUP - WIZDOME
 ================================================================================
 */
 function popupWizdome() {
-
 /* SHOW ONCE PER COOKIE*/
-
 var is_modal_show = sessionStorage.getItem('alreadyShow');
   if(is_modal_show != 'alredy shown'){
     setTimeout(showModal,2000);
@@ -1415,7 +1076,6 @@ var is_modal_show = sessionStorage.getItem('alreadyShow');
  sessionStorage.setItem('alreadyShow','alredy shown');
 }
 }
-
 
 $(".popup-close, .popup").click(function() {
  /*  gsap.to(".actual-message", 0.2, {
@@ -1439,87 +1099,35 @@ HOME - PRODUCT HOVER
 ================================================================================
 */
 function homeProductHover() {
-  
-/*   gsap.set(".rg__long", {autoAlpha:0, yPercent:-10}); */
-  
-  
-gsap.utils.toArray(".product-hover").forEach(container => {
-   
-  let imagezoom = container.querySelector(".full-image"), 
-  linkhover = container.querySelector(".linkhover"),
-  // wrap = container.querySelector(".rg__wrap"),
-     // name = container.querySelector(".product-title"),
-      //short = container.querySelector(".rg__short"),
-     // long = container.querySelector(".rg__long"),
-     // full-image
+	/*   gsap.set(".rg__long", {autoAlpha:0, yPercent:-10}); */
 
-      tl = gsap.timeline({ defaults: { ease: "ease.in", duration: 0.3}, 
-      paused: true });
-  
-  
-  tl.to(imagezoom, { scale:1.1})
-  .to(linkhover, { opacity: 0.4 }, 0)
-    //.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
-   //.to(name, { yPercent:-10, autoAlpha:0 }, 0)
-   // .to(short, { yPercent:-8, autoAlpha:0 }, 0)
-   // .to(long, {autoAlpha:1, yPercent:10}, 0)
-   // .to(white, {yPercent:-45}, 0);
-    
-     
-  container.addEventListener("mouseenter", () => tl.play() );
-  container.addEventListener("mouseleave", () => tl.reverse() );
-});
-  console.log("HOME - PRODUCT HOVER ");
+	gsap.utils.toArray(".product-hover").forEach((container) => {
+		let imagezoom = container.querySelector(".full-image"),
+			linkhover = container.querySelector(".linkhover"),
+			// wrap = container.querySelector(".rg__wrap"),
+			// name = container.querySelector(".product-title"),
+			//short = container.querySelector(".rg__short"),
+			// long = container.querySelector(".rg__long"),
+			// full-image
+
+			tl = gsap.timeline({
+				defaults: { ease: "ease.in", duration: 0.3 },
+				paused: true,
+			});
+
+		tl.to(imagezoom, { scale: 1.1 }).to(linkhover, { opacity: 0.4 }, 0);
+		//.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
+		//.to(name, { yPercent:-10, autoAlpha:0 }, 0)
+		// .to(short, { yPercent:-8, autoAlpha:0 }, 0)
+		// .to(long, {autoAlpha:1, yPercent:10}, 0)
+		// .to(white, {yPercent:-45}, 0);
+
+		container.addEventListener("mouseenter", () => tl.play());
+		container.addEventListener("mouseleave", () => tl.reverse());
+	});
+	console.log("HOME - PRODUCT HOVER ");
 }
 
-/*
-================================================================================
-ALL - UNDERLINE GSAP
-================================================================================
-*/
-function underline() {
-  
-// Mouseenter function
-function enterAnimation(link, e, index) {
-  link.tl.tweenFromTo(0, "midway");
-}
-// Mouseleave function
-function leaveAnimation(link, e) {
-  link.tl.play();
-}
-// Animations variables
-let workLinkUnderlineAnimEnter;
-let workLinkUnderlineAnimLeave;
-
-// Get all links
-let workLinks = document.querySelectorAll(".link-inline");
-
-workLinks.forEach((link, index, value) => {
-  
-  let underline = link.querySelector(".underline");
-  link.tl = gsap.timeline({paused: true});
-  
-  link.tl.fromTo(underline, {width: "0%", left: "0%",}, 
-  {width: "100%", duration: 0.3, ease: "power1.out",});
-  		
-  link.tl.add("midway");
-  
-  link.tl.fromTo(underline, {width: "100%", left: "0%",}, 
-  {width: "0%", left: "100%", duration: 0.3, ease: "power1.in", immediateRender: false});
-
-  // Mouseenter
-  link.addEventListener("mouseenter", (e) => {
-    enterAnimation(link, e, index);
-  });
-
-  // Mouseleave
-  link.addEventListener("mouseleave", (e) => {
-    leaveAnimation(link, e);
-  });
-
-});
-  console.log("UNDERLINE GSAP");
-}
 
 
 /*
@@ -1556,36 +1164,24 @@ function akapowPinned() {
        }
        
      })
-     
-        
+ 
      imageTimeline
       .fromTo(image, { height: () => { return "100%" }  }, { height: () => { return "0%" }, ease: "none" }, 0)
      ;
-    
-    
+ 
   });
   
-  
-  
   ScrollTrigger.create({
-    
         trigger: ".showcase",
         scroller: ".smooth-scroll",
-  
         start: () => "top top",
         end: () => "+=" + ((images.length) * window.innerHeight),
-  
         pin: '.image-wrap', 
         anticipatePin: 1,
-        
         invalidateOnRefresh: true,
     
   });
-
-
-
-    console.log("NOVI AKAPOWL!!!!");
-  }
+}
 
 /*
 ================================================================================
@@ -1603,21 +1199,15 @@ function headerHide() {
     trigger: ".navchange",
     scroller: ".smooth-scroll",
     start: "top top",
-   // markers: true,
     end: 99999,
     toggleClass: { targets: ".header, .hamby-line, .w--current", className: "navcolor" },
-    //toggleClass: { targets: ".hamby-line", className: "background-color-black" },
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
   });
-  
+}
 
-    console.log("HEADER HIDE");
-  }
-
-
-  /*
+/*
 ================================================================================
 PRODUCT TABS
 ================================================================================
@@ -1674,13 +1264,7 @@ function productsTabs() {
     gsap.to(".slider-tab", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
    console.log("SLIDE TABS ON PLACE TRAVEL");
   });
-  
-  
-
-  console.log("PRODUCT TABS");
 }
-
-
 
 /*
 ================================================================================
@@ -1696,43 +1280,7 @@ $( "#tostart" ).on( "click", function() {
     'easing': [0.25, 0.00, 0.35, 1.00],
     'disableLerp': true
   });
-  
-  console.log("SCROLL TO TOP");
 });
-}
-
-
-/*
-================================================================================
-PIN FAQ/PRIVACY HEADER
-================================================================================
-*/
-
-function faqPin() {
-9/*
-const faq = document.querySelector('.faqfix');
-const button = document.querySelector(".accordion__button");
-
-ScrollTrigger.create({
-  
-  id: 'test',
-  pin: faq,
-  start: 'top 20%',
-  end: '+=100%',
-  endTrigger: faq.parentElement,
- // end: '+=1000000'
-  
-}) 
-
-
-function resizeFaq() {
-  ScrollTrigger.refresh();
-  console.log("Button clicked");
-}
-button.addEventListener('click', resizeFaq);
-
-*/
-
 }
 
 /*
@@ -1745,7 +1293,7 @@ function logoMarquee() {
 
   //Change width and time on your desire
 
-initMarquee(300, 70)
+initMarquee(250, 70)
 
 function initMarquee(boxWidth, time) {
     const boxElement = $('.logo-box');
@@ -1773,15 +1321,9 @@ function initMarquee(boxWidth, time) {
         },
         repeat: -1
     });
-
-}
-
-console.log("LOGO MARQUEE NOVI");
   }
-  
-
-
-
+}
+ 
 /*
 ================================================================================
 WEBFLOW INTERACTIONS REINIT
@@ -1791,7 +1333,7 @@ WEBFLOW INTERACTIONS REINIT
 function webflowInteractions() {
   Webflow.ready();
   Webflow.require('ix2').init();
-  //console.log("WEBFLOW RELOAD");
+  console.log("WEBFLOW RELOADED");
 }
 
 /*
@@ -1799,13 +1341,10 @@ function webflowInteractions() {
 AUTO YEAR UPDATE
 ================================================================================
 */
-
 function yearUpdate() {
   const year = new Date().getFullYear();
   $('.year').text(year);
 }
-
-
 
 /*
 ================================================================================
@@ -1814,118 +1353,52 @@ SWIPER PROJECT SOLO
 */
 
 function swiperSolo() {
-var swiper = new Swiper(".swiper-container-solo", {
-   loopedSlides: 6,
-   loop: true,
-   spaceBetween: 24,
-  slidesPerView: 1,
-   freeMode: false,
-   grabCursor: true,
-   mousewheel: false,
- /*
+	var swiper = new Swiper(".swiper-container-solo", {
+		loopedSlides: 6,
+		loop: true,
+		spaceBetween: 24,
+		slidesPerView: 1,
+		freeMode: false,
+		grabCursor: true,
+		mousewheel: false,
+		/*
    autoplay: {
      delay: 3000,
  disableOnInteraction: false,
    },
  */
-      //   resistanceRatio:0.2,
-      // longSwipes:true,
-    //   longSwipesRatio:0.5,
-     //  touchRatio:5,
-         //loopFillGroupWithBlank: false,
-        // paginationClickable: true,
-        // mousewheelControl: true,
-         parallax: true,
-        // preloadImages: true,
-         //updateOnImagesReady: true,
-       // centeredSlides: true,
-       // slidesOffsetBefore: 100,
-         speed: 1000,
-         breakpoints: {
-                         500: {
-                            spaceBetween: 24,
-                           //  loopedSlides: 3,
-                             slidesPerView: 1
-                         },
-                         1e3: {
-                            loopedSlides: 3,
-                             spaceBetween: 24,
-                             slidesPerView: 1.1
-                         },
-                         1200: {
-                             spaceBetween: 24,
-                             slidesPerView: 1.2
-                         }
-                     }
- });
-
+		//   resistanceRatio:0.2,
+		// longSwipes:true,
+		//   longSwipesRatio:0.5,
+		//  touchRatio:5,
+		//loopFillGroupWithBlank: false,
+		// paginationClickable: true,
+		// mousewheelControl: true,
+		parallax: true,
+		// preloadImages: true,
+		//updateOnImagesReady: true,
+		// centeredSlides: true,
+		// slidesOffsetBefore: 100,
+		speed: 1000,
+		breakpoints: {
+			500: {
+				spaceBetween: 24,
+				//  loopedSlides: 3,
+				slidesPerView: 1,
+			},
+			1e3: {
+				loopedSlides: 3,
+				spaceBetween: 24,
+				slidesPerView: 1.1,
+			},
+			1200: {
+				spaceBetween: 24,
+				slidesPerView: 1.2,
+			},
+		},
+	});
 }
 
-/*
-================================================================================
-SWIPER PRODUCT HOMEPAGE
-================================================================================
-*/
-
-function swiperCustomPaginationHome() {
-  var menu = ['01', '02', '03']
-  var swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (menu[index]) + '</span>';
-          },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false
-    },
-    loop: true,
-    watchSlidesProgress: true
-  });
-  
-  // var swiperEl = document.querySelector('.swiper-container');
-  
-  // swiperEl.addEventListener('mouseenter', function(event) {
-  document.addEventListener('mouseenter', event => {
-    const el = event.target;
-    if (el && el.matches && el.matches('.swiper-container')) {
-      // console.log('mouseenter');
-      // console.log('autoplay running', swiper.autoplay.running);
-      el.swiper.autoplay.stop();
-      el.classList.add('swiper-paused');
-      
-      const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
-      activeNavItem.style.animationPlayState="paused";
-    }
-  }, true);
-  
-  document.addEventListener('mouseleave', event => {
-    // console.log('mouseleave', swiper.activeIndex, swiper.slides[swiper.activeIndex].progress);
-    // console.log('autoplay running', swiper.autoplay.running);
-    const el = event.target;
-    if (el && el.matches && el.matches('.swiper-container')) {
-      el.swiper.autoplay.start();
-      el.classList.remove('swiper-paused');
-  
-      const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
-      
-      activeNavItem.classList.remove('swiper-pagination-bullet-active');
-      // activeNavItem.style.animation = 'none';
-  
-      setTimeout(() => {
-        activeNavItem.classList.add('swiper-pagination-bullet-active');
-        // activeNavItem.style.animation = '';
-      }, 10);
-    }
-  }, true);
-  console.log("SWIPER CUSTOM PAGINATION");
-}
 
 
 /*
@@ -1955,26 +1428,6 @@ videos.forEach(function(video, i) {
 })
 }
 
-
-/*
-================================================================================
-HOME PIN SECTIONS / nema na home
-================================================================================
-*/
-
-function homePinSections() {
-
-
-gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
-  ScrollTrigger.create({
-    scroller: ".smooth-scroll",
-    trigger: panel,
-    start: "top top", 
-    pin: true, 
-  });
-});
-
-}
 
 
 /*
