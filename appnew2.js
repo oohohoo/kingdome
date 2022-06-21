@@ -1511,7 +1511,7 @@ function heroPanelAnimation() {
     }
   }),
   mySplitText = new SplitText(".head-split", {
-    type: "words, lines, chars", , linesClass: "clip-text"
+    type: "words, lines, chars", linesClass: "clip-text"
   });
 
 tl.from(mySplitText.chars, {
