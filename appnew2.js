@@ -2556,8 +2556,8 @@ var mySplitText = new SplitText(".head-split", {
   }
 })
 
-tl.to(mySplitText.lines, {
-  autoAlpha: 0,
+tl.to(mySplitText.words, {
+  //autoAlpha: 0,
   yPercent: 100,
   duration: 0.6,
   ease: "power2",
