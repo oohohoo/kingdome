@@ -573,7 +573,7 @@ BARBA VIEWS
     {
 			namespace: "success",
 			beforeEnter(data) {
-				xxxx();
+				success();
 			},
 	],
 	/*
