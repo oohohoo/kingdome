@@ -1503,7 +1503,7 @@ HERO PANEL ANIMATIONS
 */
 function heroPanelAnimation() {
 
-gsap.set(".home-hero-video", {opacity:1})
+gsap.set(".home-hero-video", {opacity:0})
 
 // HERO INTRO ANIMATIONS
 var mySplitText = new SplitText(".head-split", {
@@ -1522,7 +1522,13 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 120}, {
     each: 0.02,
     from: "random"
   }
-}, 0.2);
+}, 0.2)
+
+.to(".home-hero-video, .cta__slider", {
+  opacity:1,
+  yPercent: -15
+}, 0)
+
 
 
 /* TL 2*/
