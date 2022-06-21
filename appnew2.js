@@ -1506,13 +1506,23 @@ function heroPanelAnimation() {
 gsap.set(".home-hero-video", {opacity:1})
 
 // HERO INTRO ANIMATIONS
-
-
-
-
 var mySplitText = new SplitText(".head-split", {
   type: "words, lines, chars", linesClass: "clip-text"
 });
+
+gsap.from(mySplitText.chars, {
+  autoAlpha: 0,
+  yPercent: 100,
+  duration:1,
+  ease: "power2",
+  stagger: {
+   each: 0.02,
+    from: "random"
+  }
+}, 0.2)
+
+
+
 
  tl = gsap.timeline({
   scrollTrigger: {
