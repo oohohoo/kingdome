@@ -1516,7 +1516,7 @@ mySplitText = new SplitText(".head-split", {
 tlin.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
   autoAlpha: 1,
   yPercent: 0,
-  duration: 1,
+  duration: 0.8,
   ease: "power2",
   stagger: {
     each: 0.02,
