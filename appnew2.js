@@ -263,7 +263,7 @@ const progress = select('.progress');
     /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
     /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
   //.to(image, {yPercent: 0}, 'revealImage-=0.5') 
-  .to(".imgg", {yPercent: 0})
+  .to(".imgg", {yPercent: 0, rotate:360})
   /* .to(".txt", {yPercent: 0}) */
   //.to(".txt", {yPercent: 0, stagger: 0.3}, 'revealImage-=0.4')
   //.to(".smallprint", {yPercent: 0})
@@ -280,7 +280,7 @@ const progress = select('.progress');
     defaults: {duration: 1.2, ease: 'power2.inOut'}, delay: 0});
 
   tlLoaderOut
-  .to(".imgg", {autoAlpha:0})
+  .to(".imgg", {autoAlpha:0, rotate:-360})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
