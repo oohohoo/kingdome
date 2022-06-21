@@ -1511,6 +1511,7 @@ var mySplitText = new SplitText(".head-split", {
 });
 
 gsap.from(mySplitText.chars, {
+  delay:5,
   autoAlpha: 0,
   yPercent: 100,
   duration:1,
