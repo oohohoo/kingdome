@@ -1654,7 +1654,7 @@ function success() {
   tl.to(".success-button", {
     autoAlpha: 1,
     duration: 0.6,
-  }, 3)
+  }, 2.5)
   
   
   //.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
