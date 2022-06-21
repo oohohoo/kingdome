@@ -1533,7 +1533,48 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
 }, 0.2) 
 
 
+/**/
 
+let tl2 = gsap.timeline({
+  scrollTrigger: {
+    scroller: ".smooth-scroll",
+    trigger: ".section-home-hero",
+    pin: ".section-home-hero",
+    scrub: true,
+    pinSpacing: false,
+    start: "top top",
+    end: "bottom top",
+    id: "hero"
+  }
+})
+
+tl2.to(mySplitText.chars, {
+  autoAlpha: 0,
+  yPercent: 100,
+  duration:1,
+  ease: "power2",
+  stagger: {
+   each: 0.02,
+    from: "random"
+  }
+}, 0.2)
+
+/* to(".anima-one", {
+  scale:0.8,
+  opacity:.3
+})  */
+
+
+
+/* .to(".anima-two", {
+  scale:0.8,
+  opacity:.3
+}, "<0.1")  */
+
+.to(".home-hero-video, .cta__slider", {
+  opacity:0.4,
+  yPercent: -15
+}, 0)
 
 
 
