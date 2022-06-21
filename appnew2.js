@@ -280,7 +280,7 @@ const progress = select('.progress');
     defaults: {duration: 1.2, ease: 'power2.inOut'}, delay: 0});
 
   tlLoaderOut
-  .to(".imgg", {yPercent:-90, rotate:360})
+  .to(".imgg", {yPercent:100})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
