@@ -264,7 +264,7 @@ const progress = select('.progress');
     /* .to(loaderTxt, {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
   //.to(image, {yPercent: 0}, 'revealImage-=0.5') 
   .to(".imgg", {yPercent: 0})
-   .to(loaderTxt, {yPercent: 0}) 
+   .to(".loader-text", {yPercent: 0}) 
   //.to(loaderTxt, {yPercent: 0, stagger: 0.3}, 'revealImage-=0.4')
   //.to(".smallprint", {yPercent: 0})
 
