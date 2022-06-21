@@ -325,7 +325,6 @@ function initContent() {
 		home: function () {
 			logoTransformOnScroll();
 			heroPanelAnimation();
-			parallaxPanel();
 			startStopVideo();
 			swiperSolo();
 			homePinSections();
@@ -558,7 +557,6 @@ BARBA VIEWS
 		{
 			namespace: "home",
 			beforeEnter(data) {
-				parallaxPanel();
 				homeProductHover();
 			},
 		},
