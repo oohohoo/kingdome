@@ -1563,7 +1563,7 @@ tlout.to(".home-hero-video, .cta__slider", {
       trigger: ".home-hero_component",
       start: "top top",
     end: "bottom top",
-     // markers: true,
+     markers: true,
      // pin: ".section-home-hero",
      // pinSpacing: false,
     //  toggleActions: "restart none none none"
@@ -1575,7 +1575,7 @@ tlout.to(".home-hero-video, .cta__slider", {
 tl.to(".home-hero-video, .cta__slider", {
   opacity:0.4,
 
-}, 0.2); 
+}); 
 
 
 /* .fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
