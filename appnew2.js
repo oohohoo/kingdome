@@ -300,9 +300,7 @@ function initContent() {
 				this.contact();
 			} else if ($("body").hasClass("page-faq")) {
 				this.faq();
-      } else if ($("body").hasClass("success")) {
-				this.success();
-			}    
+          
 
 			}
 		},
@@ -340,10 +338,6 @@ function initContent() {
 			headerHide();
 			logoTransformOnScroll();
 			// openMobileMenu();
-		},
-    success: function () {
-      success();
-      console.log("Success loaded");
 		},
 	};
 
