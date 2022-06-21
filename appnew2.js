@@ -2754,3 +2754,4 @@ function productObserver() {
   
   slideIn();
   
+}
