@@ -2557,14 +2557,10 @@ splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,wo
   }
 })
 
-tl.to(".anima-one", {
-  scale:0.8,
-  opacity:.3
-})
-
-.fromTo(splitHeadings.chars, {autoAlpha: 0, yPercent: 200}, {
+tl.fromTo(splitHeadings.chars, {autoAlpha: 0, yPercent: 200}, {
   autoAlpha: 1,
   yPercent: 0,
+  rotate:360,
   duration: 1,
   ease: "power2",
   stagger: {
@@ -2572,6 +2568,13 @@ tl.to(".anima-one", {
     from: "random"
   }
 }, 0.2)
+
+/* to(".anima-one", {
+  scale:0.8,
+  opacity:.3
+}) */
+
+
 /* 
 .to(".anima-two", {
   scale:0.8,
