@@ -1537,7 +1537,7 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
 
 
 
-  /**/
+  /**//* 
 //gsap.set(".home-hero-video", {opacity:0})
 
 // HERO INTRO ANIMATIONS
@@ -1559,14 +1559,13 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 120}, {
   }
 }, 0.2)
 
-/* .to(".home-hero-video, .cta__slider", {
+.to(".home-hero-video, .cta__slider", {
   opacity:1,
   yPercent: -15
-}, 0) */
+}, 0) 
 
 
 
-/* TL 2*/
 let tl2 = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
@@ -1591,17 +1590,17 @@ tl2.to(mySplitText.chars, {
   }
 }, 0.2)
 
-/* to(".anima-one", {
+to(".anima-one", {
   scale:0.8,
   opacity:.3
-}) */
+}) 
 
 
-/* 
+
 .to(".anima-two", {
   scale:0.8,
   opacity:.3
-}, "<0.1") */
+}, "<0.1") 
 
 .to(".home-hero-video, .cta__slider", {
   opacity:0.4,
@@ -1610,11 +1609,11 @@ tl2.to(mySplitText.chars, {
 
 
 
-/* tl.to(".wiper", {
+ tl.to(".wiper", {
   yPercent: -100,
   ease: "none"
 })
- */
+  */
 
 
 
