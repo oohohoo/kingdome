@@ -30,21 +30,28 @@ IMAGES LOADED
 */
 
 function init() {
+
   // show loader on page load
   gsap.set(loader, {autoAlpha: 1});
+
   // scale loader down
   gsap.set(loaderInner, {scaleY: 0.015, transformOrigin: 'bottom'});
+
   // make a tween that scales the loader
   const progressTween = gsap.to(progressBar, {paused: true, scaleX: 0, ease: 'none', transformOrigin: 'right'});
+
   // setup variables
   let loadedImageCount = 0,
     imageCount;
   const container = select('#main');
+
   // setup Images loaded
   const imgLoad = imagesLoaded(container);
   imageCount = imgLoad.images.length;
+
   // set the initial progress to 0
   updateProgress(0);
+
   // triggered after each item is loaded
   imgLoad.on('progress', function () {
     // increase the number of loaded images
@@ -85,61 +92,75 @@ MAIN JS + LOCOMOTIVE SCROLL + SCROLL TRIGGER PROXY
 function initScroll(container) {
 
   if (document.querySelector('.smooth-scroll')) {
-		locoScroll = new LocomotiveScroll({
-			el: document.querySelector(".smooth-scroll"),
-			smooth: true,
-			offset: [0, 0],
-			getDirection: true,
-			scrollFromAnywhere: true,
-			//touchMultiplier: 3.0,
-			useKeyboard: true,
-			inertia: 0.8,
-			mobile: {
-				//breakpoint: 0,
-				smooth: true,
-				getDirection: true,
-			},
-			tablet: {
-				//  breakpoint: 0,
-				touchMultiplier: 2,
-				smooth: true,
-				getDirection: true,
-			},
-		});
+  
+   locoScroll = new LocomotiveScroll({
+   el: document.querySelector(".smooth-scroll"),
+   smooth: true,
+   offset: [0, 0], 
+   getDirection: true, 
+   scrollFromAnywhere: true,
+   //touchMultiplier: 3.0,
+   useKeyboard: true,
+   // scrollbarContainer: document.querySelector('#primary'),
+   inertia: .8,  
+   mobile: {
+    //breakpoint: 0,
+    smooth: true,
+    getDirection: true,
+   },
+   tablet: {
+  //  breakpoint: 0,
+    touchMultiplier: 2,
+    smooth: true,
+    getDirection: true,
+   } 
+  });
 
-		// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-		locoScroll.on("scroll", ScrollTrigger.update);
+  console.log("LOCOMOTIV INIT");
 
-		// tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
-		ScrollTrigger.scrollerProxy(".smooth-scroll", {
-			scrollTop(value) {
-				return arguments.length
-					? locoScroll.scrollTo(value, 0, 0)
-					: locoScroll.scroll.instance.scroll.y;
-			}, // we don't have to define a scrollLeft because we're only scrolling vertically.
-			getBoundingClientRect() {
-				return {
-					top: 0,
-					left: 0,
-					width: window.innerWidth,
-					height: window.innerHeight,
-				};
-			},
+// ovo je ubačeno naknadno
+/*   locoScroll.on("scroll", function (t) {
+    document.documentElement.setAttribute("data-direction", t.direction);
+  }); */
 
-			// LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters,
-			// we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-			// UKLJUČITI SAMO NA MOBILNOJ VERZIJI
-			pinType: document.querySelector(".smooth-scroll").style.transform
-				? "transform"
-				: "fixed",
-		});
+  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+  locoScroll.on("scroll", ScrollTrigger.update);
+
+  // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+  ScrollTrigger.scrollerProxy(".smooth-scroll", {
+    scrollTop(value) {
+      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+    getBoundingClientRect() {
+      return {top: 0, left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    },
+
+    // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, 
+    // we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+    // UKLJUČITI SAMO NA MOBILNOJ VERZIJI
+     pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+  });
+
+/* ===== 
+// Remove Old Locomotive Scrollbar.
+const scrollbar = document.querySelectorAll( '.c-scrollbar' );
+    
+if ( scrollbar.length > 1 ) {
+    scrollbar[0].remove();
+}
+/* ===== */
+
+
 
 /*
 ================================================================================
 ON WINDOW RESIZE
 ================================================================================
 */
-		
+/*
 window.addEventListener('resize', function(){
   setTimeout(()=>{
     if (document.querySelector('.smooth-scroll')) {
@@ -147,9 +168,22 @@ window.addEventListener('resize', function(){
     };
   ScrollTrigger.refresh();
 },200) 
- console.log("RESIZE & REFRESHHHH LOCO & SCROLL");
+ console.log("RESIZE & REFRESH LOCO&SCROLLTRIGGER");
 });
 
+*/
+
+
+/*
+================================================================================
+SCROLLTRIGGER DEFAULTS
+================================================================================
+*/
+/*
+ScrollTrigger.defaults( {
+  scroller: ".smooth-scroll",
+});
+*/
 
 /*
 ================================================================================
@@ -157,7 +191,7 @@ window.addEventListener('resize', function(){
 ================================================================================
 */
 
-		/*
+/*
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 window.addEventListener('resize', () => {
@@ -171,28 +205,29 @@ window.addEventListener('resize', () => {
 LOCOMOTIVE SCROLL REFRESH AFTER ALL / ne briši
 ================================================================================
 */
-		//if($('.smooth-scroll').length >0 ){
-		// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
-		//ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-		// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-		ScrollTrigger.refresh();
-		console.log("SCROLL REFRESH 2");
+//if($('.smooth-scroll').length >0 ){
+// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+  //ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+  ScrollTrigger.refresh();
+  console.log("Scrolltrigger refreshed after all!");
 
-		/*   document.addEventListener('load', function(){
+/*   document.addEventListener('load', function(){
     locoScroll.update();
 }); */
-		//}
-		/*
+//}
+/*
 ================================================================================
 LOCOMOTIVE SCROLL UPDATED AFTER IMAGESLOADED
 ================================================================================
 */
 
-		imagesLoaded("#main", { background: true }, function () {
-			locoScroll.update();
-			console.log("LOCO SCROLL UPDATE AFTER IMAGES LOADED ALL IMAGES");
-		});
-	}
+imagesLoaded("#main", { background: true }, function () {
+  locoScroll.update();
+  console.log("IMAGES LOADED - LOCOSCROLL UPDATED ČEK DIS");
+  });
+
+}
 
 }
 
@@ -303,92 +338,100 @@ INIT CONTENT --> vodi na --> INIT SCROLL
 ================================================================================
 */
 function initContent() {
-	select("body").classList.remove("is-loading");
+  select('body').classList.remove('is-loading');
 
-	// your custom script
-	var myscripts = {
-		init: function () {
-			if ($("body").hasClass("page-home")) {
-				this.home();
-			} else if ($("body").hasClass("page-products")) {
-				this.products();
-			} else if ($("body").hasClass("page-howwework")) {
-				this.howwework();
-			} else if ($("body").hasClass("page-product-single")) {
-				this.pageproductsingle();
-			} else if ($("body").hasClass("page-contact")) {
-				this.contact();
-			} else if ($("body").hasClass("page-faq")) {
-				this.faq();
-			}
-		},
-		home: function () {
-			logoTransformOnScroll();
-			heroPanelAnimation();
-			rotateWireframe();
-			parallaxPanel();
-			startStopVideo();
-			swiperSolo();
-			homePinSections();
-			homeVideoClip();
-			headerHide();
-			toggleNavClass();
-			// swiperCustomPaginationHome();
-		},
-		products: function () {
-			//projectMainSwiper();
-			productObserver();
-		},
-		howwework: function () {
-			heroPanelAnimation();
-			logoTransformOnScroll();
-			headerHide();
-			akapowPinned();
-			logoMarquee();
-			startStopVideo();
-			toggleNavClass();
-		},
-		pageproductsingle: function () {
-			heroPanelAnimation();
-			headerHide();
-			logoTransformOnScroll();
-			productsTabs();
-			swiperSolo();
-			toggleNavClass();
-		},
-		contact: function () {
-			webflowInteractions();
-			//  openMobileMenu();
-		},
-		faq: function () {
-			headerHide();
-			logoTransformOnScroll();
-			toggleNavClass();
-			//faqPin();
-			// openMobileMenu();
-		},
-	};
+  // your custom script
+  var myscripts = {
+    init: function () {
+      if ($('body').hasClass('page-home')) {
+        this.home();
+      } else if ($('body').hasClass('page-products')) {
+        this.products();
+      } else if ($('body').hasClass('page-howwework')) {
+        this.howwework();
+      } else if ($('body').hasClass('page-product-single')) {
+        this.pageproductsingle();
+      } else if ($('body').hasClass('page-contact')) {
+        this.contact();
+      } else if ($('body').hasClass('page-faq')) {
+        this.faq();
+      }
+    },
+    home: function () {
+      
+      logoTransformOnScroll();
+      heroPanelAnimation();
+      rotateWireframe();
+      parallaxPanel();
+      startStopVideo();
+      swiperSolo();
+      homePinSections();
+      homeVideoClip();
+      headerHide();
+      toggleNavClass();
+     // swiperCustomPaginationHome();
+    },
+    products: function () {
+      //projectMainSwiper();
+      productObserver();
+    },
+    howwework: function () {
+      heroPanelAnimation();
+      logoTransformOnScroll();
+      headerHide();
+      akapowPinned();
+      logoMarquee();
+      startStopVideo();
+      toggleNavClass();
+    },
+    pageproductsingle: function () {
+      heroPanelAnimation();
+      headerHide();
+      logoTransformOnScroll();
+      productsTabs();
+      swiperSolo();
+      toggleNavClass();
+    },
+   contact: function () {
+    webflowInteractions();
+    //  openMobileMenu();
+    },
+    faq: function () {
+      headerHide();
+      logoTransformOnScroll();
+      toggleNavClass();
+      //faqPin();
+      // openMobileMenu();
+     }
 
-	// LOAD THIS SCRIPTS ON EVERY PAGE
-	initScroll();
-	fullscreenMenu();
-	scrollToTop();
-	// underline();
-	//popupWizdome();
-	buttonHover();
-	yearUpdate();
-	slideInHeaders();
-	fadeInOnEnter();
-	cubertoCursor();
-	//initNavigation();
-	//initHeaderTilt();
+  };
 
-	myscripts.init();
 
-	setTimeout(() => {
-		ScrollTrigger.refresh(true);
-	}, 1000);
-	console.log("SCROLL TRIGGER REFRESHED AFTER 1 SECOND");
+  // LOAD THIS SCRIPTS ON EVERY PAGE
+  initScroll();
+ 
+  fullscreenMenu();
+  scrollToTop();
+ // underline();
+   //popupWizdome();
+  buttonHover();
+  yearUpdate();
+  //fadeInElements();
+   slideInHeaders();
+  fadeInOnEnter();
+  cubertoCursor();
+  //initNavigation();
+  //initHeaderTilt();
+
+
+  myscripts.init();
+
+  setTimeout(() => {
+    ScrollTrigger.refresh(true);
+  }, 1000);
+  console.log("Scrolltrigger refreshed");
+
+
 }
 
 /*
@@ -467,6 +510,8 @@ function pageFadeOut({
 }
 
 
+
+
 /*
 ================================================================================
 BARBA GLOBAL HOOKS + PREFETCH + INIT + VIEWS + TRANSITIONS
@@ -490,6 +535,20 @@ function initPageTransitions() {
     select('html').classList.remove('is-transitioning');
   });
 
+  /* OVO JE UBAČENO*/
+  /*
+  barba.hooks.after((data) => {
+    let js = data.next.container.querySelectorAll('main script');
+    if(js != null){
+            js.forEach((item) => {
+                console.log(js)
+                eval(item.innerHTML);
+            });
+    }
+   console.log("SCRIPTS EVALUATED NO PROBLEM");
+});
+*/
+
 barba.hooks.afterLeave((data) => {
   // Set <body> classes for "next" page
   var nextHtml = data.next.html;
@@ -499,28 +558,35 @@ barba.hooks.afterLeave((data) => {
   //  console.log("BODY CLASSES UPDATED");
 });
 
+
+
+
  // scroll to the top of the page
   barba.hooks.enter(() => {
         window.scrollTo(0, 0);
+        //strigtest();
    
   });
    //kill scrolltrigger
   barba.hooks.beforeLeave(() => {
     if($('.smooth-scroll').length >0 ){
       locoScroll.destroy();
-      console.log("LOCO DESTROY");
    }
+
 
    /*  killScrollTriggers(); */
    if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
         trigger.kill()
-        console.log("SCROLLTRIGGER DESTROY");
+       // console.log("scrolltrigger killed...");
     });
 };
 
+/* destroyCursor(); */
+
+
 Webflow.destroy();
-console.log("WEBFLOW DESTROY");
+console.log("webflow interactions killed...");
  
   });
   //init scrolltrigger
@@ -538,7 +604,7 @@ BARBA PREFETCH
 ================================================================================
 */
 
-barba.use(barbaPrefetch);
+//barba.use(barbaPrefetch);
 
 /*
 
@@ -549,123 +615,150 @@ BARBA INIT
 */
 
 barba.init({
-	timeout: 7000,
-	debug: true,
-	prefetch: true,
+  timeout: 7000,
+  debug: true,
+  prefetch: true,
 
-	/*
+
+/*
 ================================================================================
 BARBA VIEWS
 ================================================================================
-*/
-	views: [
-		{
-			namespace: "home",
-			beforeEnter(data) {
-				rotateWireframe();
-				parallaxPanel();
-				homeProductHover();
-				initVideo();
-			},
-		},
-		{
-			namespace: "products",
-			beforeEnter(data) {
-				navOnDark();
-				productObserver();
-			},
-		},
-		{
-			namespace: "productsingle",
-			beforeEnter(data) {
-				productsTabs();
-				fullscreen3D();
-				productsoloAccordion();
-				swiperSolo();
-			},
-		},
-		{
-			namespace: "howwework",
-			beforeEnter(data) {
-				akapowPinned();
-				logoMarquee();
-			},
-		},
-		{
-			namespace: "contact",
-			beforeEnter(data) {
-				webflowInteractions();
-			},
-			afterEnter() {
+*/  
+  views: [{
+    namespace: 'home',
+    beforeEnter(data) {
+      rotateWireframe();
+      parallaxPanel();
+      homeProductHover();
+      //akapowPinned();
+      initVideo();
+      
+  
+  
+    }},{
+    namespace: 'products',
+    beforeEnter(data){
+    // projectMainSwiper();
+     navOnDark();
+     productObserver();
+     
 
-			},
-		},
-		{
-			namespace: "faq",
-			beforeEnter(data) {
-				productsoloAccordion();
-			},
-		},
-	],
-	/*
+    }},{
+      namespace: 'productsingle',
+    beforeEnter(data) {
+      productsTabs(); 
+      fullscreen3D();
+      productsoloAccordion(); 
+      swiperSolo();
+   
+    }},{
+      
+    namespace: 'howwework',
+    beforeEnter(data) {
+      akapowPinned();
+      logoMarquee();
+
+     
+   
+    }},{
+    namespace: 'contact',
+    beforeEnter(data) {
+      webflowInteractions();
+    
+    },
+    afterEnter() {
+
+     // webflowInteractions();
+     // console.log("webflow after enter interactions");
+      
+    }},{
+      namespace: 'faq',
+      beforeEnter(data) {
+        productsoloAccordion(); 
+    
+        
+      }
+
+}],
+/*
 ================================================================================
 BARBA TRANSITIONS
 ================================================================================
-*/
+*/  
 
-	transitions: [
-		{
-			// ROUTE AKO IDE NA ABOUT IDE DRUGA ANIMACIJA
+   transitions: [
+         {
+    // ROUTE AKO IDE NA ABOUT IDE DRUGA ANIMACIJA
+   
+    once({next}) {
+       // do something once on the initial page load
+       initLoader();
+       
+     },
 
-			once({ next }) {
-				// do something once on the initial page load
-				initLoader();
-			},
+     async leave({current}) { 
+       // animate loading screen in
+       await pageTransitionIn(current);
+       console.log("LEAVE");
+       
+     },
+     enter({next}) {
+       // animate loading screen away
+       pageTransitionOut(next);
+         console.log("NEXT");
+     },
+     
+     afterEnter({next}) {
+      
+  
 
-			async leave({ current }) {
-				// animate loading screen in
-				await pageTransitionIn(current);
-				console.log("LEAVE");
-			},
-			enter({ next }) {
-				// animate loading screen away
-				pageTransitionOut(next);
-				console.log("NEXT");
-			},
+     },
+     
+     beforeEnter({next}) {
+    //  hideMenu();
+    //initVideo();
+    //console.log("video initializzzzzzz");
+    
+     }
+    
 
-			afterEnter({ next }) {},
 
-			beforeEnter({ next }) {
-				//  hideMenu();
-				//initVideo();
-				//console.log("video initializzzzzzz");
-			},
-		},
-	],
+    
+  
+ 
 
-	/*
+
+
+   }],
+
+ /*
  ================================================================================
  PREVENT / CLICKS DURRING TRANSITION AND CURRENT LINK + SCROLL TO TOP
  ================================================================================
  */
-	prevent: ({ event, href }) => {
-		if (event.type === "click") {
-			// prevent the user to reload the page if the location is the same
-			if (href === window.location.href) {
-				event.preventDefault();
-				event.stopPropagation();
-				// automatically scroll to the top of the page on same location
-				//   locoScroll.scrollTo('#top')
-				return true;
-			}
-			if (barba.transitions.isRunning) {
-				event.preventDefault();
-				event.stopPropagation();
+prevent: ({
+  event,
+  href
+}) => {
+  if (event.type === 'click') {
 
-				return true;
-			}
-		}
-	},
+    // prevent the user to reload the page if the location is the same
+    if (href === window.location.href) {
+      event.preventDefault();
+      event.stopPropagation();
+      // automatically scroll to the top of the page on same location
+   //   locoScroll.scrollTo('#top')
+      return true;
+    }
+    if (barba.transitions.isRunning) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      return true;
+    }
+  }
+}
 });
 
 
