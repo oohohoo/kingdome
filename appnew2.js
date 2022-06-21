@@ -237,20 +237,19 @@ const progress = select('.progress');
     .set(".main", {y: 150})
 
      .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) 
-    //.to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'}) 
-   //.from(targets, {opacity:0, yPercent: 100, ease: "expo.inOut", stagger: 0.15})
-   //.from(txtdonji, {opacity:0, yPercent: 100, ease: "expo.inOut"}, "+=0.2")
+
      .addLabel('revealImage')
-    /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
-    /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
-  //.to(image, {yPercent: 0}, 'revealImage-=0.5') 
+
   .to(".imgg", {yPercent: 0})
    .to(".txt", {yPercent: 0}) 
-  //.to(".txt", {yPercent: 0, stagger: 0.3}, 'revealImage-=0.4')
-  //.to(".smallprint", {yPercent: 0})
 
 
-  
+
+
+
+
+
+
 
 
 
