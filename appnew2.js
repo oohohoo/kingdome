@@ -1541,7 +1541,7 @@ var tlout = gsap.timeline({
     trigger: ".section-home-hero",
     start: "top top",
     end: "bottom top",
-    markers: true,
+  //  markers: true,
     pin: ".section-home-hero",
     pinSpacing: false,
   //  toggleActions: "restart none none none"
