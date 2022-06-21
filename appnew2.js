@@ -2534,7 +2534,7 @@ function heroPanelAnimation() {
     //markers: true,
     id: "hero"
 }}); */
-let splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
+let splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"}))
 
 gsap.set(".home-hero-video", {opacity:1})
 
