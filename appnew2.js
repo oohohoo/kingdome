@@ -1415,46 +1415,6 @@ videos.forEach(function(video, i) {
 })
 }
 
-
-/*
-================================================================================
-VIDEO SCALE ON SCROLL
-================================================================================
-*/
-function homeVideoClip() {
-
-
-/*   ScrollTrigger.addEventListener("scrollStart", () => {
-
-    gsap.timeline({
-      scrollTrigger: {
-        scroller: ".smooth-scroll",
-          trigger: "#clipvideo",
-        //   markers: true, 
-        //  start: "top 10%", // when the top of the trigger hits the top of the viewport
-          end: "bottom center",
-          toggleActions: "play none none reverse",
-          invalidateOnRefresh: true,
-    
-      }
-    })
-
-
-       .to(".home-hero-video", { clipPath: 'polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%)', duration: 0.5, ease:'expo.inOut'}, 0)
-       
-  })
- */
-
-
- //clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-  //.to(".header_kingdome", { yPercent: 20, ease:'expo.inOut'}, 0)
-
-/*   .to("#ticker",  {autoAlpha:0, duration: 0.1}); */
-
-}
-
-
-
 /*
 ================================================================================
 CUBERTO CURSOR
@@ -1559,7 +1519,7 @@ else {
 
 /*
 ================================================================================
-CUBERTO CURSOR
+HERO PANEL ANIMATIONS
 ================================================================================
 */
 function heroPanelAnimation() {
@@ -1640,7 +1600,7 @@ tl.to(mySplitText.words, {
 
 /*
 ================================================================================
-PROJEXT OBSERVER
+PROJECT OBSERVER
 ================================================================================
 */
 
