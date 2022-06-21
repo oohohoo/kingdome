@@ -2066,7 +2066,7 @@ var swiper = new Swiper(".swiper-container-solo", {
   freeMode: true,
  loopedSlides: 6,
  loop: true,
-  spaceBetween: 20,
+  spaceBetween: 25,
   //slidesPerView: 1,
   // freeMode: false,
    grabCursor: true,
@@ -2090,7 +2090,7 @@ var swiper = new Swiper(".swiper-container-solo", {
                              slidesPerView: 1.1
                          },
                          1200: {
-                             spaceBetween: 20,
+                             spaceBetween: 25,
                              slidesPerView: 1.2
                          }
                      }
