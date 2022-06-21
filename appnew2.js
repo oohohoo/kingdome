@@ -1524,13 +1524,9 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
   }
 }, 0.5)
 
+
+.to(".home-hero-video, .cta__slider", {scale:1}, 0.2);
 .to(".header-red-flag", {yPercent:0}, 0.4)
-
-
-.to(".home-hero-video, .cta__slider", {
- scale:1
-
-}, 0.2);
 /* 
 
   var tl = gsap.timeline({
