@@ -2559,7 +2559,7 @@ var mySplitText = new SplitText(".head-split", {
 tl.to(mySplitText.words, {
   autoAlpha: 0,
   yPercent: 100,
-  duration: 1,
+  duration: 0.6,
   ease: "power2",
   stagger: {
     each: 0.02,
