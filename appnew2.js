@@ -1528,9 +1528,9 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
 
 
 .to(".home-hero-video, .cta__slider", {scale:1}, 0.3)
-.fromTo(".headhead", {xPercent:20}, {xPercent:60, duration: 0.8}, 0.4)
+/* .fromTo(".headhead", {xPercent:20}, {xPercent:60, duration: 0.8}, 0.4)
 .fromTo(".navin", {yPercent:100}, {yPercent:0, stagger:0.02}, 0.4)
-.fromTo(".hamby", {yPercent:100, opacity:0}, {yPercent:0, stagger:0.02, opacity:1}, 0.4)
+.fromTo(".hamby", {yPercent:100, opacity:0}, {yPercent:0, stagger:0.02, opacity:1}, 0.4) */
  
 
 
