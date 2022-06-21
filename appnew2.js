@@ -1503,20 +1503,12 @@ HERO PANEL ANIMATIONS
 */
 function heroPanelAnimation() {
 
-
-/*   gsap.to(".section-home-hero",{scrollTrigger:{
-    scroller: ".smooth-scroll",
-    trigger: ".section-home-hero",
-    pin: true,
-    pinSpacing: false,
-    start: "top top",
-    end: "bottom top",
-    //markers: true,
-    id: "hero"
-}}); */
-
-
 gsap.set(".home-hero-video", {opacity:1})
+
+// HERO INTRO ANIMATIONS
+
+
+
 
 var mySplitText = new SplitText(".head-split", {
   type: "words, lines, chars", linesClass: "clip-text"
@@ -1535,14 +1527,14 @@ var mySplitText = new SplitText(".head-split", {
   }
 })
 
-tl.to(mySplitText.words, {
+tl.to(mySplitText.chars, {
   //autoAlpha: 0,
   yPercent: 100,
-  duration: 0.6,
+  duration:1,
   ease: "power2",
   stagger: {
-   // each: 0.02,
-    from: "left"
+   each: 0.02,
+    from: "random"
   }
 }, 0.2)
 
