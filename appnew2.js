@@ -364,7 +364,6 @@ function initContent() {
 			headerHide();
 			logoTransformOnScroll();
 			toggleNavClass();
-			//faqPin();
 			// openMobileMenu();
 		},
 	};
@@ -511,7 +510,6 @@ barba.hooks.afterLeave((data) => {
       console.log("LOCO DESTROY");
    }
 
-   /*  killScrollTriggers(); */
    if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
         trigger.kill()
@@ -565,7 +563,7 @@ BARBA VIEWS
 				rotateWireframe();
 				parallaxPanel();
 				homeProductHover();
-				initVideo();
+			//	initVideo();
 			},
 		},
 		{
@@ -636,9 +634,7 @@ BARBA TRANSITIONS
 			afterEnter({ next }) {},
 
 			beforeEnter({ next }) {
-				//  hideMenu();
-				//initVideo();
-				//console.log("video initializzzzzzz");
+
 			},
 		},
 	],
@@ -668,40 +664,9 @@ BARBA TRANSITIONS
 	},
 });
 
-
 /*
 ================================================================================
-UPDATE ACTIVE CLASS ON THE MENU - BASED ON THE GIVEN URL
-================================================================================
-*/
-/*
-function updateMenu(url) {
-  const active = document.querySelector('.g-header .nav-link.active');
-
-  if (active !== null) {
-    active.classList.remove('active');
-  }
-
-  const links = Array.from(document.querySelectorAll('.g-header .nav-link'));
-
-  const index = links.map(link => link.href).findIndex((href) => {
-    return url.indexOf(href) !== -1;
-  });
-
-  if (index !== -1) {
-    links[index].classList.add('active');
-  }
-}
-
-// hooks that will be triggered before any page transition
-// meaning your menu active class will be updated before going to the next page
-barba.hooks.before((data) => {
-  updateMenu(data.trigger.href);
-});
-*/
-/*
-================================================================================
-UPDATE ACTIVE CLASS ON THE MENU - BASED ON THE GIVEN URL
+INIT LOADER
 ================================================================================
 */
 
@@ -710,75 +675,6 @@ function init() {
 }
 
 }
-
-
-
-
-/*
-================================================================================
-FUNCTION MODULES 
-================================================================================
-*/
-
-
-/*
-================================================================================
-LOGO RESET - to small
-================================================================================
-*/
-
-function resetLogo() {
-
-  let tlfix = gsap.timeline();
-
-    
-/*   tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
-    .to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0) */
-      
-   
-
-  //  tl.to(".red-flag",  {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 40%, 0% 100%)", width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", }, 0)
-  tlfix.fromTo(".header-red-flag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
-  {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 85% 100%, 0% 100%)"})
-
- //.to(".red-flag", {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"})
-    .to(".header-znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, 0)
-
-  
-
-  /*
-  gsap.to(".red-flag",  {width:'4em', height:'4em', top: '-1.25em', duration: 0.5, ease: "expo.inOut", })
-  gsap.to(".znak", { scale: 0.6, transformOrigin: 'center center', yPercent: -55, ease:'expo.inOut'}, "<")
-*/
-
-}
-
-/*
-================================================================================
-LOGO RESET - to small
-================================================================================
-*/
-
-function bigLogo() {
-  
-
-  let tl = gsap.timeline();
-
-  tl.to(".header-red-flag",  {width:'8.5em', height:'12em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
-  .fromTo(".header-red-flag", {clipPath:"polygon( 0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)"}, 
-  {duration:0.5, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%)"}, "<")
-  .to(".header-znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<")
-
-/* 
- 
-  gsap.to(".red-flag",  {width:'8.5em', height:'10em', top: '-4em', duration: 0.5, ease: "expo.inOut", })
-  gsap.to(".znak", { scale: 1, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "<") */
-
-
-
-}
-
-
 
 /*
 ================================================================================
@@ -922,9 +818,7 @@ function hide() {
 SUBMENU HOVER
 ================================================================================
 */
-//-------
 // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
-// loop through each element
 $(".fade-hover, .hover-opacity, .kupole-info").each(function(i, el) {
   var tl = gsap.timeline({paused: true});
   var t = tl
@@ -936,19 +830,6 @@ $(el).on("mouseenter",function(){
     this.animation.reverse();
   });
 });
-//-------
-
-/*
-================================================================================
-OVO JE MOŽDA NEPOTREBNO
-================================================================================
-*/
-// EVENT LISTENERS
-//openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
-//closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
-
-
-
 
 
 /*
@@ -956,9 +837,6 @@ OVO JE MOŽDA NEPOTREBNO
 MENU ICON HOVER
 ================================================================================
 */
-
-//const menuhover = document.getElementById('menuhover');
-
 
 /* OPENMENU HOVER ICON*/
 openmenu.addEventListener('mouseover', ()=> {  
@@ -993,12 +871,7 @@ openmenu.addEventListener('mouseover', ()=> {
     .to(".closex", {scale:1, duration: 0.2, transformOrigin:"50% 50%"})
     //  .to(".mline3", {width: "55%"}, "<-0.05")
     })
-  
-
-  
-
 }
-
 
 /*
 ================================================================================
@@ -1080,87 +953,68 @@ function hide() {
     .set(" .open3d", { pointerEvents: "all"});
 	
 }
-
-
-
 }
 
 
 /*
 ================================================================================
-PRODUCT SOLO - ACCORDION
+ACCORDION
 ================================================================================
 */
 function productsoloAccordion() {
-  
-  class Accordion {
-    constructor(accordion) {
-        this.button = accordion.querySelector(".accordion__button");
-        this.content = accordion.querySelector(".accordion__content");
-        this.icon = accordion.querySelector(".accordion__icon");
-        this.line = this.icon.querySelector(".line--scale");
-        this.setInitialState();
-        this.animation();
-        this.eventListener();
-    }
+	class Accordion {
+		constructor(accordion) {
+			this.button = accordion.querySelector(".accordion__button");
+			this.content = accordion.querySelector(".accordion__content");
+			this.icon = accordion.querySelector(".accordion__icon");
+			this.line = this.icon.querySelector(".line--scale");
+			this.setInitialState();
+			this.animation();
+			this.eventListener();
+		}
 
-    setInitialState() {
-        gsap.set(this.content, { height: "auto" });
-    }
+		setInitialState() {
+			gsap.set(this.content, { height: "auto" });
+		}
 
-    animation() {
-      this.animation = gsap
-          .timeline({onReverseComplete:function() {
-            locoScroll.update();
-          
-                     } })
-          .to(this.icon, { rotate: "90deg", ease: "power3.inOut" })
-          .to(this.line, { scaleY: 0, ease: "power3.inOut" }, 0)
-          .from(
-              this.content,
-              { height: 0, duration: 0.5, ease: "power3.inOut", onComplete:function() {
-                locoScroll.update();
-                
-                         } },
-              0
-          )
-          .reverse();
-          
-  }
+		animation() {
+			this.animation = gsap
+				.timeline({
+					onReverseComplete: function () {
+						locoScroll.update();
+					},
+				})
+				.to(this.icon, { rotate: "90deg", ease: "power3.inOut" })
+				.to(this.line, { scaleY: 0, ease: "power3.inOut" }, 0)
+				.from(
+					this.content,
+					{
+						height: 0,
+						duration: 0.5,
+						ease: "power3.inOut",
+						onComplete: function () {
+							locoScroll.update();
+						},
+					},
+					0
+				)
+				.reverse();
+		}
+		eventListener() {
+			this.button.addEventListener("click", () => {
+				this.animation.reversed
+					? this.animation.reversed(!this.animation.reversed())
+					: this.animation.reverse();
+			});
+		}
+	}
 
-    eventListener() {
-        this.button.addEventListener("click", () => {
-            this.animation.reversed
-                ? this.animation.reversed(!this.animation.reversed())
-                : this.animation.reverse();
-        });
-    }
+	const accordions = [...document.querySelectorAll(".accordion")];
+
+	accordions.forEach((accordion) => new Accordion(accordion));
 }
 
-const accordions = [...document.querySelectorAll(".accordion")];
 
-accordions.forEach((accordion) => new Accordion(accordion));
-
-  
-}
-
-
-
-/*
-================================================================================
-KILL OLD SCROLLTRIGGERS
-================================================================================
-*/
-function killScrollTriggers() {
-  
-  let triggers = ScrollTrigger.getAll();
-  triggers.forEach( trigger => {			
-    trigger.kill();
-  }); 
-
-  
-}
-/*
 
 /*
 ================================================================================
