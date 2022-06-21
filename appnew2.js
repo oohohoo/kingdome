@@ -2534,7 +2534,7 @@ function heroPanelAnimation() {
     //markers: true,
     id: "hero"
 }}); */
-
+let splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
 
 gsap.set(".home-hero-video", {opacity:1})
 
@@ -2557,10 +2557,21 @@ tl.to(".anima-one", {
   opacity:.3
 })
 
+.fromTo(splitHeadings[index].chars, {autoAlpha: 0, yPercent: 200}, {
+  autoAlpha: 1,
+  yPercent: 0,
+  duration: 1,
+  ease: "power2",
+  stagger: {
+    each: 0.02,
+    from: "random"
+  }
+}, 0.2);
+/* 
 .to(".anima-two", {
   scale:0.8,
   opacity:.3
-}, "<0.1")
+}, "<0.1") */
 
 .to(".home-hero-video, .cta__slider", {
   opacity:0
