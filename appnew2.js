@@ -2064,7 +2064,7 @@ var swiper = new Swiper(".swiper-container-solo", {
     forceToAxis: true
   },
   //touchEventsTarget: "container",
-  freeMode: true
+  freeMode: true,
 
   
   // loopedSlides: 6,
