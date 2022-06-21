@@ -1522,13 +1522,13 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
     each: 0.01,
     from: "random"
   }
-}, 0.6)
+}, 0.65)
 
 
-.to(".home-hero-video, .cta__slider", {scale:1}, 0.4)
-.fromTo(".headhead", {xPercent:20}, {xPercent:60, duration: 0.8}, 0.5)
-.fromTo(".navin", {yPercent:100}, {yPercent:0, stagger:0.02}, 0.5)
-.fromTo(".hamby", {yPercent:100, opacity:0}, {yPercent:0, stagger:0.02, opacity:1}, 0.5)
+.to(".home-hero-video, .cta__slider", {scale:1}, 0.3)
+.fromTo(".headhead", {xPercent:20}, {xPercent:60, duration: 0.8}, 0.4)
+.fromTo(".navin", {yPercent:100}, {yPercent:0, stagger:0.02}, 0.4)
+.fromTo(".hamby", {yPercent:100, opacity:0}, {yPercent:0, stagger:0.02, opacity:1}, 0.4)
 /* 
 
   var tl = gsap.timeline({
