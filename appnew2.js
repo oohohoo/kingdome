@@ -1553,7 +1553,7 @@ tlout.to(".home-hero-video, .cta__slider", {
   opacity:.4,
 
 }, 0.2);
- */
+
 
 
 }
