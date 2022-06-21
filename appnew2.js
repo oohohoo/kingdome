@@ -1507,7 +1507,8 @@ gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 //gsap.set(".red-flag", {yPercent:100})
 
 
-/* FIRST */
+/* FIRST ----------------------------- */
+
 var tlin = gsap.timeline({});
 
 mySplitText = new SplitText(".head-split", {
@@ -1530,7 +1531,10 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
 .fromTo(".headhead", {xPercent:20}, {xPercent:60, duration: 0.8}, 0.4)
 .fromTo(".navin", {yPercent:100}, {yPercent:0, stagger:0.02}, 0.4)
 .fromTo(".hamby", {yPercent:100, opacity:0}, {yPercent:0, stagger:0.02, opacity:1}, 0.4)
-/* 
+ 
+
+
+/* SECOND ----------------------------- */
 
   var tl = gsap.timeline({
     scrollTrigger: {
@@ -1559,9 +1563,9 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
     each: 0.02,
     from: "random"
   }
-}, 0.2); */
+}, 0.2); 
 
-
+/* THIRD ----------------------------- */
 /* var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
