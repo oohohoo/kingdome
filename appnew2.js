@@ -1529,8 +1529,8 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
 //.fromTo(".red-flag", { }, {yPercent:0, rotate:300, duration: 0.8}, 0.4)
 
 
-
-var tlout = gsap.timeline({
+// UJEBAVA NAVIGACIJU 
+/* var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".section-home-hero",
@@ -1545,7 +1545,7 @@ var tlout = gsap.timeline({
 });
 
 tl.to(".home-hero-video, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2); 
-
+ */
 
 
 }
