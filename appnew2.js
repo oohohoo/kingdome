@@ -234,7 +234,7 @@ const progress = select('.progress');
    // .set(".aspect-video", {scale:2})
     /* .set(fadeintxt, {autoAlpha: 0}) */
     
-    .set(".main", {y: 150})
+    .set("#main", {y: 150})
 
      .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) 
 
@@ -269,7 +269,7 @@ const progress = select('.progress');
     //.from(".header-red-flag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
    // .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
     
-    .to('.main', {y: 0}, 0);
+    .to('#main', {y: 0}, 0);
 
   const tlLoader = gsap.timeline();
   tlLoader
