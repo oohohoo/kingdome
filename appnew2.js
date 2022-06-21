@@ -2535,9 +2535,10 @@ function heroPanelAnimation() {
     id: "hero"
 }}); */
 
-const splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
 
 gsap.set(".home-hero-video", {opacity:1})
+
+let splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
 
 let tl = gsap.timeline({
   scrollTrigger: {
