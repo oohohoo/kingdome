@@ -1530,7 +1530,7 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
 .to(".home-hero-video, .cta__slider", {
   opacity:.4,
   yPercent: 0
-}, 0.2) 
+}, 0.2); 
 
 
 /**/
