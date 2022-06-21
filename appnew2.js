@@ -213,7 +213,7 @@ function initLoader() {
   const mask = select('.loader__image--mask');
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
-
+  const loaderTxt = select('.loader-text');
   /*
   const fadeintxt = select('.home-hero-heading-wrapper');
   const txtdonji = select('.txtdonji');
@@ -242,7 +242,7 @@ const progress = select('.progress');
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
-    .set(".txt", {yPercent: 100})
+    .set(loaderTxt, {yPercent: 100})
     .set(mask, {yPercent: 0})
     .set(".imgg", {yPercent: 100})
    // .set(".hamby", {autoAlpha:0})
@@ -261,11 +261,11 @@ const progress = select('.progress');
 
     .addLabel('revealImage')
     /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
-    /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
+    /* .to(loaderTxt, {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
   //.to(image, {yPercent: 0}, 'revealImage-=0.5') 
   .to(".imgg", {yPercent: 0})
-   .to(".txt", {yPercent: 0}) 
-  //.to(".txt", {yPercent: 0, stagger: 0.3}, 'revealImage-=0.4')
+   .to(loaderTxt, {yPercent: 0}) 
+  //.to(loaderTxt, {yPercent: 0, stagger: 0.3}, 'revealImage-=0.4')
   //.to(".smallprint", {yPercent: 0})
 
 
