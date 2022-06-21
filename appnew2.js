@@ -1524,7 +1524,7 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
   }
 }, 0.5)
 
-.to(".header-red-flag", {yPercent:0}, 0.4);
+.to(".header-red-flag", {yPercent:0}, 0.4)
 
 
 .to(".home-hero-video, .cta__slider", {
