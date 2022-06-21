@@ -2551,7 +2551,6 @@ var mySplitText = new SplitText(".head-split", {
     pinSpacing: false,
     start: "top top",
     end: "bottom top",
-    markers: true,
     id: "hero"
   }
 })
