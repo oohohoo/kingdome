@@ -2547,7 +2547,7 @@ var mySplitText = new SplitText(".head-split", {
     scroller: ".smooth-scroll",
     trigger: ".home-hero_head-wrap",
     pin: ".section-home-hero",
-    scrub: true,
+    //scrub: true,
     pinSpacing: false,
     start: "top top",
     end: "bottom top",
