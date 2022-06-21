@@ -2568,7 +2568,7 @@ tl.to(".anima-one", {
     each: 0.02,
     from: "random"
   }
-}, 0.2);
+}, 0.2)
 /* 
 .to(".anima-two", {
   scale:0.8,
