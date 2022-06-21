@@ -1509,8 +1509,8 @@ gsap.set(".home-hero-video", {opacity:0})
     scrollTrigger: {
       scroller: ".smooth-scroll",
       trigger: ".head-split",
-      start: "top 50%",
-      end: "bottom 40%",
+      start: "top top",
+      end: "bottom top",
       markers: true,
       pin: ".section-home-hero",
       pinSpacing: false,
