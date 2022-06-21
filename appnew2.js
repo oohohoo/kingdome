@@ -2547,7 +2547,7 @@ var mySplitText = new SplitText(".head-split", {
     scroller: ".smooth-scroll",
     trigger: ".home-hero_head-wrap",
     pin: ".section-home-hero",
-    //scrub: true,
+    scrub: true,
     pinSpacing: false,
     start: "top top",
     end: "bottom top",
@@ -2556,11 +2556,15 @@ var mySplitText = new SplitText(".head-split", {
   }
 })
 
-tl.to(mySplitText.chars, {
+gsap.to(mySplitText.chars, {
   autoAlpha: 0,
   yPercent: 100,
   duration: 0.6,
   ease: "power2",
+  scrollTrigger: {
+    trigger: ".home-hero_head-wrap",
+    scrub: false,
+  }
   stagger: {
     each: 0.025,
     from: "random"
@@ -2579,7 +2583,7 @@ tl.to(mySplitText.chars, {
   opacity:.3
 }, "<0.1") */
 
-.to(".home-hero-video, .cta__slider", {
+tl.to(".home-hero-video, .cta__slider", {
   opacity:0
 }, 0)
 
