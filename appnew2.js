@@ -1581,7 +1581,7 @@ var tlout = gsap.timeline({
 });
 
 tlout.to(".home-hero-video, .cta__slider", {
-  opacity:.4,
+  opacity:1,
 
 }, 0.2); 
 
