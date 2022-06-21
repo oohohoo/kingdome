@@ -1503,7 +1503,7 @@ HERO PANEL ANIMATIONS
 */
 function heroPanelAnimation() {
 
-gsap.set(".home-hero-video", {opacity:0, yPercent: 15})
+gsap.set(".home-hero-video", {opacity:0, scale:1.1})
 
   var tl = gsap.timeline({
     scrollTrigger: {
@@ -1529,12 +1529,12 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
 
 .to(".home-hero-video, .cta__slider", {
   opacity:1,
-  yPercent: 0
-}, 0.2); 
+  scale:1,
+ }, 0.2);
 
 
 /**/
-
+/* 
 let tl2 = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
@@ -1557,7 +1557,7 @@ tl2.to(mySplitText.chars, {
    each: 0.02,
     from: "random"
   }
-}, 0.2)
+}, 0.2) */
 
 /* to(".anima-one", {
   scale:0.8,
