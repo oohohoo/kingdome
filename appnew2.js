@@ -570,6 +570,11 @@ BARBA VIEWS
 				productsoloAccordion();
 			},
 		},
+    {
+			namespace: "success",
+			beforeEnter(data) {
+				xxxx();
+			},
 	],
 	/*
 ================================================================================
@@ -1624,3 +1629,31 @@ gotoSection(0, 1);
 
 }
 
+/*
+================================================================================
+SUCCESS
+================================================================================
+*/
+function success() {
+
+  gsap.set(".success-button", {autoAlpha: 0})
+  //gsap.set(".red-flag", {yPercent:100})
+  
+  
+  var tl = gsap.timeline({});
+  
+ 
+  
+  tl.to(".success-button", {
+    autoAlpha: 1,
+    duration: 0.8,
+    ease: "power2",
+   }, 0.5)
+  
+  
+  //.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
+  //.fromTo(".red-flag", { }, {yPercent:0, rotate:300, duration: 0.8}, 0.4)
+  
+  
+  
+  }
