@@ -1514,8 +1514,8 @@ gsap.set(".home-hero-video", {opacity:1})
       markers: true,
      // pin: ".section-home-hero",
      // pinSpacing: false,
-    //  toggleActions: "restart none none none"
-      toggleActions: "restart reverse play reverse"
+      toggleActions: "restart none none none"
+   //   toggleActions: "restart reverse play reverse"
     }
   }),
 
