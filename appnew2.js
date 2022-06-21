@@ -327,7 +327,6 @@ function initContent() {
 			heroPanelAnimation();
 			startStopVideo();
 			swiperSolo();
-			homePinSections();
 			homeVideoClip();
 			headerHide();
 			toggleNavClass();
