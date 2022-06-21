@@ -1508,8 +1508,12 @@ gsap.set(".home-hero-video", {opacity:0, yPercent: 15})
   var tl = gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
-    trigger: ".section-home-hero",
-      toggleActions: "restart none none none"
+      trigger: ".head-split",
+      start: "top 50%",
+      end: "bottom 40%",
+      markers: true,
+    //  toggleActions: "restart none none none"
+      toggleActions: "restart reverse play reverse"
     }
   }),
   mySplitText = new SplitText(".head-split", {
