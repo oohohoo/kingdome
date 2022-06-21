@@ -1535,8 +1535,8 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".home-hero_head-wrap",
-    start: "top top",
-    end: "bottom top",
+ /*    start: "top top",
+    end: "bottom top", */
   //  markers: true,
     pin: ".section-home-hero",
     pinSpacing: false,
