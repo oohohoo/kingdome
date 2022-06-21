@@ -2559,7 +2559,6 @@ var mySplitText = new SplitText(".head-split", {
 tl.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 200}, {
   autoAlpha: 1,
   yPercent: 0,
-  rotate:360,
   duration: 1,
   ease: "power2",
   stagger: {
