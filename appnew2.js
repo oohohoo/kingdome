@@ -1521,7 +1521,7 @@ tl.from(mySplitText.chars, {
   opacity: 0,
   y: -100,
   ease: "elastic(1.8, 1.5)",
-  stagger: 0.025
+  stagger: 0.025,
 });
 
 
