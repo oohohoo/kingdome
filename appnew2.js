@@ -373,7 +373,7 @@ function initContent() {
 	//popupWizdome();
 //	buttonHover();
 	yearUpdate();
-	slideInHeaders();
+	//slideInHeaders();
 	fadeInOnEnter();
 	cubertoCursor();
 	//initNavigation();
