@@ -2562,7 +2562,7 @@ tl.to(".anima-one", {
   opacity:.3
 })
 
-.fromTo(splitHeadings[index].chars, {autoAlpha: 0, yPercent: 200}, {
+.fromTo(splitHeadings.chars, {autoAlpha: 0, yPercent: 200}, {
   autoAlpha: 1,
   yPercent: 0,
   duration: 1,
