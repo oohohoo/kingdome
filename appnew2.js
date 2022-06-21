@@ -213,8 +213,8 @@ function initLoader() {
   const mask = select('.loader__image--mask');
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
-/*   const loaderTxt = select('.loader-text');
- */  /*
+
+  /*
   const fadeintxt = select('.home-hero-heading-wrapper');
   const txtdonji = select('.txtdonji');
   const video = select('.aspect-video');
@@ -242,7 +242,7 @@ const progress = select('.progress');
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
-    .set(".loader-text", {yPercent: 100})
+    .set(".txt", {yPercent: 100})
     .set(mask, {yPercent: 0})
     .set(".imgg", {yPercent: 100})
    // .set(".hamby", {autoAlpha:0})
@@ -261,11 +261,11 @@ const progress = select('.progress');
 
     .addLabel('revealImage')
     /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
-    /* .to(loaderTxt, {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
+    /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
   //.to(image, {yPercent: 0}, 'revealImage-=0.5') 
   .to(".imgg", {yPercent: 0})
-   .to(".loader-text", {yPercent: 0}) 
-  //.to(loaderTxt, {yPercent: 0, stagger: 0.3}, 'revealImage-=0.4')
+   .to(".txt", {yPercent: 0}) 
+  //.to(".txt", {yPercent: 0, stagger: 0.3}, 'revealImage-=0.4')
   //.to(".smallprint", {yPercent: 0})
 
 
@@ -282,7 +282,7 @@ const progress = select('.progress');
   tlLoaderOut
   .to(".imgg", {yPercent:100})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
-    .to([".loader-text", loaderContent], {yPercent: -100}, 0)
+    .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
     //.to(".aspect-video", { scale:1, duration: 1.5, ease:'expo.inOut'}, "+=0.2")
     //.to(".hamby", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
@@ -327,6 +327,7 @@ function initContent() {
 			heroPanelAnimation();
 			startStopVideo();
 			swiperSolo();
+			homeVideoClip();
 			headerHide();
 		},
 		products: function () {
