@@ -1507,6 +1507,7 @@ gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 //gsap.set(".red-flag", {yPercent:100})
 
 
+/* FIRST */
 var tlin = gsap.timeline({});
 
 mySplitText = new SplitText(".head-split", {
@@ -1522,7 +1523,7 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
     each: 0.01,
     from: "random"
   }
-}, 0.65)
+}, 0.4)
 
 
 .to(".home-hero-video, .cta__slider", {scale:1}, 0.3)
