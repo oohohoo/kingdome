@@ -1569,7 +1569,7 @@ tlout.to(".home-hero-video, .cta__slider", {
     //  toggleActions: "restart none none none"
       toggleActions: "restart reverse play reverse"
     }
-  }),
+  });
 
 
 tl.to(".home-hero-video, .cta__slider", {
