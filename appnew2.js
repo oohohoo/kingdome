@@ -1514,17 +1514,16 @@ function heroPanelAnimation() {
     type: "words, lines, chars", linesClass: "clip-text"
   });
 
-tl.from(mySplitText.chars, {
-  duration: 2,
-  //skewY: 20,
-  rotationX: "+=90",
-  opacity: 0,
-  y: -100,
-  ease: "elastic(1.8, 1.5)",
-  stagger: 0.025,
-});
-
-
+tl.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 200}, {
+  autoAlpha: 1,
+  yPercent: 0,
+  duration: 1,
+  ease: "power2",
+  stagger: {
+    each: 0.02,
+    from: "random"
+  }
+}, 0.2);
 
 
 
