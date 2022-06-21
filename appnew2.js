@@ -2556,17 +2556,13 @@ var mySplitText = new SplitText(".head-split", {
   }
 })
 
-gsap.to(mySplitText.chars, {
+tl.to(mySplitText.words, {
   autoAlpha: 0,
   yPercent: 100,
   duration: 0.6,
   ease: "power2",
-  scrollTrigger: {
-    trigger: ".home-hero_head-wrap",
-    scrub: false,
-  },
   stagger: {
-    each: 0.025,
+    each: 0.02,
     from: "random"
   }
 }, 0.2)
@@ -2583,7 +2579,7 @@ gsap.to(mySplitText.chars, {
   opacity:.3
 }, "<0.1") */
 
-tl.to(".home-hero-video, .cta__slider", {
+.to(".home-hero-video, .cta__slider", {
   opacity:0
 }, 0)
 
