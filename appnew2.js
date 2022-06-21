@@ -2558,11 +2558,11 @@ var mySplitText = new SplitText(".head-split", {
 
 tl.to(mySplitText.chars, {
   autoAlpha: 0,
-  yPercent: 200,
+  yPercent: 100,
   duration: 0.6,
   ease: "power2",
   stagger: {
-    each: 0.05,
+    each: 0.025,
     from: "random"
   }
 }, 0.2)
