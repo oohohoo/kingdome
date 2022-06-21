@@ -2562,7 +2562,7 @@ tl.to(mySplitText.words, {
   ease: "power2",
   stagger: {
     each: 0.02,
-    from: "random"
+    from: "left"
   }
 }, 0.2)
 
