@@ -1510,7 +1510,7 @@ gsap.set(".home-hero-video", {opacity:1})
       scroller: ".smooth-scroll",
       trigger: ".section-home-hero",
       start: "top top",
-      end: "bottom top",
+      end: "bottom bottom-=100px",
       markers: true,
       pin: ".section-home-hero",
       pinSpacing: false,
