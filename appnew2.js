@@ -329,7 +329,6 @@ function initContent() {
 			swiperSolo();
 			homeVideoClip();
 			headerHide();
-			toggleNavClass();
 		},
 		products: function () {
 			//projectMainSwiper();
@@ -342,7 +341,6 @@ function initContent() {
 			akapowPinned();
 			logoMarquee();
 			startStopVideo();
-			toggleNavClass();
 		},
 		pageproductsingle: function () {
 			heroPanelAnimation();
@@ -350,7 +348,6 @@ function initContent() {
 			logoTransformOnScroll();
 			productsTabs();
 			swiperSolo();
-			toggleNavClass();
 		},
 		contact: function () {
 			webflowInteractions();
@@ -359,7 +356,6 @@ function initContent() {
 		faq: function () {
 			headerHide();
 			logoTransformOnScroll();
-			toggleNavClass();
 			// openMobileMenu();
 		},
 	};
@@ -1420,45 +1416,6 @@ videos.forEach(function(video, i) {
 })
 }
 
-
-
-
-/*
-================================================================================
-TOGGLE NAV CLASS
-================================================================================
-*/
-
-function toggleNavClass() {
-/* 
-
-const sections = document.querySelectorAll('.navchange');
-
-sections.forEach((section, index) => {
-  gsap.to(section, {autoAlpha: 1,
-    scrollTrigger: {
-      scroller: ".smooth-scroll",
-      trigger: section,
-      start: 'top bottom-=100',
-      toggleActions: 'play none none reverse',
-       //markers: true
-    }
-  });
-  
-  ScrollTrigger.create({
-    trigger: section,
-    scroller: ".smooth-scroll",
-    id: index+1,
-    start: "top top",
-    //end: "bottom bottom",
-    toggleActions: 'play reverse none reverse',
-    //toggleClass: {targets: section, className: "is-active"},
-    //toggleClass: {targets: ".blanding-nav", className: "is-active"},
-    // markers: true
-  })
-  
-}) */
-}
   
 /*
 ================================================================================
