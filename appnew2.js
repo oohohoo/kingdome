@@ -1529,6 +1529,7 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
 //.fromTo(".red-flag", { }, {yPercent:0, rotate:300, duration: 0.8}, 0.4)
 
 
+ODAVDE
 // UJEBAVA NAVIGACIJU 
 /* var tlout = gsap.timeline({
   scrollTrigger: {
