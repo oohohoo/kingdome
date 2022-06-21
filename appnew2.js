@@ -2538,8 +2538,10 @@ function heroPanelAnimation() {
 
 gsap.set(".home-hero-video", {opacity:1})
 
-let splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
-headings = gsap.utils.toArray(".head-split"),
+let headings = gsap.utils.toArray(".head-split"),
+
+splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
+
 
  tl = gsap.timeline({
   scrollTrigger: {
