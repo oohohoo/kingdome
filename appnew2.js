@@ -2,7 +2,7 @@
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
-gsap.registerPlugin(Observer);
+//gsap.registerPlugin(Observer);
 
 let locoScroll;
 
