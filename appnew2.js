@@ -1430,7 +1430,7 @@ TOGGLE NAV CLASS
 */
 
 function toggleNavClass() {
-
+/* 
 
 const sections = document.querySelectorAll('.navchange');
 
@@ -1457,7 +1457,7 @@ sections.forEach((section, index) => {
     // markers: true
   })
   
-})
+}) */
 }
   
 /*
