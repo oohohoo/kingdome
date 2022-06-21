@@ -1413,7 +1413,7 @@ function fadeInOnEnter() {
   
 /****************** SPLIT HEADER */
 
-  var tl = gsap.timeline({
+/*   var tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".splitty",
       scroller: ".smooth-scroll",
@@ -1439,7 +1439,7 @@ tl.from(mySplitText.chars, {
   yPercent: 100,
   ease: "quart.inOut",
   stagger: 0.025
-});
+}); */
 
 /******************* */
 
