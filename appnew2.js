@@ -640,7 +640,7 @@ BARBA VIEWS
     }},{
     namespace: 'products',
     beforeEnter(data){
-     projectMainSwiper();
+    // projectMainSwiper();
      navOnDark();
      productObserver();
      
@@ -1304,7 +1304,7 @@ PRODUCTS - FULLSCREEN SWIPER
 ================================================================================
 */
 function projectMainSwiper() {
-
+/*
   const slider = document.getElementById("js-cta-slider");
   const sliderCounter = document.getElementById("js-cta-slider-counter");
   const sliderNext = document.getElementById("js-cta-slider-next");
@@ -1347,7 +1347,7 @@ function projectMainSwiper() {
 
   swipermain.update();
   console.log("SWIPER UPDATED");
- 
+ */
 }
 
 
