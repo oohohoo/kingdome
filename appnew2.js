@@ -252,7 +252,7 @@ const progress = select('.progress');
     //.set(".main", {y: 150})
 
      .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) 
-    .to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'}) 
+    //.to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'}) 
    //.from(targets, {opacity:0, yPercent: 100, ease: "expo.inOut", stagger: 0.15})
    //.from(txtdonji, {opacity:0, yPercent: 100, ease: "expo.inOut"}, "+=0.2")
   
