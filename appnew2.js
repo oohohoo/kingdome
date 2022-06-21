@@ -1653,8 +1653,8 @@ function success() {
   
   tl.to(".success-button", {
     autoAlpha: 1,
-    duration: 0.8,
-  }, 0.5)
+    duration: 0.6,
+  }, 1)
   
   
   //.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
