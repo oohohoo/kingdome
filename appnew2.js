@@ -210,7 +210,7 @@ function initLoader() {
   });
 
   //const image = select('.loader-img-img');
-  const mask = select('.loader__image--mask');
+ // const mask = select('.loader__image--mask');
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
 
@@ -224,21 +224,6 @@ const loaderInner = select('.inner-loader');
 const progress = select('.progress');
 
 
-/* 
-//  const loader = select('.loader'); 
-  const loaderInner = select('.inner-loader');
-
-  const titles = document.querySelectorAll('[data-split-this-container] > div');
-  let targets = [];
-
-  titles.forEach(title => {
-    if (title.classList.contains("txtgornji")) {
-      targets.push(title);
-    } else {
-      targets.push(new SplitText(title, {type: "words"}).words);
-    }
-  });
-*/
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
@@ -249,17 +234,13 @@ const progress = select('.progress');
    // .set(".aspect-video", {scale:2})
     /* .set(fadeintxt, {autoAlpha: 0}) */
     
-    //.set(".main", {y: 150})
+    .set(".main", {y: 150})
 
      .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) 
     //.to(fadeintxt, {autoAlpha: 1, ease: 'power1.inOut'}) 
    //.from(targets, {opacity:0, yPercent: 100, ease: "expo.inOut", stagger: 0.15})
    //.from(txtdonji, {opacity:0, yPercent: 100, ease: "expo.inOut"}, "+=0.2")
-  
-
-  
-
-    .addLabel('revealImage')
+     .addLabel('revealImage')
     /* .to(image, {yPercent: 0}, 'revealImage-=0.5') */
     /* .to(".txt", {yPercent: 0, stagger: 0.2}, 'revealImage-=0.4'); */
   //.to(image, {yPercent: 0}, 'revealImage-=0.5') 
@@ -289,7 +270,7 @@ const progress = select('.progress');
     //.from(".header-red-flag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
    // .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
     
-    //.to('.main', {y: 0}, 0);
+    .to('.main', {y: 0}, 0);
 
   const tlLoader = gsap.timeline();
   tlLoader
