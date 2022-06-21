@@ -1513,7 +1513,7 @@ mySplitText = new SplitText(".head-split", {
   type: "words, lines, chars", linesClass: "clip-text"
 });
 
-tlin.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
+tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
   autoAlpha: 1,
   yPercent: 0,
   duration: 0.8,
