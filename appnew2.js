@@ -412,9 +412,8 @@ function initContent() {
  
   fullscreenMenu();
   scrollToTop();
-  underline();
- 
-  //popupWizdome();
+ // underline();
+   //popupWizdome();
   buttonHover();
   yearUpdate();
   //fadeInElements();
@@ -642,7 +641,7 @@ BARBA VIEWS
     beforeEnter(data){
     // projectMainSwiper();
      navOnDark();
-     productObserver();
+     //productObserver();
      
 
     }},{
