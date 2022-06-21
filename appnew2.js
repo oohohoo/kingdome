@@ -1516,10 +1516,10 @@ mySplitText = new SplitText(".head-split", {
 tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
   autoAlpha: 1,
   yPercent: 0,
-  duration: 0.8,
+ // duration: 0.8,
   ease: "power2",
   stagger: {
-    each: 0.02,
+    each: 0.015,
     from: "random"
   }
 }, 0.6)
