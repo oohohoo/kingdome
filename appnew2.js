@@ -1520,7 +1520,7 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 200}, {
   duration: 1,
   ease: "power2",
   stagger: {
-    each: 0.02,
+    each: 0.001,
     from: "random"
   }
 }, 0.2);
