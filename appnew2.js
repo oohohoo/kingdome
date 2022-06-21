@@ -2593,7 +2593,7 @@ let sections = document.querySelectorAll(".project-slide"),
     headings = gsap.utils.toArray(".section-heading"),
     outerWrappers = gsap.utils.toArray(".outer"),
     innerWrappers = gsap.utils.toArray(".inner"),
-    splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
+    splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "head-split"})),
     currentIndex = -1,
     wrap = gsap.utils.wrap(0, sections.length - 1),
     animating;
