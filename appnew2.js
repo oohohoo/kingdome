@@ -1528,7 +1528,7 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
 .to(".home-hero-video, .cta__slider", {
  scale:1
 
-}, 0.5);
+}, 0.2);
 /* 
 
   var tl = gsap.timeline({
