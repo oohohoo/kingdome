@@ -557,7 +557,6 @@ BARBA VIEWS
 		{
 			namespace: "products",
 			beforeEnter(data) {
-				navOnDark();
 				productObserver();
 			},
 		},
@@ -1414,18 +1413,6 @@ videos.forEach(function(video, i) {
   });
   
 })
-}
-
-  
-/*
-================================================================================
-HOME PIN SECTIONS
-================================================================================
-*/
-
-function navOnDark() {
-
-$( ".header" ).addClass( "is-active" );
 }
 
 
