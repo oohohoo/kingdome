@@ -1510,18 +1510,17 @@ var mySplitText = new SplitText(".head-split", {
   type: "words, lines, chars", linesClass: "clip-text"
 });
 
-gsap.from(mySplitText.chars, {
-  delay:5,
-  autoAlpha: 0,
-  yPercent: 100,
-  duration:1,
+
+gsap.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 120}, {
+  autoAlpha: 1,
+  yPercent: 0,
+  duration: 1,
   ease: "power2",
   stagger: {
-   each: 0.02,
+    each: 0.02,
     from: "random"
   }
-}, 0.2)
-
+}, 0.2);
 
 
 
