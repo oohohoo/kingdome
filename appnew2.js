@@ -1549,15 +1549,14 @@ var tlout = gsap.timeline({
   }
 });
 
-tlout.to(".home-hero-video, .cta__slider", {
-  opacity:0.4,
+tl.to(".home-hero-video, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2)
 
 }, 0.2); 
 
 
 /* THIRD ----------------------------- */
-/*
-  var tl = gsap.timeline({
+
+/*   var tl = gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
       trigger: ".home-hero_component",
@@ -1574,9 +1573,9 @@ tlout.to(".home-hero-video, .cta__slider", {
 
 tl.to(".home-hero-video, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2)
 
-*/
-}
 
+}
+ */
 
 /*
 ================================================================================
