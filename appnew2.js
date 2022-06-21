@@ -1640,7 +1640,7 @@ function success() {
   //gsap.set(".red-flag", {yPercent:100})
   
   
-  var tl = gsap.timeline({});
+  var tl = gsap.timeline({})
   
  
   
