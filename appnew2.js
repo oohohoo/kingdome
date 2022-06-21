@@ -228,7 +228,7 @@ const progress = select('.progress');
 
     .set(loaderContent, {autoAlpha: 1})
     .set(".txt", {yPercent: 100})
-    .set(mask, {yPercent: 0})
+    //.set(mask, {yPercent: 0})
     .set(".imgg", {yPercent: 100})
    // .set(".hamby", {autoAlpha:0})
    // .set(".aspect-video", {scale:2})
