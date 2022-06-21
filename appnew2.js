@@ -373,7 +373,6 @@ function initContent() {
 	//popupWizdome();
 //	buttonHover();
 	yearUpdate();
-	slideInHeaders();
 	fadeInOnEnter();
 	cubertoCursor();
 	//initNavigation();
@@ -1394,72 +1393,6 @@ function swiperSolo() {
 	});
 }
 
-/*
-================================================================================
-SWIPER PRODUCT HOMEPAGE
-================================================================================
-*/
-
-function swiperCustomPaginationHome() {
-  var menu = ['01', '02', '03']
-  var swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (menu[index]) + '</span>';
-          },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false
-    },
-    loop: true,
-    watchSlidesProgress: true
-  });
-  
-  // var swiperEl = document.querySelector('.swiper-container');
-  
-  // swiperEl.addEventListener('mouseenter', function(event) {
-  document.addEventListener('mouseenter', event => {
-    const el = event.target;
-    if (el && el.matches && el.matches('.swiper-container')) {
-      // console.log('mouseenter');
-      // console.log('autoplay running', swiper.autoplay.running);
-      el.swiper.autoplay.stop();
-      el.classList.add('swiper-paused');
-      
-      const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
-      activeNavItem.style.animationPlayState="paused";
-    }
-  }, true);
-  
-  document.addEventListener('mouseleave', event => {
-    // console.log('mouseleave', swiper.activeIndex, swiper.slides[swiper.activeIndex].progress);
-    // console.log('autoplay running', swiper.autoplay.running);
-    const el = event.target;
-    if (el && el.matches && el.matches('.swiper-container')) {
-      el.swiper.autoplay.start();
-      el.classList.remove('swiper-paused');
-  
-      const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
-      
-      activeNavItem.classList.remove('swiper-pagination-bullet-active');
-      // activeNavItem.style.animation = 'none';
-  
-      setTimeout(() => {
-        activeNavItem.classList.add('swiper-pagination-bullet-active');
-        // activeNavItem.style.animation = '';
-      }, 10);
-    }
-  }, true);
-  console.log("SWIPER CUSTOM PAGINATION");
-}
-
 
 /*
 ================================================================================
@@ -1489,90 +1422,7 @@ videos.forEach(function(video, i) {
 }
 
 
-/*
-================================================================================
-HOME PIN SECTIONS / nema na home
-================================================================================
-*/
 
-function homePinSections() {
-
-
-gsap.utils.toArray(".picturewrap").forEach((panel, i) => {
-  ScrollTrigger.create({
-    scroller: ".smooth-scroll",
-    trigger: panel,
-    start: "top top", 
-    pin: true, 
-  });
-});
-
-}
-
-
-/*
-================================================================================
-FADE IN ELEMENTS // NE RADI
-================================================================================
-*/
-
-function fadeInElements() {
-
-/*   let fadein = gsap.utils.toArray('.fie')
-
-  fadein.forEach((item, index) => {
-  
-    let exptl = gsap.timeline({
-      scrollTrigger:{
-        scroller: ".smooth-scroll",
-        trigger: item,
-        start: "top 85%",
-        end: "top 5%",
-        scrub: 2,
-        markers: true,
-      }
-    });
-    exptl.from(item, {
-      y: 40,
-      opacity: 0,
-      duration: 1, 
-      ease: "expo.out",
-    });
-    
-  });
- */
-  /*
-
-  gsap.defaults({ease: "power3"});
-  gsap.set(".fie", {y: 100});
-  
-  let tl;
-  
-  ScrollTrigger.batch(".fie", {
-    start: "top bottom-=100px",
-    // interval: 0.25,
-    stagger: 3,
-    onEnter: batch => {
-      if(tl && tl.isActive()) {
-        tl.to(batch, {opacity: 1, y: 0, backgroundSize: "100%", stagger: 0.5})
-      } else {
-        tl = gsap.timeline().to(batch, {opacity: 1, y: 0, backgroundSize: "100%", stagger: 0.5})
-      }
-    },
-  });
-/*
-gsap.set(".fie", {opacity: 0});
-
-ScrollTrigger.batch(".fie", {
-  onEnter: batch => gsap.to(batch, {duration:1, opacity: 1, stagger: 0.15, overwrite: true}),
-  onLeave: batch => gsap.set(batch, {duration:1, rotate:360, opacity: 0, overwrite: true}),
-  onEnterBack: batch => gsap.to(batch, {duration:1,  opacity: 1, stagger: 0.15, overwrite: true}),
-  //onLeaveBack: batch => gsap.set(batch, {duration:1,  opacity: 0, overwrite: true})
-});
-
-ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".fie", {opacity: 0}));
-*/
-}
 
 /*
 ================================================================================
@@ -1609,38 +1459,9 @@ sections.forEach((section, index) => {
   })
   
 })
-
-
-
+}
+  
 /*
-  var elementFirst = document.querySelector('.list');
-  //var elementSecond = document.querySelector('.box2');
- // var elementThird = document.querySelector('.box3');
-  
-  ScrollTrigger.create({
-    trigger: ".navchange",
-    markers: true,
-    start: "top top",
-    end: "top top",
-    scroller: ".smooth-scroll",
-    // once: "true",
-    // toggleClass: {targets: ".box1, .box2", className: "active, leave, hide"},
-    // toggleActions: "play resume resume reset",
-  
-    onEnter: () => myfunction(),
-    onLeaveBack: () => myfunction(),
-  
-  });
-  
-  function myfunction() {
-    elementFirst.classList.toggle('is-active')
-   // elementSecond.classList.toggle('leave');
-  //  elementThird.classList.toggle('hide');
-  };
-*/
-  }
-  
-  /*
 ================================================================================
 HOME PIN SECTIONS
 ================================================================================
