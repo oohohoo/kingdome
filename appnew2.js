@@ -1534,7 +1534,7 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
  var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
-    trigger: ".home-hero_component",
+    trigger: ".home-hero_head-wrap",
     start: "top top",
     end: "bottom top",
   //  markers: true,
