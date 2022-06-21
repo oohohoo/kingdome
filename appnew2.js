@@ -1518,7 +1518,7 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
   autoAlpha: 1,
   yPercent: 0,
   duration: 1,
-  rotateY: 180,
+  rotateX: 180,
   ease: "power2",
   stagger: {
     each: 0.02,
