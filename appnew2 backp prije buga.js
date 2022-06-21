@@ -1504,8 +1504,10 @@ HERO PANEL ANIMATIONS
 function heroPanelAnimation() {
 
 gsap.set(".home-hero-video", {opacity:1, scale:1.2})
-gsap.set(".red-flag", {yPercent:100})
+//gsap.set(".red-flag", {yPercent:100})
 
+
+/* FIRST ----------------------------- */
 
 var tlin = gsap.timeline({});
 
@@ -1516,56 +1518,30 @@ mySplitText = new SplitText(".head-split", {
 tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
   autoAlpha: 1,
   yPercent: 0,
-  duration: 0.8,
+ // duration: 0.8,
   ease: "power2",
   stagger: {
-    each: 0.02,
+    each: 0.01,
     from: "random"
   }
-}, 0.5)
+}, 0.4)
 
 
-.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
-.fromTo(".red-flag", { }, {yPercent:0, rotate:300, duration: 0.8}, 0.4)
-/* 
-
-  var tl = gsap.timeline({
-    scrollTrigger: {
-      scroller: ".smooth-scroll",
-      trigger: ".home-hero_component",
-      start: "top top",
-      end: "bottom bottom-=100px",
-      markers: true,
-     // pin: ".section-home-hero",
-     // pinSpacing: false,
-      toggleActions: "restart none none none"
-   //   toggleActions: "restart reverse play reverse"
-    }
-  }),
-
-  mySplitText = new SplitText(".head-split", {
-    type: "words, lines, chars", linesClass: "clip-text"
-  });
-
-tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
-  autoAlpha: 1,
-  yPercent: 0,
-  duration: 1,
-  ease: "power2",
-  stagger: {
-    each: 0.02,
-    from: "random"
-  }
-}, 0.2); */
+.to(".home-hero-video, .cta__slider", {scale:1}, 0.3)
+/* .fromTo(".headhead", {xPercent:20}, {xPercent:60, duration: 0.8}, 0.4)
+.fromTo(".navin", {yPercent:100}, {yPercent:0, stagger:0.02}, 0.4)
+.fromTo(".hamby", {yPercent:100, opacity:0}, {yPercent:0, stagger:0.02, opacity:1}, 0.4) */
+ 
 
 
-/* var tlout = gsap.timeline({
+/* SECOND ----------------------------- */
+var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".section-home-hero",
     start: "top top",
     end: "bottom top",
-    markers: true,
+  //  markers: true,
     pin: ".section-home-hero",
     pinSpacing: false,
   //  toggleActions: "restart none none none"
@@ -1573,15 +1549,31 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
   }
 });
 
-tlout.to(".home-hero-video, .cta__slider", {
-  opacity:.4,
-
-}, 0.2); */
+tl.to(".home-hero-video, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2); 
 
 
+/* THIRD ----------------------------- */
 
+/*   var tl = gsap.timeline({
+    scrollTrigger: {
+      scroller: ".smooth-scroll",
+      trigger: ".home-hero_component",
+      start: "top top",
+    end: "bottom top",
+     markers: true,
+     // pin: ".section-home-hero",
+     // pinSpacing: false,
+    //  toggleActions: "restart none none none"
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+
+
+tl.to(".home-hero-video, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2)
+
+*/
 }
-
+ 
 
 /*
 ================================================================================
