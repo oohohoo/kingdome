@@ -2059,28 +2059,22 @@ var swiper = new Swiper(".swiper-container-solo", {
   slidesPerView: "auto",
   keyboard: true,
   direction: "horizontal",
-
- // speed: 800,
   mousewheel: {
     forceToAxis: true
   },
  // touchEventsTarget: "container",
   freeMode: true,
-
-
-   loopedSlides: 6,
-   loop: true,
-   spaceBetween: 20,
+  loopedSlides: 6,
+  loop: true,
+  spaceBetween: 20,
   //slidesPerView: 1,
   // freeMode: false,
    grabCursor: true,
-   //mousewheel: false,
- /*
+
    autoplay: {
      delay: 3000,
  disableOnInteraction: false,
    },
- */
 
       //   parallax: true,
          speed: 800,
