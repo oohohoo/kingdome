@@ -1503,7 +1503,7 @@ HERO PANEL ANIMATIONS
 */
 function heroPanelAnimation() {
 
-gsap.set(".home-hero-video", {opacity:0})
+gsap.set(".home-hero-video", {opacity:1})
 
   var tl = gsap.timeline({
     scrollTrigger: {
