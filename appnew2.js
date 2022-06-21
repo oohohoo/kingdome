@@ -2545,7 +2545,7 @@ var mySplitText = new SplitText(".head-split", {
  tl = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
-    trigger: ".head-split",
+    trigger: ".home-hero_head-wrap",
     pin: ".section-home-hero",
     scrub: true,
     pinSpacing: false,
