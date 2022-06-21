@@ -1511,13 +1511,14 @@ gsap.set(".home-hero-video", {opacity:1})
       trigger: ".section-home-hero",
       start: "top top",
       end: "bottom bottom-=100px",
-      markers: true,
-      pin: ".section-home-hero",
-      pinSpacing: false,
+    //  markers: true,
+     // pin: ".section-home-hero",
+     // pinSpacing: false,
     //  toggleActions: "restart none none none"
       toggleActions: "restart reverse play reverse"
     }
   }),
+
   mySplitText = new SplitText(".head-split", {
     type: "words, lines, chars", linesClass: "clip-text"
   });
@@ -1531,7 +1532,41 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
     each: 0.02,
     from: "random"
   }
-}, 0.2)
+}, 0.2);
+
+
+var tlout = gsap.timeline({
+  scrollTrigger: {
+    scroller: ".smooth-scroll",
+    trigger: ".section-home-hero",
+    start: "top top",
+    end: "bottom top",
+    markers: true,
+    pin: ".section-home-hero",
+    pinSpacing: false,
+  //  toggleActions: "restart none none none"
+    toggleActions: "restart reverse play reverse"
+  }
+}),
+
+mySplitText = new SplitText(".head-split", {
+  type: "words, lines, chars", linesClass: "clip-text"
+});
+
+tlout.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
+autoAlpha: 1,
+yPercent: 0,
+duration: 1,
+ease: "power2",
+stagger: {
+  each: 0.02,
+  from: "random"
+}
+}, 0.2);
+
+
+
+
 
 /* .to(".home-hero-video, .cta__slider", {
   opacity:1,
