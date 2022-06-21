@@ -2637,10 +2637,10 @@ currentIndex = index;
 Observer.create({
 type: "wheel,touch,pointer",
 wheelSpeed: -1,
-onDown: () => {
+onUp: () => {
   !animating && gotoSection(currentIndex - 1, -1)
 },
-onUp: () => {
+onDown: () => {
   !animating && gotoSection(currentIndex + 1, 1)
 },
 tolerance: 5,
