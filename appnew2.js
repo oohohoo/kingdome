@@ -1550,13 +1550,13 @@ var tlout = gsap.timeline({
 });
 
 tlout.to(".home-hero-video, .cta__slider", {
-  opacity:1,
+  opacity:0.4,
 
 }, 0.2); 
 
 
 /* THIRD ----------------------------- */
-
+/*
   var tl = gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
@@ -1574,7 +1574,7 @@ tlout.to(".home-hero-video, .cta__slider", {
 
 tl.to(".home-hero-video, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2)
 
-
+*/
 }
 
 
