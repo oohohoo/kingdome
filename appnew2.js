@@ -2053,16 +2053,16 @@ SWIPER PROJECT SOLO
 ================================================================================
 */
 
-function swiperSolo() {
+function swiperSolox() {
 var swiper = new Swiper(".swiper-container-solo", {
  
   slidesPerView: "auto",
   keyboard: true,
   direction: "horizontal",
-  /*
+
   mousewheel: {
     forceToAxis: true
-  },*/
+  },
  // touchEventsTarget: "container",
   freeMode: true,
  loopedSlides: 6,
