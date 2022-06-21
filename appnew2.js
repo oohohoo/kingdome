@@ -1508,7 +1508,7 @@ gsap.set(".home-hero-video", {opacity:1})
   var tl = gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
-      trigger: ".section-home-hero",
+      trigger: ".home-hero_component",
       start: "top top",
       end: "bottom bottom-=100px",
       markers: true,
