@@ -1515,7 +1515,7 @@ HERO PANEL ANIMATIONS
 */
 function heroPanelAnimation() {
 
-gsap.set(".home-hero-video", {opacity:1, scale:1.2})
+//gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 //gsap.set(".red-flag", {yPercent:100})
 
 
@@ -1537,7 +1537,7 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
 }, 0.5)
 
 
-.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
+//.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
 //.fromTo(".red-flag", { }, {yPercent:0, rotate:300, duration: 0.8}, 0.4)
 
 
