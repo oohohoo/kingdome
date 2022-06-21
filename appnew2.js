@@ -1519,7 +1519,7 @@ var mySplitText = new SplitText(".head-split", {
     scroller: ".smooth-scroll",
     trigger: ".section-home-hero",
     pin: ".section-home-hero",
-    scrub: true,
+    //scrub: true,
     pinSpacing: false,
     start: "top top",
     end: "bottom top",
@@ -1528,7 +1528,7 @@ var mySplitText = new SplitText(".head-split", {
 })
 
 tl.to(mySplitText.chars, {
-  //autoAlpha: 0,
+  autoAlpha: 0,
   yPercent: 100,
   duration:1,
   ease: "power2",
