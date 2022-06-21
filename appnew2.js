@@ -2059,49 +2059,46 @@ var swiper = new Swiper(".swiper-container-solo", {
   keyboard: true,
   direction: "horizontal",
   loop: false,
-  speed: 800,
+
   mousewheel: {
     forceToAxis: true
   },
- // touchEventsTarget: "container",
+  //touchEventsTarget: "container",
   freeMode: true
-/*
 
-   loopedSlides: 6,
-   loop: true,
+  
+  // loopedSlides: 6,
+  // loop: true,
    spaceBetween: 24,
-  slidesPerView: 1,
-   freeMode: false,
+ // slidesPerView: 1,
+ //  freeMode: false,
    grabCursor: true,
-   mousewheel: false,
-
+ //  mousewheel: false,
+ /*
    autoplay: {
      delay: 3000,
  disableOnInteraction: false,
    },
+ */
 
-
-         parallax: true,
-         speed: 1000,
+      //   parallax: true,
+         speed: 800,
          breakpoints: {
                          500: {
-                            spaceBetween: 24,
+                            spaceBetween: 20,
                            //  loopedSlides: 3,
                              slidesPerView: 1
                          },
                          1e3: {
-                            loopedSlides: 3,
+                          //  loopedSlides: 20,
                              spaceBetween: 24,
                              slidesPerView: 1.1
                          },
                          1200: {
-                             spaceBetween: 24,
+                             spaceBetween: 20,
                              slidesPerView: 1.2
                          }
                      }
-
-
-                     */
  });
 
 }
