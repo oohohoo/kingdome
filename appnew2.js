@@ -2557,7 +2557,7 @@ splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,wo
   }
 })
 
-tl.fromTo(splitHeadings.words, {autoAlpha: 0, yPercent: 200}, {
+tl.fromTo(splitHeadings, {autoAlpha: 0, yPercent: 200}, {
   autoAlpha: 1,
   yPercent: 0,
   rotate:360,
