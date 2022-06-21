@@ -1571,11 +1571,11 @@ tl2.to(mySplitText.chars, {
   opacity:.3
 }, "<0.1")  */
 
-.to(".home-hero-video, .cta__slider", {
+/* .to(".home-hero-video, .cta__slider", {
   opacity:0.4,
   yPercent: -15
 }, 0)
-
+ */
 
 
 
