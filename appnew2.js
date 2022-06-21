@@ -2556,13 +2556,13 @@ var mySplitText = new SplitText(".head-split", {
   }
 })
 
-tl.to(mySplitText.words, {
+tl.to(mySplitText.chars, {
   autoAlpha: 0,
-  yPercent: 100,
+  yPercent: 200,
   duration: 0.6,
   ease: "power2",
   stagger: {
-    each: 0.02,
+    each: 0.05,
     from: "random"
   }
 }, 0.2)
