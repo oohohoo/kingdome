@@ -1535,7 +1535,7 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
 
 
 /* SECOND ----------------------------- */
-
+/*
   var tl = gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
@@ -1564,9 +1564,9 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
     from: "random"
   }
 }, 0.2); 
-
+*/
 /* THIRD ----------------------------- */
-/* var tlout = gsap.timeline({
+var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".section-home-hero",
@@ -1583,7 +1583,7 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
 tlout.to(".home-hero-video, .cta__slider", {
   opacity:.4,
 
-}, 0.2); */
+}, 0.2); 
 
 
 
