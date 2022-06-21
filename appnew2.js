@@ -559,7 +559,6 @@ BARBA VIEWS
 		{
 			namespace: "home",
 			beforeEnter(data) {
-				rotateWireframe();
 				parallaxPanel();
 				homeProductHover();
 			},
