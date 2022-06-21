@@ -1549,9 +1549,7 @@ var tlout = gsap.timeline({
   }
 });
 
-tl.to(".home-hero-video, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2)
-
-}, 0.2); 
+tl.to(".home-hero-video, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2); 
 
 
 /* THIRD ----------------------------- */
