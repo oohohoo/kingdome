@@ -2594,6 +2594,144 @@ tl.to(mySplitText.words, {
 
 
 
+//////////
+
+
+
+/**/
+/* 
+let tl2 = gsap.timeline({
+  scrollTrigger: {
+    scroller: ".smooth-scroll",
+    trigger: ".section-home-hero",
+    pin: ".section-home-hero",
+    scrub: true,
+    pinSpacing: false,
+    start: "top top",
+    end: "bottom top",
+    id: "hero"
+  }
+})
+
+tl2.to(mySplitText.chars, {
+  autoAlpha: 0,
+  yPercent: 100,
+  duration:1,
+  ease: "power2",
+  stagger: {
+   each: 0.02,
+    from: "random"
+  }
+}, 0.2) */
+
+/* to(".anima-one", {
+  scale:0.8,
+  opacity:.3
+})  */
+
+
+
+/* .to(".anima-two", {
+  scale:0.8,
+  opacity:.3
+}, "<0.1")  */
+
+/* .to(".home-hero-video, .cta__slider", {
+  opacity:0.4,
+  yPercent: -15
+}, 0)
+ */
+
+
+
+
+
+
+
+
+  /**//* 
+//gsap.set(".home-hero-video", {opacity:0})
+
+// HERO INTRO ANIMATIONS
+var mySplitText = new SplitText(".head-split", {
+  type: "words, lines, chars", linesClass: "clip-text"
+});
+
+let tl = gsap.timeline({})
+
+
+tl.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 120}, {
+  autoAlpha: 1,
+  yPercent: 0,
+  duration: 1,
+  ease: "power2",
+  stagger: {
+    each: 0.02,
+    from: "random"
+  }
+}, 0.2)
+
+.to(".home-hero-video, .cta__slider", {
+  opacity:1,
+  yPercent: -15
+}, 0) 
+
+
+
+let tl2 = gsap.timeline({
+  scrollTrigger: {
+    scroller: ".smooth-scroll",
+    trigger: ".section-home-hero",
+    pin: ".section-home-hero",
+    scrub: true,
+    pinSpacing: false,
+    start: "top top",
+    end: "bottom top",
+    id: "hero"
+  }
+})
+
+tl2.to(mySplitText.chars, {
+  autoAlpha: 0,
+  yPercent: 100,
+  duration:1,
+  ease: "power2",
+  stagger: {
+   each: 0.02,
+    from: "random"
+  }
+}, 0.2)
+
+to(".anima-one", {
+  scale:0.8,
+  opacity:.3
+}) 
+
+
+
+.to(".anima-two", {
+  scale:0.8,
+  opacity:.3
+}, "<0.1") 
+
+.to(".home-hero-video, .cta__slider", {
+  opacity:0.4,
+  yPercent: -15
+}, 0)
+
+
+
+ tl.to(".wiper", {
+  yPercent: -100,
+  ease: "none"
+})
+  */
+
+
+
+/////////
+
+
 }
 
 
