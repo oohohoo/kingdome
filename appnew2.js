@@ -2579,7 +2579,8 @@ tl.to(mySplitText.words, {
 }, "<0.1") */
 
 .to(".home-hero-video, .cta__slider", {
-  opacity:0.4
+  opacity:0.4,
+  yPercent: -15
 }, 0)
 
 
