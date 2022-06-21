@@ -1572,11 +1572,7 @@ tlout.to(".home-hero-video, .cta__slider", {
   });
 
 
-tl.to(".home-hero-video, .cta__slider", {
-  opacity:0.4,
-
-})
-
+tl.to(".home-hero-video, .cta__slider", {opacity:0.4,})
 
  .to(mySplitText.chars, {autoAlpha: 0, yPercent: 100, duration: 1, ease: "power2", 
     stagger: {
