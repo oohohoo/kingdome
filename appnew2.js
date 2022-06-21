@@ -2540,7 +2540,7 @@ gsap.set(".home-hero-video", {opacity:1})
 
 let splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
 
-let tl = gsap.timeline({
+ tl = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".section-home-hero",
