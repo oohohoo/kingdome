@@ -2561,7 +2561,7 @@ tl.to(mySplitText.words, {
   duration: 0.6,
   ease: "power2",
   stagger: {
-    each: 0.02,
+   // each: 0.02,
     from: "left"
   }
 }, 0.2)
