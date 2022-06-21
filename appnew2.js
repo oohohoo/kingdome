@@ -2055,6 +2055,18 @@ SWIPER PROJECT SOLO
 
 function swiperSolo() {
 var swiper = new Swiper(".swiper-container-solo", {
+  slidesPerView: "auto",
+  keyboard: true,
+  direction: "horizontal",
+  loop: false,
+  speed: 800,
+  mousewheel: {
+    forceToAxis: true
+  },
+ // touchEventsTarget: "container",
+  freeMode: true
+/*
+
    loopedSlides: 6,
    loop: true,
    spaceBetween: 24,
@@ -2062,24 +2074,14 @@ var swiper = new Swiper(".swiper-container-solo", {
    freeMode: false,
    grabCursor: true,
    mousewheel: false,
- /*
+
    autoplay: {
      delay: 3000,
  disableOnInteraction: false,
    },
- */
-      //   resistanceRatio:0.2,
-      // longSwipes:true,
-    //   longSwipesRatio:0.5,
-     //  touchRatio:5,
-         //loopFillGroupWithBlank: false,
-        // paginationClickable: true,
-        // mousewheelControl: true,
+
+
          parallax: true,
-        // preloadImages: true,
-         //updateOnImagesReady: true,
-       // centeredSlides: true,
-       // slidesOffsetBefore: 100,
          speed: 1000,
          breakpoints: {
                          500: {
@@ -2097,6 +2099,9 @@ var swiper = new Swiper(".swiper-container-solo", {
                              slidesPerView: 1.2
                          }
                      }
+
+
+                     */
  });
 
 }
