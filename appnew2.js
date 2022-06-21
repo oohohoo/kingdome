@@ -2,7 +2,7 @@
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
-//gsap.registerPlugin(Observer);
+gsap.registerPlugin(Observer);
 
 let locoScroll;
 
@@ -1413,7 +1413,7 @@ function fadeInOnEnter() {
   
 /****************** SPLIT HEADER */
 
-/*   var tl = gsap.timeline({
+  var tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".splitty",
       scroller: ".smooth-scroll",
@@ -1439,7 +1439,7 @@ tl.from(mySplitText.chars, {
   yPercent: 100,
   ease: "quart.inOut",
   stagger: 0.025
-}); */
+});
 
 /******************* */
 
@@ -2053,45 +2053,47 @@ SWIPER PROJECT SOLO
 ================================================================================
 */
 
-function swiperSolox() {
+function swiperSolo() {
 var swiper = new Swiper(".swiper-container-solo", {
- 
-  slidesPerView: "auto",
-  keyboard: true,
-  direction: "horizontal",
-
-  mousewheel: {
-    forceToAxis: true
-  },
- // touchEventsTarget: "container",
-  freeMode: true,
- loopedSlides: 6,
- loop: true,
-  spaceBetween: 25,
-  //slidesPerView: 1,
-  // freeMode: false,
+   loopedSlides: 6,
+   loop: true,
+   spaceBetween: 24,
+  slidesPerView: 1,
+   freeMode: false,
    grabCursor: true,
-
+   mousewheel: false,
+ /*
    autoplay: {
      delay: 3000,
  disableOnInteraction: false,
    },
-
-      //   parallax: true,
-         speed: 800,
+ */
+      //   resistanceRatio:0.2,
+      // longSwipes:true,
+    //   longSwipesRatio:0.5,
+     //  touchRatio:5,
+         //loopFillGroupWithBlank: false,
+        // paginationClickable: true,
+        // mousewheelControl: true,
+         parallax: true,
+        // preloadImages: true,
+         //updateOnImagesReady: true,
+       // centeredSlides: true,
+       // slidesOffsetBefore: 100,
+         speed: 1000,
          breakpoints: {
                          500: {
-                            spaceBetween: 20,
+                            spaceBetween: 24,
                            //  loopedSlides: 3,
-                             slidesPerView: 1.1
+                             slidesPerView: 1
                          },
                          1e3: {
-                          //  loopedSlides: 3,
-                             spaceBetween: 20,
+                            loopedSlides: 3,
+                             spaceBetween: 24,
                              slidesPerView: 1.1
                          },
                          1200: {
-                             spaceBetween: 25,
+                             spaceBetween: 24,
                              slidesPerView: 1.2
                          }
                      }
@@ -2588,71 +2590,66 @@ PROJEXT OBSERVER
 function productObserver() {
 
 
-let sections = document.querySelectorAll(".project-slide"),
-    images = document.querySelectorAll(".back"),
-    headings = gsap.utils.toArray(".section-heading"),
-    outerWrappers = gsap.utils.toArray(".outer"),
-    innerWrappers = gsap.utils.toArray(".inner"),
-    splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "head-split"})),
-    currentIndex = -1,
-    wrap = gsap.utils.wrap(0, sections.length - 1),
-    animating;
-
-let clamp = gsap.utils.clamp(0, sections.length - 1);
+  let sections = document.querySelectorAll(".project-slide"),
+  images = document.querySelectorAll(".back"),
+  headings = gsap.utils.toArray(".head-split"),
+  outerWrappers = gsap.utils.toArray(".outer"),
+  innerWrappers = gsap.utils.toArray(".inner"),
+  splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text"})),
+  currentIndex = -1,
+  wrap = gsap.utils.wrap(0, sections.length - 1),
+  animating;
 
 gsap.set(outerWrappers, { yPercent: 100 });
 gsap.set(innerWrappers, { yPercent: -100 });
 
 function gotoSection(index, direction) {
-  index = clamp(index); // make sure it's valid
-  
-  // If they are the same, it's either the first or last slide
-  if (index === currentIndex) {
-    return;
-  }
-    
-  animating = true;
-  let fromTop = direction === -1,
-      dFactor = fromTop ? -1 : 1,
-      tl = gsap.timeline({
-        defaults: {duration: 1.25, ease: "power1.inOut"},
-        onComplete: () => animating = false,
-      });
-  if (currentIndex >= 0) { // The first time this function runs, current is -1
-    gsap.set(sections[currentIndex], { zIndex: 0 });
-    tl.to(images[currentIndex], { yPercent: -15 * dFactor })
-      .set(sections[currentIndex], { autoAlpha: 0 });
-  }
-  gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-  tl.fromTo([outerWrappers[index], innerWrappers[index]], {yPercent: i => i ? -100 * dFactor : 100 * dFactor}, { yPercent: 0 }, 0)
-    .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-    .fromTo(splitHeadings[index].chars, {autoAlpha: 0, yPercent: 150 * dFactor}, {
-        autoAlpha: 1,
-        yPercent: 0,
-        duration: 1,
-        ease: "power2",
-        stagger: {
-          each: 0.02,
-          from: "random"
-        }
-      }, 0.2);
-  
-  currentIndex = index;
+index = wrap(index); // make sure it's valid
+animating = true;
+let fromTop = direction === -1,
+    dFactor = fromTop ? -1 : 1,
+    tl = gsap.timeline({
+      defaults: {duration: 1, ease: "power2.inOut"},
+      onComplete: () => animating = false,
+    });
+if (currentIndex >= 0) { // The first time this function runs, current is -1
+  gsap.set(sections[currentIndex], { zIndex: 0 });
+  tl.to(images[currentIndex], { yPercent: -15 * dFactor })
+    .set(sections[currentIndex], { autoAlpha: 0 });
+}
+gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+tl.fromTo([outerWrappers[index], innerWrappers[index]], {yPercent: i => i ? -100 * dFactor : 100 * dFactor}, { yPercent: 0 }, 0)
+  .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
+  .fromTo(splitHeadings[index].chars, {autoAlpha: 0, yPercent: 200 * dFactor}, {
+      autoAlpha: 1,
+      yPercent: 0,
+      duration: 1,
+      ease: "power2",
+      stagger: {
+        each: 0.02,
+        from: "random"
+      }
+    }, 0.2);
+
+currentIndex = index;
 }
 
 Observer.create({
-  type: "wheel,touch,pointer",
-  wheelSpeed: -1,
-  onDown: () => {
-    !animating && gotoSection(currentIndex - 1, -1)
-  },
-  onUp: () => {
-    !animating && gotoSection(currentIndex + 1, 1)
-  },
-  tolerance: 10,
-  preventDefault: true,
+type: "wheel,touch,pointer",
+wheelSpeed: -1,
+onDown: () => {
+  !animating && gotoSection(currentIndex - 1, -1)
+},
+onUp: () => {
+  !animating && gotoSection(currentIndex + 1, 1)
+},
+tolerance: 5,
+dragMinimum:10,
+wheelSpeed: 2,
+preventDefault: true,
 });
 
 gotoSection(0, 1);
-  
+
 }
+
