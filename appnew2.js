@@ -325,7 +325,6 @@ function initContent() {
 		home: function () {
 			logoTransformOnScroll();
 			heroPanelAnimation();
-			rotateWireframe();
 			parallaxPanel();
 			startStopVideo();
 			swiperSolo();
