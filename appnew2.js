@@ -1510,8 +1510,10 @@ var mySplitText = new SplitText(".head-split", {
   type: "words, lines, chars", linesClass: "clip-text"
 });
 
+var tl = gsap.timeline({})
 
-gsap.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 120}, {
+
+tl.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 120}, {
   autoAlpha: 1,
   yPercent: 0,
   duration: 1,
@@ -1523,8 +1525,8 @@ gsap.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 120}, {
 }, 0.2);
 
 
-
-var tl = gsap.timeline({
+/* TL 2*/
+var tl2 = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".section-home-hero",
@@ -1537,7 +1539,7 @@ var tl = gsap.timeline({
   }
 })
 
-tl.to(mySplitText.chars, {
+tl2.to(mySplitText.chars, {
   autoAlpha: 0,
   yPercent: 100,
   duration:1,
