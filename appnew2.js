@@ -1503,7 +1503,7 @@ HERO PANEL ANIMATIONS
 */
 function heroPanelAnimation() {
 
-gsap.set(".home-hero-video", {opacity:1, scale:1.1})
+gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 
 
 
@@ -1561,7 +1561,7 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
 }, 0.2); */
 
 
-var tlout = gsap.timeline({
+/* var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".section-home-hero",
@@ -1578,7 +1578,7 @@ var tlout = gsap.timeline({
 tlout.to(".home-hero-video, .cta__slider", {
   opacity:.4,
 
-}, 0.2);
+}, 0.2); */
 
 
 
