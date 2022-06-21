@@ -1503,7 +1503,33 @@ HERO PANEL ANIMATIONS
 */
 function heroPanelAnimation() {
 
-gsap.set(".home-hero-video", {opacity:1})
+gsap.set(".home-hero-video", {opacity:1, scale:1.1})
+
+
+
+var tlin = gsap.timeline({});
+
+mySplitText = new SplitText(".head-split", {
+  type: "words, lines, chars", linesClass: "clip-text"
+});
+
+tlin.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
+  autoAlpha: 1,
+  yPercent: 0,
+  duration: 1,
+  ease: "power2",
+  stagger: {
+    each: 0.02,
+    from: "random"
+  }
+}, 0.2);
+
+
+.to(".home-hero-video, .cta__slider", {
+ scale:1
+
+}, 0.2);
+/* 
 
   var tl = gsap.timeline({
     scrollTrigger: {
@@ -1532,7 +1558,7 @@ tl.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
     each: 0.02,
     from: "random"
   }
-}, 0.2);
+}, 0.2); */
 
 
 var tlout = gsap.timeline({
