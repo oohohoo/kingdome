@@ -1522,13 +1522,13 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, delay: 1, yPercent: 100}, {
     each: 0.02,
     from: "random"
   }
-}, 0.2)
+}, 0.5)
 
 
 .to(".home-hero-video, .cta__slider", {
  scale:1
 
-}, 0.2);
+}, 0.5);
 /* 
 
   var tl = gsap.timeline({
