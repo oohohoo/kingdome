@@ -213,8 +213,8 @@ function initLoader() {
   const mask = select('.loader__image--mask');
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
-  const loaderTxt = select('.loader-text');
-  /*
+/*   const loaderTxt = select('.loader-text');
+ */  /*
   const fadeintxt = select('.home-hero-heading-wrapper');
   const txtdonji = select('.txtdonji');
   const video = select('.aspect-video');
@@ -242,7 +242,7 @@ const progress = select('.progress');
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
-    .set(loaderTxt, {yPercent: 100})
+    .set(".loader-text", {yPercent: 100})
     .set(mask, {yPercent: 0})
     .set(".imgg", {yPercent: 100})
    // .set(".hamby", {autoAlpha:0})
