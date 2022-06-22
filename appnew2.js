@@ -88,13 +88,13 @@ function initScroll(container) {
 		locoScroll = new LocomotiveScroll({
 			el: document.querySelector(".smooth-scroll"),
 			smooth: true,
-			offset: [0, 0],
 			getDirection: true,
 			scrollFromAnywhere: true,
 			//touchMultiplier: 3.0,
 			useKeyboard: true,
 			inertia: 0.8,
-			mobile: {
+      reloadOnContextChange: true,
+			smartphone: {
 				//breakpoint: 0,
 				smooth: false,
 			//	getDirection: true,
