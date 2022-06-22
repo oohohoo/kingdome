@@ -503,8 +503,14 @@ console.log("WEBFLOW DESTROY");
 /* AUTOPLAY VIDEOS*/
     var vids = document.querySelectorAll("video"); vids.forEach(vid => { var playPromise = vid.play(); if (playPromise !== undefined) { playPromise.then(_ => {}).catch(error => {}); }; });
    // console.log("možda ode učitat locoscroll");
-   });
+// SAKRIJ MENI PRIJE ULASKA
    gsap.set(".xnav", {scaleY: 0})
+//DESTROY CURSOR PRIJE ULASKA
+   const cursor = new MouseFollower();
+   cursor.destroy();
+
+   });
+
 
 /*
 ================================================================================
