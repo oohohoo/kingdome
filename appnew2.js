@@ -709,7 +709,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.6, ease:
     
     
 // MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.02}, "<0.2")
+    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.5}, "<0.2")
     .to(".nav-super", {autoAlpha:1, stagger:0.04}, "-=0.1")
   //.to(".close-wrap", {autoAlpha:1, rotate:90}, "-=0.1")
     // LOGO RESET
