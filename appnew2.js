@@ -740,7 +740,7 @@ function hide() {
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
 
   // MENU LINKS 
-  tl.to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:100, stagger:0.025}, 0)
+  tl.to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:100, stagger:0.015}, 0)
   //.to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
   .fromTo(".clip", {
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
@@ -763,7 +763,7 @@ function hide() {
    // UNUTARNJI  
    .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", }, "-=0.1")
 	 // VANJSKI GHOST 	
-   .to(".xnav", { duration:0.25, ease: "Expo.inOut", duration: 0.1, transformOrigin: "bottom center", scaleY: 0}, "-=0.1") 
+   .to(".xnav", { duration:0.25, ease: "Expo.inOut", duration: 0.1, transformOrigin: "bottom center", scaleY: 0}, "<") 
 
 
 
