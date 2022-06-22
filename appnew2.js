@@ -704,7 +704,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.01})
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
     ease: "Expo.inOut",
-    },)
+    },"-=0.1")
    
     .from(".nav-image", {autoAlpha:0, scale:1.1}, "<0.2")
     
