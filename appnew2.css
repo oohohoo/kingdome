@@ -435,7 +435,7 @@ GSAP PERFORMANCE FIX
   backface-visibility: hidden;
 }
 
-.splitty, .batch, .back {
+.splitty, .batch, .bg {
   will-change: transform;
 }
 
