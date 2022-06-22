@@ -96,14 +96,14 @@ function initScroll(container) {
 			inertia: 0.8,
 			mobile: {
 				//breakpoint: 0,
-				smooth: true,
-				getDirection: true,
+				smooth: false,
+			//	getDirection: true,
 			},
 			tablet: {
 				//  breakpoint: 0,
-				touchMultiplier: 2,
-				smooth: true,
-				getDirection: true,
+			//	touchMultiplier: 2,
+				smooth: false,
+			//	getDirection: true,
 			},
 		});
 
