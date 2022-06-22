@@ -691,7 +691,7 @@ function show() {
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.8, ease: "Expo.inOut"}, 0) 
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
-		{duration: 0.1, scaleY: 1, ease: "Expo.inOut"},"<0.2")
+		{duration: 0.1, scaleY: 1, ease: "Expo.inOut"},"<0.1")
   
 // IMAGE CLIP
    .fromTo(".clip", {
