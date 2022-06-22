@@ -771,7 +771,7 @@ function hide() {
    .to(".nav--trans", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", }, "+=0.1")
 
 	 // VANJSKI GHOST 	
-   .to(".xnav", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0}) 
+   .to(".xnav", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0}, "<0.1") 
 
     // LOGO RESET BACK
 
