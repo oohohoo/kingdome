@@ -703,13 +703,13 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.25, ease
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
     ease: "Expo.inOut",
-    },"<0.15")
+    },"<0.1")
    
-    .from(".nav-image", {autoAlpha:0, scale:1.1}, "<0.2")
+    .from(".nav-image", {autoAlpha:0, scale:1.1}, "<0.1")
     
     
 // MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.025}, "<0.2")
+    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.025}, "<0.1")
     .to(".nav-super", {autoAlpha:1, stagger:0.04}, "-=0.1")
   //.to(".close-wrap", {autoAlpha:1, rotate:90}, "-=0.1")
     // LOGO RESET
