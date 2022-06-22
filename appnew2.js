@@ -1120,8 +1120,8 @@ HOW WE WORK AKAPOWL PINNED
 */
 function akapowPinned() {
 
-  /* var mq = window.matchMedia( "(min-width: 991px)" );
-  if (mq.matches) { */
+  var mq = window.matchMedia( "(min-width: 991px)" );
+  if (mq.matches) {
   
 
   gsap.set(".pinned-image", { zIndex: (i, target, targets) => targets.length - i });
@@ -1168,10 +1168,10 @@ function akapowPinned() {
     
   });
 
-/* }
+ }
 else {
 
-}    */ 
+}    
 
 }
 
