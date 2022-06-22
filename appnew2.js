@@ -1465,8 +1465,8 @@ setTimeout(() => {
   });
   
 
-  const box = document.querySelector('.hamby');
-const el = document.querySelector('.stick');
+  const box = document.querySelector('.stick');
+const el = document.querySelector('.hamby');
 
 box.addEventListener('mouseenter', () => {
     cursor.setStick(el);
