@@ -681,23 +681,17 @@ closemenu.addEventListener("click", () => {
 gsap.set(".xnav", {scaleY: 0})
 // MENU LINKS 
 gsap.set(".lineChild", {yPercent:100})
-gsap.set(".close-wrap", {autoAlpha:0})
+gsap.set(closemenu, {autoAlpha:0})
 
 // --- SHOW
 function show() {
 	let tl = gsap.timeline();
 
-//	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
-//gsap.set(".fs-menu--column", {autoAlpha:1})
-//  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
-
-
-
 // VANJSKI GHOST 
-tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1}) 
+tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.01}) 
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
-		{duration: 0.8, scaleY: 1, ease: "Expo.inOut"}, 0)
+		{duration: 0.8, scaleY: 1, ease: "Expo.inOut"}, 0.01)
   
 // UNUTARNJI 
    // .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
@@ -718,7 +712,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.02}, "<0.2")
     .to(".nav-super", {autoAlpha:1, stagger:0.04}, "-=0.1")
-  .to(".close-wrap", {autoAlpha:1, rotate:90}, "-=0.1")
+  //.to(".close-wrap", {autoAlpha:1, rotate:90}, "-=0.1")
     // LOGO RESET
 
     .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
@@ -761,7 +755,7 @@ function hide() {
     ease: "Expo.inOut",
   }, "<")
 
-  .to(".close-wrap", {autoAlpha:0})
+  //.to(".close-wrap", {autoAlpha:0})
   /* .to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1") */
   
     
