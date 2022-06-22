@@ -691,7 +691,7 @@ function show() {
 //gsap.set(".fs-menu--column", {autoAlpha:1})
 //  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
 
-
+gsap.set(".fs-menu-close", {autoAlpha:0})
 
 // VANJSKI GHOST 
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1}) 
