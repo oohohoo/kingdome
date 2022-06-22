@@ -175,7 +175,23 @@ PRODUCTS OBSERVE SLIDER
 ================================================================================
 */
 
-.outer,
+.project-wrap {
+  visibility: hidden;
+}
+.project-wrap .outer,
+.project-wrap .inner {
+  overflow-y: hidden;
+}
+
+
+.clip-text {
+  overflow: hidden;
+}
+
+
+
+
+/* .outer,
 .inner {
   overflow-y: hidden;
 }
@@ -187,6 +203,9 @@ PRODUCTS OBSERVE SLIDER
 h1 * {
   will-change: transform;
 }
+ */
+
+
 
 
 
