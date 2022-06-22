@@ -762,7 +762,7 @@ function hide() {
 
   // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
-   .to(".nav--trans", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.out", }, "-=0.5")
+   .to(".nav--trans", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.out", }, "-=0.1")
 	 // VANJSKI GHOST 	
    .to(".xnav", { duration: 0.01, transformOrigin: "bottom center", scaleY: 0}, "+=0.2") 
 
