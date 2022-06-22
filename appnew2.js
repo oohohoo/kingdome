@@ -688,7 +688,7 @@ function show() {
 	let tl = gsap.timeline();
 
 // VANJSKI GHOST 
-tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.4, ease: "Expo.inOut"}, 0) 
+tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.25, ease: "Expo.inOut"}, 0) 
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.1, scaleY: 1},"<0.01")
