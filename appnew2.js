@@ -1013,7 +1013,7 @@ function fadeInOnEnter() {
 		start: "top bottom-=100px",
 		onEnter: (batch) => {
 			batch.forEach((card, index) =>
-				gsap.to(card.children, { yPercent: 0, autoAlpha: 1, stagger: 0.03 })
+				gsap.to(card.children, { yPercent: 0, autoAlpha: 1, stagger: 0.04 })
 			);
 		},
 		once: true,
