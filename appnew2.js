@@ -504,7 +504,7 @@ console.log("WEBFLOW DESTROY");
     var vids = document.querySelectorAll("video"); vids.forEach(vid => { var playPromise = vid.play(); if (playPromise !== undefined) { playPromise.then(_ => {}).catch(error => {}); }; });
    // console.log("možda ode učitat locoscroll");
    });
- 
+   gsap.set(".xnav", {scaleY: 0})
 
 /*
 ================================================================================
