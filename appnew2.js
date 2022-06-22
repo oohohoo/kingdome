@@ -700,6 +700,9 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.25, ease
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.1, scaleY: 1},"<0.01")
+
+    .to(".smooth-scroll", {opacity:0}, "<")
+    
   
 // IMAGE CLIP
    .fromTo(".clip", {
