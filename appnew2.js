@@ -1475,7 +1475,7 @@ setTimeout(() => {
       visible: true,
       visibleOnState: false,
       speed: 0.55,
-      ease: 'hop',
+      ease: 'expo.out',
       overwrite: true,
       skewing: 2,
       skewingText: 2,
