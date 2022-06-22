@@ -210,7 +210,7 @@ function initLoader() {
 
   const tlLoaderIn = gsap.timeline({
     id: 'tlLoaderIn',
-    defaults: {duration: 0.5, ease: 'power2.out'},
+    defaults: {duration: 1.2, ease: 'hop'},
     onComplete: () => initContent()
   });
 
@@ -241,7 +241,7 @@ const progress = select('.progress');
     
     .set(".main", {y: 150})
 
-     .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'power1.inOut'}) 
+     .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'hop'}) 
 
      .addLabel('revealImage')
 
@@ -262,7 +262,7 @@ const progress = select('.progress');
   // LOADER OUT
   const tlLoaderOut = gsap.timeline({
     id: 'tlLoaderOut',
-    defaults: {duration: 0.5, ease: 'power2.inOut'}, delay: 0});
+    defaults: {duration: 1.2, ease: 'hop'}, delay: 0});
 
   tlLoaderOut
   .to(".imgg", {yPercent:100})
@@ -385,7 +385,7 @@ function pageTransitionIn({
 }) {
   console.log('pageTransitionIn');
   // timeline to stretch the loader over the whole screen
-  const tl = gsap.timeline({defaults: {duration: 2, ease: 'hop'} });
+  const tl = gsap.timeline({defaults: {duration: 1.2, ease: 'hop'} });
   tl
     .set(loaderInner, {autoAlpha: 0})
     .fromTo(loader, {yPercent: 100}, {yPercent: 0})
@@ -405,7 +405,7 @@ function pageTransitionOut({
 }) {
   console.log('pageTransitionOut');
   // timeline to move loader away down
-  const tl = gsap.timeline({defaults: {duration: 2,ease: 'hop'},
+  const tl = gsap.timeline({defaults: {duration: 1.2,ease: 'hop'},
   // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
     onComplete: () => initContent()
   });
@@ -705,7 +705,7 @@ function show() {
 	let tl = gsap.timeline();
 
 // VANJSKI GHOST 
-tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.25, ease: "Expo.inOut"}, 0) 
+tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.1, scaleY: 1},"<0.01")
@@ -722,7 +722,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.25, ease
   {         
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
-    ease: "Expo.inOut",
+    ease: "hop",
     },"<0.1")
    
     .from(".nav-image", {autoAlpha:0, scale:1.1}, "<0.1")
@@ -771,7 +771,7 @@ function hide() {
     clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
            
-    ease: "Expo.inOut",
+    ease: "hop",
   }, "<")
 
   //.to(".close-wrap", {autoAlpha:0})
@@ -781,9 +781,9 @@ function hide() {
 
   // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
-   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", }, "-=0.1")
+   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
 	 // VANJSKI GHOST 	
-   .to(".xnav", { duration:0.5, ease: "Expo.inOut", transformOrigin: "bottom center", scaleY: 0}, "<") 
+   .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
 
 
 
@@ -1112,7 +1112,7 @@ function homeProductHover() {
 			// full-image
 
 			tl = gsap.timeline({
-				defaults: { ease: "ease.in", duration: 0.3 },
+				defaults: { ease: "hop", duration: 0.3 },
 				paused: true,
 			});
 
@@ -1260,12 +1260,12 @@ function productsTabs() {
       animation.to(targets[old], {color:"#a29f9c", ease:"none"}, 0);
       animation.to(targets[activeTab], {color:"#1a1815", ease:"none"}, 0);
       // slide current article down out of view and then set it to starting position at top
-      animation.to(articles[old], {y:0, zIndex:1, opacity:0, ease:"power2.in" }, 0);
+      animation.to(articles[old], {y:0, zIndex:1, opacity:0, ease:"hop" }, 0);
       animation.set(articles[old], {y:0[old]});
       // resize article block to accommodate new content
       animation.to(".article-block", {height:heights[activeTab]});
       // slide in new article
-      animation.to(articles[activeTab], {duration: 0.3, zIndex:2, opacity:1, y:0, ease: "power2.out"}, "-=0.25");
+      animation.to(articles[activeTab], {duration: 0.3, zIndex:2, opacity:1, y:0, ease: "hop"}, "-=0.25");
     }
   }
     
@@ -1475,7 +1475,7 @@ setTimeout(() => {
       visible: true,
       visibleOnState: false,
       speed: 0.55,
-      ease: 'expo.out',
+      ease: 'hop',
       overwrite: true,
       skewing: 2,
       skewingText: 2,
@@ -1561,7 +1561,7 @@ tlin.fromTo(mySplitText.chars, {autoAlpha: 0, yPercent: 100}, {
   autoAlpha: 1,
   yPercent: 0,
   duration: 0.8,
-  ease: "power2",
+  ease: "hop",
   stagger: {
     each: 0.02,
     from: "random"
@@ -1632,7 +1632,7 @@ function productObserver() {
   };
   
   const tlDefaults = {
-    ease: "slow.inOut",
+    ease: "hop",
     duration: 1.25
   };
   
@@ -1648,7 +1648,7 @@ function productObserver() {
       autoAlpha: 1,
       yPercent: 0,
       duration: 1,
-      ease: "power2",
+      ease: "hop",
       stagger: {
         each: 0.02,
         from: "random"
