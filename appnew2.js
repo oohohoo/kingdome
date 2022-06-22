@@ -718,7 +718,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.02}, "<0.2")
     .to(".nav-super", {autoAlpha:1, stagger:0.04}, "-=0.1")
-    .to(".fs-menu-close", {autoAlpha:1}, "-=0.1")
+    //.to(".fs-menu-close", {autoAlpha:1}, "-=0.1")
     // LOGO RESET
 
     .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
