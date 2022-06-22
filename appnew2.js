@@ -1180,7 +1180,7 @@ function headerHide() {
     scroller: ".smooth-scroll",
     start: "top top",
     end: 99999,
-    toggleClass: { targets: ".header, .hamby-line, .w--current:not(.header-red-flag-link, .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after", className: "navcolor" },
+    toggleClass: { targets: ".header, .hamby-line, .w--current.red-link", className: "navcolor" },
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
