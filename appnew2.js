@@ -1592,7 +1592,7 @@ animating = true;
 let fromTop = direction === -1,
   dFactor = fromTop ? -1 : 1,
   tl = gsap.timeline({
-    defaults: {duration: 1.2, ease: "quart.inOut"},
+    defaults: {duration: 1.25, ease: "power1.inOut"},
     onComplete: () => animating = false,
   });
 if (currentIndex >= 0) { // The first time this function runs, current is -1
