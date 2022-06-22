@@ -92,7 +92,7 @@ function initScroll(container) {
 			scrollFromAnywhere: true,
 			//touchMultiplier: 3.0,
 			useKeyboard: true,
-			inertia: 0.8,
+			inertia: 0.75,
       reloadOnContextChange: true,
 			smartphone: {
 				//breakpoint: 0,
