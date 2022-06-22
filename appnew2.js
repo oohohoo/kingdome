@@ -697,7 +697,7 @@ function show() {
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1}) 
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
-		{duration: 1.2, scaleY: 1, ease: "Expo.inOut"}, 0)
+		{duration: 0.8, scaleY: 1, ease: "Expo.inOut"}, 0)
   
 // UNUTARNJI 
    // .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
@@ -710,7 +710,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
     ease: "Expo.inOut",
-    }, "<0.1")
+    },)
     .to(".fs-menu-close", {autoAlpha:1}, "<")
     .from(".nav-image", {autoAlpha:0, scale:1.1}, "<0.2")
     
