@@ -1022,7 +1022,7 @@ function fadeInOnEnter() {
 		start: "top bottom-=100px",
 		onEnter: (batch) => {
 			batch.forEach((card, index) =>
-				gsap.to(card.children, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'hop', stagger: 0.05 })
+				gsap.to(card.children, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power1', stagger: 0.05 })
 			);
 		},
 		once: true,
