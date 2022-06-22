@@ -701,7 +701,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.25, ease
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.1, scaleY: 1},"<0.01")
 
-    .to(".smooth-scroll", {opacity:0}, "<")
+    .to(".navdark", {opacity:0}, "<")
     
   
 // IMAGE CLIP
@@ -768,7 +768,7 @@ function hide() {
   //.to(".close-wrap", {autoAlpha:0})
   /* .to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1") */
   
-  .to(".smooth-scroll", {opacity:1}, "<")
+  .to(".navdark", {opacity:1}, "<")
 
   // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
