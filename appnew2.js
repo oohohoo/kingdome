@@ -505,9 +505,11 @@ console.log("WEBFLOW DESTROY");
    // console.log("možda ode učitat locoscroll");
 // SAKRIJ MENI PRIJE ULASKA
    gsap.set(".xnav", {scaleY: 0})
+   console.log("--------MENU X SCALE");
 //DESTROY CURSOR PRIJE ULASKA
    const cursor = new MouseFollower();
    cursor.destroy();
+   console.log("--------CURSOR DESTROY");
 
    });
 
