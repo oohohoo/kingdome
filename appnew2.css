@@ -66,11 +66,11 @@ main:focus-visible {
   -webkit-tap-highlight-color: transparent;
 }
 
-.smooth-scroll {
+/* .smooth-scroll {
   overflow-y: hidden!important;
   perspective: 1px;
 }
-
+ */
 /*
 ================================================================================
 BEN MINGO FONT SMOOTH - TEST
