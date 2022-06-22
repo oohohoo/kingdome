@@ -691,7 +691,7 @@ function show() {
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.01}) 
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
-		{duration: 0.8, scaleY: 1, ease: "Expo.inOut"}, 0.01)
+		{duration: 0.8, scaleY: 1, ease: "Expo.inOut"}, "<0.1")
   
 // UNUTARNJI 
    // .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
