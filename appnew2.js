@@ -740,12 +740,12 @@ function hide() {
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
 
   // MENU LINKS 
-  tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01}, 0)
+  tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.25}, 0)
   //.to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
   .fromTo(".clip", {
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
-    duration: 2.5,
+    duration: 1.2,
   },
   {
     clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -761,9 +761,12 @@ function hide() {
 
   // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
-   .to(".nav--trans", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", }, "-=0.1")
+   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.inOut", }, "-=0.1")
 	 // VANJSKI GHOST 	
-   .to(".xnav", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0}, "+=0.1") 
+   .to(".xnav", { duration:0.25, ease: "Expo.inOut", duration: 0.1, transformOrigin: "bottom center", scaleY: 0}, "-=0.1") 
+
+
+
 
     // LOGO RESET BACK
 
