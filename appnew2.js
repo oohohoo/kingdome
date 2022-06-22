@@ -764,7 +764,7 @@ function hide() {
    // UNUTARNJI  
    .to(".nav--trans", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.out", }, "-=0.5")
 	 // VANJSKI GHOST 	
-   .to(".xnav", { duration: 0.01, transformOrigin: "bottom center", scaleY: 0}, "+=0.1") 
+   .to(".xnav", { duration: 0.01, transformOrigin: "bottom center", scaleY: 0}, "+=0.2") 
 
     // LOGO RESET BACK
 
