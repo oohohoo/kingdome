@@ -158,12 +158,12 @@ window.addEventListener('resize', function(){
 */
 
 	
-let vh = window.innerHeight * 0.01;
+/* let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+}); */
 
 
 /*
@@ -697,7 +697,7 @@ function show() {
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1}) 
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
-		{duration: 0.5, scaleY: 1, ease: "Expo.inOut"}, 0)
+		{duration: 1.2, scaleY: 1, ease: "Expo.inOut"}, 0)
   
 // UNUTARNJI 
    // .to(".fs-menu--column", {autoAlpha:1, duration:0.1}, "<0.1")
@@ -706,27 +706,24 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
     webkitClipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
     duration: 2.5,
   },
-  {
-    
-         
+  {         
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
-
     ease: "Expo.inOut",
-    })
-    .to(".fs-menu-close", {autoAlpha:1, stagger:0.01}, "<")
-    .from(".nav-image", {autoAlpha:0, scale:1.1})
+    }, "<0.1")
+    .to(".fs-menu-close", {autoAlpha:1}, "<")
+    .from(".nav-image", {autoAlpha:0, scale:1.1}, "<0.2")
     
     
 // MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.05})
-    .to(".nav-super", {autoAlpha:1, stagger:0.01})
+    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.05}, "<0.2")
+    .to(".nav-super", {autoAlpha:1, stagger:0.02}, "-=0.1")
    
     // LOGO RESET
 
     .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
     .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
-    .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -65, ease:'expo.inOut'}, 0)
+    .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -60, ease:'expo.inOut'}, 0)
 
 
   //  .to(".fs-nav-item", {autoAlpha:1, duration:0.5, stagger:0.05,  ease: "quart.inOut"}, "<0.1")
