@@ -1172,10 +1172,10 @@ BATCH VISIBLE ON MOBILE
 @media screen and (max-width: 991px) {
 
 
- .batch {
+/*  .batch {
   visibility:visible;
 }
-
+ */
    }
   
 

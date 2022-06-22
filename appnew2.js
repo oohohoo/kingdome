@@ -1002,8 +1002,8 @@ FADE IN ON ENTER
 ================================================================================
 */
 function fadeInOnEnter() {
-  var mq = window.matchMedia( "(min-width: 991px)" );
-  if (mq.matches) {
+/*   var mq = window.matchMedia( "(min-width: 991px)" );
+  if (mq.matches) { */
 
 	gsap.set(".batch", {
 		yPercent: 15,
@@ -1019,10 +1019,10 @@ function fadeInOnEnter() {
 		once: true,
 	});
 
-}
+/* }
 else {
 
-}   
+}    */
 
 }
 
