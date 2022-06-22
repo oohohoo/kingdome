@@ -688,10 +688,10 @@ function show() {
 	let tl = gsap.timeline();
 
 // VANJSKI GHOST 
-tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.01}) 
+tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.01}, 0) 
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
-		{duration: 0.8, scaleY: 1, ease: "Expo.inOut"}, 0.1)
+		{duration: 0.8, scaleY: 1, ease: "Expo.inOut"},"<0.2")
   
 // IMAGE CLIP
    .fromTo(".clip", {
