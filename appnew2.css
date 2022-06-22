@@ -1147,6 +1147,21 @@ SWIPER FLICKERING FIX
   -webkit-transform: translateZ(0);
 }
 
+/*
+================================================================================
+HOME PRODUCT SVAKI 3 UGURAJ*
+================================================================================
+*/
+
+@media screen and (min-width: 991px) {
+
+.grid-product-main>.background-color-white:nth-child(3n+2) {
+  position: relative;
+     top: 5.5rem;
+ }
+
+}
+
 
 /*
 ================================================================================
