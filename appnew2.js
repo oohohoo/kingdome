@@ -740,7 +740,7 @@ function hide() {
 //	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
 
   // MENU LINKS 
-  tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.25}, 0)
+  tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.025}, 0)
   //.to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
   .fromTo(".clip", {
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
