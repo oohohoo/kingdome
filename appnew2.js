@@ -1464,6 +1464,19 @@ setTimeout(() => {
      
   });
   
+
+  const box = document.querySelector('.hamby');
+const el = document.querySelector('.stick');
+
+box.addEventListener('mouseenter', () => {
+    cursor.setStick(el);
+});
+
+box.addEventListener('mouseleave', () => {
+    cursor.removeStick();
+});
+
+
   
   /* function destroyCursor() {
   cursor.destroy();
