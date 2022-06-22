@@ -681,7 +681,7 @@ closemenu.addEventListener("click", () => {
 gsap.set(".xnav", {scaleY: 0})
 // MENU LINKS 
 gsap.set(".lineChild", {yPercent:100})
-
+gsap.set(".close-wrap", {autoAlpha:0})
 
 // --- SHOW
 function show() {
@@ -691,7 +691,7 @@ function show() {
 //gsap.set(".fs-menu--column", {autoAlpha:1})
 //  gsap.set(".close, .fs-nav-item, .fadein", {autoAlpha:0})
 
-gsap.set(".close-wrap", {autoAlpha:0})
+
 
 // VANJSKI GHOST 
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1}) 
@@ -718,7 +718,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.1})
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.02}, "<0.2")
     .to(".nav-super", {autoAlpha:1, stagger:0.04}, "-=0.1")
-  .to(".close-wrap", {autoAlpha:1}, "-=0.1")
+  .to(".close-wrap", {autoAlpha:1, rotate:90}, "-=0.1")
     // LOGO RESET
 
     .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
