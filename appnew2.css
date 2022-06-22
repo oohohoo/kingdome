@@ -175,7 +175,7 @@ PRODUCTS OBSERVE SLIDER
 ================================================================================
 */
 
-.project-wrap {
+/* .project-wrap {
   visibility: hidden;
 }
 .project-wrap .outer,
@@ -187,7 +187,7 @@ PRODUCTS OBSERVE SLIDER
 .clip-text {
   overflow: hidden;
 }
-
+ */
 /* .outer,
 .inner {
   overflow-y: hidden;
@@ -336,25 +336,6 @@ HIDE - VISIBILITY HIDDEN
 */
 .zero, .batch {
   visibility:hidden;
-}
-
-/*
-================================================================================
-PRODUCT OBSERVATE
-================================================================================
-*/
-.product-section .outer,
-.product-section .inner {
-  overflow-y: hidden;
-}
-
-.product-section .bg {
-  background-size: cover;
-  background-position: center;
-}
-
-.product-section .bg .clip-text {
-  overflow: hidden;
 }
 
 
