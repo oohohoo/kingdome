@@ -1002,19 +1002,28 @@ FADE IN ON ENTER
 ================================================================================
 */
 function fadeInOnEnter() {
+  var mq = window.matchMedia( "(min-width: 991px)" );
+  if (mq.matches) {
+
 	gsap.set(".batch", {
-		y: 50,
+		yPercent: 15,
 	});
 	ScrollTrigger.batch(".card", {
 		scroller: ".smooth-scroll",
 		start: "top bottom-=100px",
 		onEnter: (batch) => {
 			batch.forEach((card, index) =>
-				gsap.to(card.children, { y: 0, autoAlpha: 1, stagger: 0.05 })
+				gsap.to(card.children, { yPercent: 0, autoAlpha: 1, stagger: 0.03 })
 			);
 		},
 		once: true,
 	});
+
+}
+else {
+
+}   
+
 }
 
 /*
