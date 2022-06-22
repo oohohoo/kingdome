@@ -96,7 +96,7 @@ function initScroll(container) {
       reloadOnContextChange: true,
 			smartphone: {
 				//breakpoint: 0,
-				smooth: true,
+				smooth: false,
 			//	getDirection: true,
 			},
 			tablet: {
