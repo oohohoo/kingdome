@@ -1635,6 +1635,8 @@ gotoSection(0, 1);
 
 
 
+
+
 /* 
   let sections = document.querySelectorAll(".project-slide"),
   images = document.querySelectorAll(".back"),
