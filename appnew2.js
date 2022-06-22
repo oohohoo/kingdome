@@ -710,7 +710,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.25, ease
     
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.1")
-    .to(".nav-super", {autoAlpha:1, stagger:0.04}, "-=0.1")
+    //.to(".nav-super", {autoAlpha:1, stagger:0.04}, "<0.1")
   //.to(".close-wrap", {autoAlpha:1, rotate:90}, "-=0.1")
     // LOGO RESET
 
@@ -741,7 +741,7 @@ function hide() {
 
   // MENU LINKS 
   tl.to(".lineChild", {autoAlpha:1, yPercent:100, stagger:0.01}, 0)
-  .to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
+  //.to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
   .fromTo(".clip", {
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
