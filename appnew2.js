@@ -704,7 +704,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.01})
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
     ease: "Expo.inOut",
-    },"-=0.1")
+    },"<0.1")
    
     .from(".nav-image", {autoAlpha:0, scale:1.1}, "<0.2")
     
@@ -764,7 +764,7 @@ function hide() {
    // UNUTARNJI  
    .to(".nav--trans", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0, ease: "Expo.out", }, "-=0.1")
 	 // VANJSKI GHOST 	
-   .to(".xnav", { duration: 0.01, transformOrigin: "bottom center", scaleY: 0}, "+=0.2") 
+   .to(".xnav", { duration: 0.5, transformOrigin: "bottom center", scaleY: 0}, "+=0.2") 
 
     // LOGO RESET BACK
 
