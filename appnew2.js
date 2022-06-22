@@ -1573,7 +1573,7 @@ PROJECT OBSERVER
 function productObserver() {
 
   
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll(".product-wrap);
 const images = document.querySelectorAll(".bg");
 const headings = gsap.utils.toArray(".section-heading");
 const outerWrappers = gsap.utils.toArray(".outer");
