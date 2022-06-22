@@ -710,7 +710,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.01})
     
     
 // MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, rotate:30, yPercent:0, stagger:0.02}, "<0.2")
+    .to(".lineChild", {autoAlpha:1, yPercent:0, stagger:0.02}, "<0.2")
     .to(".nav-super", {autoAlpha:1, stagger:0.04}, "-=0.1")
   //.to(".close-wrap", {autoAlpha:1, rotate:90}, "-=0.1")
     // LOGO RESET
@@ -725,7 +725,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", duration:0.01})
 
 // MENU OPENCLOSE
 		.to(openmenu, {autoAlpha:0}, "<")
-		.to(closemenu, {autoAlpha:1}, "<")
+		.to(closemenu, {autoAlpha:1}, "<1")
    
 		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
 	//	.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "quart.inOut"}, "<0.1")
