@@ -428,7 +428,7 @@ IS LOADING BACKGROUND COLOR
 ================================================================================
 */
 .is-loading {
-  background-color: var(--bcg-lightblue);
+ /* background-color: var(--bcg-lightblue);*/
  
 }
 /*
