@@ -1022,7 +1022,8 @@ CUBERTO CURSOR
 @supports(mix-blend-mode: exclusion) {
   .mf-cursor.-exclusion {
       mix-blend-mode: exclusion;
-      transform: scale(3.2);
+      transform: scale(1.7);
+      transition-duration: .2s
   }
 
   .mf-cursor.-exclusion:before {
