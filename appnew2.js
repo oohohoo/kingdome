@@ -556,7 +556,7 @@ BARBA VIEWS
 		{
 			namespace: "products",
 			beforeEnter(data) {
-				productObserver();
+			//	productObserver();
 			},
 		},
 		{
