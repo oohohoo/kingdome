@@ -1639,6 +1639,10 @@ function productObserver() {
     },
   });
 
+
+  document.getElementById('noscroll').addEventListener(
+    'scroll', function(evt) { evt.preventDefault(); }, false
+);
   /* 
   
 
