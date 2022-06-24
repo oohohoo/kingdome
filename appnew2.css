@@ -836,10 +836,10 @@ SWIPER CUSTOM DIMENZIJA
 
 
 
-.swiper-container {
+/* .swiper-container {
   overflow: visible!important;
 
-}
+} */
 
 .cta__slider .swiper-slide {
   overflow: hidden;
