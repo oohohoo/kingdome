@@ -313,7 +313,7 @@ function initContent() {
 			logoTransformOnScroll();
 			heroPanelAnimation();
 			startStopVideo();
-		//	swiperSolo();
+			swiperSolo();
 			headerHide();
 		},
 		products: function () {
@@ -333,7 +333,7 @@ function initContent() {
 			headerHide();
 			logoTransformOnScroll();
 			productsTabs();
-		//	swiperSolo();
+			swiperSolo();
 		},
 		contact: function () {
 			webflowInteractions();
@@ -565,7 +565,7 @@ BARBA VIEWS
 				productsTabs();
 				fullscreen3D();
 				productsoloAccordion();
-			//	swiperSolo();
+		//	swiperSolo();
 			},
 		},
 		{
