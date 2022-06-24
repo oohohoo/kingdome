@@ -313,7 +313,7 @@ function initContent() {
 			logoTransformOnScroll();
 			heroPanelAnimation();
 			startStopVideo();
-			swiperSolo();
+		//	swiperSolo();
 			headerHide();
 		},
 		products: function () {
@@ -333,7 +333,7 @@ function initContent() {
 			headerHide();
 			logoTransformOnScroll();
 			productsTabs();
-			swiperSolo();
+		//	swiperSolo();
 		},
 		contact: function () {
 			webflowInteractions();
@@ -353,12 +353,12 @@ function initContent() {
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
 	
-  /*fullscreenMenu();
+  fullscreenMenu();
 	scrollToTop();
 	yearUpdate();
 	fadeInOnEnter();
 	cubertoCursor();
-*/
+
 
 	myscripts.init();
 
@@ -1359,7 +1359,7 @@ SWIPER PROJECT SOLO
 */
 
 function swiperSolo() {
-	var swiper = new Swiper(".swiper-container-solo", {
+	var swipersolo = new Swiper(".swiper-container-solo", {
 		loopedSlides: 6,
 		loop: true,
 		spaceBetween: 24,
@@ -1368,10 +1368,10 @@ function swiperSolo() {
 		grabCursor: true,
 		mousewheel: false,
 	
-   autoplay: {
+  /*  autoplay: {
      delay: 3000,
  disableOnInteraction: false,
-   },
+   }, */
  
 		//   resistanceRatio:0.2,
 		// longSwipes:true,
