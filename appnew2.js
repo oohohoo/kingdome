@@ -313,7 +313,7 @@ function initContent() {
 			logoTransformOnScroll();
 			heroPanelAnimation();
 			startStopVideo();
-			/* swiperSolo(); */
+			swiperSolo();
 			headerHide();
 		},
 		products: function () {
@@ -333,7 +333,7 @@ function initContent() {
 			headerHide();
 			logoTransformOnScroll();
 			productsTabs();
-			/* swiperSolo(); */
+			swiperSolo();
 		},
 		contact: function () {
 			webflowInteractions();
@@ -568,7 +568,7 @@ BARBA VIEWS
 				productsTabs();
 				fullscreen3D();
 				productsoloAccordion();
-			/* 	swiperSolo(); */
+				swiperSolo();
 			},
 		},
 		{
@@ -1604,6 +1604,7 @@ PROJECT OBSERVER
 
 function productObserver() {
 
+
   const slider = document.getElementById("js-cta-slider");
   const sliderCounter = document.getElementById("js-cta-slider-counter");
   const sliderNext = document.getElementById("js-cta-slider-next");
@@ -1615,7 +1616,7 @@ function productObserver() {
   
   // svaka fotka ima: data-swiper-parallax-y: "35%"
   
-  const swiperproduct = new Swiper(slider, {
+  const swiper = new Swiper(slider, {
     autoplay: false,
     parallax: true,
     loop: true,
