@@ -389,7 +389,7 @@ HIDE PAGE CONTENT BY DEFAULT
 */
 
 .is-loading #main {
-  display: none;
+ /* display: none; */
 }
 
 
