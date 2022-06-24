@@ -352,16 +352,13 @@ function initContent() {
 
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
-	fullscreenMenu();
+	
+  /*fullscreenMenu();
 	scrollToTop();
-	// underline();
-	//popupWizdome();
-//	buttonHover();
 	yearUpdate();
 	fadeInOnEnter();
 	cubertoCursor();
-	//initNavigation();
-	//initHeaderTilt();
+*/
 
 	myscripts.init();
 
