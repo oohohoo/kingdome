@@ -1012,14 +1012,14 @@ function fadeInOnEnter() {
   if (mq.matches) { 
 
 	gsap.set(".batch", {
-		y: 70,
+		y: 60,
 	});
 	ScrollTrigger.batch(".card", {
 		scroller: ".smooth-scroll",
 		start: "top bottom-=100px",
 		onEnter: (batch) => {
 			batch.forEach((card, index) =>
-				gsap.to(card.children, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power1', stagger: 0.05 })
+				gsap.to(card.children, { y: 0, autoAlpha: 1, duration: 0.75, ease: 'power1', stagger: 0.04 })
 			);
 		},
 		once: true,
