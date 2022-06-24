@@ -175,7 +175,7 @@ PRODUCTS OBSERVE SLIDER
 ================================================================================
 */
 
-section {
+/* section {
   height: 100%;
   width: 100%;
   top: 0;
@@ -229,7 +229,7 @@ section .bg .clip-text {
 
 h1 * {
   will-change: transform;
-}
+} */
 
 
 
