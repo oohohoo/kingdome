@@ -986,7 +986,6 @@ CUBERTO CURSOR
 .mf-cursor.-redbig {
   color: #e51e3d;
   transform: scale(3.2);
-  transition: transform .25s ease-in-out, opacity .1s
 }
 
 .mf-cursor.-black{
