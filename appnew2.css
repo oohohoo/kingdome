@@ -66,10 +66,15 @@ main:focus-visible {
   -webkit-tap-highlight-color: transparent;
 }
 
-.smooth-scroll, .section-projects-observer {
+.smooth-scroll {
   overflow-y: hidden!important;
   perspective: 1px;
 }
+
+.y-overflow {
+  overflow-y: hidden!important;
+}
+
 
 /*
 ================================================================================
