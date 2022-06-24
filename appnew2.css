@@ -389,7 +389,7 @@ HIDE PAGE CONTENT BY DEFAULT
 */
 
 .is-loading #main {
- /* display: none;*/
+  display: none;
 }
 
 
@@ -428,8 +428,8 @@ IS LOADING BACKGROUND COLOR
 ================================================================================
 */
 .is-loading {
- /* background-color: var(--bcg-lightblue);
-  transition: background-color 0.3s linear; */
+  background-color: var(--bcg-lightblue);
+ 
 }
 /*
 ================================================================================
