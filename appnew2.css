@@ -985,11 +985,11 @@ CUBERTO CURSOR
 
 .mf-cursor.-redbig {
   color: #e51e3d;
-  transform: scale(3.2);
+  
 }
 
 .mf-cursor.-black{
-  color: #1a1815
+  color: #1a1815;
 }
 
 
@@ -1021,7 +1021,8 @@ CUBERTO CURSOR
 
 @supports(mix-blend-mode: exclusion) {
   .mf-cursor.-exclusion {
-      mix-blend-mode: exclusion
+      mix-blend-mode: exclusion;
+      transform: scale(3.2);
   }
 
   .mf-cursor.-exclusion:before {
