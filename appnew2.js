@@ -1615,7 +1615,7 @@ function productObserver() {
   
   // svaka fotka ima: data-swiper-parallax-y: "35%"
   
-  const swiper = new Swiper(slider, {
+  const swiperproduct = new Swiper(slider, {
     autoplay: false,
     parallax: true,
     loop: true,
