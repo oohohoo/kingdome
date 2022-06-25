@@ -261,10 +261,10 @@ const loaderInner = select('.inner-loader');
  // .to(".imgg", {yPercent:100})
   .to(loaderInner, {scaleY: 0, duration:2, transformOrigin: 'top', ease: 'none'})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
-   // .to([loader, loaderContent], {yPercent: -100}, 0)
+    .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
     //.to(".aspect-video", { scale:1, duration: 1.5, ease:'expo.inOut'}, "+=0.2")
-   //.to(".hamby", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
+   .to(".hamby", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
     //.from(".header-red-flag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
    // .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
     
