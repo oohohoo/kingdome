@@ -712,13 +712,13 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
   
 // IMAGE CLIP
    .fromTo(".clip", {
-    clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
     duration: 1.2,
   },
   {         
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
     ease: "hop",
     },"<0.1")
    
@@ -760,13 +760,13 @@ function hide() {
   tl.to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:100, stagger:0.015}, 0)
   //.to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
   .fromTo(".clip", {
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
     duration: 0.6,
   },
   {
-    clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
            
     ease: "hop",
   }, "<")
