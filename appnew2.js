@@ -242,7 +242,7 @@ const loaderInner = select('.inner-loader');
     
     //.set(".main", {y: 150})
 
-     .to(loaderInner, {scaleY:1, duration: 1.25, ease: 'hop', transformOrigin: 'bottom'}, 0) 
+     .to(loaderInner, {scaleY:1, duration: 1, ease: 'hop', transformOrigin: 'bottom'}, 0) 
      .to(".logo-top", {yPercent:0}, 0.4)
      .to(".logo-bottom", {yPercent:0}, 0.4)
      .to(".loader-text", {yPercent:0}, 0.4)
