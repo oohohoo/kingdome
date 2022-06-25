@@ -1571,8 +1571,8 @@ mySplitText = new SplitText(".head-split", {
   type: "words, lines, chars", linesClass: "clip-text"
 });
 
-tlin.fromTo(mySplitText.words, {autoAlpha: 0, yPercent: 100}, {
-  autoAlpha: 1,
+tlin.fromTo(mySplitText.words, { yPercent: 100}, {
+ 
   yPercent: 0,
   duration: 1.25,
   ease: "hop",
