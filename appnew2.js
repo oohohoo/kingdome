@@ -235,7 +235,7 @@ const loaderInner = select('.inner-loader');
    // .set(".txt", {yPercent: 100})
   //  .set(loaderInner, {scaleY:0})
     //.set(mask, {yPercent: 0})
-    .set(".logo-top, .logo-bottom", {yPercent: 100})
+    .set(".logo-top, .logo-bottom, .loader-text", {yPercent: 100})
 
     
 
@@ -249,6 +249,7 @@ const loaderInner = select('.inner-loader');
      .to(loaderInner, {scaleY:1, transformOrigin: 'bottom'}) 
      .to(".logo-top", {yPercent:0}, "<0.2")
      .to(".logo-bottom", {yPercent:0}, "<0.3")
+     .to(".loader-text", {yPercent:0}, "<0.4")
      .addLabel('revealImage')
 
  // .to(".imgg", {yPercent: 0})
