@@ -719,7 +719,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
   {         
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
-    ease: "hop",
+    ease: "hop", transformOrigin: "bottom center",
     },"<0.1")
    
     .from(".nav-image", {autoAlpha:0, scale:1.1}, "<0.1")
@@ -768,7 +768,7 @@ function hide() {
     clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
            
-    ease: "hop",
+    ease: "hop", transformOrigin: "bottom center"
   }, "<")
 
   //.to(".close-wrap", {autoAlpha:0})
