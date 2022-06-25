@@ -808,7 +808,7 @@ CURRENT LINK COLOR
 
 }
 
-.w--current:not(.header-red-flag-link, .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
+.w--current:not(.header-red-flag-link, .wraplogofix .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
   position: absolute;
   content: '';
   height: 2px;
@@ -823,7 +823,7 @@ CURRENT LINK COLOR
 
 
 
-.w--current.navcolor:not(.header-red-flag-link, .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
+.w--current.navcolor:not(.header-red-flag-link, .wraplogofix .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
   background: #1a1815;
   }
 
