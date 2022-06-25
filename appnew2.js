@@ -795,7 +795,7 @@ function hide() {
    // UNUTARNJI  
    .to(".nav--trans", { duration: 0.1, transformOrigin: "top center", scaleY: 0,  }, "-=0.1")
 	 // VANJSKI GHOST 	
-   .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
+   .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "top center", scaleY: 0}, "<") 
    .to(".navdark", {opacity:1}, "<")
 
 
