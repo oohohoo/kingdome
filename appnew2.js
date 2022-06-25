@@ -233,7 +233,7 @@ const loaderInner = select('.inner-loader');
 
     .set(loaderContent, {autoAlpha: 1})
    // .set(".txt", {yPercent: 100})
-    .set(loaderInner, {autoAlpha:0, scaleY: 0})
+   // .set(loaderInner, {autoAlpha:0, scaleY: 0})
     //.set(mask, {yPercent: 0})
    // .set(".imgg", {yPercent: 100})
   // .set(".hamby", {autoAlpha:0})
@@ -242,7 +242,7 @@ const loaderInner = select('.inner-loader');
     
     //.set(".main", {y: 150})
 
-     .to(loaderInner, {scaleY: 1, duration:2, transformOrigin: 'bottom', ease: 'none'}) 
+     .from(loaderInner, {scaleY: 0, duration:2, transformOrigin: 'bottom', ease: 'none'}) 
 
      .addLabel('revealImage')
 
