@@ -1571,7 +1571,7 @@ mySplitText = new SplitText(".head-split", {
   type: "words, lines, chars", linesClass: "clip-text"
 });
 
-tlin.fromTo(mySplitText.words, { yPercent: 100, rotateZ: -20}, {
+tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, rotateZ: -20}, {
  
   yPercent: 0,
   duration: 1.25,
