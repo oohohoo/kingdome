@@ -789,15 +789,14 @@ function hide() {
   //.to(".close-wrap", {autoAlpha:0})
   /* .to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1") */
   
-  .to(".navdark", {opacity:1}, "<")
+ 
 
   // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
    .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
 	 // VANJSKI GHOST 	
    .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
-
-
+   .to(".navdark", {opacity:1}, "<")
 
 
     // LOGO RESET BACK
