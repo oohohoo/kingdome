@@ -1578,7 +1578,7 @@ tlin.fromTo(mySplitText.words, {autoAlpha: 0, yPercent: 100}, {
   ease: "hop",
   stagger: {
     each: 0.025,
-    from: "random"
+    from: "left"
   }
 }, 0.5)
 
