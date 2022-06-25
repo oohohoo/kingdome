@@ -809,7 +809,8 @@ CURRENT LINK COLOR
 
 }
 
-.w--current:not(.header-red-flag-link, .linkk, .wraplogofix .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
+
+.w--current:not(.header-red-flag-link, .wraplogofix .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
   position: absolute;
   content: '';
   height: 2px;
@@ -822,11 +823,10 @@ CURRENT LINK COLOR
   transition: 0.3s;
 }
 
-
-
-/* .w--current.navcolor:not(.header-red-flag-link, .wraplogofix .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
-  background: #1a1815;
-  } */
+ .w--current.navcolor:is(".linkk"):after {
+  color:greenyellow;
+  background: transparent;
+  } 
 
 /*
 ================================================================================
