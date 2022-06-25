@@ -823,10 +823,7 @@ CURRENT LINK COLOR
   transition: 0.3s;
 }
 
-:is(.linkk):after {
-  color:greenyellow;
-  background: transparent;
-  } 
+
 
 /*
 ================================================================================
@@ -948,7 +945,7 @@ FAQ ACCORDION
   transform: rotate(90deg) translateY(2px);
 }
 
-.wrapper {
+.link-home{
   color: #fdfcfc!important;
   background-color: #e51e3d!important;
 }
