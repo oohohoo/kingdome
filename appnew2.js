@@ -236,11 +236,11 @@ const progress = select('.progress');
     .set(loaderInner, {scaleY: 0})
     //.set(mask, {yPercent: 0})
     .set(".imgg", {yPercent: 100})
-   // .set(".hamby", {autoAlpha:0})
+   .set(".hamby", {autoAlpha:0})
    // .set(".aspect-video", {scale:2})
     /* .set(fadeintxt, {autoAlpha: 0}) */
     
-    .set(".main", {y: 150})
+    //.set(".main", {y: 150})
 
      .to(loaderInner, {scaleY: 1, transformOrigin: 'bottom', ease: 'hop'}) 
 
@@ -271,7 +271,7 @@ const progress = select('.progress');
     .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
     //.to(".aspect-video", { scale:1, duration: 1.5, ease:'expo.inOut'}, "+=0.2")
-    //.to(".hamby", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
+   .to(".hamby", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
     //.from(".header-red-flag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
    // .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
     
