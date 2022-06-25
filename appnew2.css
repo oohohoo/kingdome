@@ -823,7 +823,7 @@ CURRENT LINK COLOR
   transition: 0.3s;
 }
 
- .w--current.navcolor:is(".linkk"):after {
+:is(.linkk):after {
   color:greenyellow;
   background: transparent;
   } 
