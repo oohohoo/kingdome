@@ -645,7 +645,7 @@ LOADER
 }
 
  .inner-loader {
-  background-color: var(--bcg-loaderbluedark);
+ /*  background-color: var(--bcg-loaderbluedark); */
 } 
 
 .loader__content {
