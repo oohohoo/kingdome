@@ -233,7 +233,7 @@ const loaderInner = select('.inner-loader');
 
     .set(loaderContent, {autoAlpha: 1})
    // .set(".txt", {yPercent: 100})
-    .set(loaderInner, { yPercent:100 1})
+    .set(loaderInner, { yPercent:100 })
     //.set(mask, {yPercent: 0})
     .set(".imgg", {yPercent: 100})
   // .set(".hamby", {autoAlpha:0})
