@@ -235,7 +235,7 @@ const loaderInner = select('.inner-loader');
    // .set(".txt", {yPercent: 100})
   //  .set(loaderInner, {scaleY:0})
     //.set(mask, {yPercent: 0})
-    .set(".imgg, .logo-top, .logo-bottom", {yPercent: 100})
+    .set(".logo-top, .logo-bottom", {yPercent: 100})
 
     
 
@@ -263,7 +263,7 @@ const loaderInner = select('.inner-loader');
     defaults: {duration: 1.2, ease: 'hop'}, delay: 0});
 
   tlLoaderOut
-  .to(".imgg", {yPercent:0})
+  
   .to(loaderInner, {scaleY:0, transformOrigin: 'top'})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
