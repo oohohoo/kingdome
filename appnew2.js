@@ -259,7 +259,7 @@ const loaderInner = select('.inner-loader');
 
   tlLoaderOut
   
-  .to(loaderInner, {scaleY:0, transformOrigin: 'top'})
+  .to(loaderInner, {scaleY:0, duration: 1.25, transformOrigin: 'top'})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
