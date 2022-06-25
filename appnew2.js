@@ -714,7 +714,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
    .fromTo(".clip", {
     clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-    duration: 1.2,
+    duration: 2.5,
   },
   {         
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -722,7 +722,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
     ease: "hop", transformOrigin: "bottom center",
     },"<0.1")
    
-    .from(".nav-image", {autoAlpha:0, scale:1.1}, "<0.1")
+    .from(".nav-image", {autoAlpha:1, scale:1.1}, "<0.1")
     
     
 // MENU LINKS 
