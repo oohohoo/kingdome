@@ -235,7 +235,11 @@ const loaderInner = select('.inner-loader');
    // .set(".txt", {yPercent: 100})
   //  .set(loaderInner, {scaleY:0})
     //.set(mask, {yPercent: 0})
-    .set(".imgg", {yPercent: 100})
+    .set(".imgg, .logo-top, .logo-bottom", {yPercent: 100})
+
+    
+
+
   // .set(".hamby", {autoAlpha:0})
    // .set(".aspect-video", {scale:2})
     /* .set(fadeintxt, {autoAlpha: 0}) */
@@ -243,7 +247,8 @@ const loaderInner = select('.inner-loader');
     //.set(".main", {y: 150})
 
      .to(loaderInner, {scaleY:1, transformOrigin: 'bottom'}) 
-
+     .to(".logo-top", {yPercent:0}, "<0.2")
+     .to(".logo-bottom", {yPercent:0}, "<0.3")
      .addLabel('revealImage')
 
  // .to(".imgg", {yPercent: 0})
