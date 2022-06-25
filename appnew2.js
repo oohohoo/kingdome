@@ -762,7 +762,7 @@ function hide() {
   .fromTo(".clip", {
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
-    duration: 0.6,
+    duration: 2.5,
   },
   {
     clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
