@@ -1109,11 +1109,11 @@ function homeProductHover() {
 			// full-image
 
 			tl = gsap.timeline({
-				defaults: { ease: "hop", duration: 0.3 },
+				defaults: { ease: "hop", duration: 2 },
 				paused: true,
 			});
 
-		tl.to(imagezoom, { scale: 1.1 }).to(linkhover, { opacity: 0.4 }, 0);
+		tl.to(imagezoom, { scale: 1.05 }).to(linkhover, { opacity: 0.4 }, 0);
 		//.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
 		//.to(name, { yPercent:-10, autoAlpha:0 }, 0)
 		// .to(short, { yPercent:-8, autoAlpha:0 }, 0)
