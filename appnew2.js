@@ -248,8 +248,8 @@ const loaderInner = select('.inner-loader');
 
      .to(loaderInner, {scaleY:1, transformOrigin: 'bottom'}, 0) 
      .to(".logo-top", {yPercent:0}, "<0.1")
-     .to(".logo-bottom", {yPercent:0}, "<0.15")
-     .to(".loader-text", {yPercent:0}, "<0.2")
+     .to(".logo-bottom", {yPercent:0}, "<0.12")
+     .to(".loader-text", {yPercent:0}, "<0.14")
      .addLabel('revealImage')
 
  // .to(".imgg", {yPercent: 0})
