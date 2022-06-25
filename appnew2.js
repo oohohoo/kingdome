@@ -242,7 +242,7 @@ const loaderInner = select('.inner-loader');
     
     //.set(".main", {y: 150})
 
-     .to(loaderInner, {scaleY:1, duration:2, transformOrigin: 'bottom', ease: 'none'}) 
+     .to(loaderInner, {scaleY:1, transformOrigin: 'bottom'}) 
 
      .addLabel('revealImage')
 
@@ -259,7 +259,7 @@ const loaderInner = select('.inner-loader');
 
   tlLoaderOut
   .to(".imgg", {yPercent:0})
-  .to(loaderInner, {scaleY:0, duration:2, transformOrigin: 'top', ease: 'none'})
+  .to(loaderInner, {scaleY:0, transformOrigin: 'top'})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
