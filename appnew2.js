@@ -1598,7 +1598,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 150, 
     end: "bottom top", 
   //  markers: true,
     pin: ".home-hero_component",
-    pinSpacing: false,
+  //  pinSpacing: false,
   //  toggleActions: "restart none none none"
     toggleActions: "restart reverse play reverse"
   }
