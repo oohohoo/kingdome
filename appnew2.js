@@ -233,7 +233,7 @@ const loaderInner = select('.inner-loader');
 
     .set(loaderContent, {autoAlpha: 1})
    // .set(".txt", {yPercent: 100})
-    .set(loaderInner, { yPercent:100 })
+    .set(loaderInner, { yPercent:100, scaleY:0, })
     //.set(mask, {yPercent: 0})
     .set(".imgg", {yPercent: 100})
   // .set(".hamby", {autoAlpha:0})
@@ -242,7 +242,7 @@ const loaderInner = select('.inner-loader');
     
     //.set(".main", {y: 150})
 
-     .to(loaderInner, {yPercent: 0, duration:2, transformOrigin: 'bottom', ease: 'none'}) 
+     .to(loaderInner, {yPercent: 0, scaleY:1, duration:2, transformOrigin: 'bottom', ease: 'none'}) 
 
      .addLabel('revealImage')
 
@@ -259,7 +259,7 @@ const loaderInner = select('.inner-loader');
 
   tlLoaderOut
   .to(".imgg", {yPercent:0})
-  .to(loaderInner, {yPercent: 100, duration:2, transformOrigin: 'top', ease: 'none'})
+  .to(loaderInner, {yPercent: 100, scaleY:0, duration:2, transformOrigin: 'top', ease: 'none'})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
     //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
