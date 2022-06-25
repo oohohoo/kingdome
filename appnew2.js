@@ -214,8 +214,8 @@ function initLoader() {
     onComplete: () => initContent()
   });
 
-  //const image = select('.loader-img-img');
- // const mask = select('.loader__image--mask');
+  const image = select('.loader-img-img');
+ const mask = select('.loader__image--mask');
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
 
@@ -226,14 +226,14 @@ function initLoader() {
 */
 const loader = select('.loader');
 const loaderInner = select('.inner-loader');
-const progress = select('.progress');
+/* const progress = select('.progress'); */
 
 
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
     .set(".txt", {yPercent: 100})
-    .set(loaderInner, {scaleY: 0})
+   // .set(loaderInner, {scaleY: 0})
     //.set(mask, {yPercent: 0})
     .set(".imgg", {yPercent: 100})
    .set(".hamby", {autoAlpha:0})
@@ -275,7 +275,7 @@ const progress = select('.progress');
     //.from(".header-red-flag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
    // .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
     
-    .to('.main', {y: 0}, 0);
+   // .to('.main', {y: 0}, 0);
 
   const tlLoader = gsap.timeline();
   tlLoader
