@@ -242,7 +242,7 @@ const loaderInner = select('.inner-loader');
     
     //.set(".main", {y: 150})
 
-     .to(loaderInner, {scaleY: 1, duration:2, transformOrigin: 'bottom', ease: 'hop'}) 
+     .to(loaderInner, {scaleY: 1, duration:2, transformOrigin: 'bottom', ease: 'none'}) 
 
      .addLabel('revealImage')
 
