@@ -608,12 +608,12 @@ BARBA TRANSITIONS
 
 			async leave({ current }) {
 				// animate loading screen in
-				await pageTransitionIn(current);
+		//		await pageTransitionIn(current);
 				console.log("LEAVE");
 			},
 			enter({ next }) {
 				// animate loading screen away
-				pageTransitionOut(next);
+	//			pageTransitionOut(next);
 				console.log("NEXT");
 			},
 
@@ -637,7 +637,7 @@ BARBA TRANSITIONS
       enter: function(data) {
         
       // do something 
-      pageFadeOut(current);
+      pageFadeOut(next);
       console.log("FADE OUT");
 
       },
