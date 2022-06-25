@@ -1111,11 +1111,11 @@ function homeProductHover() {
 			// full-image
 
 			tl = gsap.timeline({
-				defaults: { ease: "hop", duration: 0.5 },
+				defaults: { ease: "power1", duration: 0.5 },
 				paused: true,
 			});
 
-		tl.to(imagezoom, { scale: 2 }, 0)
+		tl.to(imagezoom, { scale: 1 }, 0)
     .to(linkhover, { opacity: 0.4 }, 0)
     .to(imageokvir, { scale: 0.95 }, 0)
 		//.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
