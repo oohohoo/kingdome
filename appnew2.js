@@ -1593,11 +1593,11 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 150, 
  var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
-    trigger: ".home-hero_head-wrap",
+    trigger: ".head-trigger",
     start: "top top",
     end: "bottom top", 
   //  markers: true,
-    pin: ".home-hero_component",
+    pin: ".section-home-hero",
   //  pinSpacing: false,
   //  toggleActions: "restart none none none"
     toggleActions: "restart reverse play reverse"
