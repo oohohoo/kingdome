@@ -520,7 +520,7 @@ BARBA PREFETCH
 ================================================================================
 */
 
-//barba.use(barbaPrefetch);
+barba.use(barbaPrefetch);
 
 /*
 
@@ -624,6 +624,31 @@ BARBA TRANSITIONS
 			},
 		},
 	],
+
+  name: 'products-productssingle',
+  from: { namespace:'products' },
+  to: { namespace:'productsingle' },
+  leave: function(data) {
+    const done = this.async();
+    scrollbar._listeners.clear();
+    var target = $('h1');
+    var title = target.find('.title');
+    var description = target.find('.lettering');
+    var container = description.parent().parent();
+    var tl = new TimelineMax();
+    tl.to(title.find('span'),0.5,{ height:0, clearProps:"all", ease: Power4.easeInOut }, "out")
+      .to(description.find('span'),0.5,{ height:0, clearProps:"all", ease: Power4.easeInOut }, "out")
+      .set($(data.current.container), { display:"none" })
+      .set($(data.next.container), { display:"none", onComplete: done });
+  },
+  enter: function(data) {
+    const done = this.async();
+    TweenMax.set($(data.next.container), { clearProps:"display" });
+    return done();
+  },
+},
+{
+
 
 	/*
  ================================================================================
