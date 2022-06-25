@@ -1574,10 +1574,10 @@ mySplitText = new SplitText(".head-split", {
 tlin.fromTo(mySplitText.words, {autoAlpha: 0, yPercent: 100}, {
   autoAlpha: 1,
   yPercent: 0,
-  duration: 0.8,
+  duration: 1.25,
   ease: "hop",
   stagger: {
-    each: 0.02,
+    each: 0.025,
     from: "random"
   }
 }, 0.5)
