@@ -233,16 +233,16 @@ const loaderInner = select('.inner-loader');
 
     .set(loaderContent, {autoAlpha: 1})
    // .set(".txt", {yPercent: 100})
-   // .set(loaderInner, {autoAlpha:0, scaleY: 0})
+    .set(loaderInner, { scaleY: 1})
     //.set(mask, {yPercent: 0})
-   // .set(".imgg", {yPercent: 100})
+    .set(".imgg", {yPercent: 100})
   // .set(".hamby", {autoAlpha:0})
    // .set(".aspect-video", {scale:2})
     /* .set(fadeintxt, {autoAlpha: 0}) */
     
     //.set(".main", {y: 150})
 
-     .from(loaderInner, {rotate: 360, duration:2, transformOrigin: 'center', ease: 'none'}) 
+     .to(loaderInner, {scaleY: 0, duration:2, transformOrigin: 'bottom', ease: 'none'}) 
 
      .addLabel('revealImage')
 
@@ -258,7 +258,7 @@ const loaderInner = select('.inner-loader');
     defaults: {duration: 1.2, ease: 'hop'}, delay: 0});
 
   tlLoaderOut
- // .to(".imgg", {yPercent:100})
+  .to(".imgg", {yPercent:0})
   .to(loaderInner, {scaleY: 0, duration:2, transformOrigin: 'top', ease: 'none'})
    /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
     .to([loader, loaderContent], {yPercent: -100}, 0)
