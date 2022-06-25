@@ -723,8 +723,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
 		{duration: 0.1, scaleY: 1},"<0.01")
 
     .to(".navdark", {autoAlpha:0}, "<")
-    
-  
+      
 // IMAGE CLIP
    .fromTo(".clip", {
     clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
