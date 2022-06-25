@@ -247,9 +247,9 @@ const loaderInner = select('.inner-loader');
     //.set(".main", {y: 150})
 
      .to(loaderInner, {scaleY:1, transformOrigin: 'bottom'}) 
-     .to(".logo-top", {yPercent:0}, "<0.2")
-     .to(".logo-bottom", {yPercent:0}, "<0.3")
-     .to(".loader-text", {yPercent:0}, "<0.4")
+     .to(".logo-top", {yPercent:0}, "<0.3")
+     .to(".logo-bottom", {yPercent:0}, "<0.4")
+     .to(".loader-text", {yPercent:0}, "<0.5")
      .addLabel('revealImage')
 
  // .to(".imgg", {yPercent: 0})
