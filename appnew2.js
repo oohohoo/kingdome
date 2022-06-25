@@ -722,7 +722,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.1, scaleY: 1},"<0.01")
 
-    .to(".navdark", {opacity:0}, "<")
+    .to(".navdark", {autoAlpha:0}, "<")
     
   
 // IMAGE CLIP
@@ -796,7 +796,7 @@ function hide() {
    .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
 	 // VANJSKI GHOST 	
    .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
-   .to(".navdark", {opacity:1}, "<")
+   .to(".navdark", {autoAlpha:1}, "<")
 
 
     // LOGO RESET BACK
