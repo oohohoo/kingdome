@@ -214,8 +214,8 @@ function initLoader() {
     onComplete: () => initContent()
   });
 
-  const image = select('.loader-img-img');
- const mask = select('.loader__image--mask');
+  //const image = select('.loader-img-img');
+ ///const mask = select('.loader__image--mask');
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
 
@@ -232,7 +232,7 @@ const loaderInner = select('.inner-loader');
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
-    .set(".txt", {yPercent: 100})
+   // .set(".txt", {yPercent: 100})
     .set(loaderInner, {scaleY: 0})
     //.set(mask, {yPercent: 0})
     .set(".imgg", {yPercent: 100})
@@ -242,7 +242,7 @@ const loaderInner = select('.inner-loader');
     
     //.set(".main", {y: 150})
 
-     .to(loaderInner, {scaleY: 1, duration:2, transformOrigin: 'bottom', ease: 'none'}) 
+     .to(loaderInner, {scaleY: 1, rotate:360, duration:2, transformOrigin: 'bottom', ease: 'none'}) 
 
      .addLabel('revealImage')
 
