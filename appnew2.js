@@ -210,7 +210,7 @@ function initLoader() {
 
   const tlLoaderIn = gsap.timeline({
     id: 'tlLoaderIn',
-    defaults: {duration: 0.6, stagger: 0.025, ease: 'hop'},
+    defaults: {duration: 0.6, ease: 'hop'},
     onComplete: () => initContent()
   });
 
@@ -247,9 +247,9 @@ const loaderInner = select('.inner-loader');
     //.set(".main", {y: 150})
 
      .to(loaderInner, {scaleY:1, transformOrigin: 'bottom'}, 0) 
-     .to(".logo-top", {yPercent:0}, "-=0.1")
-     .to(".logo-bottom", {yPercent:0}, "-=0.1")
-     .to(".loader-text", {yPercent:0}, "-=0.1")
+     .to(".logo-top", {yPercent:0}, "<0.1")
+     .to(".logo-bottom", {yPercent:0}, "<0.15")
+     .to(".loader-text", {yPercent:0}, "<0.2")
      .addLabel('revealImage')
 
  // .to(".imgg", {yPercent: 0})
