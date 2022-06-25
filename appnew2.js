@@ -232,15 +232,11 @@ const loaderInner = select('.inner-loader');
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
-   // .set(".txt", {yPercent: 100})
-  //  .set(loaderInner, {scaleY:0})
-    //.set(mask, {yPercent: 0})
+ // .set(".txt", {yPercent: 100})
+ //  .set(loaderInner, {scaleY:0})
+ //.set(mask, {yPercent: 0})
     .set(".logo-top, .logo-bottom, .loader-text", {yPercent: 100})
-
-    
-
-
-  // .set(".hamby", {autoAlpha:0})
+ // .set(".hamby", {autoAlpha:0})
    // .set(".aspect-video", {scale:2})
     /* .set(fadeintxt, {autoAlpha: 0}) */
     
@@ -254,8 +250,6 @@ const loaderInner = select('.inner-loader');
 
  // .to(".imgg", {yPercent: 0})
  //  .to(".txt", {yPercent: 0}) 
-
-
 
 
   // LOADER OUT
