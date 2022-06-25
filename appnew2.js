@@ -737,7 +737,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
     ease: "hop", transformOrigin: "bottom center",
     },"<0.1")
    
-    .from(".nav-image", {autoAlpha:1, scale:1.3, transformOrigin: "center center"}, "<0.1")
+    .from(".nav-image", {autoAlpha:1, scale:0.7, transformOrigin: "center center"}, "<0.1")
     
     
 // MENU LINKS 
