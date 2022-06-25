@@ -947,7 +947,9 @@ FAQ ACCORDION
   transform: rotate(90deg) translateY(2px);
 }
 
-
+.wraplogofix {
+  background-color: #e51e3d!important;
+}
 
 /*
 ================================================================================
