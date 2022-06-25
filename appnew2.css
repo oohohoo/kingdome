@@ -175,6 +175,10 @@ ASPECT RATIOS WITH FALLBACK
   }
 }
 
+/* SPLIT TEXT MASK*/
+.clip-text {
+  overflow: hidden;
+}
 
 
 /* section {
