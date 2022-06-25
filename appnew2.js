@@ -631,13 +631,13 @@ BARBA TRANSITIONS
       leave: function(data) {
        
       // do something 
-      await  pageFadeIn(current);
+      pageFadeIn(current);
       console.log("FADE IN");
     },
       enter: function(data) {
         
       // do something 
-      await  pageFadeOut(current);
+      pageFadeOut(current);
       console.log("FADE OUT");
 
       },
