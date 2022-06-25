@@ -520,7 +520,7 @@ BARBA PREFETCH
 ================================================================================
 */
 
-barba.use(barbaPrefetch);
+//barba.use(barbaPrefetch);
 
 /*
 
