@@ -117,7 +117,8 @@ DEFINE ROOT VARIABLES / definiraj svoje
   --bcg-lightbrown: #b0a7a4;
   --bcg-lightblue: #ff0000;
 
-    --bcg-loaderblue: #28282a;
+  /*  --bcg-loaderblue: #28282a; */
+    --bcg-loaderblue: #243635;
   --bcg-loaderbluedark: #e51e3d;
 
   --loader-width: 27.36vw;
