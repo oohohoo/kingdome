@@ -1585,7 +1585,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 
 
 //.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
-//.fromTo(".red-flag", { }, {yPercent:0, rotate:300, duration: 0.8}, 0.4)
+.fromTo(".red-logo", {yPercent:-100 }, {yPercent:0, rotate:300, duration: 0.8}, 0.4)
 
 
 
