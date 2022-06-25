@@ -210,7 +210,7 @@ function initLoader() {
 
   const tlLoaderIn = gsap.timeline({
     id: 'tlLoaderIn',
-    defaults: {duration: 0.3, ease: "power1"},
+    defaults: {duration: 0.6, ease: "power1"},
     onComplete: () => initContent()
   });
 
