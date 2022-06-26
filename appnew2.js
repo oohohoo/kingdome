@@ -1649,7 +1649,7 @@ var tlout = gsap.timeline({});
     start: "top top",
     end: "bottom top", 
    
-  scrub: true,
+  //scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
   //  toggleActions: "restart none none none"
@@ -1668,7 +1668,7 @@ tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0)
     each: 0.025,
     from: "left"
   }
-}, 0)
+}, "-=0.1")
 
 }
 
