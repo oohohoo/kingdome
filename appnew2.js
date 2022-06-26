@@ -923,7 +923,8 @@ function show() {
 	let tl = gsap.timeline();
 
  // gsap.set([openbutt, closeclose], {pointerEvents: "none"}, 0);
- 
+gsap.set(".iframe-wrapper", {display:"block"})
+
   tl.to(threedback, {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
       .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
