@@ -962,7 +962,7 @@ gsap.set(".iframe-wrapper", {display:"block"})
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
     .set([openbutt, closeclose], {pointerEvents: "all"}, "<")
-    .set(".iframe-wrapper", {display:"none"}, "<")
+    //.set(".iframe-wrapper", {display:"none"}, "<")
     
 }
 // --- HIDE
