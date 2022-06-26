@@ -890,6 +890,7 @@ const closemenu = document.getElementById('close3d'); */
 
 /* const { gsap } = window; */
 
+const threedback = document.getElementById('threedback');
 
 const openbutt = document.querySelector(".open3d");
 
@@ -912,7 +913,7 @@ function show() {
 	let tl = gsap.timeline();
 
  // VANJSKI GHOST 
- gsap.set(".fsthreed", {scaleY: 0.5})
+ gsap.set(threedback, {scaleY: 0.5})
  // MENU LINKS 
  //gsap.set(".lineChild", {yPercent:100})
  gsap.set(closeclose, {autoAlpha:0})
@@ -925,7 +926,7 @@ function show() {
   //gsap.set(".line-wrapper", {yPercent:100})
 
  
-  tl.to(".fsthreed", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
+  tl.to(threedback, {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
       .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
           {duration: 0.1, scaleY: 1},"<0.01")
@@ -985,7 +986,7 @@ function hide() {
 
 .to(".threed--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
   // VANJSKI GHOST 	
-.to(".fsthreed", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
+.to(threedback, { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
 .to(".navdark", {autoAlpha:1}, "<")
 
 .to(openbutt, {autoAlpha:1}, "<")
