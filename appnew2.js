@@ -899,7 +899,7 @@ openbutt.addEventListener("click", () => {
 
 });
 const closeclose = document.getElementById('closeclose');
-//const closeclose = document.querySelector(".3dclose-button");
+const closeclose = document.querySelector(".3dclose-button");
 closeclose.addEventListener("click", () => {
 //	openbutt.classList.remove("active");
 		hide();
@@ -941,8 +941,8 @@ function show() {
    // .to(".fadein", {autoAlpha:1, duration:0.6, ease: "power2.inOut"}, "<0.1")
 
 
-	//	.to(".open", {autoAlpha:0}, "<")
-	//	.to(".close", {autoAlpha:1}, "<")
+	.to(openbutt, {autoAlpha:0}, "<")
+	.to(closeclose, {autoAlpha:1}, "<")
     
 		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
 	//	.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
