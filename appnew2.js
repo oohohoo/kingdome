@@ -707,18 +707,18 @@ new SplitText(".doublesplit", { type: "lines", linesClass: "lineParent" });
 // OPEN CLOSE FUNCTION
 openmenu.addEventListener("click", () => {
 		show();
-    if (document.querySelector('.smooth-scroll')) {
+
 
     locoScroll.stop();
-    }
+
 
 });
 
 closemenu.addEventListener("click", () => {
 		hide();
-    if (document.querySelector('.smooth-scroll')) {
+ 
     locoScroll.start();
-  }
+
 });
 
 
@@ -906,10 +906,10 @@ const threedback = document.getElementById('threedback');
 const openbutt = document.querySelector(".open3d");
 openbutt.addEventListener("click", () => {
 	//	openbutt.classList.add("active");
-  if (document.querySelector('.smooth-scroll')) {
+
 
     locoScroll.stop();
-    }
+ 
 
 		show();
     
@@ -918,9 +918,8 @@ openbutt.addEventListener("click", () => {
 const closeclose = document.getElementById('closeclose');
 closeclose.addEventListener("click", () => {
 //	openbutt.classList.remove("active");
-if (document.querySelector('.smooth-scroll')) {
   locoScroll.start();
-}
+
 		hide();
   
   //  api.stop();
@@ -1641,7 +1640,9 @@ function heroPanelAnimation() {
 
 //gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 //gsap.set(".red-flag", {yPercent:100})
+if (document.querySelector('.smooth-scroll')) {
 locoScroll.stop();
+}
 console.log("LOCO STOPPED");
 
 var tlin = gsap.timeline({});
