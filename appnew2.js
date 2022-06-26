@@ -907,24 +907,26 @@ closeclose.addEventListener("click", () => {
 
 });
 
+// VANJSKI GHOST 
+gsap.set(threedback, {scaleY: 0.5})
+// MENU LINKS 
+//gsap.set(".lineChild", {yPercent:100})
+gsap.set(closeclose, {autoAlpha:0})
+/* 	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
+ gsap.set(".fs-menu--column", {yPercent:-100}) */
+ //gsap.set(".fs-menu-header", {yPercent:-110})
+
+ //gsap.set(".close, .fs-nav-item, .sublink-wrapper, .fadein", {autoAlpha:0})
+
+ //gsap.set(".line-wrapper", {yPercent:100})
+
+ 
 
 // --- SHOW
 function show() {
 	let tl = gsap.timeline();
 
- // VANJSKI GHOST 
- gsap.set(threedback, {scaleY: 0.5})
- // MENU LINKS 
- //gsap.set(".lineChild", {yPercent:100})
- gsap.set(closeclose, {autoAlpha:0})
-/* 	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
-  gsap.set(".fs-menu--column", {yPercent:-100}) */
-  //gsap.set(".fs-menu-header", {yPercent:-110})
  
-  //gsap.set(".close, .fs-nav-item, .sublink-wrapper, .fadein", {autoAlpha:0})
- 
-  //gsap.set(".line-wrapper", {yPercent:100})
-
  
   tl.to(threedback, {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
