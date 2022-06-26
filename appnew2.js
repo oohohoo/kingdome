@@ -1639,7 +1639,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 //.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
 //.fromTo(".red-logo", {yPercent:-100 }, {yPercent:0, rotate:0.0001, duration: 0.5}, "-=0.1")
 
-var tlout = gsap.timeline({});
+var tlin = gsap.timeline({});
 
 // UJEBAVA NAVIGACIJU 
  var tlout = gsap.timeline({
@@ -1649,7 +1649,7 @@ var tlout = gsap.timeline({});
     start: "top top",
     end: "bottom top", 
    
-  //scrub: true,
+  scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
   //  toggleActions: "restart none none none"
@@ -1657,7 +1657,7 @@ var tlout = gsap.timeline({});
   }
 });
 
-tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0.2) 
+tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0) 
 .fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 0}, {
  
   yPercent: 100,
@@ -1668,7 +1668,7 @@ tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0.2
     each: 0.025,
     from: "left"
   }
-}, "-=0.1")
+}, 0)
 
 }
 
