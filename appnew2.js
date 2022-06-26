@@ -954,13 +954,21 @@ function show() {
 function hide() {
 	let tl = gsap.timeline();
 
-	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
+	//gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
 
-		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
-		.to(".nav-wrapper2", { duration: 0.1, transformOrigin: "top center", height: "0%"})
-		.to(openbutt, {autoAlpha:1}, "<")
+  tl.to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
+  // VANJSKI GHOST 	
+.to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
+.to(".navdark", {autoAlpha:1}, "<")
+
+.to(openbutt, {autoAlpha:1}, "<")
 		.to(closeclose, {autoAlpha:0}, "<")
     .set(" .open3d", { pointerEvents: "all"});
+
+		/* tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
+		.to(".nav-wrapper2", { duration: 0.1, transformOrigin: "top center", height: "0%"})
+		
+     */
 	
 }
 }
