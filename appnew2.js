@@ -895,13 +895,16 @@ const threedback = document.getElementById('threedback');
 const openbutt = document.querySelector(".open3d");
 openbutt.addEventListener("click", () => {
 	//	openbutt.classList.add("active");
+  locoScroll.stop();
 		show();
+    
 
 });
 const closeclose = document.getElementById('closeclose');
 closeclose.addEventListener("click", () => {
 //	openbutt.classList.remove("active");
 		hide();
+    locoScroll.start();
   //  api.stop();
 
 });
