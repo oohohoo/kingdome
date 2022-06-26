@@ -881,8 +881,8 @@ FULLSCREEN 3D
 function fullscreen3D() {
  
   // OPEN MENU FROM CLICK
-const openmenu = document.getElementById('open3d');
-const closemenu = document.getElementById('close3d');
+/* const openmenu = document.getElementById('open3d');
+const closemenu = document.getElementById('close3d'); */
 
 
 //const menuhover = document.getElementById('menuhover');
@@ -913,7 +913,7 @@ function show() {
 	let tl = gsap.timeline();
 
  // VANJSKI GHOST 
- gsap.set(".fs3d", {scaleY: 0})
+ gsap.set(".fsthreed", {scaleY: 0})
  // MENU LINKS 
  gsap.set(".lineChild", {yPercent:100})
  gsap.set(closeclose, {autoAlpha:0})
@@ -926,7 +926,7 @@ function show() {
   //gsap.set(".line-wrapper", {yPercent:100})
 
  
-  tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
+  tl.to(".fsthreed", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
       .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
           {duration: 0.1, scaleY: 1},"<0.01")
@@ -959,8 +959,8 @@ function hide() {
 
 		tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
 		.to(".nav-wrapper2", { duration: 0.1, transformOrigin: "top center", height: "0%"})
-		.to(".open", {autoAlpha:1}, "<")
-		.to(".close", {autoAlpha:0}, "<")
+		.to(openbutt, {autoAlpha:1}, "<")
+		.to(closeclose, {autoAlpha:0}, "<")
     .set(" .open3d", { pointerEvents: "all"});
 	
 }
