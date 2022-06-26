@@ -920,7 +920,7 @@ gsap.set(closeclose, {autoAlpha:0})
 function show() {
 	let tl = gsap.timeline();
 
-  gsap.set([openbutt, closeclose], {pointerEvents: "none"}, 0);
+ // gsap.set([openbutt, closeclose], {pointerEvents: "none"}, 0);
  
   tl.to(threedback, {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
@@ -965,7 +965,7 @@ function show() {
 function hide() {
 	let tl = gsap.timeline();
 
-gsap.set([openbutt, closeclose], {pointerEvents: "none"});
+// gsap.set([openbutt, closeclose], {pointerEvents: "none"});
 
 
   tl.fromTo(".clip", {
