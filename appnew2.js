@@ -927,7 +927,7 @@ closeclose.addEventListener("click", () => {
 });
 
 // VANJSKI GHOST 
-gsap.set(threedback, {scaleY: 0})
+gsap.set(threedback, {scaleY: 0,  zIndex:0})
 // MENU LINKS 
 //gsap.set(".lineChild", {yPercent:100})
 gsap.set(closeclose, {autoAlpha:0})
@@ -950,7 +950,7 @@ function show() {
  // gsap.set([openbutt, closeclose], {pointerEvents: "none"}, 0);
 gsap.set(".iframe-wrapper", {display:"block"})
 
-  tl.to(threedback, {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
+  tl.to(threedback, {scaleY: 1,  zIndex:4, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
       .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
           {duration: 0.1, scaleY: 1},"<0.01")
@@ -1011,8 +1011,8 @@ function hide() {
 
 .to(".threed--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0}, "-=0.1")
   // VANJSKI GHOST 	
-.to(threedback, { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
-/* .to(threedback, { zIndex:0})  */
+.to(threedback, {  zIndex:4, duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
+.to(threedback, { zIndex:0}) 
 
 
 
