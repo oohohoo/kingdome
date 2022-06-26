@@ -928,9 +928,9 @@ TEXT ON DARK BACK
 .navcolor {
 color: #1a1815;
 background-color: #ff0000;
--webkit-transition: all 0.2s linear;
--ms-transition: all 0.2s linear;
-transition: all 0.2s linear;
+-webkit-transition: all 0.2s ease;
+-ms-transition: all 0.2s ease;
+transition: all 0.2s ease;
 /* 
 transition: background-color 0.8s ease;
 transition: color 0.8s ease;
@@ -939,15 +939,16 @@ transition: color 0.8s ease;
 
 .hamby-line.navcolor {
   background-color: #1a1815;
-  transition: background-color 0.2s ease;
-  transition: color 0.8s ease;
+  -webkit-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 .header, .hamby-line, .hamby-line, .w--current  {
  
--webkit-transition: all 0.2s linear;
--ms-transition: all 0.2s linear;
-transition: all 0.2s linear;
+-webkit-transition: all 0.1s ease;
+-ms-transition: all 0.1s ease;
+transition: all 0.1s ease;
 }
 
 
