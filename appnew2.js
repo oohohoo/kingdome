@@ -1214,7 +1214,7 @@ HEADER HIDE
 */
 function headerHide() {
   const showAnim = gsap.from('.header', { 
-    yPercent: -300,
+    yPercent: -100,
     paused: true,
     duration: 0.2
   }).progress(1);
@@ -1222,8 +1222,8 @@ function headerHide() {
   ScrollTrigger.create({
     trigger: ".navchange",
     scroller: ".smooth-scroll",
-    start: "50% top",
-    markers: true,
+    start: "top top",
+ 
     end: 99999,
     toggleClass: { targets: ".header, .hamby-line, .w--current", className: "navcolor" },
     onUpdate: (self) => {
@@ -1597,7 +1597,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
     trigger: ".home-hero_component",
     start: "top top",
     end: "bottom top", 
-    markers: true,
+   
   scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
