@@ -937,11 +937,11 @@ transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* .header {
+.header {
  -webkit-transition: all 1000ms linear;
 -ms-transition: all 1000ms linear;
 transition: all 1000ms linear;
-} */
+}
 
 
 /*
