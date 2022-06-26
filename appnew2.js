@@ -1593,7 +1593,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
  var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
-    trigger: ".head-trigger",
+    trigger: ".home-hero_component",
     start: "top top",
     end: "bottom top", 
   //  markers: true,
@@ -1604,7 +1604,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   }
 });
 
-tl.to(".navdark, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2); 
+tl.to(".navdar, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2); 
 
 
 
