@@ -912,9 +912,9 @@ function show() {
 	let tl = gsap.timeline();
 
  // VANJSKI GHOST 
- gsap.set(".fsthreed", {scaleY: 0})
+ gsap.set(".fsthreed", {scaleY: 0.5})
  // MENU LINKS 
- gsap.set(".lineChild", {yPercent:100})
+ //gsap.set(".lineChild", {yPercent:100})
  gsap.set(closeclose, {autoAlpha:0})
 /* 	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
   gsap.set(".fs-menu--column", {yPercent:-100}) */
