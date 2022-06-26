@@ -886,8 +886,8 @@ const closemenu = document.getElementById('close3d'); */
 
 const threedback = document.getElementById('threedback');
 
-const openbutt = document.querySelector(".open3d");
 
+const openbutt = document.querySelector(".open3d");
 openbutt.addEventListener("click", () => {
 	//	openbutt.classList.add("active");
 		show();
@@ -920,7 +920,7 @@ gsap.set(closeclose, {autoAlpha:0})
 function show() {
 	let tl = gsap.timeline();
 
-  gsap.set(openbutt, closeclose, {pointerEvents: "none"}, 0);
+  gsap.set([openbutt, closeclose], {pointerEvents: "none"}, 0);
  
   tl.to(threedback, {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
@@ -958,14 +958,14 @@ function show() {
 	//	.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
-    .set(openbutt, closeclose, {pointerEvents: "all"}, "<")
+    .set([openbutt, closeclose], {pointerEvents: "all"}, "<")
 
 }
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
 
-gsap.set(openbutt, closeclose, {pointerEvents: "none"});
+gsap.set([openbutt, closeclose], {pointerEvents: "none"});
 
 
   tl.fromTo(".clip", {
@@ -987,7 +987,7 @@ gsap.set(openbutt, closeclose, {pointerEvents: "none"});
 
 .to(openbutt, {autoAlpha:1}, "<")
 		.to(closeclose, {autoAlpha:0}, "<")
-    .set(openbutt, closeclose, { pointerEvents: "all"});
+    .set([openbutt, closeclose], { pointerEvents: "all"});
     
 		/* tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
 		.to(".nav-wrapper2", { duration: 0.1, transformOrigin: "top center", height: "0%"})
