@@ -707,12 +707,18 @@ new SplitText(".doublesplit", { type: "lines", linesClass: "lineParent" });
 // OPEN CLOSE FUNCTION
 openmenu.addEventListener("click", () => {
 		show();
+    if (document.querySelector('.smooth-scroll')) {
+
     locoScroll.stop();
+    }
+
 });
 
 closemenu.addEventListener("click", () => {
 		hide();
+    if (document.querySelector('.smooth-scroll')) {
     locoScroll.start();
+  }
 });
 
 
@@ -900,7 +906,11 @@ const threedback = document.getElementById('threedback');
 const openbutt = document.querySelector(".open3d");
 openbutt.addEventListener("click", () => {
 	//	openbutt.classList.add("active");
-  locoScroll.stop();
+  if (document.querySelector('.smooth-scroll')) {
+
+    locoScroll.stop();
+    }
+
 		show();
     
 
@@ -908,8 +918,11 @@ openbutt.addEventListener("click", () => {
 const closeclose = document.getElementById('closeclose');
 closeclose.addEventListener("click", () => {
 //	openbutt.classList.remove("active");
+if (document.querySelector('.smooth-scroll')) {
+  locoScroll.start();
+}
 		hide();
-    locoScroll.start();
+  
   //  api.stop();
 
 });
