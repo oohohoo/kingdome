@@ -1658,11 +1658,11 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 });
 
 tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0) 
-.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 20}, {
+.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 0}, {
  
   yPercent: 100,
   duration: 1.25,
-  rotateZ: 0,
+  rotateZ: 20,
   //ease: "hop",
   stagger: {
     each: 0.025,
