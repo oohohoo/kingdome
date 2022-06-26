@@ -488,6 +488,7 @@ TAB HIDE GAP
 
 
 .sketchfab-embed-wrapper {
+  height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
