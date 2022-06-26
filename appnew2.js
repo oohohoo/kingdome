@@ -932,6 +932,20 @@ function show() {
   
       .to(".navdark", {autoAlpha:0}, "<")
 
+          
+  // IMAGE CLIP
+     .fromTo(".clip", {
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+      webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+      duration: 2.5,
+    },
+    {         
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
+      ease: "hop", transformOrigin: "bottom center",
+      },"<0.1")
+     
+
 /* 	tl.fromTo(".nav-wrapper2", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "power2.inOut"}, "<")
     .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "power2.out"}, "<0.2") */
