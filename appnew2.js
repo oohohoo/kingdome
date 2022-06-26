@@ -906,7 +906,7 @@ gsap.set(threedback, {scaleY: 0})
 // MENU LINKS 
 //gsap.set(".lineChild", {yPercent:100})
 gsap.set(closeclose, {autoAlpha:0})
-
+gsap.set(".iframe-wrapper", {display:"none"})
 
 
 /*  gsap.set(".fs-menu--column", {yPercent:-100})  */
@@ -969,7 +969,7 @@ function hide() {
 	let tl = gsap.timeline();
 
 // gsap.set([openbutt, closeclose], {pointerEvents: "none"});
-gsap.set(".iframe-wrapper", {display:"block"}, 0)
+//gsap.set(".iframe-wrapper", {display:"block"}, 0)
 
   tl.fromTo(".clip", {
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
