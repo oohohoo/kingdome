@@ -926,7 +926,7 @@ TEXT ON DARK BACK
 */
 
 .navcolor {
-color: #ff0000*;
+color: #ff0000;
 background-color: #fdfcfc;
 -webkit-transition: background-color 1000ms linear;
 -ms-transition: background-color 1000ms linear;
