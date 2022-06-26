@@ -304,8 +304,9 @@ function initContent() {
 			}
 		},
 		home: function () {
+      heroPanelAnimation();
 			logoTransformOnScroll();
-		//	heroPanelAnimation();
+			
 			startStopVideo();
 			swiperSolo();
 			headerHide();
@@ -1626,7 +1627,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   yPercent: 0,
   duration: 1.25,
   rotateZ: 0,
-  ease: "hop",
+  //ease: "hop",
   stagger: {
     each: 0.025,
     from: "left"
