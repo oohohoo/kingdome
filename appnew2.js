@@ -956,9 +956,9 @@ function hide() {
 
 	//gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
 
-  tl.to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
+  tl.to(".threed--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
   // VANJSKI GHOST 	
-.to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
+.to(".fsthreed", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
 .to(".navdark", {autoAlpha:1}, "<")
 
 .to(openbutt, {autoAlpha:1}, "<")
