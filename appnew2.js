@@ -760,7 +760,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
-  gsap.set(".close-wrap, .hamby"", {pointerEvents: "none"});
+  gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
 
 
   // MENU LINKS 
