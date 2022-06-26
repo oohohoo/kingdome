@@ -1216,14 +1216,13 @@ function headerHide() {
   const showAnim = gsap.from('.header', { 
     yPercent: -300,
     paused: true,
-    duration: 0.3,
-    ease: "hop"
+    duration: 0.2
   }).progress(1);
   
   ScrollTrigger.create({
     trigger: ".navchange",
     scroller: ".smooth-scroll",
-    start: "10% top",
+    start: "50% top",
     markers: true,
     end: 99999,
     toggleClass: { targets: ".header, .hamby-line, .w--current", className: "navcolor" },
