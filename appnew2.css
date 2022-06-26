@@ -943,7 +943,7 @@ transition: color 0.8s ease;
   transition: color 0.8s ease;
 }
 
-.header {
+.header, .hamby-line, .hamby-line, .w--current  {
  
 -webkit-transition: all 0.2s linear;
 -ms-transition: all 0.2s linear;
