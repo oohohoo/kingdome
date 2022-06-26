@@ -1642,7 +1642,7 @@ function heroPanelAnimation() {
 //gsap.set(".red-flag", {yPercent:100})
 if (document.querySelector('.smooth-scroll')) {
 locoScroll.stop();
-}
+
 console.log("LOCO STOPPED");
 
 var tlin = gsap.timeline({});
@@ -1706,7 +1706,7 @@ tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0)
 
 }
 
-
+}
 /*
 ================================================================================
 PROJECT OBSERVER
