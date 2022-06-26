@@ -1639,7 +1639,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 //.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
 //.fromTo(".red-logo", {yPercent:-100 }, {yPercent:0, rotate:0.0001, duration: 0.5}, "-=0.1")
 
-
+var tlout = gsap.timeline({});
 
 // UJEBAVA NAVIGACIJU 
  var tlout = gsap.timeline({
