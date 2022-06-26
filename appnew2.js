@@ -902,7 +902,7 @@ closeclose.addEventListener("click", () => {
 });
 
 // VANJSKI GHOST 
-gsap.set(threedback, {scaleY: 0, zIndex:2})
+gsap.set(threedback, {scaleY: 0, zIndex:0})
 // MENU LINKS 
 //gsap.set(".lineChild", {yPercent:100})
 gsap.set(closeclose, {autoAlpha:0})
