@@ -712,12 +712,13 @@ gsap.set(".xnav", {scaleY: 0})
 // MENU LINKS 
 gsap.set(".lineChild", {yPercent:100})
 gsap.set(closemenu, {autoAlpha:0})
-gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
+
 
 // --- SHOW
 function show() {
 	let tl = gsap.timeline();
 
+  gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
 // VANJSKI GHOST 
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
 // UNUTARNJI  
@@ -905,8 +906,8 @@ gsap.set(threedback, {scaleY: 0})
 // MENU LINKS 
 //gsap.set(".lineChild", {yPercent:100})
 gsap.set(closeclose, {autoAlpha:0})
-/* 	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
- gsap.set(".fs-menu--column", {yPercent:-100}) */
+
+/*  gsap.set(".fs-menu--column", {yPercent:-100})  */
  //gsap.set(".fs-menu-header", {yPercent:-110})
 
  //gsap.set(".close, .fs-nav-item, .sublink-wrapper, .fadein", {autoAlpha:0})
@@ -919,7 +920,7 @@ gsap.set(closeclose, {autoAlpha:0})
 function show() {
 	let tl = gsap.timeline();
 
- 
+  gsap.set(".close-wrap, .open3d", {pointerEvents: "none"});
  
   tl.to(threedback, {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
@@ -957,14 +958,14 @@ function show() {
 	//	.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
-   // .set(".nav-wrapper2, .open3d", {pointerEvents: "all"}, "<")
+    .set(".close-wrap, .open3d", {pointerEvents: "all"}, "<")
 
 }
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
 
-	//gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
+/gsap.set(".close-wrap, .open3d", {pointerEvents: "none"});
 
 
   tl.fromTo(".clip", {
@@ -986,7 +987,7 @@ function hide() {
 
 .to(openbutt, {autoAlpha:1}, "<")
 		.to(closeclose, {autoAlpha:0}, "<")
-    .set(" .open3d", { pointerEvents: "all"});
+    .set(".close-wrap, .open3d", { pointerEvents: "all"});
     
 		/* tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
 		.to(".nav-wrapper2", { duration: 0.1, transformOrigin: "top center", height: "0%"})
