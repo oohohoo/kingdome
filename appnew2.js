@@ -888,7 +888,7 @@ const closemenu = document.getElementById('close3d');
 //const menuhover = document.getElementById('menuhover');
 
 
-const { gsap } = window;
+/* const { gsap } = window; */
 
 
 const openbutt = document.querySelector(".open3d");
@@ -912,8 +912,13 @@ closeclose.addEventListener("click", () => {
 function show() {
 	let tl = gsap.timeline();
 
-	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
-  gsap.set(".fs-menu--column", {yPercent:-100})
+ // VANJSKI GHOST 
+ gsap.set(".fs3d", {scaleY: 0})
+ // MENU LINKS 
+ gsap.set(".lineChild", {yPercent:100})
+ gsap.set(closeclose, {autoAlpha:0})
+/* 	gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
+  gsap.set(".fs-menu--column", {yPercent:-100}) */
   //gsap.set(".fs-menu-header", {yPercent:-110})
  
   //gsap.set(".close, .fs-nav-item, .sublink-wrapper, .fadein", {autoAlpha:0})
@@ -921,10 +926,16 @@ function show() {
   //gsap.set(".line-wrapper", {yPercent:100})
 
  
+  tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
+  // UNUTARNJI  
+      .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
+          {duration: 0.1, scaleY: 1},"<0.01")
+  
+      .to(".navdark", {autoAlpha:0}, "<")
 
-	tl.fromTo(".nav-wrapper2", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
+/* 	tl.fromTo(".nav-wrapper2", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
     .to(".fs-menu--column", {yPercent:0, duration:0.8, ease: "power2.inOut"}, "<")
-    .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "power2.out"}, "<0.2")
+    .to(".fs-menu-header", {yPercent:0, duration:0.8, ease: "power2.out"}, "<0.2") */
    
    // .to(".fs-nav-item", {autoAlpha:1, duration:0.5,stagger:0.1,  ease: "power2.inOut"}, "<0.1")
    // .to(".fadein", {autoAlpha:1, duration:0.6, ease: "power2.inOut"}, "<0.1")
@@ -934,10 +945,10 @@ function show() {
 	//	.to(".close", {autoAlpha:1}, "<")
     
 		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
-		.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
+	//	.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "power1.inOut"}, "<0.1")
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
-    .set(".nav-wrapper2, .open3d", {pointerEvents: "all"}, "<")
+   // .set(".nav-wrapper2, .open3d", {pointerEvents: "all"}, "<")
 
 }
 // --- HIDE
