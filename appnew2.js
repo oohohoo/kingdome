@@ -1640,13 +1640,14 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   yPercent: 0,
   duration: 1.25,
   rotateZ: 0,
-  onComplete: () => locoScroll.start();
+  onComplete: function(){ locoScroll.start();},
   //ease: "hop",
   stagger: {
     each: 0.025,
     from: "left"
   }
 }, 0)
+
 
 
 
