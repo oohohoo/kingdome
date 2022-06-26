@@ -961,14 +961,15 @@ function show() {
 		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
     
     .set([openbutt, closeclose], {pointerEvents: "all"}, "<")
-
+    .set(".iframe-wrapper", {display:"none"}, "<")
+    
 }
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
 
 // gsap.set([openbutt, closeclose], {pointerEvents: "none"});
-
+.set(".iframe-wrapper", {display:"block"}, 0)
 
   tl.fromTo(".clip", {
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
