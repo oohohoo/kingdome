@@ -928,27 +928,20 @@ TEXT ON DARK BACK
 .navcolor {
 color: #1a1815;
 background-color: #ff0000;
--webkit-transition: all 1000ms linear;
--ms-transition: all 1000ms linear;
-transition: all 1000ms linear;
-/* 
-transition: background-color 0.8s ease;
-transition: color 0.8s ease;
- */
+transition: all 0.3s ease;
+
 }
 
 .hamby-line.navcolor {
   background-color: #1a1815;
-  transition: background-color 0.2s ease;
-  transition: color 0.8s ease;
+  transition: all 0.3s ease;
 }
 
-.header {
- 
--webkit-transition: all 1000ms linear;
+/* .header {
+ -webkit-transition: all 1000ms linear;
 -ms-transition: all 1000ms linear;
 transition: all 1000ms linear;
-}
+} */
 
 
 /*
