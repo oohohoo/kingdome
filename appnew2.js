@@ -970,7 +970,20 @@ function hide() {
 
 	//gsap.set(".nav-wrapper2, .open3d", {pointerEvents: "none"});
 
-  tl.to(".threed--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
+
+  tl.fromTo(".clip", {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
+    duration: 2.5,
+  },
+  {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+           
+    ease: "hop", transformOrigin: "bottom center"
+  }, "<")
+
+.to(".threed--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
   // VANJSKI GHOST 	
 .to(".fsthreed", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
 .to(".navdark", {autoAlpha:1}, "<")
