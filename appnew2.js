@@ -1628,6 +1628,7 @@ function heroPanelAnimation() {
 //gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 //gsap.set(".red-flag", {yPercent:100})
 locoScroll.stop();
+console.log("LOCO STOPPED");
 
 var tlin = gsap.timeline({});
 
