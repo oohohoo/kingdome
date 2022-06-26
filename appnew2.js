@@ -712,6 +712,7 @@ gsap.set(".xnav", {scaleY: 0})
 // MENU LINKS 
 gsap.set(".lineChild", {yPercent:100})
 gsap.set(closemenu, {autoAlpha:0})
+gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
 
 // --- SHOW
 function show() {
@@ -742,34 +743,25 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
     
 // MENU LINKS 
     .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.1")
-    //.to(".nav-super", {autoAlpha:1, stagger:0.04}, "<0.1")
-  //.to(".close-wrap", {autoAlpha:1, rotate:90}, "-=0.1")
-    // LOGO RESET
-
+// LOGO RESET
     .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
     .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
     .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -60, ease:'expo.inOut'}, 0)
-
-
-  //  .to(".fs-nav-item", {autoAlpha:1, duration:0.5, stagger:0.05,  ease: "quart.inOut"}, "<0.1")
-    //.to(".fadein", {autoAlpha:1, duration:0.3, ease: "quart.inOut"}, "<0.1")
 
 // MENU OPENCLOSE
 		.to(openmenu, {autoAlpha:0}, "<")
 		.to(closemenu, {autoAlpha:1}, "<1")
    
-		//.to(".line-wrapper", {yPercent:30, stagger:0.1, duration:0.4, ease: "power1.inOut"}, "<0.1")
-	//	.from(".nav-wrap", {yPercent:100, stagger:0.05, opacity:0, duration:0.4, ease: "quart.inOut"}, "<0.1")
-		//.from(".wg-element-wrapper", {opacity:0, duration:0.3}, "<0.1")
+	
     
-   // .set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "all"}, "<")
+   .set(".close-wrap, .hamby", {pointerEvents: "all"}, "<")
 
 }
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
+  gsap.set(".close-wrap, .hamby"", {pointerEvents: "none"});
 
-//	gsap.set(".xnav, .hamburger-menu, .fs-menu-close", {pointerEvents: "none"});
 
   // MENU LINKS 
   tl.to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:100, stagger:0.015}, 0)
@@ -809,7 +801,7 @@ function hide() {
    // MENU OPENCLOSE
 		.to(openmenu, {autoAlpha:1}, "<")
 		.to(closemenu, {autoAlpha:0}, "<")
-   // .set(" .nav-toggle", { pointerEvents: "all"});
+    .set(" .close-wrap, .hamby", { pointerEvents: "all"});
 
 }
 
@@ -995,7 +987,7 @@ function hide() {
 .to(openbutt, {autoAlpha:1}, "<")
 		.to(closeclose, {autoAlpha:0}, "<")
     .set(" .open3d", { pointerEvents: "all"});
-
+    
 		/* tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
 		.to(".nav-wrapper2", { duration: 0.1, transformOrigin: "top center", height: "0%"})
 		
