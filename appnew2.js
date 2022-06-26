@@ -156,34 +156,6 @@ window.addEventListener('resize', function(){
 });
 
 
-/*
-================================================================================
-DISABLE SCROLL SCRIPT
-================================================================================
-*/
-var Webflow = Webflow || [];
-Webflow.push(function () {
-    var $body = $(document.body);
-    var scrollPosition = 0;
-
-
-    $('[scroll="both"]').on('click', function () {
-        if ($body.css('overflow') !== 'hidden') {
-            var oldWidth = $body.innerWidth();
-            scrollPosition = window.pageYOffset;
-            $body.css('overflow', 'hidden');
-            $body.css('position', 'fixed');
-            $body.css('top', `-${scrollPosition}px`);
-            $body.width(oldWidth);
-        } else {
-            $body.css('overflow', '');
-            $body.css('position', '');
-            $body.css('top', '');
-            $body.width('');
-            $(window).scrollTop(scrollPosition);
-        }
-    });
-});
 
 
 /*
@@ -730,10 +702,12 @@ new SplitText(".doublesplit", { type: "lines", linesClass: "lineParent" });
 // OPEN CLOSE FUNCTION
 openmenu.addEventListener("click", () => {
 		show();
+    locoScroll.stop();
 });
 
 closemenu.addEventListener("click", () => {
 		hide();
+    locoScroll.start();
 });
 
 
@@ -751,6 +725,7 @@ function show() {
   gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
 // VANJSKI GHOST 
 tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
+
 // UNUTARNJI  
     .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
 		{duration: 0.1, scaleY: 1},"<0.01")
