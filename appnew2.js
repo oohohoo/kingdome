@@ -156,6 +156,11 @@ window.addEventListener('resize', function(){
 });
 
 
+locoScroll.stop();
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  locoScroll.start();
+});
 
 
 /*
@@ -1625,7 +1630,7 @@ function heroPanelAnimation() {
 //gsap.set(".red-flag", {yPercent:100})
 
 
-/* var tlin = gsap.timeline({});
+var tlin = gsap.timeline({});
 
 mySplitText = new SplitText(".head-split", {
   type: "words, lines, chars", linesClass: "clip-text"
@@ -1642,7 +1647,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
     from: "left"
   }
 }, 0)
- */
+
 
 //.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
 //.fromTo(".red-logo", {yPercent:-100 }, {yPercent:0, rotate:0.0001, duration: 0.5}, "-=0.1")
