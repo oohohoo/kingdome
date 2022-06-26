@@ -486,6 +486,13 @@ TAB HIDE GAP
   z-index:2
 }
 
+
+.iframe-wrapper.off {
+display:none;
+
+}
+
+
 /*
 ================================================================================
 ACTIVE LINK NE RADI!!!!

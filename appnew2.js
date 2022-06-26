@@ -902,10 +902,12 @@ closeclose.addEventListener("click", () => {
 });
 
 // VANJSKI GHOST 
-gsap.set(threedback, {scaleY: 0})
+gsap.set(threedback, {scaleY: , zIndex:2})
 // MENU LINKS 
 //gsap.set(".lineChild", {yPercent:100})
 gsap.set(closeclose, {autoAlpha:0})
+
+
 
 /*  gsap.set(".fs-menu--column", {yPercent:-100})  */
  //gsap.set(".fs-menu-header", {yPercent:-110})
@@ -922,7 +924,7 @@ function show() {
 
  // gsap.set([openbutt, closeclose], {pointerEvents: "none"}, 0);
  
-  tl.to(threedback, {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
+  tl.to(threedback, {zIndex:4, scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
       .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
           {duration: 0.1, scaleY: 1},"<0.01")
