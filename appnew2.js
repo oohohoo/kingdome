@@ -1597,6 +1597,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
     start: "top top",
     end: "bottom top", 
   //  markers: true,
+  scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
   //  toggleActions: "restart none none none"
@@ -1604,7 +1605,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   }
 });
 
-tlout.to(".navdark, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2); 
+tlout.to(".navdark, .cta__slider", {opacity:0.4, duration: 0.3}, 0); 
 
 
 
