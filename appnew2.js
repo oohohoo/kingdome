@@ -158,6 +158,36 @@ window.addEventListener('resize', function(){
 
 /*
 ================================================================================
+DISABLE SCROLL SCRIPT
+================================================================================
+*/
+var Webflow = Webflow || [];
+Webflow.push(function () {
+    var $body = $(document.body);
+    var scrollPosition = 0;
+
+
+    $('[scroll="both"]').on('click', function () {
+        if ($body.css('overflow') !== 'hidden') {
+            var oldWidth = $body.innerWidth();
+            scrollPosition = window.pageYOffset;
+            $body.css('overflow', 'hidden');
+            $body.css('position', 'fixed');
+            $body.css('top', `-${scrollPosition}px`);
+            $body.width(oldWidth);
+        } else {
+            $body.css('overflow', '');
+            $body.css('position', '');
+            $body.css('top', '');
+            $body.width('');
+            $(window).scrollTop(scrollPosition);
+        }
+    });
+});
+
+
+/*
+================================================================================
 100vh fix mobile menu
 ================================================================================
 */
