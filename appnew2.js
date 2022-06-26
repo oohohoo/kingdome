@@ -305,7 +305,7 @@ function initContent() {
 		},
 		home: function () {
 			logoTransformOnScroll();
-			heroPanelAnimation();
+		//	heroPanelAnimation();
 			startStopVideo();
 			swiperSolo();
 			headerHide();
@@ -315,7 +315,7 @@ function initContent() {
 			productObserver();
 		},
 		howwework: function () {
-			heroPanelAnimation();
+		//	heroPanelAnimation();
 			logoTransformOnScroll();
 			headerHide();
 			akapowPinned();
@@ -323,7 +323,7 @@ function initContent() {
 			startStopVideo();
 		},
 		pageproductsingle: function () {
-			heroPanelAnimation();
+		//	heroPanelAnimation();
 			headerHide();
 			logoTransformOnScroll();
 			productsTabs();
