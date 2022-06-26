@@ -1604,7 +1604,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   }
 });
 
-tl.to(".navdar, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2); 
+tlout.to(".navdar, .cta__slider", {opacity:0.4, duration: 0.3}, 0.2); 
 
 
 
