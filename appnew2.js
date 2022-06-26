@@ -531,7 +531,7 @@ BARBA INIT
 */
 
 barba.init({
-	timeout: 7000,
+	timeout: 5000,
 	debug: true,
 	prefetch: true,
 
