@@ -1223,6 +1223,7 @@ function headerHide() {
     trigger: ".navchange",
     scroller: ".smooth-scroll",
     start: "top 95%",
+    markers: true,
     end: 99999,
     toggleClass: { targets: ".header, .hamby-line, .w--current", className: "navcolor" },
     onUpdate: (self) => {
