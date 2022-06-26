@@ -985,6 +985,10 @@ function hide() {
 .to(".threed--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
   // VANJSKI GHOST 	
 .to(threedback, { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
+.to(threedback, { zIndex:0}) 
+
+
+
 .to(".navdark", {autoAlpha:1}, "<")
 
 .to(openbutt, {autoAlpha:1}, "<")
