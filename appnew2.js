@@ -156,12 +156,11 @@ window.addEventListener('resize', function(){
 });
 
 
-locoScroll.stop();
 
-window.addEventListener('DOMContentLoaded', (event) => {
+/* window.addEventListener('DOMContentLoaded', (event) => {
   locoScroll.start();
 });
-
+ */
 
 /*
 ================================================================================
@@ -1628,7 +1627,7 @@ function heroPanelAnimation() {
 
 //gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 //gsap.set(".red-flag", {yPercent:100})
-
+locoScroll.stop();
 
 var tlin = gsap.timeline({});
 
@@ -1641,6 +1640,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   yPercent: 0,
   duration: 1.25,
   rotateZ: 0,
+  onComplete: () => locoScroll.start();
   //ease: "hop",
   stagger: {
     each: 0.025,
@@ -1649,12 +1649,14 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 }, 0)
 
 
+
 //.to(".home-hero-video, .cta__slider", {scale:1}, 0.2)
 //.fromTo(".red-logo", {yPercent:-100 }, {yPercent:0, rotate:0.0001, duration: 0.5}, "-=0.1")
 
 var tlin = gsap.timeline({});
 
-// UJEBAVA NAVIGACIJU 
+// PIN HERO
+
  var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
