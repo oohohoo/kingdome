@@ -1657,7 +1657,7 @@ var tlout = gsap.timeline({});
   }
 });
 
-tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0) 
+tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0.2) 
 .fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 0}, {
  
   yPercent: 100,
