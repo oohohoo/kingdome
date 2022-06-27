@@ -318,9 +318,10 @@ function initContent() {
 			headerHide();
 		},
 		products: function () {
+      productObserver();
       heroPanelAnimation();
 			//projectMainSwiper();
-			productObserver();
+		
 		},
 		howwework: function () {
       heroPanelAnimation();
@@ -558,8 +559,8 @@ BARBA VIEWS
 		{
 			namespace: "products",
 			beforeEnter(data) {
-        heroPanelAnimation();
-			//	productObserver();
+       // heroPanelAnimation();
+				productObserver();
 			},
 		},
 		{
