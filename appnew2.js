@@ -2038,10 +2038,11 @@ function vhFix() {
 const documentHeight = () => {
   const doc = document.documentElement
   doc.style.setProperty('--doc-height', '${window.innerHeight}px')
+  console.log("VH DOC HEIGHT");
  }
  window.addEventListener('resize', documentHeight)
  documentHeight()
- console.log("VH DOC HEIGHT");
+ 
 	
 /*  let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
