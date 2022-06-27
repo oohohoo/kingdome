@@ -1,6 +1,36 @@
 
 /*
 ================================================================================
+DEFINE ROOT VARIABLES / definiraj svoje
+================================================================================
+*/
+:root {
+  --text-color: white;
+  --text-dark-color: #202020;
+  --header-height: 100px;
+  --burger-width: 40px;
+  --font-headings: Georgia, serif;
+
+  --bcg-green: #ACB7AE;
+  --bcg-lightgreen: #a6b3b3;
+  --bcg-lightbrown: #b0a7a4;
+  --bcg-lightblue: #fdfcfc;
+
+  /*  --bcg-loaderblue: #28282a; */
+    --bcg-loaderblue: #243635;
+  --bcg-loaderbluedark: #e51e3d;
+
+  --loader-width: 10.75rem;
+  --loader-height: 10.75rem;
+
+  --v-spacing: 10vh;
+  --h-gutter: 6.6vw;
+
+  --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
+}
+
+/*
+================================================================================
 PRELOADER
 ================================================================================
 */
@@ -8,6 +38,7 @@ body,
 html {
   margin: 0;
   padding: 0;
+  
   /* overflow: hidden;  */
 }
 
@@ -107,35 +138,6 @@ svg * {
 }
 
 
-/*
-================================================================================
-DEFINE ROOT VARIABLES / definiraj svoje
-================================================================================
-*/
-:root {
-  --text-color: white;
-  --text-dark-color: #202020;
-  --header-height: 100px;
-  --burger-width: 40px;
-  --font-headings: Georgia, serif;
-
-  --bcg-green: #ACB7AE;
-  --bcg-lightgreen: #a6b3b3;
-  --bcg-lightbrown: #b0a7a4;
-  --bcg-lightblue: #fdfcfc;
-
-  /*  --bcg-loaderblue: #28282a; */
-    --bcg-loaderblue: #243635;
-  --bcg-loaderbluedark: #e51e3d;
-
-  --loader-width: 10.75rem;
-  --loader-height: 10.75rem;
-
-  --v-spacing: 10vh;
-  --h-gutter: 6.6vw;
-
-  --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
-}
 
 /*
 ================================================================================
