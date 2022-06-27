@@ -332,7 +332,7 @@ function initContent() {
 			startStopVideo();
 		},
 		pageproductsingle: function () {
-     
+      heroPanelAnimation();
 			headerHide();
 			logoTransformOnScroll();
 			productsTabs();
