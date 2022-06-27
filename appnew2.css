@@ -59,11 +59,18 @@ GLOBAL CLASSES & FIXES
 */
 
 
+
+
 .vh100 {
  /*  min-height: 100vh; */
  height: 100vh;
   /*height: calc(var(--vh, 1vh) * 100);*/
 }
+.vhfix {
+min-height: calc(100vh - 60px);
+}
+
+
 /* Snippet gets rid of top margin on first element in any rich text*/
 .w-richtext>:first-child {
 	margin-top: 0;
