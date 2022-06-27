@@ -1678,7 +1678,7 @@ console.log("LOCO STOPPED");
 
 var tlin = gsap.timeline({});
 
-gsap.set(".head-split", { autoAlpha: 1});
+/* gsap.set(".head-split", { autoAlpha: 1}, 0); */
 
 
 mySplitText = new SplitText(".head-split", {
