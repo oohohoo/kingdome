@@ -1681,11 +1681,12 @@ mySplitText = new SplitText(".head-split", {
 });
 
 
-tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:1, yPercent: 100, rotateZ: 20}, {
+tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, rotateZ: 20}, {
  
   yPercent: 0,
   duration: 1.25,
   rotateZ: 0,
+  autoAlpha:1,
   onComplete: function(){ locoScroll.start(); console.log("LOCO STARTED");},
   //ease: "hop",
   stagger: {
