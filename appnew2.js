@@ -1770,7 +1770,7 @@ function productObserver() {
     loop: true,
     effect: "slide",
     direction: "vertical", // put horizontal
-    speed: 1000,
+    speed: 800,
     //grabCursor: true,
     watchSlidesProgress: true, // turn off for horizontal
     //mousewheelControl: true,
