@@ -558,6 +558,7 @@ BARBA VIEWS
 		{
 			namespace: "products",
 			beforeEnter(data) {
+        heroPanelAnimation();
 			//	productObserver();
 			},
 		},
