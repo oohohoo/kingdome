@@ -66,9 +66,6 @@ GLOBAL CLASSES & FIXES
  height: 100vh;
   /*height: calc(var(--vh, 1vh) * 100);*/
 }
-.vhfix {
-min-height: calc(100vh - 60px);
-}
 
 
 /* Snippet gets rid of top margin on first element in any rich text*/
@@ -1013,11 +1010,17 @@ iframe {
     width:100vw;
     height:100vh;
   }
+
+  .vhfix {
+    min-height: calc(100vh - 60px);
+    }
+    
   
   }
 
 
-
+  
+    
 
 /*
 ================================================================================
