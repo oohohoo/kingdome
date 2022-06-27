@@ -318,7 +318,7 @@ function initContent() {
 			headerHide();
 		},
 		products: function () {
-      
+      heroPanelAnimation();
 			//projectMainSwiper();
 			productObserver();
 		},
