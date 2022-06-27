@@ -4,8 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(Observer);
 
-CustomEase.create("hop", "0.5, 0, .0, 1");
-
+CustomEase.create("hop", ".87, .01, .8, 1.04");
 
 
 
