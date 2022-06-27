@@ -2035,7 +2035,7 @@ Webflow.push(function () {
 
 function vhFix() {
 
-const documentHeightX = () => {
+const documentHeight = () => {
   const doc = document.documentElement
   doc.style.setProperty('--doc-height', '${window.innerHeight}px')
   console.log("VH DOC HEIGHT");
