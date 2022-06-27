@@ -1679,10 +1679,6 @@ var tlin = gsap.timeline({});
 
 
 
-gsap.set(".", { autoAlpha: 1});
-
-
-
 mySplitText = new SplitText(".head-split", {
   type: "words, lines, chars", linesClass: "clip-text"
 });
