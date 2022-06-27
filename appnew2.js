@@ -162,27 +162,7 @@ window.addEventListener('resize', function(){
 });
  */
 
-/*
-================================================================================
-100vh fix mobile menu
-================================================================================
-*/
 
-const documentHeight = () => {
-  const doc = document.documentElement
-  doc.style.setProperty('--doc-height', '${window.innerHeight}px')
- }
- window.addEventListener('resize', documentHeight)
- documentHeight()
- console.log("VH DOC HEIGHT");
-	
-/*  let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}); 
- */
 
 /*
 ================================================================================
@@ -362,13 +342,13 @@ function initContent() {
 
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
-
-  fullscreenMenu();
+   fullscreenMenu();
 	scrollToTop();
 	yearUpdate();
 	fadeInOnEnter();
 	cubertoCursor();
   disableScroll();
+  vhFix();
 
 	myscripts.init();
 
@@ -2000,7 +1980,7 @@ function success() {
 
 /*
 ================================================================================
-SUCCESS
+DISABLE SCROLL
 ================================================================================
 */
 function disableScroll() {
@@ -2045,3 +2025,30 @@ Webflow.push(function () {
 });
 
 }
+
+
+/*
+================================================================================
+100vh fix mobile menu
+================================================================================
+*/
+
+function vhFix() {
+
+const documentHeight = () => {
+  const doc = document.documentElement
+  doc.style.setProperty('--doc-height', '${window.innerHeight}px')
+ }
+ window.addEventListener('resize', documentHeight)
+ documentHeight()
+ console.log("VH DOC HEIGHT");
+	
+/*  let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}); 
+ */
+}
+
