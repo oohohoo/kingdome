@@ -312,7 +312,7 @@ function initContent() {
 		home: function () {
       
 			logoTransformOnScroll();
-			
+      heroPanelAnimation();
 			startStopVideo();
 			swiperSolo();
 			headerHide();
@@ -323,7 +323,7 @@ function initContent() {
 			productObserver();
 		},
 		howwework: function () {
-			
+      heroPanelAnimation();
 			logoTransformOnScroll();
 			headerHide();
 			akapowPinned();
@@ -331,7 +331,7 @@ function initContent() {
 			startStopVideo();
 		},
 		pageproductsingle: function () {
-			
+     
 			headerHide();
 			logoTransformOnScroll();
 			productsTabs();
@@ -354,7 +354,7 @@ function initContent() {
 
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
-	heroPanelAnimation();
+
   fullscreenMenu();
 	scrollToTop();
 	yearUpdate();
