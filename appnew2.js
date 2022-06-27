@@ -310,7 +310,7 @@ function initContent() {
 			}
 		},
 		home: function () {
-      heroPanelAnimation();
+      
 			logoTransformOnScroll();
 			
 			startStopVideo();
@@ -318,12 +318,12 @@ function initContent() {
 			headerHide();
 		},
 		products: function () {
-      heroPanelAnimation();
+      
 			//projectMainSwiper();
 			productObserver();
 		},
 		howwework: function () {
-			heroPanelAnimation();
+			
 			logoTransformOnScroll();
 			headerHide();
 			akapowPinned();
@@ -331,7 +331,7 @@ function initContent() {
 			startStopVideo();
 		},
 		pageproductsingle: function () {
-			heroPanelAnimation();
+			
 			headerHide();
 			logoTransformOnScroll();
 			productsTabs();
@@ -354,7 +354,7 @@ function initContent() {
 
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
-	
+	heroPanelAnimation();
   fullscreenMenu();
 	scrollToTop();
 	yearUpdate();
