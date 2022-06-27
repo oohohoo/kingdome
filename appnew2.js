@@ -2,7 +2,7 @@
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
-gsap.registerPlugin(Observer);
+//gsap.registerPlugin(Observer);
 
 CustomEase.create("hop", "0.5, 0, .0, 1");
 
@@ -360,7 +360,7 @@ function initContent() {
 	yearUpdate();
 	fadeInOnEnter();
 	cubertoCursor();
-
+  disableScroll();
 
 	myscripts.init();
 
@@ -898,6 +898,14 @@ const closemenu = document.getElementById('close3d'); */
 //const menuhover = document.getElementById('menuhover');
 
 
+
+
+window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+});
+
+
+
 /* const { gsap } = window; */
 
 const threedback = document.getElementById('threedback');
@@ -910,6 +918,16 @@ openbutt.addEventListener("click", () => {
 
     locoScroll.stop();
  
+    /* MOBILE*/
+    const showDialog = () => {
+      document.getElementById('dialog').classList.add('show')
+      const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+      const body = document.body;
+      body.style.position = 'fixed';
+      body.style.top = `-${scrollY}`;
+    };
+
+
 
 		show();
     
@@ -919,6 +937,17 @@ const closeclose = document.getElementById('closeclose');
 closeclose.addEventListener("click", () => {
 //	openbutt.classList.remove("active");
   locoScroll.start();
+
+
+  const closeDialog = () => {
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    document.getElementById('dialog').classList.remove('show');
+  }
+
 
 		hide();
   
@@ -1952,3 +1981,52 @@ function success() {
   
   
   }
+
+
+/*
+================================================================================
+SUCCESS
+================================================================================
+*/
+function disableScroll() {
+
+  var Webflow = Webflow || [];
+Webflow.push(function () {
+    var $body = $(document.body);
+    var scrollPosition = 0;
+
+    $('[scroll="disable"]').on('click', function () {
+        var oldWidth = $body.innerWidth();
+        scrollPosition = window.pageYOffset;
+        $body.css('overflow', 'hidden');
+        $body.css('position', 'fixed');
+        $body.css('top', `-${scrollPosition}px`);
+        $body.width(oldWidth);
+    });
+    $('[scroll="enable"]').on('click', function () {
+        if ($body.css('overflow') != 'hidden') { scrollPosition = window.pageYOffset; }
+        $body.css('overflow', '');
+        $body.css('position', '');
+        $body.css('top', '');
+        $body.width('');
+        $(window).scrollTop(scrollPosition);
+    });
+    $('[scroll="both"]').on('click', function () {
+        if ($body.css('overflow') !== 'hidden') {
+            var oldWidth = $body.innerWidth();
+            scrollPosition = window.pageYOffset;
+            $body.css('overflow', 'hidden');
+            $body.css('position', 'fixed');
+            $body.css('top', `-${scrollPosition}px`);
+            $body.width(oldWidth);
+        } else {
+            $body.css('overflow', '');
+            $body.css('position', '');
+            $body.css('top', '');
+            $body.width('');
+            $(window).scrollTop(scrollPosition);
+        }
+    });
+});
+
+}
