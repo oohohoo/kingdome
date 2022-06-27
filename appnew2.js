@@ -1669,7 +1669,7 @@ function heroPanelAnimation() {
 
 //gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 //gsap.set(".red-flag", {yPercent:100})
-if (document.querySelector('.smooth-scroll')) {
+//if (document.querySelector('.smooth-scroll')) {
 locoScroll.stop();
 
 console.log("LOCO STOPPED");
@@ -1733,7 +1733,7 @@ tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0)
   }
 }, 0) */
 
-}
+//}
 
 }
 /*
