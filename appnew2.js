@@ -312,8 +312,8 @@ function initContent() {
 		},
 		howwework: function () {
       heroPanelAnimation();
-		//	logoTransformOnScroll();
-			headerHide();
+			logoTransformOnScroll();
+		//	headerHide();
 			akapowPinned();
 			logoMarquee();
 			startStopVideo();
