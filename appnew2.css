@@ -1290,8 +1290,8 @@ SLIDER CONTACT AUTO HEIGHT FIXED
 ================================================================================
 */
 
-  .slide .w-slide [aria-hidden="true"] {
-    height: 0px;
+  .slider [aria-hidden="true"] {
+    height: 0px!important;
     }  
  
 
