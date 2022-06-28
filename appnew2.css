@@ -1315,5 +1315,5 @@ MEDIA QUERY
 html { font-size: calc(0.625rem + 0.41666666666666663vw); }
 @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
 @media screen and (max-width:1440px) { html { font-size: calc(0.625rem + 0.41666666666666663vw); } }
-@media screen and (max-width:960px) { html { font-size: calc(0.6882796257796258rem + 0.6237006237006237vw); } }
-@media screen and (max-width:479px) { html { font-size: calc(0.31093096234309625rem + 2.510460251046025vw); } }
+@media screen and (max-width:960px) { html { font-size: calc(0.9377598752598753rem + 0.2079002079002079vw); } }
+@media screen and (max-width:479px) { html { font-size: calc(0.31106171548117156rem + 2.301255230125523vw); } }
