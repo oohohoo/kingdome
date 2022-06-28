@@ -1714,7 +1714,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   }
 });
 
-tlout.to(".home-hero_component, .cta__slider", {autoAlpha:0, duration: 0.3}, 0) 
+tlout.to(".home-hero_component, .cta__slider", {/* autoAlpha:0, duration: 0.3 */}, 0) 
 
 
 /* .fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 0}, {
