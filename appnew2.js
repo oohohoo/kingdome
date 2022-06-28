@@ -1477,7 +1477,7 @@ function swiperSolo() {
 		loopedSlides: 6,
 		loop: true,
 		spaceBetween: 33,
-		slidesPerView: 1.2,
+		slidesPerView: 1.3,
 	//	freeMode: true,
 	//	grabCursor: true,
 	//	mousewheel: false,
