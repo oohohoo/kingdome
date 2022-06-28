@@ -1500,7 +1500,7 @@ function swiperSolo() {
 		// centeredSlides: true,
 		// slidesOffsetBefore: 100,
 		speed: 1000,
-		breakpoints: {
+	/* 	breakpoints: {
 			500: {
 				spaceBetween: 24,
 				//  loopedSlides: 3,
@@ -1515,7 +1515,7 @@ function swiperSolo() {
 				spaceBetween: 24,
 				slidesPerView: 1.2,
 			},
-		},
+		}, */
 	});
 }
 
