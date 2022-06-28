@@ -1476,7 +1476,7 @@ function swiperSolo() {
 	var swipersolo = new Swiper(".swiper-container-solo", {
 		loopedSlides: 6,
 		loop: true,
-		spaceBetween: 60,
+		spaceBetween: 40,
 //		slidesPerView: 1,
 	//	freeMode: true,
 	//	grabCursor: true,
@@ -1494,7 +1494,7 @@ function swiperSolo() {
 		//loopFillGroupWithBlank: false,
 		// paginationClickable: true,
 		// mousewheelControl: true,
-		parallax: true,
+	//	parallax: true,
 		// preloadImages: true,
 		//updateOnImagesReady: true,
 		// centeredSlides: true,
