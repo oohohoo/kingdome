@@ -314,7 +314,7 @@ function initContent() {
       heroPanelAnimation();
 		//	logoTransformOnScroll();
 		//	headerHide();
-		//	akapowPinned();
+			akapowPinned();
 		//	logoMarquee();
 		//	startStopVideo();
 		},
