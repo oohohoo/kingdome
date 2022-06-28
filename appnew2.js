@@ -1476,7 +1476,7 @@ function swiperSolo() {
 	var swipersolo = new Swiper(".swiper-container-solo", {
 		loopedSlides: 6,
 		loop: true,
-		spaceBetween: 33,
+		spaceBetween: 35,
 		slidesPerView: 1.35,
 	//	freeMode: true,
 		grabCursor: true,
@@ -1522,7 +1522,7 @@ function swiperSolo() {
 				slidesPerView: 1.25,
 			},
       1024: {
-				spaceBetween: 33,
+				spaceBetween: 35,
 				//  loopedSlides: 3,
 				slidesPerView: 1.25,
 			},
