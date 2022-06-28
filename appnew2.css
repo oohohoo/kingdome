@@ -1005,17 +1005,20 @@ iframe {
 }
 
 @media screen and (max-width: 767px) {
-
+/**/
   iframe {
     width:100vw;
     height:100vh;
   }
 
+  /**/
   .vhfix {
     height: calc(100vh - 6.25rem);
     }
-
-  
+/**/
+  .inner-loader {
+  top:-6.25rem;
+  }
   }
 
 
