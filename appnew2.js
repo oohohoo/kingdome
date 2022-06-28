@@ -337,6 +337,7 @@ function initContent() {
 		},
     success: function () {
       success();
+      backToPrev();
       console.log("Success loaded");
 		},
 	};
@@ -585,6 +586,7 @@ BARBA VIEWS
     {
 			namespace: "success",
 			beforeEnter(data) {
+        backToPrev();
 				success();
 			},
     },
@@ -2054,4 +2056,17 @@ window.addEventListener('resize', () => {
  */
 }
 
+/*
+================================================================================
+BACK TO PREV - THANK YOU PAGE
+================================================================================
+*/
+function backToPrev() {
 
+  $( document ).ready(function() {
+    $( ".backtoprev" ).click(function() {
+      window.history.back();
+    });
+  });
+  
+  }
