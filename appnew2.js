@@ -1498,7 +1498,7 @@ function swiperSolo() {
 		// preloadImages: true,
 		//updateOnImagesReady: true,
 		// centeredSlides: true,
-		// slidesOffsetBefore: 100,
+		 slidesOffsetBefore: 100,
 		speed: 1000,
 	/* 	breakpoints: {
 			500: {
