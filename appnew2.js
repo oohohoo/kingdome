@@ -312,7 +312,7 @@ function initContent() {
 		},
 		howwework: function () {
       heroPanelAnimation();
-			logoTransformOnScroll();
+		//	logoTransformOnScroll();
 		//	headerHide();
 			akapowPinned();
 			logoMarquee();
