@@ -1282,7 +1282,7 @@ BATCH VISIBLE ON MOBILE
   .section-contact {
     /* overflow-y: hidden!important; */
  /*   height: calc(100vh - 6.25rem); */
-   height: 100vh;
+  /*  height: 100vh; */
  /*  height: calc(var(--vh, 1vh) * 80); */
   }
 
