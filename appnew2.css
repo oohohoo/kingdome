@@ -1286,7 +1286,9 @@ BATCH VISIBLE ON MOBILE
    
 
 
-  
+  .slider [aria-hidden=“true”] {
+    height: 0px;
+    }  
 
 
 /*
