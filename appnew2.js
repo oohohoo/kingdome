@@ -314,9 +314,9 @@ function initContent() {
      // heroPanelAnimation();
 		//	logoTransformOnScroll();
 		//	headerHide();
-			akapowPinned();
+		//	akapowPinned();
 		//	logoMarquee();
-			startStopVideo();
+		//	startStopVideo();
 		},
 		pageproductsingle: function () {
       heroPanelAnimation();
@@ -563,8 +563,8 @@ BARBA VIEWS
 		{
 			namespace: "howwework",
 			beforeEnter(data) {
-				akapowPinned();
-				logoMarquee();
+		//		akapowPinned();
+			//	logoMarquee();
 			},
 		},
 		{
