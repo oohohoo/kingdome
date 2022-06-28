@@ -1499,7 +1499,7 @@ function swiperSolo() {
 		//updateOnImagesReady: true,
 		// centeredSlides: true,
 		 slidesOffsetBefore: 100,
-		speed: 1000,
+		speed: 800,
 	/* 	breakpoints: {
 			500: {
 				spaceBetween: 24,
