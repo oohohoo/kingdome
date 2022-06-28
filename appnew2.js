@@ -1477,7 +1477,7 @@ function swiperSolo() {
 		loopedSlides: 6,
 		loop: true,
 		spaceBetween: 30,
-//		slidesPerView: 1,
+		slidesPerView: 1,
 	//	freeMode: true,
 	//	grabCursor: true,
 	//	mousewheel: false,
@@ -1498,7 +1498,7 @@ function swiperSolo() {
 		// preloadImages: true,
 		//updateOnImagesReady: true,
 		// centeredSlides: true,
-		 slidesOffsetBefore: 100,
+		// slidesOffsetBefore: 100,
 		speed: 800,
 	/* 	breakpoints: {
 			500: {
