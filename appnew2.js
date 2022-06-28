@@ -315,7 +315,7 @@ function initContent() {
 		//	logoTransformOnScroll();
 		//	headerHide();
 			akapowPinned();
-			logoMarquee();
+		//	logoMarquee();
 			startStopVideo();
 		},
 		pageproductsingle: function () {
