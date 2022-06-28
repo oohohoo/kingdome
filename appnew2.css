@@ -170,18 +170,18 @@ ASPECT RATIOS WITH FALLBACK
 
 
 /* FULL IMAGE*/
-.aspect-home-products {
+.aspect-products {
   aspect-ratio: 384 / 488;
 }
 
 @supports not (aspect-ratio: 384 / 488) {
-  .aspect-video::before {
+  .aspect-products::before {
     float: left;
     padding-top: 75%;
     content: "";
   }
 
-  .aspect-video::after {
+  .aspect-products::after {
     display: block;
     content: "";
     clear: both;
