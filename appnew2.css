@@ -177,10 +177,10 @@ ASPECT RATIOS WITH FALLBACK
 
 /* FULL IMAGE*/
 .aspect-products {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 400 / 263;
 }
 
-@supports not (aspect-ratio: 4 / 3) {
+@supports not (aspect-ratio: 400 / 263) {
   .aspect-products::before {
     float: left;
     padding-top: 65%;
