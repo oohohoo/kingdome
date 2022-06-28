@@ -1474,9 +1474,9 @@ SWIPER PROJECT SOLO
 
 function swiperSolo() {
 	var swipersolo = new Swiper(".swiper-container-solo", {
-	//	loopedSlides: 6,
-	//	loop: true,
-//		spaceBetween: 60,
+		loopedSlides: 6,
+		loop: true,
+		spaceBetween: 60,
 //		slidesPerView: 1,
 	//	freeMode: true,
 	//	grabCursor: true,
