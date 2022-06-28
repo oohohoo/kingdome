@@ -1488,8 +1488,8 @@ function swiperSolo() {
    }, */
  
 		   resistanceRatio:0.2,
-		// longSwipes:true,
-		//   longSwipesRatio:0.5,
+		 longSwipes:true,
+		   longSwipesRatio:0.5,
 		//  touchRatio:5,
 		//loopFillGroupWithBlank: false,
 		// paginationClickable: true,
