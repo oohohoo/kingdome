@@ -311,7 +311,7 @@ function initContent() {
 		
 		},
 		howwework: function () {
-      heroPanelAnimation();
+     // heroPanelAnimation();
 		//	logoTransformOnScroll();
 		//	headerHide();
 			akapowPinned();
