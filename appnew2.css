@@ -118,6 +118,7 @@ main:focus-visible {
 }
 
 
+
 /*
 ================================================================================
 BEN MINGO FONT SMOOTH - TEST
@@ -1272,21 +1273,18 @@ BATCH VISIBLE ON MOBILE
 @media screen and (max-width: 991px) {
 
 
- .batch {
+ .batch, .slider-tab {
   visibility:visible;
 }
-
- }
-
- @media screen and (max-width: 991px) {
-
-
-  .slider-tab{
-   visibility:visible;
- }
- 
   }
    
+
+  .section-contact {
+    overflow-y: hidden!important;
+  }
+
+  
+
 /*
 ================================================================================
 SLIDER CONTACT AUTO HEIGHT FIXED
