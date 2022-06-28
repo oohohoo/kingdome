@@ -119,6 +119,10 @@ main:focus-visible {
 }
 
 
+.underline a {
+	text-decoration: underline;
+}
+
 
 /*
 ================================================================================
