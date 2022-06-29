@@ -1032,6 +1032,22 @@ function logoTransformOnScroll() {
   });
   
   
+
+  // switch on every click ======
+  var timesClicked = 1;
+  button.onclick = function() {
+    if (timesClicked%2==0) {
+      doSwitch(second, 1); 
+     
+      show();
+    } else {
+     doSwitchOut(second, 1);
+     hide();
+    }
+    timesClicked++;
+  };  
+
+  
   // VANJSKI GHOST 
   gsap.set(".xnav", {scaleY: 0})
   // MENU LINKS 
@@ -1207,19 +1223,7 @@ function logoTransformOnScroll() {
 
 
 
-  // switch on every click ======
-  var timesClicked = 1;
-  button.onclick = function() {
-    if (timesClicked%2==0) {
-      doSwitch(second, 1); 
-     
-      show();
-    } else {
-     doSwitchOut(second, 1);
-     hide();
-    }
-    timesClicked++;
-  };  
+  
 
 
   
