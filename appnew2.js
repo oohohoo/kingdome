@@ -1169,7 +1169,7 @@ var switchlogosmall = document.querySelector(".close-wrap");
   
   }
   var doSwitchOut = function(shape, show){
-    var TL2 = gsap.timeline({ defaults: {duration: 0.3, overwrite: 'auto', force3D:false, ease: "power1.in"} })
+    var TL2 = gsap.timeline({ defaults: {duration: 0.3, overwrite: 'auto', force3D:false, ease: "hop"} })
     .to('#switch', {autoAlpha: show, duration: 0.3},0 )
     .to('#start', {morphSVG:shape},0)
      .to(".header_znak", { scale: 1, yPercent: 0, transformOrigin: 'center center'}, 0) 
