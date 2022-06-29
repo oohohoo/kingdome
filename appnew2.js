@@ -1195,10 +1195,10 @@ var switchlogosmall = document.querySelector(".close-wrap");
   switchlogobig.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
-      console.log("Clicked");
+      console.log("Clicked OPEN");
     } else {
      doSwitchOut(second, 1);
-     console.log("Clicked else");
+     console.log("Played OPEN ELSE");
     }
     timesClicked++;
   };  
@@ -1206,8 +1206,10 @@ var switchlogosmall = document.querySelector(".close-wrap");
  switchlogosmall.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1);
+      console.log("Clicked CLOSED");
     } else {
       doSwitchOut(second, 1);
+      console.log("Played CLOSED ELSE");
     }
     timesClicked++;
   };  
