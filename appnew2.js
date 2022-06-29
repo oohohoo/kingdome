@@ -1190,8 +1190,8 @@ function logoTransformOnScroll() {
   button.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
-      fullscreenMenu();
-      
+     
+      show();
     } else {
      doSwitchOut(second, 1);
     }
