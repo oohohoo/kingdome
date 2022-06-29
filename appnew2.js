@@ -1205,7 +1205,7 @@ var switchlogosmall = document.querySelector(".close-wrap");
 
  switchlogobig.onclick = function() {
     if (timesClicked%2==0) {
-      doSwitchOut(second, 1);
+      doSwitch(second, 1);
     } else {
       doSwitchOut(second, 1);
     }
