@@ -1150,8 +1150,8 @@ function logoTransformOnScroll() {
   const first = "M0.768555 -0.237793H98.7686V134.762H49.7686H0.768555V-0.237793Z";
   const second = "M0.0498047 -0.237793H98.0498V134.762L49.0498 109.907L0.0498047 134.762V-0.237793Z";
   var start = document.getElementById("start");
-const switchlogobig = document.querySelectorAll(".hamby");
-const switchlogosmall = document.querySelectorAll(".close-wrap");
+var switchlogobig = document.querySelector(".hamby");
+var switchlogosmall = document.querySelector(".close-wrap");
 
   
   
