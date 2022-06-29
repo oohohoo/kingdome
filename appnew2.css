@@ -1091,16 +1091,15 @@ CUBERTO CURSOR
 
 }
 
-.mf-cursor.-redbig {
-  color: #e51e3d;
-  
-}
 
 .mf-cursor.-black{
   color: #1a1815;
 }
 
-
+.mf-cursor.-redsmall:before {
+  transform: scale(0.15);
+  color: #e51e3d;
+}
 
 /* slightly transparent fallback */
 /*  .mf-cursor.-backblur {
