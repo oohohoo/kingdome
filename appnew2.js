@@ -1195,13 +1195,15 @@ function logoTransformOnScroll() {
   switchlogobig.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
+      console.log("Clicked");
     } else {
      doSwitchOut(second, 1);
+     console.log("Clicked else");
     }
     timesClicked++;
   };  
 
-  switchlogosmall.onclick = function() {
+ /*  switchlogosmall.onclick = function() {
     if (timesClicked%2==0) {
       doSwitchOut(second, 1);
     } else {
@@ -1209,7 +1211,7 @@ function logoTransformOnScroll() {
     }
     timesClicked++;
   };  
-
+ */
 
  
 /*   gsap.timeline({
