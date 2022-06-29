@@ -1146,22 +1146,73 @@ HOME - LOGO TRANSFORM ON SCROLL
 ================================================================================
 */
 function logoTransformOnScroll() {
-  gsap.timeline({
+
+  const first = "M0.768555 -0.237793H98.7686V134.762H49.7686H0.768555V-0.237793Z";
+  const second = "M0.0498047 -0.237793H98.0498V134.762L49.0498 109.907L0.0498047 134.762V-0.237793Z";
+  var start = document.getElementById("start");
+  var button = document.getElementById("switch");
+  var show =1;
+  var doSwitch = function(shape, show){
+    var TL1 = gsap.timeline({ defaults: {duration: 0.3, overwrite: 'auto', force3D:false, ease: "hop"} })
+    .to('#switch', {autoAlpha: show, duration: 0.3} )
+    .to('#start', {morphSVG:shape},0 )
+    .to(".header_znak", { scale: 0.7, yPercent: -36}, 0) 
+  .to(".h-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem'}, 0) 
+  .to(".text-block",  {yPercent:30, autoAlpha:0}, 0) 
+  
+    
+    return TL1;
+  
+  }
+  var doSwitchOut = function(shape, show){
+    var TL2 = gsap.timeline({ defaults: {duration: 0.3, overwrite: 'auto', force3D:false, ease: "hop"} })
+    .to('#switch', {autoAlpha: show, duration: 0.3} )
+    .to('#start', {morphSVG:shape},0 )
+     .to(".header_znak", { scale: 1, yPercent: 0}, 0) 
+   .to(".h-red-flag",  {width:'6rem', height:'9rem', top: '0rem'}, 0) 
+   .to(".text-block",  {yPercent:0, autoAlpha:1}, 0)
+  
+    return TL2;
+  
+  }
+  
+  const ST = ScrollTrigger.create ({
+    //animation: TL1,
+    markers: true,
+    start: '35% 25%',
+    // toggleActions: "play none none reverse"
+    onEnter: () => doSwitch(first, 1),
+    onLeaveBack: () => doSwitchOut(start, 0),
+  });
+  // switch on every click ======
+  var timesClicked = 1;
+  button.onclick = function() {
+    if (timesClicked%2==0) {
+      doSwitch(second, 1); 
+    } else {
+     doSwitchOut(second, 1);
+    }
+    timesClicked++;
+  };  
+
+/*   gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
         trigger: "#start",
-        start: "10% top", // when the top of the trigger hits the top of the viewport
+        start: "top top", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
         toggleActions: 'play reverse play reverse',
         invalidateOnRefresh: true,
         markers:true,
-        smoothOrigin: true, 
+       
 
     }
   })
   .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "hop", }, 0) 
   .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "hop"}, 0)
-  .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -60, ease:'hop'}, 0)
+  .to(".header_znak", { scale: 0.7, duration: 0.5,  smoothOrigin: true, transformOrigin: 'center center', yPercent: -60, ease:'hop'}, 0)
+ */
+
 }
 
 
