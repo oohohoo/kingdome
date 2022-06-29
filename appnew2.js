@@ -1039,7 +1039,7 @@ function hide() {
 .to(".navdark", {autoAlpha:1}, "<")
 
 .to(openbutt, {autoAlpha:1}, "<")
-		.to(closeclose, {autoAlpha:0}, "<")
+		.to(closeclose, {autoAlpha:0}, 0)
     .set([openbutt, closeclose], { pointerEvents: "all"});
     
 		/* tl.fromTo(".fs-menu--column", {yPercent:0}, {yPercent:-100, duration:0.6, stagger:0.05, ease: "power2.inOut"})
