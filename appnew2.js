@@ -1470,7 +1470,7 @@ $( "#tostart" ).on( "click", function() {
   locoScroll.scrollTo( '#startop', {
     'offset': 0,
     'duration': 1500,
-    'easing': [0.25, 0.00, 0.35, 1.00],
+    'easing': [0.5, 0, .0, 1],
     'disableLerp': true
   });
 });
