@@ -415,7 +415,7 @@ function pageFadeIn({
   container
 }) {
   // timeline to stretch the loader over the whole screen
-  const tl = gsap.timeline({defaults: {duration: 1.25,ease: 'hop'}});
+  const tl = gsap.timeline({defaults: {duration: 1.1,ease: 'hop'}});
   tl
     .to(container, {opacity:0}, 0);
   return tl;
@@ -430,7 +430,7 @@ function pageFadeOut({
   container
 }) {
   // timeline to move loader away down
-  const tl = gsap.timeline({defaults: {duration: 1.25, ease: 'hop'},
+  const tl = gsap.timeline({defaults: {duration: 1.1, ease: 'hop'},
     // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
     onComplete: () => initContent()
   });
