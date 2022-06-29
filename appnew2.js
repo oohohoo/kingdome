@@ -1190,11 +1190,16 @@ function logoTransformOnScroll() {
   button.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
+      fullscreenMenu();
     } else {
      doSwitchOut(second, 1);
     }
     timesClicked++;
   };  
+
+
+  
+
 
 /*   gsap.timeline({
     scrollTrigger: {
