@@ -1003,6 +1003,18 @@ transition: all 0.1s ease;
 /* transition-delay: 0.5s; */
 }
 
+.hamby-line.navcolor {
+  background-color: #1a1815;
+  -webkit-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  /* transition-delay: 0.5s; */
+}
+
+.w--current.navcolor:not(.h-red-flag, .underlinew, .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resizee ):after {
+  background: #ff0000;
+   }
+
 /*
 ================================================================================
 FAQ ACCORDION
