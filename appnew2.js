@@ -856,7 +856,7 @@ openmenu.addEventListener('mouseover', ()=> {
   //  .to(".mline3", {width: "55%"}, "<-0.05")
   })
 
-// CLOSEMENU HOVER ICON 
+/* CLOSEMENU HOVER ICON */
   closemenu.addEventListener('mouseover', ()=> {  
     let menuhovertimeline3 = gsap.timeline({defaults:{autoAlpha:1}})
     //animation.paused( true ); 
@@ -1190,19 +1190,14 @@ function logoTransformOnScroll() {
   button.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
-     
-      
     } else {
      doSwitchOut(second, 1);
-    
     }
     timesClicked++;
   };  
 
 
-  
-
-
+   fullscreenMenu();
 /*   gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
