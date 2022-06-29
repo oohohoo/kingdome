@@ -1150,10 +1150,13 @@ function logoTransformOnScroll() {
     scrollTrigger: {
       scroller: ".smooth-scroll",
         trigger: "#start",
-        start: "top 5%", // when the top of the trigger hits the top of the viewport
+        start: "top top", // when the top of the trigger hits the top of the viewport
         end: "+=10000000", // end after scrolling 500px beyond the start
         toggleActions: 'play reverse play reverse',
         invalidateOnRefresh: true,
+        markers:true,
+        smoothOrigin: true, 
+
     }
   })
   .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "hop", }, 0) 
