@@ -868,7 +868,7 @@ CURRENT LINK COLOR
   right: 0;
   width: 100%;
   background: #1a1815;
-  /* transition: 0.3s; */
+  transition: 0.3s; 
 }
 
 
