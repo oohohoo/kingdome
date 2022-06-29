@@ -1207,7 +1207,7 @@ var switchlogosmall = document.querySelector(".close-wrap");
     if (timesClicked%2==0) {
       doSwitchOut(second, 1);
     } else {
-      doSwitch(second, 1);
+      doSwitchOut(second, 1);
     }
     timesClicked++;
   };  
