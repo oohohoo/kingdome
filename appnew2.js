@@ -1204,7 +1204,7 @@ function logoTransformOnScroll() {
     button.onclick = function() {
       if (timesClicked%2==0) {
         doSwitch(second, 1); 
-        show();
+        tl.play();
         
       } else {
        doSwitchOut(second, 1);
