@@ -887,8 +887,8 @@ SWIPER CUSTOM DIMENZIJA
 .swiper-container-solo {
   display: block;
   position: relative;
-  max-width: calc(380px + 43vh);
-  max-height: calc(255px + 43vh);
+  max-width: calc(380px + 64vh);
+  max-height: calc(255px + 64vh);
 }
 
 
@@ -1108,9 +1108,7 @@ CUBERTO CURSOR
   color: #1a1815;
 }
 
-.mf-cursor.-black.-text {
-  color: #fff
-}
+
 
 
 .mf-cursor.-redsmall:before {
