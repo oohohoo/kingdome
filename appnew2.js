@@ -689,127 +689,6 @@ FULLSCREEN MENU
 */
 function fullscreenMenu() {
   // OPEN MENU FROM CLICK
-const openmenu = document.getElementById('openmenu');
-const closemenu = document.getElementById('closemenux');
-
-new SplitText(".doublesplit", { type: "lines", linesClass: "lineChild" });
-new SplitText(".doublesplit", { type: "lines", linesClass: "lineParent" });
-
-// OPEN CLOSE FUNCTION
-openmenu.addEventListener("click", () => {
-		show();
-
-
-    locoScroll.stop();
-
-
-});
-
-closemenu.addEventListener("click", () => {
-		hide();
- 
-    locoScroll.start();
-
-});
-
-
-// VANJSKI GHOST 
-gsap.set(".xnav", {scaleY: 0})
-// MENU LINKS 
-gsap.set(".lineChild", {yPercent:100})
-gsap.set(closemenu, {autoAlpha:0})
-
-
-// --- SHOW
-function show() {
-	let tl = gsap.timeline();
-
-  gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
-// VANJSKI GHOST 
-tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
-
-// UNUTARNJI  
-    .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
-		{duration: 0.1, scaleY: 1},"<0.01")
-
-    .to(".navdark", {autoAlpha:0}, "<")
-      
-// IMAGE CLIP
-   .fromTo(".clip", {
-    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-    duration: 2.5,
-  },
-  {         
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
-    ease: "hop", transformOrigin: "bottom center",
-    },"<")
-   
-    //.from(".nav-image", {autoAlpha:1, scale:0.7, transformOrigin: "center center"}, "<0.1")
-    
-    
-// MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.1")
-// LOGO RESET
-    .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
-    .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
-    .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -60, ease:'expo.inOut'}, 0)
-
-// MENU OPENCLOSE
-		.to(openmenu, {autoAlpha:0}, "<")
-		.to(closemenu, {autoAlpha:1}, "<1")
-   
-	
-    
-   .set(".close-wrap, .hamby", {pointerEvents: "all"}, "<")
-
-}
-// --- HIDE
-function hide() {
-	let tl = gsap.timeline();
-  gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
-
-
-  // MENU LINKS 
-  tl.to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:100, stagger:0.015}, 0)
-  //.to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
-  .fromTo(".clip", {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
-    duration: 2.5,
-  },
-  {
-    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-    webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-           
-    ease: "hop", transformOrigin: "bottom center"
-  }, "<")
-
-  //.to(".close-wrap", {autoAlpha:0})
-  /* .to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1") */
-  
- 
-
-  // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
-   // UNUTARNJI  
-   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
-	 // VANJSKI GHOST 	
-   .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
-   .to(".navdark", {autoAlpha:1}, "<")
-
-
-    // LOGO RESET BACK
-
-    .to(".header-red-flag",  {width:'6.1875rem', height:'8.4375rem', top: '0rem', duration: 0.5, ease: "expo.inOut", }, "-=0.1") 
-    .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, "-=0.1")
-    .to(".header_znak", { scale: 1, duration: 0.5, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "-=0.1")
-
-
-   // MENU OPENCLOSE
-		.to(openmenu, {autoAlpha:1}, "<")
-		.to(closemenu, {autoAlpha:0}, "<")
-    .set(" .close-wrap, .hamby", { pointerEvents: "all"});
 
 }
 
@@ -1185,6 +1064,151 @@ function logoTransformOnScroll() {
     onEnter: () => doSwitch(first, 1),
     onLeaveBack: () => doSwitchOut(start, 0),
   });
+
+/*   FULSCREEEN -------------------*/
+
+
+const openmenu = document.getElementById('openmenu');
+const closemenu = document.getElementById('closemenux');
+
+new SplitText(".doublesplit", { type: "lines", linesClass: "lineChild" });
+new SplitText(".doublesplit", { type: "lines", linesClass: "lineParent" });
+
+// OPEN CLOSE FUNCTION
+openmenu.addEventListener("click", () => {
+		show();
+
+
+    locoScroll.stop();
+
+
+});
+
+closemenu.addEventListener("click", () => {
+		hide();
+ 
+    locoScroll.start();
+
+});
+
+
+// VANJSKI GHOST 
+gsap.set(".xnav", {scaleY: 0})
+// MENU LINKS 
+gsap.set(".lineChild", {yPercent:100})
+gsap.set(closemenu, {autoAlpha:0})
+
+
+// --- SHOW
+function show() {
+	let tl = gsap.timeline();
+
+  gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
+// VANJSKI GHOST 
+tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
+
+// UNUTARNJI  
+    .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
+		{duration: 0.1, scaleY: 1},"<0.01")
+
+    .to(".navdark", {autoAlpha:0}, "<")
+      
+// IMAGE CLIP
+   .fromTo(".clip", {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    duration: 2.5,
+  },
+  {         
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
+    ease: "hop", transformOrigin: "bottom center",
+    },"<")
+   
+    //.from(".nav-image", {autoAlpha:1, scale:0.7, transformOrigin: "center center"}, "<0.1")
+    
+    
+// MENU LINKS 
+    .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.1")
+// LOGO RESET
+    .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
+    .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
+    .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -60, ease:'expo.inOut'}, 0)
+
+// MENU OPENCLOSE
+		.to(openmenu, {autoAlpha:0}, "<")
+		.to(closemenu, {autoAlpha:1}, "<1")
+   
+	
+    
+   .set(".close-wrap, .hamby", {pointerEvents: "all"}, "<")
+
+}
+// --- HIDE
+function hide() {
+	let tl = gsap.timeline();
+  gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
+
+
+  // MENU LINKS 
+  tl.to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:100, stagger:0.015}, 0)
+  //.to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
+  .fromTo(".clip", {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
+    duration: 2.5,
+  },
+  {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+           
+    ease: "hop", transformOrigin: "bottom center"
+  }, "<")
+
+  //.to(".close-wrap", {autoAlpha:0})
+  /* .to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1") */
+  
+ 
+
+  // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
+   // UNUTARNJI  
+   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
+	 // VANJSKI GHOST 	
+   .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
+   .to(".navdark", {autoAlpha:1}, "<")
+
+
+    // LOGO RESET BACK
+
+    .to(".header-red-flag",  {width:'6.1875rem', height:'8.4375rem', top: '0rem', duration: 0.5, ease: "expo.inOut", }, "-=0.1") 
+    .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, "-=0.1")
+    .to(".header_znak", { scale: 1, duration: 0.5, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "-=0.1")
+
+
+   // MENU OPENCLOSE
+		.to(openmenu, {autoAlpha:1}, "<")
+		.to(closemenu, {autoAlpha:0}, "<")
+    .set(" .close-wrap, .hamby", { pointerEvents: "all"});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // switch on every click ======
   var timesClicked = 1;
   button.onclick = function() {
@@ -1194,6 +1218,7 @@ function logoTransformOnScroll() {
       show();
     } else {
      doSwitchOut(second, 1);
+     hide();
     }
     timesClicked++;
   };  
