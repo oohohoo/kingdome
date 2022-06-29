@@ -1190,7 +1190,7 @@ var switchlogosmall = document.querySelector(".close-wrap");
     onLeaveBack: () => doSwitchOut(start, 0),
   });
   // switch on every click ======
-  var timesClicked = 1;
+  var timesClicked = 2;
 
   switchlogobig.onclick = function() {
     if (timesClicked%2==0) {
