@@ -688,8 +688,190 @@ FULLSCREEN MENU
 ================================================================================
 */
 function fullscreenMenu() {
+  // OPEN MENU FROM CLICK
+const openmenu = document.getElementById('openmenu');
+const closemenu = document.getElementById('closemenux');
+
+new SplitText(".doublesplit", { type: "lines", linesClass: "lineChild" });
+new SplitText(".doublesplit", { type: "lines", linesClass: "lineParent" });
+
+// OPEN CLOSE FUNCTION
+openmenu.addEventListener("click", () => {
+		show();
 
 
+    locoScroll.stop();
+
+
+});
+
+closemenu.addEventListener("click", () => {
+		hide();
+ 
+    locoScroll.start();
+
+});
+
+
+// VANJSKI GHOST 
+gsap.set(".xnav", {scaleY: 0})
+// MENU LINKS 
+gsap.set(".lineChild", {yPercent:100})
+gsap.set(closemenu, {autoAlpha:0})
+
+
+// --- SHOW
+function show() {
+	let tl = gsap.timeline();
+
+  gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
+// VANJSKI GHOST 
+tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
+
+// UNUTARNJI  
+    .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
+		{duration: 0.1, scaleY: 1},"<0.01")
+
+    .to(".navdark", {autoAlpha:0}, "<")
+      
+// IMAGE CLIP
+   .fromTo(".clip", {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    duration: 2.5,
+  },
+  {         
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
+    ease: "hop", transformOrigin: "bottom center",
+    },"<")
+   
+    //.from(".nav-image", {autoAlpha:1, scale:0.7, transformOrigin: "center center"}, "<0.1")
+    
+    
+// MENU LINKS 
+    .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.1")
+// LOGO RESET
+    .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
+    .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
+    .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -60, ease:'expo.inOut'}, 0)
+
+// MENU OPENCLOSE
+		.to(openmenu, {autoAlpha:0}, "<")
+		.to(closemenu, {autoAlpha:1}, "<1")
+   
+	
+    
+   .set(".close-wrap, .hamby", {pointerEvents: "all"}, "<")
+
+}
+// --- HIDE
+function hide() {
+	let tl = gsap.timeline();
+  gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
+
+
+  // MENU LINKS 
+  tl.to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:100, stagger:0.015}, 0)
+  //.to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
+  .fromTo(".clip", {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
+    duration: 2.5,
+  },
+  {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+           
+    ease: "hop", transformOrigin: "bottom center"
+  }, "<")
+
+  //.to(".close-wrap", {autoAlpha:0})
+  /* .to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1") */
+  
+ 
+
+  // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
+   // UNUTARNJI  
+   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
+	 // VANJSKI GHOST 	
+   .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
+   .to(".navdark", {autoAlpha:1}, "<")
+
+
+    // LOGO RESET BACK
+
+    .to(".header-red-flag",  {width:'6.1875rem', height:'8.4375rem', top: '0rem', duration: 0.5, ease: "expo.inOut", }, "-=0.1") 
+    .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, "-=0.1")
+    .to(".header_znak", { scale: 1, duration: 0.5, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "-=0.1")
+
+
+   // MENU OPENCLOSE
+		.to(openmenu, {autoAlpha:1}, "<")
+		.to(closemenu, {autoAlpha:0}, "<")
+    .set(" .close-wrap, .hamby", { pointerEvents: "all"});
+
+}
+
+
+/*
+================================================================================
+SUBMENU HOVER
+================================================================================
+*/
+// SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
+$(".fade-hover, .hover-opacity, .kupole-info").each(function(i, el) {
+  var tl = gsap.timeline({paused: true});
+  var t = tl
+         .to($(el).find('a'), {opacity:0.6,  duration: 0.15});
+el.animation = t;
+$(el).on("mouseenter",function(){
+    this.animation.play();
+  }).on("mouseleave",function(){
+    this.animation.reverse();
+  });
+});
+
+
+/*
+================================================================================
+MENU ICON HOVER
+================================================================================
+*/
+
+/* OPENMENU HOVER ICON*/
+openmenu.addEventListener('mouseover', ()=> {  
+  let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
+  //animation.paused( true ); 
+  menuhovertimeline
+  .to(".half", {width: "100%", duration: 0.2, transformOrigin: "center center"})
+  //  .to(".mline3", {width: "100%"}, "<-0.05")
+  })
+  // MENU ICON MOUSEOUT 
+  openmenu.addEventListener('mouseout', ()=> {  
+  let menuhovertimeline2 = gsap.timeline({defaults:{autoAlpha:1}})
+  //animation.paused( true ); 
+  menuhovertimeline2
+  .to(".half", {width: "50%", duration: 0.2, transformOrigin: "center center"})
+  //  .to(".mline3", {width: "55%"}, "<-0.05")
+  })
+
+/* CLOSEMENU HOVER ICON */
+  closemenu.addEventListener('mouseover', ()=> {  
+    let menuhovertimeline3 = gsap.timeline({defaults:{autoAlpha:1}})
+    //animation.paused( true ); 
+    menuhovertimeline3
+    .to(".closex", {scale:0.8, duration: 0.2, transformOrigin:"50% 50%"})
+    //  .to(".mline3", {width: "100%"}, "<-0.05")
+    })
+    // MENU ICON MOUSEOUT 
+    closemenu.addEventListener('mouseout', ()=> {  
+    let menuhovertimeline4 = gsap.timeline({defaults:{autoAlpha:1}})
+    //animation.paused( true ); 
+    menuhovertimeline4
+    .to(".closex", {scale:1, duration: 0.2, transformOrigin:"50% 50%"})
+    //  .to(".mline3", {width: "55%"}, "<-0.05")
+    })
 }
 
 /*
@@ -1003,227 +1185,19 @@ function logoTransformOnScroll() {
     onEnter: () => doSwitch(first, 1),
     onLeaveBack: () => doSwitchOut(start, 0),
   });
-
-
-/* ------- FULLSCREEN MENU */
-
-  // OPEN MENU FROM CLICK
-  const openmenu = document.getElementById('openmenu');
-  const closemenu = document.getElementById('closemenux');
-  
-  new SplitText(".doublesplit", { type: "lines", linesClass: "lineChild" });
-  new SplitText(".doublesplit", { type: "lines", linesClass: "lineParent" });
-  
-  // OPEN CLOSE FUNCTION
-  openmenu.addEventListener("click", () => {
-      show();
-  
-  
-      locoScroll.stop();
-  
-  
-  });
-  
-  closemenu.addEventListener("click", () => {
-      hide();
-   
-      locoScroll.start();
-  
-  });
-  
-  
-
   // switch on every click ======
   var timesClicked = 1;
   button.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
      
-      show();
+      
     } else {
      doSwitchOut(second, 1);
-     hide();
+    
     }
     timesClicked++;
   };  
-
-  
-  // VANJSKI GHOST 
-  gsap.set(".xnav", {scaleY: 0})
-  // MENU LINKS 
-  gsap.set(".lineChild", {yPercent:100})
-  gsap.set(closemenu, {autoAlpha:0})
-  
-  
-  // --- SHOW
-  function show() {
-    let tl = gsap.timeline();
-  
-    gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
-  // VANJSKI GHOST 
-  tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
-  
-  // UNUTARNJI  
-      .fromTo(".nav--trans", {scaleY: 0, transformOrigin: "bottom center"},
-      {duration: 0.1, scaleY: 1},"<0.01")
-  
-      .to(".navdark", {autoAlpha:0}, "<")
-        
-  // IMAGE CLIP
-     .fromTo(".clip", {
-      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-      webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-      duration: 2.5,
-    },
-    {         
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
-      ease: "hop", transformOrigin: "bottom center",
-      },"<")
-     
-      //.from(".nav-image", {autoAlpha:1, scale:0.7, transformOrigin: "center center"}, "<0.1")
-      
-      
-  // MENU LINKS 
-      .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.1")
-  // LOGO RESET
-      .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
-      .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
-      .to(".header_znak", { scale: 0.7, duration: 0.5, transformOrigin: 'center center', yPercent: -60, ease:'expo.inOut'}, 0)
-  
-  // MENU OPENCLOSE
-      .to(openmenu, {autoAlpha:0}, "<")
-      .to(closemenu, {autoAlpha:1}, "<1")
-     
-    
-      
-     .set(".close-wrap, .hamby", {pointerEvents: "all"}, "<")
-  
-  }
-  // --- HIDE
-  function hide() {
-    let tl = gsap.timeline();
-    gsap.set(".close-wrap, .hamby", {pointerEvents: "none"});
-  
-  
-    // MENU LINKS 
-    tl.to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:100, stagger:0.015}, 0)
-    //.to(".nav-super", {autoAlpha:0,  stagger:0.01}, "<")
-    .fromTo(".clip", {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
-      duration: 2.5,
-    },
-    {
-      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-      webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-             
-      ease: "hop", transformOrigin: "bottom center"
-    }, "<")
-  
-    //.to(".close-wrap", {autoAlpha:0})
-    /* .to(".fs-nav-item", {autoAlpha:0, duration:0.5,stagger:0.05,  ease: "quart.inOut"}, "<0.1") */
-    
-   
-  
-    // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
-     // UNUTARNJI  
-     .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
-     // VANJSKI GHOST 	
-     .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
-     .to(".navdark", {autoAlpha:1}, "<")
-  
-  
-      // LOGO RESET BACK
-  
-      .to(".header-red-flag",  {width:'6.1875rem', height:'8.4375rem', top: '0rem', duration: 0.5, ease: "expo.inOut", }, "-=0.1") 
-      .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, "-=0.1")
-      .to(".header_znak", { scale: 1, duration: 0.5, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "-=0.1")
-  
-  
-     // MENU OPENCLOSE
-      .to(openmenu, {autoAlpha:1}, "<")
-      .to(closemenu, {autoAlpha:0}, "<")
-      .set(" .close-wrap, .hamby", { pointerEvents: "all"});
-  
-  }
-  
-  
-  /*
-  ================================================================================
-  SUBMENU HOVER
-  ================================================================================
-  */
-  // SUBMENU - CHANGE COLOR HOVER / LOOP / ista skripta ko ova poviše ali bez komentara
-  $(".fade-hover, .hover-opacity, .kupole-info").each(function(i, el) {
-    var tl = gsap.timeline({paused: true});
-    var t = tl
-           .to($(el).find('a'), {opacity:0.6,  duration: 0.15});
-  el.animation = t;
-  $(el).on("mouseenter",function(){
-      this.animation.play();
-    }).on("mouseleave",function(){
-      this.animation.reverse();
-    });
-  });
-  
-  
-  /*
-  ================================================================================
-  MENU ICON HOVER
-  ================================================================================
-  */
-  
-  /* OPENMENU HOVER ICON*/
-  openmenu.addEventListener('mouseover', ()=> {  
-    let menuhovertimeline = gsap.timeline({defaults:{autoAlpha:1}})
-    //animation.paused( true ); 
-    menuhovertimeline
-    .to(".half", {width: "100%", duration: 0.2, transformOrigin: "center center"})
-    //  .to(".mline3", {width: "100%"}, "<-0.05")
-    })
-    // MENU ICON MOUSEOUT 
-    openmenu.addEventListener('mouseout', ()=> {  
-    let menuhovertimeline2 = gsap.timeline({defaults:{autoAlpha:1}})
-    //animation.paused( true ); 
-    menuhovertimeline2
-    .to(".half", {width: "50%", duration: 0.2, transformOrigin: "center center"})
-    //  .to(".mline3", {width: "55%"}, "<-0.05")
-    })
-  
-  /* CLOSEMENU HOVER ICON */
-    closemenu.addEventListener('mouseover', ()=> {  
-      let menuhovertimeline3 = gsap.timeline({defaults:{autoAlpha:1}})
-      //animation.paused( true ); 
-      menuhovertimeline3
-      .to(".closex", {scale:0.8, duration: 0.2, transformOrigin:"50% 50%"})
-      //  .to(".mline3", {width: "100%"}, "<-0.05")
-      })
-      // MENU ICON MOUSEOUT 
-      closemenu.addEventListener('mouseout', ()=> {  
-      let menuhovertimeline4 = gsap.timeline({defaults:{autoAlpha:1}})
-      //animation.paused( true ); 
-      menuhovertimeline4
-      .to(".closex", {scale:1, duration: 0.2, transformOrigin:"50% 50%"})
-      //  .to(".mline3", {width: "55%"}, "<-0.05")
-      })
-
-      
-
-
-      /***************** */
-
-
-
-
-
-
-
-
-
-
-
-  
 
 
   
