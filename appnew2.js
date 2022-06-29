@@ -1061,19 +1061,6 @@ function logoTransformOnScroll() {
     onEnter: () => doSwitch(first, 1),
     onLeaveBack: () => doSwitchOut(start, 0),
   });
-  // switch on every click ======
-  var timesClicked = 1;
-  button.onclick = function() {
-    if (timesClicked%2==0) {
-      doSwitch(second, 1); 
-      show();
-      
-    } else {
-     doSwitchOut(second, 1);
-     hide();
-    }
-    timesClicked++;
-  };  
 
 
 
@@ -1206,6 +1193,24 @@ function logoTransformOnScroll() {
   }
 
   
+
+
+    // switch on every click ======
+    var timesClicked = 1;
+    button.onclick = function() {
+      if (timesClicked%2==0) {
+        doSwitch(second, 1); 
+        show();
+        
+      } else {
+       doSwitchOut(second, 1);
+       hide();
+      }
+      timesClicked++;
+    };  
+
+    
+    
 
   /***/  
 
