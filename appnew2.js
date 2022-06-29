@@ -1065,8 +1065,7 @@ function logoTransformOnScroll() {
     onLeaveBack: () => doSwitchOut(start, 0),
   });
 
-/*   FULSCREEEN -------------------*/
-
+/*   FULLSCREEN  */
 
 const openmenu = document.getElementById('openmenu');
 const closemenu = document.getElementById('closemenux');
@@ -1192,13 +1191,7 @@ function hide() {
 
 
 
-
-
-
-
-
-
-
+    /****************** */
 
 
 
