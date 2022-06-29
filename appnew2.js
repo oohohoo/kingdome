@@ -1166,7 +1166,7 @@ function logoTransformOnScroll() {
   }
   var doSwitchOut = function(shape, show){
     var TL2 = gsap.timeline({ defaults: {duration: 0.3, overwrite: 'auto', force3D:false, ease: "power1.in"} })
-    .to('#switch', {autoAlpha: show, duration: 0.3},0 )
+    .to('#switch', {autoAlpha: show, duration: 0.3},0-0.2 )
     .to('#start', {morphSVG:shape},0)
      .to(".header_znak", { scale: 1, yPercent: 0}, 0) 
    .to(".h-red-flag",  {width:'6rem', height:'9rem', top: '0rem'}, 0) 
