@@ -1066,11 +1066,11 @@ function logoTransformOnScroll() {
   button.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
-     
+      show();
       
     } else {
      doSwitchOut(second, 1);
-    
+     hide();
     }
     timesClicked++;
   };  
