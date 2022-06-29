@@ -1203,7 +1203,7 @@ var switchlogosmall = document.querySelector(".close-wrap");
     timesClicked++;
   };  
 
- /*  switchlogosmall.onclick = function() {
+ switchlogosmall.onclick = function() {
     if (timesClicked%2==0) {
       doSwitchOut(second, 1);
     } else {
@@ -1211,7 +1211,7 @@ var switchlogosmall = document.querySelector(".close-wrap");
     }
     timesClicked++;
   };  
- */
+ 
 
  
 /*   gsap.timeline({
