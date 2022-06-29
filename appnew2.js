@@ -1168,7 +1168,7 @@ function logoTransformOnScroll() {
     var TL2 = gsap.timeline({ defaults: {duration: 0.3, overwrite: 'auto', force3D:false, ease: "hop"} })
     .to('#switch', {autoAlpha: show, duration: 0.3} )
     .to('#start', {morphSVG:shape},0 )
-     .to(".header_znak", { scale: 1, yPercent: 0}, 0) 
+     .to(".header_znak", { scale: 1, rotate: -360, yPercent: 0}, 0) 
    .to(".h-red-flag",  {width:'6rem', height:'9rem', top: '0rem'}, 0) 
    .to(".text-block",  {yPercent:0, autoAlpha:1}, 0)
   
