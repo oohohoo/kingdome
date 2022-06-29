@@ -1192,7 +1192,7 @@ var switchlogosmall = document.querySelector(".close-wrap");
   // switch on every click ======
   var timesClicked = 1;
 
-  switchlogobig.onclick = function() {
+  switchlogosmall.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
       console.log("Clicked");
@@ -1203,7 +1203,7 @@ var switchlogosmall = document.querySelector(".close-wrap");
     timesClicked++;
   };  
 
- switchlogosmall.onclick = function() {
+ switchlogobig.onclick = function() {
     if (timesClicked%2==0) {
       doSwitchOut(second, 1);
     } else {
