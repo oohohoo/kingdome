@@ -1150,7 +1150,11 @@ function logoTransformOnScroll() {
   const first = "M0.768555 -0.237793H98.7686V134.762H49.7686H0.768555V-0.237793Z";
   const second = "M0.0498047 -0.237793H98.0498V134.762L49.0498 109.907L0.0498047 134.762V-0.237793Z";
   var start = document.getElementById("start");
-  var button = document.getElementById("switch");
+ var switchlogobig = document.querySelectorAll(".hamby");
+ var switchlogosmall = document.querySelectorAll(".close-wrap");
+
+  
+  
   var show =1;
   var doSwitch = function(shape, show){
     var TL1 = gsap.timeline({ defaults: {duration: 0.3, overwrite: 'auto', force3D:false, ease: "hop"} })
@@ -1187,7 +1191,8 @@ function logoTransformOnScroll() {
   });
   // switch on every click ======
   var timesClicked = 1;
-  button.onclick = function() {
+
+  switchlogobig.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
     } else {
@@ -1196,8 +1201,17 @@ function logoTransformOnScroll() {
     timesClicked++;
   };  
 
+  switchlogosmall.onclick = function() {
+    if (timesClicked%2==0) {
+      doSwitchOut(second, 1);
+    } else {
+      doSwitch(second, 1);
+    }
+    timesClicked++;
+  };  
 
-   fullscreenMenu();
+
+ 
 /*   gsap.timeline({
     scrollTrigger: {
       scroller: ".smooth-scroll",
