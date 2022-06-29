@@ -1179,8 +1179,8 @@ function logoTransformOnScroll() {
   const ST = ScrollTrigger.create ({
     //animation: TL1,
     scroller: ".smooth-scroll",
-    markers: true,
-    start: '35% 25%',
+    trigger: "#start",
+    start: "top top",
     // toggleActions: "play none none reverse"
     onEnter: () => doSwitch(first, 1),
     onLeaveBack: () => doSwitchOut(start, 0),
