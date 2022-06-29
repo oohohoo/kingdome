@@ -1694,7 +1694,7 @@ setTimeout(() => {
   const buttonkillcursor = document.querySelector('.glass-button');
   
   buttonkillcursor.addEventListener('mouseenter', () => {
-    cursor.removeText();
+   // cursor.removeText();
       
   });
   
