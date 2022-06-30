@@ -39,8 +39,12 @@ html {
   margin: 0;
   padding: 0;
   
-   overflow: hidden;  
-  overflow-y:hidden; 
+   /* overflow: hidden;  
+  overflow-y:hidden;  */
+}
+
+. page-contact {
+overflow-y:hidden; 
 }
 
 /*
