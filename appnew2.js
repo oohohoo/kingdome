@@ -1775,7 +1775,7 @@ var tlin = gsap.timeline({});
 tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yPercent: 100, rotateZ: 20}, {
  
   yPercent: 0,
-  duration: 0.8,
+  duration: 1,
   rotateZ: 0,
   autoAlpha:1, 
   ease:"hop",
