@@ -956,6 +956,11 @@ TEXTSPLIT HEADERS SCROLLTRIGGER
   overflow: hidden;
 }
 
+.lineParent {
+  padding-right: 2.5rem;
+}
+
+
 
 /*
 ================================================================================
