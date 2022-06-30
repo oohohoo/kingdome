@@ -1290,7 +1290,7 @@ SWIPER FLICKERING FIX
 */
 
 @media screen and (min-width: 1024px) {
- .home-hero_head-wrap {
+ .header-mobile-fix {
   top: -5rem;
 
  }/*
