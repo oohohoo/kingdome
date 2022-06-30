@@ -1292,8 +1292,14 @@ SWIPER FLICKERING FIX
 @media screen and (min-width: 1024px) {
  .header-mobile-fix {
   top: -5rem;
-
- }/*
+ }
+ .cta_wire-wrap {
+  top: 8.3rem;
+ }
+ 
+ 
+ 
+ /*
 ================================================================================
 HOME PRODUCT SVAKI 3 UGURAJ*
 ================================================================================
@@ -1307,11 +1313,7 @@ HOME PRODUCT SVAKI 3 UGURAJ*
  }
 
 }
- {
-    position: relative;
-       top: 5.5rem;
-   }
-  
+ 
   }
 
   
