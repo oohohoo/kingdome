@@ -1553,7 +1553,7 @@ function swiperSolo() {
 		loopedSlides: 6,
 		loop: true,
 		spaceBetween: 35,
-		slidesPerView: 1.35,
+	//	slidesPerView: 1.35,
 	//	freeMode: true,
 		grabCursor: true,
 	//	mousewheel: false,
@@ -1592,10 +1592,10 @@ function swiperSolo() {
 				slidesPerView: 1.2,
 			}, */
 
-      992: {
+      991: {
 				spaceBetween: 24,
 				//  loopedSlides: 3,
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
       1024: {
 				spaceBetween: 35,
