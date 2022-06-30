@@ -895,10 +895,10 @@ SWIPER CUSTOM DIMENZIJA
 */
 
 .swiper-container-solo {
-  display: block;
+ /*  display: block;
   position: relative;
   max-width: calc(380px + 64vh);
-  max-height: calc(255px + 64vh);
+  max-height: calc(255px + 64vh); */
 }
 
 
