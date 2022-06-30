@@ -858,7 +858,7 @@ CURRENT LINK COLOR
 }
 
 
-.w--current:not(.h-red-flag, .underlinew, .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
+.w--current:not(.h-red-flag, .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resize ):after {
   position: absolute;
   content: '';
   height: 2px;
@@ -872,7 +872,7 @@ CURRENT LINK COLOR
 }
 
 
-.h-red-flag {
+.h-red-flag, .underlinew.w--current.navcolor {
 background-color: transparent!important;
 }
 
@@ -880,6 +880,7 @@ background-color: transparent!important;
   opacity:.5;
  
 }
+
 
 
 /*
@@ -985,7 +986,7 @@ TEXT ON DARK BACK
 
 .navcolor {
 color: #1a1815;
-background-color: #ff0000;
+background-color: #;
 -webkit-transition: all 0.2s ease;
 -ms-transition: all 0.2s ease;
 transition: all 0.2s ease;
