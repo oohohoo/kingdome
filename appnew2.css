@@ -1343,30 +1343,27 @@ padding-bottom: 6.25rem;
   position: relative;
      top: 5.5rem;
  }
-
-
- @media screen and (min-width: 650px) {
-
-  .heading-large {
-    font-size: 3.3rem;
-   }
-
-   .header-mobile-fix {
-    top: 3rem;
-}
-
-/*  .slider-tab {
-  left: -4rem;
- }
- */
-
-
-
-}
  
   }
 
+  @media screen and (min-width: 650px) {
+
+    .heading-large {
+      font-size: 3.3rem;
+     }
   
+     .header-mobile-fix {
+      top: 3rem;
+  }
+  
+  /*  .slider-tab {
+    left: -4rem;
+   }
+   */
+  
+  
+  
+  }  
 
 
 /*
