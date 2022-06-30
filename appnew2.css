@@ -1318,9 +1318,9 @@ SLIDER CONTACT AUTO HEIGHT FIXED
 ================================================================================
 */
 
-  .slider [aria-hidden="true"] {
+  /* .slider [aria-hidden="true"] {
     height: 0px!important;
-    }  
+    }   */
  
 
 /*
