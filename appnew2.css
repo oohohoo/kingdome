@@ -876,7 +876,7 @@ CURRENT LINK COLOR
 background-color: transparent!important;
 }
 
- .nav-font-resize  {
+ .nav-font-resize .w--current {
   opacity:.5;
   color: greenyellow;
 }
