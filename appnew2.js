@@ -607,7 +607,7 @@ BARBA TRANSITIONS
 
 			async leave({ current }) {
 				// animate loading screen in
-				await pageFadeIn(current);
+				await pageTransitionIn(current);
 				console.log("LEAVE");
 			},
 			enter({ next }) {
