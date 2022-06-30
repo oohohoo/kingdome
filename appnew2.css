@@ -1433,7 +1433,7 @@ MEDIA QUERY
  */
 html { font-size: calc(0.625rem + 0.41666666666666663vw); }
 @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
-@media screen and (max-width:1440px) { html { font-size: calc(0.625rem + 0.41666666666666663vw); } }
+@media screen and (max-width:1440px) { html { font-size: calc(1.093652445369407rem + -0.10405827263267431vw); } }
 @media screen and (max-width:1024px) { html { font-size: calc(-0.9999999999999982rem + 3.1249999999999973vw); } }
 @media screen and (max-width:960px) { html { font-size: calc(0.9377598752598753rem + 0.2079002079002079vw); } }
 @media screen and (max-width:479px) { html { font-size: calc(0.31093096234309625rem + 2.510460251046025vw); } }
