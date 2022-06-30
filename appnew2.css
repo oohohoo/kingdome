@@ -1275,12 +1275,12 @@ SWIPER FLICKERING FIX
   -webkit-transform: translate3d(0,0,0);
 }
 
-.swiper-wrapper {
+/* .swiper-wrapper {
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translateZ(0);
 }
-
+ */
 /*
 ================================================================================
 HOME PRODUCT SVAKI 3 UGURAJ*
