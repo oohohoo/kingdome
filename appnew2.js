@@ -1396,7 +1396,7 @@ function headerHide() {
     scroller: ".smooth-scroll",
     start: "top top",
  
-    end: 99999,
+    end: "+=10000000",
     toggleClass: { targets: ".header, .hamby-line, .w--current", className: "navcolor" },
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
