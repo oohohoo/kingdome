@@ -1603,7 +1603,7 @@ function swiperSolo() {
 			}, 
       1200: {
 				spaceBetween: 24,
-				slidesPerView: 1.3,
+				slidesPerView: 2.1,
 			}, 
 
 		}, 
