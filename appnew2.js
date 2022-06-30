@@ -1785,7 +1785,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
     each: 0.025,
     from: "left"
   }
-}, 0.6)
+}, 0)
 
 
 
