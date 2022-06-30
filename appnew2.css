@@ -876,6 +876,10 @@ CURRENT LINK COLOR
 background-color: transparent!important;
 }
 
+.w--current .nav-font-resize {
+  opacity:.5;
+  color: red;
+}
 
 
 /*
