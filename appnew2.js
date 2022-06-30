@@ -1591,11 +1591,11 @@ function swiperSolo() {
 			},*/
 			
 
-  /*     800: {
-				spaceBetween: 24,
+      800: {
+				spaceBetween: 35,
 				//  loopedSlides: 3,
 				slidesPerView: 1.2,
-			}, */
+			}, 
        1024: {
 				spaceBetween: 40,
 				//  loopedSlides: 3,
