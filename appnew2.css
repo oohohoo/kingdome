@@ -1303,9 +1303,9 @@ SWIPER FLICKERING FIX
   top: 8.3rem;
  }
 
- .slider-tab {
+ /* .slider-tab {
   left: -2rem;
- }
+ } */
 
  .ipad-pad-fix {
 padding-bottom: 6.25rem;
