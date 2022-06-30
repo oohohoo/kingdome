@@ -1285,7 +1285,7 @@ function homeProductHover() {
 
 	gsap.utils.toArray(".product-hover").forEach((container) => {
 		let imagezoom = container.querySelector(".full-image"),
-			linkhover = container.querySelector(".linkhover"),
+		//	linkhover = container.querySelector(".linkhover"),
       imageokvir = container.querySelector(".product-image_height"),
      
 			// wrap = container.querySelector(".rg__wrap"),
@@ -1295,12 +1295,12 @@ function homeProductHover() {
 			// full-image
 
 			tl = gsap.timeline({
-				defaults: { ease: "power1", duration: 0.5 },
+				defaults: { ease: "hop", duration: 1 },
 				paused: true,
 			});
 
-		tl.to(imagezoom, { scale: 1 }, 0)
-    .to(linkhover, { opacity: 0.4 }, 0)
+		tl.to(imagezoom, { scale: 1.1 }, 0)
+   // .to(linkhover, { opacity: 0.4 }, 0)
     .to(imageokvir, { scale: 0.95 }, 0)
 		//.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
 		//.to(name, { yPercent:-10, autoAlpha:0 }, 0)
