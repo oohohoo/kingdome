@@ -44,7 +44,7 @@ html {
 }
 
 .page-contact {
-  overflow:hidden;
+  overflow-y:hidden;
 overflow-y:hidden; 
 }
 
@@ -1295,7 +1295,7 @@ SWIPER FLICKERING FIX
 ================================================================================
 */
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
  .header-mobile-fix {
   top: -5rem;
  }
