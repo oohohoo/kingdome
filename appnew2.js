@@ -1570,7 +1570,7 @@ function swiperSolo() {
 		// paginationClickable: true,
 		// mousewheelControl: true,
 	//	parallax: true,
-		// preloadImages: true,
+		 preloadImages: true,
 		//updateOnImagesReady: true,
 		// centeredSlides: true,
 		// slidesOffsetBefore: 100,
