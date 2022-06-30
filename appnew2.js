@@ -1295,7 +1295,7 @@ function homeProductHover() {
 			// full-image
 
 			tl = gsap.timeline({
-				defaults: { ease: "hop", duration: 0.2 },
+				defaults: { ease: "power1", duration: 0.2 },
 				paused: true,
 			});
 
