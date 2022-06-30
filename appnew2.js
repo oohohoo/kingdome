@@ -1578,7 +1578,7 @@ function swiperSolo() {
 		speed: 800,
 	breakpoints: {
 		500: {
-				spaceBetween: 12,
+				spaceBetween: 5,
 				//  loopedSlides: 3,
 				slidesPerView: 1.1,
 			},
