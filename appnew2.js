@@ -1157,8 +1157,8 @@ var switchlogosmall = document.querySelector(".close-wrap");
   
   var show =1;
   var doSwitch = function(shape, show){
-    var TL1 = gsap.timeline({ defaults: {duration: 0.3, overwrite: 'auto', force3D:false, ease: "expo.inOut"} })
-    .to('#switch', {autoAlpha: show, duration: 0.3},0 )
+    var TL1 = gsap.timeline({ defaults: {duration: 0.5, overwrite: 'auto', force3D:false, ease: "expo.inOut"} })
+    .to('#switch', {autoAlpha: show},0 )
     .to('#start', {morphSVG:shape},0 )
     .to(".header_znak", { scale: 0.7, yPercent: -36, transformOrigin: 'center center'}, 0) 
   .to(".h-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem'}, 0) 
@@ -1169,8 +1169,8 @@ var switchlogosmall = document.querySelector(".close-wrap");
   
   }
   var doSwitchOut = function(shape, show){
-    var TL2 = gsap.timeline({ defaults: {duration: 0.3, overwrite: 'auto', force3D:false, ease: "expo.inOut"} })
-    .to('#switch', {autoAlpha: show, duration: 0.3},0 )
+    var TL2 = gsap.timeline({ defaults: {duration: 0.5, overwrite: 'auto', force3D:false, ease: "expo.inOut"} })
+    .to('#switch', {autoAlpha: show},0 )
     .to('#start', {morphSVG:shape},0)
      .to(".header_znak", { scale: 1, yPercent: 0, transformOrigin: 'center center'}, 0) 
    .to(".h-red-flag",  {width:'6rem', height:'9rem', top: '0rem'}, 0) 
