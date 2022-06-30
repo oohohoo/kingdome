@@ -1333,7 +1333,7 @@ padding-bottom: 6.25rem;
  
  /*
 ================================================================================
-HOME PRODUCT SVAKI 3 UGURAJ*
+991
 ================================================================================
 */
 
@@ -1343,6 +1343,13 @@ HOME PRODUCT SVAKI 3 UGURAJ*
   position: relative;
      top: 5.5rem;
  }
+
+
+ @media screen and (min-width: 850px) {
+
+  .heading-large {
+    font-size: 3.3rem;
+   }
 
 /*  .slider-tab {
   left: -4rem;
