@@ -1185,6 +1185,7 @@ var switchlogosmall = document.querySelector(".close-wrap");
     scroller: ".smooth-scroll",
     trigger: "#start",
     start: "top top",
+    end: "+=10000000",
     // toggleActions: "play none none reverse"
     onEnter: () => doSwitch(first, 1),
     onLeaveBack: () => doSwitchOut(start, 0),
