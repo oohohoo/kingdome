@@ -1596,11 +1596,11 @@ function swiperSolo() {
 				//  loopedSlides: 3,
 				slidesPerView: 1.2,
 			}, */
-      /* 1024: {
-				spaceBetween: 35,
+       1024: {
+				spaceBetween: 40,
 				//  loopedSlides: 3,
 				slidesPerView: 1.2,
-			}, */
+			}, 
       1200: {
 				spaceBetween: 24,
 				slidesPerView: 1.3,
