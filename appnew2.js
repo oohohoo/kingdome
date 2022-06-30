@@ -1591,7 +1591,7 @@ function swiperSolo() {
 			},*/
 			
 
-      961: {
+      790: {
 				spaceBetween: 40,
 				//  loopedSlides: 3,
 				slidesPerView: 1.2,
