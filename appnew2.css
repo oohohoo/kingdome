@@ -1351,6 +1351,10 @@ padding-bottom: 6.25rem;
     font-size: 3.3rem;
    }
 
+   .header-mobile-fix {
+    top: 3rem;
+}
+
 /*  .slider-tab {
   left: -4rem;
  }
