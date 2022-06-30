@@ -1288,6 +1288,18 @@ SWIPER FLICKERING FIX
 }
  */
 
+ .fs-cc-banner2_container {
+ /*  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 0; */
+  -webkit-flex: 0 100%!important;
+  -ms-flex: 0 100%!important;
+  flex: 0 100%!important;
+}
+
 
 
  /*
