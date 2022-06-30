@@ -1330,7 +1330,7 @@ padding-bottom: 6.25rem;
   padding: 5vh 2.2rem;
 } 
  
- 
+}
  /*
 ================================================================================
 991
@@ -1345,7 +1345,7 @@ padding-bottom: 6.25rem;
  }
 
 
- @media screen and (min-width: 850px) {
+ @media screen and (max-width: 850px) {
 
   .heading-large {
     font-size: 3.3rem;
