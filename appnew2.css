@@ -1296,6 +1296,11 @@ SWIPER FLICKERING FIX
  .cta_wire-wrap {
   top: 8.3rem;
  }
+
+ .slider-tab {
+  left: -2rem;
+ }
+
  
  
  
