@@ -43,7 +43,8 @@ html {
   overflow-y:hidden;  */
 }
 
-. page-contact {
+.page-contact {
+  overflow:hidden;
 overflow-y:hidden; 
 }
 
