@@ -1775,9 +1775,10 @@ var tlin = gsap.timeline({});
 tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yPercent: 100, rotateZ: 20}, {
  
   yPercent: 0,
-  duration: 1.25,
+  duration: 0.8,
   rotateZ: 0,
   autoAlpha:1, 
+  ease:"hop",
   onComplete: function(){ locoScroll.start(); console.log("LOCO STARTED");},
   //ease: "hop",
   stagger: {
