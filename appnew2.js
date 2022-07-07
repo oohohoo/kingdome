@@ -1344,8 +1344,7 @@ function akapowPinned() {
          
          start: () => "top -" + (window.innerHeight * i),       
          end: () => "+=" + window.innerHeight,
-         
-         // toggleActions: "play none reverse none",
+         onEnter: () => video.play(),"play none reverse none",
          
          scrub: true,
          invalidateOnRefresh: true, 
@@ -1619,7 +1618,7 @@ START/STOP VIDEO INOUT OF VIEWPORT
 
 function startStopVideo() {
 
-/*
+
 const videos = gsap.utils.toArray('video')
 
 videos.forEach(function(video, i) {
@@ -1635,7 +1634,7 @@ videos.forEach(function(video, i) {
     onLeaveBack: () => video.pause(),
   });
   
-})*/
+})
 }
 
 /*
