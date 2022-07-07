@@ -1344,7 +1344,7 @@ function akapowPinned() {
          
          start: () => "top -" + (window.innerHeight * i),       
          end: () => "+=" + window.innerHeight,
-         onEnter: () => video.play(),"play none reverse none",
+       
          
          scrub: true,
          invalidateOnRefresh: true, 
