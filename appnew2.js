@@ -9,8 +9,6 @@ CustomEase.create("hop", ".075, .82, .165, 1");
 
 
 
-
-
 let locoScroll;
 
 /*TURN OFF GSAP MESSAGES*/
