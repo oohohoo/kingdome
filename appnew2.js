@@ -156,11 +156,9 @@ window.addEventListener('resize', function(){
 var mq = window.matchMedia( "(max-height: 740px)" );
 if (mq.matches) {
   locoScroll.start();
-  console.log("LOCO START");
 }
 else {
   locoScroll.stop();
-  console.log("LOCO STOPe");
 }    
 
  console.log("RESIZE & REFRESHHHH LOCO & SCROLL+CROLL ON OFF / CONTACT");
