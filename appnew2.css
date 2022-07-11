@@ -1426,6 +1426,7 @@ CONTACT HEIGHT FIX
   @media screen and (max-height: 520px) {
     .vhfix {
       height: auto;
+      background-color: red;
       }   
   }
  
