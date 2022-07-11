@@ -1585,12 +1585,13 @@ SWIPER PROJECT SOLO
 ================================================================================
 */
 
+
 function swiperSolo() {
 	var swipersolo = new Swiper(".swiper-container-solo", {
 		loopedSlides: 6,
 		loop: true,
 		spaceBetween: 35,
-		//slidesPerView: 1.2,
+		slidesPerView: auto,
 		//	freeMode: true,
 		grabCursor: true,
 		//	mousewheel: false,
@@ -1629,16 +1630,16 @@ function swiperSolo() {
 			700: {
 				spaceBetween: 34,
 				//  loopedSlides: 3,
-				slidesPerView: 1.2,
+			//	slidesPerView: 1.2,
 			},
 			1024: {
 				spaceBetween: 40,
 				//  loopedSlides: 3,
-				slidesPerView: 1.2,
+			//	slidesPerView: 1.2,
 			},
 			1200: {
 				spaceBetween: 35,
-				slidesPerView: 4.1,
+			//	slidesPerView: 4.1,
 			},
 		},
 	});
