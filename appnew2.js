@@ -1406,7 +1406,7 @@ function headerHide() {
     start: "top top",
  
     end: "+=10000000",
-    toggleClass: { targets: " .hamby-line, .w--current", className: "navcolor" },
+    toggleClass: { targets: ".header, .hamby-line, .w--current", className: "navcolor" },
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
