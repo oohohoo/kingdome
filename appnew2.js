@@ -428,7 +428,7 @@ function pageFadeIn({
   // timeline to stretch the loader over the whole screen
   const tl = gsap.timeline({defaults: {duration: 1.1,ease: 'hop'}});
   tl
-    .to(".barba-container", {opacity:0, yPercent:15}, 0);
+    .to(container, {opacity:0}, 0);
   return tl;
 }
 
@@ -446,7 +446,7 @@ function pageFadeOut({
     onComplete: () => initContent()
   });
   tl
-    .from(".barba-container", {opacity:0, yPercent:15}, 0);
+    .from(container, {opacity:0}, 0);
   return tl;
 }
 
