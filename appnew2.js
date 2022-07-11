@@ -1585,19 +1585,13 @@ SWIPER PROJECT SOLO
 ================================================================================
 */
 
-
 function swiperSolo() {
 	var swipersolo = new Swiper(".swiper-container-solo", {
-		// loopedSlides: 6,
-		// loop: true,
+		loopedSlides: 6,
+		loop: true,
 		spaceBetween: 35,
-		slidesPerView: "auto",
-    direction: "horizontal",
-		freeMode: true,
-    touchEventsTarget: "container",
-    mousewheel: {
-      forceToAxis: true
-    },
+		slidesPerView: 1.2,
+		//	freeMode: true,
 		grabCursor: true,
 		//	mousewheel: false,
 
@@ -1605,9 +1599,9 @@ function swiperSolo() {
      delay: 3000,
  disableOnInteraction: false,
    }, */
-		/* resistanceRatio: 0.2,
+		resistanceRatio: 0.2,
 		longSwipes: true,
-		longSwipesRatio: 0.5, */
+		longSwipesRatio: 0.5,
 		//  touchRatio:5,
 		//loopFillGroupWithBlank: false,
 		// paginationClickable: true,
@@ -1635,16 +1629,16 @@ function swiperSolo() {
 			700: {
 				spaceBetween: 34,
 				//  loopedSlides: 3,
-			//	slidesPerView: 1.2,
+				slidesPerView: 1.2,
 			},
 			1024: {
 				spaceBetween: 40,
 				//  loopedSlides: 3,
-			//	slidesPerView: 1.2,
+				slidesPerView: 1.2,
 			},
 			1200: {
 				spaceBetween: 35,
-			//	slidesPerView: 4.1,
+				slidesPerView: 3.1,
 			},
 		},
 	});
