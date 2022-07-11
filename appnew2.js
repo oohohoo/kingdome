@@ -153,13 +153,13 @@ window.addEventListener('resize', function(){
   ScrollTrigger.refresh();
 },200) 
 
-var mq = window.matchMedia( "(max-height: 740px)" );
+/* var mq = window.matchMedia( "(max-height: 740px)" );
 if (mq.matches) {
   locoScroll.start();
 }
 else {
   locoScroll.stop();
-}    
+}     */
 
  console.log("RESIZE & REFRESHHHH LOCO & SCROLL+CROLL ON OFF / CONTACT");
 });
@@ -336,7 +336,7 @@ function initContent() {
 		},
 		contact: function () {
 			webflowInteractions();
-      contactScroll();
+     // contactScroll();
      
 			//  openMobileMenu();
 		},
