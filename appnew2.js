@@ -1599,8 +1599,8 @@ function swiperSolo() {
      delay: 3000,
  disableOnInteraction: false,
    }, */
-		/* resistanceRatio: 0.2,
-		longSwipes: true,
+		 resistanceRatio: 1,
+		/*longSwipes: true,
 		longSwipesRatio: 0.5, */
 		//  touchRatio:5,
 		//loopFillGroupWithBlank: false,
