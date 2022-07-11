@@ -2168,9 +2168,11 @@ function contactScroll() {
 var mq = window.matchMedia( "(max-width: 999px)" );
 if (mq.matches) {
   locoScroll.start();
+  console.log("LOCO START");
 }
 else {
   locoScroll.stop();
+  console.log("LOCO STOP");
 }    
 
 }
