@@ -335,6 +335,7 @@ function initContent() {
 			swiperSolo();
 		},
 		contact: function () {
+      scrollToSlide();
 			//huwebflowInteractions();
      // contactScroll();
      
@@ -581,7 +582,7 @@ BARBA VIEWS
 		{
 			namespace: "contact",
 			beforeEnter(data) {
-				webflowInteractions();
+			//	webflowInteractions();
 			},
 			afterEnter() {
 
@@ -1489,6 +1490,34 @@ $( "#tostart" ).on( "click", function() {
 
 /*
 ================================================================================
+SCROLL TO SLIDE - CONTACT
+================================================================================
+*/
+
+function scrollToSlide() {
+  $( "#toslide2" ).on( "click", function() {
+    locoScroll.scrollTo( '#slide2', {
+      'offset': 0,
+      'duration': 1500,
+      'easing': [0.5, 0, .0, 1],
+      'disableLerp': true
+    });
+  });
+
+  $( "#toslide3" ).on( "click", function() {
+    locoScroll.scrollTo( '#slide3', {
+      'offset': 0,
+      'duration': 1500,
+      'easing': [0.5, 0, .0, 1],
+      'disableLerp': true
+    });
+  });
+  }
+
+  
+
+/*
+================================================================================
 LOGO MARQUEE
 ================================================================================
 */
@@ -1534,11 +1563,11 @@ WEBFLOW INTERACTIONS REINIT
 ================================================================================
 */
 
-function webflowInteractions() {
+/* function webflowInteractions() {
   Webflow.ready();
   Webflow.require('ix2').init();
   console.log("WEBFLOW RELOADED");
-}
+} */
 
 /*
 ================================================================================
@@ -1562,59 +1591,56 @@ function swiperSolo() {
 		loop: true,
 		spaceBetween: 35,
 		slidesPerView: 1.2,
-	//	freeMode: true,
+		//	freeMode: true,
 		grabCursor: true,
-	//	mousewheel: false,
-	
-  /*  autoplay: {
+		//	mousewheel: false,
+
+		/*  autoplay: {
      delay: 3000,
  disableOnInteraction: false,
    }, */
- 
-		   resistanceRatio:0.2,
-		 longSwipes:true,
-		   longSwipesRatio:0.5,
+		resistanceRatio: 0.2,
+		longSwipes: true,
+		longSwipesRatio: 0.5,
 		//  touchRatio:5,
 		//loopFillGroupWithBlank: false,
 		// paginationClickable: true,
 		// mousewheelControl: true,
-	//	parallax: true,
-		 preloadImages: true,
+		//	parallax: true,
+		preloadImages: true,
 		//updateOnImagesReady: true,
 		// centeredSlides: true,
 		// slidesOffsetBefore: 100,
 		speed: 800,
-	breakpoints: {
-		400: {
+		breakpoints: {
+			400: {
 				spaceBetween: 20,
 				//  loopedSlides: 3,
 				slidesPerView: 1.1,
 			},
 
-      /* 	
+			/* 	
 			1e3: {
 				loopedSlides: 3,
 				spaceBetween: 24,
 				slidesPerView: 1.1,
 			},*/
-			
 
-    700: {
+			700: {
 				spaceBetween: 34,
 				//  loopedSlides: 3,
 				slidesPerView: 1.2,
-			}, 
-       1024: {
+			},
+			1024: {
 				spaceBetween: 40,
 				//  loopedSlides: 3,
 				slidesPerView: 1.2,
-			}, 
-      1200: {
+			},
+			1200: {
 				spaceBetween: 35,
 				slidesPerView: 2.1,
-			}, 
-
-		}, 
+			},
+		},
 	});
 }
 
@@ -2173,15 +2199,12 @@ window.addEventListener('resize', () => {
 */
 
 function contactScroll() {
-
-var mq = window.matchMedia( "(max-height: 740px)" );
-if (mq.matches) {
-  locoScroll.start();
-  console.log("LOCO START");
-}
-else {
-  locoScroll.stop();
-  console.log("LOCO STOPe");
-}    
-
+	var mq = window.matchMedia("(max-height: 740px)");
+	if (mq.matches) {
+		locoScroll.start();
+		console.log("LOCO START");
+	} else {
+		locoScroll.stop();
+		console.log("LOCO STOPe");
+	}
 }
