@@ -1638,7 +1638,7 @@ function swiperSolo() {
 			},
 			1200: {
 				spaceBetween: 35,
-				slidesPerView: 3.1,
+				slidesPerView: 4.1,
 			},
 		},
 	});
