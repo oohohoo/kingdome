@@ -1590,7 +1590,7 @@ function swiperSolo() {
 		loopedSlides: 6,
 		loop: true,
 		spaceBetween: 35,
-		slidesPerView: 1.2,
+		//slidesPerView: 1.2,
 		//	freeMode: true,
 		grabCursor: true,
 		//	mousewheel: false,
@@ -1599,9 +1599,9 @@ function swiperSolo() {
      delay: 3000,
  disableOnInteraction: false,
    }, */
-		resistanceRatio: 0.2,
+		/* resistanceRatio: 0.2,
 		longSwipes: true,
-		longSwipesRatio: 0.5,
+		longSwipesRatio: 0.5, */
 		//  touchRatio:5,
 		//loopFillGroupWithBlank: false,
 		// paginationClickable: true,
@@ -1611,7 +1611,7 @@ function swiperSolo() {
 		//updateOnImagesReady: true,
 		// centeredSlides: true,
 		// slidesOffsetBefore: 100,
-		speed: 800,
+		speed: 1000,
 		breakpoints: {
 			400: {
 				spaceBetween: 20,
