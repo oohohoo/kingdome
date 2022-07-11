@@ -327,6 +327,7 @@ function initContent() {
 		},
 		contact: function () {
 			webflowInteractions();
+      contactScroll();
      
 			//  openMobileMenu();
 		},
@@ -701,7 +702,6 @@ openmenu.addEventListener("click", () => {
 
 
     locoScroll.stop();
-
 
 });
 
@@ -2156,3 +2156,21 @@ window.addEventListener('resize', () => {
  */
 }
 
+
+/*
+================================================================================
+100vh fix mobile menu
+================================================================================
+*/
+
+function contactScroll() {
+
+var mq = window.matchMedia( "(max-width: 999px)" );
+if (mq.matches) {
+  locoScroll.start();
+}
+else {
+  locoScroll.stop();
+}    
+
+}
