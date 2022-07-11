@@ -1599,7 +1599,7 @@ function swiperSolo() {
      delay: 3000,
  disableOnInteraction: false,
    }, */
-		 resistanceRatio: 1,
+		 resistanceRatio: 4,
 		/*longSwipes: true,
 		longSwipesRatio: 0.5, */
 		//  touchRatio:5,
