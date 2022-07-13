@@ -356,7 +356,8 @@ function initContent() {
 
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
-   fullscreenMenu();
+  fullscreenMenu();
+  buttonHoverFromDirection();
 	scrollToTop();
 	yearUpdate();
 	fadeInOnEnter();
@@ -2208,4 +2209,31 @@ function contactScroll() {
 		locoScroll.stop();
 		console.log("LOCO STOPe");
 	}
+}
+
+/*
+================================================================================
+100vh fix mobile menu
+================================================================================
+*/
+
+function buttonHoverFromDirection() {
+
+$(function() {  
+  $('.butonio')
+    .on('mouseenter', function(e) {
+			var parentOffset = $(this).offset(),
+      		relX = e.pageX - parentOffset.left,
+      		relY = e.pageY - parentOffset.top;
+			$(this).find('span').css({top:relY, left:relX})
+    })
+    .on('mouseout', function(e) {
+			var parentOffset = $(this).offset(),
+      		relX = e.pageX - parentOffset.left,
+      		relY = e.pageY - parentOffset.top;
+    	$(this).find('span').css({top:relY, left:relX})
+    });
+  $('[href=#]').click(function(){return false});
+});
+
 }
