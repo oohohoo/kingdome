@@ -312,6 +312,7 @@ function initContent() {
 			startStopVideo();
 			swiperSolo();
 			headerHide();
+      akapowPinned();
 		},
 		products: function () {
       productObserver();
