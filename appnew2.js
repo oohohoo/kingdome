@@ -2220,7 +2220,7 @@ function contactScroll() {
 function buttonHoverFromDirection() {
 
 $(function() {  
-  $('.butonio')
+  $('.butonio, .butonio-i')
     .on('mouseenter', function(e) {
 			var parentOffset = $(this).offset(),
       		relX = e.pageX - parentOffset.left,
