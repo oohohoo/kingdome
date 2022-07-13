@@ -5,8 +5,8 @@ DEFINE ROOT VARIABLES / definiraj svoje
 ================================================================================
 */
 :root {
-  --text-color: white;
-  --text-dark-color: #202020;
+  --text-color: #e8e4e3;
+  --text-dark-color: #0f3936;
   --header-height: 100px;
   --burger-width: 40px;
   --font-headings: Georgia, serif;
@@ -14,10 +14,10 @@ DEFINE ROOT VARIABLES / definiraj svoje
   --bcg-green: #ACB7AE;
   --bcg-lightgreen: #a6b3b3;
   --bcg-lightbrown: #b0a7a4;
-  --bcg-lightblue: #fdfcfc;
+  --bcg-lightblue: #e8e4e3;
 
   /*  --bcg-loaderblue: #28282a; */
-    --bcg-loaderblue: #243635;
+    --bcg-loaderblue: ##0f3936;
   --bcg-loaderbluedark: #e51e3d;
 
   --loader-width: 10.75rem;
@@ -91,7 +91,7 @@ main:focus-visible {
 
 /* color focus na fomi*/
 .w-input:focus, .w-select:focus {
-  border-color: #1a1815;
+  border-color: #0f3936;
   outline: 0;
 }
 
@@ -358,7 +358,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgb(24, 21, 21);
+  background-color: #0f3936;
   /*   opacity: 0.5; */
   width: 6px;
   /* border-radius: 10px; */
@@ -499,7 +499,7 @@ TAB HIDE GAP
 */ 
 
 .tab-item::after {
-	background-color: #fdfcfc;
+	background-color: #e8e4e3;
 	display: block;
 	width: 1.25rem;
 	height: 1.25rem;
@@ -990,8 +990,8 @@ TEXT ON DARK BACK
 */
 
 .navcolor {
-color: #1a1815;
-background-color: #;
+color: #0f3936;
+background-color: red;
 -webkit-transition: all 0.2s ease;
 -ms-transition: all 0.2s ease;
 transition: all 0.2s ease;
@@ -1003,7 +1003,7 @@ transition: color 0.8s ease;
 }
 
 .hamby-line.navcolor {
-  background-color: #1a1815;
+  background-color: #0f3936;
   -webkit-transition: all 0.1s ease;
   -ms-transition: all 0.1s ease;
   transition: all 0.1s ease;
@@ -1019,7 +1019,7 @@ transition: all 0.1s ease;
 }
 
 .hamby-line.navcolor {
-  background-color: #1a1815;
+  background-color: #0f3936;
   -webkit-transition: all 0.1s ease;
   -ms-transition: all 0.1s ease;
   transition: all 0.1s ease;
@@ -1027,7 +1027,7 @@ transition: all 0.1s ease;
 }
 
 .w--current.navcolor:not(.h-red-flag, .underlinew, .header, .relative.wh100, .cta__slider-item, .underlinew, .nav-font-resizee ):after {
-  background: #1a1815;
+  background: #0f3936;
    }
 
 /*
@@ -1110,12 +1110,12 @@ CUBERTO CURSOR
 }
 
 .mf-cursor.-inverse {
-  color: #fff
+  color: #e8e4e3
 }
 
 .mf-cursor.-red {
   color: #e51e3d;
-  background-color: greenyellow;
+
 }
 
 
@@ -1205,7 +1205,7 @@ CUBERTO CURSOR
   justify-content: center;
   transform: scale(0) rotate(10deg);
   opacity: 0;
-  color: #1a1815;
+  color: #0f3936;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -1423,7 +1423,7 @@ SLIDER CONTACT AUTO HEIGHT FIXED
     position: absolute;
     content: "";
     height: 2px;
-    background-color: #242424;
+    background-color: #0f3936;
     width: 80%;
     padding-left: 1.35rem;
     padding-right: 1.35rem;

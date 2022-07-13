@@ -29,7 +29,7 @@ DEFINE ROOT VARIABLES / definiraj svoje
 ================================================================================
 */
 :root {
-  --text-color: white;
+  --text-color: #e8e4e3;
   --text-dark-color: #202020;
   --header-height: 100px;
   --burger-width: 40px;
