@@ -1856,7 +1856,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 
 
-.to(".home-hero-video, .cta__slider", {yPercent:-10}, 0.2)
+
 //.fromTo(".red-logo", {yPercent:-100 }, {yPercent:0, rotate:0.0001, duration: 0.5}, "-=0.1")
 
 
@@ -1878,7 +1878,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   }
 });
 
-tlout.to(".home-hero_component, .cta__slider", {/* autoAlpha:0, duration: 0.3 */}, 0) 
+tlout.to(".home-hero-video", { yPercent:-10, duration: 0.3 }, 0.2) 
 
 
 /* .fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 0}, {
