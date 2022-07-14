@@ -1404,10 +1404,7 @@ padding-bottom: 6.25rem;
 
 @media screen and (min-width: 991px) {
 
-.grid-product-main>.background-color-white:nth-child(3n+2) {
-  position: relative;
-     top: 5.5rem;
- }
+
  
   }
 
@@ -1454,7 +1451,7 @@ BATCH VISIBLE ON MOBILE
 SLIDER CONTACT AUTO HEIGHT FIXED
 ================================================================================
 */
-
+/* 
  .slider [aria-hidden="true"] {
     height: 0px!important;
     }   
@@ -1471,7 +1468,7 @@ SLIDER CONTACT AUTO HEIGHT FIXED
       bottom: -1rem;
       
       
-  }
+  } */
   }
   
  
