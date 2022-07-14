@@ -1411,40 +1411,18 @@ padding-bottom: 6.25rem;
  
   }
 
-  @media screen and (max-width: 650px) {
 
-    .heading-large {
-      font-size: 3.3rem;
-     }
+@media screen and (min-width: 813px) {
+
+
+  .heading-large {
+    font-size: 3.8rem;
+   }    
+    
+ }  
   
-     .header-mobile-fix {
-      top: 2rem;
-  }
-  
-  /*  .slider-tab {
-    left: -4rem;
-   }
-   */
-  
-  
-  
-  }  
 
 
-/*
-================================================================================
-HOME PRODUCT SVAKI 3 UGURAJ*
-================================================================================
-*/
-
-@media screen and (min-width: 991px) {
-
-.grid-product-main>.background-color-white:nth-child(3n+2) {
-  position: relative;
-     top: 5.5rem;
- }
-
-}
 
 
 /*
