@@ -365,7 +365,7 @@ function initContent() {
 	scrollToTop();
 	yearUpdate();
 	fadeInOnEnter();
-	//cubertoCursor();
+	cubertoCursor();
   disableScroll();
   vhFix();
 
