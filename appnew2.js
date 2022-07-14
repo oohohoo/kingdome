@@ -471,6 +471,19 @@ function initPageTransitions() {
   barba.hooks.before(() => {
     select('html').classList.add('is-transitioning');
   });
+
+   // do something before the transition starts
+   barba.hooks.beforeEnter(() => {
+    cursor.hide();
+    console.log("CURSOR KILLED");
+  });
+
+
+
+
+
+
+
   // do something after the transition finishes
   barba.hooks.after(() => {
     select('html').classList.remove('is-transitioning');
@@ -518,9 +531,11 @@ console.log("WEBFLOW DESTROY");
    gsap.set(".xnav", {scaleY: 0})
    console.log("--------MENU X SCALE");
 //DESTROY CURSOR PRIJE ULASKA
-   const cursor = new MouseFollower();
+   /* const cursor = new MouseFollower();
    cursor.destroy();
-   console.log("--------CURSOR DESTROY");
+   console.log("--------CURSOR DESTROY"); */
+   cursor.show();
+   console.log("cursor showwww");
 
    });
 
