@@ -521,8 +521,8 @@ barba.hooks.afterLeave((data) => {
 };
 
 const cursor = new MouseFollower();
-    cursor.destroy();
-    console.log("CURSOR KILLED XXX");
+    cursor.hide();
+    console.log("CURSOR ODJEBI");
 
 
 Webflow.destroy();
@@ -542,8 +542,9 @@ console.log("WEBFLOW DESTROY");
 //const cursor = new MouseFollower();
  /*   cursor.destroy();
    console.log("--------CURSOR DESTROY");  */
-   cubertoCursor(); 
-   console.log("cursor showwww");
+   /* cubertoCursor();  */
+   cursor.show();
+   console.log("cursor PRIKAŽI SE");
 
    });
 
