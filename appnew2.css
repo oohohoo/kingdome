@@ -1226,11 +1226,11 @@ CUBERTO CURSOR
 
 .mf-cursor.-text:before {
   opacity: .85;
-  transform: scale(1.5)
+  transform: scale(1.6)
 }
 
 .mf-cursor.-text.-active:before {
-  transform: scale(1.6);
+  transform: scale(1.8);
   transition-duration: .2s
 }
 
