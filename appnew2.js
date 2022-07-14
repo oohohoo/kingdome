@@ -543,7 +543,7 @@ console.log("WEBFLOW DESTROY");
  /*   cursor.destroy();
    console.log("--------CURSOR DESTROY");  */
    /* cubertoCursor();  */
- ////  cursor.show();
+ //  cursor.show();
    console.log("cursor PRIKAŽI SE");
 
    });
@@ -1359,7 +1359,7 @@ HOW WE WORK AKAPOWL PINNED
 */
 function akapowPinned() {
 
-  var mq = window.matchMedia( "(min-width: 900px)" );
+  var mq = window.matchMedia( "(min-width: 991px)" );
   if (mq.matches) { 
   
 
