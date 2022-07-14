@@ -1359,7 +1359,7 @@ HOW WE WORK AKAPOWL PINNED
 */
 function akapowPinned() {
 
-  var mq = window.matchMedia( "(min-width: 991px)" );
+  var mq = window.matchMedia( "(min-width: 480px)" );
   if (mq.matches) { 
   
 
