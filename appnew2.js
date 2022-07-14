@@ -479,7 +479,7 @@ function initPageTransitions() {
    // do something before the transition starts
    barba.hooks.beforeEnter(() => {
     const cursor = new MouseFollower();
-    cursor.hide();
+    cursor.destroy();
     console.log("CURSOR KILLED");
   });
 
@@ -539,7 +539,7 @@ console.log("WEBFLOW DESTROY");
 const cursor = new MouseFollower();
  /*   cursor.destroy();
    console.log("--------CURSOR DESTROY");  */
-   cursor.show();
+   cubertoCursor(); 
    console.log("cursor showwww");
 
    });
