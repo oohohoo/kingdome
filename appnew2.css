@@ -1230,7 +1230,7 @@ CUBERTO CURSOR
 }
 
 .mf-cursor.-text.-active:before {
-  transform: scale(4);
+  transform: scale(1.6);
   transition-duration: .2s
 }
 
