@@ -478,7 +478,7 @@ function initPageTransitions() {
 
    // do something before the transition starts
    barba.hooks.beforeEnter(() => {
-    const cursor = new MouseFollower();
+    //const cursor = new MouseFollower();
     cursor.destroy();
     console.log("CURSOR KILLED");
   });
