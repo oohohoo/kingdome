@@ -1149,7 +1149,6 @@ CUBERTO CURSOR
 
 .mf-cursor:before {
   content: "";
-  font-size: 10px;
   position: absolute;
   top: -20px;
   left: -20px;
@@ -1231,7 +1230,7 @@ CUBERTO CURSOR
 }
 
 .mf-cursor.-text.-active:before {
-  transform: scale(1.6);
+  transform: scale(4);
   transition-duration: .2s
 }
 
