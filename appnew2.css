@@ -1226,7 +1226,7 @@ CUBERTO CURSOR
 
 .mf-cursor.-text:before {
   opacity: .85;
-  transform: scale(2.7)
+  transform: scale(1.5)
 }
 
 .mf-cursor.-text.-active:before {
@@ -1258,7 +1258,7 @@ CUBERTO CURSOR
   transform: scale(0) rotate(10deg);
   opacity: 0;
   color: #0f3936;
-  font-size: 16px;
+  font-size: 0.875rem;
   line-height: 20px;
   text-align: center;
   transition: opacity .4s, transform .3s
