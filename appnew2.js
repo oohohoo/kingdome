@@ -1419,7 +1419,7 @@ HEADER HIDE
 ================================================================================
 */
 function headerHide() {
-  const showAnim = gsap.from('.header', { 
+/*   const showAnim = gsap.from('.header', { 
     yPercent: -100,
     paused: true,
     duration: 0.3,
@@ -1436,7 +1436,7 @@ function headerHide() {
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
-  });
+  }); */
 }
 
 /*
