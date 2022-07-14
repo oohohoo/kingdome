@@ -1467,19 +1467,21 @@ SLIDER CONTACT AUTO HEIGHT FIXED
     height: 0px!important;
     }   
 
+    .pseudoline::after {
+
+      position: absolute;
+      content: "";
+      height: 2px;
+      background-color: #0f3936;
+      width: 80%;
+      padding-left: 1.35rem;
+      padding-right: 1.35rem;
+      bottom: -1rem;
+      
+      
   }
 
-  .pseudoline::after {
-
-    position: absolute;
-    content: "";
-    height: 2px;
-    background-color: #0f3936;
-    width: 80%;
-    padding-left: 1.35rem;
-    padding-right: 1.35rem;
-    bottom: -1rem;
-    
+  
  
 /*
 ================================================================================
