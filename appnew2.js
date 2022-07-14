@@ -1878,7 +1878,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   }
 });
 
-tlout.to(".home-hero-video, .how-we-work-video", { yPercent:-20,  duration: 0.8 }, 0) 
+tlout.to(".home-hero_video-wrap", { yPercent:-20,  duration: 0.8 }, 0) 
 .to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
 
 
