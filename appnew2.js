@@ -478,9 +478,7 @@ function initPageTransitions() {
 
    // do something before the transition starts
    barba.hooks.beforeEnter(() => {
-    //const cursor = new MouseFollower();
-    cursor.destroy();
-    console.log("CURSOR KILLED");
+    
   });
 
 
@@ -521,6 +519,11 @@ barba.hooks.afterLeave((data) => {
         console.log("SCROLLTRIGGER DESTROY");
     });
 };
+
+const cursor = new MouseFollower();
+    cursor.destroy();
+    console.log("CURSOR KILLED XXX");
+
 
 Webflow.destroy();
 console.log("WEBFLOW DESTROY");
