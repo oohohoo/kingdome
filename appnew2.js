@@ -1879,7 +1879,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 });
 
 tlout.to(".home-hero-video", { yPercent:-20,  duration: 0.8 }, 0) 
-.to(".home-hero_head-wrap", { yPercent:20,   duration: 0.6 }, 0) 
+.to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
 
 
 /* .fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 0}, {
