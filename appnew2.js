@@ -1419,7 +1419,7 @@ HEADER HIDE
 ================================================================================
 */
 function headerHide() {
-/*   const showAnim = gsap.from('.header', { 
+  const showAnim = gsap.from('.header', { 
     yPercent: -100,
     paused: true,
     duration: 0.3,
@@ -1436,7 +1436,7 @@ function headerHide() {
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
-  }); */
+  });
 }
 
 /*
@@ -1871,7 +1871,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
    
   scrub: true,
     pin: ".section-home-hero",
-    pinSpacing: false,
+    pinSpacing: true,
   //  toggleActions: "restart none none none"
     toggleActions: "restart reverse play reverse"
   }
