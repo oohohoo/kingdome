@@ -520,9 +520,9 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
-const cursor = new MouseFollower();
-    cursor.hide();
-    console.log("CURSOR ODJEBI");
+//const cursor = new MouseFollower();
+   // cursor.hide();
+ //   console.log("CURSOR ODJEBI");
 
 
 Webflow.destroy();
@@ -543,7 +543,7 @@ console.log("WEBFLOW DESTROY");
  /*   cursor.destroy();
    console.log("--------CURSOR DESTROY");  */
    /* cubertoCursor();  */
-   cursor.show();
+ ////  cursor.show();
    console.log("cursor PRIKAŽI SE");
 
    });
