@@ -522,9 +522,12 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
-var swiper = new Swiper(".swiper-container", {});
+this.swiper.destroy();
+console.log("SWIPER UBIJJJJJEMNNNNN");
+
+/* var swiper = new Swiper(".swiper-container", {});
 swiper.destroy();
-console.log("SWIPERSOLO DESTROYED UGH");
+console.log("SWIPERSOLO DESTROYED UGH"); */
 
 //const cursor = new MouseFollower();
    // cursor.hide();
@@ -640,8 +643,7 @@ BARBA VIEWS
         
 			},
       afterLeave(data) {
-				        swiper.destroy();
-        console.log("SWIPER UBIJJJJJEMNNNNN");
+				       
         
 			},
 		},
