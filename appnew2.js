@@ -522,11 +522,11 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
-var swiper = new Swiper(".swiper-container-solo", {
+/* var swiper = new Swiper(".swiper-container-solo", {
 
 });
 swiper.destroy( true, true );
-console.log("SWIPER killlllllll");
+console.log("SWIPER killlllllll"); */
 
 //const cursor = new MouseFollower();
    // cursor.hide();
@@ -547,13 +547,13 @@ console.log("SWIPER killlllllll");
   killswiper.init();
   */
 
-/*   if (swiper.getAll().length > 0) {
+  if (swiper.getAll().length > 0) {
     swiper.getAll().forEach((trigger) => {
         trigger.kill()
         console.log("SWIPER killlllllll");
     });
 };
- */
+ 
 
 /*  swiperSolo(); 
  swipersolo.destroy( true, true );
