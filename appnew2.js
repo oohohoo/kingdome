@@ -550,9 +550,9 @@ barba.hooks.afterLeave((data) => {
     });
 }; */
  
-stop_swiper();
+/* stop_swiper();
 console.log("SWIPER UBIJJ");
-
+ */
 /*  swiperSolo(); 
  swipersolo.destroy( true, true );
  */
