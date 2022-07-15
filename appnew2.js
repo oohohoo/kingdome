@@ -535,8 +535,8 @@ barba.hooks.afterLeave((data) => {
       swipersolo.destroy(true, true);
       swiper = undefined; // THIS WAS NEDEED
       console.log("SWIPERSOLO DESTROYED");
-
-  }  
+  }
+  };  
   deleteSwiper();
 
  $(".card").click(function(){
