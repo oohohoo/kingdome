@@ -1212,7 +1212,7 @@ if (mq.matches) {
     .to('#switch', {autoAlpha: show},0 )
     .to('#start', {morphSVG:shape},0)
      .to(".header_znak", { scale: 1, yPercent: 0, transformOrigin: 'center center'}, 0) 
-   .to(".h-red-flag",  {width:'5.5rem', height:'8rem', top: '0rem'}, 0) 
+   .to(".h-red-flag",  {width:'5.8rem', height:'8rem', top: '0rem'}, 0) 
    .to(".text-block",  {yPercent:0, autoAlpha:1}, 0)
   
     return TL2;
