@@ -1976,7 +1976,7 @@ var tlfull = gsap.timeline({
   // toggleActions: "restart reverse play reverse"
   }
 });
-tlfull.to(".home-full-image-wrap", { yPercent:-5, autoAlpha:.8, duration: 0.6 }, 0) 
+tlfull.to(".home-full-image-wrap", { autoAlpha:.8, duration: 0.6 }, 0) 
 
 
 /* BACKUP
