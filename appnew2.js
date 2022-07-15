@@ -2008,10 +2008,13 @@ gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
     pinSpacing: false,
    /*  markers: true, */
     onEnter: function () {
-      gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
+     // gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
+      gsap.to(".home-hero_video-wrap", { yPercent:-30,  duration: 0.6 }, 0) 
+
     },
     onLeave: function () {
-      gsap.fromTo(elem, { autoAlpha: 1, rotate: 30 }, { autoAlpha: 0, rotate: 0, overwrite: "auto" });
+      gsap.to(".home-hero_video-wrap", { yPercent:0,  duration: 0.6 }, 0) 
+     // gsap.fromTo(elem, { autoAlpha: 1, rotate: 30 }, { autoAlpha: 0, rotate: 0, overwrite: "auto" });
     },
     onEnterBack: function () {
       gsap.fromTo(elem, { autoAlpha: 0, rotate: 0 }, {duration: 1.25,rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
