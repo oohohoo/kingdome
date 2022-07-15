@@ -1961,7 +1961,7 @@ tlout.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:.8, duration: 0.6 },
 
 
 
-
+/* PINANJE OSTALIH*/
 var tlfull = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
@@ -1977,6 +1977,7 @@ var tlfull = gsap.timeline({
   }
 });
 
+/* home-full-image-wrap */
 
 /* BACKUP
 var tlout = gsap.timeline({
