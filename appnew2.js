@@ -1222,7 +1222,7 @@ if (mq.matches) {
   const ST = ScrollTrigger.create ({
     //animation: TL1,
     scroller: ".smooth-scroll",
-    trigger: "#start",
+    trigger: "#logotrig",
     start: "top top",
     end: "+=10000000",
     // toggleActions: "play none none reverse"
