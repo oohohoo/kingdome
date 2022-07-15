@@ -10,6 +10,7 @@ CustomEase.create("hop", "0.5, 0, .0, 1");
 
 
 let locoScroll;
+let swipersolo;
 
 /*TURN OFF GSAP MESSAGES*/
 gsap.config({ nullTargetWarn: false });
@@ -525,6 +526,8 @@ barba.hooks.afterLeave((data) => {
    // cursor.hide();
  //   console.log("CURSOR ODJEBI");
 
+ swipersolo.destroy();
+ console.log("SWIPERSOLO DESTROYED");
 
 Webflow.destroy();
 console.log("WEBFLOW DESTROY");
