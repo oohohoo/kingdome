@@ -526,9 +526,18 @@ barba.hooks.afterLeave((data) => {
    // cursor.hide();
  //   console.log("CURSOR ODJEBI");
 
- const swipersolo = swiperSolo()
- swipersolo.destroy(); 
+ const swipersol = swiperSolo();
+ swipersol.destroy(); 
  console.log("SWIPERSOLO DESTROYED");
+
+
+ $(".card").click(function(){
+  // Here we define a variable that returns the swiper
+  const carousel = carouselProperties()
+  // Afte we define this variable we can finally call the init function
+  carousel.init();
+});
+
 
 Webflow.destroy();
 console.log("WEBFLOW DESTROY");
