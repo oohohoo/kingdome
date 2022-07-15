@@ -1962,7 +1962,7 @@ tlout.to(".home-hero_video-wrap", { yPercent:-30,  duration: 0.6 }, 0)
  */
 
 // REVEAL //
-gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
+/* gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
   ScrollTrigger.create({
     scroller: ".smooth-scroll",
     trigger: elem,
@@ -1971,7 +1971,7 @@ gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
     scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
-   /*  markers: true, */
+ 
     onEnter: function () {
       gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
     },
@@ -1986,7 +1986,7 @@ gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
     }
   });
 });
-
+ */
 
 // REVEAL //
 
