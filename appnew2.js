@@ -522,7 +522,7 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
-var swiper = new Swiper(".swiper-container-solo", {};
+var swiper = new Swiper(".swiper-container-solo", {});
 swiper.destroy();
 console.log("SWIPERSOLO DESTROYED UGH");
 
