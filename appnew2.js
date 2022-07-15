@@ -1957,7 +1957,7 @@ heroes.forEach((item, index) => {
   }
 });
 
-heroani.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:0.8, duration: 0.6 }, 0) 
+heroani.to(".home-hero_video-wrap", { yPercent:0, autoAlpha:0.8, duration: 0.6 }, 0) 
 .to(".home-hero_head-wrap", { yPercent:30, rotate: 20,  duration: 0.6 }, 0) ;
 });
 
