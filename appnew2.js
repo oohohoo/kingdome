@@ -1196,7 +1196,7 @@ if (mq.matches) {
 // MOBILE
   var show =1;
   var doSwitch = function(shape, show){
-    var TL1 = gsap.timeline({ defaults: {duration: 0.5, overwrite: 'auto', force3D:false, ease: "expo.inOut"} })
+    var TL1 = gsap.timeline({ defaults: {duration: 0.5, overwrite: 'auto', force3D:false, ease: "hop"} })
     .to('#switch', {autoAlpha: show},0 )
     .to('#start', {morphSVG:shape},0 )
     .to(".header_znak", { scale: 0.7, yPercent: -36, transformOrigin: 'center center'}, 0) 
@@ -1208,7 +1208,7 @@ if (mq.matches) {
   
   }
   var doSwitchOut = function(shape, show){
-    var TL2 = gsap.timeline({ defaults: {duration: 0.5, overwrite: 'auto', force3D:false, ease: "expo.inOut"} })
+    var TL2 = gsap.timeline({ defaults: {duration: 0.5, overwrite: 'auto', force3D:false, ease: "hop"} })
     .to('#switch', {autoAlpha: show},0 )
     .to('#start', {morphSVG:shape},0)
      .to(".header_znak", { scale: 1, yPercent: 0, transformOrigin: 'center center'}, 0) 
