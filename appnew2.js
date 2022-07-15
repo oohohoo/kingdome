@@ -522,8 +522,9 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
-this.swiper.destroy();
-console.log("SWIPER UBIJJJJJEMNNNNN");
+const swiper = new Swiper('.swiper-container-solo', {});
+swiper.destroy();
+console.log("SWIPER UBIJJJJJEMNNNNN JEBOMUMATER");
 
 /* var swiper = new Swiper(".swiper-container", {});
 swiper.destroy();
