@@ -643,13 +643,13 @@ BUTTONS FINAL
   width: 0;
   height: 0;
   border-radius: 50%;
-  background-color: #e51e3d;
+  background-color: #e8e4e3;
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
   transform: translate(-50%, -50%);
  /* z-index: -1;*/
 }
 .butonio-r:hover {
-  color: #e8e4e3;
+  color: #e51e3d;
   transition: color 0.3s ease-in-out;
 }
 .butonio-r:hover span {
