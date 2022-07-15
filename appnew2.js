@@ -639,7 +639,7 @@ BARBA VIEWS
 			},
       afterLeave(data) {
 				        swiper.destroy();
-        console.log("SWIPER UBIJJJJJ");
+        console.log("SWIPER UBIJJJJJEMNNNNN");
         
 			},
 		},
