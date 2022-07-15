@@ -1943,7 +1943,7 @@ let heroes = gsap.utils.toArray('.section-home-hero')
 
 heroes.forEach((item, index) => {
 
- var tlout = gsap.timeline({
+ var heroani = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: item,
@@ -1957,8 +1957,8 @@ heroes.forEach((item, index) => {
   }
 });
 
-tlout.to(".home-hero_video-wrap", { yPercent:-30, scale:1.1, autoAlpha:0.8, duration: 0.6 }, 0) 
-.to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) ;
+heroani.to(".home-hero_video-wrap", { yPercent:-30, scale:1.1, autoAlpha:0.8, duration: 0.6 }, 0) 
+.to(".home-hero_head-wrap", { yPercent:30, rotate: 20,  duration: 0.6 }, 0) ;
 });
 
 
