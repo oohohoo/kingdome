@@ -530,14 +530,13 @@ barba.hooks.afterLeave((data) => {
  swipersol.destroy(); 
  console.log("SWIPERSOLO DESTROYED");
  */
- function deleteSwiper() {
+ 
   if ( swipersolo !== undefined && swipersolo !== '' ) {
       swipersolo.destroy(true, true);
       swipersolo = undefined; // THIS WAS NEDEED
       console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
   }
-  };
-  deleteSwiper();
+ 
 
  $(".card").click(function(){
   // Here we define a variable that returns the swiper
