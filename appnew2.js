@@ -550,10 +550,11 @@ console.log("SWIPER killlllllll"); */
   if (swiper.getAll().length > 0) {
     swiper.getAll().forEach((trigger) => {
         trigger.kill()
-        console.log("SWIPER killlllllll");
+        console.log("SWIPER UBIJJ");
     });
 };
  
+
 
 /*  swiperSolo(); 
  swipersolo.destroy( true, true );
