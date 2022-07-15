@@ -10,7 +10,7 @@ CustomEase.create("hop", "0.5, 0, .0, 1");
 
 
 let locoScroll;
-/* let swipersolo; */
+let swipersolo;
 
 /*TURN OFF GSAP MESSAGES*/
 gsap.config({ nullTargetWarn: false });
@@ -1771,8 +1771,9 @@ function swiperSolo() {
 		},
 	});
 
+function swiperDestroy() {
   swipersolo.destroy();
-
+} 
 
 
 }
