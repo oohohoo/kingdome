@@ -536,12 +536,10 @@ console.log("WEBFLOW DESTROY");
    gsap.set(".xnav", {scaleY: 0})
    console.log("--------MENU X SCALE");
 //DESTROY CURSOR PRIJE ULASKA
-//const cursor = new MouseFollower();
- /*   cursor.destroy();
-   console.log("--------CURSOR DESTROY");  */
-   /* cubertoCursor();  */
- //  cursor.show();
-   console.log("cursor PRIKAŽI SE");
+const cursor = new MouseFollower();
+  cursor.destroy();
+   console.log("--------CURSOR DESTROY ĆAO");  
+
 
    });
 
@@ -1837,7 +1835,7 @@ setTimeout(() => {
      
   });
   
-
+  console.log("CUBERTO CURSOR INIT");
 
 /*   const buttonkillcursor = document.querySelector('.glass-button');
   
