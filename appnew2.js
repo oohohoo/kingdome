@@ -526,7 +526,8 @@ barba.hooks.afterLeave((data) => {
    // cursor.hide();
  //   console.log("CURSOR ODJEBI");
 
- swipersolo.destroy();
+ const swiperkill = swiperSolo()
+ swiperkill.destroy(); 
  console.log("SWIPERSOLO DESTROYED");
 
 Webflow.destroy();
