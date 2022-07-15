@@ -531,12 +531,17 @@ barba.hooks.afterLeave((data) => {
  console.log("SWIPERSOLO DESTROYED");
  */
  
-  if ( swipersolo !== undefined && swipersolo !== '' ) {
+/*   if ( swipersolo !== undefined && swipersolo !== '' ) {
       swipersolo.destroy(true, true);
       swipersolo = undefined; // THIS WAS NEDEED
       console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
-  }
+  } */
  
+  const killswiper = swiperDestroy()
+  killswiper.init();
+  console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
+
+  
 
  $(".card").click(function(){
   // Here we define a variable that returns the swiper
@@ -1765,6 +1770,12 @@ function swiperSolo() {
 			},
 		},
 	});
+
+function swiperDestroy() {
+  swipersolo.destroy();
+} 
+
+
 }
 
 
