@@ -1965,7 +1965,7 @@ tlout.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:.8, duration: 0.6 },
 var tlfull = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
-    trigger: ".home-hero_component",
+    trigger: ".section-pin",
     start: "top top",
     end: "bottom top", 
    
