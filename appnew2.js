@@ -1200,7 +1200,7 @@ if (mq.matches) {
     .to('#switch', {autoAlpha: show},0 )
     .to('#start', {morphSVG:shape},0 )
     .to(".header_znak", { scale: 0.7, yPercent: -36, transformOrigin: 'center center'}, 0) 
-  .to(".h-red-flag",  {width:'3rem', height:'3rem', rotate: 360, top: '0.5rem'}, 0) 
+  .to(".h-red-flag",  {width:'3rem', height:'3rem', top: '0.6rem'}, 0) 
   .to(".text-block",  {yPercent:30, autoAlpha:0}, 0) 
   
     
