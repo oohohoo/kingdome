@@ -9,8 +9,8 @@ CustomEase.create("hop", "0.5, 0, .0, 1");
 
 
 
-/* let locoScroll; */
-let swipersolo;
+let locoScroll;
+/* let swipersolo; */
 
 /*TURN OFF GSAP MESSAGES*/
 gsap.config({ nullTargetWarn: false });
@@ -537,11 +537,12 @@ barba.hooks.afterLeave((data) => {
       console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
   } */
  
-  const killswiper = swiperDestroy()
+/*   const killswiper = swiperDestroy()
   killswiper.init();
-  console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
+  */
 
-  
+ swipersolo.destroy( true, true );
+ console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
 
  $(".card").click(function(){
   // Here we define a variable that returns the swiper
