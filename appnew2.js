@@ -1951,7 +1951,7 @@ heroes.forEach((item, index) => {
     end: "bottom top", 
     scrub: true,
     pin: ".section-home-hero",
-    pinSpacing: false,
+    pinSpacing: true,
   //  toggleActions: "restart none none none"
     toggleActions: "restart reverse play reverse"
   }
