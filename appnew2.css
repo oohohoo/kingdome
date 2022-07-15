@@ -647,9 +647,9 @@ BUTTONS FINAL
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
   transform: translate(-50%, -50%);
  /* z-index: -1;*/
-}
+}*
 .butonio-r:hover {
-  color: #e51e3d;
+  color: #0f3936;
   transition: color 0.3s ease-in-out;
 }
 .butonio-r:hover span {
