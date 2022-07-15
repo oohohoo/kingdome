@@ -534,7 +534,7 @@ barba.hooks.afterLeave((data) => {
   if ( swipersolo !== undefined && swipersolo !== '' ) {
       swipersolo.destroy(true, true);
       swipersolo = undefined; // THIS WAS NEDEED
-      console.log("SWIPERSOLO DESTROYED");
+      console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
   }
   };
   deleteSwiper();
