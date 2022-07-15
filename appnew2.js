@@ -621,7 +621,7 @@ BARBA VIEWS
 				productsTabs();
 				fullscreen3D();
 				productsoloAccordion();
-			swiperSolo();
+			
 			},
 		},
 		{
