@@ -10,7 +10,7 @@ CustomEase.create("hop", "0.5, 0, .0, 1");
 
 
 let locoScroll;
- let swiper; 
+ /* let swiper;  */
 
 /*TURN OFF GSAP MESSAGES*/
 gsap.config({ nullTargetWarn: false });
@@ -522,6 +522,12 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
+var swiper = new Swiper(".swiper-container-solo", {
+
+});
+swiper.destroy( true, true );
+console.log("SWIPER killlllllll");
+
 //const cursor = new MouseFollower();
    // cursor.hide();
  //   console.log("CURSOR ODJEBI");
@@ -541,25 +547,25 @@ barba.hooks.afterLeave((data) => {
   killswiper.init();
   */
 
-  if (swiper.getAll().length > 0) {
+/*   if (swiper.getAll().length > 0) {
     swiper.getAll().forEach((trigger) => {
         trigger.kill()
         console.log("SWIPER killlllllll");
     });
 };
-
+ */
 
 /*  swiperSolo(); 
  swipersolo.destroy( true, true );
  */
 
- $(".card").click(function(){
+/*  $(".card").click(function(){
   // Here we define a variable that returns the swiper
   const carousel = carouselProperties()
   // Afte we define this variable we can finally call the init function
   carousel.init();
 });
-
+ */
 
 Webflow.destroy();
 console.log("WEBFLOW DESTROY");
