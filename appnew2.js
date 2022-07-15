@@ -1973,13 +1973,13 @@ gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
     pinSpacing: false,
    /*  markers: true, */
     onEnter: function () {
-      gsap.fromTo(elem, { y: 100, autoAlpha: 0 }, {duration: 1.25, y: 0, autoAlpha: 1, ease: "back", overwrite: "auto"});
+      gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, autoAlpha: 1, ease: "hop", overwrite: "auto"});
     },
     onLeave: function () {
       gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
     },
     onEnterBack: function () {
-      gsap.fromTo(elem, { y: -100, autoAlpha: 0 }, {duration: 1.25, y: 0, autoAlpha: 1, ease: "back", overwrite: "auto"});
+      gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, autoAlpha: 1, ease: "hop", overwrite: "auto"});
     },
     onLeaveBack: function () {
       gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
