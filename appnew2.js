@@ -10,7 +10,7 @@ CustomEase.create("hop", "0.5, 0, .0, 1");
 
 
 let locoScroll;
-/* let swipersolo; */
+ let swiper; 
 
 /*TURN OFF GSAP MESSAGES*/
 gsap.config({ nullTargetWarn: false });
@@ -541,9 +541,17 @@ barba.hooks.afterLeave((data) => {
   killswiper.init();
   */
 
- swiperSolo(); 
+  if (swiper.getAll().length > 0) {
+    swiper.getAll().forEach((trigger) => {
+        trigger.kill()
+        console.log("SWIPER killlllllll");
+    });
+};
+
+
+/*  swiperSolo(); 
  swipersolo.destroy( true, true );
- console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
+ */
 
  $(".card").click(function(){
   // Here we define a variable that returns the swiper
@@ -1716,7 +1724,7 @@ SWIPER PROJECT SOLO
 */
 
 function swiperSolo() {
-	var swipersolo = new Swiper(".swiper-container-solo", {
+	var swiper = new Swiper(".swiper-container-solo", {
 		loopedSlides: 6,
 		loop: true,
 		spaceBetween: 35,
@@ -1773,9 +1781,6 @@ function swiperSolo() {
 		},
 	});
 
-function swiperDestroy() {
-  swipersolo.destroy();
-} 
 
 
 }
@@ -2099,7 +2104,7 @@ function productObserver() {
   
   // svaka fotka ima: data-swiper-parallax-y: "35%"
   
-  const swiper = new Swiper(slider, {
+  var swiper = new Swiper(slider, {
     autoplay: false,
     parallax: true,
     loop: true,
