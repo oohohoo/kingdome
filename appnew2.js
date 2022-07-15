@@ -1223,7 +1223,7 @@ if (mq.matches) {
     //animation: TL1,
     scroller: ".smooth-scroll",
     trigger: "#start",
-    start: "top top",
+    start: "top 1%",
     end: "+=10000000",
     // toggleActions: "play none none reverse"
     onEnter: () => doSwitch(first, 1),
