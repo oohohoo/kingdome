@@ -1436,6 +1436,12 @@ BATCH VISIBLE ON MOBILE
 }
   }
    
+  .scrolldown {
+
+    padding-bottom: 2.5rem;
+
+}
+
 
   .section-contact {
     /* overflow-y: hidden!important; */
