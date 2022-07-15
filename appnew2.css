@@ -499,7 +499,7 @@ TAB HIDE GAP
 */ 
 
 .tab-item::after {
-	background-color: #d73e18;
+	background-color: #e8e4e3;
 	display: block;
 	width: 1.25rem;
 	height: 1.25rem;
