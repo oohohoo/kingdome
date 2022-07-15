@@ -1797,7 +1797,7 @@ setTimeout(() => {
   const xhide = document.querySelector('.my-image');
   const cursor = new MouseFollower({
          el: null,
-        container: document.body,
+        container: 'kurcor',
         className: 'mf-cursor',
         innerClassName: 'mf-cursor-inner',
         textClassName: 'mf-cursor-text',
