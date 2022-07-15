@@ -526,10 +526,18 @@ barba.hooks.afterLeave((data) => {
    // cursor.hide();
  //   console.log("CURSOR ODJEBI");
 
- const swipersol = swiperSolo();
+/*  const swipersol = swiperSolo();
  swipersol.destroy(); 
  console.log("SWIPERSOLO DESTROYED");
+ */
+ function deleteSwiper() {
+  if ( swiper !== undefined && swiper !== '' ) {
+      swipersolo.destroy(true, true);
+      swiper = undefined; // THIS WAS NEDEED
+      console.log("SWIPERSOLO DESTROYED");
 
+  }  
+  deleteSwiper();
 
  $(".card").click(function(){
   // Here we define a variable that returns the swiper
