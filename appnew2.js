@@ -1939,27 +1939,25 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 // PIN HERO **********************
 
 
-let heroes = gsap.utils.toArray('.section-home-hero')
 
-heroes.forEach((item, index) => {
 
- var heroani = gsap.timeline({
+ var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
-    trigger: item,
+    trigger: ".home-hero_component",
     start: "top top",
     end: "bottom top", 
-    scrub: true,
-    pin: ".section-pin",
+   
+  scrub: true,
+    pin: ".section-home-hero",
     pinSpacing: false,
   //  toggleActions: "restart none none none"
-   // toggleActions: "restart reverse play reverse"
+    toggleActions: "restart reverse play reverse"
   }
 });
 
-heroani.to(".home-hero_video-wrap", { yPercent:0, autoAlpha:0.8, duration: 0.6 }, 0) 
-.to(".home-hero_head-wrap", { yPercent:30, rotate: 20,  duration: 0.6 }, 0) ;
-});
+tlout.to(".home-hero_video-wrap", { yPercent:-30,  duration: 0.6 }, 0) 
+.to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
 
 
 
