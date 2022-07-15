@@ -1951,8 +1951,8 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
-  //  toggleActions: "restart none none none"
-    toggleActions: "restart reverse play reverse"
+    toggleActions: "restart none none none"
+  // toggleActions: "restart reverse play reverse"
   }
 });
 
