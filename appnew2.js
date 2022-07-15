@@ -1953,7 +1953,7 @@ heroes.forEach((item, index) => {
     pin: ".section-home-hero",
     pinSpacing: false,
   //  toggleActions: "restart none none none"
-    toggleActions: "restart reverse play reverse"
+   // toggleActions: "restart reverse play reverse"
   }
 });
 
