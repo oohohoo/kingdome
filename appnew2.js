@@ -1939,7 +1939,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 // PIN HERO **********************
 
 
-let heroes = gsap.utils.toArray('.home-hero_component')
+let heroes = gsap.utils.toArray('.home-hero_video-wrap')
 
 heroes.forEach((item, index) => {
 
