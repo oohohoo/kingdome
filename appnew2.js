@@ -2453,13 +2453,13 @@ function colorChanger() {
       scroller: ".smooth-scroll",
       start: "top 50%",
       onEnter: () =>
-      gsap.to("body", {
+      gsap.to(".padding-contact-vh", {
         backgroundColor: colorSection.dataset.bgcolor,
         color: colorSection.dataset.textcolor,
         overwrite: "auto" }),
 
       onLeaveBack: () =>
-      gsap.to("body", {
+      gsap.to(".padding-contact-vh", {
         backgroundColor: prevBg,
         color: prevText,
         overwrite: "auto" }) });
