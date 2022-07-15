@@ -1947,61 +1947,19 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
     trigger: ".home-hero_component",
     start: "top top",
     end: "bottom top", 
-    scrub: true,
+   
+  scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
-    onEnter: function () {
-      tlout.to(".home-hero_video-wrap", { yPercent:-30,  duration: 0.6 }, 0) 
-.to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
-    },
-    onLeave: function () {
-      tlout.to(".home-hero_video-wrap", { yPercent: 0,  duration: 0.6 }, 0) 
-      .to(".home-hero_head-wrap", { yPercent:0,   duration: 0.6 }, 0) 
-    },
-/*     onEnterBack: function () {
-      tlout.to(".home-hero_video-wrap", { yPercent:-10,  duration: 0.6 }, 0) 
-      .to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
-    },
-    onLeaveBack: function () {
-      tlout.to(".home-hero_video-wrap", { yPercent:20,  duration: 0.6 }, 0) 
-.to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
-    } */
-
-  //  toggleActions: "restart none none none"
+    toggleActions: "restart none none none"
   // toggleActions: "restart reverse play reverse"
   }
 });
 
+tlout.to(".home-hero_video-wrap", { yPercent:-30,  duration: 0.6 }, 0) 
+.to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
 
 
-
-
-// REVEAL //
-/* gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
-  ScrollTrigger.create({
-    scroller: ".smooth-scroll",
-    trigger: elem,
-    start: "top top",
-    end: "bottom top", 
-    scrub: true,
-    pin: ".section-home-hero",
-    pinSpacing: false,
- 
-    onEnter: function () {
-      gsap.fromTo(elem,{ y: 100, autoAlpha: 0 }, {duration: 1.25, y: 0, autoAlpha: 1, ease: "back", overwrite: "auto"});
-    },
-    onLeave: function () {
-      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-    },
-    onEnterBack: function () {
-      gsap.fromTo(elem, { y: -100, autoAlpha: 0 }, {duration: 1.25, y: 0, autoAlpha: 1, ease: "back", overwrite: "auto"});
-    },
-    onLeaveBack: function () {
-      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-    }
-  });
-});
- */
 
 
 
