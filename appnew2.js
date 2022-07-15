@@ -541,6 +541,7 @@ barba.hooks.afterLeave((data) => {
   killswiper.init();
   */
 
+ swiperSolo(); 
  swipersolo.destroy( true, true );
  console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
 
