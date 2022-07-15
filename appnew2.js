@@ -1973,7 +1973,7 @@ gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
     pinSpacing: false,
    /*  markers: true, */
     onEnter: function () {
-      gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, autoAlpha: 1, ease: "hop", overwrite: "auto"});
+      gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
     },
     onLeave: function () {
       gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
