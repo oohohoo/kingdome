@@ -498,7 +498,7 @@ TAB HIDE GAP
 ================================================================================
 */ 
 
-.tab-item::after {
+.mask-for-slider::after {
 	background-color: #e8e4e3;
 	display: block;
 	width: 1.25rem;
