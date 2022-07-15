@@ -1962,6 +1962,21 @@ tlout.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:.8, duration: 0.6 },
 
 
 
+var tlfull = gsap.timeline({
+  scrollTrigger: {
+    scroller: ".smooth-scroll",
+    trigger: ".home-hero_component",
+    start: "top top",
+    end: "bottom top", 
+   
+  scrub: true,
+    pin: ".section-pin,
+    pinSpacing: false,
+    toggleActions: "restart none none none"
+  // toggleActions: "restart reverse play reverse"
+  }
+});
+
 
 /* BACKUP
 var tlout = gsap.timeline({
