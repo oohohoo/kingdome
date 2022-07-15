@@ -1223,7 +1223,7 @@ if (mq.matches) {
     //animation: TL1,
     scroller: ".smooth-scroll",
     trigger: "#start",
-    start: "1% top",
+    start: "top top",
     end: "+=10000000",
     // toggleActions: "play none none reverse"
     onEnter: () => doSwitch(first, 1),
@@ -1286,7 +1286,7 @@ var doSwitchOut = function(shape, show){
 const ST = ScrollTrigger.create ({
   //animation: TL1,
   scroller: ".smooth-scroll",
-  trigger: "#start",
+  trigger: "#logotrig",
   start: "top top",
   end: "+=10000000",
   // toggleActions: "play none none reverse"
