@@ -483,12 +483,6 @@ function initPageTransitions() {
     
   });
 
-
-
-
-
-
-
   // do something after the transition finishes
   barba.hooks.after(() => {
     select('html').classList.remove('is-transitioning');
@@ -508,13 +502,13 @@ barba.hooks.afterLeave((data) => {
         window.scrollTo(0, 0);
    
   });
-   //kill scrolltrigger
+   //kill locomotive
   barba.hooks.beforeLeave(() => {
     if($('.smooth-scroll').length >0 ){
       locoScroll.destroy();
       console.log("LOCO DESTROY");
    }
-
+  // kill scrolltrigger
    if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
         trigger.kill()
@@ -522,55 +516,12 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
+  // kill scrolltrigger
 const swiper = new Swiper('.swiper-container', {});
 swiper.destroy();
 console.log("SWIPER KILLED!");
 
-/* var swiper = new Swiper(".swiper-container", {});
-swiper.destroy();
-console.log("SWIPERSOLO DESTROYED UGH"); */
-
-//const cursor = new MouseFollower();
-   // cursor.hide();
- //   console.log("CURSOR ODJEBI");
-
-/*  const swipersol = swiperSolo();
- swipersol.destroy(); 
- console.log("SWIPERSOLO DESTROYED");
- */
- 
-/*   if ( swipersolo !== undefined && swipersolo !== '' ) {
-      swipersolo.destroy(true, true);
-      swipersolo = undefined; // THIS WAS NEDEED
-      console.log("SWIPERSOLO DESTROYED+++++++++++++++++++++++");
-  } */
- 
-/*   const killswiper = swiperDestroy()
-  killswiper.init();
-  */
-
-/*   if (swiper.getAll().length > 0) {
-    swiper.getAll().forEach((trigger) => {
-        trigger.kill()
-        console.log("SWIPER UBIJJ");
-    });
-}; */
- 
-/* stop_swiper();
-console.log("SWIPER UBIJJ");
- */
-/*  swiperSolo(); 
- swipersolo.destroy( true, true );
- */
-
-/*  $(".card").click(function(){
-  // Here we define a variable that returns the swiper
-  const carousel = carouselProperties()
-  // Afte we define this variable we can finally call the init function
-  carousel.init();
-});
- */
-
+  // kill webflow
 Webflow.destroy();
 console.log("WEBFLOW DESTROY");
  
