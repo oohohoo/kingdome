@@ -1457,6 +1457,12 @@ BATCH VISIBLE ON MOBILE
 SLIDER CONTACT AUTO HEIGHT FIXED
 ================================================================================
 */
+
+.scrolldown {
+  bottom: 0.3rem;
+}
+
+
 /* 
  .slider [aria-hidden="true"] {
     height: 0px!important;
