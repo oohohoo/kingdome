@@ -1941,7 +1941,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 
 
- var tlout = gsap.timeline({
+/*  var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".home-hero_component",
@@ -1959,6 +1959,33 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 tlout.to(".home-hero_video-wrap", { yPercent:-30,  duration: 0.6 }, 0) 
 .to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
 
+ */
+
+// REVEAL //
+gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
+  ScrollTrigger.create({
+    scroller: ".smooth-scroll",
+    trigger: elem,
+    start: "top top",
+    end: "bottom top", 
+    scrub: true,
+    pin: ".section-home-hero",
+    pinSpacing: false,
+   /*  markers: true, */
+    onEnter: function () {
+      gsap.fromTo(elem, { y: 100, autoAlpha: 0 }, {duration: 1.25, y: 0, autoAlpha: 1, ease: "back", overwrite: "auto"});
+    },
+    onLeave: function () {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+    },
+    onEnterBack: function () {
+      gsap.fromTo(elem, { y: -100, autoAlpha: 0 }, {duration: 1.25, y: 0, autoAlpha: 1, ease: "back", overwrite: "auto"});
+    },
+    onLeaveBack: function () {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+    }
+  });
+});
 
 
 
