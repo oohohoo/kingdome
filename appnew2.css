@@ -577,11 +577,11 @@ BUTTONS FINAL
   width: 225%;
   height: 562.5px;
 }
-.butonio:active {
+/* .butonio:active {
   background-color: #d9d8d7;
   color: #0f3936;
   transition: color 0.3s ease-in-out;
-}
+} */
 
 
 /**/
