@@ -1191,13 +1191,16 @@ var switchlogosmall = document.querySelector(".close-wrap");
 
   
   
+var mq = window.matchMedia( "(max-width: 479px)" );
+if (mq.matches) {
+// MOBILE
   var show =1;
   var doSwitch = function(shape, show){
     var TL1 = gsap.timeline({ defaults: {duration: 0.5, overwrite: 'auto', force3D:false, ease: "expo.inOut"} })
     .to('#switch', {autoAlpha: show},0 )
     .to('#start', {morphSVG:shape},0 )
     .to(".header_znak", { scale: 0.7, yPercent: -36, transformOrigin: 'center center'}, 0) 
-  .to(".h-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem'}, 0) 
+  .to(".h-red-flag",  {width:'3rem', height:'3rem', rotate: 360, top: '0.5rem'}, 0) 
   .to(".text-block",  {yPercent:30, autoAlpha:0}, 0) 
   
     
@@ -1251,6 +1254,78 @@ var switchlogosmall = document.querySelector(".close-wrap");
     timesClicked++;
   };  
  
+}
+else {
+// DESKTOP
+
+var show =1;
+var doSwitch = function(shape, show){
+  var TL1 = gsap.timeline({ defaults: {duration: 0.5, overwrite: 'auto', force3D:false, ease: "expo.inOut"} })
+  .to('#switch', {autoAlpha: show},0 )
+  .to('#start', {morphSVG:shape},0 )
+  .to(".header_znak", { scale: 0.7, yPercent: -36, transformOrigin: 'center center'}, 0) 
+.to(".h-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem'}, 0) 
+.to(".text-block",  {yPercent:30, autoAlpha:0}, 0) 
+
+  
+  return TL1;
+
+}
+var doSwitchOut = function(shape, show){
+  var TL2 = gsap.timeline({ defaults: {duration: 0.5, overwrite: 'auto', force3D:false, ease: "expo.inOut"} })
+  .to('#switch', {autoAlpha: show},0 )
+  .to('#start', {morphSVG:shape},0)
+   .to(".header_znak", { scale: 1, yPercent: 0, transformOrigin: 'center center'}, 0) 
+ .to(".h-red-flag",  {width:'6rem', height:'9rem', top: '0rem'}, 0) 
+ .to(".text-block",  {yPercent:0, autoAlpha:1}, 0)
+
+  return TL2;
+
+}
+
+const ST = ScrollTrigger.create ({
+  //animation: TL1,
+  scroller: ".smooth-scroll",
+  trigger: "#start",
+  start: "top top",
+  end: "+=10000000",
+  // toggleActions: "play none none reverse"
+  onEnter: () => doSwitch(first, 1),
+  onLeaveBack: () => doSwitchOut(start, 0),
+});
+// switch on every click ======
+var timesClicked = 2;
+
+switchlogobig.onclick = function() {
+  if (timesClicked%2==0) {
+    doSwitch(second, 1); 
+    console.log("Clicked OPEN");
+  } else {
+   doSwitchOut(second, 1);
+   console.log("Played OPEN ELSE");
+  }
+  timesClicked++;
+};  
+
+switchlogosmall.onclick = function() {
+  if (timesClicked%2==0) {
+    doSwitch(second, 1);
+    console.log("Clicked CLOSED");
+  } else {
+    doSwitchOut(second, 1);
+    console.log("Played CLOSED ELSE");
+  }
+  timesClicked++;
+};  
+
+
+
+}   
+
+
+
+
+
 
  
 /*   gsap.timeline({
