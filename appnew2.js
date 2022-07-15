@@ -1962,41 +1962,6 @@ tlout.to(".home-hero_video-wrap", { yPercent:-30,  duration: 0.6 }, 0)
  */
 
 // REVEAL //
-/* gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
-  ScrollTrigger.create({
-    scroller: ".smooth-scroll",
-    trigger: elem,
-    start: "top top",
-    end: "bottom top", 
-    scrub: true,
-    pin: ".section-home-hero",
-    pinSpacing: false,
- 
-    onEnter: function () {
-      gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
-    },
-    onLeave: function () {
-      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-    },
-    onEnterBack: function () {
-      gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, autoAlpha: 1, ease: "hop", overwrite: "auto"});
-    },
-    onLeaveBack: function () {
-      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-    }
-  });
-});
- */
-
-// REVEAL //
-
-let heroes = gsap.utils.toArray('.section-home-hero"')
-
-heroes.forEach((item, index) => {
-
-
-
-
 gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
   ScrollTrigger.create({
     scroller: ".smooth-scroll",
@@ -2008,24 +1973,20 @@ gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
     pinSpacing: false,
    /*  markers: true, */
     onEnter: function () {
-     // gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
-      gsap.to(".home-hero_video-wrap", { yPercent:-30,  duration: 0.6,ease: "hop", overwrite: "auto" }) 
-
+      gsap.fromTo(".home-hero_video-wrap", { autoAlpha: 0 }, {duration: 1.25, rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
     },
     onLeave: function () {
-      gsap.to(".home-hero_video-wrap", { yPercent:0,  duration: 0.6, ease: "hop", overwrite: "auto" }) 
-     // gsap.fromTo(elem, { autoAlpha: 1, rotate: 30 }, { autoAlpha: 0, rotate: 0, overwrite: "auto" });
+      gsap.fromTo(".home-hero_video-wrap", { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
     },
     onEnterBack: function () {
-      gsap.fromTo(elem, { autoAlpha: 0, rotate: 0 }, {duration: 1.25,rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
+      gsap.fromTo(".home-hero_video-wrap", { autoAlpha: 0 }, {duration: 1.25, autoAlpha: 1, ease: "hop", overwrite: "auto"});
     },
     onLeaveBack: function () {
-      gsap.fromTo(elem, { autoAlpha: 1,rotate: 30}, { autoAlpha: 0, rotate: 0, overwrite: "auto" });
+      gsap.fromTo(".home-hero_video-wrap", { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
     }
   });
 });
 
-});
 
 
 
