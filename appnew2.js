@@ -1877,7 +1877,7 @@ setTimeout(() => {
       cursor.removeStick();
   });
   */
-  }, 100);
+  }, 1000);
 
   
 
