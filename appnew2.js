@@ -1950,7 +1950,7 @@ heroes.forEach((item, index) => {
     start: "top top",
     end: "bottom top", 
     scrub: true,
-    pin: ".section-home-hero",
+    pin: ".home-fs-video-component",
     pinSpacing: false,
   //  toggleActions: "restart none none none"
     toggleActions: "restart reverse play reverse"
