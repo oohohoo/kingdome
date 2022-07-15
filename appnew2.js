@@ -1988,6 +1988,43 @@ gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
 });
 
 
+// REVEAL //
+
+let heroes = gsap.utils.toArray('.section-home-hero"')
+
+heroes.forEach((item, index) => {
+
+
+
+
+gsap.utils.toArray(".section-home-hero").forEach(function (elem) {
+  ScrollTrigger.create({
+    scroller: ".smooth-scroll",
+    trigger: elem,
+    start: "top top",
+    end: "bottom top", 
+    scrub: true,
+    pin: ".section-home-hero",
+    pinSpacing: false,
+   /*  markers: true, */
+    onEnter: function () {
+      gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, rotate: 30, autoAlpha: 1, ease: "hop", overwrite: "auto"});
+    },
+    onLeave: function () {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, rotate: -30, overwrite: "auto" });
+    },
+    onEnterBack: function () {
+      gsap.fromTo(elem, { autoAlpha: 0 }, {duration: 1.25, autoAlpha: 1, ease: "hop", overwrite: "auto"});
+    },
+    onLeaveBack: function () {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+    }
+  });
+});
+
+});
+
+
 
 
 /* BACKUP
