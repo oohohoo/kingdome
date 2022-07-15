@@ -1771,9 +1771,8 @@ function swiperSolo() {
 		},
 	});
 
-function swiperDestroy() {
   swipersolo.destroy();
-} 
+
 
 
 }
