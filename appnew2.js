@@ -531,12 +531,12 @@ barba.hooks.afterLeave((data) => {
  console.log("SWIPERSOLO DESTROYED");
  */
  function deleteSwiper() {
-  if ( swiper !== undefined && swiper !== '' ) {
+  if ( swipersolo !== undefined && swipersolo !== '' ) {
       swipersolo.destroy(true, true);
-      swiper = undefined; // THIS WAS NEDEED
+      swipersolo = undefined; // THIS WAS NEDEED
       console.log("SWIPERSOLO DESTROYED");
   }
-  };  
+  };r  
   deleteSwiper();
 
  $(".card").click(function(){
