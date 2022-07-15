@@ -1938,7 +1938,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 // PIN HERO **********************
 
-/*  var tlout = gsap.timeline({
+ var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".home-hero_component",
@@ -1955,7 +1955,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 tlout.to(".home-hero_video-wrap", { yPercent:-20,  duration: 0.8 }, 0) 
 .to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
- */
+
 
 
 
