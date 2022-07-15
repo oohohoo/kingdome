@@ -549,9 +549,65 @@ barba.hooks.afterLeave((data) => {
         console.log("SWIPER UBIJJ");
     });
 }; */
- 
-stop_swiper();
-console.log("SWIPER UBIJJ");
+var swiper = new Swiper(".swiper-container-solo", {
+  loopedSlides: 6,
+  loop: true,
+  spaceBetween: 35,
+  //slidesPerView: 1.2,
+  //	freeMode: true,
+  grabCursor: true,
+  //	mousewheel: false,
+
+  /*  autoplay: {
+   delay: 3000,
+disableOnInteraction: false,
+ }, */
+   resistanceRatio: 4,
+  /*longSwipes: true,
+  longSwipesRatio: 0.5, */
+  //  touchRatio:5,
+  //loopFillGroupWithBlank: false,
+  // paginationClickable: true,
+  // mousewheelControl: true,
+  //	parallax: true,
+  preloadImages: true,
+  //updateOnImagesReady: true,
+  // centeredSlides: true,
+  // slidesOffsetBefore: 100,
+  speed: 1000,
+  breakpoints: {
+    400: {
+      spaceBetween: 20,
+      //  loopedSlides: 3,
+      slidesPerView: 1.1,
+    },
+
+    /* 	
+    1e3: {
+      loopedSlides: 3,
+      spaceBetween: 24,
+      slidesPerView: 1.1,
+    },*/
+
+    700: {
+      spaceBetween: 34,
+      //  loopedSlides: 3,
+      slidesPerView: 1.2,
+    },
+    1024: {
+      spaceBetween: 40,
+      //  loopedSlides: 3,
+      slidesPerView: 1.2,
+    },
+    1200: {
+      spaceBetween: 35,
+      slidesPerView: 2.2,
+    },
+  },
+});
+
+swiper.destroy();
+console.log("SWIPER UBIJJJJJ");
 
 /*  swiperSolo(); 
  swipersolo.destroy( true, true );
@@ -1728,68 +1784,12 @@ SWIPER PROJECT SOLO
 */
 
 function swiperSolo() {
-	var swiper = new Swiper(".swiper-container-solo", {
-		loopedSlides: 6,
-		loop: true,
-		spaceBetween: 35,
-		//slidesPerView: 1.2,
-		//	freeMode: true,
-		grabCursor: true,
-		//	mousewheel: false,
-
-		/*  autoplay: {
-     delay: 3000,
- disableOnInteraction: false,
-   }, */
-		 resistanceRatio: 4,
-		/*longSwipes: true,
-		longSwipesRatio: 0.5, */
-		//  touchRatio:5,
-		//loopFillGroupWithBlank: false,
-		// paginationClickable: true,
-		// mousewheelControl: true,
-		//	parallax: true,
-		preloadImages: true,
-		//updateOnImagesReady: true,
-		// centeredSlides: true,
-		// slidesOffsetBefore: 100,
-		speed: 1000,
-		breakpoints: {
-			400: {
-				spaceBetween: 20,
-				//  loopedSlides: 3,
-				slidesPerView: 1.1,
-			},
-
-			/* 	
-			1e3: {
-				loopedSlides: 3,
-				spaceBetween: 24,
-				slidesPerView: 1.1,
-			},*/
-
-			700: {
-				spaceBetween: 34,
-				//  loopedSlides: 3,
-				slidesPerView: 1.2,
-			},
-			1024: {
-				spaceBetween: 40,
-				//  loopedSlides: 3,
-				slidesPerView: 1.2,
-			},
-			1200: {
-				spaceBetween: 35,
-				slidesPerView: 2.2,
-			},
-		},
-	});
 
 
-  var stop_swiper = function() {
+  /* var stop_swiper = function() {
     swiper.destroy();
   };
-  
+   */
 
 }
 
