@@ -1879,9 +1879,9 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 });
 
 tlout.to(".home-hero_video-wrap", { yPercent:-20,  duration: 0.8 }, 0) 
-.to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
+.to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0.3) 
 
-// PIN 2
+/* // PIN 2
 var tldue = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
@@ -1899,7 +1899,7 @@ var tldue = gsap.timeline({
 
 tldue.to(".home-hero_video-wrap-due", { yPercent:-20,  duration: 0.8 }, 0) 
 .to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
-
+ */
 
 
 /* .fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 0}, {
