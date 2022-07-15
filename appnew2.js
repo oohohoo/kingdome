@@ -522,9 +522,9 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
-const swiper = new Swiper('.swiper-container-solo', {});
+const swiper = new Swiper('.swiper-container', {});
 swiper.destroy();
-console.log("SWIPER UBIJJJJJEMNNNNN JEBOMUMATER");
+console.log("SWIPER KILLED!");
 
 /* var swiper = new Swiper(".swiper-container", {});
 swiper.destroy();
@@ -1738,7 +1738,7 @@ SWIPER PROJECT SOLO
 */
 
 function swiperSolo() {
-	var swiper = new Swiper(".swiper-container-solo", {
+	var swiper = new Swiper(".swiper-container", {
 		loopedSlides: 6,
 		loop: true,
 		spaceBetween: 35,
@@ -1794,7 +1794,7 @@ function swiperSolo() {
 			},
 		},
 	});
-
+  console.log("SWIPER INIT");
 
   /* var stop_swiper = function() {
     swiper.destroy();
