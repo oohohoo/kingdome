@@ -1907,7 +1907,7 @@ HERO PANEL ANIMATIONS
 function heroPanelAnimation() {
 
 //gsap.set(".home-hero-video", {opacity:1, scale:1.2})
-gsap.set(".red-flag", {yPercent:100})
+gsap.set(".-red-flag", {yPercent:100})
 if (document.querySelector('.smooth-scroll')) {
  locoScroll.stop(); 
 
