@@ -1908,6 +1908,8 @@ function heroPanelAnimation() {
 
 //gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 gsap.set(".h-red-flag", {yPercent:-100})
+gsap.set(".scrolldown", {yPercent:-100, autoAlpha:0})
+
 if (document.querySelector('.smooth-scroll')) {
  locoScroll.stop(); 
 
@@ -1953,7 +1955,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 
 .to(".h-red-flag", {yPercent:0, rotate:0.0001, duration: 0.5}, 0.6)
-
+.to(".scrolldown", {yPercent:0, autoAlpha:1}, 0.7)
 
 
 // PIN HERO **********************
