@@ -227,7 +227,7 @@ const loaderInner = select('.inner-loader');
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
-    .set(" .h-red-flag" {yPercent: -100})
+    .set(" .h-red-flag", {yPercent: -100})
     .set(".logo-top, .logo-bottom, .loader-text", {yPercent: 100})
    
     
