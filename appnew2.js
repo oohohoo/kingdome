@@ -924,7 +924,7 @@ const closemenu = document.getElementById('close3d'); */
 //const menuhover = document.getElementById('menuhover');
 
 
-
+/* NO SCROLL WHEN FS NAV OPEN */
 
 window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
@@ -995,7 +995,6 @@ gsap.set(".iframe-wrapper", {display:"none"})
  //gsap.set(".close, .fs-nav-item, .sublink-wrapper, .fadein", {autoAlpha:0})
 
  //gsap.set(".line-wrapper", {yPercent:100})
-
 
 
 // --- SHOW
@@ -1510,6 +1509,27 @@ function headerHide() {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
   });
+
+
+const closenav = document.getElementById('open3d');
+
+// OPEN CLOSE FUNCTION
+closenav.addEventListener("click", () => {
+  showAnim.reverse();
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 /*
