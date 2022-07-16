@@ -1398,7 +1398,7 @@ CUBERTO CURSOR
   transform: scale(0) rotate(10deg);
   opacity: 0;
   color: #0f3936;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 20px;
   text-align: center;
   transition: opacity .4s, transform .3s
