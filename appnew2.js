@@ -1932,7 +1932,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   rotateZ: 0,
   autoAlpha:1, 
   ease:"hop",
-   onComplete: locoscrollstart();,  
+   onComplete:  () => locoscrollstart()
    
   //ease: "hop",
   stagger: {
@@ -1942,8 +1942,12 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 }, 0)
 
 
-
-
+/* const tl = gsap.timeline({defaults: {duration: 0.85,ease: 'hop'},
+  // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
+    onComplete: () => initContent()
+  });
+  tl
+ */
 
 
 
