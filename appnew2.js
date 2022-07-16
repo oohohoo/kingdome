@@ -217,16 +217,8 @@ function initLoader() {
     onComplete: () => initContent()
   });
 
-  //const image = select('.loader-img-img');
- ///const mask = select('.loader__image--mask');
   const lines = selectAll('.loader__title--mask');
   const loaderContent = select('.loader__content');
-
-  /*
-  const fadeintxt = select('.home-hero-heading-wrapper');
-  const txtdonji = select('.txtdonji');
-  const video = select('.aspect-video');
-*/
 const loader = select('.loader');
 const loaderInner = select('.inner-loader');
 /* const progress = select('.progress'); */
@@ -235,7 +227,9 @@ const loaderInner = select('.inner-loader');
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
+    .set(" .h-red-flag" {yPercent: -100})
     .set(".logo-top, .logo-bottom, .loader-text", {yPercent: 100})
+   
     
     //.set(".main", {y: 150})
 
@@ -246,8 +240,7 @@ const loaderInner = select('.inner-loader');
      .addLabel('revealImage')
 
      .to(".h-red-flag", {yPercent:0, rotate:0.0001, duration: 0.5}, 0.6)
- // .to(".imgg", {yPercent: 0})
- //  .to(".txt", {yPercent: 0}) 
+
 
 
   // LOADER OUT
@@ -258,13 +251,11 @@ const loaderInner = select('.inner-loader');
   tlLoaderOut
   
   .to(loaderInner, {scaleY:0, duration: 1.25, transformOrigin: 'top'})
-   /*  .to(lines, {yPercent: -500, stagger: 0.2}, 0) */
+
     .to([loader, loaderContent], {yPercent: -100}, 0)
-    //.to(fadeintxt, {autoAlpha: 0, ease: 'power1.inOut'}, 0)
-    //.to(".aspect-video", { scale:1, duration: 1.5, ease:'expo.inOut'}, "+=0.2")
    .to(".hamby", {autoAlpha:1, stagger: 0.12, ease: "expo.inOut"}, "<")
-    //.from(".header-red-flag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
-   // .to(".fake-video", { yPercent:-1000, duration: 0.2}, "<0.25")
+    //.to(".h-red-flag", { yPercent:-100, duration: 1, ease:'expo.inOut'}, "<0.25")
+
     
    // .to('.main', {y: 0}, 0);
 
@@ -1903,7 +1894,7 @@ HERO PANEL ANIMATIONS
 function heroPanelAnimation() {
 
 //gsap.set(".home-hero-video", {opacity:1, scale:1.2})
-gsap.set(".h-red-flag", {yPercent:-100})
+
 gsap.set(".scrolldown", {yPercent:-100, autoAlpha:0})
 
 if (document.querySelector('.smooth-scroll')) {
