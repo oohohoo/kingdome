@@ -312,7 +312,7 @@ function initContent() {
 		},
 		home: function () {
       
-			logoTransformOnScroll();
+		//	logoTransformOnScroll();
       heroPanelAnimation();
 			startStopVideo();
 			swiperSolo();
@@ -343,6 +343,7 @@ function initContent() {
 		contact: function () {
       scrollToSlide();
       colorChanger();
+      logoTransformOnScroll();
 			//huwebflowInteractions();
      // contactScroll();
      
