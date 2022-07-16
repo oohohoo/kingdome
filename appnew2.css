@@ -1144,7 +1144,7 @@ TEXT ON DARK BACK
   transition-property: color, background-color;
 } 
 
-.w--current {
+.w--current:after {
   background-color: transparent;
   -webkit-transition: all 0.1s ease;
   -o-transition: all 0.1s ease;
