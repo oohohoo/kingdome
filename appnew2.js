@@ -1011,6 +1011,11 @@ gsap.set(".iframe-wrapper", {display:"block"})
   
       .to(".navdark", {autoAlpha:0}, "<")
 
+
+     
+
+
+
           
   // IMAGE CLIP
      .fromTo(".clip", {
@@ -1044,6 +1049,16 @@ gsap.set(".iframe-wrapper", {display:"block"})
     //.set(".iframe-wrapper", {display:"none"}, "<")
     
 }
+
+const closenav = document.getElementById('open3d');
+
+// OPEN CLOSE FUNCTION
+closenav.addEventListener("click", () => {
+  showAnim.reverse();
+
+});
+
+
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
@@ -1509,25 +1524,6 @@ function headerHide() {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
   });
-
-
-const closenav = document.getElementById('open3d');
-
-// OPEN CLOSE FUNCTION
-closenav.addEventListener("click", () => {
-  showAnim.reverse();
-
-});
-
-
-
-
-
-
-
-
-
-
 
 
 }
