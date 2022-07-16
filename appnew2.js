@@ -587,7 +587,7 @@ BARBA VIEWS
 		{
 			namespace: "howwework",
 			beforeEnter(data) {
-		//		akapowPinned();
+				akapowPinned();
 				logoMarquee();
 			},
 		},
