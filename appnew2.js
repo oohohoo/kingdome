@@ -516,12 +516,15 @@ barba.hooks.afterLeave((data) => {
     });
 };
 
-  // kill scrolltrigger
+
+  // kill SWIPER
 /* const swiper = new Swiper('.swiper-container', {});
 swiper.destroy();
 console.log("SWIPER KILLED!");
  */
-  // kill webflow
+
+
+// kill webflow
 /* Webflow.destroy();
 console.log("WEBFLOW DESTROY"); */
  
@@ -535,10 +538,7 @@ console.log("WEBFLOW DESTROY"); */
 // SAKRIJ MENI PRIJE ULASKA
    gsap.set(".xnav", {scaleY: 0})
    console.log("--------MENU X SCALE");
-//DESTROY CURSOR PRIJE ULASKA
-const cursor = new MouseFollower();
-  cursor.destroy();
-   console.log("--------CURSOR DESTROY ĆAO");  
+
 
 
    });
