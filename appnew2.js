@@ -1907,8 +1907,16 @@ if (document.querySelector('.smooth-scroll')) {
 
 console.log("LOCO STOPPED");
 
+const locoscrollstart = () => {
+ 
+}
+
+function locoscrollstart () {
+  locoScroll.start(); 
+  console.log("LOCO STARTED");
 
 
+}
 
 var tlin = gsap.timeline({});
 
@@ -1926,7 +1934,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   rotateZ: 0,
   autoAlpha:1, 
   ease:"hop",
-   onComplete: locoScroll.start(); 
+   onComplete: locoscrollstart();  
    
   //ease: "hop",
   stagger: {
@@ -1947,9 +1955,6 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 // PIN HERO **********************
 
-var locoscrollstart = () => {
-  locoScroll.start(); 
-}
 
 
 
