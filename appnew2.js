@@ -239,7 +239,7 @@ const loaderInner = select('.inner-loader');
      .to(".loader-text", {yPercent:0}, 0.4)
      .addLabel('revealImage')
 
-     .to(".h-red-flag", {yPercent:0, duration: 0.5, delay:2}, "+=0.5")
+     .to(".h-red-flag", {yPercent:0, duration: 0.5, rotate:360}, "revealImage+=0.5")
 
 
 
