@@ -1145,7 +1145,7 @@ TEXT ON DARK BACK
 } 
 
 .w--current {
-  background-color: transparent;
+  background-color: transparent!important;
 }
 
 
