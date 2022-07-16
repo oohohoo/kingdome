@@ -601,7 +601,7 @@ BARBA VIEWS
 			namespace: "howwework",
 			beforeEnter(data) {
 		//		akapowPinned();
-			//	logoMarquee();
+				logoMarquee();
 			},
 		},
 		{
