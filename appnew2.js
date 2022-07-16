@@ -494,7 +494,7 @@ barba.hooks.afterLeave((data) => {
   var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
   var bodyClasses = $(response).filter('notbody').attr('class')
   $("body").attr("class", bodyClasses);
-  //  console.log("BODY CLASSES UPDATED");
+    console.log("BODY CLASSES UPDATED");
 });
 
  // scroll to the top of the page
