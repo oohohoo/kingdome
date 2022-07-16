@@ -1192,8 +1192,7 @@ background-color: greenyellow!important;
 } */
 
 .w--current.navcolor {
-  color: #ff0000;
-  background-color: greenyellow!important;
+  background-color: transparent!important;
 
 }
 
