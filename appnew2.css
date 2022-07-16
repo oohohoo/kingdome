@@ -1133,13 +1133,13 @@ transition: color 0.8s ease;
 
 .header.navcolor {
   transition: all 1s ease;
-  transition-delay: 1s;
+  transition-delay: 2s;
 
 }
-.header {
+/* .header {
   transition: all 1s ease;
   transition-delay: 1s;
-}
+} */
 
 .hamby-line.navcolor {
   background-color: #0f3936;
