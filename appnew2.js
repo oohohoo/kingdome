@@ -1959,10 +1959,10 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 
 
- var tlout = gsap.timeline({
+/*  var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
-    trigger: ".section-home-hero",
+    trigger: ".home-hero_component",
     start: "top top",
     end: "bottom top", 
    
@@ -1977,7 +1977,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 tlout.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:.8, duration: 0.6 }, 0)
 .to(".home-hero_head-wrap", { yPercent:30, duration: 0.6}, 0) 
-
+ */
 
 
 /* PINANJE OSTALIH*/
