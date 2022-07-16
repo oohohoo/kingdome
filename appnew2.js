@@ -1939,9 +1939,9 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
     each: 0.025,
     from: "left"
   }
-  onComplete:  () => locoscrollstart()
+  
 
-}, 0)
+},onComplete:  () => locoScroll.start() 0)
 
 
 /* const tl = gsap.timeline({defaults: {duration: 0.85,ease: 'hop'},
