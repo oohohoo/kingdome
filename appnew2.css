@@ -1120,16 +1120,16 @@ TEXT ON DARK BACK
 
  .header {
   background-color: transparent;
-  transition: all 0.5s ease;
+  transition: all 5s ease;
   transition-delay: 1s;
   transition-property: color, background-color;
 }
 
-.header.navcolor {
+/* .header.navcolor {
   transition: all 0.5s ease;
   transition-delay: 1s;
   transition-property: color, background-color;
-}
+} */
 
 /*
   .navcolor {
