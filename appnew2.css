@@ -1122,7 +1122,7 @@ TEXT ON DARK BACK
   background-color: transparent;
   transition: all 1s ease;
   transition-delay: 0.3s;
-  transition-property: all;
+  transition-property: background-color;
 }
 /*
   .navcolor {
