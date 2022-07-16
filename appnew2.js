@@ -1016,7 +1016,7 @@ gsap.set(".iframe-wrapper", {display:"block"})
      .fromTo(".clip", {
       clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
       webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-      duration: 2.5,
+      duration: 2,
     },
     {         
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
