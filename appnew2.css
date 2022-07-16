@@ -1181,6 +1181,17 @@ transition: color 0.8s ease;
 }
 
 
+/* .navcolorcur  {
+color: #ff0000;
+background-color: greenyellow!important;
+} */
+
+.header.navcolor {
+  color: #ff0000;
+  background-color: greenyellow!important;
+
+}
+
 
 
 /* .header {
