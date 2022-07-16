@@ -1907,9 +1907,7 @@ if (document.querySelector('.smooth-scroll')) {
 
 console.log("LOCO STOPPED");
 
-const locoscrollstart = () => {
- 
-}
+
 
 function locoscrollstart () {
   locoScroll.start(); 
