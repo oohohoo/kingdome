@@ -1498,14 +1498,14 @@ function headerHide() {
   });
 
  
-  if (document.querySelector(':not(.page-product-single)')) {
+ /*  if (document.querySelector(':not(.page-product-single)')) {
   const closenav = document.getElementById('open3d');
   // OPEN CLOSE FUNCTION
   closenav.addEventListener("click", () => {
     showAnim.timeScale(3).reverse();
   });
 
-}
+} */
 }
 
 /*
