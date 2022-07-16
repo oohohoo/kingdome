@@ -1134,7 +1134,7 @@ transition: color 0.8s ease;
 .header.navcolor {
   transition: all 1s ease;
   transition-delay: 2s;
-
+  transition-property: background-color;
 }
 /* .header {
   transition: all 1s ease;
