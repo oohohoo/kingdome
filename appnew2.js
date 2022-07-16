@@ -509,12 +509,12 @@ barba.hooks.afterLeave((data) => {
       console.log("LOCO DESTROY");
    }
   // kill scrolltrigger
-   if (ScrollTrigger.getAll().length > 0) {
+ /*   if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
         trigger.kill()
         console.log("SCROLLTRIGGER DESTROY");
     });
-};
+}; */
 
   // kill scrolltrigger
 const swiper = new Swiper('.swiper-container', {});
