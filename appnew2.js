@@ -2095,6 +2095,7 @@ function productObserver() {
     //mousewheelControl: true,
     mousewheelControl: 1,
     preventClicks: true,
+    resistance: false,
     mousewheel: true,
     pagination: {
       el: sliderCounter,
