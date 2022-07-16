@@ -1497,6 +1497,17 @@ function headerHide() {
     }
   });
 
+  const box = document.getElementById(body);
+
+  if (!box.classList.contains('page-product-single')) {
+    console.log('Element does NOT have class');
+  } else {
+    console.log('Element has class');
+  }
+
+
+
+/* 
  
  if (document.querySelector('div:not(.page-product-single)')) {
   const closenav = document.getElementById('open3d');
@@ -1506,7 +1517,7 @@ function headerHide() {
   });
 
 } 
-
+ */
 
 }
 
