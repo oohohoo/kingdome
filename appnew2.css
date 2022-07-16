@@ -1131,7 +1131,7 @@ transition: color 0.8s ease;
  */
 }
 
-.header {
+.header.navcolor {
   transition: background-color 1s ease;
 
 }
