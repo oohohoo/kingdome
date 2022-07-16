@@ -1157,6 +1157,19 @@ TEXT ON DARK BACK
   transition-property: color;
 }
 
+/* KAD PREĐE PREKO HEROA*/
+.w--current.navcolor {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
+} 
+
 
 /*
   .navcolor {
@@ -1170,14 +1183,6 @@ TEXT ON DARK BACK
 .navcolor {
 color: #0f3936;
 background-color: #e8e4e3;
-/* -webkit-transition: all 0.2s ease;
--ms-transition: all 0.2s ease;
-transition: all 0.2s ease; */
-/* transition-delay: 0.5s; */
-/* 
-transition: background-color 0.8s ease;
-transition: color 0.8s ease;
- */
 }
 
 
@@ -1186,7 +1191,7 @@ color: #ff0000;
 background-color: greenyellow!important;
 } */
 
-.header.navcolor {
+.w--current.navcolor {
   color: #ff0000;
   background-color: greenyellow!important;
 
