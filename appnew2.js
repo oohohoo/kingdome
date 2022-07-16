@@ -1913,10 +1913,6 @@ if (document.querySelector('.smooth-scroll')) {
 
 console.log("LOCO STOPPED");
 
-const locoscrollstart = () => {
- 
-}
-
  
 
   const runOnComplete = () => {
