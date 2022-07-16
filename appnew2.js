@@ -1926,7 +1926,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   rotateZ: 0,
   autoAlpha:1, 
   ease:"hop",
-    /* onComplete: function(){ locoScroll.start(); console.log("LOCO STARTED");},  */ 
+   onComplete: locoScroll.start(); console.log("LOCO STARTED AGAIN");,  
    
   //ease: "hop",
   stagger: {
@@ -1969,7 +1969,7 @@ var locoscrollstart = () => {
 });
 
 tlout.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:.8, duration: 0.6 }, 0)
-.to(".home-hero_head-wrap", { yPercent:30, duration: 0.6,  onComplete: function(){ locoScroll.start(); console.log("LOCO STARTED AGAIN");}, }, 0) 
+.to(".home-hero_head-wrap", { yPercent:30, duration: 0.6}, 0) 
 
 
 
