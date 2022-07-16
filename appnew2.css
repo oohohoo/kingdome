@@ -1132,12 +1132,13 @@ transition: color 0.8s ease;
 }
 
 .header.navcolor {
-  transition: background-color 5s ease;
+  transition: background-color 1s ease;
+  transition-delay: 1s;
 
 }
 .header {
-  transition: background-color 5s ease;
-
+  transition: background-color 1s ease;
+  transition-delay: 1s;
 }
 
 .hamby-line.navcolor {
