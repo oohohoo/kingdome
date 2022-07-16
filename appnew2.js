@@ -1907,13 +1907,15 @@ if (document.querySelector('.smooth-scroll')) {
 
 console.log("LOCO STOPPED");
 
+
+
+
 var tlin = gsap.timeline({});
 
 // gsap.set(".head-split", { autoAlpha: 1}, 0); 
 
-
- mySplitText = new SplitText(".head-split", {
-  type: "words, lines, chars", linesClass: "clip-text"
+mySplitText = new SplitText(".head-split", {
+ type: "words, lines, chars", linesClass: "clip-text"
 });
 
 
@@ -1924,7 +1926,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   rotateZ: 0,
   autoAlpha:1, 
   ease:"hop",
-  onComplete: function(){ locoScroll.start(); console.log("LOCO STARTED");},
+   onComplete: function(){ locoScroll.start(); console.log("LOCO STARTED");}, */
   //ease: "hop",
   stagger: {
     each: 0.025,
@@ -1937,12 +1939,16 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 
 
+
 //.fromTo(".red-logo", {yPercent:-100 }, {yPercent:0, rotate:0.0001, duration: 0.5}, "-=0.1")
 
 
 
 // PIN HERO **********************
 
+var locoscrollstart = () => {
+  locoScroll.start(); 
+}
 
 
 
@@ -1956,13 +1962,13 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
-    toggleActions: "restart none none none"
+        toggleActions: "restart none none none"
   // toggleActions: "restart reverse play reverse"
   }
 });
 
-tlout.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:.8, duration: 0.6 }, 0) 
-.to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
+tlout.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:.8, duration: 0.6 }, 0)
+.to(".home-hero_head-wrap", { yPercent:30, duration: 0.6, onComplete: locoscrollstart }, 0) 
 
 
 
