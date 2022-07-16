@@ -2116,7 +2116,7 @@ function success() {
   
  
   
-  tl.to(".buttonx, {
+  tl.to(".buttonx"," {
     autoAlpha: 1,
     duration: 0.6,
   }, 2.5)
