@@ -1009,7 +1009,7 @@ gsap.set(".iframe-wrapper", {display:"block"})
       .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
           {duration: 0.1, scaleY: 1},"<0.01")
   
-      .to(".navdark", {autoAlpha:0}, "<")
+    //  .to(".navdark", {autoAlpha:0}, "<")
 
           
   // IMAGE CLIP
@@ -1070,7 +1070,7 @@ function hide() {
 
 
 
-.to(".navdark", {autoAlpha:1}, "<")
+//.to(".navdark", {autoAlpha:1}, "<")
 
 .to(openbutt, {autoAlpha:1}, "<")
 		.to(closeclose, {autoAlpha:0}, 0)
