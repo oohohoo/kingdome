@@ -1145,7 +1145,16 @@ TEXT ON DARK BACK
 } 
 
 .w--current {
-  background-color: transparent!important;
+  background-color: transparent;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
 }
 
 
@@ -1171,6 +1180,10 @@ transition: color 0.8s ease;
  */
 }
 
+
+.navcolor-current  {
+color: #0f3936;
+}
 
 /* .header {
   transition: all 1s ease;
