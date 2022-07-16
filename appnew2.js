@@ -343,7 +343,6 @@ function initContent() {
 		contact: function () {
       scrollToSlide();
       colorChanger();
-      logoTransformOnScroll();
 			//huwebflowInteractions();
      // contactScroll();
      
@@ -491,10 +490,10 @@ function initPageTransitions() {
 
 barba.hooks.afterLeave((data) => {
   // Set <body> classes for "next" page
- /*  var nextHtml = data.next.html;
+  var nextHtml = data.next.html;
   var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
   var bodyClasses = $(response).filter('notbody').attr('class')
-  $("body").attr("class", bodyClasses); */
+  $("body").attr("class", bodyClasses);
   //  console.log("BODY CLASSES UPDATED");
 });
 
@@ -510,12 +509,12 @@ barba.hooks.afterLeave((data) => {
       console.log("LOCO DESTROY");
    }
   // kill scrolltrigger
-/*    if (ScrollTrigger.getAll().length > 0) {
+   if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
         trigger.kill()
         console.log("SCROLLTRIGGER DESTROY");
     });
-}; */
+};
 
   // kill scrolltrigger
 const swiper = new Swiper('.swiper-container', {});
