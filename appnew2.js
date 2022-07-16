@@ -1969,6 +1969,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
+    anticipatePin: 1,
     toggleActions: "restart none none none"
   // toggleActions: "restart reverse play reverse"
   }
@@ -1990,6 +1991,7 @@ var tlfull = gsap.timeline({
   scrub: true,
     pin: ".section-pin",
     pinSpacing: false,
+    anticipatePin: 1,
     toggleActions: "restart none none none"
   // toggleActions: "restart reverse play reverse"
   }
