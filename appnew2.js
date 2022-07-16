@@ -490,10 +490,10 @@ function initPageTransitions() {
 
 barba.hooks.afterLeave((data) => {
   // Set <body> classes for "next" page
-/*   var nextHtml = data.next.html;
+  var nextHtml = data.next.html;
   var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
   var bodyClasses = $(response).filter('notbody').attr('class')
-  $("body").attr("class", bodyClasses); */
+  $("body").attr("class", bodyClasses);
   //  console.log("BODY CLASSES UPDATED");
 });
 
@@ -517,10 +517,10 @@ barba.hooks.afterLeave((data) => {
 };
 
   // kill scrolltrigger
-const swiper = new Swiper('.swiper-container', {});
+/* const swiper = new Swiper('.swiper-container', {});
 swiper.destroy();
 console.log("SWIPER KILLED!");
-
+ */
   // kill webflow
 Webflow.destroy();
 console.log("WEBFLOW DESTROY");
