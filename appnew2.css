@@ -1183,6 +1183,7 @@ transition: color 0.8s ease;
 
 .w-current.navcolor  {
 color: #ff0000;
+background-color: greenyellow;
 }
 
 /* .header {
