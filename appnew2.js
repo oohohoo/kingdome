@@ -1011,15 +1011,6 @@ gsap.set(".iframe-wrapper", {display:"block"})
   
       .to(".navdark", {autoAlpha:0}, "<")
 
-
-const closenav = document.getElementById('open3d');
-// OPEN CLOSE FUNCTION
-closenav.addEventListener("click", () => {
-  showAnim.timeScale(2).reverse();
-});
-
-
-
           
   // IMAGE CLIP
      .fromTo(".clip", {
@@ -1519,6 +1510,11 @@ function headerHide() {
     }
   });
 
+  const closenav = document.getElementById('open3d');
+  // OPEN CLOSE FUNCTION
+  closenav.addEventListener("click", () => {
+    showAnim.timeScale(2).reverse();
+  });
 
 }
 
