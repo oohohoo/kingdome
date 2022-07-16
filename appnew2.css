@@ -1181,7 +1181,7 @@ transition: color 0.8s ease;
 }
 
 
-.navcolor-current  {
+.w-current.navcolor  {
 color: #ff0000;
 }
 
