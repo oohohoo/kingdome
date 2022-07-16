@@ -491,12 +491,12 @@ function initPageTransitions() {
 
 barba.hooks.afterLeave((data) => {
   // Set <body> classes for "next" page
-/*   var nextHtml = data.next.html;
+ /*  var nextHtml = data.next.html;
   var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
   var bodyClasses = $(response).filter('notbody').attr('class')
-  $("body").attr("class", bodyClasses);
+  $("body").attr("class", bodyClasses); */
   //  console.log("BODY CLASSES UPDATED");
-}); */
+});
 
  // scroll to the top of the page
   barba.hooks.enter(() => {
