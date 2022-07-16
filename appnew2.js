@@ -235,13 +235,7 @@ const loaderInner = select('.inner-loader');
   tlLoaderIn
 
     .set(loaderContent, {autoAlpha: 1})
- // .set(".txt", {yPercent: 100})
- //  .set(loaderInner, {scaleY:0})
- //.set(mask, {yPercent: 0})
     .set(".logo-top, .logo-bottom, .loader-text", {yPercent: 100})
- // .set(".hamby", {autoAlpha:0})
-   // .set(".aspect-video", {scale:2})
-    /* .set(fadeintxt, {autoAlpha: 0}) */
     
     //.set(".main", {y: 150})
 
@@ -251,6 +245,7 @@ const loaderInner = select('.inner-loader');
      .to(".loader-text", {yPercent:0}, 0.4)
      .addLabel('revealImage')
 
+     .to(".h-red-flag", {yPercent:0, rotate:0.0001, duration: 0.5}, 0.6)
  // .to(".imgg", {yPercent: 0})
  //  .to(".txt", {yPercent: 0}) 
 
@@ -455,6 +450,7 @@ function pageFadeOut({
   });
   tl
     .from(container, {autoAlpha:0}, 0);
+
   return tl;
 }
 
@@ -1949,7 +1945,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 }, 0)
 
 
-.to(".scrolldown", {yPercent:0, autoAlpha:1}, "<0.2")
+.to(".scrolldown", {yPercent:0, autoAlpha:1}, 0.7)
 
 
 // PIN HERO **********************
