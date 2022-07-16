@@ -1120,7 +1120,7 @@ TEXT ON DARK BACK
 /* KAD OSTANE PREKO HEROA*/
  .header {
   background-color: transparent;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
   transition-delay: 0s;
   transition-property: color, background-color;
 }
