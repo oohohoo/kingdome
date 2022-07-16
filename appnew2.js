@@ -522,8 +522,8 @@ swiper.destroy();
 console.log("SWIPER KILLED!");
  */
   // kill webflow
-Webflow.destroy();
-console.log("WEBFLOW DESTROY");
+/* Webflow.destroy();
+console.log("WEBFLOW DESTROY"); */
  
   });
   //init scrolltrigger
