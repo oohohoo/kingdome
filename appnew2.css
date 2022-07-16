@@ -1120,15 +1120,27 @@ TEXT ON DARK BACK
 /* KAD OSTANE PREKO HEROA*/
  .header {
   background-color: transparent;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
   transition: all 0.1s ease;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
   transition-property: color, background-color;
 }
 
 /* KAD PREĐE PREKO HEROA*/
  .header.navcolor {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
   transition-property: color, background-color;
 } 
 
@@ -1144,9 +1156,9 @@ TEXT ON DARK BACK
 .navcolor {
 color: #0f3936;
 background-color: #e8e4e3;
--webkit-transition: all 0.2s ease;
+/* -webkit-transition: all 0.2s ease;
 -ms-transition: all 0.2s ease;
-transition: all 0.2s ease;
+transition: all 0.2s ease; */
 /* transition-delay: 0.5s; */
 /* 
 transition: background-color 0.8s ease;
