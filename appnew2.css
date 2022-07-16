@@ -1131,6 +1131,11 @@ transition: color 0.8s ease;
  */
 }
 
+.header {
+  transition: background-color 1s ease;
+
+}
+
 .hamby-line.navcolor {
   background-color: #0f3936;
   -webkit-transition: all 0.1s ease;
@@ -1140,7 +1145,6 @@ transition: color 0.8s ease;
 }
 
 .header, .hamby-line, .hamby-line, .w--current  {
- 
 -webkit-transition: all 0.1s ease;
 -ms-transition: all 0.1s ease;
 transition: all 0.1s ease;
