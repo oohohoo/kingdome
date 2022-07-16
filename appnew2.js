@@ -2108,14 +2108,10 @@ SUCCESS
 */
 function success() {
 
- Í
   gsap.set(".buttonx", {autoAlpha:0})
   
-  
   var tl = gsap.timeline({})
-  
  
-  
   tl.to(".buttonx", {
     autoAlpha: 1,
     duration: 0.6,
