@@ -1497,6 +1497,7 @@ function headerHide() {
     yPercent: -100,
     paused: true,
     duration: 0.3,
+    delay:0.3,
     ease: "hop"
   }).progress(1);
   
