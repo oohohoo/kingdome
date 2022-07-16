@@ -2109,7 +2109,7 @@ SUCCESS
 function success() {
 
  Í
-  //gsap.set(".red-flag", {yPercent:100})
+  gsap.set(".buttonx", {autoAlpha:0})
   
   
   var tl = gsap.timeline({})
