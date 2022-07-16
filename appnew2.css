@@ -1117,11 +1117,11 @@ NAV IMAGE CLIP PATH
 TEXT ON DARK BACK
 ================================================================================
 */
-
+/* KAD OSTANE PREKO HEROA*/
  .header {
   background-color: transparent;
-  transition: all 5s ease;
-  transition-delay: 1s;
+  transition: all 0.2s ease;
+  transition-delay: 3s;
   transition-property: color, background-color;
 }
 
