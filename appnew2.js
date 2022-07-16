@@ -1907,14 +1907,18 @@ if (document.querySelector('.smooth-scroll')) {
 
 console.log("LOCO STOPPED");
 
-
-
-function locoscrollstart () {
-  locoScroll.start(); 
-  console.log("LOCO STARTED");
-
-
+const locoscrollstart = () => {
+ 
 }
+
+ 
+
+  const runOnComplete = () => {
+    locoScroll.start(); 
+    console.log("LOCO STARTEDDDD");
+  }
+
+
 
 var tlin = gsap.timeline({});
 
@@ -1932,24 +1936,17 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
   rotateZ: 0,
   autoAlpha:1, 
   ease:"hop",
-  
-   
   //ease: "hop",
+  onComplete: runOnComplete,
   stagger: {
     each: 0.025,
     from: "left"
   }
-  
-
-},onComplete:  () => locoScroll.start() 0)
+}, 0)
 
 
-/* const tl = gsap.timeline({defaults: {duration: 0.85,ease: 'hop'},
-  // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
-    onComplete: () => initContent()
-  });
-  tl
- */
+
+
 
 
 
