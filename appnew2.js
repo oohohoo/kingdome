@@ -1022,7 +1022,7 @@ gsap.set(".iframe-wrapper", {display:"block"})
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
       ease: "hop", transformOrigin: "bottom center",
-      },"-=0.2")
+      },"-=0.3")
      
 
 /* 	tl.fromTo(".nav-wrapper2", {height: "0%", transformOrigin: "top center"}, {duration: 0.1, height: "100%"})
