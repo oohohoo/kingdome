@@ -1949,13 +1949,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 }, 0)
 
 
-
-
-
-
-
-.to(".h-red-flag", {yPercent:0, rotate:0.0001, duration: 0.5}, 0.6)
-.to(".scrolldown", {yPercent:0, autoAlpha:1}, 0.7)
+.to(".scrolldown", {yPercent:0, autoAlpha:1}, "<0.2")
 
 
 // PIN HERO **********************
