@@ -1125,11 +1125,12 @@ TEXT ON DARK BACK
   transition-property: color, background-color;
 }
 
-/* .header.navcolor {
+/* KAD PREĐE PREKO HEROA*/
+ .header.navcolor {
   transition: all 0.5s ease;
   transition-delay: 1s;
   transition-property: color, background-color;
-} */
+} 
 
 /*
   .navcolor {
