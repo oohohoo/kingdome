@@ -369,7 +369,7 @@ function initContent() {
 	fadeInOnEnter();
 	cubertoCursor();
   disableScroll();
-  vhFix();
+  /* vhFix(); */
 
 	myscripts.init();
 
