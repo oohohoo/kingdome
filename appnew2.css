@@ -1163,8 +1163,8 @@ TEXT ON DARK BACK
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-transition-delay: 0s;
-  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
           transition-delay: 0s;
   -webkit-transition-property: color, background-color;
   -o-transition-property: color, background-color;
@@ -1187,19 +1187,6 @@ background-color: #e8e4e3;
 }
 
 
-/* .navcolorcur  {
-color: #ff0000;
-background-color: greenyellow!important;
-} */
-
-
-
-
-/* .header {
-  transition: all 1s ease;
-  transition-delay: 1s;
-} */
-
 .hamby-line.navcolor {
   background-color: #0f3936;
   -webkit-transition: all 0.1s ease;
@@ -1208,12 +1195,6 @@ background-color: greenyellow!important;
   /* transition-delay: 0.5s; */
 }
 
-.header, .hamby-line, .hamby-line, .w--current  {
-/* -webkit-transition: all 0.1s ease;
--ms-transition: all 0.1s ease;
-transition: all 0.1s ease; */
-/* transition-delay: 0.5s; */
-}
 
 .hamby-line.navcolor {
   background-color: #0f3936;
