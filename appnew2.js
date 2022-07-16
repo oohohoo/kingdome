@@ -1903,7 +1903,7 @@ function heroPanelAnimation() {
 //gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 //gsap.set(".red-flag", {yPercent:100})
 if (document.querySelector('.smooth-scroll')) {
-/* locoScroll.stop(); */
+locoScroll.stop(); 
 
 console.log("LOCO STOPPED");
 
@@ -1962,7 +1962,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 });
 
 tlout.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:.8, duration: 0.6 }, 0) 
-.to(".home-hero_head-wrap", { yPercent:30, duration: 0.6,  onComplete: function(){ locoScroll.start(); console.log("LOCO STARTED");}, 0) 
+.to(".home-hero_head-wrap", { yPercent:30, duration: 0.6,  onComplete: function(){ locoScroll.start(); console.log("LOCO STARTED");}, }, 0) 
 
 
 
