@@ -1524,7 +1524,7 @@ function productsTabs() {
   let activeTab = 0;
   let old = 0;
   let heights = [];
-  let dur = 0.2;
+  let dur = 0.3;
   let animation;
   
   for (let i = 0; i < targets.length; i++) {
@@ -1546,7 +1546,7 @@ function productsTabs() {
       if (animation && animation.isActive()) {
         animation.progress(1);
       }
-      animation = gsap.timeline({defaults:{duration:0.2}});
+      animation = gsap.timeline({defaults:{duration:0.3}});
       old = activeTab;
       activeTab = this.index;
       // animate bubble slider to clicked target
@@ -1561,7 +1561,7 @@ function productsTabs() {
       // resize article block to accommodate new content
       animation.to(".article-block", {height:heights[activeTab]});
       // slide in new article
-      animation.to(articles[activeTab], {duration: 0.2, zIndex:2, opacity:1, y:0, ease: "hop"}, "-=0.25");
+      animation.to(articles[activeTab], {duration: 0.3, zIndex:2, opacity:1, y:0, ease: "hop"}, "-=0.25");
     }
   }
     
