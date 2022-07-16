@@ -1981,7 +1981,7 @@ tlout.to(".home-hero_video-wrap", { yPercent:-30, autoAlpha:.8, duration: 0.6 },
 
 
 /* PINANJE OSTALIH*/
-var tlfull = gsap.timeline({
+/* var tlfull = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".section-pin",
@@ -1995,7 +1995,7 @@ var tlfull = gsap.timeline({
     toggleActions: "restart none none none"
   // toggleActions: "restart reverse play reverse"
   }
-});
+}); */
 //tlfull.to(".home-full-image-wrap", { autoAlpha:0, duration: 0.6 }, 0) 
 
 
