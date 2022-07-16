@@ -1121,7 +1121,7 @@ TEXT ON DARK BACK
  .header {
   background-color: transparent;
   transition: all 0.2s ease;
-  transition-delay: 0.2s;
+  transition-delay: 0s;
   transition-property: color, background-color;
 }
 
