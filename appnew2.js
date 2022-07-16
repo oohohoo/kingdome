@@ -1952,7 +1952,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", autoAlpha:0, yP
 
 
 
-.to(".h-red-flag", {yPercent:0, rotate:0.0001, duration: 0.5}, 0.6)
+.to(".h-red-flag", {yPercent:0, rotate:30, duration: 0.5}, 0.6)
 
 
 
