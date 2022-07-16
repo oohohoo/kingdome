@@ -2089,11 +2089,12 @@ function productObserver() {
     loop: true,
     effect: "slide",
     direction: "vertical", // put horizontal
-    speed: 800,
+    speed: 1000,
     //grabCursor: true,
     watchSlidesProgress: true, // turn off for horizontal
     //mousewheelControl: true,
     mousewheelControl: 1,
+    preventClicks: true,
     mousewheel: true,
     pagination: {
       el: sliderCounter,
