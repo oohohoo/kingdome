@@ -1497,7 +1497,9 @@ function headerHide() {
     }
   });
 
-  const box = document.getElementById(body);
+ 
+
+  const box = document.querySelector(body);
 
   if (!box.classList.contains('page-product-single')) {
     console.log('Element does NOT have class');
