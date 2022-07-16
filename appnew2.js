@@ -1012,7 +1012,11 @@ gsap.set(".iframe-wrapper", {display:"block"})
       .to(".navdark", {autoAlpha:0}, "<")
 
 
-     
+const closenav = document.getElementById('open3d');
+// OPEN CLOSE FUNCTION
+closenav.addEventListener("click", () => {
+  showAnim.timeScale(2).reverse();
+});
 
 
 
@@ -1049,16 +1053,6 @@ gsap.set(".iframe-wrapper", {display:"block"})
     //.set(".iframe-wrapper", {display:"none"}, "<")
     
 }
-
-const closenav = document.getElementById('open3d');
-
-// OPEN CLOSE FUNCTION
-closenav.addEventListener("click", () => {
-  showAnim.reverse();
-
-});
-
-
 // --- HIDE
 function hide() {
 	let tl = gsap.timeline();
