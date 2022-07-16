@@ -1122,13 +1122,13 @@ TEXT ON DARK BACK
   background-color: transparent;
   transition: all 0.2s ease;
   transition-delay: 1s;
-  transition-property: all;
+  transition-property: color;
 }
 
 .header.navcolor {
   transition: all 0.2s ease;
   transition-delay: 1s;
-  transition-property: all;
+  transition-property: color;
 }
 
 /*
