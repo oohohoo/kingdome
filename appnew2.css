@@ -1145,7 +1145,7 @@ TEXT ON DARK BACK
 } 
 
 .w--current:after {
-  background-color: transparent;
+  background-color: red;
   -webkit-transition: all 0.1s ease;
   -o-transition: all 0.1s ease;
   transition: all 0.1s ease;
