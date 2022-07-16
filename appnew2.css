@@ -1144,6 +1144,11 @@ TEXT ON DARK BACK
   transition-property: color, background-color;
 } 
 
+.w--current {
+  background-color: transparent;
+}
+
+
 /*
   .navcolor {
   color: #0f3936;
