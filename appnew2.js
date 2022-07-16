@@ -2108,7 +2108,7 @@ SUCCESS
 */
 function success() {
 
-  gsap.set(".success-button", {autoAlpha: 0})
+  gsap.set(".buttonx", {autoAlpha: 0})
   //gsap.set(".red-flag", {yPercent:100})
   
   
@@ -2116,7 +2116,7 @@ function success() {
   
  
   
-  tl.to(".success-button", {
+  tl.to(".buttonx, {
     autoAlpha: 1,
     duration: 0.6,
   }, 2.5)
