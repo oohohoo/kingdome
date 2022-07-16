@@ -505,7 +505,7 @@ barba.hooks.afterLeave((data) => {
   });
    //kill locomotive
   barba.hooks.beforeLeave(() => {
-    if($('.smooth-scroll').length >0 ){
+/*     if($('.smooth-scroll').length >0 ){
       locoScroll.destroy();
       console.log("LOCO DESTROY");
    }
@@ -524,7 +524,7 @@ console.log("SWIPER KILLED!");
 
   // kill webflow
 Webflow.destroy();
-console.log("WEBFLOW DESTROY");
+console.log("WEBFLOW DESTROY"); */
  
   });
   //init scrolltrigger
