@@ -1009,7 +1009,15 @@ gsap.set(".iframe-wrapper", {display:"block"})
       .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
           {duration: 0.1, scaleY: 1},"<0.01")
   
-      .to(".navdark", {autoAlpha:0}, "<")
+      .to(".navdark, .header", {autoAlpha:0}, "<")
+
+ /*      const closenav = document.getElementById('open3d');
+      // OPEN CLOSE FUNCTION
+      closenav.addEventListener("click", () => {
+        showAnim.timeScale(2).reverse();
+      });
+
+       */
 
           
   // IMAGE CLIP
@@ -1510,11 +1518,6 @@ function headerHide() {
     }
   });
 
-  const closenav = document.getElementById('open3d');
-  // OPEN CLOSE FUNCTION
-  closenav.addEventListener("click", () => {
-    showAnim.timeScale(2).reverse();
-  });
 
 }
 
