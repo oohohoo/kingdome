@@ -1497,7 +1497,7 @@ function headerHide() {
     }
   });
 
- div:not(.x)
+ 
  if (document.querySelector('div:not(.page-product-single)')) {
   const closenav = document.getElementById('open3d');
   // OPEN CLOSE FUNCTION
