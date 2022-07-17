@@ -2350,7 +2350,7 @@ var tlfull = gsap.timeline({
   //  scroller: ".smooth-scroll",
     trigger: ".image-sticky",
     start: "top top",
-    end: "bottom top", 
+    end: "+=10000000", 
     pin: ".image-sticky",
     pinSpacing: false,
     anticipatePin: 1,
