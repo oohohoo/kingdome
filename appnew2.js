@@ -343,6 +343,7 @@ function initContent() {
 		contact: function () {
       scrollToSlide();
       colorChanger();
+      contactMobilePin();
 			//huwebflowInteractions();
      // contactScroll();
      
@@ -976,10 +977,11 @@ closeclose.addEventListener("click", () => {
 
 
 		hide();
-  
+
   //  api.stop();
 
 });
+
 
 // VANJSKI GHOST 
 gsap.set(threedback, {scaleY: 0,  zIndex:0})
@@ -2332,5 +2334,30 @@ function colorChanger() {
 
   });
 
+
+}
+
+/*
+================================================================================
+100vh fix mobile menu
+================================================================================
+*/
+
+function contactMobilePin() {
+
+var tlfull = gsap.timeline({
+  scrollTrigger: {
+  //  scroller: ".smooth-scroll",
+    trigger: ".image-sticky",
+    start: "top top",
+    end: "bottom top", 
+    pin: ".image-sticky",
+    pinSpacing: false,
+    anticipatePin: 1,
+   // toggleActions: "restart none none none"
+  // toggleActions: "restart reverse play reverse"
+  }
+}); 
+//tlfull.to(".home-full-image-wrap", { autoAlpha:0, duration: 0.6 }, 0) 
 
 }
