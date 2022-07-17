@@ -935,16 +935,14 @@ window.addEventListener('scroll', () => {
 
 /* const { gsap } = window; */
 
-const threedback = document.getElementById('threedback');
+//const threedback = document.getElementById('threedback');
 
-
-const openbutt = document.querySelector(".open3d");
+const threedback = document.querySelector(".fsthreed");
+const openbutt = document.querySelector(".opentd");
 openbutt.addEventListener("click", () => {
 	//	openbutt.classList.add("active");
-
-
     locoScroll.stop();
- 
+
     /* MOBILE*/
     const showDialog = () => {
       document.getElementById('dialog').classList.add('show')
