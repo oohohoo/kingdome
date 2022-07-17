@@ -99,7 +99,7 @@ function initScroll(container) {
 			//touchMultiplier: 3.0,
 			useKeyboard: true,
 			inertia: 0.6,
-      reloadOnContextChange: true,
+    //  reloadOnContextChange: true,
 			smartphone: {
 				//breakpoint: 0,
 				smooth: false,
@@ -153,6 +153,27 @@ window.addEventListener('resize', function(){
     };
   ScrollTrigger.refresh();
 },200) 
+
+/*
+================================================================================
+RELOAD SITE WHEN RESIZE AND CHANGE FROM DESKTOP TO MOBILE AND VICE VERSA
+================================================================================
+*/
+
+const desktop = window.matchMedia('screen and (min-width: 768px)');
+const mobile = window.matchMedia('screen and (max-width: 767px)');
+
+desktop.addListener(function(e) {
+   if (e.matches) {
+      location.reload();
+   }
+});
+
+mobile.addListener(function(e) {
+   if (e.matches) {
+      location.reload();
+   }
+});
 
 /* var mq = window.matchMedia( "(max-height: 740px)" );
 if (mq.matches) {
