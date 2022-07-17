@@ -2398,7 +2398,10 @@ function sketchFab() {
       }
   } );
 
-
+  document.getElementById('closeclose').addEventListener('click', function () {
+    api.stop();
+    console.log("SKETCHFAB STOPPED");
+  });
 
 /* 
 // Sketchfab Viewer API: Start/Stop the viewer
