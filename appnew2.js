@@ -2387,6 +2387,11 @@ function sketchFab() {
           api.start();
           api.addEventListener( 'viewerready', function() {
 
+            document.getElementById('closeclose').addEventListener('click', function () {
+              api.stop();
+              console.log("SKETCHFAB STOPPED");
+            });
+            
               // API is ready to use
               // Insert your code here
               console.log( 'Viewer is ready' );
@@ -2398,10 +2403,7 @@ function sketchFab() {
       }
   } );
 
-  document.getElementById('closeclose').addEventListener('click', function () {
-    api.stop();
-    console.log("SKETCHFAB STOPPED");
-  });
+
 
 /* 
 // Sketchfab Viewer API: Start/Stop the viewer
