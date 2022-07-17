@@ -653,7 +653,7 @@ BUTTONS FINAL
   transition: color 0.3s ease-in-out;
 }
 .butonio-r:hover span {
-  width: 125%;
+  width: 225%;
   height: 362.5px;
 }
 
