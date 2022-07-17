@@ -1868,6 +1868,7 @@ const el = document.querySelector('.buttonx');
 
 el.addEventListener('mouseenter', () => {
     cursor.removeText();
+    console.log("Htext removed");
   });
 
 el.addEventListener('mouseleave', () => {
