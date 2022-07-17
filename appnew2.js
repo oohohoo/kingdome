@@ -1838,7 +1838,7 @@ setTimeout(() => {
       activeState: '-active',
       mediaState: '-media',
       stateDetection: {
-          '-pointer': 'a,button, .buttonx',
+          '-pointer': 'a,button, .embed-inverse',
           '-hidden': 'my-image'
       },
       visible: true,
