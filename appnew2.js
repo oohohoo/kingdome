@@ -2398,7 +2398,7 @@ function sketchFab() {
       }
   } );
 
-}, 1000);
+}, 5000);
 
 /* 
 // Sketchfab Viewer API: Start/Stop the viewer
