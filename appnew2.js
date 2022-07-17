@@ -1867,8 +1867,9 @@ setTimeout(() => {
 const el = document.querySelector('.buttonx');
 
 el.addEventListener('mouseenter', () => {
-    cursor.removeText();
-    console.log("Htext removed");
+   /*  cursor.removeText(); */
+    cursor.removeState('-inverse');
+    console.log("inverse removedremoved");
   });
 
 el.addEventListener('mouseleave', () => {
