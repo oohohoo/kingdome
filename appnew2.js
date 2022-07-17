@@ -2384,7 +2384,7 @@ function sketchFab() {
 
   client.init( uid, {
       success: function onSuccess( api ){
-          api.start();
+       //   api.start();
           api.addEventListener( 'viewerready', function() {
 
             document.getElementById('closeclose').addEventListener('click', function () {
