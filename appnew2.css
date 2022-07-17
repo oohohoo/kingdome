@@ -1310,6 +1310,10 @@ CUBERTO CURSOR
 
 }
 
+.mf-cursor.-red:before {
+  transform: scale(0.15)
+}
+
 
 .mf-cursor.-black{
   color: #0f3936;

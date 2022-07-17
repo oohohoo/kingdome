@@ -322,7 +322,7 @@ function initContent() {
 		},
 		products: function () {
       productsSwiper();
-      heroPanelAnimation();
+     // heroPanelAnimation();
 		
 		},
 		howwework: function () {
@@ -1943,7 +1943,7 @@ function heroPanelAnimation() {
 
 //gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 
-gsap.set(".scrolldown", {yPercent:-100, autoAlpha:0})
+gsap.set(".scrolldown", {yPercent:-100})
 
 if (document.querySelector('.smooth-scroll')) {
  locoScroll.stop(); 
