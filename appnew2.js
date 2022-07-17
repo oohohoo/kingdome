@@ -1862,6 +1862,20 @@ setTimeout(() => {
   
   console.log("CUBERTO CURSOR INIT");
 
+
+
+const el = document.querySelector('.buttonx');
+
+el.addEventListener('mouseenter', () => {
+    cursor.removeText();
+  });
+
+el.addEventListener('mouseleave', () => {
+   /*  cursor.removeText();
+    cursor.hide(); */
+});
+
+
 /*   const buttonkillcursor = document.querySelector('.glass-button');
   
   buttonkillcursor.addEventListener('mouseenter', () => {
