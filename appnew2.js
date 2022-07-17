@@ -1010,7 +1010,7 @@ gsap.set(".iframe-wrapper", {display:"block"})
   tl.to(threedback, {scaleY: 1,  zIndex:4, transformOrigin: "bottom center", ease: "hop", duration:0.7}, 0) 
   // UNUTARNJI  
       .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
-          {duration: 0.1, scaleY: 1},"<0.3")
+          {duration: 0.1, scaleY: 1},"<0.2")
   
     //  .to(".navdark", {autoAlpha:0}, "<")
 
