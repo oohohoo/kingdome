@@ -1439,7 +1439,7 @@ function akapowPinned() {
 
   gsap.set(".pinned-image", { zIndex: (i, target, targets) => targets.length - i });
 
-  var images = gsap.utils.toArray('.pinned-image:not(.four)');
+  var images = gsap.utils.toArray('.pinned-image:not(.three)');
   
   images.forEach((image, i) => {
      
