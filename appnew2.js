@@ -2246,24 +2246,7 @@ function contactScroll() {
 function buttonHoverFromDirection() {
 
 $(function() {  
-  $('.butonio')
-    .on('mouseenter', function(e) {
-			var parentOffset = $(this).offset(),
-      		relX = e.pageX - parentOffset.left,
-      		relY = e.pageY - parentOffset.top;
-			$(this).find('span').css({top:relY, left:relX})
-    })
-    .on('mouseout', function(e) {
-			var parentOffset = $(this).offset(),
-      		relX = e.pageX - parentOffset.left,
-      		relY = e.pageY - parentOffset.top;
-    	$(this).find('span').css({top:relY, left:relX})
-    });
-  /* $('[href=#]').click(function(){return false}); */
-});
-
-$(function() {  
-  $('.butonio-i')
+  $('.butonio, .butonio-i, .butonio-r')
     .on('mouseenter', function(e) {
 			var parentOffset = $(this).offset(),
       		relX = e.pageX - parentOffset.left,
