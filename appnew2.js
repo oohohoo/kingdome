@@ -339,6 +339,7 @@ function initContent() {
 			logoTransformOnScroll();
 			productsTabs();
 			swiperSolo();
+      sketchFab();
 		},
 		contact: function () {
       scrollToSlide();
@@ -2369,7 +2370,7 @@ SKETCHFAB VIEWER
 ================================================================================
 */
 
-function contactMobilePin() {
+function sketchFab() {
 
 // Sketchfab Viewer API: Start/Stop the viewer
 var version = '1.12.1';
