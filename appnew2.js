@@ -1577,7 +1577,7 @@ function productsTabs() {
       old = activeTab;
       activeTab = this.index;
       // animate bubble slider to clicked target
-      animation.to(".slider-tab", {x:targets[activeTab].offsetLeft[0], width:targets[activeTab].offsetWidth});
+      animation.to(".slider-tab", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
       // change text color on old and new tab targets
       // u ovu boju se pretvori prethodno posjećeni
       animation.to(targets[old], {color:"#0f3936", opacity:.57, ease:"none"}, 0);
