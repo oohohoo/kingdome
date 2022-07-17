@@ -2372,6 +2372,35 @@ SKETCHFAB VIEWER
 
 function sketchFab() {
 
+
+
+
+  var iframe = document.getElementById( 'api-frame' );
+  var uid = '7w7pAfrCfjovwykkEeRFLGw5SXS';
+
+  // By default, the latest version of the viewer API will be used.
+  var client = new Sketchfab( iframe );
+
+  // Alternatively, you can request a specific version.
+  // var client = new Sketchfab( '1.12.1', iframe );
+
+  client.init( uid, {
+      success: function onSuccess( api ){
+          api.start();
+          api.addEventListener( 'viewerready', function() {
+
+              // API is ready to use
+              // Insert your code here
+              console.log( 'Viewer is ready' );
+
+          } );
+      },
+      error: function onError() {
+          console.log( 'Viewer error' );
+      }
+  } );
+
+/* 
 // Sketchfab Viewer API: Start/Stop the viewer
 var version = '1.12.1';
 var uid = 'dd958716be0b4786b8700125eec618e5';
@@ -2421,6 +2450,6 @@ function initGui() {
 
 initGui(); //////////////////////////////////
 // GUI Code end
-//////////////////////////////////
+////////////////////////////////// */
 
 }
