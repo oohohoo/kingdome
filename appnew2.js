@@ -959,7 +959,7 @@ openbutt.addEventListener("click", () => {
 
 });
 
-const closeclose = document.querySelector(".close-wrap");
+const closeclose = document.getElementById('closeclose');
 closeclose.addEventListener("click", () => {
 //	openbutt.classList.remove("active");
   locoScroll.start();
