@@ -1978,7 +1978,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   //ease: "hop",
   onComplete: runOnComplete,
   stagger: {
-    each: 0.025,
+    each: 0.03,
     from: "left"
   }
 }, 0)
