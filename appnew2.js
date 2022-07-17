@@ -2388,10 +2388,12 @@ function sketchFab() {
           api.addEventListener( 'viewerready', function() {
 
             document.getElementById('closeclose').addEventListener('click', function () {
+              setTimeout(() => {
               api.stop();
-              console.log("SKETCHFAB STOPPED");
+              console.log("SKETCHFAB STOPPED A");
+            }, 1000);
             });
-            
+
               // API is ready to use
               // Insert your code here
               console.log( 'Viewer is ready' );
