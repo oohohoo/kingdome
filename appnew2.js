@@ -321,9 +321,8 @@ function initContent() {
       akapowPinned();
 		},
 		products: function () {
-      productObserver();
+      productsSwiper();
       heroPanelAnimation();
-			//projectMainSwiper();
 		
 		},
 		howwework: function () {
@@ -583,7 +582,7 @@ BARBA VIEWS
 			namespace: "products",
 			beforeEnter(data) {
        // heroPanelAnimation();
-			//	productObserver();
+			//	productsSwiper();
 			},
 		},
 		{
@@ -1838,7 +1837,7 @@ setTimeout(() => {
       activeState: '-active',
       mediaState: '-media',
       stateDetection: {
-          '-pointer': 'a,button, .embed-inverse',
+          '-pointer': 'a,button',
           '-hidden': 'my-image'
       },
       visible: true,
@@ -2105,7 +2104,7 @@ PROJECT OBSERVER
 ================================================================================
 */
 
-function productObserver() {
+function productsSwiper() {
 
 
   const slider = document.getElementById("js-cta-slider");
