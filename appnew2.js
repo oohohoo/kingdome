@@ -1565,7 +1565,7 @@ function productsTabs() {
       // change text color on old and new tab targets
       // u ovu boju se pretvori prethodno posjećeni
       animation.to(targets[old], {color:"#ff0000",  ease:"none"}, 0);
-      animation.to(targets[activeTab], {color:"#0000ff", ease:"none"}, 0);
+      animation.to(targets[activeTab], {color:"#0000ff", opacity:1, ease:"none"}, 0);
       // slide current article down out of view and then set it to starting position at top
       animation.to(articles[old], {y:0, zIndex:1, opacity:0, ease:"hop" }, 0);
       animation.set(articles[old], {y:0[old]});
