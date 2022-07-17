@@ -1864,19 +1864,19 @@ setTimeout(() => {
 
 
 
-const el = document.querySelector('.buttonx');
+/* const el = document.querySelector('.buttonx');
 
 el.addEventListener('mouseenter', () => {
-   /*  cursor.removeText(); */
+   //  cursor.removeText(); 
     cursor.removeState('-inverse');
     console.log("inverse removedremoved");
   });
 
 el.addEventListener('mouseleave', () => {
    /*  cursor.removeText();
-    cursor.hide(); */
+    cursor.hide(); 
 });
-
+ */
 
 /*   const buttonkillcursor = document.querySelector('.glass-button');
   
