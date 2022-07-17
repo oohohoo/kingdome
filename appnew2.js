@@ -1961,6 +1961,7 @@ console.log("LOCO STOPPED");
 var tlin = gsap.timeline({});
 
 // gsap.set(".head-split", { autoAlpha: 1}, 0); 
+gsap.set(".gsap-fade", {autoAlpha:.57})
 
 mySplitText = new SplitText(".head-split", {
  type: "words, lines, chars", linesClass: "clip-text", lineThreshold: 0.5,
