@@ -160,8 +160,8 @@ RELOAD SITE WHEN RESIZE AND CHANGE FROM DESKTOP TO MOBILE AND VICE VERSA
 ================================================================================
 */
 
-const desktop = window.matchMedia('screen and (min-width: 768px)');
-const mobile = window.matchMedia('screen and (max-width: 767px)');
+const desktop = window.matchMedia('screen and (min-width: 991px)');
+const mobile = window.matchMedia('screen and (max-width: 991px)');
 
 desktop.addListener(function(e) {
    if (e.matches) {
