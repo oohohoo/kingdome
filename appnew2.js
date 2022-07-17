@@ -1544,7 +1544,7 @@ PRODUCT TABS
 */
 function productsTabs() {
 
-  let targets = document.querySelectorAll(".tab-after");
+  let targets = document.querySelectorAll(".tab-item");
   let articles = document.querySelectorAll(".article");
   let activeTab = 0;
   let old = 0;
