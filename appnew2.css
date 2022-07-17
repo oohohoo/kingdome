@@ -1229,8 +1229,8 @@ FAQ ACCORDION
 
 
 iframe {
-	width:70vw;
-	height:40vw;
+	width:100vw;
+	height:100vh;
 }
 
 @media screen and (max-width: 767px) {
