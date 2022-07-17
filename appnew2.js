@@ -2372,9 +2372,7 @@ SKETCHFAB VIEWER
 
 function sketchFab() {
 
-
-
-
+  setTimeout(() => {
   var iframe = document.getElementById( 'api-frame' );
   var uid = '7w7pAfrCfjovwykkEeRFLGw5SXS';
 
@@ -2399,6 +2397,8 @@ function sketchFab() {
           console.log( 'Viewer error' );
       }
   } );
+
+}, 1000);
 
 /* 
 // Sketchfab Viewer API: Start/Stop the viewer
