@@ -312,13 +312,13 @@ function initContent() {
 			}
 		},
 		home: function () {
-      
-			logoTransformOnScroll();
+      logoTransformOnScroll();
       heroPanelAnimation();
 			startStopVideo();
 			swiperSolo();
 			headerHide();
       akapowPinned();
+      colorChanger();
 		},
 		products: function () {
       productsSwiper();
@@ -2317,13 +2317,13 @@ function colorChanger() {
       scroller: ".smooth-scroll",
       start: "top 50%",
       onEnter: () =>
-      gsap.to(".padding-contact-vh", {
+      gsap.to(".color-change", {
         backgroundColor: colorSection.dataset.bgcolor,
         color: colorSection.dataset.textcolor,
         overwrite: "auto" }),
 
       onLeaveBack: () =>
-      gsap.to(".padding-contact-vh", {
+      gsap.to(".color-change", {
         backgroundColor: prevBg,
         color: prevText,
         overwrite: "auto" }) });
