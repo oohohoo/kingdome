@@ -1973,7 +1973,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   yPercent: 0,
   duration: 1,
   rotateZ: 0,
-  autoAlpha:1, 
+ /*  autoAlpha:1, */ 
   ease:"hop",
   //ease: "hop",
   onComplete: runOnComplete,
