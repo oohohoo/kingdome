@@ -312,8 +312,9 @@ function initContent() {
 			}
 		},
 		home: function () {
-    logoTransformOnScroll();
-  /*    heroPanelAnimation(); 
+    
+    heroPanelAnimation(); 
+  /* logoTransformOnScroll();
 		startStopVideo();
 			headerHide();
       akapowPinned();
