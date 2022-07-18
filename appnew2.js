@@ -369,7 +369,7 @@ function initContent() {
 	yearUpdate();
 	fadeInOnEnter();
 //	cubertoCursor();
- // disableScroll(); 
+  disableScroll(); 
   /* vhFix(); */
 
 	myscripts.init();
