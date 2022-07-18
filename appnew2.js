@@ -2002,7 +2002,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   scrub: true,
     pin: ".pinn",
     pinSpacing: false,
-    anticipatePin: 1,
+    anticipatePin: 2,
     invalidateOnRefresh: true,
     immediateRender: false,
   //  toggleActions: "restart none none none"
