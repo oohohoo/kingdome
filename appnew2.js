@@ -1961,7 +1961,7 @@ if (document.querySelector('.smooth-scroll')) {
 
 
 
-/* var tlin = gsap.timeline({});
+var tlin = gsap.timeline({});
 
 // gsap.set(".head-split", { autoAlpha: 1}, 0); 
 
@@ -1976,7 +1976,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   yPercent: 0,
   duration: 1,
   rotateZ: 0,
- //  autoAlpha:1, 
+ /*  autoAlpha:1, */ 
   ease:"hop",
   onComplete: runOnComplete,
   stagger: {
@@ -1987,7 +1987,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 
 //.to(".gsap-fade", {opacity:0.57}, 1.2)
 
-.to(".scrolldown", {yPercent:0, autoAlpha:1}, 0.7) */
+.to(".scrolldown", {yPercent:0, autoAlpha:1}, 0.7)
 
 
 // PIN HERO **********************
@@ -1999,9 +1999,9 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".home-hero_component",
-    start: "top top",
+    start: "top 10",
     end: "bottom top", 
-   
+   markers: true,
   scrub: true,
     pin: ".section-home-hero",
     pinSpacing: false,
