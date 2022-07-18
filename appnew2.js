@@ -1985,7 +1985,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   }
 }, 0)
 
-//.to(".gsap-fade", {opacity:0.57}, 1.2)
+.to(".gsap-fade", {opacity:0.57}, 1.2)
 
 .to(".scrolldown", {yPercent:0, autoAlpha:1}, 0.7)
 
