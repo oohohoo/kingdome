@@ -1477,6 +1477,7 @@ function akapowPinned() {
         start: () => "top top",
         end: () => "+=" + ((images.length) * window.innerHeight),
         pin: '.image-wrap', 
+        pinType: "fixed",
         anticipatePin: 1,
         invalidateOnRefresh: true,
     
