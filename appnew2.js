@@ -437,7 +437,7 @@ function pageFadeIn({
   // timeline to stretch the loader over the whole screen
   const tl = gsap.timeline({defaults: {duration: 0.85,ease: 'hop'}});
   tl
-    .to(container, {autoAlpha:0}, 0);
+    .to(container, {autoAlpha:0, backgroundColor: '#899781'}, 0);
   return tl;
 }
 
@@ -455,7 +455,7 @@ function pageFadeOut({
     onComplete: () => initContent()
   });
   tl
-    .from(container, {autoAlpha:0}, 0);
+    .from(container, {autoAlpha:0, backgroundColor: '#899781'}, 0);
 
   return tl;
 }
