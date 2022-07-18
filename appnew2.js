@@ -521,10 +521,10 @@ barba.hooks.afterLeave((data) => {
 
 
   // kill SWIPER
-/* const swiper = new Swiper('.swiper-container', {});
+const swiper = new Swiper('.swiper-container', {});
 swiper.destroy();
-console.log("SWIPER KILLED!");
- */
+console.log("SWIPER KILLED BYEE!");
+
 
 
 // kill webflow
@@ -1769,7 +1769,7 @@ function swiperSolo() {
 			},
 		},
 	});
-  console.log("SWIPER SOLO INIT");
+  console.log("SWIPER SOLO UČITAN BYE");
 
   /* var stop_swiper = function() {
     swiper.destroy();
@@ -2149,7 +2149,7 @@ function productsSwiper() {
       prevEl: sliderPrevious
     },
   });
-  console.log("SWIPER PRODUCTS INIT");
+  console.log("SWIPER PRODUCTS UČITAN BYE");
 
 }
 
