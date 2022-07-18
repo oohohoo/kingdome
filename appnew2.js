@@ -313,7 +313,7 @@ function initContent() {
 		},
 		home: function () {
    //  logoTransformOnScroll();
-      heroPanelAnimation();
+    //  heroPanelAnimation();
 		//	startStopVideo();
 		//	headerHide();
      // akapowPinned();
@@ -363,13 +363,13 @@ function initContent() {
 
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
-  fullscreenMenu();
+ /*  fullscreenMenu();
   buttonHoverFromDirection();
 	scrollToTop();
 	yearUpdate();
 	fadeInOnEnter();
 	cubertoCursor();
-  disableScroll();
+  disableScroll(); */
   /* vhFix(); */
 
 	myscripts.init();
