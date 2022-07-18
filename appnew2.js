@@ -1963,7 +1963,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 	});
 
 	tlout
-		.to(".home-hero-video", { y: "-30%", duration: 0.6 }, 0)
+		.to(".home-hero_video-wrap", { yPercent: -30})
 		//.to(".home-hero_head-wrap", { yPercent: 30, duration: 0.6 }, 0);
 
 	/* PINANJE OSTALIH*/
