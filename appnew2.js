@@ -1477,8 +1477,8 @@ function akapowPinned() {
         start: () => "top top",
         end: () => "+=" + ((images.length) * window.innerHeight),
         pin: '.image-wrap', 
-        /* anticipatePin: 1,
-        invalidateOnRefresh: true, */
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
     
   });
 
@@ -1995,7 +1995,8 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 
   var tlout = gsap.timeline({
   scrollTrigger: {
-    scroller: ".smooth-scroll",
+   // scroller: ".smooth-scroll",
+    scroller: this.$device.isDesktop ? '.smooth-scroll' : null,
     trigger: ".home-hero_component",
     start: "top top",
     end: "bottom top", 
