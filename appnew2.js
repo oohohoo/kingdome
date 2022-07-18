@@ -1906,12 +1906,12 @@ function heroPanelAnimation() {
 
 gsap.set(".scrolldown", {yPercent:-100})
 
-/* if (document.querySelector(".smooth-scroll")) {
+ if (document.querySelector(".smooth-scroll")) {
 	locoScroll.stop();
 	const runOnComplete = () => {
 		locoScroll.start();
 	};
- */
+
 	var tlin = gsap.timeline({});
 
 	// gsap.set(".head-split", { autoAlpha: 1}, 0);
