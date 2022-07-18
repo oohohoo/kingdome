@@ -314,11 +314,11 @@ function initContent() {
 		home: function () {
     
     heroPanelAnimation(); 
-  // logoTransformOnScroll();
+  logoTransformOnScroll();
 		startStopVideo();
-		//	headerHide();
-   //   akapowPinned();
-   //  colorChanger(); 
+			headerHide();
+     akapowPinned();
+   colorChanger(); 
 		},
 		products: function () {
       productsSwiper();
