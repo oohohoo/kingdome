@@ -432,12 +432,11 @@ BARBA PAGE TRANSITION IN 2
 ================================================================================
 */
 
-gsap.set(container, {rotate: 45, backgroundColor: '#ff0000'})
 function pageFadeIn({
   container
 }) {
   // timeline to stretch the loader over the whole screen
-  const tl = gsap.timeline({defaults: {duration: 0.85,ease: 'hop'}});
+  const tl = gsap.timeline({defaults: {duration: 0.85, ease: 'hop'}});
   tl
     .to(container, {autoAlpha:0}, 0);
   return tl;
@@ -458,7 +457,6 @@ function pageFadeOut({
   });
   tl
     .from(container, {autoAlpha:0}, 0);
-
   return tl;
 }
 
