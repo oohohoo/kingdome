@@ -492,6 +492,15 @@ function initPageTransitions() {
 
 barba.hooks.afterLeave((data) => {
 
+/* UGAŠENO JER GLITCHA */
+  /* // Set <body> classes for "next" page
+  var nextHtml = data.next.html;
+  var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
+  var bodyClasses = $(response).filter('notbody').attr('class')
+  $("body").attr("class", bodyClasses);
+  
+ */
+
 });
 
  // scroll to the top of the pagePß
