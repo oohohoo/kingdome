@@ -315,7 +315,7 @@ function initContent() {
     logoTransformOnScroll();
      heroPanelAnimation(); 
 		startStopVideo();
-			headerHide();
+		//	headerHide();
   //  akapowPinned();
      colorChanger();
 		},
