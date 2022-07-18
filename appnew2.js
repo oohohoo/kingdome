@@ -1950,7 +1950,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 			end: "bottom top",
 			scrub: true,
 			pin: ".section-home-hero",
-			pinSpacing: false,
+			//pinSpacing: false,
 			anticipatePin: 1,
 			toggleActions: "restart none none none",
 			// toggleActions: "restart reverse play reverse"
