@@ -314,8 +314,8 @@ function initContent() {
 		home: function () {
      logoTransformOnScroll();
       heroPanelAnimation();
-			startStopVideo();
-			headerHide();
+		//	startStopVideo();
+		//	headerHide();
      // akapowPinned();
      // colorChanger();
 		},
