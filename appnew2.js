@@ -1993,21 +1993,21 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 
 
 
-  var tlout = gsap.timeline({
-  scrollTrigger: {
-    scroller: ".smooth-scroll",
-    trigger: ".home-hero_component",
-    start: "top top",
-    end: "bottom top", 
-  scrub: true,
-    pin: ".pinn",
-    pinSpacing: false,
-    anticipatePin: 1,
-    invalidateOnRefresh: true,
-    immediateRender: false,
-  //  toggleActions: "restart none none none"
-  // toggleActions: "restart reverse play reverse"
-  }
+var tlout = gsap.timeline({
+	scrollTrigger: {
+		scroller: ".smooth-scroll",
+		trigger: ".home-hero_component",
+		start: "top top",
+		end: "bottom top",
+		scrub: true,
+		pin: ".pinn",
+		pinSpacing: false,
+		anticipatePin: 1,
+		invalidateOnRefresh: true,
+		immediateRender: false,
+		toggleActions: "restart none none none",
+		// toggleActions: "restart reverse play reverse"
+	},
 });
 
 tlout.to(".home-hero-video", { yPercent:-30, duration: 0.6 }, 0)
