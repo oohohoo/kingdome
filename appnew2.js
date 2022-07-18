@@ -1946,7 +1946,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 		scrollTrigger: {
 			scroller: ".smooth-scroll",
 			trigger: ".home-hero_component",
-			start: "top top",
+			start: "top 2%",
 			end: "bottom top",
 			scrub: true,
 			pin: ".section-home-hero",
