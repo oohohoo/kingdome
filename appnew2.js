@@ -177,7 +177,7 @@ mobile.addListener(function(e) {
 
 
 
- console.log("RESIZE & REFRESHHHH LOCO & SCROLL+CROLL ON OFF / CONTACT");
+ /* console.log("RESIZE & REFRESHHHH LOCO & SCROLL+CROLL ON OFF / CONTACT"); */
 });
 
 
@@ -358,7 +358,7 @@ function initContent() {
     success: function () {
       success();
     
-      console.log("Success loaded");
+    /*   console.log("Success loaded"); */
 		},
 	};
 
@@ -393,7 +393,7 @@ BARBA PAGE TRANSITION IN
 function pageTransitionIn({
   container
 }) {
-  console.log('pageTransitionIn');
+  /* console.log('pageTransitionIn'); */
   // timeline to stretch the loader over the whole screen
   const tl = gsap.timeline({defaults: {duration: 0.85, ease: 'hop'} });
   tl
@@ -413,7 +413,7 @@ BARBA PAGE TRANSITION OUT
 function pageTransitionOut({
   container
 }) {
-  console.log('pageTransitionOut');
+/*   console.log('pageTransitionOut'); */
   // timeline to move loader away down
   const tl = gsap.timeline({defaults: {duration: 0.85,ease: 'hop'},
   // OVDJE SE INICIRA PONOVO SAV JS CONTENT / AKO ZATREBA
@@ -497,10 +497,11 @@ barba.hooks.afterLeave((data) => {
   var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
   var bodyClasses = $(response).filter('notbody').attr('class')
   $("body").attr("class", bodyClasses);
-    console.log("BODY CLASSES UPDATED");
+   /*  console.log("BODY CLASSES UPDATED"); */
 });
 
- // scroll to the top of the page
+ // scroll to the top of the pageP
+ 
   barba.hooks.enter(() => {
         window.scrollTo(0, 0);
    
@@ -509,13 +510,13 @@ barba.hooks.afterLeave((data) => {
   barba.hooks.beforeLeave(() => {
     if($('.smooth-scroll').length >0 ){
       locoScroll.destroy();
-      console.log("LOCO DESTROY");
+     /*  console.log("LOCO DESTROY"); */
    }
   // kill scrolltrigger
    if (ScrollTrigger.getAll().length > 0) {
     ScrollTrigger.getAll().forEach((trigger) => {
         trigger.kill()
-        console.log("SCROLLTRIGGER DESTROY");
+       /*  console.log("SCROLLTRIGGER DESTROY"); */
     });
 };
 
@@ -540,7 +541,7 @@ console.log("WEBFLOW DESTROY"); */
    // console.log("možda ode učitat locoscroll");
 // SAKRIJ MENI PRIJE ULASKA
    gsap.set(".xnav", {scaleY: 0})
-   console.log("--------MENU X SCALE");
+  /*  console.log("--------MENU X SCALE"); */
 
 
 
@@ -1236,10 +1237,10 @@ if (mq.matches) {
   switchlogobig.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1); 
-      console.log("Clicked OPEN");
+     /*  console.log("Clicked OPEN"); */
     } else {
      doSwitchOut(second, 1);
-     console.log("Played OPEN ELSE");
+    /*  console.log("Played OPEN ELSE"); */
     }
     timesClicked++;
   };  
@@ -1247,10 +1248,10 @@ if (mq.matches) {
  switchlogosmall.onclick = function() {
     if (timesClicked%2==0) {
       doSwitch(second, 1);
-      console.log("Clicked CLOSED");
+    /*   console.log("Clicked CLOSED"); */
     } else {
       doSwitchOut(second, 1);
-      console.log("Played CLOSED ELSE");
+     /*  console.log("Played CLOSED ELSE"); */
     }
     timesClicked++;
   };  
@@ -1300,10 +1301,10 @@ var timesClicked = 2;
 switchlogobig.onclick = function() {
   if (timesClicked%2==0) {
     doSwitch(second, 1); 
-    console.log("Clicked OPEN");
+  /*   console.log("Clicked OPEN"); */
   } else {
    doSwitchOut(second, 1);
-   console.log("Played OPEN ELSE");
+   /* console.log("Played OPEN ELSE"); */
   }
   timesClicked++;
 };  
@@ -1311,11 +1312,11 @@ switchlogobig.onclick = function() {
 switchlogosmall.onclick = function() {
   if (timesClicked%2==0) {
     doSwitch(second, 1);
-    console.log("Clicked CLOSED");
-  } else {
+/*     console.log("Clicked CLOSED");
+ */  } else {
     doSwitchOut(second, 1);
-    console.log("Played CLOSED ELSE");
-  }
+/*     console.log("Played CLOSED ELSE");
+ */  }
   timesClicked++;
 };  
 
@@ -1366,7 +1367,7 @@ var is_modal_show = sessionStorage.getItem('alreadyShow');
           tl.to(".popup", { autoAlpha: 1, ease:'none'}, 0)
             .to(".barba-container", 0.2, {opacity: 0.2}, 0);
 
-  console.log("MODAL TIMEOUT");
+/*   console.log("MODAL TIMEOUT"); */
  sessionStorage.setItem('alreadyShow','alredy shown');
 }
 }
@@ -1515,13 +1516,13 @@ function headerHide() {
 
  
 
-  const box = document.querySelector('body');
+ /*  const box = document.querySelector('body');
 
   if (!box.classList.contains('page-product-single')) {
     console.log('Element does NOT have class');
   } else {
     console.log('Element has class');
-  }
+  } */
 
 
 
@@ -1594,7 +1595,7 @@ function productsTabs() {
     
   window.addEventListener('resize', function(){
     gsap.to(".slider-tab", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
-   console.log("SLIDE TABS ON PLACE TRAVEL");
+   /* console.log("SLIDE TABS ON PLACE TRAVEL"); */
   });
 }
 
@@ -1861,7 +1862,7 @@ setTimeout(() => {
      
   });
   
-  console.log("CUBERTO CURSOR INIT");
+/*   console.log("CUBERTO CURSOR INIT"); */
 
 
 
@@ -1925,7 +1926,7 @@ el.addEventListener('mouseleave', () => {
 
 }
 else {
-  console.log("CUB MOUSE IS OFF");
+ /*  console.log("CUB MOUSE IS OFF"); */
 }    
 
 
@@ -1956,7 +1957,7 @@ console.log("LOCO STOPPED");
 
   const runOnComplete = () => {
     locoScroll.start(); 
-    console.log("LOCO STARTEDDDD");
+   /*  console.log("LOCO STARTEDDDD"); */
   }
 
 
@@ -2238,7 +2239,7 @@ function vhFix() {
 const documentHeight = () => {
   const doc = document.documentElement
   doc.style.setProperty('--doc-height', '${window.innerHeight}px')
-  console.log("VH DOC HEIGHT");
+ /*  console.log("VH DOC HEIGHT"); */
  }
  window.addEventListener('resize', documentHeight)
  documentHeight()
@@ -2390,18 +2391,18 @@ function sketchFab() {
             document.getElementById('closeclose').addEventListener('click', function () {
               setTimeout(() => {
               api.stop();
-              console.log("SKETCHFAB STOPPED A");
+           /*    console.log("SKETCHFAB STOPPED A"); */
             }, 1000);
             });
 
               // API is ready to use
               // Insert your code here
-              console.log( 'Viewer is ready' );
+            /*   console.log( 'Viewer is ready' ); */
 
           } );
       },
       error: function onError() {
-          console.log( 'Viewer error' );
+       /*    console.log( 'Viewer error' ); */
       }
   } );
 
