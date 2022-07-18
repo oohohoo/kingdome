@@ -135,9 +135,9 @@ function initScroll(container) {
 			// LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters,
 			// we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
 			// UKLJUČITI SAMO NA MOBILNOJ VERZIJI
-			 pinType: document.querySelector(".smooth-scroll").style.transform
+			pinType: document.querySelector(".smooth-scroll").style.transform
 				? "transform"
-				: "fixed", 
+				: "fixed",
 		});
 
 /*
@@ -312,13 +312,12 @@ function initContent() {
 			}
 		},
 		home: function () {
-    
-    heroPanelAnimation(); 
-  logoTransformOnScroll();
+    logoTransformOnScroll();
+     heroPanelAnimation(); 
 		startStopVideo();
 			headerHide();
-     akapowPinned();
-   colorChanger(); 
+      akapowPinned();
+     colorChanger();
 		},
 		products: function () {
       productsSwiper();
@@ -364,13 +363,13 @@ function initContent() {
 
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
-/*  fullscreenMenu();
+ fullscreenMenu();
   buttonHoverFromDirection();
 	scrollToTop();
 	yearUpdate();
 	fadeInOnEnter();
 	cubertoCursor();
-  disableScroll();  */
+  disableScroll(); 
    //vhFix(); 
 
 	myscripts.init();
@@ -1928,7 +1927,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 				rotateZ: 0,
 				/*  autoAlpha:1, */
 				ease: "hop",
-				onComplete: runOnComplete,
+				*onComplete: runOnComplete,
 				stagger: {
 					each: 0.03,
 					from: "left",
@@ -1949,8 +1948,9 @@ gsap.set(".scrolldown", {yPercent:-100})
 			trigger: ".home-hero_component",
 			start: "top top",
 			end: "bottom top",
+			markers: true,
 			scrub: true,
-			pin: ".home-hero_component",
+			pin: ".section-home-hero",
 			pinSpacing: false,
 			anticipatePin: 1,
 			toggleActions: "restart none none none",
@@ -1960,7 +1960,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 
 	tlout
 		.to(".home-hero-video", { yPercent: -30, duration: 0.6 }, 0)
-	.to(".home-hero_head-wrap", { yPercent: 30, duration: 0.6 }, 0);
+		.to(".home-hero_head-wrap", { yPercent: 30, duration: 0.6 }, 0);
 
 	/* PINANJE OSTALIH*/
 	/* var tlfull = gsap.timeline({
@@ -2032,7 +2032,8 @@ tldue.to(".home-hero_video-wrap-due", { yPercent:-20,  duration: 0.8 }, 0)
   }
 }, 0) */
 }
-}
+
+
 /*
 ================================================================================
 PROJECT OBSERVER
