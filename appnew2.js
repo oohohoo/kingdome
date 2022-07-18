@@ -368,9 +368,9 @@ function initContent() {
 	scrollToTop();
 	yearUpdate();
 	fadeInOnEnter();
-//	cubertoCursor();
+	cubertoCursor();
   disableScroll(); 
-   vhFix(); 
+   //vhFix(); 
 
 	myscripts.init();
 
