@@ -367,7 +367,7 @@ function initContent() {
   buttonHoverFromDirection();
 //	scrollToTop();
 //	yearUpdate();
-//	fadeInOnEnter();
+	fadeInOnEnter();
 //	cubertoCursor();
  // disableScroll(); 
   /* vhFix(); */
