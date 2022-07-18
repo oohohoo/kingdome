@@ -507,32 +507,23 @@ barba.hooks.afterLeave((data) => {
   });
    //kill locomotive
   barba.hooks.beforeLeave(() => {
-    if($('.smooth-scroll').length >0 ){
-      locoScroll.destroy();
-     /*  console.log("LOCO DESTROY"); */
-   }
-  // kill scrolltrigger
-   if (ScrollTrigger.getAll().length > 0) {
-    ScrollTrigger.getAll().forEach((trigger) => {
-        trigger.kill()
-       /*  console.log("SCROLLTRIGGER DESTROY"); */
-    });
-};
+		if ($(".smooth-scroll").length > 0) {
+			locoScroll.destroy();
+			/*  console.log("LOCO DESTROY"); */
+		}
+	
 
+		// kill SWIPER
+		if (document.querySelector(".swiper-container")) {
+			const swiper = new Swiper(".swiper-container", {});
+			swiper.destroy();
+			console.log("SWIPER KILLED AKO POSTOJI NA STRANICI BYEE!");
+		}
 
-  // kill SWIPER
-  if (document.querySelector('.swiper-container')) {
- const swiper = new Swiper('.swiper-container', {});
-swiper.destroy();
-console.log("SWIPER KILLED AKO POSTOJI NA STRANICI BYEE!");
-} 
-
-
-// kill webflow
-/* Webflow.destroy();
+		// kill webflow
+		/* Webflow.destroy();
 console.log("WEBFLOW DESTROY"); */
- 
-  });
+	});
   //init scrolltrigger
    barba.hooks.afterEnter(() => {
     
