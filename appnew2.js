@@ -1953,7 +1953,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 			trigger: ".home-hero_component",
 			start: "top top",
 			end: "bottom top",
-			markers: true,
+			//markers: true,
 			scrub: true,
 		//	pin: ".section-home-hero",
 		//	pinSpacing: false,
