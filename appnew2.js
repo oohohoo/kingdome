@@ -199,7 +199,7 @@ LOCOMOTIVE SCROLL REFRESH AFTER ALL / ne briši
 		//ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 		// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 		ScrollTrigger.refresh();
-		console.log("SCROLL REFRESH 2");
+		/* console.log("SCROLL REFRESH 2"); */
 
 		/*   document.addEventListener('load', function(){
     locoScroll.update();
@@ -213,7 +213,7 @@ LOCOMOTIVE SCROLL UPDATED AFTER IMAGESLOADED
 
 		imagesLoaded("#main", { background: true }, function () {
 			locoScroll.update();
-			console.log("LOCO SCROLL UPDATE AFTER IMAGES LOADED ALL IMAGES");
+		/* 	console.log("LOCO SCROLL UPDATE AFTER IMAGES LOADED ALL IMAGES"); */
 		});
 	}
 
@@ -378,7 +378,7 @@ function initContent() {
 	setTimeout(() => {
 		ScrollTrigger.refresh(true);
 	}, 1000);
-	console.log("SCROLL TRIGGER REFRESHED AFTER 1 SECOND");
+/* 	console.log("SCROLL TRIGGER REFRESHED AFTER 1 SECOND"); */
 }
 
 /*
@@ -500,8 +500,8 @@ barba.hooks.afterLeave((data) => {
    /*  console.log("BODY CLASSES UPDATED"); */
 });
 
- // scroll to the top of the pageP
- 
+ // scroll to the top of the pagePß
+
   barba.hooks.enter(() => {
         window.scrollTo(0, 0);
    
@@ -1951,7 +1951,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 if (document.querySelector('.smooth-scroll')) {
  locoScroll.stop(); 
 
-console.log("LOCO STOPPED");
+/* console.log("LOCO STOPPED"); */
 
  
 
