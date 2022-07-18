@@ -1946,13 +1946,13 @@ gsap.set(".scrolldown", {yPercent:-100})
 		scrollTrigger: {
 			scroller: ".smooth-scroll",
 			trigger: ".home-hero_component",
-			start: "top 2%",
+			start: "top top",
 			end: "bottom top",
 			scrub: true,
 			pin: ".section-home-hero",
-			//pinSpacing: false,
-			anticipatePin: 3,
-			//toggleActions: "restart none none none",
+			pinSpacing: true,
+			anticipatePin: 1,
+			toggleActions: "restart none none none",
 			// toggleActions: "restart reverse play reverse"
 		},
 	});
