@@ -364,7 +364,7 @@ function initContent() {
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
  fullscreenMenu();
- // buttonHoverFromDirection();
+  buttonHoverFromDirection();
 //	scrollToTop();
 //	yearUpdate();
 //	fadeInOnEnter();
