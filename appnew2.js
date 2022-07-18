@@ -1947,76 +1947,69 @@ function heroPanelAnimation() {
 
 gsap.set(".scrolldown", {yPercent:-100})
 
-if (document.querySelector('.smooth-scroll')) {
- locoScroll.stop(); 
+/* if (document.querySelector(".smooth-scroll")) {
+	locoScroll.stop();
+	const runOnComplete = () => {
+		locoScroll.start();
+	};
+ */
+	var tlin = gsap.timeline({});
 
-/* console.log("LOCO STOPPED"); */
+	// gsap.set(".head-split", { autoAlpha: 1}, 0);
 
+	mySplitText = new SplitText(".head-split", {
+		type: "words, lines, chars",
+		linesClass: "clip-text",
+		lineThreshold: 0.5,
+	});
 
-  const runOnComplete = () => {
-    locoScroll.start(); 
-   /*  console.log("LOCO STARTEDDDD"); */
-  }
+	tlin
+		.fromTo(
+			mySplitText.words,
+			{ transformOrigin: "bottom left", yPercent: 100, rotateZ: 20 },
+			{
+				yPercent: 0,
+				duration: 1,
+				rotateZ: 0,
+				/*  autoAlpha:1, */
+				ease: "hop",
+				onComplete: runOnComplete,
+				stagger: {
+					each: 0.03,
+					from: "left",
+				},
+			},
+			0
+		)
 
+		.to(".gsap-fade", { opacity: 0.57 }, 1.2)
 
+		.to(".scrolldown", { yPercent: 0, autoAlpha: 1 }, 0.7);
 
-var tlin = gsap.timeline({});
+	// PIN HERO **********************
 
-// gsap.set(".head-split", { autoAlpha: 1}, 0); 
+	var tlout = gsap.timeline({
+		scrollTrigger: {
+			scroller: ".smooth-scroll",
+			trigger: ".home-hero_component",
+			start: "top top",
+			end: "bottom top",
+			markers: true,
+			scrub: true,
+			pin: ".section-home-hero",
+			pinSpacing: false,
+			anticipatePin: 1,
+			toggleActions: "restart none none none",
+			// toggleActions: "restart reverse play reverse"
+		},
+	});
 
+	tlout
+		.to(".home-hero-video", { yPercent: -30, duration: 0.6 }, 0)
+		.to(".home-hero_head-wrap", { yPercent: 30, duration: 0.6 }, 0);
 
-mySplitText = new SplitText(".head-split", {
- type: "words, lines, chars", linesClass: "clip-text", lineThreshold: 0.5,
-});
-
-
-tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, rotateZ: 20}, {
- 
-  yPercent: 0,
-  duration: 1,
-  rotateZ: 0,
- /*  autoAlpha:1, */ 
-  ease:"hop",
-  onComplete: runOnComplete,
-  stagger: {
-    each: 0.03,
-    from: "left"
-  }
-}, 0)
-
-.to(".gsap-fade", {opacity:0.57}, 1.2)
-
-.to(".scrolldown", {yPercent:0, autoAlpha:1}, 0.7)
-
-
-// PIN HERO **********************
-
-
-
-
-  var tlout = gsap.timeline({
-  scrollTrigger: {
-    scroller: ".smooth-scroll",
-    trigger: ".home-hero_component",
-    start: "top top",
-    end: "bottom top", 
-   markers: true,
-  scrub: true,
-    pin: ".section-home-hero",
-    pinSpacing: false,
-    anticipatePin: 1,
-    toggleActions: "restart none none none"
-  // toggleActions: "restart reverse play reverse"
-  }
-});
-
-tlout.to(".home-hero-video", { yPercent:-30, duration: 0.6 }, 0)
-.to(".home-hero_head-wrap", { yPercent:30, duration: 0.6}, 0) 
-
-
-
-/* PINANJE OSTALIH*/
-/* var tlfull = gsap.timeline({
+	/* PINANJE OSTALIH*/
+	/* var tlfull = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".section-pin",
@@ -2031,10 +2024,9 @@ tlout.to(".home-hero-video", { yPercent:-30, duration: 0.6 }, 0)
   // toggleActions: "restart reverse play reverse"
   }
 }); */
-//tlfull.to(".home-full-image-wrap", { autoAlpha:0, duration: 0.6 }, 0) 
+	//tlfull.to(".home-full-image-wrap", { autoAlpha:0, duration: 0.6 }, 0)
 
-
-/* BACKUP
+	/* BACKUP
 var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
@@ -2054,17 +2046,7 @@ tlout.to(".home-hero_video-wrap", { yPercent:-30,  duration: 0.6 }, 0)
 .to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
  */
 
-
-
-
-
-
-
-
-
-
-
-/* // PIN 2
+	/* // PIN 2
 var tldue = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
@@ -2084,8 +2066,7 @@ tldue.to(".home-hero_video-wrap-due", { yPercent:-20,  duration: 0.8 }, 0)
 .to(".home-hero_head-wrap", { yPercent:30,   duration: 0.6 }, 0) 
  */
 
-
-/* .fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 0}, {
+	/* .fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 0, rotateZ: 0}, {
  
   yPercent: 100,
   duration: 1.25,
@@ -2096,7 +2077,6 @@ tldue.to(".home-hero_video-wrap-due", { yPercent:-20,  duration: 0.8 }, 0)
     from: "left"
   }
 }, 0) */
-
 }
 
 }
