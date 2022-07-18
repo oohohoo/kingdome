@@ -491,12 +491,7 @@ function initPageTransitions() {
   });
 
 barba.hooks.afterLeave((data) => {
-  // Set <body> classes for "next" page
-  var nextHtml = data.next.html;
-  var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
-  var bodyClasses = $(response).filter('notbody').attr('class')
-  $("body").attr("class", bodyClasses);
-   /*  console.log("BODY CLASSES UPDATED"); */
+
 });
 
  // scroll to the top of the pagePß
@@ -511,7 +506,13 @@ barba.hooks.afterLeave((data) => {
 			locoScroll.destroy();
 			/*  console.log("LOCO DESTROY"); */
 		}
-	
+		// kill scrolltrigger
+		if (ScrollTrigger.getAll().length > 0) {
+			ScrollTrigger.getAll().forEach((trigger) => {
+				trigger.kill();
+				/*  console.log("SCROLLTRIGGER DESTROY"); */
+			});
+		}
 
 		// kill SWIPER
 		if (document.querySelector(".swiper-container")) {
