@@ -1269,9 +1269,9 @@ iframe {
   }
 
   /**/
-  .vhfix {
+ /*  .vhfix {
     height: calc(100vh - 6.25rem);
-    }
+    } */
 /**/
   .inner-loader {
  /* padding-bottom:6.25rem; */
@@ -1656,20 +1656,7 @@ SLIDER CONTACT AUTO HEIGHT FIXED
   }
   
  
-/*
-================================================================================
-CONTACT HEIGHT FIX
-================================================================================
-*/
-  @media screen and (max-height: 520px) {
-    .vhfix {
-      height: auto;
-      background-color: red;
-      }   
-  }
- 
 
-  
 
 
       
