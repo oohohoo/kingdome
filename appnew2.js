@@ -10,7 +10,7 @@ CustomEase.create("hop", "0.5, 0, .0, 1");
 
 
 let locoScroll;
- var swiper;  
+var swiper;  
 
 /*TURN OFF GSAP MESSAGES*/
 gsap.config({ nullTargetWarn: false });
@@ -317,7 +317,7 @@ function initContent() {
 		//	startStopVideo();
 		//	headerHide();
      // akapowPinned();
-     // colorChanger();
+     colorChanger();
 		},
 		products: function () {
       productsSwiper();
@@ -597,8 +597,7 @@ BARBA VIEWS
         
 			},
       afterLeave(data) {
-				       
-        
+				           
 			},
 		},
 		{
