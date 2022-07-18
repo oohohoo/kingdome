@@ -1952,7 +1952,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 			pin: ".section-home-hero",
 			//pinSpacing: false,
 			anticipatePin: 1,
-			toggleActions: "restart none none none",
+			//toggleActions: "restart none none none",
 			// toggleActions: "restart reverse play reverse"
 		},
 	});
