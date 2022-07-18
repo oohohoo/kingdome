@@ -1897,16 +1897,16 @@ HERO PANEL ANIMATIONS
 */
 function heroPanelAnimation() {
 
-//gsap.set(".home-hero-video", {opacity:1, scale:1.2})
+gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 
 gsap.set(".scrolldown", {yPercent:-100})
 
-/* if (document.querySelector(".smooth-scroll")) {
+ if (document.querySelector(".smooth-scroll")) {
 	locoScroll.stop();
 	const runOnComplete = () => {
 		locoScroll.start();
 	};
- */
+
 	var tlin = gsap.timeline({});
 
 	// gsap.set(".head-split", { autoAlpha: 1}, 0);
@@ -1927,7 +1927,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 				rotateZ: 0,
 				/*  autoAlpha:1, */
 				ease: "hop",
-				//onComplete: runOnComplete,
+				*onComplete: runOnComplete,
 				stagger: {
 					each: 0.03,
 					from: "left",
@@ -1959,8 +1959,8 @@ gsap.set(".scrolldown", {yPercent:-100})
 	});
 
 	tlout
-		.to(".home-hero-video", { yPercent: -30, duration: 0.6 }, 0)
-		.to(".home-hero_head-wrap", { yPercent: 30, duration: 0.6 }, 0);
+	//	.to(".home-hero-video", { yPercent: -30, duration: 0.6 }, 0)
+		//.to(".home-hero_head-wrap", { yPercent: 30, duration: 0.6 }, 0);
 
 	/* PINANJE OSTALIH*/
 	/* var tlfull = gsap.timeline({
