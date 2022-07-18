@@ -1954,7 +1954,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 			start: "top top",
 			end: "bottom top",
 			//markers: true,
-			scrub: 1,
+			scrub: true,
      // pin: true,
      // pinType: "fixed",
 			pin: true,
