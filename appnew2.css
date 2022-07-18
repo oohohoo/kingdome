@@ -65,7 +65,6 @@ SCROLLDOWN ANIMATION
 ================================================================================
 */
 
-
 .scroll-down {
   -webkit-animation: scroll 0.35s ease-in alternate infinite;
           animation: scroll 0.35s ease-in alternate infinite;
@@ -73,22 +72,25 @@ SCROLLDOWN ANIMATION
 
 @-webkit-keyframes scroll {
   0% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   100% {
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
 @keyframes scroll {
   0% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   100% {
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
-
 
 
 /*
