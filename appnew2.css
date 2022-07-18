@@ -67,28 +67,30 @@ SCROLLDOWN ANIMATION
 
 .scroll-down {
   -webkit-animation: scroll 0.35s ease-in alternate infinite;
-          animation: scroll 0.35s ease-in alternate infinite;
+  animation: scroll 0.35s ease-in alternate infinite;
 }
 
 @-webkit-keyframes scroll {
   0% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
+
   100% {
     -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    transform: translateY(10px);
   }
 }
 
 @keyframes scroll {
   0% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
+
   100% {
     -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    transform: translateY(10px);
   }
 }
 
@@ -533,7 +535,7 @@ TAB HIDE GAP
 ================================================================================
 */ 
 
-.tab-after::after {
+.tab-item::after {
 	background-color: #e8e4e3;
 	display: block;
 	width: 1.25rem;
@@ -543,6 +545,7 @@ TAB HIDE GAP
 	top: -0.7rem;
 	right: -1.25rem;
   z-index: 100;
+  opacity:1;
 }
 
 
