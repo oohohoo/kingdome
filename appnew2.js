@@ -314,7 +314,7 @@ function initContent() {
 		home: function () {
     
     heroPanelAnimation(); 
-  logoTransformOnScroll();
+ // logoTransformOnScroll();
 		startStopVideo();
 			headerHide();
      akapowPinned();
