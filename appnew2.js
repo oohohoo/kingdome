@@ -363,13 +363,13 @@ function initContent() {
 
 	// LOAD THIS SCRIPTS ON EVERY PAGE
 	initScroll();
- /*  fullscreenMenu();
-  buttonHoverFromDirection();
-	scrollToTop();
-	yearUpdate();
-	fadeInOnEnter();
-	cubertoCursor();
-  disableScroll(); */
+ // fullscreenMenu();
+ // buttonHoverFromDirection();
+//	scrollToTop();
+//	yearUpdate();
+//	fadeInOnEnter();
+//	cubertoCursor();
+ // disableScroll(); 
   /* vhFix(); */
 
 	myscripts.init();
