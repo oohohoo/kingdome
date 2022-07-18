@@ -1950,7 +1950,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 	var tlout = gsap.timeline({
 		scrollTrigger: {
 			scroller: ".smooth-scroll",
-			trigger: ".home-hero_component",
+			trigger: ".section-home-hero",
 			start: "top top",
 			end: "bottom top",
 			//markers: true,
