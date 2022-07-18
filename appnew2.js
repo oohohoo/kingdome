@@ -1999,7 +1999,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   scrollTrigger: {
     scroller: ".smooth-scroll",
     trigger: ".home-hero_component",
-    start: "top 10%",
+    start: "10% top",
     end: "bottom top", 
    markers: true,
   scrub: true,
