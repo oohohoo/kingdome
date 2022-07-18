@@ -366,7 +366,7 @@ function initContent() {
  fullscreenMenu();
   buttonHoverFromDirection();
 	scrollToTop();
-//	yearUpdate();
+	yearUpdate();
 	fadeInOnEnter();
 //	cubertoCursor();
  // disableScroll(); 
