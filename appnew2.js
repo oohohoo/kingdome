@@ -1997,7 +1997,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 
 
 
-
+/* 
   var tlout = gsap.timeline({
   scrollTrigger: {
     scroller: ".smooth-scroll",
@@ -2017,7 +2017,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 tlout.to(".home-hero_video-wrap", { yPercent:-30, duration: 0.6 }, 0)
 .to(".home-hero_head-wrap", { yPercent:30, duration: 0.6}, 0) 
 
-
+ */
 
 /* PINANJE OSTALIH*/
 /* var tlfull = gsap.timeline({
