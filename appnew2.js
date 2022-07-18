@@ -316,7 +316,7 @@ function initContent() {
      heroPanelAnimation(); 
 		startStopVideo();
 		//	headerHide();
-      akapowPinned();
+   //   akapowPinned();
      colorChanger();
 		},
 		products: function () {
