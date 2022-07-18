@@ -522,10 +522,11 @@ barba.hooks.afterLeave((data) => {
 
 
   // kill SWIPER
-const swiper = new Swiper('.swiper-container', {});
+  if (document.querySelector('.swiper-container')) {
+ const swiper = new Swiper('.swiper-container', {});
 swiper.destroy();
-console.log("SWIPER KILLED BYEE!");
-
+console.log("SWIPER KILLED AKO POSTOJI NA STRANICI BYEE!");
+} 
 
 
 // kill webflow
