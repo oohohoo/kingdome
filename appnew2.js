@@ -1953,7 +1953,6 @@ if (document.querySelector('.smooth-scroll')) {
 
 /* console.log("LOCO STOPPED"); */
 
- 
 
   const runOnComplete = () => {
     locoScroll.start(); 
@@ -1979,7 +1978,6 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   rotateZ: 0,
  /*  autoAlpha:1, */ 
   ease:"hop",
-  //ease: "hop",
   onComplete: runOnComplete,
   stagger: {
     each: 0.03,
@@ -1987,7 +1985,7 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
   }
 }, 0)
 
-.to(".gsap-fade", {opacity:0.57}, 1.2)
+//.to(".gsap-fade", {opacity:0.57}, 1.2)
 
 .to(".scrolldown", {yPercent:0, autoAlpha:1}, 0.7)
 
