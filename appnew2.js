@@ -1564,7 +1564,7 @@ function productsTabs() {
   // set initial article and position bubble slider on first tab 
   gsap.set(articles[0], {y:0, opacity:1, zIndex:2});
   gsap.set(".slider-tab", {x:targets[0].offsetLeft[0], width:targets[0].offsetWidth});
-  gsap.set(targets[0], {color:"#0f3936", opacity:1});
+  gsap.set(targets[0], {color:"#778E8D"});
   gsap.set(".article-block", {height:heights[0]});
   
   function doCoolStuff() {
