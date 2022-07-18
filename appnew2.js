@@ -469,10 +469,6 @@ BARBA GLOBAL HOOKS + PREFETCH + INIT + VIEWS + TRANSITIONS
 function initPageTransitions() {
    // do something before the transition starts
    barba.hooks.once(() => {
-   // initLoader();
-    //logoAnimacija();
-    //fullscreenMenu();
-    //homeProductHover();
   });
 
   // do something before the transition starts
@@ -578,7 +574,6 @@ BARBA VIEWS
 		{
 			namespace: "home",
 			beforeEnter(data) {
-				homeProductHover();
 			},
 		},
 		{
@@ -1387,47 +1382,6 @@ $(".popup-close, .popup").click(function() {
 }); 
 
 }
-/*
-================================================================================
-HOME - PRODUCT HOVER 
-================================================================================
-*/
-function homeProductHover() {
-	/*   gsap.set(".rg__long", {autoAlpha:0, yPercent:-10}); */
-
-	gsap.utils.toArray(".product-hover").forEach((container) => {
-		let imagezoom = container.querySelector(".full-image"),
-		//	linkhover = container.querySelector(".linkhover"),
-      imageokvir = container.querySelector(".product-image_height"),
-     
-			// wrap = container.querySelector(".rg__wrap"),
-			// name = container.querySelector(".product-title"),
-			//short = container.querySelector(".rg__short"),
-			// long = container.querySelector(".rg__long"),
-			// full-image
-
-			tl = gsap.timeline({
-				defaults: { ease: "power1", duration: 0.2 },
-				paused: true,
-			});
-
-		tl.to(imagezoom, { scale: 1.1 }, 0)
-   // .to(linkhover, { opacity: 0.4 }, 0)
-    .to(imageokvir, { scale: 0.95 }, 0)
-		//.to(wrap, { backgroundColor:"rgba(40, 40, 42, 0.14)" }, 0)
-		//.to(name, { yPercent:-10, autoAlpha:0 }, 0)
-		// .to(short, { yPercent:-8, autoAlpha:0 }, 0)
-		// .to(long, {autoAlpha:1, yPercent:10}, 0)
-		// .to(white, {yPercent:-45}, 0);
-
-		container.addEventListener("mouseenter", () => tl.play());
-		container.addEventListener("mouseleave", () => tl.reverse());
-	});
-	console.log("HOME - PRODUCT HOVER ");
-}
-
-
-
 /*
 ================================================================================
 HOW WE WORK AKAPOWL PINNED
