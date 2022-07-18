@@ -469,6 +469,10 @@ BARBA GLOBAL HOOKS + PREFETCH + INIT + VIEWS + TRANSITIONS
 function initPageTransitions() {
    // do something before the transition starts
    barba.hooks.once(() => {
+   // initLoader();
+    //logoAnimacija();
+    //fullscreenMenu();
+    //homeProductHover();
   });
 
   // do something before the transition starts
@@ -574,6 +578,7 @@ BARBA VIEWS
 		{
 			namespace: "home",
 			beforeEnter(data) {
+
 			},
 		},
 		{
@@ -1897,16 +1902,16 @@ HERO PANEL ANIMATIONS
 */
 function heroPanelAnimation() {
 
-gsap.set(".home-hero-video", {opacity:1, scale:1.2})
+//gsap.set(".home-hero-video", {opacity:1, scale:1.2})
 
 gsap.set(".scrolldown", {yPercent:-100})
 
- if (document.querySelector(".smooth-scroll")) {
+/* if (document.querySelector(".smooth-scroll")) {
 	locoScroll.stop();
 	const runOnComplete = () => {
 		locoScroll.start();
 	};
-
+ */
 	var tlin = gsap.timeline({});
 
 	// gsap.set(".head-split", { autoAlpha: 1}, 0);
@@ -1925,7 +1930,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 				yPercent: 0,
 				duration: 1,
 				rotateZ: 0,
-				//  autoAlpha:1, 
+				/*  autoAlpha:1, */
 				ease: "hop",
 				onComplete: runOnComplete,
 				stagger: {
@@ -1937,6 +1942,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 		)
 
 		.to(".gsap-fade", { opacity: 0.57 }, 1.2)
+
 		.to(".scrolldown", { yPercent: 0, autoAlpha: 1 }, 0.7);
 
 	// PIN HERO **********************
@@ -2032,7 +2038,7 @@ tldue.to(".home-hero_video-wrap-due", { yPercent:-20,  duration: 0.8 }, 0)
 }, 0) */
 }
 
-
+}
 /*
 ================================================================================
 PROJECT OBSERVER
