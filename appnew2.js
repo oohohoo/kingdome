@@ -1951,10 +1951,10 @@ gsap.set(".scrolldown", {yPercent:-100})
 		scrollTrigger: {
 			scroller: ".smooth-scroll",
 			trigger: ".home-hero_component",
-		//	start: "top top",
-		//	end: "bottom top",
+			start: "top top",
+			end: "bottom top",
 			markers: true,
-		//	scrub: true,
+			scrub: true,
 		//	pin: ".section-home-hero",
 		//	pinSpacing: false,
 		//	anticipatePin: 1,
