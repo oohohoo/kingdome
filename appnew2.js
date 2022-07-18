@@ -312,13 +312,12 @@ function initContent() {
 			}
 		},
 		home: function () {
-      logoTransformOnScroll();
-      heroPanelAnimation();
+     // logoTransformOnScroll();
+     // heroPanelAnimation();
 		//	startStopVideo();
-			//swiperSolo();
-			headerHide();
-      akapowPinned();
-      colorChanger();
+//			headerHide();
+     // akapowPinned();
+     // colorChanger();
 		},
 		products: function () {
       productsSwiper();
