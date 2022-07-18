@@ -313,10 +313,10 @@ function initContent() {
 		},
 		home: function () {
      logoTransformOnScroll();
-     // heroPanelAnimation();
-		//	startStopVideo();
-//			headerHide();
-      akapowPinned();
+      heroPanelAnimation();
+			startStopVideo();
+			headerHide();
+     // akapowPinned();
      // colorChanger();
 		},
 		products: function () {
