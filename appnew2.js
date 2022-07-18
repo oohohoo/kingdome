@@ -1995,15 +1995,14 @@ tlin.fromTo(mySplitText.words, { transformOrigin: "bottom left", yPercent: 100, 
 
   var tlout = gsap.timeline({
   scrollTrigger: {
-   // scroller: ".smooth-scroll",
-    scroller: null,
+    scroller: ".smooth-scroll",
     trigger: ".home-hero_component",
     start: "top top",
     end: "bottom top", 
   scrub: true,
     pin: ".pinn",
     pinSpacing: false,
-    anticipatePin: 5,
+    anticipatePin: 1,
     invalidateOnRefresh: true,
     immediateRender: false,
   //  toggleActions: "restart none none none"
