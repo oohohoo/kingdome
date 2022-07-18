@@ -1950,16 +1950,16 @@ gsap.set(".scrolldown", {yPercent:-100})
 	var tlout = gsap.timeline({
 		scrollTrigger: {
 			scroller: ".smooth-scroll",
-			trigger: ".section-home-hero",
+			trigger: ".home-hero_component",
 			start: "top top",
 			end: "bottom top",
 			//markers: true,
-			scrub: 1,
-     // pin: true,
-     // pinType: "fixed",
-			pin: ".home-hero_component",
+			scrub: true,
+      pin: ".home-hero_component",
+      pinType: "fixed",
+		//	pin: ".section-home-hero",
 		//	pinSpacing: false,
-			anticipatePin: 1,
+		//	anticipatePin: 1,
 		//	toggleActions: "restart none none none",
 		},
 	});
