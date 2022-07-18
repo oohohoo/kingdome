@@ -58,6 +58,39 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+
+/*
+================================================================================
+SCROLLDOWN ANIMATION
+================================================================================
+*/
+
+
+.scroll-down {
+  -webkit-animation: scroll 0.35s ease-in alternate infinite;
+          animation: scroll 0.35s ease-in alternate infinite;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+
+
 /*
 ================================================================================
 GLOBAL CLASSES & FIXES
@@ -1175,11 +1208,6 @@ color: #0f3936;
 background-color: #e8e4e3;
 }
 
-
-/* .navcolorcur  {
-color: #ff0000;
-background-color: greenyellow!important;
-} */
 
 .w--current.navcolor {
   color: #0f3936;
