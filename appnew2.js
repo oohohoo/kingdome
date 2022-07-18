@@ -1906,7 +1906,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 	const runOnComplete = () => {
 		locoScroll.start();
 	};
-/* 
+
 	var tlin = gsap.timeline({});
 
 	// gsap.set(".head-split", { autoAlpha: 1}, 0);
@@ -1925,7 +1925,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 				yPercent: 0,
 				duration: 1,
 				rotateZ: 0,
-				//  autoAlpha:1, 
+				/*  autoAlpha:1, */
 				ease: "hop",
 				onComplete: runOnComplete,
 				stagger: {
@@ -1939,7 +1939,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 		.to(".gsap-fade", { opacity: 0.57 }, 1.2)
 
 		.to(".scrolldown", { yPercent: 0, autoAlpha: 1 }, 0.7);
- */
+
 	// PIN HERO **********************
 
 	var tlout = gsap.timeline({
@@ -1951,15 +1951,15 @@ gsap.set(".scrolldown", {yPercent:-100})
 			scrub: true,
 			pin: ".section-home-hero",
 			pinSpacing: false,
-			anticipatePin: 5,
-			//toggleActions: "restart none none none",
-			toggleActions: "restart reverse play reverse"
+			anticipatePin: 1,
+			toggleActions: "restart none none none",
+			// toggleActions: "restart reverse play reverse"
 		},
 	});
 
 	tlout
-	.to(".home-hero-video", { yPercent: -30, duration: 0.6 }, 0)
-	.to(".home-hero_head-wrap", { yPercent: 30, duration: 0.6 }, 0);
+	//	.to(".home-hero-video", { yPercent: -30, duration: 0.6 }, 0)
+		//.to(".home-hero_head-wrap", { yPercent: 30, duration: 0.6 }, 0);
 
 	/* PINANJE OSTALIH*/
 	/* var tlfull = gsap.timeline({
