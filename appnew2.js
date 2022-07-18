@@ -1472,7 +1472,7 @@ function akapowPinned() {
   });
   
   ScrollTrigger.create({
-        trigger: ".showcase",
+        trigger: ".image-wrap",
         scroller: ".smooth-scroll",
         start: () => "top top",
         end: () => "+=" + ((images.length) * window.innerHeight),
