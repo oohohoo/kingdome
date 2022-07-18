@@ -312,7 +312,7 @@ function initContent() {
 			}
 		},
 		home: function () {
-   //  logoTransformOnScroll();
+    logoTransformOnScroll();
     //  heroPanelAnimation();
 		startStopVideo();
 			headerHide();
