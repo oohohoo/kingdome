@@ -1472,12 +1472,11 @@ function akapowPinned() {
   });
   
   ScrollTrigger.create({
-        trigger: ".image-wrap",
+        trigger: ".showcase",
         scroller: ".smooth-scroll",
         start: () => "top top",
         end: () => "+=" + ((images.length) * window.innerHeight),
         pin: '.image-wrap', 
-        pinType: "fixed",
         anticipatePin: 1,
         invalidateOnRefresh: true,
     
