@@ -2033,7 +2033,7 @@ tldue.to(".home-hero_video-wrap-due", { yPercent:-20,  duration: 0.8 }, 0)
 }, 0) */
 }
 
-}
+
 /*
 ================================================================================
 PROJECT OBSERVER
