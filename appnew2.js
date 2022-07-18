@@ -1952,7 +1952,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 			scrub: true,
 			pin: ".home-hero_component",
 			pinSpacing: false,
-      pinType: "fixed",
+    //  pinType: "fixed",
     //  pinType: "transform",
 			anticipatePin: 1,
 			toggleActions: "restart none none none",
