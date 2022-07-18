@@ -1937,7 +1937,6 @@ gsap.set(".scrolldown", {yPercent:-100})
 		)
 
 		.to(".gsap-fade", { opacity: 0.57 }, 1.2)
-
 		.to(".scrolldown", { yPercent: 0, autoAlpha: 1 }, 0.7);
 
 	// PIN HERO **********************
