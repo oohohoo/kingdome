@@ -1925,9 +1925,9 @@ gsap.set(".scrolldown", {yPercent:-100})
 				yPercent: 0,
 				duration: 1,
 				rotateZ: 0,
-				/*  autoAlpha:1, */
+				//  autoAlpha:1, 
 				ease: "hop",
-				*onComplete: runOnComplete,
+				onComplete: runOnComplete,
 				stagger: {
 					each: 0.03,
 					from: "left",
