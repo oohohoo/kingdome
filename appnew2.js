@@ -1956,6 +1956,7 @@ gsap.set(".scrolldown", {yPercent:-100})
 			//markers: true,
 			scrub: true,
       pin: true,
+      pinType: "fixed",
 		//	pin: ".section-home-hero",
 		//	pinSpacing: false,
 		//	anticipatePin: 1,
