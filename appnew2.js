@@ -511,6 +511,7 @@ barba.hooks.afterLeave((data) => {
   });
    //kill locomotive
   barba.hooks.beforeLeave(() => {
+    setTimeout(() => {
  		if ($(".smooth-scroll").length > 0) {
 			locoScroll.destroy();
 			//  console.log("LOCO DESTROY"); 
@@ -527,7 +528,7 @@ barba.hooks.afterLeave((data) => {
  
 
 		// kill SWIPER
-    setTimeout(() => {
+   
 		if (document.querySelector(".swiper-container")) {
 			const swiper = new Swiper(".swiper-container", {});
 			swiper.destroy();
