@@ -1005,10 +1005,10 @@ function show() {
  // gsap.set([openbutt, closeclose], {pointerEvents: "none"}, 0);
 gsap.set(".iframe-wrapper", {display:"block"})
 
-  tl.to(threedback, {scaleY: 1,  zIndex:4, transformOrigin: "bottom center", ease: "hop", duration:0.7}, 0) 
+  tl.to(threedback, {scaleY: 1,  zIndex:4, transformOrigin: "bottom center", ease: "hop", duration:0.6}, 0) 
   // UNUTARNJI  
       .fromTo(".threed--trans", {scaleY: 0, transformOrigin: "bottom center"},
-          {duration: 0.1, scaleY: 1},"<0.2")
+          {duration: 0.1, scaleY: 1},"<0.01")
   
     //  .to(".navdark", {autoAlpha:0}, "<")
 
