@@ -531,7 +531,7 @@ barba.hooks.afterLeave((data) => {
 		if (document.querySelector(".swiper-container")) {
 			const swiper = new Swiper(".swiper-container", {});
 			swiper.destroy();
-			console.log("SWIPER KILLED WITH DELAY!");
+			console.log("SWIPER KILLED WITH DELAAAAAAAY!");
 		}
   }, 400);
 		// kill webflow
