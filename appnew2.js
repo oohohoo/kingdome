@@ -522,7 +522,7 @@ barba.hooks.afterLeave((data) => {
 		if (ScrollTrigger.getAll().length > 0) {
 			ScrollTrigger.getAll().forEach((trigger) => {
 				trigger.kill();
-				// console.log("SCROLLTRIGGER DESTROY"); 
+				 console.log("SCROLLTRIGGER DESTROY"); 
 			});
 		}
   }, 200);
