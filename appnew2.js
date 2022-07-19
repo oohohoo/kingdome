@@ -515,13 +515,17 @@ barba.hooks.afterLeave((data) => {
 			locoScroll.destroy();
 			//  console.log("LOCO DESTROY"); 
 		}
+    
 		// kill scrolltrigger
+    setTimeout(() => {
+     
 		if (ScrollTrigger.getAll().length > 0) {
 			ScrollTrigger.getAll().forEach((trigger) => {
 				trigger.kill();
 				// console.log("SCROLLTRIGGER DESTROY"); 
 			});
 		}
+  }, 200);
 
 		// kill SWIPER
 		if (document.querySelector(".swiper-container")) {
