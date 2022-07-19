@@ -528,12 +528,12 @@ barba.hooks.afterLeave((data) => {
   }, 200);
 
 		// kill SWIPER
-		if (document.querySelector(".swiper-container")) {
+		/* if (document.querySelector(".swiper-container")) {
 			const swiper = new Swiper(".swiper-container", {});
 			swiper.destroy();
 			console.log("SWIPER KILLED AKO POSTOJI NA STRANICI BYEE!");
 		}
-
+ */
 		// kill webflow
 		/* Webflow.destroy();
 console.log("WEBFLOW DESTROY"); */
