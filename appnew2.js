@@ -794,7 +794,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
     
     
 // MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.2")
+    .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.1")
 // LOGO RESET
    /*  .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
     .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
