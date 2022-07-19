@@ -517,7 +517,6 @@ barba.hooks.afterLeave((data) => {
 		}
     
 		// kill scrolltrigger
-    setTimeout(() => {
      
 		if (ScrollTrigger.getAll().length > 0) {
 			ScrollTrigger.getAll().forEach((trigger) => {
@@ -525,15 +524,16 @@ barba.hooks.afterLeave((data) => {
 				 console.log("SCROLLTRIGGER DESTROY"); 
 			});
 		}
-  }, 200);
+ 
 
 		// kill SWIPER
-		/* if (document.querySelector(".swiper-container")) {
+    setTimeout(() => {
+		if (document.querySelector(".swiper-container")) {
 			const swiper = new Swiper(".swiper-container", {});
 			swiper.destroy();
 			console.log("SWIPER KILLED AKO POSTOJI NA STRANICI BYEE!");
 		}
- */
+  }, 200);
 		// kill webflow
 		/* Webflow.destroy();
 console.log("WEBFLOW DESTROY"); */
