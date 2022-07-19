@@ -511,7 +511,7 @@ barba.hooks.afterLeave((data) => {
   });
    //kill locomotive
   barba.hooks.beforeLeave(() => {
-/* 		if ($(".smooth-scroll").length > 0) {
+ 		if ($(".smooth-scroll").length > 0) {
 			locoScroll.destroy();
 			//  console.log("LOCO DESTROY"); 
 		}
