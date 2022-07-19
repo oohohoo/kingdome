@@ -837,18 +837,10 @@ function hide() {
 
   // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
-   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
+   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "<0.1")
 	 // VANJSKI GHOST 	
    .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
    .to(".navdark", {autoAlpha:1}, "<")
-
-
-    // LOGO RESET BACK
-
- /*    .to(".header-red-flag",  {width:'6.1875rem', height:'8.4375rem', top: '0rem', duration: 0.5, ease: "expo.inOut", }, "-=0.1") 
-    .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, "-=0.1")
-    .to(".header_znak", { scale: 1, duration: 0.5, transformOrigin: 'center center', yPercent: 0, ease:'expo.inOut'}, "-=0.1") */
-
 
    // MENU OPENCLOSE
 		.to(openmenu, {autoAlpha:1}, "<")
