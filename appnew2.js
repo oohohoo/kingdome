@@ -511,15 +511,15 @@ barba.hooks.afterLeave((data) => {
   });
    //kill locomotive
   barba.hooks.beforeLeave(() => {
-		if ($(".smooth-scroll").length > 0) {
+/* 		if ($(".smooth-scroll").length > 0) {
 			locoScroll.destroy();
-			/*  console.log("LOCO DESTROY"); */
+			//  console.log("LOCO DESTROY"); 
 		}
 		// kill scrolltrigger
 		if (ScrollTrigger.getAll().length > 0) {
 			ScrollTrigger.getAll().forEach((trigger) => {
 				trigger.kill();
-				/*  console.log("SCROLLTRIGGER DESTROY"); */
+				// console.log("SCROLLTRIGGER DESTROY"); 
 			});
 		}
 
@@ -527,7 +527,7 @@ barba.hooks.afterLeave((data) => {
 		if (document.querySelector(".swiper-container")) {
 			const swiper = new Swiper(".swiper-container", {});
 			swiper.destroy();
-			console.log("SWIPER KILLED AKO POSTOJI NA STRANICI BYEE!");
+			console.log("SWIPER KILLED AKO POSTOJI NA STRANICI BYEE!"); */
 		}
 
 		// kill webflow
