@@ -837,9 +837,9 @@ function hide() {
 
   // .to(".fs-menu--column", {autoAlpha:0, duration:0.1}, "-=0.1")
    // UNUTARNJI  
-   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "<0.1")
+   .to(".nav--trans", { duration: 0.1, transformOrigin: "bottom center", scaleY: 0,  }, "-=0.1")
 	 // VANJSKI GHOST 	
-   .to(".xnav", { duration:0.5, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "<") 
+   .to(".xnav", { duration:0.6, ease: "hop", transformOrigin: "bottom center", scaleY: 0}, "-=0.1") 
    .to(".navdark", {autoAlpha:1}, "<")
 
    // MENU OPENCLOSE
