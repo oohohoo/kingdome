@@ -482,7 +482,7 @@ function initPageTransitions() {
 
    // do something before the transition starts
    barba.hooks.beforeEnter(() => {
-    
+    gsap.set(".header-new", { autoAlpha: 1}, 0); 
   });
 
   // do something after the transition finishes
@@ -1963,7 +1963,7 @@ if (document.querySelector('.smooth-scroll')) {
 
 var tlin = gsap.timeline({});
 
-gsap.set(".header-new", { autoAlpha: 1}, 0); 
+
 
 
 mySplitText = new SplitText(".head-split", {
