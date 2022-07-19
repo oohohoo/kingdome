@@ -788,7 +788,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
     ease: "hop", transformOrigin: "bottom center",
-    },"<")
+    },"<0.1")
    
     //.from(".nav-image", {autoAlpha:1, scale:0.7, transformOrigin: "center center"}, "<0.1")
     
