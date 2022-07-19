@@ -788,13 +788,13 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  
     ease: "hop", transformOrigin: "bottom center",
-    },"<0.1")
+    },"<0.2")
    
     //.from(".nav-image", {autoAlpha:1, scale:0.7, transformOrigin: "center center"}, "<0.1")
     
     
 // MENU LINKS 
-    .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.1")
+    .to(".lineChild", {autoAlpha:1, duration:0.3, yPercent:0, stagger:0.025}, "<0.2")
 // LOGO RESET
    /*  .to(".header-red-flag",  {width:'3rem', height:'3rem', top: '0.5rem', duration: 0.5, ease: "expo.inOut", }, 0) 
     .to("#di", {morphSVG: {shape: "#sq"}, duration: 0.5, ease: "expo.inOut"}, 0)
