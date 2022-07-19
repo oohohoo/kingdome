@@ -782,7 +782,7 @@ tl.to(".xnav", {scaleY: 1, transformOrigin: "bottom center", ease: "hop", durati
    .fromTo(".clip", {
     clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
     webkitClipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-    duration: 2.5,
+    duration: 2,
   },
   {         
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
