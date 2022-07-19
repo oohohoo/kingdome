@@ -1963,7 +1963,7 @@ if (document.querySelector('.smooth-scroll')) {
 
 var tlin = gsap.timeline({});
 
-// gsap.set(".head-split", { autoAlpha: 1}, 0); 
+gsap.set(".header-new", { autoAlpha: 1}, 0); 
 
 
 mySplitText = new SplitText(".head-split", {
